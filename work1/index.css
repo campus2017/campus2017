@@ -18,6 +18,9 @@ a{
     height: 30px;
     margin: 0 auto;
 }
+#main{
+    background-color: #83cced;
+}
 .q_header_logo{
     padding-top: 3px;
 }
@@ -209,4 +212,57 @@ a{
 }
 .content_info a.active:hover{
     background-color: #78af24;
+}
+
+/* 地区切换导航 */
+.q_main_place{
+    margin: 34px auto 0;
+    width: 980px;
+    height: auto;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: #fff;
+}
+.place_tab{
+    position: relative;
+    width: 100%;
+    height: 120px;
+    background: #ed5172 url(./images/time.png) no-repeat 65px 55px;
+    border-radius: 5px;
+    box-shadow: 0 5px #9d0035;
+}
+.place_tab_list{
+    position: absolute;
+    top: -4px;
+    left: 25px;
+}
+.place_tab_list li{
+    width: 84px;
+    height: 133px;
+    float: left;
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}
+.place_tab_list li:hover{
+    font-size: 24px;
+    background: url(./images/tab_active_middle.png) no-repeat 0 0;
+}
+.place_tab_list li.first:hover{
+    background: url(./images/tab_active_first.png) no-repeat 0 0;
+}
+.place_tab_list li.last:hover{
+    background: url(./images/tab_active_last.png) no-repeat 0 0;
+}
+.place_tab_list li.up{
+    padding-top: 25px
+}
+.place_tab_list li.down{
+    padding-top: 73px;
+}
+
+/* 地区内容 */
+.place_content{
+    width: 100%;
 }
