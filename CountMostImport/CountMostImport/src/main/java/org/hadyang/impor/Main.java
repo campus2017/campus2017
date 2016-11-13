@@ -23,6 +23,10 @@ public class Main {
         TopK<CountResult> topK = new TopK<>();
         List<CountResult> result = topK.getTopK(data, 10);
 
-        result.forEach(System.out::println);
+        System.out.println("该目录下被 Import 次数最多的类，前十分别是：");
+
+        for (CountResult countResult : result) {
+            System.out.println(String.format("%s:被 Import %d 次", countResult.name, countResult.count));
+        }
     }
 }

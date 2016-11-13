@@ -73,8 +73,8 @@ public class CountMostImport {
                     line = line.trim();
                     Matcher matcher = pattern.matcher(line);
                     if (matcher.find()) {
-                        line = line.substring(7, line.length());
-                        synchronized (map){
+                        line = line.substring(7, line.length() - 1);
+                        synchronized (map) {
                             if (map.containsKey(line)) {
                                 map.put(line, map.get(line) + 1);
                             } else {
