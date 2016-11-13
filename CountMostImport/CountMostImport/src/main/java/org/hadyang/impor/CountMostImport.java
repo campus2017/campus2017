@@ -55,7 +55,9 @@ public class CountMostImport {
 
     private static class ParseTask implements Callable<Boolean> {
         static final Pattern pattern = Pattern.compile("^import");
-        static final ConcurrentHashMap<String, Integer> map = new ConcurrentHashMap<>();
+
+        //开始使用的是ConcurrentHashMap，在后面的测试发现其数据一致性有问题，改用HashMap并加锁的实现
+        static final HashMap<String, Integer> map = new HashMap<>();
         File file;
 
         ParseTask(File file) {
@@ -64,7 +66,6 @@ public class CountMostImport {
 
         @Override
         public Boolean call() throws Exception {
-            System.out.println("Begin " + file.getName());
             try {
                 BufferedReader reader = new BufferedReader(new FileReader(file));
                 String line;
@@ -73,10 +74,12 @@ public class CountMostImport {
                     Matcher matcher = pattern.matcher(line);
                     if (matcher.find()) {
                         line = line.substring(7, line.length());
-                        if (map.containsKey(line)) {
-                            map.put(line, map.get(line) + 1);
-                        } else {
-                            map.put(line, 1);
+                        synchronized (map){
+                            if (map.containsKey(line)) {
+                                map.put(line, map.get(line) + 1);
+                            } else {
+                                map.put(line, 1);
+                            }
                         }
                     }
                 }
