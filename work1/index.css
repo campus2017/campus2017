@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: '微软雅黑', 'Arial';
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+.bold{
+    font-weight: bold;
+}
+.font24{
+    font-size: 24px;
+}
+
+#header{
+    width: 980px;
+    height: 30px;
+    margin: 0 auto;
+}
+#banner{
+    width: 100%;
+    margin: 0 auto;
+    background-color: #83ccec;
+}
+.q_header_logo{
+    padding-top: 3px;
+}
+.q_header_nav ul{
+    float: left;
+}
+.q_header_right_nav ul{
+    float: right;
+}
+.q_header_nav ul li, .q_header_right_nav li{
+    float: left;
+    line-height: 30px;
+    padding-right: 10px;
+    font-size: 13px;
+}
+.q_header_nav ul li a, .q_header_right_nav ul li a{
+    color: gray;
+}
+.q_header_nav ul li a:hover, .q_header_right_nav ul li a:hover{
+    color: #0088a4;
+}
+.q_header_ser a, .q_header_col a{
+    border-left: 1px solid #000;
+    padding-left: 10px;
+}
+
+#banner div{
+    width: 100%;
+}
+.banner01{
+    height: 224px;
+    background: url(./images/banner_01.png) no-repeat 50% 0;
+}
+.banner02{
+    height: 224px;
+    background: url(./images/banner_02.png) no-repeat 50% 0;
+}
+.banner03{
+    height: 224px;
+    background: url(./images/banner_03.png) no-repeat 50% 0;
+}
+.q_main_time{
+    position: relative;
+    margin: -195px auto 0;
+    width: 980px;
+    height: 154px;
+}
+.cur_triangle{
+    position: absolute;
+    bottom: 100px;
+    left: 140px;
+    width: 0;
+    height: 0;
+    border-top: 18px solid white;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 0;
+    z-index: 1;
+}
+.q_main_time_01{
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 332px;
+    height: 149px;
+    background: url(./images/blue_left_block.png) no-repeat 50% 0;
+}
+.q_main_time_02{
+    display: block;
+    position: absolute;
+    left: 318px;
+    bottom: 0;
+    width: 331px;
+    height: 153px;
+    background: url(./images/gray_center_block.png) no-repeat 50% 0;
+}
+.q_main_time_03{
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 357px;
+    height: 148px;
+    background: url(./images/gray_right_block.png) no-repeat 50% 0;
+}
+.q_main_time_content{
+    position: absolute;
+    bottom: 25px;
+    right: 90px;
+}
+.q_main_time_num{
+    font-size: 32px;
+    color: #fff;
+}
+.q_main_time_title{
+    font-size: 24px;
+    color: #fff;
+}
+.q_main_activity{
+    margin: 70px auto 0;
+    width: 980px;
+    height: 263px;
+    border: 9px solid #78af24;
+}
