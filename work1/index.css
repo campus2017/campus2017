@@ -12,22 +12,11 @@ a{
     text-decoration: none;
 }
 
-.bold{
-    font-weight: bold;
-}
-.font24{
-    font-size: 24px;
-}
-
+/* 头部导航 */
 #header{
     width: 980px;
     height: 30px;
     margin: 0 auto;
-}
-#banner{
-    width: 100%;
-    margin: 0 auto;
-    background-color: #83ccec;
 }
 .q_header_logo{
     padding-top: 3px;
@@ -55,9 +44,7 @@ a{
     padding-left: 10px;
 }
 
-#banner div{
-    width: 100%;
-}
+/* 背景图 */
 .banner01{
     height: 224px;
     background: url(./images/banner_01.png) no-repeat 50% 0;
@@ -70,6 +57,8 @@ a{
     height: 224px;
     background: url(./images/banner_03.png) no-repeat 50% 0;
 }
+
+/* 时间段 */
 .q_main_time{
     position: relative;
     margin: -195px auto 0;
@@ -128,9 +117,96 @@ a{
     font-size: 24px;
     color: #fff;
 }
+
+/* 活动 */
 .q_main_activity{
+    position: relative;
     margin: 70px auto 0;
-    width: 980px;
-    height: 263px;
+    width: 962px;
+    height: 262px;
     border: 9px solid #78af24;
+    overflow: hidden;
+}
+.left_activity, .right_activity{
+    width: 53%;
+    height: 100%;
+}
+.left_activity{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(./images/left_scene.png) no-repeat 0 0;
+}
+.right_activity{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url(./images/right_scene.png) no-repeat 0 0;
+}
+.activity_joint{
+    position: absolute;
+    left: 49.5%;
+    top: 0;
+    width: 10px;
+    height: 100%;
+    background-color: #78af24;
+    -webkit-transform: skew(13deg, 0);
+    -moz-transform: skew(13deg, 0);
+    -ms-transform: skew(13deg, 0);
+    -o-transform: skew(13deg, 0);
+    transform: skew(13deg, 0);
+    z-index: 1;
+}
+.left_activity_content, .right_activity_content{
+    width: 100%;
+    height: 135px;
+    background-color: rgba(0, 0, 0, .6);
+    -webkit-transform: skew(13deg, 0);
+    -moz-transform: skew(13deg, 0);
+    -ms-transform: skew(13deg, 0);
+    -o-transform: skew(13deg, 0);
+    transform: skew(13deg, 0);
+}
+.left_activity_content{
+    position: absolute;
+    left: -3%;
+    bottom: 0;
+}
+.right_activity_content{
+    position: absolute;
+    left: 9%;
+    bottom: 0;
+}
+.content_info{
+    padding-top: 15px;
+    color: white;
+    text-align: center;
+    -webkit-transform: skew(-13deg, 0);
+    -moz-transform: skew(-13deg, 0);
+    -ms-transform: skew(-13deg, 0);
+    -o-transform: skew(-13deg, 0);
+    transform: skew(-13deg, 0);
+}
+.content_info p{
+    font-size: 18px;
+}
+.content_info a{
+    display: block;
+    margin: 15px auto;
+    width: 131px;
+    height: 32px;
+    line-height: 32px;
+    color: white;
+    font-size: 16px;
+    background-color: #959595;
+    box-shadow: 0 4px #626262;
+    border-radius: 16px;
+    outline: 0;
+}
+.content_info a.active{
+    background-color: #a7de55;
+    box-shadow: 0 4px #336d00;
+}
+.content_info a.active:hover{
+    background-color: #78af24;
 }
