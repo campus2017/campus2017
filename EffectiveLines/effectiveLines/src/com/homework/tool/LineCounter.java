@@ -14,12 +14,13 @@ public class LineCounter {
         int line = 0;
         // 一次读入一行，直到读入null为文件结束
         while ((tempString = reader.readLine()) != null) {
-            // 显示行号
-            System.out.println("line " + line + ": " + tempString);
-            line++;
+            if(!tempString.trim().isEmpty() && !tempString.trim().startsWith("//")){
+                // debug
+                line++;
+                System.out.println("line " + line + ": " + tempString);
+            }
         }
         reader.close();
-
         return line;
     }
 }

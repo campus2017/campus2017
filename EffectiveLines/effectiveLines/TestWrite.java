@@ -4,6 +4,7 @@ public class TestWrite {
 	static{
 		System.loadLibrary("libwriteutfLib");
 	}
+	//test comment
   public static void main(String args[]){
 	  
 	  TestWrite tw = new TestWrite();
