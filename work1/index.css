@@ -475,3 +475,29 @@ a{
 .place_content_more_detail{
     clear: both;
 }
+
+/* 红包 */
+.q_main_packet{
+    margin: 30px auto 0;
+    width: 980px;
+    height: 169px;
+    border: 0;
+    background: url(./images/footer_ad.png) no-repeat 0 0;
+    overflow: hidden;
+}
+.q_main_packet_get{
+    display: block;
+    margin: 104px auto 0;
+    width: 163px;
+    height: 32px;
+    border-radius: 16px;
+    background-color: #78af24;
+    box-shadow: 0 5px #336d00;
+    text-align: center;
+    font-size: 20px;
+    line-height: 32px;
+    color: white;
+}
+.q_main_packet_get:hover{
+    background-color: #a7de55;
+}
