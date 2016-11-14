@@ -61,6 +61,10 @@ a{
     background: url(./images/banner_03.png) no-repeat 50% 0;
 }
 
+.q_main{
+    padding-bottom: 100px;
+}
+
 /* 时间段 */
 .q_main_time{
     position: relative;
@@ -270,7 +274,7 @@ a{
     padding-bottom: 8px;
 }
 .place_content_detail{
-    clear: both;
+    overflow: hidden;
 }
 .place_hs_title, .place_hs_more_title{
     margin: 0 20px;
@@ -472,16 +476,12 @@ a{
 .small_hs_display_info .reserve:hover{
     background-color: #ff92ac;
 }
-.place_content_more_detail{
-    clear: both;
-}
 
 /* 红包 */
 .q_main_packet{
     margin: 30px auto 0;
     width: 980px;
     height: 169px;
-    border: 0;
     background: url(./images/footer_ad.png) no-repeat 0 0;
     overflow: hidden;
 }
@@ -500,4 +500,82 @@ a{
 }
 .q_main_packet_get:hover{
     background-color: #a7de55;
+}
+
+/* 微博 */
+.q_main_microblog{
+    margin: 10px auto 0;
+    width: 980px;
+}
+.q_main_microblog_title{
+    margin: 16px 0;
+    text-align: center;
+}
+.q_main_microblog_title em{
+    display: inline-block;
+    height: 50px;
+    vertical-align: bottom;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: bold;
+    color: #ed5172;
+    text-shadow: 1px 1px 1px #626262;
+}
+.q_main_microblog_title span{
+    display: inline-block;
+    height: 32px;
+    line-height: 32px;
+    vertical-align: bottom;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 1px #626262;
+}
+.q_main_micoblog_content{
+    margin: 0 auto;
+    width: 856px;
+    height: 258px;
+    background-color: white;
+    box-shadow: 1px 1px 1px #626262 inset;
+}
+
+/* 页面底部 */
+#footer{
+    width: 100%;
+    height: 300px;
+}
+
+/* 预留banner */
+.footer_reserve_banner{
+    margin: 0 auto;
+    width: 1020px;
+    text-align: center;
+}
+.footer_reserve_banner p{
+    margin: 18px 0;
+    font-family: '宋体';
+    font-size: 12px;
+    color: #898989;
+}
+.footer_reserve_banner_block{
+    overflow: hidden;
+}
+.footer_reserve_banner_block div{
+    float: left;
+    margin: 0 0 20px 20px;
+    width: 480px;
+    height: 60px;
+    background-color: #ebebeb;
+    text-align: center;
+    font-family: '宋体';
+    font-size: 12px;
+    line-height: 60px;
+    color: #898989;
+}
+
+/* 网站相关 */
+.footer_relate_link{
+    margin: 10px auto;
+    width: 980px;
+    clear: both;
 }
