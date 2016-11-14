@@ -6,7 +6,7 @@ public class TestWrite {
 	}
 	//test comment
   public static void main(String args[]){
-	  
+	  /** another Comment***/
 	  TestWrite tw = new TestWrite();
 	  tw.writeFile("test", "hello UTFS");
   }
