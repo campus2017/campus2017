@@ -601,3 +601,90 @@ a{
 .footer_authentication a{
     margin: 0 5px;
 }
+
+/* 悬浮窗 */
+#left_float_window{
+    position: fixed;
+    top: 130px;
+    left: 80px;
+    width: 162px;
+    height: 180px;
+    border-bottom: 8px solid #9d0035;
+    background-color: #ed5172;
+    text-align: center;
+    font-family: '宋体';
+    font-size: 12px;
+    line-height: 24px;
+    color: white;
+}
+#left_float_window div{
+    margin: 0 auto;
+    width: 144px;
+    height: 144px;
+    background-color: white;
+}
+#left_float_window div img{
+    width: 100%;
+    height: 100%;
+}
+
+#right_float_window{
+    position: fixed;
+    top: 120px;
+    left: 1274px;
+    width: 214px;
+}
+.right_float_window_title{
+    margin: 0 0 -114px 2px;
+    width: 214px;
+    height: 100px;
+}
+.right_float_window_joint{
+    margin: 0 auto;
+    width: 137px;
+    height: 6px;
+}
+.right_float_window_joint img{
+    display: block;
+}
+.right_float_window_nav{
+    margin: 0 auto;
+    width: 124px;
+    height: 330px;
+    border-top-left-radius: 76px;
+    border-top-right-radius: 76px;
+    background-color: #78af24;
+    padding-top: 108px;
+    color: white;
+}
+.right_float_window_nav ul{
+    margin: 0 auto;
+    width: 86px;
+}
+.right_float_window_nav ul li{
+    margin-bottom: 3px;
+}
+.right_float_window_nav ul li a{
+    display: block;
+    width: 86px;
+    height: 26px;
+    border-radius: 13px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 26px;
+    color: white;
+}
+.right_float_window_nav ul li a:hover{
+    background-color: #a7de55;
+}
+.return_top{
+    display: block;
+    margin: 0 auto;
+    width: 137px;
+    height: 40px;
+    background-color: #6aa211;
+    font-size: 16px;
+    line-height: 40px;
+    text-align: center;
+    color: white;
+}
