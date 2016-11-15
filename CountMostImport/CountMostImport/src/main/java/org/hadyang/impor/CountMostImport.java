@@ -1,5 +1,7 @@
 package org.hadyang.impor;
 
+import com.google.common.base.Strings;
+
 import java.io.*;
 import java.util.*;
 import java.util.concurrent.*;
@@ -7,7 +9,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class CountMostImport {
-    public final ExecutorService executor;
+    private final ExecutorService executor;
     private final Queue<File> queue;
     private List<Future<Boolean>> futures;
 
@@ -54,7 +56,8 @@ public class CountMostImport {
     }
 
     private static class ParseTask implements Callable<Boolean> {
-        static final Pattern pattern = Pattern.compile("^import");
+        static final Pattern import_pattern = Pattern.compile("^import");
+        static final Pattern static_pattern = Pattern.compile("^import\\s+static");
 
         //开始使用的是ConcurrentHashMap，在后面的测试发现其数据一致性有问题，改用HashMap并加锁的实现
         static final HashMap<String, Integer> map = new HashMap<>();
@@ -71,9 +74,21 @@ public class CountMostImport {
                 String line;
                 while ((line = reader.readLine()) != null) {
                     line = line.trim();
-                    Matcher matcher = pattern.matcher(line);
-                    if (matcher.find()) {
+                    if (Strings.isNullOrEmpty(line)) {
+                        continue;
+                    }
+
+                    //静态导入导入的是静态方法，不需要计算
+                    Matcher static_matcher = static_pattern.matcher(line);
+                    if (static_matcher.find()) {
+                        continue;
+                    }
+
+                    Matcher import_matcher = import_pattern.matcher(line);
+                    if (import_matcher.find()) {
                         line = line.substring(7, line.length() - 1);
+                        line = line.trim();
+
                         synchronized (map) {
                             if (map.containsKey(line)) {
                                 map.put(line, map.get(line) + 1);
