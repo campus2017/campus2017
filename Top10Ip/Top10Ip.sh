@@ -5,6 +5,8 @@ while getopts f:d: opt
 do
 	case $opt in
 		f) path=$OPTARG;;
+		?) echo "Unknow option '$opt'"
+			exit 0;;
 	esac
 	shift
 done
