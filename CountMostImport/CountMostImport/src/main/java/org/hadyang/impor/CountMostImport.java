@@ -2,7 +2,10 @@ package org.hadyang.impor;
 
 import com.google.common.base.Strings;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.*;
 import java.util.concurrent.*;
 import java.util.regex.Matcher;
@@ -56,8 +59,8 @@ public class CountMostImport {
     }
 
     private static class ParseTask implements Callable<Boolean> {
-        static final Pattern import_pattern = Pattern.compile("^import");
-        static final Pattern static_pattern = Pattern.compile("^import\\s+static");
+        static final Pattern import_pattern = Pattern.compile("^import\\s(static\\s)?(.+\\..+)+;");
+        static final Pattern static_pattern = Pattern.compile("^import\\sstatic\\s(.+\\..+)+;");
 
         //开始使用的是ConcurrentHashMap，在后面的测试发现其数据一致性有问题，改用HashMap并加锁的实现
         static final HashMap<String, Integer> map = new HashMap<>();
