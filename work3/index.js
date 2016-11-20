@@ -4,7 +4,6 @@
 
 ajax({
     url: 'data.json',
-    type: "POST",
     success: function(data){
         //成功
         data = JSON.parse(data);
