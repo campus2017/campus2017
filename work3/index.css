@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#data_list{
+    margin: 50px auto;
+    width: 1000px;
+    border-collapse: collapse;
+    border: 2px solid #f3f3f3;
+    font-size: 16px;
+}
+#data_list tr{
+    height: 40px;
+}
+#data_list tr td{
+    padding: 5px 20px 5px 5px;
+    border-bottom: 1px solid #f3f3f3;
+}
+#data_list tr th{
+    padding: 0 20px 0 5px;
+    background-color: #f8f8f8;
+    text-align: left;
+}
+.exchange_btn{
+    width: 80px;
+    height: 30px;
+    background-color: #3775c0;
+    border: 0;
+    border-radius: 5px;
+    font-family: '微软雅黑';
+    color: white;
+    cursor: pointer;
+    outline: 0;
+}
+.exchange_btn:hover{
+    background-color: #4686d4;
+}
