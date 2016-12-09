@@ -1,0 +1,81 @@
+<html>
+
+<head>
+    <style>
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+        }
+        
+        body {
+            background-image: url(./images/m_taobao.png);
+            background-size: cover;
+            background-color: red;
+            height: 1000px;
+        }
+        
+        #aim{
+            color: blue;
+            margin-top: 100px;
+            margin-left: 50px;
+            display: block;
+            font-size: 25px;
+        }
+
+        #dialog {
+            position: fixed;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        #dialog #mask {
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #000;
+            opacity: 0.5;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        
+        #dialog #content {
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        #dialog #content #close{
+            position: absolute;
+            right: -15px;
+            top: -15px;
+            width: 30px;
+            height: 30px;
+            background-image: url(./images/close.png);
+        }
+        #dialog #content #close:hover{
+            background-image: url(./images/close_hover.png);
+        }
+    </style>
+</head>
+
+<body>
+    <a id="aim">click here</a>
+    <div id="dialog">
+        <div id="mask"></div>
+        <div id="content">
+            <img src="./images/layer.png" />
+            <div id="close"></div>
+        </div>
+    </div>
+</body>
+
+<script src="./index.js"></script>
+
+</html>
