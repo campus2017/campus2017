@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+CREATE TABLE user_t
+(
+    user_id INT(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    username VARCHAR(255),
+    password VARCHAR(255)
+);
+-->
+<mapper namespace="com.youthlin.qunar.diff.dao.UserMapper">
+    <resultMap id="userMap" type="com.youthlin.qunar.diff.model.User">
+        <id column="user_id" property="userId"/>
+        <result column="username" property="username"/>
+        <result column="password" property="password"/>
+    </resultMap>
+
+    <insert id="save" parameterType="com.youthlin.qunar.diff.model.User"
+            useGeneratedKeys="true" keyProperty="user_id">
+        INSERT INTO user_t (user_id, username, password)
+        VALUES (#{userId}, #{username}, #{password})
+    </insert>
+
+    <select id="login" resultMap="userMap">
+        SELECT
+            user_id,
+            username,
+            password
+        FROM user_t
+        WHERE username = #{username} AND password = #{password}
+    </select>
+    <select id="findByUsername" resultMap="userMap">
+        SELECT
+            user_id,
+            username,
+            password
+        FROM user_t
+        WHERE username = #{username}
+    </select>
+</mapper>

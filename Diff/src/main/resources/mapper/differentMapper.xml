@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+CREATE TABLE diff_t
+(
+    d_id INT(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    compare_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    source TEXT,
+    target TEXT,
+    only_source TEXT,
+    only_target TEXT,
+    differing TEXT,
+    user_id INT(11)
+);
+-->
+<mapper namespace="com.youthlin.qunar.diff.dao.DifferentMapper">
+    <insert id="save" parameterType="com.youthlin.qunar.diff.model.Different">
+        INSERT INTO diff_t (d_id, compare_time, source, target, only_source, only_target, differing, user_id)
+        VALUES
+            (#{did}, #{compareTime}, #{source}, #{target}, #{onlySource}, #{onlyTarget}, #{differing}, #{user.userId})
+    </insert>
+    <resultMap id="userMap" type="com.youthlin.qunar.diff.model.User">
+        <id column="user_id" property="userId"/>
+        <result column="username" property="username"/>
+        <result column="password" property="password"/>
+    </resultMap>
+    <resultMap id="diffMap" type="com.youthlin.qunar.diff.model.Different">
+        <id column="d_id" property="did"/>
+        <result column="compare_time" property="compareTime"/>
+        <result column="source" property="source"/>
+        <result column="target" property="target"/>
+        <result column="only_source" property="onlySource"/>
+        <result column="only_target" property="onlyTarget"/>
+        <result column="differing" property="differing"/>
+        <association property="user" column="user"
+                     javaType="com.youthlin.qunar.diff.model.User" resultMap="userMap"/>
+    </resultMap>
+
+    <select id="findByUserId" resultMap="diffMap">
+        SELECT *
+        FROM diff_t AS d, user_t AS u
+        WHERE d.user_id = u.user_id AND u.user_id = #{uid}
+        ORDER BY d.compare_time DESC
+    </select>
+    <select id="findPageByUserId" resultMap="diffMap">
+        SELECT *
+        FROM diff_t AS d, user_t AS u
+        WHERE d.user_id = u.user_id AND u.user_id = #{uid}
+        LIMIT #{start}, #{size}
+    </select>
+
+    <select id="findById" resultMap="diffMap">
+        SELECT *
+        FROM diff_t AS d
+        WHERE d.d_id = #{did}
+    </select>
+
+
+    <delete id="delete">
+        DELETE FROM diff_t
+        WHERE d_id = #{did} AND user_id = #{userId}
+    </delete>
+</mapper>
