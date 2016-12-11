@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/EffectiveLines/EffectiveLines.iml" filepath="$PROJECT_DIR$/EffectiveLines/EffectiveLines.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ExchangeRate/ExchangeRate.iml" filepath="$PROJECT_DIR$/ExchangeRate/ExchangeRate.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/campus2017.iml" filepath="$PROJECT_DIR$/.idea/campus2017.iml" />
     </modules>
   </component>
