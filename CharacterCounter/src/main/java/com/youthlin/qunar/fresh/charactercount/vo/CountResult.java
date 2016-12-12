@@ -1,12 +1,12 @@
 package com.youthlin.qunar.fresh.charactercount.vo;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.google.common.collect.HashMultiset;
 import com.google.common.collect.ImmutableMultiset;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Multiset;
 import com.google.common.collect.Multisets;
+import com.google.common.collect.TreeMultiset;
 
 import java.io.Serializable;
 import java.util.List;
@@ -21,7 +21,7 @@ public class CountResult implements Serializable {
     private long cnWords;
     private long symbols;
     @JsonIgnore
-    private Multiset<Character> words = HashMultiset.create();
+    private Multiset<Character> words = TreeMultiset.create();//字典序//逆序则传入Ordering.<Character>natural().reverse()
     private List<Multiset.Entry<Character>> top3;
 
     public List<Multiset.Entry<Character>> getTopkWords(int k) {

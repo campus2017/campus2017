@@ -32,17 +32,17 @@
 </head>
 <body>
 <div class="container">
-    <h4>字符统计</h4>
+    <h4>请选择一段文字</h4>
     <div>
         <!-- Nav tabs -->
         <ul class="nav nav-tabs" role="tablist">
-            <li role="presentation" class="active"><a href="#file" role="tab" data-toggle="tab">文件上传</a></li>
-            <li role="presentation"><a href="#text" role="tab" data-toggle="tab">文本输入</a></li>
+            <li role="presentation"><a href="#file" role="tab" data-toggle="tab">文件上传</a></li>
+            <li role="presentation" class="active"><a href="#text" role="tab" data-toggle="tab">文本输入</a></li>
         </ul>
 
         <!-- Tab panes -->
         <div class="tab-content">
-            <div role="tabpanel" class="tab-pane active" id="file">
+            <div role="tabpanel" class="tab-pane" id="file">
                 <form class="form form-file" action="<c:url value="/upload"/>" role="form" method="post"
                       enctype="multipart/form-data">
                     <div class="form-group height-70">
@@ -51,7 +51,7 @@
                     <button type="submit" class="btn btn-primary submit-btn submit-file">统计</button>
                 </form>
             </div>
-            <div role="tabpanel" class="tab-pane" id="text">
+            <div role="tabpanel" class="tab-pane active" id="text">
                 <form class="form form-text" action="<c:url value="/text"/>" role="form" method="post">
                     <div class="form-group height-70">
                         <label>
@@ -98,7 +98,7 @@
         </div>
 
         <div>
-            <p>文字中出现频率最高的三个字是：</p>
+            <p>文字中出现频率最高的三个字符是：</p>
             <table class="table table-bordered table-hover table-striped">
                 <thead>
                 <tr>
@@ -170,10 +170,10 @@
                                     name = "' '(空格)";
                                     break;
                                 case '\t':
-                                    name = "'\\t(制表符)'";
+                                    name = "'\\t'(制表)";
                                     break;
                                 case '\n':
-                                    name = "'↵(回车)'";
+                                    name = "'↵'(换行)";
                                     break;
                             }
                             $('#t' + i).html(name);
