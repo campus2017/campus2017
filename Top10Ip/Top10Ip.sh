@@ -10,10 +10,13 @@
 # linux 之 sort 用法
 # http://www.cnblogs.com/dong008259/archive/2011/12/08/2281214.html
 
+# tomcat：access-log 格式差不多如下:
+#      IP      - - [           Date           ] "GET/POST /path        HTTP/1.0" 状态码 - "refer" "agent" "-" -
+# 10.86.32.210 - - [13/Dec/2016:12:05:56 +0800] "GET /healthcheck.html HTTP/1.0" 200 - "-" "-" "-" -
+# 10.86.32.210 - - [13/Dec/2016:12:06:32 +0800] "GET /tts/backAdmin/international/policy/specpolicy/policy.jsp HTTP/1.0" 302 - "http://cj1.trade.qunar.com/tts/backAdmin/international/policy/specpolicy/addPolicy.jsp?act=8&id=162993" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36" "10.86.213.129_-30b67e3_1582d750e1a_7262|1478237217503" 100.81.128.96
 
-
-
-cat access-youthlin.com-2016-10.log | awk '{print $1}' | sort | uniq -c | sort -k1,1nr | head -10 | awk '{print $2"\t"$1}'
+# 从指定日志文件中读取数据。若没有指定文件则从 stdin 读入内容（输入 ^D 表示结束）
+cat $1 | awk '{print $1}' | sort | uniq -c | sort -k1,1nr | head -10 | awk '{print $2"\t"$1}'
 
 
 

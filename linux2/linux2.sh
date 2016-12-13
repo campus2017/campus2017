@@ -2,6 +2,7 @@
 #             [-l limit] [-o ssh_option] [-P port] [-S program]
 #             [[user@]host1:]file1 ... [[user@]host2:]file2
 # 其中 filename 是要拷贝的文件， ubuntu 是目标机用户名
+# 省略用户名将使用本地用户名
 
 
 scp dir1/filename ubuntu@l-test.dev.cn1:/tmp
@@ -19,3 +20,7 @@ scp dir1/filename ubuntu@l-test.dev.cn1:/tmp
 # me@local $ scp ~/.ssh/id_rsa.pub ubuntu@l-test.dev.cn1:~/
 # 然后在目标机上把文件内容加入 authorized_keys 尾部
 # ubuntu@l-test.dev.cn1 $ cat ~/id_rsa.pub >> ~/.ssh/authorized_keys
+
+# 另外一个命令：rz/sz
+# 上传：sudo rz -be （打开对话框选择文件添加后点击上传
+# 下载：sudo sz -be filename  （默认下载到本机“下载”文件夹）
