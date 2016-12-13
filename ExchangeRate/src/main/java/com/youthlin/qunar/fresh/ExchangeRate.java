@@ -63,6 +63,7 @@ public class ExchangeRate {
         log.debug("Result has been save to file: {}", output.getAbsolutePath());
     }
 
+    @SuppressWarnings("ResultOfMethodCallIgnored")
     private void loadFromUrl() throws IOException {
         String url = defaultUrl;
         Document document = Jsoup.connect(url)
