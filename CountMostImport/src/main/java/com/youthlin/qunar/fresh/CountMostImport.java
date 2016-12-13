@@ -1,17 +1,18 @@
 package com.youthlin.qunar.fresh;
 
+import com.google.common.collect.ImmutableMultiset;
+import com.google.common.collect.ImmutableSet;
+import com.google.common.collect.Multiset;
+import com.google.common.collect.Multisets;
+import com.google.common.collect.TreeMultiset;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.FileFilter;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
 import java.util.Scanner;
-import java.util.Set;
+
 
 /**
  * Created by youthlin.chen on 2016-11-11 011.
@@ -20,7 +21,8 @@ import java.util.Set;
  */
 public class CountMostImport {
     private static final Logger log = LoggerFactory.getLogger(CountMostImport.class);
-    private HashMap<String, Integer> clazzNameCountMap = new HashMap<String, Integer>();
+    private static final int defaultShowCount = 10;
+    private Multiset<String> result = TreeMultiset.create();
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -28,19 +30,30 @@ public class CountMostImport {
         String dirName = in.nextLine();
         File dir = new File(dirName);
         if (!dir.isDirectory()) {
+            log.warn("Input must be a folder name:{}", dir.getAbsolutePath());
             throw new IllegalArgumentException("Input must be a folder name:" + dir.getAbsolutePath());
         }
-
         CountMostImport countMostImport = new CountMostImport();
         countMostImport.processFile(dir);
-        Pair[] pairsArr = countMostImport.getMostCountClass();
+        ImmutableMultiset<String> sorted = countMostImport.sort();
+        ImmutableSet<Multiset.Entry<String>> entries = sorted.entrySet();
         int count = 0;
-        for (Pair pair : pairsArr) {
-            if (++count > 10) {
+        for (Multiset.Entry<String> entry : entries) {
+            if (++count > defaultShowCount) {
                 break;
             }
-            System.out.println(pair);
+            System.out.println(entry.getElement() + ":" + entry.getCount());
         }
+    }
+
+    private static boolean lastWordIsClassName(String line) {
+        if (line.contains(".")) {
+            String clazzName = line.substring(line.lastIndexOf(".") + 1);
+            if (clazzName.length() > 0 && Character.isUpperCase(clazzName.charAt(0))) {
+                return true;
+            }
+        }
+        return false;
     }
 
     private void processFile(File file) {
@@ -60,72 +73,71 @@ public class CountMostImport {
         }
     }
 
+    @SuppressWarnings("ResultOfMethodCallIgnored")
     private void readFile(File file) {
         log.trace("read file {}", file.getAbsolutePath());
         try {
             Scanner in = new Scanner(file);
             String line;
             while (in.hasNextLine()) {
-                line = in.nextLine();
+                line = in.nextLine().trim();
                 if (line.startsWith("public") || line.startsWith("class")) {
                     break;
                 }
-                if (line.startsWith("import")) {
-                    // 暂时不考虑import java.util.*; 这种星号结尾的
+                if (line.startsWith("import") && line.endsWith(";")) {
+                    // 去掉import和分号
                     line = line.substring("import".length(), line.length() - 1/*;*/).trim();
                     if (line.startsWith("static ")) {
+                        log.trace("static import: {}", line);
                         // import static
                         // bug:
-                        // import static java.math.*;
-                        // import static java.math.BigDecimal.*;
-                        // import static java.math.BigDecimal.valueOf;
-                        line = line.substring("static ".length(), line.length()).trim();
-                    }
-                    Integer count = clazzNameCountMap.get(line);
-                    if (count != null) {
-                        clazzNameCountMap.put(line, count + 1);
+                        // import static NoPackageClass.*;       // Not Allowed
+                        // import static NoPackageClass.staticMethod; // Not Allowed
+                        // import static java.*;                 // 找不到符号
+                        // import static java.math.*;            // 找不到符号
+                        // import static java.math.BigDecimal.*; // OK
+                        // import static java.math.BigDecimal.valueOf;//OK
+                        // import static java.lang.Math.PI;//OK
+                        // 结尾只能是 .* 或 静态方法 或 静态常量
+                        if (line.contains(".")) {// 一定会包含至少一个点
+                            line = line.substring("static ".length(), line.lastIndexOf("."));
+                            // java
+                            // java.math
+                            // java.math.BigDecimal
+                            // java.lang.Math
+                            // 假装所有命名都符合规范（此时按照命名规范判断：最后一个单词首字母大写就算）
+                            if (lastWordIsClassName(line)) {
+                                result.add(line);
+                            }
+                        }
                     } else {
-                        clazzNameCountMap.put(line, 1);
-                    }
-                }
+                        log.trace("common import: {}", line);
+                        //import com.*;                     //不计
+                        //import com.TestClass;             //com.TestClass
+                        //import com.TestClass.*;           //com.TestClass
+                        //import com.TestClass.InnerClass;  //com.TestClass.InnerClass
+                        //import com.TestClass.InnerStaticClass;
+                        //import com.TestClass.InnerStaticClass.*;
+                        //import com.TestClass.InnerStaticClass.*;
+                        //结尾是.*就去掉，然后看最后一个单词首字母是否大写
+                        //结尾不是.*直接算
+                        if (line.endsWith(".*")) {
+                            line = line.substring(0, line.length() - 2);
+                            if (lastWordIsClassName(line)) {
+                                result.add(line);
+                            }
+                        } else {
+                            result.add(line);
+                        }
+                    }//if-else 是否static
+                }//if import开头分号结尾
             }
         } catch (FileNotFoundException e) {
             log.debug("{File not found.}", e);//this should be not happened
         }
     }
 
-    // 总数并不是很大，可以先排序再返回不需要用最小堆等数据结构实现
-    private Pair[] getMostCountClass() {
-        List<Pair> pairs = new ArrayList<Pair>();
-        Set<String> classNames = clazzNameCountMap.keySet();
-        for (String className : classNames) {
-            Pair pair = new Pair(className, clazzNameCountMap.get(className));
-            pairs.add(pair);
-        }
-        // 本来是用 PriorityQueue 的，但是发现 PriorityQueue 的迭代器<b>不保证顺序</b>，
-        // 反正都要 Arrays.sort 干脆直接 List 不用优先级队列
-        Pair[] pairsArr = new Pair[0];
-        pairsArr = pairs.toArray(pairsArr);
-        Arrays.sort(pairsArr);
-        return pairsArr;
-    }
-
-    private class Pair implements Comparable<Pair> {
-        String clazzName;
-        int count;
-
-        Pair(String clazzName, int count) {
-            this.clazzName = clazzName;
-            this.count = count;
-        }
-
-        public int compareTo(Pair o) {
-            return o.count - count;
-        }
-
-        @Override
-        public String toString() {
-            return clazzName + ':' + count;
-        }
+    private ImmutableMultiset<String> sort() {
+        return Multisets.copyHighestCountFirst(result);
     }
 }
