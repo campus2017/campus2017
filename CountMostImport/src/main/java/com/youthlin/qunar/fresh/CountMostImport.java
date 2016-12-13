@@ -34,8 +34,9 @@ public class CountMostImport {
             throw new IllegalArgumentException("Input must be a folder name:" + dir.getAbsolutePath());
         }
         CountMostImport countMostImport = new CountMostImport();
-        countMostImport.processFile(dir);
-        ImmutableMultiset<String> sorted = countMostImport.sort();
+        long start = System.currentTimeMillis();
+        ImmutableMultiset<String> sorted = countMostImport.getMostImport(dir);
+        log.debug("time cost:{}", System.currentTimeMillis() - start);
         ImmutableSet<Multiset.Entry<String>> entries = sorted.entrySet();
         int count = 0;
         for (Multiset.Entry<String> entry : entries) {
@@ -46,14 +47,10 @@ public class CountMostImport {
         }
     }
 
-    private static boolean lastWordIsClassName(String line) {
-        if (line.contains(".")) {
-            String clazzName = line.substring(line.lastIndexOf(".") + 1);
-            if (clazzName.length() > 0 && Character.isUpperCase(clazzName.charAt(0))) {
-                return true;
-            }
-        }
-        return false;
+    @SuppressWarnings("WeakerAccess")
+    public ImmutableMultiset<String> getMostImport(File dir) {
+        processFile(dir);
+        return Multisets.copyHighestCountFirst(result);
     }
 
     private void processFile(File file) {
@@ -137,7 +134,14 @@ public class CountMostImport {
         }
     }
 
-    private ImmutableMultiset<String> sort() {
-        return Multisets.copyHighestCountFirst(result);
+    private boolean lastWordIsClassName(String line) {
+        if (line.contains(".")) {
+            String clazzName = line.substring(line.lastIndexOf(".") + 1);
+            if (clazzName.length() > 0 && Character.isUpperCase(clazzName.charAt(0))) {
+                return true;
+            }
+        }
+        return false;
     }
+
 }
