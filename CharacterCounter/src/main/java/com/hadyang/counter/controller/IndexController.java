@@ -28,7 +28,7 @@ public class IndexController {
     @RequestMapping(path = "upload",
             method = RequestMethod.POST)
     @ResponseBody
-    public JsonResult upload(@RequestParam(value = "file", required = false) MultipartFile file) {
+    public JsonResult upload(@RequestParam(value = "file") MultipartFile file) {
         JsonResult count = null;
 
         try {

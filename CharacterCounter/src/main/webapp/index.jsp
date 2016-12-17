@@ -1,163 +1,132 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
 <html>
+
 <head>
-    <title>文字统计</title>
-    <meta charset="UTF-8">
-      <script src="js/material.min.js"></script>
-    <link rel="stylesheet" href="css/material.min.css"></link>
+    <meta charset="utf-8">
+    <title>My</title>
+
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js" charset="utf-8"></script>
+    <script src="js/material.min.js " type="text/javascript"></script>
+    <script src="js/index.js " type="text/javascript"></script>
+    <link rel="stylesheet " href="css/material.min.css ">
+    <link rel="stylesheet" href="css/index.css">
+
 </head>
-<body id="loading">
 
-<div class="container">
-    <ul id="myTab" class="nav nav-tabs">
-        <li class="active">
-            <a href="#upload" data-toggle="tab">
-                文件上传
-            </a>
-        </li>
-        <li>
-            <a href="#text" data-toggle="tab">
-                文本输入
-            </a>
-        </li>
-    </ul>
-    <div id="myTabContent" class="tab-content">
-        <div class="tab-pane fade in active" id="upload">
-
-            <form id="upload_form" action="/upload" method="post" enctype="multipart/form-data">
-                <input type="file" name="file" id="upload_input">
-            </form>
-
-            <button class="btn btn-sm" onclick="upload()">开始统计</button>
-
+<body>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs ">
+    <header class="mdl-layout__header ">
+        <div class="mdl-layout__header-row ">
+            <!-- Title -->
+            <span class="mdl-layout-title ">文字统计</span>
         </div>
-        <div class="tab-pane fade" id="text">
-            <form id="text_form" action="/text" method="post">
-                <label for="text_area">文本</label>
-                <textarea id="text_area" name="textarea" cols="40" rows="10"></textarea>
-            </form>
-
-            <button class="btn btn-sm" onclick="text()">开始统计</button>
+        <!-- Tabs -->
+        <div class="mdl-layout__tab-bar mdl-js-ripple-effect ">
+            <a href="#fixed-tab-1 " class="mdl-layout__tab is-active ">文件上传</a>
+            <a href="#fixed-tab-2 " class="mdl-layout__tab ">文本输入</a>
         </div>
-    </div>
+    </header>
 
-    <table class="table table-bordered">
-        <caption>各统计内容个数如下：</caption>
-        <thead>
-        <tr>
-            <th>统计项</th>
-            <th>个数</th>
-        </tr>
-        </thead>
-        <tbody id="count_table_body">
-        <tr>
-            <td>英文字母</td>
-            <td id="count_table_letter"></td>
-        </tr>
-        <tr>
-            <td>数字</td>
-            <td id="count_table_num"></td>
+    <main class="mdl-layout__content">
+        <section class="mdl-layout__tab-panel is-active " id="fixed-tab-1">
+            <div class="page-content mdl-grid">
+                <div class="mdl-cell mdl-cell--4-col">
+                    <form id="upload_form" action="/upload" method="post" enctype="multipart/form-data">
+                        <label class="mdl-button mdl-button--colored mdl-js-button mdl-button--raised mdl-js-ripple-effect ">
+                            上传文件
+                            <input id="file_input" type="file" style="display: none;" onchange="onSelect()">
+                        </label>
+                    </form>
+                </div>
+                <div class="mdl-cell mdl-cell--8-col">
+                    <div>选择上传的文件：</div>
+                    <div id="file_selected_name">无</div>
+                </div>
+            </div>
+        </section>
+        <section class="mdl-layout__tab-panel" id="fixed-tab-2">
+            <div class="page-content ">
+                <div class="page-content mdl-grid">
+                    <div class="mdl-cell mdl-cell--12-col">
+                        <form id="text_form" action="/text" method="post" style="text-align:center">
+                            <div class="mdl-textfield mdl-js-textfield">
+                                <textarea class="mdl-textfield__input" type="text" rows="5" id="text_area"></textarea>
+                                <label class="mdl-textfield__label" for="text_area">请输入待统计文本</label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        </tr>
-        <tr>
-            <td>中文汉字</td>
-            <td id="count_table_chinese"></td>
+        <div id="begin" class="mdl-grid">
+            <div class="mdl-cell--12-col">
+                <button class="mdl-button mdl-js-button
+                mdl-button--raised mdl-button--colored" onclick="upload()">
+                    开始统计
+                </button>
+            </div>
+        </div>
+        <div class="mdl-grid">
 
-        </tr>
-        <tr>
-            <td>中英文标点符号</td>
-            <td id="count_table_pun"></td>
-        </tr>
-        </tbody>
-    </table>
+            <table class="mdl-data-table mdl-js-data-table">
+                <caption>各统计内容个数如下：</caption>
+                <thead>
+                <tr>
+                    <th class="mdl-data-table__cell--non-numeric">统计项</th>
+                    <th>个数</th>
+                </tr>
+                </thead>
+                <tbody id="count_table_body">
+                <tr>
+                    <td class="mdl-data-table__cell--non-numeric">英文字母</td>
+                    <td id="count_table_letter"></td>
+                </tr>
+                <tr>
+                    <td class="mdl-data-table__cell--non-numeric">数字</td>
+                    <td id="count_table_num"></td>
 
-    <table class="table table-bordered">
-        <caption>文字中出现频率最高的三个字是：</caption>
-        <thead>
-        <tr>
-            <th>名称</th>
-            <th>个数</th>
-        </tr>
-        </thead>
-        <tbody id="top_table_body">
+                </tr>
+                <tr>
+                    <td class="mdl-data-table__cell--non-numeric">中文汉字</td>
+                    <td id="count_table_chinese"></td>
 
-        </tbody>
-    </table>
+                </tr>
+                <tr>
+                    <td class="mdl-data-table__cell--non-numeric">中英文标点符号</td>
+                    <td id="count_table_pun"></td>
+                </tr>
+                </tbody>
+            </table>
+
+            <table class="mdl-data-table mdl-js-data-table">
+                <caption>文字中出现频率最高的三个字是：</caption>
+                <thead>
+                <tr>
+                    <th class="mdl-data-table__cell--non-numeric">名称</th>
+                    <th>个数</th>
+                </tr>
+                </thead>
+                <tbody id="top_table_body">
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
 </div>
-
-
-<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
-<script src="http://cdn.bootcss.com/json2/20160511/json2.min.js"></script>
-
-<script type="text/javascript">
-    function upload() {
-        $("#loading").showLoading();
-        if (window.FormData) {
-            var formData = new FormData();
-            // 建立一个upload表单项，值为上传的文件
-            formData.append('file', document.getElementById('upload_input').files[0]);
-
-            var xhr = new XMLHttpRequest();
-            xhr.open('POST', $('#upload_form').attr('action'));
-            // 定义上传完成后的回调函数
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState == 4 && xhr.status == 200) {
-                    var array = JSON.parse(xhr.responseText);
-                    createTable(array);
-                }
-            };
-            xhr.send(formData);
-        }
-    }
-
-    function text() {
-        $("#loading").showLoading();
-
-        if (window.FormData) {
-            var formData = new FormData();
-            // 建立一个upload表单项，值为上传的文件
-            formData.append('text', $("#text_area").val());
-
-            var xhr = new XMLHttpRequest();
-            xhr.open('POST', $('#text_form').attr('action'));
-            // 定义上传完成后的回调函数
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState == 4 && xhr.status == 200) {
-                    var array = JSON.parse(xhr.responseText);
-                    createTable(array);
-                }
-            };
-            xhr.send(formData);
-        }
-    }
-
-    function createTable(json) {
-        $('#count_table_letter').html(json.letterCount);
-        $('#count_table_num').html(json.numCount);
-        $('#count_table_chinese').html(json.chineseCount);
-        $('#count_table_pun').html(json.punctuationCount);
-
-        var body = $("#top_table_body");
-        body.empty();
-
-        var top = json.top;
-        for (var node in top) {
-            var tr = document.createElement("tr");
-
-            var td = document.createElement("td");
-            td.innerHTML = top[node].c;
-            tr.appendChild(td);
-
-            var td = document.createElement("td");
-            td.innerHTML = top[node].count;
-            tr.appendChild(td);
-
-            body.append(tr);
-        }
-
-        $("#loading").hideLoading();
-    }
-</script>
-
 </body>
+
 </html>

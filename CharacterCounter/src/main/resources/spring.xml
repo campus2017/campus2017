@@ -17,6 +17,8 @@
     -->
     <mvc:default-servlet-handler/>
 
+    <!--<mvc:resources mapping="/js/**" location="js/"/>-->
+
     <!--配置JSP的显示 ViewResolver-->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
