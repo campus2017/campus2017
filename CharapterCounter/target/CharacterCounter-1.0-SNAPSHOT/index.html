@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="index.css"/>
+	</head>
+	<body>
+        <div class="hidden" id="text_step">
+            <div style="font-size: larger;">请输入一段文字</div>
+            <div>
+                <textarea id="text" style="height: 8rem;width: 40rem;"></textarea>
+                <div>
+                    <input type="button" class="btn green" name="next" value="统计" tabindex="-1" id = "count"/>
+                    <input type="button" class="btn red" name="cancel" value="清空内容"  id="clear"/>
+                    <input type="button" class="btn gray" name="next" value="切换文本上传" tabindex="-1" id = "transfer_text2"/>
+                </div>
+            </div>
+        </div>
+        <div id="upload_step">
+            <input type="file" name="file" id="file">
+            <input type="button" class="btn green" name="next" value="上传" tabindex="-1" id = "upload_btn"/>
+            <input type="button" class="btn gray" name="next" value="切换文本输入" tabindex="-1" id = "transfer_text"/>
+        </div>
+		<div class="step">
+			<dl class="content-list">
+				<dt class="content-item">
+					<h3 class="step-title">统计结果</h3>
+				</dt>
+				<dt class="content-item">
+					<label >英文字母：</label>
+					<input type="text" id="letter"  class="input" readonly="true" autocomplete="off" tabindex="-1"/>
+				</dt>
+				<dt class="content-item">
+					<label >数字：</label>
+                    <input type="text" id="number"  class="input" readonly="true" autocomplete="off" tabindex="-1"/>
+				</dt>
+                <dt class="content-item">
+                    <label >中文汉字：</label>
+                    <input type="text" id="Chinese_Characters"  class="input" readonly="true" autocomplete="off" tabindex="-1"/>
+                </dt>
+                <dt class="content-item">
+                    <label >标点符号：</label>
+                    <input type="text" id="symbol"  class="input" readonly="true" autocomplete="off" tabindex="-1"/>
+                </dt>
+                <dt class="content-item">
+                    <label >频率第一：</label>
+                    <input type="text" id="Seq0"  class="input" readonly="true" autocomplete="off" tabindex="-1"/>
+                </dt>
+                <dt class="content-item">
+                    <label >频率第二：</label>
+                    <input type="text" id="Seq1"  class="input" readonly="true" autocomplete="off" tabindex="-1"/>
+                </dt>
+                <dt class="content-item">
+                    <label >频率第三：</label>
+                    <input type="text" id="Seq2"  class="input" readonly="true" autocomplete="off" tabindex="-1"/>
+                </dt>
+			</dl>
+		</div>
+
+        <script src="jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="ajaxfileupload.js" type="text/javascript" charset="utf-8"></script>
+		<script src="index.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>
