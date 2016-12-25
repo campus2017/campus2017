@@ -1,0 +1,110 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+  <title>模态框</title>
+  <style type="text/css">
+	*{margin:0; padding:0;}
+   
+	#modal-box{
+		background: rgba(200, 200, 200, 0.5); 
+		position:fixed;
+		left:0;
+		right:0;
+		top:0;
+		bottom:0;
+		display:none;
+	}
+	 #layer{
+		width:640px;
+		position:absolute;
+		left:0;
+		right:0;
+		top:0;
+		bottom:0;
+		margin:auto;
+	 }
+	 #modal-box b{
+	 	display:inline-block;
+	 	width:28px;
+	 	height:28px;
+	 	background-image:url(./images/button.png);
+	 	background-repeat:no-repeat;
+	 	background-position:0px 0px;
+	 	position:absolute;
+	 	left:72.5%;
+	 	top:100px;
+	 }
+	 #modal-box b:hover{
+	 	background-position:0px -27px;
+	 }
+	 #main{
+	 	width:1267px;
+	 	margin:0 auto;
+	 }
+	 .flag{
+		float:left;
+	 }
+	 #main ul,#main li{
+	 	float:left;
+	 	line-height:85px;
+	 }
+	 #main li a{
+	 	color:#33A7DC;
+	 	text-decoration: none;
+	 	display:inline-block;
+	 	padding:5px 21px;
+	 }
+	 ul li{
+	 	list-style:none;
+	 }
+	  #main b{
+	  	display:inline-block;
+	  	background:url(./images/taobao_box.png) repeat;
+	  	width:2px;
+	  	height:95px;
+	  	float:right;
+	  }
+  </style>
+ </head>
+
+ <body>
+  <div id="main">
+   <img class="head" src="./images/taobao_head.png" alt="head">
+   <img class="flag" src="./images/taobao_flag.png" alt="flag">
+   <ul>
+     <li><a href="###">Android</a></li>
+     <li><a href="###">iPhone</a></li>
+     <li><a href="###">iPad</a></li>
+     <li><a href="###">AndroidPad</a></li>
+     <li><a href="###">WinPhone</a></li>
+     <li><a href="###">软件市场</a></li>
+   </ul> 
+   <b></b>
+   <img src="./images/taobao_main.png">
+  </div>
+   <div id="modal-box">
+    <img id="layer" src="./images/layer.png">
+    <b></b>
+   </div>
+   <script>
+     var b = document.querySelector("#modal-box b");
+     var modelBox = document.querySelector("#modal-box");
+     b.addEventListener("click",function(){
+     	console.log(modelBox)
+     	modelBox.style.display = "none";
+     },false);
+
+    var oUl = document.querySelector("#main ul");
+     oUl.onclick = function(ev){
+		var ev = ev || window.event;
+		var target = ev.target || ev.srcElement;
+		//alert(target.innerHTML);
+		if(target.nodeName.toLowerCase() == "a"){
+		modelBox.style.display = "block";
+		}
+	}
+   </script>
+ </body>
+</html>

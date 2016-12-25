@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>		
+  <title></title>
+  <style>
+	body{
+		margin:10px;
+	}
+	
+	/*ul样式*/
+	ul#tabnav{
+		list-style-type:none;
+		margin:0px;
+		padding-left:0px;
+		padding-bottom:23px;
+		border-bottom:1px solid #11a3ff;
+		font:bold 12px verdana,arial;
+	}
+	/*li样式*/
+	ul#tabnav li{
+		float:left;
+		height:22px;
+		background:#adbff;
+		margin:0px 3px 0px 0px;
+		border:1px solid #11a3ff;
+	}
+	/*设置a的样式*/
+	ul#tabnav a:link,ul#tabnav a:visited{
+		display:block;
+		color:#006ed3;
+		text-decoration:none;
+		padding:5px 10px 3px 10px;
+	}
+	
+	/*设置当前页面的tab样式*/
+	#tabnav .bottomStyle{
+		border-bottom:1px solid #fff;
+
+		background:#fff;
+	}
+	ul#tabnav a:hover{
+		background:#006eb3;
+		color:#fff;
+	}
+	.fn-hide{
+		display:none;
+	}
+	.content{
+		border-left:1px solid #11a3ff;
+		border-right:1px solid #11a3ff;
+		border-bottom:1px solid #11a3ff;
+		padding:5px;
+		font-size:12px;
+	}
+  </style>
+  <script>
+	window.addEventListener("load",init,false);
+	function init(){
+		var li = document.querySelectorAll(".nav li");
+		var divContent = document.querySelectorAll(".content");
+		for(var i = 0;i<li.length;i++)
+		{
+			li[i].onmouseenter= (function(num){
+			   return function(){
+				 for(var j = 0;j<divContent.length;j++)
+			     {
+					if(j!=num)
+					 {
+						 li[j].className = "";
+						divContent[j].className ="content fn-hide";
+					 }
+			     }
+					divContent[num].className ="content";
+					li[num].className = "bottomStyle";
+			   }
+			   
+			})(i);
+		}
+		
+	}
+  </script>
+ </head>
+
+ <body id="home">
+	 <ul class="nav"id="tabnav">
+		<li class=" bottomStyle"><a href="#">Home</a></li>
+		<li class=""><a href="#">Web Dev</a></li>
+		<li class=""><a href="#">Web Design</a></li>
+		<li class=""><a href="#">Map</a></li>
+	 </ul>
+	 <div>
+		 <div class="content ">
+			<ul id="list">
+				<li>1.There are some news</li>
+				<li>2.There are some news</li>
+				<li>3.There are some news</li>
+				<li>4.There are some news</li>
+				<li>5.There are some news</li>
+			</ul>
+		 </div>
+		 <div class="content fn-hide">
+			 <ul>
+				<li>11.There are some news</li>
+				<li>12.There are some news</li>
+				<li>13.There are some news</li>
+				<li>14.There are some news</li>
+				<li>15.There are some news</li>
+			</ul>
+		 </div>
+		 <div class="content fn-hide">
+			 <ul>
+				<li>21.There are some news</li>
+				<li>22.There are some news</li>
+				<li>23.There are some news</li>
+				<li>24.There are some news</li>
+				<li>25.There are some news</li>
+			</ul>
+		 </div>
+		 <div class="content fn-hide">
+			 <ul>
+				<li>31.There are some news</li>
+				<li>32.There are some news</li>
+				<li>33.There are some news</li>
+				<li>34.There are some news</li>
+				<li>35.There are some news</li>
+			</ul>
+		 </div>
+	 </div>
+ </body>
+</html>

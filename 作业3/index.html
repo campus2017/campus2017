@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+  <title>ajax练习</title>
+  <style type="text/css">
+	*{margin:0; padding:0;}
+	body{
+		margin:10px auto 0px ;
+		width:1000px;
+	}
+    ul#tabnav{
+    	list-style-type:none;
+    	padding-top:5px;
+    	padding-left:0px;
+    	padding-bottom:30px;
+		border-bottom:1px solid #bbb;
+		font: 12px verdana,arial;
+		background:#FBFCFD;
+    }
+    /*li样式*/
+	ul#tabnav li{
+		float:right;
+		margin:0px 5px 0px 0px;
+		border:1px solid #bbb;
+		background:#F1F1F1;
+		border-radius:3px 3px 0px 3px;
+	}
+	ul#tabnav li:first-child{
+		margin-right:15px;
+	}
+	ul#tabnav li a{
+		height:23px;
+		line-height:23px;
+		padding:3px 20px;
+		display:block;
+		text-decoration:none;
+		color:#333;
+	}
+	ul#tabnav a:hover{
+		background:#fff;
+	}
+	#tabnav .bottomStyle{
+		border-bottom:1px solid #fff;
+
+		background:#fff;
+	}
+	#search-bar{
+		margin-top:15px;
+		font-size:12px;
+	}
+	#search-bar input{
+		line-height:1.6em;
+		width:200px;
+	}
+	#search-bar a,table a.hover{
+		text-decoration:none;
+		padding:4px 20px;
+		border-radius:5px;
+		
+	}
+	#search-bar a.hover,table a.hover{
+		background:#3775C0;
+		color:#fff;
+	}
+	#search-bar a.red{
+		background:#FF0000;
+		color:#fff;
+	}
+
+	table{
+		margin-top:20px;
+		border-collapse: collapse;
+		width:100%;
+		border:1px solid #bbb;
+		font-size:12px;
+	}
+	table thead td ,table tfoot td,table tbody td{
+		background:#F8F8F8;
+		line-height:1.3em;
+		width:12.5%;
+		padding:5px;
+	}
+	table tbody td{
+		background:#fff;
+		height:50px;
+	}
+	table tbody td a.hover{
+		padding:4px 10px;
+	}
+	table tfoot td{
+		text-align:right;
+	}
+	table tfoot td a{
+		text-decoration: none;
+		display:inline-block;
+		padding:2px 8px;
+		border:1px solid #bbb;
+	}
+	table tbody td.timeDate{
+		padding-right:50px;
+	}
+  </style>
+ </head>
+<script src="./js/ajax.js"></script>
+ <body id="home">
+   <ul class="nav" id="tabnav">
+	<li class=" bottomStyle"><a href="#">兑换记录</a></li>
+	<li class=""><a href="#">E币明细</a></li>
+	<li class=""><a href="#">E币兑换</a></li>
+   </ul>
+   <div id="search-bar">
+     <a class="hover" href="###">全部</a>
+     <a href="###">成功</a>
+     <a href="###">失败</a>
+     选择日期:<input type="text" id="dateSearch">
+     至<input type="text" id="dateSearch">
+     <a class="hover" href="###">搜索</a>
+     <a class="red" href="###">重置</a>
+   </div>
+   <table>
+  	 <thead>
+	    <tr>
+	     	<td>时间</td>
+	      	<td>商品名称</td>
+	        <td>数量</td>
+	        <td>E币</td>
+	        <td>状态</td>
+	        <td>信息</td>
+	      	<td>兑换信息</td>
+	        <td>确认</td>
+	    </tr>
+    </thead>
+    <tbody>
+	   <!--  <tr>
+	     	<td class="timeDate">2014-10-28 15:37:21</td>
+	      	<td>手机50元话费充值</td>
+	        <td>1</td>
+	        <td>190</td>
+	        <td>兑换失败</td>
+	        <td>兑换失败，E币已退回</td>
+	      	<td colspan="2"><a class="hover" href="###">兑换信息</a></td>
+	    </tr> -->
+    </tbody>
+     <tfoot>
+	    <tr>
+	        <td colspan="8">
+			  <a href="###">首页</a>
+			  <span>1</span>
+			  <a href="###">末页</a>
+			  <span>共一页，跳转到</span>
+			  <input type="text">
+			  <a href="###">确定</a>
+	        </td>
+	    </tr>
+    </tfoot>
+   </table>
+   <script>
+   ajax("get","data.json","",function(data){
+      var result = JSON.parse(data);
+      var trlen = result.length;
+      var tdLen = result[0].length;
+
+      var tbody = document.querySelector("table tbody");
+      for(var i = 0;i<trlen;i++){
+		 var tr = tbody.insertRow(i);
+		 for(var j = 0;j<tdLen;j++){
+		 	var td = tr.insertCell(j);
+         	td.innerText = result[i][j];
+         	if(j==0){
+         		td.className="timeDate";
+         	}
+		 }
+		 var td = tr.insertCell(j);
+		 td.innerHTML = "<a class='hover' href='###'>兑换信息</a>";
+		 td.setAttribute("colspan",2);
+      }
+    });
+  </script>
+ </body>
+</html>

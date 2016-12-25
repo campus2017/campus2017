@@ -1,0 +1,445 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+  <title>PC端练习</title>
+  <style type="text/css">
+	*{margin:0; padding:0;}
+	body{
+		width:912px;
+		margin:10px auto 0px ;
+	} 
+	ul li{
+		list-style-type:none;
+	}
+    ul.nav#tabnav{
+    	list-style-type:none;
+    	padding-left:0px; 
+		border-bottom:1px solid #7DBCDC;
+		font: 12px verdana,arial;
+		background:#F3FBFD;
+		height:75px;
+		margin-bottom:10px;
+    }
+    /*li样式*/
+	ul#tabnav>li{
+		height:66px;
+		padding:5px 10px;
+		width:80px;
+		text-align:center;
+		float:left;
+		border-left:1px solid #7DBCDC;
+		border-radius:3px 3px 0px 3px;
+	}
+	ul#tabnav>li.leftFlag{
+		border-left:none;
+		padding:22px 10px;
+		height:32px;
+		width:40px;
+	}
+	ul#tabnav>li.rightFlag {
+		
+		width:26px;
+		padding:22px 108px 20px 10px;
+		height:32px;
+		position:relative;
+		
+	}
+	ul#tabnav>li.rightFlag #back{
+		position:absolute;
+		background:url(./images/background.png) no-repeat top right;
+		right:0px;
+		top:0px;
+		width:100px;
+		height:76px;
+	}
+	ul#tabnav>li.leftFlag span,ul#tabnav>li.rightFlag span{
+		display:inline-block;
+		width:26px;
+		height:32px;	
+		background-image:url(./images/background.png)  ;
+		background-repeat: no-repeat;
+
+	}
+	ul#tabnav>li.leftFlag span
+	{
+		background-position: -28px -1px;
+	}
+	ul#tabnav>li.rightFlag span
+	{
+		background-position: -50px -1px;
+	}
+	ul#tabnav>li ul{
+		line-height:1.6em;
+		color:#333;
+	}
+	ul#tabnav>ul:hover{
+		background:#fff;
+	}
+	#tabnav .bottomStyle{
+		border-bottom:1px solid #fff;
+		border-top:1px solid #7DBCDC;
+		padding-top:4px;
+		background:#fff;
+		position:relative;
+	}
+	#tabnav .bottomStyle  #newFlag{
+		position:absolute;
+		width:14px;
+		height:14px;
+		font-size:12px;
+		display:inline-block;
+		left:1px;
+		top:1px;
+		background:url(./images/background.png) no-repeat -13px -2px;
+		color:white;
+	}
+	.hide{
+		display:none;
+	}
+	#flightInfo{
+		
+
+	}
+	#flightInfo #yellowNav{
+		height:5px;
+		background-image:url(./images/yellow.png);
+		background-repeat:repeat;
+		background-position:0px -1px;
+	}
+	#flightInfo ul.flightNav{
+		height:48px;
+		background:url(./images/blue.png) repeat -9px -1px;
+	}
+	#flightInfo ul.flightInfoDetail{
+		height:90px;
+		background:#F3FBFD;
+		float:left;
+		width:100%;
+	}
+	#flightInfo ul.flightNav>li,#flightInfo ul.flightInfoDetail>li{
+		float:left;
+	}
+	#flightInfo ul.flightInfoDetail>li{
+		padding:10px 0px 5px 50px;
+
+	}
+	#flightInfo ul.flightInfoDetail>li:nth-child(3){
+		padding-left:0px;
+	}
+	#flightInfo ul.flightInfoDetail>li .thirdLi{
+		padding-top:30px;
+		font-size:13px;
+		color:#0E83BF;
+	}
+   #flightInfo ul.flightInfoDetail>li .moneyInfo{
+		color:#FF7200;
+	}
+	#flightInfo ul.flightNav li a{
+		text-decoration: none;
+		color:white;
+		padding:0px 15px;
+		line-height:48px;
+		display:inline-block;
+	}
+
+	#flightInfo ul.flightInfoDetail li {
+		color:black;
+	}
+	#flightInfo ul.flightNav li:first-child a{
+		padding-left:50px;
+		padding-right:85px;
+	}
+	#flightInfo>ul.flightInfoDetail>li:first-child{
+		padding-left:60px;
+		position:relative;
+	}
+	#flightInfo>ul.flightInfoDetail>li:first-child .rowFlag{
+		position:absolute;
+		width:25px;
+		height:25px;
+		background:url(./images/background.png) no-repeat -74px -6px;
+		left:30px;
+		top:20px;
+	}
+	 
+	#flightInfo>ul.flightInfoDetail>li:first-child>ul>li>span{
+		color:#25B4D2;
+		font-size:13px;
+	}
+	#flightInfo>ul.flightInfoDetail>li.secondLi{
+		width:470px;
+		padding-left:0px;
+	}
+	#flightInfo>ul.flightInfoDetail>li.secondLi>ul>li{
+		padding-left:38px;
+		padding-bottom:5px;
+	}
+	.infoFlag li{
+		padding-left:34px;
+	}
+	.infoFlag+span{
+		padding-left:32px;
+	}
+	#flightInfo>ul.flightInfoDetail>li.secondLi ul>li:first-child>span:not(:last-child){
+		padding-left:48px;
+	}
+	#flightInfo>ul.flightInfoDetail>li.secondLi>ul>li:first-child>span:last-child{
+		color:#25b402;
+		font-size:13px;
+	}
+	#flightInfo>ul.flightInfoDetail>li.secondLi ul>li>span.timeInfo{
+		font-size:20px;
+		font-weight:bold;
+	}
+	#flightInfo>ul.flightInfoDetail>li ul li{
+		line-height:20px;
+		font-size:14px;
+	}
+	ul.flightInfoDetail>li>ul>li.line{
+		background:url(./images/line.png) no-repeat -3px -4px;
+		height:1px;
+	}
+	#flightInfo ul.flightNav li.downUp span{
+		background:url(./images/background.png) repeat -0px -12px;
+		display:inline-block;
+		width:8px;
+		padding-top:24px;
+		height:16px;
+	    position:relative;
+	    top:4px;
+		padding:0px;
+	}
+	#flightInfo ul.flightNav li.suggSite,#flightInfo>ul.flightInfoDetail>li.suggSite{
+		padding-left:60px;
+	}
+	#flightInfo>ul.flightInfoDetail>li .forthLi{
+		padding-top:30px;
+		padding-left:25px;
+		font-size:13px;
+	}
+	#flightInfo>ul.flightInfoDetail>li .forthLi strong{
+		font-size:30px;
+		color:#399ACB;
+		padding:0px 2px;
+	}
+	#flightInfo>ul.flightInfoDetail>li .forthLi b{
+		width:77px;
+		height:42px;
+		display:inline-block;
+		background:url(./images/background.png) no-repeat -16px -39px;
+	}
+	#flightInfo>ul.flightInfoDetail>li:last-child>ul>li:last-child>span{
+		padding-left:64px;
+	}
+	#flightInfo ul.flightNav li:last-child,#flightInfo>ul.flightInfoDetail>li:last-child{
+		padding-left:40px;
+	}
+	.infoFlag {
+		display:inline-block;
+		vertical-align: top;
+	}
+	.infoFlag li{
+		position:relative;
+	}
+	.infoFlag li>span{
+		position:absolute;
+		left:18px;
+		top:2px;
+		font-size:12px;
+		line-height:15px;
+		text-align:center;
+		color:white;
+		display:inline-block;
+		width:15px;
+		height:15px;
+		background:url(./images/background.png) no-repeat -13px -16px;
+	}
+	#flightInfo>ul.flightInfoDetail>li ul li.line1{
+		background:url(./images/line.png) no-repeat -3px -5px;
+		line-height:5px;
+		padding-left:40px;
+		margin-left:120px;
+	}
+	#line2Container{
+		clear:both;
+		background:#F3FBFD;
+	}
+	
+	.line2{
+		width:912px;
+		height:3px;
+		margin-left:40px;
+		display:inline-block;
+		background:url(./images/1.png) no-repeat -11px -11px;
+	}
+  </style>
+ </head>
+ <body id="home">
+   <ul class="nav" id="tabnav">
+	   <li class="leftFlag"><span></span></li>
+		<li class="bottomStyle navli">
+			<ul class="conterUl">
+				<li>02-19 去</li>
+				<li>03-04 回</li>
+				<li class="money">￥ 3440</li>
+			</ul>
+			<span id="newFlag" class="hide">低</span>
+		</li>
+		<li class="navli">
+			<ul class="conterUl">
+				<li>02-20 去</li>
+				<li>03-04 回</li>
+				<li class="money">￥ 2278</li>
+			</ul>
+			<span id="newFlag" class="hide">低</span>
+		</li>
+		<li class="navli">
+			<ul class="conterUl">
+				<li>02-21 去</li>
+				<li>03-04 回</li>
+				<li class="money">￥ 2933</li>
+			</ul>
+			<span id="newFlag" class="hide">低</span>
+		</li>
+		<li class="navli">
+			<ul class="conterUl">
+				<li>02-22 去</li>
+				<li>03-04 回</li>
+				<li class="money">￥ 3076</li>
+			</ul>
+			<span id="newFlag" class="hide">低</span>
+		</li>
+		<li class="navli">
+			<ul class="conterUl">
+				<li>02-23 去</li>
+				<li>03-04 回</li>
+				<li class="money">￥ 2170</li>
+			</ul>
+			<span id="newFlag" class="hide">低</span>
+		</li>
+		<li class="navli">
+			<ul class="conterUl">
+				<li>02-24 去</li>
+				<li>03-04 回</li>
+				<li class="money">￥ 2108</li>
+			</ul>
+			<span id="newFlag" class="hide">低</span>
+		</li>
+		<li class="navli">
+			<ul class="conterUl">
+				<li>02-25 去</li>
+				<li>03-04 回</li>
+				<li class="money">￥ 2108</li>
+			</ul>
+			<span id="newFlag" class="hide">低</span>
+		</li>
+		<li class="rightFlag"><span></span><div id="back"></div></li>
+   </ul>   
+   <div id="flightInfo">
+	    <div id="yellowNav"></div>
+		<ul class="flightNav">
+	     <li><a href="###">航班信息</a></li>
+	     <li class="downUp"><a href="###">当地起飞时间</a><span></span></li>
+	     <li><a href="###">旅行总时长</a></li>
+	     <li><a href="###">当地降落时间</a></li>
+	     <li class="suggSite"><a href="###">推荐网站</a></li>
+	     <li class="downUp"><a href="###">最低报价</a><span></span></li>
+		</ul>
+		<ul class="flightInfoDetail">
+		  <li>
+				<span class="rowFlag"></span>
+				<ul>
+					<li>达美航空</li>
+					<li>DL128330(宽) <span>共享</span></li>
+					<li class="line"></li>
+					<li>DL4785CRJ(小)</li>
+				</ul>
+		  </li>
+	      <li class="secondLi">
+	         <ul>
+	            <li><span class="timeInfo">01:20</span><span>约16小时</span><span class="timeInfo">17：15</span><span>+1天</span></li>
+	            <li class="line1"></li>
+	       		<li>
+	       			<span>首都机场 PEKT3</span>
+	       			<ul class="infoFlag">
+	       				<li><span>转</span>旧金山SFO</li>
+	       				<li><span>停</span>洛杉矶机场</li>
+	       			</ul>
+	       			<span>麦克卡兰国际机场 LAS</span>
+	       		</li>
+	         </ul>	
+	      </li>
+	    
+	      <li>
+	     	 <ul>
+	     		<li class="thirdLi">达美航空</li><li class="moneyInfo">￥4091</li>
+	     	 </ul>
+	      </li>
+	      <li class="suggSite">
+	     	<ul>
+	     		<li class="forthLi"><span>￥</span><strong>2259</strong><span>票价</span></li>
+	     		<li><span>￥2784税费</span></li>
+	     	</ul>
+	      </li>
+	    </ul>
+	    <div id="line2Container">
+  			<i class="line2"></i>
+	    </div>
+	    <ul class="flightInfoDetail">
+	      
+			<li>
+				<span class="rowFlag"></span>
+				<ul>
+					<li>达美航空</li>
+					<li>DL128330(宽) <span>共享</span></li>
+					<li class="line"></li>
+					<li>DL4785CRJ(小)</li>
+				</ul>
+			</li>
+	        <li class="secondLi">
+	         <ul>
+	            <li><span class="timeInfo">01:20</span><span>约16小时</span><span class="timeInfo">17：15</span><span>+1天</span></li>
+	            <li class="line1"></li>
+	       		<li style="padding-left:0px">
+	       			<span >麦克卡兰国际机场 LAS</span>
+	       			<ul class="infoFlag">
+	       				<li><span>转</span>旧金山SFO</li>
+	       				<li><span>停</span>洛杉矶机场</li>
+	       			</ul>
+	       			<span>首都机场 PEKT3</span>
+	       		</li>
+	       		
+	         </ul>	
+	      </li>
+	    
+	      <li>
+	     	 <ul>
+	     		<li class="thirdLi" style="padding-top:0px">留学生票</li><li class="moneyInfo">￥4085</li>
+	     	 </ul>
+	      </li>
+	      <li class="suggSite" >
+	     	<ul>
+	     		<li class="forthLi" style="padding-top:0px;padding-left:55px"><b></b></li>
+	     	</ul>
+	      </li>
+	    </ul>
+   </div>
+   <script>
+    var navli = document.querySelectorAll(".navli");
+    var len = navli.length;
+    for(var i = 0;i<len;i++){
+    	navli[i].onmouseover = function(){
+
+    		for(var j = 0;j<len;j++){
+    			//console.log(navli[j].className=="bottomStyle navli");
+    			if(navli[j].className=="bottomStyle navli"){
+    				navli[j].className = "";
+    			}
+    		}
+    		this.className = "bottomStyle navli";
+    	}
+    }
+  </script>
+ </body>
+</html>
