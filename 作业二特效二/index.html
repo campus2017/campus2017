@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset="UTF-8">
+<title>滑动门特效</title> 
+<style type="text/css">
+html,body,div{
+margin:0px;
+padding:0px;
+}
+html{
+height:100%;
+}
+body{
+width:100%;
+height:100%;
+}
+#container{
+width:70%;
+height:66%;
+overflow:hidden;
+margin-left:auto;
+margin-right:auto;
+position:relative;
+border-right:2px solid rgb(234,233,234);
+border-bottom:2px solid rgb(234,233,234);
+}
+#container div{
+width:52%;
+height:100%;
+border-left:2px solid rgb(234,233,234);
+position:absolute;
+border-top:3px solid rgb(197,121,86);
+box-sizing:border-box;
+-webkit-box-sizing:border-box;
+-moz-box-sizing:border-box;
+-o-box-sizing:border-box;
+-ms-box-sizing:border-box;
+}
+#container div.first{
+background:url("images/door1.png") 0px 0px/100% 100% no-repeat;
+}
+#container div.second{
+transform:translateX(100%);
+-webkit-transform:translateX(100%);
+-moz-transform:translateX(100%);
+-o-transform:translateX(100%);
+-ms-transform:translateX(100%);
+background:url("images/door2.png") 0px 0px/100% 100% no-repeat;
+}
+#container div.third{
+transform:translateX(130.77%);
+-webkit-transform:translateX(130.77%);
+-moz-transform:translateX(130.77%);
+-o-transform:translateX(130.77%);
+-ms-transform:translateX(130.77%);
+background:url("images/door3.png") 0px 0px/100% 100% no-repeat;
+}
+#container div.fourth{
+transform:translateX(161.54%);
+-webkit-transform:translateX(161.54%);
+-moz-transform:translateX(161.54%);
+-o-transform:translateX(161.54%);
+-ms-transform:translateX(161.54%);
+background:url("images/door4.png") 0px 0px/100% 100% no-repeat;
+}
+</style>
+</head> 
+<body>
+<div id="container"><div class="first"></div><div class="second"></div><div class="third"></div><div class="fourth"></div></div>
+</body>
+<script>
+(function(window){
+//初始化全局对象，初始化某些工具函数
+var global={
+isInAnimation:false,
+current:0,
+addEvent:function(ele,event,handler){
+if(window.addEventListener){
+ele.addEventListener(event,handler,false);
+}else if(window.attachEvent){
+ele.attachEvent("on"+event,handler);
+}else{
+alert("Can't support!");
+}
+},
+/*该函数调整某一索引的门的位置*/
+ajustDoors:function(index){
+if(index<global.current){
+global.count=global.current-index;
+for(var i=index+1;i<=global.current;i++){
+var door=doors[i];
+var beforeStyle;
+if(window.getComputedStyle){
+beforeStyle=window.getComputedStyle(door,"");
+}else{
+beforeStyle=door.currentStyle;
+}
+var transform=beforeStyle.transform||beforeStyle.msTransform;
+var beginningValue=parseFloat(transform.split(",")[4].trim());
+global.easeFunc(beginningValue,global.changeValue,door);
+}
+}else{
+global.count=index-global.current;
+for(i=global.current+1;i<=index;i++){
+var door=doors[i];
+var beforeStyle;
+if(window.getComputedStyle){
+beforeStyle=window.getComputedStyle(door,"");
+}else{
+beforeStyle=door.currentStyle;
+}
+var transform=beforeStyle.transform||beforeStyle.msTransform;
+console.dir(beforeStyle);
+console.log(transform);
+var beginningValue=parseFloat(transform.split(",")[4].trim());
+global.easeFunc(beginningValue,-global.changeValue,door);
+}
+}
+global.current=index;
+},
+//这是Tween.Circ.easeIn函数
+easeIn:function(t,b,c,d){
+return -c * (Math.sqrt(1 - (t/=d)*t) - 1) + b;
+},
+//使某一道门door从translate值为beginningValue运动changeValue的距离的动画函数，changeValue可以为负
+easeFunc:function(beginningValue,changeValue,door){
+var currentTime=5;
+var timer=setInterval(function(){
+if(currentTime<=140){
+var currentTranslate=global.easeIn(currentTime,beginningValue,changeValue,140);
+door.style.transform="translateX("+currentTranslate+"px)";
+door.style.webkitTransform="translateX("+currentTranslate+"px)";
+door.style.msTransform="translateX("+currentTranslate+"px)";
+door.style.transform="translateX("+currentTranslate+"px)";
+currentTime+=5;
+}else{
+clearInterval(timer);
+if(--global.count==0){
+global.isInAnimation=false;
+}
+}
+},5);
+}
+};
+//初始化某些全局参数
+var doors=document.querySelectorAll("#container div");
+//初始化门的数量
+global.len=doors.length;
+//初始化门每次滑动时，门移动的距离
+var thisStyle;
+if(window.getComputedStyle){
+thisStyle=window.getComputedStyle(doors[0],"");
+}else{
+thisStyle=doors[0].currentStyle;
+}
+global.changeValue=parseFloat(thisStyle.width)*0.6923;
+for(var i=0;i<global.len;i++){
+global.addEvent(doors[i],"mouseover",(function(index){
+return function(){
+if(global.current!=index&&!global.isInAnimation){
+global.isInAnimation=true;
+global.ajustDoors(index);
+}
+};
+})(i));
+}
+}(window));
+</script>
+</html>
