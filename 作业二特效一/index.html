@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset="UTF-8">
+<title>模态弹窗特效</title> 
+<style type="text/css">
+html,body{
+margin:0px;
+padding:0px;
+}
+button{
+outline:none;
+border:none;
+}
+body{
+width:100%;
+height:1400px;
+background:url("images/m_taobao.png") 0px 0px/100% 100% no-repeat;
+position:relative;
+}
+button.ad{
+position:absolute;
+left:46%;
+top:7.4%;
+line-height:25px;
+width:5.4%;
+background-color:transparent;
+color:transparent;
+}
+div.popup{
+width:56%;
+height:74%;
+background:url("images/layer.png") 0px 0px/100% 100% no-repeat;
+position:fixed;
+left:22%;
+top:11%;
+}
+div button.close{
+position:absolute;
+right:-20px;
+top:-20px;
+width:50px;
+height:50px;
+background:url("images/close.png") 0px 0px/100% 100% no-repeat;
+}
+div button.close:hover{
+background:url("images/close_hover.png") 0px 0px/100% 100% no-repeat;
+}
+div.modal{
+position:fixed;
+width:100%;
+height:100%;
+background-color:rgba(0,0,0,0.5);
+}
+</style>
+</head> 
+<body>
+<button class="ad" id="popUp">Android</button>
+</body>
+<script>
+(function(window){
+//
+var global={
+addEvent:function(ele,event,handler){
+if(window.addEventListener){
+ele.addEventListener(event,handler,false);
+}else if(window.attachEvent){
+ele.attachEvent("on"+event,handler);
+}else{
+alert("Can't support!");
+}},
+popUp:function(modal){
+function closePU(){
+document.body.removeChild(pu);
+document.body.removeChild(modal);
+}
+console.log("called!");
+var pu=document.createElement("div");
+var close=document.createElement("button");
+close.className="close";
+pu.className="popup";
+global.addEvent(close,"click",closePU)
+pu.appendChild(close);
+document.body.appendChild(pu);
+},
+modalAndPopUp:function(){
+var modal=document.createElement("div");
+modal.className="modal";
+document.body.appendChild(modal);
+global.popUp(modal);
+}
+};
+var bt=document.getElementById("popUp");
+global.addEvent(bt,"click",global.modalAndPopUp)
+})(window);
+</script>
+</html>
