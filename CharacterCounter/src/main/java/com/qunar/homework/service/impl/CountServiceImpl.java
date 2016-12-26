@@ -1,5 +1,7 @@
 package com.qunar.homework.service.impl;
 
+import com.google.common.collect.Lists;
+import com.google.common.collect.Maps;
 import com.qunar.homework.entity.CountInfo;
 import com.qunar.homework.service.CountService;
 import com.qunar.homework.util.MapUtil;
@@ -80,8 +82,8 @@ public class CountServiceImpl implements CountService {
     }
 
     private void getTop3(String str) {
-        Map<Character, Integer> countMap = new HashMap<Character, Integer>();
-        List<Map.Entry<Character, Integer>> resultlist = new ArrayList<Map.Entry<Character, Integer>>();
+        Map<Character, Integer> countMap = Maps.newHashMap();
+        List<Map.Entry<Character, Integer>> resultlist = Lists.newArrayList();
         /* 借助Map实现对List的统计 不存在则添加，存在则数量++*/
         for (int i = 0; i < str.length(); i++) {
             char tem = str.charAt(i);
@@ -97,12 +99,11 @@ public class CountServiceImpl implements CountService {
 
     private void getTop3(InputStream input) throws IOException {
         Reader reader =new InputStreamReader(input);
-        Map<Character, Integer> countMap = new HashMap<Character, Integer>();
-        List<Map.Entry<Character, Integer>> resultlist = new ArrayList<Map.Entry<Character, Integer>>();
+        Map<Character, Integer> countMap = Maps.newHashMap();
+        List<Map.Entry<Character, Integer>> resultlist = Lists.newArrayList();
         int tempchar;
         char tem;
         while ((tempchar = reader.read())!= -1) {
-            logger.info("temcahr:{}",tempchar);
             tem=(char) tempchar;
             /* 字符统计 忽略/n /r*/
             if ((tem != '\r' && tem != '\n'&&tem!=' ')) {

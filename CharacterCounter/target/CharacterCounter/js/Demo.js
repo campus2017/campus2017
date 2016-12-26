@@ -4,6 +4,15 @@
 $(document).ready(function () {
             $("#count").click(
                 function () {
+                    $("#en_letter").html("");
+                    $("#ch_letter").html( "");
+                    $("#num").html( "");
+                    $("#punctuation").html("");
+                    for (var i=1;i<4;i++)
+                    {
+                        $(("#char_top"+i)).html("");
+                        $(("#num_top"+i)).html("");
+                    }
                     if(document.getElementById("submit").checked==true)
                     {
                         if($("#showFileName").html()==""){

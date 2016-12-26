@@ -26,9 +26,7 @@
 <div class="container">
     <div class="box">
         <h4>请选择一段文字</h4>
-
         <div class="content top">
-
             <input type="radio" name="choose" id="submit" value="上传文件" checked="true"/>文件上传
             <input type="radio" name="choose" id="input" value="文本输入"/>文本输入
             <div class="box1">
