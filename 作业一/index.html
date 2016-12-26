@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta charset="UTF-8">
+<title>酒店小demo</title> 
+<style type="text/css">
+/*初始化工作start*/
+body,html,div,span,img,button{
+margin:0px;
+padding:0px;
+box-sizing:border-box;
+-webkit-box-sizing:border-box;
+-moz-box-izing:border-box;
+-ms-box-sizing:border-box;
+-o-box-sizing:border-box;
+-webkit-text-size-adjust:none;
+}
+body,html{
+font-family:Arial,微软雅黑;
+font-size:12px;
+width:100%;
+height:100%;
+background-color:#ffffff;
+}
+a:link{
+text-decoration:none;
+}
+.floatLeft{
+float:left;
+}
+.floatRight{
+float:right;
+}
+.absolute{
+position:absolute;
+}
+.relative{
+position:relative;
+}
+/*设置最顶上的白条*/
+#header{
+width:981px;
+height:30px;
+margin:0px auto 0px auto;
+}
+div.headerBar{
+height:100%;
+line-height:30px;
+}
+#header a{
+color:#777777;
+font:12px 宋体;
+}
+#header span{
+color:#777777;
+font:12px 宋体;
+}
+#header img{
+vertical-align:middle;
+}
+#header .floatLeft a{
+margin-left:15px;
+}
+#header .floatRight a{
+margin:0px 12px;
+}
+/*设置头图的部分*/
+#title{
+width:100%;
+height:673px;
+background:url("images/headerImage.png") 0px 0px/100% 100% no-repeat;
+}
+#timeShaft{
+width:981px;
+height:153px;
+margin:0px auto;
+overflow:hidden;
+top:480px;
+}
+#timeShaft img{
+position:absolute;
+bottom:0px;
+}
+#timeShaft img:first-child{
+}
+#timeShaft img:last-child{
+right:0px;
+}
+#timeShaft img:nth-child(2){
+left:319px;
+z-index:2;
+}
+/*蓝色部分的主要内容*/
+#main{
+width:100%;
+height:5186px;
+background-color:#7ecef4;
+}
+/*左边的两个按钮和二维码放在一起*/
+#leftBar,#rightBar{
+font:16px 微软雅黑;
+top:190px;
+line-height:50px;
+}
+#leftBar{
+left:270px;
+}
+#rightBar{
+right:270px;
+}
+a.one,a.two{
+box-shadow:0px 5px #336d00;
+-webkit-box-shadow:0px 5px #336d00;
+-moz-box-shadow:0px 5px #336d00;
+-ms-box-shadow:0px 5px #336d00;
+-o-box-shadow:0px 5px #336d00;
+}
+a.commonStyle{
+color:#ffffff;
+padding:6px 48px;
+border-radius:15px/17px;
+-webkit-border-radius:15px/17px;
+-moz-border-radius:15px/17px;
+-ms-border-radius:15px/17px;
+-o-border-radius:15px/17px;
+}
+a.one{
+background-color:#a7de55;
+}
+a.two{
+background-color:#78af24;
+}
+a.three{
+top:4443px;
+height:32px;
+width:164px;
+padding:0px;
+text-align:center;
+line-height:32px;
+}
+#leftBar img{
+margin-top:220px;
+}
+#rightBar div{
+right:-35px;
+top:287px;
+}
+#rightBar ul{
+list-style:none;
+top:96px;
+left:32px;
+line-height:33px;
+}
+#rightBar ul a{
+color:#ffffff;
+padding:4px 20px;
+}
+a.currentCity{
+background-color:#a7de55;
+border-radius:14px/14px;
+-webkit-border-radius:14px/14px;
+-moz-border-radius:14px/14px;
+-ms-border-radius:14px/14px;
+-o-border-radius:14px/14px;
+color:#336d00;
+}
+#goTop{
+line-height:60px;
+margin-left:-16px;
+}
+/*中间主要内容的编写*/
+#content{
+width:981px;
+padding-top:29px;
+margin-right:auto;
+margin-left:auto;
+}
+/*最上方的泡温泉、约泡部分*/
+#firstContainer{
+width:100%;
+height:282px;
+background-image:url("images/A.png"),url("images/B.png");
+background-repeat:no-repeat;
+background-position:left top,right bottom;
+border:9px solid #78af24;
+background-color:#78af24;
+}
+#firstContainer div{
+width:480px;
+height:134px;
+bottom:0px;
+color:#ffffff;
+text-align:center;
+padding-top:6px;
+}
+#firstContainer div:first-child{
+left:0px;
+}
+#firstContainer div:last-child{
+right:0px;
+}
+#firstContainer span.title1{
+font:24px 微软雅黑;
+line-height:44px;
+font-weight:bolder;
+}
+#firstContainer span.title2{
+font:18px 微软雅黑;
+line-height:18px;
+}
+a.expect{
+background-color:#959595;
+font-size:16px;
+line-height:56px;
+box-shadow:0px 5px #626262;
+-webkit-box-shadow:0px 5px #626262;
+-moz-box-shadow:0px 5px #626262;
+-ms-box-shadow:0px 5px #626262;
+-o-box-shadow:0px 5px #626262;
+}
+a.expect:hover{
+background-color:#78af24;
+box-shadow:0px 5px #336d00;
+-webkit-box-shadow:0px 5px #336d00;
+-moz-box-shadow:0px 5px #336d00;
+-ms-box-shadow:0px 5px #336d00;
+-o-box-shadow:0px 5px #336d00;
+}
+/*从北上广开始的各个酒店效果*/
+#secondContainer{
+background-color:#f3eedb;
+margin-top:34px;
+padding-bottom:10px;
+width:100%;
+}
+#tabContainer{
+background-color:#7ecef4;
+}
+#tabBar{
+height:118px;
+background-color:#ed5172;
+border-radius:10px;
+-webkit-border-radius:10px;
+-moz-border-radius:10px;
+-ms-border-radius:10px;
+-o-border-radius:10px;
+box-shadow:0px 9px #9d0035;
+-webkit-box-shadow:0px 9px #9d0035;
+-moz-box-shadow:0px 9px #9d0035;
+-ms-box-shadow:0px 9px #9d0035;
+-o-box-shadow:0px 9px #9d0035;
+}
+div.line{
+width:843px;
+height:1px;
+background-color:#ffffff;
+margin:0px auto;
+top:50%;
+font:20px 微软雅黑;
+color:#ffffff;
+z-index:10;
+}
+div.circle{
+position:absolute;
+background-color:#ffffff;
+width:6px;
+height:6px;
+top:-3px;
+border-radius:50%;
+-webkit-border-radius:50%;
+-moz-border-radius:50%;
+-ms-border-radius:50%;
+-o-border-radius:50%;
+}
+div.circle:nth-child(2){
+left:10%;
+}
+div.circle:nth-child(3){
+left:20%;
+}
+div.circle:nth-child(4){
+left:30%;
+}
+div.circle:nth-child(5){
+left:40%;
+}
+div.circle:nth-child(6){
+left:50%;
+}
+div.circle:nth-child(7){
+left:60%;
+}
+div.circle:nth-child(8){
+left:70%;
+}
+div.circle:nth-child(9){
+left:80%;
+}
+div.circle:nth-child(10){
+left:90%;
+}
+div.circle:nth-child(11){
+left:100%;
+}
+div.circle span.cityTop,div.circle span.cityBottom{
+left:-20px;
+position:absolute;   
+white-space:nowrap;         
+}
+div.circle span.cityTop{
+bottom:10px;
+}
+div.circle span.cityBottom{
+top:10px;    
+}
+div.circle.currentCircle{
+width:12px;
+height:12px;
+top:-6px;
+margin-left:-6px;
+}
+div.circle.currentCircle span{
+bottom:15px;
+font:bolder 24px 微软雅黑;
+}
+#tabBar img{
+position:absolute;
+left:36.8%;
+top:-5px;
+}
+/*开始设置人生第一泡标题条*/
+div.titleBar{
+width:962px;
+height:104px;
+margin:0px auto;
+color:#ed5172;
+}
+span.title3{
+font:bolder 42px 微软雅黑;
+}
+span.title4{
+font:18px 微软雅黑;
+}
+a.title5{
+font:14px 宋体;
+}
+span.title6{
+font-size:42px;
+margin:0px 20px;
+}
+div.leftTitleBar{
+padding-top:32px;
+}
+div.rightTitleBar{
+padding-top:62px;
+}
+div.leftTitleBar img{
+vertical-align:-8px;
+}
+/*设置酒店的格式*/
+div.hotelBlock{
+width:963px;
+margin:0px auto;
+font-size:0px;/*为了去除inline-block的间隙*/
+}
+div.hotelBig{
+width:100%;
+background:url("images/重庆北碚悦榕庄.png") 0px 0px/100% 100% no-repeat;
+}
+div.hotelBasic{
+height:324px;
+border:8px solid #ffffff;
+color:#ffffff;
+}
+div.hotelMiddle{
+display:inline-block;
+width:476px;
+background:url("images/天上人间.png") 0px 0px/100% 100% no-repeat;
+margin-top:10px;
+}
+div.hotelLeft{
+margin-right:10px;
+}
+/*酒店左上角小遮罩*/
+span.bsgCover{
+font:14px 宋体;
+line-height:34px;
+padding:0px 12px;
+background-color:rgba(0,0,0,0.5);
+}
+/*第一个大酒店图的右上黑色遮罩*/
+div.hotelMes{
+top:0px;
+right:0px;
+width:289px;
+height:238px;
+background-color:rgba(0,0,0,0.5);
+text-align:center;
+padding-top:23px;
+}
+div.hotelMes a.type1{
+font:bold 24px 微软雅黑;
+line-height:48px;
+color:#ffffff;
+}
+div.hotelMes span.type2{
+font:14px 宋体;
+line-height:26px;
+}
+div.hotelMes span.type3{
+font:italic bold 48px Arial;
+line-height:58px;
+}
+div.hotelBasic span.type4{
+font: italic 14px Arial,微软雅黑;
+color:#bfbfbf;
+text-decoration:line-through;
+line-height:14px;
+}
+div.priceMes{
+width:100%;
+text-align:center;
+bottom:20px;
+}
+/*第一个大酒店图的右下预订按钮*/
+a.bootNow{
+background-color:#ed5172;
+bottom:0px;
+right:0px;
+color:#ffffff;
+font:24px 微软雅黑;
+width:289px;
+height:70px;
+text-align:center;
+line-height:70px;
+}
+/*中等酒店上面遮罩按钮设置*/
+div.hotelMesMi{
+bottom:0px;
+left:0px;
+width:346px;
+height:108px;
+background-color:rgba(0,0,0,0.5);
+padding:10px 16px;
+}
+div.hotelMesMi a.type1Mi{
+font:bold 20px 微软雅黑;
+line-height:1;
+color:#ffffff;
+}
+div.hotelMesMi span.type2Mi{
+font:14px 宋体;
+line-height:36px;
+}
+div.hotelMesMi span.type4Mi{
+font:italic bold 26px Arial;
+line-height:36px;
+}
+div.priceMes{
+width:100%;
+text-align:center;
+bottom:20px;
+}
+a.bootNowMi{
+background-color:#ed5172;
+bottom:0px;
+right:0px;
+color:#ffffff;
+font:20px 微软雅黑;
+width:114px;
+height:108px;
+text-align:center;
+line-height:108px;
+}
+div.titleBar span.title7{
+margin-left:15px;
+}
+/*全国温泉红包大放送*/
+#thirdContainer{
+background:url("images/门票.png") 0px 0px/100% 100% no-repeat;
+width:100%;
+height:171px;
+margin:30px 0px 0px;
+}
+#thirdContainer a.four{
+background-color:#78af24;
+font:16px 微软雅黑;
+left:412px;
+top:107px;
+box-shadow:0px 5px #336d00;
+-webkit-box-shadow:0px 5px #336d00;
+-moz-box-shadow:0px 5px #336d00;
+-ms-box-shadow:0px 5px #336d00;
+-o-box-shadow:0px 5px #336d00;
+}
+/*竞选汤女郎*/
+#fourthContainer{
+width:100%;
+height:452px;
+text-align:center;
+}
+#fourTitle{
+width:100%;
+font-weight:bold;
+font-family:微软雅黑;
+font-size:30px;
+color:#ffffff;
+text-shadow:1px 1px #3987b2;
+-webkit-text-shadow:1px 1px #3987b2;
+-moz-text-shadow:1px 1px #3987b2;
+-ms-text-shadow:1px 1px #3987b2;
+-o-text-shadow:1px 1px #3987b2;
+line-height:68px;
+padding-top:20px;
+}
+#fourthContainer span.red{
+text-shadow:1px 1px #206d99;
+-webkit-text-shadow:1px 1px #206d99;
+-moz-text-shadow:1px 1px #206d99;
+-ms-text-shadow:1px 1px #206d99;
+-o-text-shadow:1px 1px #206d99;
+color:#ed5172;
+font-size:48px;
+vertical-align:-3px;
+margin-right:8px;
+}
+#fourthContainer textarea{
+width:860px;
+height:260px;
+resize:none;
+color:#7ecef4;
+font:bold 20px 微软雅黑;
+}
+/*最下面的白色道*/
+#footer{
+height:367px;
+background-color:#ffffff;
+}
+#footerContent{
+width:981px;
+margin:0px auto;
+text-align:center;
+font:12px 宋体;
+color:#898989;
+line-height:24px;
+}
+#footerContent span.yuliu{
+color:#555555;
+background-color:#ebebeb;
+line-height:58px;
+display:inline-block;
+height:58px;
+padding:0px 204px;
+}
+#footerContent span.marginRight{
+margin-right:20px;
+}
+#footerContent span.marginTop{
+margin-top:20px;
+margin-bottom:20px;
+}
+#footerContent span.ing{
+line-height:52px;
+}
+#footerContent a{
+color:#555555;
+}
+#footerContent a.orange{
+color:#ff6600;
+}
+#footerBar{
+background-color:#7ecef4;
+height:80px;
+width:100%;
+}
+</style>
+</head> 
+<body>
+<div id="header">
+<div class="floatLeft headerBar">
+<img src="images/header_01.png"/>
+<a href="#">首页</a>
+<a href="#">机票</a>
+<a href="#">酒店</a>
+<a href="#">团购</a>
+<a href="#">度假</a>
+<a href="#">火车票</a>
+<a href="#">攻略</a>
+<a href="#">旅途</a>
+<a href="#">门票</a>
+<a href="#">当地人</a>
+</div>
+<div class="floatRight headerBar">
+<span>denglemei</span>
+<a href="#">退出</a>|
+<a href="#">联系客服</a>|
+<a href="#">收藏</a>
+</div>
+</div>
+<div id="title">
+<div id="timeShaft" class="relative">
+</div>
+</div>
+<div id="main" class=" relative">
+<div id="leftBar" class="absolute">
+<a href="#" class="one commonStyle">点击进入</a><br/>
+<a href="#" class="two commonStyle">点击进入</a><br/>
+<img src="images/二维码.png"/>
+</div>
+<div id="rightBar" class="absolute">
+<a href="#" class="one commonStyle">有奖参与</a><br/>
+<a href="#" class="two commonStyle">有奖参与</a><br/>
+<a href="#" class="one commonStyle absolute three">立即领取</a><br/>
+<div  class="absolute">
+<img src="images/浮动导航.png"/>
+<ul  class="absolute">
+<li><a href="#">重庆</a></li>
+<li><a href="#">武汉</a></li>
+<li><a href="#">上海</a></li>
+<li><a href="#">深圳</a></li>
+<li><a href="#" class="currentCity">北京</a></li>
+<li><a href="#">长沙</a></li>
+<li><a href="#">三亚</a></li>
+<li><a href="#">香港</a></li>
+<li><a href="#">成都</a></li>
+<li><a href="#">昆明</a></li>
+<li><a href="#">青岛</a></li>
+<li><a href="#" id="goTop">返回顶部</a></li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div id="firstContainer" class="relative">
+<div class="absolute">
+<span class="title1">泡温泉"去哪儿就是靠谱"</span><br/>
+<span class="title2">去哪儿网全国TOP10温泉酒店推荐</span><br/>
+<a href="#" class="commonStyle expect">敬请期待</a>
+</div>
+<div class="absolute">
+<span class="title1">"约泡"去哪儿</span><br/>
+<span class="title2">争做汤女郎、汤太郎 即得100代金券</span><br/>
+<a href="#" class="commonStyle expect">敬请期待</a>
+</div>
+</div>
+<div id="secondContainer">
+<div id="tabContainer">
+<div id="tabBar" class="relative">
+<div class="line relative">
+<div class="circle">
+<span class="cityTop">重庆</span>
+</div>
+<div class="circle">
+<span class="cityBottom">武汉</span>
+</div>
+<div class="circle">
+<span class="cityTop">上海</span>
+</div>
+<div class="circle">
+<span class="cityBottom">深圳</span>
+</div>
+<div class="circle currentCircle">
+<span class="cityTop">北京</span>
+</div>
+<div class="circle">
+<span class="cityBottom">长沙</span>
+</div>
+<div class="circle">
+<span class="cityTop">三亚</span>
+</div>
+<div class="circle">
+<span class="cityBottom">香港</span>
+</div>
+<div class="circle">
+<span class="cityTop">成都</span>
+</div>
+<div class="circle">
+<span class="cityBottom">昆明</span>
+</div>
+<div class="circle">
+<span class="cityTop">青岛</span>
+</div>
+</div>
+<img src="images/emphasis.png"/>
+</div>
+</div>
+<div class="titleBar">
+<div class="floatLeft leftTitleBar">
+<img src="images/标_01.png"/>
+<span class="title3">人生第一"泡"</span><span class="title6">|</span>
+<span class="title4">经济实惠，泡之初体验</span>
+</div>
+<div class="floatRight rightTitleBar">
+<a class="title5">查看全部温泉酒店>></a>
+</div>
+</div>
+<div class="hotelBlock">
+<div class="hotelBig hotelBasic relative">
+<span class="floatLeft bsgCover">北上广</span>
+<div class="absolute hotelMes">
+<a href="#" class="type1">北京天上人间温泉酒店</a><br/>
+<span class="type2">北京天上人间温泉酒店欢迎你的光临，<br/>享受最豪华的旅行</span>
+<div class="absolute priceMes">
+<span class="type3">￥1999</span><br/>
+<span class="type4">原价：￥2999</span>
+</div>
+</div>
+<a href="#" class="bootNow absolute">立即预订</a>
+</div>
+<div class="hotelMiddle hotelBasic relative hotelLeft">
+<span class="floatLeft bsgCover">北上广</span>
+<div class="absolute hotelMesMi">
+<a href="#" class="type1Mi">北京天上人间温泉酒店</a><br/>
+<span class="type2Mi">北京天上人间温泉酒店欢迎你亲切的光临</span><br/>
+<span class="type4 type3Mi">原价：￥2999
+</span><span class="type4Mi">￥1999</span>
+</div>
+<a href="#" class="bootNowMi absolute">立即预订</a>
+</div>
+<div class="hotelMiddle hotelBasic relative">
+<span class="floatLeft bsgCover">北上广</span>
+<div class="absolute hotelMesMi">
+<a href="#" class="type1Mi">北京天上人间温泉酒店</a><br/>
+<span class="type2Mi">北京天上人间温泉酒店欢迎你亲切的光临</span><br/>
+<span class="type4 type3Mi">原价：￥2999
+</span><span class="type4Mi">￥1999</span>
+</div>
+<a href="#" class="bootNowMi absolute">立即预订</a>
+</div>
+<div class="hotelMiddle hotelBasic relative hotelLeft">
+<span class="floatLeft bsgCover">北上广</span>
+<div class="absolute hotelMesMi">
+<a href="#" class="type1Mi">北京天上人间温泉酒店</a><br/>
+<span class="type2Mi">北京天上人间温泉酒店欢迎你亲切的光临</span><br/>
+<span class="type4 type3Mi">原价：￥2999
+</span><span class="type4Mi">￥1999</span>
+</div>
+<a href="#" class="bootNowMi absolute">立即预订</a>
+</div>
+<div class="hotelMiddle hotelBasic relative">
+<span class="floatLeft bsgCover">北上广</span>
+<div class="absolute hotelMesMi">
+<a href="#" class="type1Mi">北京天上人间温泉酒店</a><br/>
+<span class="type2Mi">北京天上人间温泉酒店欢迎你亲切的光临</span><br/>
+<span class="type4 type3Mi">原价：￥2999
+</span><span class="type4Mi">￥1999</span>
+</div>
+<a href="#" class="bootNowMi absolute">立即预订</a>
+</div>
+</div>
+<div class="titleBar">
+<div class="floatLeft leftTitleBar">
+<img src="images/标_02.png"/>
+<span class="title3">双享"泡"</span><span class="title6">|</span>
+<span class="title4">此水只应天上有，人间难得几回"泡"</span>
+</div>
+<div class="floatRight rightTitleBar">
+<a class="title5">查看全部温泉酒店>></a>
+</div>
+</div>
+<div class="hotelBlock">
+<div class="hotelBig hotelBasic relative">
+<span class="floatLeft bsgCover">北上广</span>
+<div class="absolute hotelMes">
+<a href="#" class="type1">北京天上人间温泉酒店</a><br/>
+<span class="type2">北京天上人间温泉酒店欢迎你的光临，<br/>享受最豪华的旅行</span>
+<div class="absolute priceMes">
+<span class="type3">￥1999</span><br/>
+<span class="type4">原价：￥2999</span>
+</div>
+</div>
+<a href="#" class="bootNow absolute">立即预订</a>
+</div>
+<div class="hotelMiddle hotelBasic relative hotelLeft">
+<span class="floatLeft bsgCover">北上广</span>
+<div class="absolute hotelMesMi">
+<a href="#" class="type1Mi">北京天上人间温泉酒店</a><br/>
+<span class="type2Mi">北京天上人间温泉酒店欢迎你亲切的光临</span><br/>
+<span class="type4 type3Mi">原价：￥2999
+</span><span class="type4Mi">￥1999</span>
+</div>
+<a href="#" class="bootNowMi absolute">立即预订</a>
+</div>
+<div class="hotelMiddle hotelBasic relative">
+<span class="floatLeft bsgCover">北上广</span>
+<div class="absolute hotelMesMi">
+<a href="#" class="type1Mi">北京天上人间温泉酒店</a><br/>
+<span class="type2Mi">北京天上人间温泉酒店欢迎你亲切的光临</span><br/>
+<span class="type4 type3Mi">原价：￥2999
+</span><span class="type4Mi">￥1999</span>
+</div>
+<a href="#" class="bootNowMi absolute">立即预订</a>
+</div>
+<div class="hotelMiddle hotelBasic relative hotelLeft">
+<span class="floatLeft bsgCover">北上广</span>
+<div class="absolute hotelMesMi">
+<a href="#" class="type1Mi">北京天上人间温泉酒店</a><br/>
+<span class="type2Mi">北京天上人间温泉酒店欢迎你亲切的光临</span><br/>
+<span class="type4 type3Mi">原价：￥2999
+</span><span class="type4Mi">￥1999</span>
+</div>
+<a href="#" class="bootNowMi absolute">立即预订</a>
+</div>
+<div class="hotelMiddle hotelBasic relative">
+<span class="floatLeft bsgCover">北上广</span>
+<div class="absolute hotelMesMi">
+<a href="#" class="type1Mi">北京天上人间温泉酒店</a><br/>
+<span class="type2Mi">北京天上人间温泉酒店欢迎你亲切的光临</span><br/>
+<span class="type4 type3Mi">原价：￥2999
+</span><span class="type4Mi">￥1999</span>
+</div>
+<a href="#" class="bootNowMi absolute">立即预订</a>
+</div>
+</div>
+<div class="titleBar">
+<div class="floatLeft leftTitleBar">
+<img src="images/标_03.png"/>
+<span class="title3">团圆"泡"</span><span class="title6">|</span>
+<span class="title4">感情，是"泡"出来的!</span>
+</div>
+<div class="floatRight rightTitleBar">
+<a class="title5">查看全部温泉酒店>></a>
+</div>
+</div>
+<div class="hotelBlock">
+<div class="hotelBig hotelBasic relative">
+<span class="floatLeft bsgCover">北上广</span>
+<div class="absolute hotelMes">
+<a href="#" class="type1">北京天上人间温泉酒店</a><br/>
+<span class="type2">北京天上人间温泉酒店欢迎你的光临，<br/>享受最豪华的旅行</span>
+<div class="absolute priceMes">
+<span class="type3">￥1999</span><br/>
+<span class="type4">原价：￥2999</span>
+</div>
+</div>
+<a href="#" class="bootNow absolute">立即预订</a>
+</div>
+<div class="hotelMiddle hotelBasic relative hotelLeft">
+<span class="floatLeft bsgCover">北上广</span>
+<div class="absolute hotelMesMi">
+<a href="#" class="type1Mi">北京天上人间温泉酒店</a><br/>
+<span class="type2Mi">北京天上人间温泉酒店欢迎你亲切的光临</span><br/>
+<span class="type4 type3Mi">原价：￥2999
+</span><span class="type4Mi">￥1999</span>
+</div>
+<a href="#" class="bootNowMi absolute">立即预订</a>
+</div>
+<div class="hotelMiddle hotelBasic relative">
+<span class="floatLeft bsgCover">北上广</span>
+<div class="absolute hotelMesMi">
+<a href="#" class="type1Mi">北京天上人间温泉酒店</a><br/>
+<span class="type2Mi">北京天上人间温泉酒店欢迎你亲切的光临</span><br/>
+<span class="type4 type3Mi">原价：￥2999
+</span><span class="type4Mi">￥1999</span>
+</div>
+<a href="#" class="bootNowMi absolute">立即预订</a>
+</div>
+<div class="hotelMiddle hotelBasic relative hotelLeft">
+<span class="floatLeft bsgCover">北上广</span>
+<div class="absolute hotelMesMi">
+<a href="#" class="type1Mi">北京天上人间温泉酒店</a><br/>
+<span class="type2Mi">北京天上人间温泉酒店欢迎你亲切的光临</span><br/>
+<span class="type4 type3Mi">原价：￥2999
+</span><span class="type4Mi">￥1999</span>
+</div>
+<a href="#" class="bootNowMi absolute">立即预订</a>
+</div>
+<div class="hotelMiddle hotelBasic relative">
+<span class="floatLeft bsgCover">北上广</span>
+<div class="absolute hotelMesMi">
+<a href="#" class="type1Mi">北京天上人间温泉酒店</a><br/>
+<span class="type2Mi">北京天上人间温泉酒店欢迎你亲切的光临</span><br/>
+<span class="type4 type3Mi">原价：￥2999
+</span><span class="type4Mi">￥1999</span>
+</div>
+<a href="#" class="bootNowMi absolute">立即预订</a>
+</div>
+</div>
+<div class="titleBar">
+<div class="floatLeft leftTitleBar">
+<span class="title3 title7">更多超值酒店精选</span>
+</div>
+<div class="floatRight rightTitleBar">
+<a class="title5">查看全部温泉酒店>></a>
+</div>
+</div>
+<div class="hotelBlock">
+<div class="hotelMiddle hotelBasic relative hotelLeft">
+<span class="floatLeft bsgCover">北上广</span>
+<div class="absolute hotelMesMi">
+<a href="#" class="type1Mi">北京天上人间温泉酒店</a><br/>
+<span class="type2Mi">北京天上人间温泉酒店欢迎你亲切的光临</span><br/>
+<span class="type4 type3Mi">原价：￥2999
+</span><span class="type4Mi">￥1999</span>
+</div>
+<a href="#" class="bootNowMi absolute">立即预订</a>
+</div>
+<div class="hotelMiddle hotelBasic relative">
+<span class="floatLeft bsgCover">北上广</span>
+<div class="absolute hotelMesMi">
+<a href="#" class="type1Mi">北京天上人间温泉酒店</a><br/>
+<span class="type2Mi">北京天上人间温泉酒店欢迎你亲切的光临</span><br/>
+<span class="type4 type3Mi">原价：￥2999
+</span><span class="type4Mi">￥1999</span>
+</div>
+<a href="#" class="bootNowMi absolute">立即预订</a>
+</div>
+<div class="hotelMiddle hotelBasic relative hotelLeft">
+<span class="floatLeft bsgCover">北上广</span>
+<div class="absolute hotelMesMi">
+<a href="#" class="type1Mi">北京天上人间温泉酒店</a><br/>
+<span class="type2Mi">北京天上人间温泉酒店欢迎你亲切的光临</span><br/>
+<span class="type4 type3Mi">原价：￥2999
+</span><span class="type4Mi">￥1999</span>
+</div>
+<a href="#" class="bootNowMi absolute">立即预订</a>
+</div>
+<div class="hotelMiddle hotelBasic relative">
+<span class="floatLeft bsgCover">北上广</span>
+<div class="absolute hotelMesMi">
+<a href="#" class="type1Mi">北京天上人间温泉酒店</a><br/>
+<span class="type2Mi">北京天上人间温泉酒店欢迎你亲切的光临</span><br/>
+<span class="type4 type3Mi">原价：￥2999
+</span><span class="type4Mi">￥1999</span>
+</div>
+<a href="#" class="bootNowMi absolute">立即预订</a>
+</div>
+</div>
+</div>
+<div id="thirdContainer" class="relative">
+<a href="#" class="commonStyle absolute four">立即领取</a>
+</div>
+<div id="fourthContainer" class="relative">
+<div id="fourTitle">
+<span class="red">Ta</span><span>们正在竞选"汤太郎、汤女郎"</span>
+</div>
+<textarea></textarea>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footerContent">
+<span class="ing">以下活动正在进行中......</span><br/>
+<span class="yuliu marginRight">预留Banner</span><span class="yuliu">
+预留Banner</span><span class="yuliu marginRight marginTop">
+预留Banner</span><span class="yuliu marginTop">预留Banner</span><br/>
+关于Qunar.com | <a href="#">
+联系我们</a> | <a href="#">
+业务合作</a> | <a href="#">
+加盟酒店直通车</a> | <a href="#">
+媒体报道</a> | <a href="#">
+职位招聘</a> | <a href="#">
+负责声明</a> | <a href="#">
+旅游导航</a> | <a href="#">
+营销专家</a> | <a href="#">
+常见问题</a> | <a href="#">
+友情链接</a> | <a href="#" class="orange">
+建议与投诉</a> | <a href="#">
+About Us</a><br/>
+Copyright c 2011 Qunar.com Inc. All Rights Reserved. 京ICP备05021087号 电信与信息服务业务经营许可证060856号 北京市公安局海淀分局备案编号:1101081530<br/>
+<img src="images/footer_01.png"/><img src="images/footer_02.png"/><img src="images/footer_03.png"/>
+</div>
+</div>
+<div id="footerBar">
+</div>
+</body>
+<script type="text/javascript">
+(function(window){
+function adjustTimeShaft(){
+var timeShaft=document.getElementById("timeShaft");
+var images=[];
+for(var i=0;i<3;i++){
+images.push(document.createElement("img"));
+}
+var now=new Date(2014,10,26);
+var firstDay=new Date(2014,10,10);
+var secondDay=new Date(2014,10,25);
+var thirdDay=new Date(2014,10,30);
+if(now<firstDay){
+images[0].src="images/时间轴_蓝_灰.png";
+images[1].src="images/时间轴_绿_灰.png";
+images[2].src="images/时间轴_红_灰.png";
+}else if(now>=firstDay&&now<secondDay){
+images[0].src="images/时间轴_蓝now.png";
+images[1].src="images/时间轴_绿_灰.png";
+images[2].src="images/时间轴_红_灰.png";
+}else if(now>=secondDay&&now<thirdDay){
+images[0].src="images/时间轴_蓝.png";
+images[1].src="images/时间轴_绿now.png";
+images[2].src="images/时间轴_红_灰.png";
+}else if(now>=thirdDay){
+images[0].src="images/时间轴_蓝.png";
+images[1].src="images/时间轴_绿.png";
+images[2].src="images/时间轴_红now.png";
+}
+for(i=0;i<3;i++){
+timeShaft.appendChild(images[i]);
+}
+}
+adjustTimeShaft();
+})(window);
+</script>
+</html>
