@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta charset="UTF-8">
+<title>移动端酒店预订小demo</title> 
+<style type="text/css">
+body,html,div,span,img,button,hr{
+margin:0px;
+padding:0px;
+box-sizing:border-box;
+-webkit-box-sizing:border-box;
+-moz-box-izing:border-box;
+-ms-box-sizing:border-box;
+-o-box-sizing:border-box;
+}
+body{
+background-color:#f3f3f3;
+font-size:1.5rem;
+}
+button{
+outline:none;
+border:none;
+}
+html{
+font:10px 微软雅黑;
+}
+#header{
+font-size:1.5rem;
+}
+#title{
+background-color:#25a4bb;
+text-align:center;
+height:4.3rem;
+color:white;
+border:1px solid #1b7a8b;
+font:bold 1.8rem 宋体;
+}
+#back{
+float:left;
+margin-left:1.7rem;
+}
+#homeLabel{
+float:right;
+}
+#title span{
+display:inline-block;
+height:100%;
+line-height:4.3rem;
+}
+#title button{
+background-color:#25a4bb;
+display:inline-block;
+height:100%;
+}
+#title img{
+vertical-align:middle;
+}
+#hotelContainer{
+position:relative;
+height:11rem;
+}
+#hotel{
+height:100%;
+width:100%;
+}
+#hotelCover{
+width:4rem;
+height:2rem;
+background-color:black;
+opacity:0.4;
+position:absolute;
+bottom:0px;
+right:0px;
+font:1.2rem;
+color:white;
+line-height:2rem;
+text-align:center;
+}
+#basicMes{
+line-height:4.1rem;
+padding:0rem 1rem;
+border-bottom:0.1rem solid #cccccc;
+background-color:white;
+}
+#comment{
+height:4.1rem;
+border-bottom:0.1rem dotted #cccccc;
+}
+#commentNum{
+color:#47a4bb;
+font:bold 1.8rem 宋体;
+}
+div.enter{
+float:right;
+height:100%;
+}
+div.enter button{
+color:#47a4bb;
+background-color:white;
+font:1.5rem 微软雅黑;
+}
+div.enter img{
+vertical-align:-0.3rem;
+}
+#loc{
+height:5.4rem;
+border-bottom:0.1rem dotted #cccccc;
+}
+#addr{
+padding-top:0.6rem;
+width:70%;
+white-space:nowrap;
+overflow:hidden;
+text-overflow:ellipsis;
+display:inline-block;
+line-height:1.6;
+}
+.darkSmall{
+font-size:smaller;
+color:#b2b2b2;
+}
+#loc div.enter{
+height:100%;
+line-height:5.4rem;
+}
+#facility{
+height:6rem;
+}
+#uses{
+line-height:2.8rem;
+width:65%;
+display:inline-block;
+}
+#facility div.enter{
+height:100%;
+line-height:6rem;
+}
+#firstContainer,#thirdContainer,#fourthContainer{
+border-width:1px 0px;
+border-color:#cccccc;
+border-style:solid;
+background-color:white;
+}
+#firstContainer{
+margin-top:1rem;
+font-size:1.5rem;
+}
+#timeToStay{
+border-bottom:0.1rem solid #cccccc;
+padding:0rem 1rem;
+height:4.6rem;
+line-height:4.6rem;
+}
+#timeToStay img,#timeToStay span{
+vertical-align:middle;
+}
+#roomType1{
+padding:1.3rem 1rem;
+line-height:1;
+height:8.2rem;
+}
+#roomType1 div:first-child,#roomType2 div:first-child,#roomType3 div:first-child,#roomType4 div:first-child{
+width:50%;
+display:inline-block;
+}
+#roomType1 span.darkSmall{
+line-height:2.8;
+}
+.blueBG{
+background-color:#25a4bb;
+margin-right:0.5rem;
+}
+.redBG{
+background-color:#ff0000;
+}
+.orangeBG{
+background-color:#ff6600;
+margin-left:0.5rem;
+}
+.lightOrangeBG{
+background-color:#ff9036;
+border:0.1rem solid #ff9036;
+}
+.blueBG,.redBG,.orangeBG,.lightOrangeBG{
+color:white;
+padding:0rem 0.1rem;
+font-size:smaller;
+}
+.lightOrangeReverse{
+color:#ff9036;
+border:0.1rem solid #ff9036;
+margin-right:0.5rem;
+font-size:smaller;
+}
+div.enterTop{
+float:right;
+height:5.6rem;
+line-height:5.6rem;
+}
+.orangePrice{
+color:#ff6600;
+font-weight:bolder;
+font-size:larger;
+}
+.blueBT{
+color:white;
+background-color:#1ba9ba;
+padding:0.2rem 0.4rem;
+border-radius:0.4rem;
+-webkit-border-radius:0.4rem;
+-moz-border-radius:0.4rem;
+-o-border-radius:0.4rem;
+-ms-border-radius:0.4rem;
+}
+#secondContainer{
+font-size:1.5rem;
+line-height:2rem;
+}
+.bottomLine{
+border-bottom:0.1rem solid #cccccc;
+}
+.lfPadding{
+padding-left:1rem;
+padding-right:1rem;
+}
+.containerWidthAndCenter{
+width:98%;
+margin-left:auto;
+margin-right:auto;
+}
+#price1,#price2,#price4,#price5{
+height:7.5rem;
+}
+#price3{
+height:5.9rem;
+position:relative;
+}
+.leftDiv{
+width:55%;
+display:inline-block;
+}
+.floatR{
+float:right;
+}
+div.floatR div:first-child{
+display:inline-block;
+text-align:right;
+padding-right:1rem;
+}
+div.floatR div:last-child{
+line-height:5.9rem;
+}
+#price1 div,#price2 div,#price3 div,#price4 div,#price5 div{
+height:100%;
+}
+#price1{
+padding-top:0.8rem;
+padding-bottom:0.8rem;
+}
+#secondContainer button{
+background-color:#f0f0f0;
+vertical-align:middle;
+}
+#price1 .orangePrice,#price2 .orangePrice,#price3 .orangePrice,#price4 .orangePrice,#price5 .orangePrice{
+font-size:150%;
+}
+img.praise{
+position:absolute;
+top:0rem;
+left:0rem;
+}
+#price2{
+padding-top:0.8rem;
+padding-bottom:0.8rem;
+position:relative;
+}
+#price2 div.leftDiv{
+padding-top:1rem;
+}
+#price3{
+padding-top:0.5rem;
+padding-bottom:0.5rem;
+}
+#price3 div.floatR div{
+line-height:4.9rem;
+vertical-align:middle;
+}
+#price4 div.leftDiv,#price5 div.leftDiv{
+padding-top:1.3rem;
+}
+#price4,#price5{
+padding-top:0.5rem;
+padding-bottom:0.5rem;
+}
+#price4 .floatR div:last-child,#price5 .floatR div:last-child{
+line-height:6.5rem;
+}
+#morePrice{
+margin:1.3rem auto;
+width:100%;
+text-align:center;
+display:inline-block;
+color:#25a4bb;
+}
+#thirdContainer{
+line-height:2rem;
+}
+#roomType2,#roomType3{
+padding-top:0.8rem;
+padding-bottom:0.8rem;
+height:8.4rem;
+}
+#roomType2 .enterTop,#roomType3 .enterTop{
+height:6.8rem;
+line-height:6.8rem;
+}
+#roomType4{
+padding-top:1rem;
+padding-bottom:1rem;*/
+height:6.5rem;
+}
+#roomType4 .enterTop{
+height:4.8rem;
+line-height:4.8rem;
+}
+#fourthContainer{
+margin-top:1.5rem;
+}
+span.lightBlue{
+color:#25b7df;
+}
+div.otherHotels,.otherHotels .floatR{
+height:4.7rem;
+line-height:4.7rem;
+}
+#fourthContainer button{
+background-color:white;
+vertical-align:-0.2rem;
+}
+#fifthContainer{
+text-align:center;
+line-height:1.8rem;
+margin-top:0.5rem;
+}
+hr{
+background-color:#cccccc;
+height:1px;
+border:none;
+margin:0.5rem 0rem 1rem;
+}
+#fifthContainer img{
+vertical-align:-0.5rem;
+margin:0rem 0.5rem 0rem 2.4rem;
+}
+#more{
+vertical-align:middle!important;
+}
+#air{
+margin-left:0rem!important;
+}
+#divider{
+margin:0rem -1.2rem 0rem 1.2rem;
+}
+#trademark{
+font-size:1.5rem;
+margin:2.4rem 0rem 0.5rem;
+white-space:pre;
+}
+#fifthContainer a{
+color:#b2b2b2;
+}
+#fifthContainer a:last-of-type{
+font-size:1.5rem;
+}
+</style>
+</head> 
+<body>
+<div id="header" class="containerWidthAndCenter">
+<div id="title">
+<button id="back"><img src="images/back.png"/></button>
+<span>北京有怡公寓</span>
+<span id="homeLabel"><img src="images/homeLabel.png"/></span>
+</div>
+<div id="hotelContainer">
+<img id="hotel" src="images/hotel.png"/>
+<div id="hotelCover">
+共9张
+</div>
+</div>
+<div id="basicMes">
+<div id="comment">
+<span id="commentNum">3.9</span>分/好评65&nbsp;差评9&nbsp;
+<div class="enter">
+<button>看点评<img src="images/enter.png"/></button>
+</div>
+</div>
+<div id="loc">
+<div id="addr">
+北京市朝阳区西大望路甲12号北左边右边哈哈哈<br/>
+<span class="darkSmall">
+[商圈]大望路区域
+</span>
+</div>
+<div class="enter">
+<button>看地图<img src="images/enter.png"/></button>
+</div>
+</div>
+<div id="facility">
+<div id="uses">
+2014年开业&nbsp;&nbsp;4008909123<br/>
+<img src="images/fas_04.png"/><img src="images/fas_05.png"/><img src="images/fas_06.png"/><img src="images/fas_07.png"/><img src="images/fas_08.png"/>
+</div>
+<div class="enter">
+<button>酒店设施<img src="images/enter.png"/></button>
+</div>
+</div>
+</div>
+</div>
+<div id="firstContainer" class="containerWidthAndCenter">
+<div id="timeToStay">
+<img src="images/calendar.png"/>
+<span>02月27日入住&nbsp;&nbsp;02月28日离店</span>
+<div class="enter">
+<button>共1晚<img src="images/enter.png"/></button>
+</div>
+</div>
+<div id="roomType1">
+<div>
+精致家庭房<br/>
+<span class="darkSmall">窗户</span><br/>
+<span class="blueBG">团</span><span class="blueBG">夜销</span><span class="redBG">可返星券</span>
+</div>
+<div class="enterTop">
+<span class="orangePrice">￥122</span><span class="darkSmall">起</span>
+<button class="blueBT">比价<img src="images/topEnter.png"/></button>
+</div>
+</div>
+</div>
+<div id="secondContainer" class="containerWidthAndCenter">
+<div id="price1" class="bottomLine lfPadding">
+<div class="leftDiv">酒店直销<br/>
+<span class="darkSmall">(限时抢购,节省33元)-优惠价</span><br/>
+<span class="redBG">可返星券</span>
+</div>
+<div class="floatR">
+<div>
+<span class="orangePrice">￥135</span><br/><span class="darkSmall">付款￥135<br/>可返:135星券</span>
+</div>
+<div class="floatR"><button><img src="images/subAtShop.png"/></button></div>
+</div>
+</div>
+<div id="price2" class="bottomLine lfPadding">
+<div class="leftDiv"><img src="images/praise.png" class="praise"/>酒店直销<span class="orangeBG">最便宜</span><br/>
+<span class="darkSmall">(今日特价)-优惠价</span><br/>
+</div>
+<div class="floatR">
+<div>
+<span class="orangePrice">￥122</span><br/><span class="darkSmall">付款￥135<br/>可返:￥13</span>
+</div>
+<div class="floatR"><button><img src="images/subOnline.png"/></button></div>
+</div>
+</div>
+<div id="price3" class="bottomLine lfPadding">
+<div class="leftDiv"><img src="images/praise.png" class="praise"/>酒店夜销<br/>
+<span class="lightOrangeBG">最</span><span class="lightOrangeReverse">可靠</span><span class="lightOrangeBG">最</span><span class="lightOrangeReverse">快确认</span>
+</div>
+<div class="floatR">
+<div>
+<span class="orangePrice">￥168</span>
+</div>
+<div class="floatR"><button><img src="images/subOnline.png"/></button></div>
+</div> 
+</div>
+<div id="price4" class="bottomLine lfPadding">
+<div class="leftDiv">五星旅游网<br/>
+<span class="darkSmall">(今日特价)-优惠价</span>
+</div>
+<div class="floatR">
+<div>
+<span class="orangePrice">￥129</span><br/><span class="darkSmall">付款￥135<br/>可返:￥6</span>
+</div>
+<div class="floatR"><button><img src="images/subAtShop.png"/></button></div>
+</div>
+</div>
+<div id="price5" class="bottomLine lfPadding">
+<div class="leftDiv">爱游网<br/>
+<span class="darkSmall">(今日特价)-优惠价</span>
+</div>
+<div class="floatR">
+<div>
+<span class="orangePrice">￥124</span><br/><span class="darkSmall">付款￥135<br/>可返:￥11</span>
+</div>
+<div class="floatR"><button><img src="images/subAtShop.png"/></button></div>
+</div>
+</div>
+</div>
+<span id="morePrice">更多报价...</span>
+<div id="thirdContainer" class="containerWidthAndCenter">
+<div id="roomType2" class="lfPadding bottomLine">
+<div>
+温馨家庭房<br/>
+<span class="darkSmall">25m<sup>2</sup></span><br/>
+<span class="blueBG">团</span><span class="blueBG">夜销</span><span class="redBG">可返星券</span>
+</div>
+<div class="enterTop">
+<span class="orangePrice">￥135</span><span class="darkSmall">起</span>
+<button class="blueBT">比价<img src="images/bottomEnter.png"/></button>
+</div>
+</div>
+<div id="roomType3" class="lfPadding bottomLine">
+<div>
+标准房<br/>
+<span class="darkSmall">有窗&nbsp;双床&nbsp;32m<sup>2</sup></span><br/>
+<span class="blueBG">夜销</span><span class="redBG">可返星券</span>
+</div>
+<div class="enterTop">
+<span class="orangePrice">￥228</span><span class="darkSmall">起</span>
+<button class="blueBT">比价<img src="images/bottomEnter.png"/></button>
+</div>
+</div>
+<div id="roomType4" class="lfPadding">
+<div>
+豪华大床房<br/>
+<span class="blueBG">夜销</span>
+</div>
+<div class="enterTop">
+<span class="orangePrice">￥899</span><span class="darkSmall">起</span>
+<button class="blueBT">比价<img src="images/bottomEnter.png"/></button>
+</div>
+</div>
+</div>
+<div id="fourthContainer" class="containerWidthAndCenter">
+<div id="otherChoice1" class="otherHotels bottomLine lfPadding">
+附近热销酒店<span class="lightBlue">(85家)</span><div class="floatR"><button><img src="images/enter.png"/><button></div>
+</div>
+<div id="otherChoice2" class="otherHotels lfPadding">
+同类低价酒店<span class="lightBlue">(45家)</span><div class="floatR"><button><img src="images/enter.png"/><button></div>
+</div>
+</div>
+<div id="fifthContainer" class="containerWidthAndCenter darkSmall">
+注：房型信息以代理商、酒店及订单填写页实际内容为<br/>准，去哪儿不保证所有信息的正确性，仅供参考。
+<hr/>
+<img id="air" src="images/trademark1.png"/><a href="#">机票</a><img src="images/trademark2.png"/>酒店<img src="images/trademark3.png"/><a href="#">公寓</a><span id="divider">|</span><a href="#"><img src="images/more.png" id="more"/>更多</a><br/>
+<div id="trademark">Qunar 京ICP备05021087     意见反馈</div>
+</div>
+</body>
+</html>
