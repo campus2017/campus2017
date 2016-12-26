@@ -59,14 +59,41 @@ $(document).ready(function () {
     });
     $("input[type=radio]").click(function () {
         if ($(this).val() == "上传文件") {
+            if($("#showFileName").html()!=""){
+                return;
+            }
             $(".box1").show();
             $(".box2").hide();
             $("#clear").hide();
+            $("#en_letter").html("");
+            $("#ch_letter").html( "");
+            $("#num").html( "");
+            $("#punctuation").html("");
+            for (var i=1;i<4;i++)
+            {
+                $(("#char_top"+i)).html("");
+                $(("#num_top"+i)).html("");
+            }
+            $("textarea").val("").focus();
         }
         else {
+            if($("textarea").val()!=""){
+                return;
+            }
             $(".box1").hide();
             $(".box2").show();
             $("#clear").show();
+            $("#en_letter").html("");
+            $("#ch_letter").html( "");
+            $("#num").html( "");
+            $("#punctuation").html("");
+            for (var i=1;i<4;i++)
+            {
+                $(("#char_top"+i)).html("");
+                $(("#num_top"+i)).html("");
+            }
+            $("#showFileName").html("");
+            $("#uploadform").resetForm();
         }
     });
     $(".file").on("change", "input[type='file']", function () {
