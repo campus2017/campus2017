@@ -18,17 +18,11 @@ $(document).ready(function () {
                                 $("#ch_letter").html( response.ch_letter);
                                 $("#num").html( response.num);
                                 $("#punctuation").html( response.punctuation);
-                                for (var i=0;i<3;i++)
+                                for (var i=1;i<4;i++)
                                 {
-                                    $(("#char_top"+i)).html(response.top3List[i].key);
-                                    $(("#num_top"+i)).html(response.top3List[i].value);
+                                    $(("#char_top"+i)).html(response.top3List[i-1].key);
+                                    $(("#num_top"+i)).html(response.top3List[i-1].value);
                                 }
-                                $("#char_top1").html( response.char_top1);
-                                $("#char_top2").html( response.char_top2);
-                                $("#char_top3").html( response.char_top3);
-                                $("#num_top1").html( response.num_top1);
-                                $("#num_top2").html( response.num_top2);
-                                $("#num_top3").html( response.num_top3);
                             },
                             error:function(){
                                 alert("文件上传失败")

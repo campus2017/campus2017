@@ -44,7 +44,7 @@ public class CountServiceImpl implements CountService {
         countInfo = new CountInfo(enCount, chCount, numCount, puncCount);
     }
 
-    private void getNum(InputStream input) {
+    private void getNum(InputStream input) throws IOException {
         Reader reader =new InputStreamReader(input);
         String E1 = "[\u4e00-\u9fa5]";// 中文
         String E2 = "[a-zA-Z]";// 英文
@@ -57,7 +57,6 @@ public class CountServiceImpl implements CountService {
         int tempchar;
         String temp;
         int len=0;
-        try {
             while ((tempchar = reader.read()) != -1) {
                 len++;
                 /* 字符统计 忽略/n /r*/
@@ -76,10 +75,6 @@ public class CountServiceImpl implements CountService {
                 }
             }
             reader.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
         puncCount = len - enCount - chCount - numCount;
         countInfo = new CountInfo(enCount, chCount, numCount, puncCount);
     }
@@ -100,27 +95,25 @@ public class CountServiceImpl implements CountService {
         countInfo.setTop3List(resultlist);
     }
 
-    private void getTop3(InputStream input) {
+    private void getTop3(InputStream input) throws IOException {
         Reader reader =new InputStreamReader(input);
         Map<Character, Integer> countMap = new HashMap<Character, Integer>();
         List<Map.Entry<Character, Integer>> resultlist = new ArrayList<Map.Entry<Character, Integer>>();
         int tempchar;
         char tem;
-        try {
-            while ((tempchar = reader.read()) != -1) {
-                tem=(char) tempchar;
-                    /* 字符统计 忽略/n /r*/
-                if ((tem != '\r' && tem != '\n'&&tem!=' ')) {
-                    if (!countMap.containsKey(tem)) {
-                        countMap.put(tem, 1);
-                    } else {
-                        countMap.put(tem, countMap.get(tem) + 1);
-                    }
+        while ((tempchar = reader.read())!= -1) {
+            logger.info("temcahr:{}",tempchar);
+            tem=(char) tempchar;
+            /* 字符统计 忽略/n /r*/
+            if ((tem != '\r' && tem != '\n'&&tem!=' ')) {
+                if (!countMap.containsKey(tem)) {
+                    countMap.put(tem, 1);
+                } else {
+                    countMap.put(tem, countMap.get(tem) + 1);
                 }
             }
-        } catch (IOException e) {
-            e.printStackTrace();
         }
+        reader.close();
         resultlist = MapUtil.valuesort(countMap);
         countInfo.setTop3List(resultlist);
     }
@@ -128,11 +121,13 @@ public class CountServiceImpl implements CountService {
     @Override public CountInfo getCount(String str) {
         getNum(str);
         getTop3(str);
-        return  countInfo;
+        return countInfo;
     }
 
-    @Override public CountInfo getCount(InputStream input) {
+    @Override public CountInfo getCount(InputStream input) throws IOException {
+        input.mark(0);
         getNum(input);
+        input.reset(); //重置流 ，在第一个函数中流已经读取到结尾
         getTop3(input);
         return countInfo;
     }

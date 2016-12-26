@@ -2,6 +2,7 @@ package com.qunar.homework.service;
 
 import com.qunar.homework.entity.CountInfo;
 
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 import java.util.Map;
@@ -12,6 +13,6 @@ import java.util.Map;
 public interface CountService {
 
     CountInfo getCount(String str);
-    CountInfo getCount(InputStream input);
+    CountInfo getCount(InputStream input) throws IOException;
 
 }
