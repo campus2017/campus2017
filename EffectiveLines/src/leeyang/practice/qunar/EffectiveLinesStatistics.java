@@ -31,7 +31,7 @@ public class EffectiveLinesStatistics {
 
         File[] files = inFile.listFiles(new JavaFileFilter());
         if (files == null) {
-            throw new NullPointerException("空文件错误");
+            throw new NullPointerException("输入文件错误");
         }
         for (File file : files) {
             if (file.isFile()) {
