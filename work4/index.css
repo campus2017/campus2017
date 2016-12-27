@@ -10,7 +10,7 @@
     padding: 0;
 }
 body{
-    font-size: 12px;
+    font-size: 14px;
     background-color: #f0f3f5;
 }
 ul, ol{
@@ -84,10 +84,12 @@ a:hover{
     color: white;
 }
 .hotel_score{
+    display: flex;
     margin: 0 3%;
     width: 94%;
     height: 40px;
     border-bottom: 2px dotted #ccc;
+    justify-content: center;
 }
 .hotel_score > div{
      line-height: 40px;
@@ -108,7 +110,6 @@ a:hover{
     color: #25a4bb;
 }
 .right_slide_title{
-    vertical-align: middle;
     font-size: 14px;
     color: #25a4bb;
 }
