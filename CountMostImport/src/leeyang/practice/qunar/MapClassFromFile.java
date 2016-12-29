@@ -19,7 +19,7 @@ import leeyang.practice.qunar.JavaFileFilter;
 
 public class MapClassFromFile {
 
-    public static Map<String, Integer> mapClass = new HashMap<String, Integer>();
+    public static Map<String, Integer> mapClass = new HashMap<>();
 
     public static void readFile(File inFile)
             throws IOException, NullPointerException{
@@ -49,7 +49,7 @@ public class MapClassFromFile {
                         if (line.contains(".") && (!line.endsWith(".*"))) {
                             className = line.substring(line.lastIndexOf(".") + 1);
                         }
-                        if (className != "") {
+                        if (!className.equals("")) {
                             if (mapClass.get(className) != null) {
                                 mapClass.put(className, mapClass.get(className) + 1);
                             } else {
