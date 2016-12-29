@@ -32,3 +32,11 @@ Thumbs.db
 # *.zip
 # *.tar
 # *.tar.gz
+
+# generated xlsx
+*.xlsx
+
+# tmp files
+*~
+
+
