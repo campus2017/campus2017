@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Qunar Work 2 : Effect 1</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        #pop_up_box{
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 100;
+        }
+        .box_content{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -273px;
+            margin-left: -400px;
+            width: 800px;
+            height: 546px;
+        }
+        #box_content_close{
+            position: absolute;
+            top: -14px;
+            right: -14px;
+            width: 32px;
+            height: 32px;
+            background: url(images/close.png) no-repeat 0 -2px;
+            cursor: pointer;
+        }
+        #box_content_close:hover{
+            background: url(images/close_hover.png) no-repeat 0 0;
+        }
+    </style>
+</head>
+<body>
+    <img src="images/m_taobao.png" style="width: 100%;cursor: pointer;" id="test_button"/>
+    <div id="pop_up_box">
+        <div class="box_content">
+            <img src="images/layer.png" style="width: 100%;"/>
+            <div id="box_content_close"></div>
+        </div>
+    </div>
+    <script>
+        var button = document.getElementById('test_button');
+        var popBox = document.getElementById('pop_up_box');
+        var closeButton = document.getElementById('box_content_close');
+
+        listen(button, 'click', function(){
+            popBox.style.display = 'block';
+        });
+
+        listen(closeButton, 'click', function(){
+            popBox.style.display = 'none';
+        });
+
+        function listen(ele, type, handler){
+            if(document.addEventListener){
+                ele.addEventListener(type, handler, false);
+            }else if(document.attachEvent){
+                ele.attachEvent('on' + type, handler);
+            }else{
+                ele['on' + type] = handler;
+            }
+        }
+    </script>
+</body>
+</html>

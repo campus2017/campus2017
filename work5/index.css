@@ -1,0 +1,237 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+#main{
+    margin: 30px auto;
+    width: 908px;
+}
+/* 日期信息 */
+.tabTitle{
+    width: 908px;
+    height: 76px;
+    background: url(./images/fly_02.png) top right no-repeat #f3fbfd;
+    overflow: hidden;
+}
+.tabTitle li{
+    position: relative;
+    float: left;
+    padding: 8px 0 4px 0;
+    width: 102px;
+    height: 62px;
+    border-top: 1px solid #fff;
+    border-right: 1px solid #7dbcdc;
+    border-bottom: 1px solid #268fc5;
+    text-align: center;
+    font-size: 12px;
+    line-height: 20px;
+    cursor: pointer;
+}
+.tabTitle li span{
+    display: block;
+}
+.tabPrice{
+    font-size: 14px;
+    line-height: 22px;
+    color: #0e83bf;
+}
+.tabTitle li.curDate{
+    background-color: #fff;
+    color: #0e83bf;
+    font-weight: bold;
+    border-top: 1px solid #51a5d1;
+    border-bottom: 1px solid #fff;
+}
+.tabTitle li.leftDate, .tabTitle li.rightDate{
+    width: 47px;
+}
+.tabTitle li.leftDate{
+    background: url(./images/fly_08.png) no-repeat center center #fff;
+}
+.tabTitle li.rightDate{
+    border-right: none;
+    background: url(./images/fly_11.png) no-repeat center center #fff;
+}
+.lowPrice{
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    background: url(./images/fly_04.png) no-repeat;
+}
+.decoration{
+    margin: 14px 0 1px 0;
+    width: 908px;
+    height: 4px;
+    background: url(./images/fly_16.png) no-repeat;
+}
+
+/* 航班信息 */
+.flightResult{
+    width: 908px;
+}
+.flightResultTitle{
+    width: 853px;
+    height: 35px;
+    padding: 0 20px 0 35px;
+    background-color: #57C5DD;
+}
+.flightResultContent{
+    width: 853px;
+    padding: 0 20px 0 35px;
+    background-color: #f3fbfd;
+    overflow: hidden;
+}
+.flightResultTitle li{
+    float: left;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    line-height: 35px;
+}
+.sort{
+    display: inline-block;
+    width: 7px;
+    height: 10px;
+    background: url(./images/fly_19.png) no-repeat;
+}
+.routeInfo{
+    float: left;
+    width: 600px;
+}
+.companyLogo{
+    float: left;
+    width: 30px;
+    height: 94px;
+    background: url(./images/fly_23.png) center 20px no-repeat;
+}
+.companyInfo{
+    float: left;
+}
+.companyName{
+    padding: 20px 0 5px 0;
+    font-family: "宋体";
+    font-size: 12px;
+}
+.flightNum1, .flightNum2{
+    font-size: 12px;
+    color: #666;
+}
+.flightNum1 a{
+    color: #25b4d2;
+}
+.flightNum1 a:hover{
+    text-decoration: underline;
+}
+.startInfo{
+    float: left;
+    width: 140px;
+    text-align: right;
+}
+.startTime, .endTime{
+    padding: 16px 0;
+    font-size: 18px;
+}
+.startPlace, .endPlace{
+    font-size: 12px;
+    color: #333;
+}
+.durationInfo{
+    float: left;
+    width: 164px;
+}
+.durationTime{
+    padding: 18px 0 8px 0;
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+}
+.airport{
+    margin: 2px 0;
+    padding-left: 44px;
+    font-size: 12px;
+    color: #666;
+}
+.transform, .stop{
+    padding: 1px;
+    background-color: #2db7d4;
+    font-size: 12px;
+    color: #fff;
+}
+.axis{
+    position: relative;
+    left: -25px;
+    margin-bottom: 10px;
+    width: 214px;
+    height: 5px;
+    background: url(./images/fly_27.png) no-repeat;
+}
+.endInfo{
+    float: left;
+}
+.endTime .delayDay{
+    font-size: 12px;
+    color: #25b4d2;
+}
+.recommendWebsite{
+    float: left;
+    width: 90px;
+    padding-top: 40px;
+}
+.websiteInfo{
+    text-align: right;
+    margin: 10px auto;
+}
+.websiteName{
+    font-size: 12px;
+    color: #2db7d4;
+    cursor: pointer;
+}
+.websiteName:hover{
+    text-decoration: underline;
+}
+.websitePrice{
+    text-align: right;
+    font-size: 12px;
+    line-height: 16px;
+    color: #ff7200;
+}
+.reservePrice{
+    float: left;
+    width: 155px;
+    padding-top: 40px;
+    text-align: right;
+}
+.bottomPrice{
+    margin: 5px 0;
+}
+.bottomPrice .icon{
+    font-size: 14px;
+    color: #0e83bf;
+}
+.bottomPrice .num{
+    font-size: 26px;
+    color: #0e83bf;
+}
+.taxPrice{
+    text-align: right;
+    font-size: 12px;
+    line-height: 16px;
+    color: #666;
+}
+.reserveBtn{
+    margin-top: 5px;
+    width: 75px;
+    height: 40px;
+    border: none;
+    background: url(./images/fly_31.png) no-repeat;
+    cursor: pointer;
+    outline: 0;
+}

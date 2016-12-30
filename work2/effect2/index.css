@@ -1,0 +1,17 @@
+#slide_door_effect{
+    position: relative;
+    width: 958px;
+    height: 477px;
+    margin: 0 auto;
+    border: 2px solid #ece4e4;
+    border-top: none;
+    overflow: hidden;
+}
+.slide_door{
+    display: block;
+    float: left;
+    position: absolute;
+    top: 0;
+    border: 1px solid #d1d1d1;
+    cursor: pointer;
+}

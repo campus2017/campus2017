@@ -1,0 +1,45 @@
+[{
+  "id": 1,
+  "go": {
+    "company": "达美航空",
+    "flight1": "DL128",
+    "type1": "330(宽)",
+    "flight2": "DL4785",
+    "type2": "CRJ(小)",
+    "startTime": "01:20",
+    "startPlace": "首都机场 PFK T3",
+    "duration": "16",
+    "transform": "旧金山SFO",
+    "stop": "洛杉矶机场",
+    "delayDay": "1",
+    "endTime": "17:15",
+    "endPlace": "麦克卡兰国际机场 LAS"
+  },
+  "back": {
+    "company": "达美航空",
+    "flight1": "DL128",
+    "type1": "330(宽)",
+    "flight2": "DL4785",
+    "type2": "CRJ(小)",
+    "startTime": "01:20",
+    "startPlace": "麦克卡兰国际机场 LAS",
+    "duration": "16",
+    "transform": "旧金山SFO",
+    "stop": "洛杉矶机场",
+    "delayDay": "1",
+    "endTime": "17:15",
+    "endPlace": "首都机场 PEK T3"
+  },
+  "recommend": [
+    {
+      "name": "达美航空",
+      "price": 4091
+    },
+    {
+      "name": "留学生票",
+      "price": 4085
+    }
+  ],
+  "bottomPrice": 2259,
+  "tax": 2784
+}]
