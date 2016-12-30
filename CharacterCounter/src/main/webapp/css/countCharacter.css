@@ -1,0 +1,95 @@
+body{
+    margin:0 auto;
+    width:40%;
+}
+.main{
+    margin-left: 30px;
+}
+.upload{
+    position: relative;
+    background: #78C3F3;
+    padding: 4px 12px;
+    overflow: hidden;
+    text-indent: 0;
+    line-height: 20px;
+    vertical-align: middle;
+    float: left;
+    color: white;
+}
+.upload input {
+    position: absolute;
+    right: 0;
+    top: 0;
+    opacity: 0;
+}
+.upload:hover ,.count:hover,.count2:hover{
+    background: #AADFFD;
+    text-decoration: none;
+    cursor: default;
+}
+.clear:hover{
+    cursor: default;
+    background: rgb(255,210,132);
+}
+table,td,th{
+    border:1px solid #ccc;
+    width:60%;
+    border-collapse:collapse;
+    clear:both;
+    text-align: center;
+}
+tr{
+    height:30px;
+}
+.result{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    clear: both;
+}
+.type{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.inputType{
+    display: none;
+}
+.filename{
+    margin-left: 15px;
+    margin-top: 3px;
+    width: 200px;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    float: left;
+}
+.count,.count2,.clear{
+    margin-right: 160px;
+    background: #78C3F3;
+    padding: 4px 12px;
+    overflow: hidden;
+    text-indent: 0;
+    line-height: 20px;
+    vertical-align: middle;
+    text-align: center;
+    color:white;
+    width:70px;
+}
+.count{
+    float: right;
+}
+.clear{
+    background: #FFA500;
+    margin-top: 12px;
+}
+.type2{
+    margin-left: 50px;
+}
+#text{
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+.uploadType{
+    margin-bottom: 60px;
+}
