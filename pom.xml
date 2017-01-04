@@ -12,6 +12,8 @@
         <module>EffectiveLines</module>
         <module>ExchangeRate</module>
         <module>CountMostImport</module>
+        <module>CharacterCounter</module>
+        <module>CharacterCounter</module>
     </modules>
 
     <dependencies>
