@@ -27,7 +27,6 @@ public class ExcelPipeline implements Pipeline {
 
     @Override
     public void process(ResultItems resultItems, Task task) {
-        System.out.println("get page: " + resultItems.getRequest().getUrl());
         FileOutputStream fileOut = null;
         Workbook wb = null;
         try {
@@ -48,18 +47,17 @@ public class ExcelPipeline implements Pipeline {
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-//            try{
-//                //fileOut.close();
-//            }catch (IOException e){
-//                e.printStackTrace();
-//            }
+            try{
+                fileOut.close();
+            }catch (IOException e){
+                e.printStackTrace();
+            }
         }
 
         for (Map.Entry<String, Object> entry : resultItems.getAll().entrySet()) {
             String tempStr = entry.getValue().toString();
             tempStr = tempStr.substring(1, tempStr.length() - 1);
             String key = entry.getKey();
-            System.out.println(key + ":\t" + tempStr);
             String[] arr = tempStr.split(",");
             int i = 1;
             for (String str : arr) {
