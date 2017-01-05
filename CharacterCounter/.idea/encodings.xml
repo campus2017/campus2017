@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/sei/CounterTool.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/sei/WordsTopCalculator.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/sei/controller/UserController.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/sei/tool/CharacterType.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/sei/tool/CounterTool.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/sei/tool/WordsTopCalculator.java" charset="GBK" />
+  </component>
+</project>
