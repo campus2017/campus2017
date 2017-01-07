@@ -1,141 +1,42 @@
 <%@ page isELIgnored="false" language="java"  pageEncoding="UTF-8" autoFlush="true"  contentType="text/html;charset=utf-8" %>
 <%@ taglib  prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%
+    String serverAddr = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+"/"+request.getContextPath();
+%>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>单词统计页面</title>
-    <style type="text/css" media="screen">
-        *{margin:0;padding:0;font-family:'SimSun';}
-        input[ type = radio ] {
-            margin-right: 2px;
-
-        }
-        .button_font_style {
-            color:white;
-            font:12px 'Microsoft YaHei';
-        }
-        .container{
-            padding:20px 10px;
-            margin: 0px auto;
-            height: 800px;
-            width: 500px;
-        }
-        .form_wrap{
-            width: 100%;
-            padding:10px 0px;
-            height: 100px;
-        }
-        .input_wrap{
-            diaplay:block;
-            margin-bottom:10px;
-            font-size: 12px;
-        }
-        .upload_div{
-            height: 50px;
-            padding-top: 30px;
-        }
-        .bule_btn{
-            background-color:cyan;
-            width: 60px;
-            height: 25px;
-            border: none;
-            outline: none;
-            cursor: pointer;
-        }
-        .file_btn{
-            height: 25px;
-            width: 100px;
-            border: none;
-            outline: none;
-            cursor: pointer;
-        }
-        .text_div{
-            display: none;
-            height: 50px;
-        }
-        .text_div > div{
-            float:left;
-        }
-        input[ name = up_btn ] {
-            float: left;
-        }
-        input[ name = text_btn ] {
-            float: right;
-        }
-        table thead th{
-            font:12px bolder 'Microsoft YaHei';
-            text-align: center;
-        }
-        table tbody td{
-            font:12px 'Microsoft YaHei';
-            text-align: center;
-        }
-        .result_wrap{
-            margin-top: 20px;
-        }
-        .table1{
-            margin-top: 10px;
-            height: 300px;
-            width: 350px;
-            border-collapse: collapse;
-        }
-        .table1 tr{
-            height: 60px;
-        }
-        .table1 th{
-            width: 50%;
-        }
-        .table2{
-            margin-top: 10px;
-            height: 200px;
-            width: 350px;
-            border-collapse: collapse;
-        }
-        .table2 tr{
-            height: 50px;
-        }
-        .table2 th{
-            width: 50%;
-        }
-        .button_wrap{
-            width: 100px;
-            padding: 6px 30px;
-        }
-        .textarea_wrap textarea{
-            font-size:16px;
-            color:#666;
-            padding-left: 4px;
-            overflow-y:scroll;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="<%=serverAddr%>css/index.css">
 </head>
 <body>
 <div class="container">
     <p style="font-size:14px;font-weight:bolder;">请选择一段文字</p>
     <div style="margin:10px 20px;width: 460px;height: 700px;">
-        <script  type="text/javascript" charset="utf-8" >
-            var viewFunc = {
-                'uploadView':function(show){
-                    var upload =document.getElementById('countFileForm')
-                    upload.style.display = show?'block':'none';
-                },
-                'textView':function(show){
-                    var text =document.getElementById('countTextForm')
-                    text.style.display = show?'block':'none';
-                }
+    <!--切换面板-->
+    <script  type="text/javascript" charset="utf-8" >
+        var viewFunc = {
+            'uploadView':function(show){
+                var upload =document.getElementById('countFileForm')
+                upload.style.display = show?'block':'none';
+            },
+            'textView':function(show){
+                var text =document.getElementById('countTextForm')
+                text.style.display = show?'block':'none';
             }
-            var View = [viewFunc['uploadView'],viewFunc['textView']]
-            var index = 0;
-            function change(eve){
-                tabIndex = parseInt(eve.value);
-                View[tabIndex].call(this,true)
-                View[index].call(this,false)
-                index = tabIndex ;
-            }
+        }
+        var View = [viewFunc['uploadView'],viewFunc['textView']]
+        var index = 0;
+        function change(eve){
+            tabIndex = parseInt(eve.value);
+            View[tabIndex].call(this,true)
+            View[index].call(this,false)
+            index = tabIndex ;
+        }
 
-        </script>
+    </script>
         <div class="form_wrap">
                 <div class="input_wrap">
                     <input type="radio" name="type"  onclick="change(this)" checked value="0" >文件上传</input>
@@ -157,10 +58,10 @@
                     </div>
                 </form>
         </div>
-        <label class="" id="info" style="color:darkred;display: block;">未上传</label>
+        <!--<label class="" id="info" style="color:darkred;display: block;">未上传</label>-->
         <div class="result_wrap">
             <p style="font-size:14px;">各统计内容的个数如下:</p>
-            <table class="table1" width="350" border="1">
+            <table id="table1" class="table1" width="350" border="1">
                 <thead>
                 <tr>
                     <th>统计项</th>
@@ -216,6 +117,11 @@
     <script type="text/javascript">
         var tableChange = {
             classifyTable:function(classify){
+                //先清空
+                var trs = document.querySelectorAll("#table1 tbody tr");
+                for(var count=0; count< trs.length;count++){
+                    trs[count].getElementsByTagName("td")[1].innerHTML = '';
+                }
                 for(var index in classify){
                     var tr = document.getElementById(index);
                     tr.getElementsByTagName("td")[1].innerHTML = classify[index];
@@ -225,8 +131,12 @@
                 var table = document.getElementById("table2");
                 var trs =  table.querySelectorAll("tbody tr");
                 var count  = 0;
-                for(var index in rateSort){
-                    console.log(rateSort[index]);
+                for(var index =0 ; index<trs.length ; index++){
+                    if(index>=rateSort.length){
+                        trs[count].getElementsByTagName("td")[0].innerHTML = '';
+                        trs[count].getElementsByTagName("td")[1].innerHTML = '';
+                        continue;
+                    }
                     for(var key in rateSort[index]){
                         trs[count].getElementsByTagName("td")[0].innerHTML = key;
                         trs[count].getElementsByTagName("td")[1].innerHTML = rateSort[index][key];
@@ -236,51 +146,7 @@
             }
         }
     </script>
-    <script type="text/javascript">
-        var ajax = {
-            _validate:function(ajaxData){
-                if(typeof ajaxData == 'undefined'
-                        || typeof  ajaxData['url'] == 'undefined'
-                        || typeof  ajaxData['datas'] == 'undefined'
-                        || typeof ajaxData['type'] == 'undefined')
-                    return false;
-                ajaxData['ajaxSuccess']
-                        =typeof  ajaxData['ajaxSuccess'] == 'undefined'?
-                        function(){}:ajaxData['ajaxSuccess'];
-                ajaxData['ajaxError']
-                        =typeof  ajaxData['ajaxError'] == 'undefined'?
-                        function(){}:ajaxData['ajaxError'];
-                return true;
-            },
-            ajaxSend:function (ajaxData) {
-                if(!ajax._validate(ajaxData)){
-                    throw Error("参数错误");
-                }
-                if(window.XMLHttpRequest){
-                    AjaxObj =  new XMLHttpRequest();
-                }else{
-                    AjaxObj = new ActiveXObject("XMLHTTP");
-                }
-                AjaxObj.open(ajaxData['type'],ajaxData['url']+"?new="+new Date().getTime(),true);
-                if(typeof  ajaxData['contentType'] != 'undefined') {
-                    AjaxObj.setRequestHeader("Content-type", ajaxData['contentType']);
-                }
-                AjaxObj.send(ajaxData['datas']);
-                AjaxObj.onreadystatechange = function  () {
-                    if(AjaxObj.readyState == 4){
-                        if(AjaxObj.status == 200){
-                            console.log('ok');
-                            ajaxData['ajaxSuccess'](AjaxObj.responseText);
-                        }else{
-                            ajaxData['ajaxError'](AjaxObj.readyState,AjaxObj.status,AjaxObj.responseText);
-                        }
-                    }else{
-                        ajaxData['ajaxError'](AjaxObj.readyState);
-                    }
-                }
-            }
-        }
-    </script>
+    <script type="text/javascript" src="<%=serverAddr%>js/ajax.js"></script>
     <script type="text/javascript">
         var submitBtn = document.getElementsByName("text_btn")[0];
         function showResult(result){

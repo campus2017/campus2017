@@ -1,0 +1,102 @@
+*{margin:0;padding:0;font-family:'SimSun';}
+input[ type = radio ] {
+    margin-right: 2px;
+
+}
+.button_font_style {
+    color:white;
+    font:12px 'Microsoft YaHei';
+}
+.container{
+    padding:20px 10px;
+    margin: 0px auto;
+    height: 800px;
+    width: 500px;
+}
+.form_wrap{
+    width: 100%;
+    padding:10px 0px;
+    height: 100px;
+}
+.input_wrap{
+    diaplay:block;
+    margin-bottom:10px;
+    font-size: 12px;
+}
+.upload_div{
+    height: 50px;
+    padding-top: 30px;
+}
+.bule_btn{
+    background-color:cyan;
+    width: 60px;
+    height: 25px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.file_btn{
+    height: 25px;
+    width: 100px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.text_div{
+    display: none;
+    height: 50px;
+}
+.text_div > div{
+    float:left;
+}
+input[ name = up_btn ] {
+    float: left;
+}
+input[ name = text_btn ] {
+    float: right;
+}
+table thead th{
+    font:12px bolder 'Microsoft YaHei';
+    text-align: center;
+}
+table tbody td{
+    font:12px 'Microsoft YaHei';
+    text-align: center;
+}
+.result_wrap{
+    margin-top: 20px;
+}
+.table1{
+    margin-top: 10px;
+    height: 300px;
+    width: 350px;
+    border-collapse: collapse;
+}
+.table1 tr{
+    height: 60px;
+}
+.table1 th{
+    width: 50%;
+}
+.table2{
+    margin-top: 10px;
+    height: 200px;
+    width: 350px;
+    border-collapse: collapse;
+}
+.table2 tr{
+    height: 50px;
+}
+.table2 th{
+    width: 50%;
+}
+.button_wrap{
+    width: 100px;
+    padding: 6px 30px;
+}
+.textarea_wrap textarea {
+    font-size: 16px;
+    color: #666;
+    padding-left: 4px;
+    overflow-y: scroll;
+}

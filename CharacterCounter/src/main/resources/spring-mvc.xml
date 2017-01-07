@@ -22,4 +22,6 @@
         </mvc:content-negotiation>
         <mvc:jsp view-class="org.springframework.web.servlet.view.JstlView" prefix="/WEB-INF/jsp/" suffix=".jsp"/>
     </mvc:view-resolvers>
+    <mvc:resources mapping="/js/**" location="/js/"/>
+    <mvc:resources mapping="/css/**" location="/css/"/>
 </beans>
