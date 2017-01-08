@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+  <title>内联元素的流定位</title>
+  <style type="text/css">
+	*{margin:0; padding:0;}
+	ul{
+		margin:0 auto;
+		width:964px;
+
+	}
+	ul li{
+		list-style:none;
+		float:left;
+		border:1px solid #ddd;
+		width:159px;
+		overflow:hidden;
+	}
+
+	ul li:first-child{
+		width:479px;
+	}
+  </style>
+ </head>
+
+ <body>
+   <ul id="ul">
+    <li ><img src="./images/door1.png"></li>
+    <li class="li22222"><img src="./images/door2.png"></li>
+    <li class="li3333"><img src="./images/door3.png"></li>
+    <li><img src="./images/door4.png"></li>
+   </ul>
+   <script>
+	
+     var oUl = document.querySelector("#ul");
+     //timer一定要放在回调函数外面，这样才可以清除定时器
+     var timer = null;
+     oUl.onmouseover = function(ev){
+     	   	
+		var ev = ev || window.event;
+		var target = ev.target || ev.srcElement;
+		//alert(target.innerHTML);
+		if(target.nodeName.toLowerCase() !== "img"){
+			return;
+		}
+		
+	   var li = target.parentElement;
+	  
+	   //如果同一个图片多次hover则返回，避免出现闪动效果
+	   if((li.offsetWidth)>161)
+	   {
+			return;
+       }
+	   var lis  = li.parentElement.children;
+	   var len = lis.length;
+
+	   for(var i = 0;i<len;i++){
+	  	 if((lis[i].offsetWidth)>161){
+
+	  		lis[i].style.width = "159px";
+	  		 break;
+	     }
+	   }
+
+	   //动画实现图片的宽度变化
+	   cancelAnimationFrame(timer);
+		timer = requestAnimationFrame(function fn(){
+		var liWidth = parseInt(li.offsetWidth);
+		if(liWidth<=441){
+			
+			li.style.width  = (liWidth+38)+"px";
+			liWidth = parseInt(li.offsetWidth);
+			console.log(liWidth);
+			timer = requestAnimationFrame(fn);
+
+		}else{
+			//li.style.width
+		  	cancelAnimationFrame(timer);
+		  	
+		} 
+	 });
+
+    }
+    oUl.onmouseout = function(ev){
+       //cancelAnimationFrame(timer);
+
+    }
+   </script>
+ </body>
+</html>

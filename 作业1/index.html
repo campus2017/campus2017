@@ -1,0 +1,1116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:wb="http://open.weibo.com/wb">
+ <head>
+   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>		
+  <title></title>
+  <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+  <style type="text/css">
+	*{margin:0;padding:0px;}
+	 a{
+     	text-decoration:none;
+     }
+	ul li{
+       list-style:none;
+	}
+	body{ 
+       width:1280px;
+       margin:0 auto;
+       height:auto;
+	}
+	/*top区域*/
+	#top{
+		line-height:30px;
+		font-size:12px;
+		color:#666;
+	}
+	#top a{
+		color:#666;
+	}
+	#top_ul1{margin-left:200px;}
+	#top_ul1 li{float:left;margin-right:10px;}
+	#top_ul2 {float:right;margin-right:200px;}
+	#top_ul2 li{float:left; margin-right:10px;}
+	#content-top{
+		clear:both;
+		height:300px;
+		border:1px solid black;
+	}
+	#camel{
+		background:url(images/campel_02.png) no-repeat;
+		padding-left:25px;
+	}
+
+
+    /*title区域*/
+    #title_01{
+    	width:100%;
+    }
+	#title_02,#title_04{
+		width:318px;
+		height:102px;
+	}
+	#title_03{
+		width:644px;
+		height:102px;
+		position:relative;
+		background:url(images/mergeTitle.png) no-repeat 0px -0px;
+	}
+	#title_03 a{
+		color:white;
+	}
+    #title dl dd{
+    	float:left;
+    }
+    #title_05{
+    	width:100%;
+    }
+   .title_down{
+   	  border-style:solid;
+   	  border-width:12px 14px;
+   	  width:0px;
+   	  height:0px;
+   	  border-color:#fff transparent transparent transparent;
+   	  display:inline-block;
+   	  position:relative;
+   	  top:6px;
+   }
+   #title_03 ul{
+     	position:absolute;
+     	width:33.3%;
+     	margin-top:22px;
+     	font-size:14px;
+     	font-weight:bold;
+     	color:white;
+     	text-align:center;
+   }
+   #title_03 ul li.title_time{
+   	 font-size:18px;
+   }
+    #stage_02{
+   	 left:33.3%;
+   }
+    #stage_03{
+   	 left:66.6%
+   }
+  .title_down.hide{
+   	 border-color:transparent;
+   }
+
+   /*内容区*/
+   #content-main{
+   	background:#81CDF0;
+   	clear:both;
+   }
+   #outer{
+   	height:20px;
+   }
+   #content-nav{
+   	margin:0px auto;
+   	width:647px;
+   	background:url(images/clickIn.png) no-repeat ;
+   	height:187px;
+   	position:relative;
+   }
+   #content-nav dl{
+   	width:50%;
+   	position:absolute;
+   	color:white;
+   	font-weight:bold;
+   	top:55%;
+   	text-align:center;
+   }
+    #content-nav dl:first-child{
+    	left:5%;
+    }
+     #content-nav dl:last-child{
+    	left:55%;
+    }
+     #content-nav dl dd{
+     	font-size:0.8em;
+     	font-weight:normal;
+     	line-height:2;
+     }
+     dd.nav-btn{
+     	display:inline-block;
+     	width:33.3%;
+     	background-image:url(images/buttons.png);
+     	background-repeat:no-repeat;
+     	background-position: 0px 40px;
+     }
+     dd.first{
+     	background-position: 0px -130px;
+     }
+     dd.second{
+     	background-position: 0px -26px;
+     }
+     #content-nav a{
+     	text-decoration:none;
+     	color:white;
+     	display:inline-block;
+     }
+      dd.first:hover{
+      	background-position: 0px -104px;
+      }
+      dd.second:hover{
+      		background-position: 0px -0px;
+      }
+
+      /*IP滑块*/
+      #IPList{
+      	background:url(images/IP.png) no-repeat ;
+      	width:605px;
+      	height:85px;
+      	margin:25px auto 0px auto;
+      	padding:0px 21px 0px 21px;
+      	font-size:14px;
+      }
+      #IPList li{
+      	float:left;
+      	color:white;
+      	width:55px;
+      	text-align:center;
+      	display:inline-block;
+      	cursor:pointer;
+      	position:relative;
+      	z-index:200;
+        height:73px;
+        padding-top:12px;
+      }
+      #IPList li.boldFont{
+      	font-size:17px;
+      	font-weight:bold;
+        
+      }
+       #IPList li:nth-child(even){
+         padding-top:47px;
+         height:38px;
+       }
+       #slideIP{
+       	  width:59px;
+       	  height:89px;
+       	  background:url(images/slideIPm.png) no-repeat -10px -22px;  
+       	  position:absolute;
+       	  top:-2px;
+       	  left:17px;
+       	  z-index:100;
+       }
+       #slideAxis{
+       	height:10px;
+       	width:560px;
+       	background:url(images/slideIPm.png) no-repeat -13px -8px;  
+       	position:absolute;
+       	top:38px;
+       	left:42px;
+       	z-index:200;
+       }
+       #outerContent{
+       	position:relative;
+       	width:647px;
+      	height:85px;
+      	margin:25px auto 0px auto;
+       }
+	.hides{
+		display:none;
+	}  
+
+
+	/*content-detail*/     
+	#content-detail{
+		width:634px;
+		padding:4px 6px 5px 7px;
+		background:#F3EEDB;
+		margin: 0 auto;
+	}
+	.detail-title{
+		height:34px;
+		padding:10px 0px 5px 0px;
+		overflow:hidden;
+		margin:0 7px;
+	}
+	.detail-title div{
+		float:left;
+
+	}
+	.detail-title a{
+		float:right;
+		text-decoration:none;
+		font-size:12px;
+		padding-top:20px;
+	}
+	.detail-title div,.detail-title a{
+		display:inline-block;
+		color:#ED5172;
+	}
+	.detail-title .detail-one{
+		font-size:30px;
+		font-weight:bolder;
+		background-image:url(images/titleFlag.png);
+		background-repeat:no-repeat;
+		padding-left:38px;
+	}
+	.detail-one.flag2{
+		background-position:0px -33px;
+	}
+	.detail-one.flag3{
+		background-position:0px -68px;
+	}
+	.detail-one.flag4{
+		background:none;
+		padding-left:0px;
+	}
+	.detail-title .detail-two{
+		padding-top:16px;
+		font-size:12px;
+
+	}
+     /*detail-title*/
+
+     /*detail-picTitle*/
+      .detail-picTitle{
+      	position:relative;
+      	background:white;
+      	margin-top:5px;
+      	overflow:hidden;
+      }    
+     .detail-picTitle span,.detail-smallDetail span{
+        background:rgba(2,22,26,0.6);
+        display:inline-block;
+        width:45px;
+        height:23px;
+        line-height:23px;
+        text-align:center;
+        position:absolute;
+        left:5px;
+        top:5px;
+        font-size:12px;
+        color:white;
+        cursor:pointer;
+     }
+     .detail-picTitle img{
+         margin:7px;   
+     }
+     .detail-picTitle dl,.detail-smallDetail dl{
+     	position:absolute;
+     	color:white;
+     }
+     .detail-picTitle dl{
+     	right:20px;
+     	top:20px;
+     }
+     .detail-smallDetail dl{
+     	left:15px;
+     	bottom:10px;
+     }
+     .detail-picTitle dl a, .detail-smallDetail dl dt a{
+     	color:white;
+     	display:block;
+     	text-align:center;
+     }
+     .detail-picTitle dl dt a{
+     	font-size:16px;
+        font-weight:bold;
+        padding:10px 0px 20px 0px;
+     }
+     .detail-smallDetail dl dt a{
+     	font-size:14px;
+        font-weight:bold;
+     }
+     .detail-picTitle dl dd a{
+        font-size:12px;
+        font-family:"Times New Roman",Georgia,Serif;
+        line-height:20px;
+     }
+      .detail-smallDetail dl dd a{
+      	color:white;
+        font-size:12px;
+        font-family:"Times New Roman",Georgia,Serif;
+        line-height:20px;
+     }
+      .detail-picTitle h3{
+      	font-size:20px;
+      	text-align:center;
+      	line-height:1.2;
+        padding-top:10px;
+      }
+      .detail-picTitle dl dd:last-child a,.detail-smallDetail dl dd:last-child a{
+      	text-decoration:line-through;
+      	font-size:12px;
+      }
+      .detail-smallDetail dl dd:last-child em{
+      	font-weight:bold;
+
+      }
+      .detail-picTitle .buy,.detail-smallDetail .buy{
+      	position:absolute;
+      	bottom:20px;
+      	right:70px;
+      }
+      .detail-smallDetail .buy{
+          bottom:33px;
+          right:17px;
+      }
+      .detail-picTitle .buy a,.detail-smallDetail .buy a{
+      	color:white;
+      }
+
+    .detail-smallDetail .buy a{
+    	font-size:15px;
+    }
+     .detail-smallDetail
+      {
+			margin-top:7px;
+			overflow:hidden;
+      }
+       .detail-smallDetail .smallDetailOuter{
+        	width:314px;
+        	background:white;           
+            float:left;
+       }
+       .smallDetailOuter.firstOuter{
+       	 margin-right:6px;
+       }
+      .detail-smallDetail .detail-pic1{
+      	display:inline-block;
+        margin:7px;
+      }
+      .smallDetailOuter{
+      	position:relative;
+      }
+
+
+
+      /*content-picket*/
+      #content-picket{
+      	width:648px;
+      	margin:20px auto 10px auto;     	
+      }
+       #content-picket dl{
+       	 	background:url(images/picket.png) no-repeat;
+ 			width:648px;
+      	    height:115px;
+ 			display:table-cell;
+ 			text-align:center;
+ 			vertical-align:middle;
+       }
+       #content-picket dl dt{
+       	   display:inline-block;
+           font-size:35px;	
+           font-weight:bold;
+           color:white;
+           line-height:1.5;
+       }
+	   #content-picket  dd.nav-btn-pic{
+	      width:100%;
+	      display:inline-block;
+	   }
+	   
+	   #content-picket  dd.nav-btn-pic a{
+			background:url(images/buttons.png) no-repeat 0px -26px;
+			display:inline-block;
+			height:26px;
+			line-height:22px;
+			width:108px;
+			color:white;
+			font-size:12px;
+	   }
+
+	   /*content-embed-topic*/
+	   #content-embed-topic{
+  		width:648px;
+  		margin:0 auto;
+  	    text-align:center;
+        padding:5px 0px 20px 0px;
+	   }
+	   #content-embed-topic strong{
+			color:#ED5172;
+			font-size:35px;
+			font-weight:bold;
+	   }
+	    #content-embed-topic span{
+			color:white;
+			font-size:25px;
+			font-weight:bold;
+	   }
+
+	   /*toTop*/
+	   #toTop{
+	   	position:absolute;
+	   	 height:348px;
+	   	 width:144px;
+	   	 bottom:-800px;
+	   	 right:130px;
+	   	 background:url(images/toTop.png) no-repeat;
+	   }
+	   #toTop h1{
+	   	padding-top:16px;
+ 		font-size:25px;
+ 		line-height:1;
+ 		color:white;
+ 		text-align:center;
+	   }
+	    #toTop h2
+	    {
+ 		font-size:17px;
+ 		line-height:1;
+ 		color:white;
+ 		padding-bottom:17px;
+ 		text-align:center;
+	   }
+	    #toTop ul li{
+	   	text-align:center;
+	   	padding-bottom:3px;
+	    }
+	   #toTop ul li a{
+	   	 display:inline-block;
+	   	 width:55px;
+	   	 height:16px;
+	   	 font-size:13px;
+	   	 color:white;
+	   }
+	    #toTop ul li:last-child{
+	    	padding-top:7px;
+	    }
+	    #toTop ul li a:hover{
+	    	background:url(images/buttons.png) no-repeat 0px -156px;
+	    }
+	     #toTop ul li:last-child a:hover{
+	    	background:none;
+	    }
+	    /*footer*/
+	    
+	    #footerItems{
+	    	background:white;
+	    	width:650px;
+	    	margin:0 auto;
+	    	text-align:center;
+	    	font-size:12px;
+	    }
+	    #footer span{
+	    	color:#888;
+	    	display:block;
+	    	margin:10px;
+	    }
+	    #footer ul {float:left;margin:10px 0px;}
+	    #footer #banner li{
+			float:left;
+			width:305px;
+			margin:6px;
+			background-color:#efefef;
+			text-align:center;
+			line-height:3;
+			font-size:10px;
+	    }
+       #footer  #items li{
+       	 float:left;
+       	 font-size:8px;
+       	
+       }
+        #footer  #items li a{
+        	 color:#666;
+        }
+        #copyRight{text-align:left;}
+        #footerEnd{
+        	background:#7ECEF4;
+        	height:100px;
+        	margin-top:70px;
+        }
+  </style>
+ </head>
+
+ <body id="topNav">
+  <div id="top">
+    <ul id="top_ul1">
+      <li id="camel"><a href="###">Qunar.com去哪儿网</a></li>
+      <li><a href="###">首页</a></li>
+      <li><a href="###">机票</a></li>
+      <li><a href="###">酒店</a></li>
+      <li><a href="###">团购</a></li>
+      <li><a href="###">度假</a></li>
+      <li><a href="###">火车票</a></li>
+      <li><a href="###">攻略</a></li>
+      <li><a href="###">旅游网</a></li>
+      <li><a href="###">门票</a></li>
+      <li><a href="###">当地人</a></li>
+    </ul>
+    <ul id="top_ul2">
+      <li><a href="###">denglemei</a></li>
+      <li><a href="###">退出</a></li>
+      <li>|</li>
+      <li><a href="###">联系客服</a></li>
+      <li>|</li>
+      <li><a href="###">收藏</a></li>
+    </ul>
+  </div><!--end of top-->
+  <div id="title">
+   <dl>
+     <dt><img id="title_01" src="images/title_01.png"></dt>
+     <dd><img id="title_02" src="images/title_02.png"></dd>
+     <dd id="title_03">
+        <ul id="stage_01">
+           <li class="title_down hide"></li>
+           <li class="title_time">2016.11.20</li>
+           <li><a href="###">征集泡场男女</a></li>
+        </ul>
+         <ul  id="stage_02">
+            <li class="title_down hide"></li>
+           <li class="title_time">2016.11.25</li>
+           <li><a href="###">进入评选阶段</a></li>
+        </ul>
+         <ul  id="stage_03">
+           <li class="title_down hide"></li>
+           <li class="title_time">2016.11.30</li>
+           <li><a href="###">公布评选结果</a></li>
+        </ul>
+     </dd>
+     <dd><img id="title_04" src="images/title_04.png"></dd>
+     <dd><img id="title_05" src="images/title_05.png"></dd>
+   </dl>
+  </div><!--end of title-->
+  <div id="content-main">
+        <div id="outer"></div>
+        <div id="content-nav">
+		    <dl>
+		     <dt>泡温泉“去哪儿”就是靠谱</dt>
+		     <dd>去哪儿网全国TOP10温泉酒店推荐</dd>
+		     <dd class="nav-btn"><a href="###"></a></dd>
+		    </dl>
+		    <dl>
+		     <dt>“约泡”去哪儿</dt>
+		     <dd>争做汤女郎、汤太郎 即得XXX奖品</dd>
+		     <dd class="nav-btn"><a href="###"></a></dd>
+		    </dl>
+        </div>
+        <div id="content-IP">
+         <div id="outerContent">
+	          <ul id="IPList">
+	              <li >北京</li>
+	              <li>上海</li>
+	              <li>广州</li>
+	              <li>深圳</li> 
+	              <li>杭州</li>
+	              <li>苏州</li>
+	              <li>无锡</li>
+	              <li >衡水</li>
+	              <li>邯郸</li>
+	              <li>成都</li>
+	              <li>郑州</li>
+	          </ul>
+         	  <div id="slideIP"></div>
+         	  <div id="slideAxis"></div>
+          </div>
+        </div>
+        <div id="content-detail">
+          <div class="detail-title">
+            <div class="detail-one">人生第一 "泡"</div>
+            <div class="detail-two">| 经济实惠，泡之体验</div>
+            <a class="detail-three" href="###">查看全部温泉酒店>></a>
+          </div>
+          <div class="detail-picTitle">
+	            <span>北上广</span>
+	            <a href="###"><img src="images/content-title.png"></a>
+	            <dl>
+	              <dt><h2><a href="###">北京天上人间温泉酒店</a></h2></dt>
+	              <dd><a href="###">背景天上人间温泉北京</a></dd>
+	              <dd><a href="###">酒店北京天上人间温泉酒店</a></dd>
+	              <dd><h3>￥1999</h3></dd>
+	              <dd><a href="###">原价:￥2999</a></dd>
+	            </dl>
+	            <div class="buy"><a href="###">立即订购</a></div>
+          </div>
+
+          <div class=" detail-smallDetail">
+           <div class="smallDetailOuter firstOuter">
+              <span>北上广</span>
+              <a class="detail-pic1 " href="###"><img src="images/content-detail.png"></a>
+              <dl>
+	              <dt><h2><a href="###">北京天上人间温泉酒店</a></h2></dt>
+	              <dd><a href="###">酒店北京天上人间温泉酒店</a></dd>
+	              <dd><a href="###">原价:￥2999</a><em>￥1999</em></dd>
+              </dl>
+              <div class="buy"><a href="###">立即订购</a></div>
+           </div>
+           <div class="smallDetailOuter">
+	          <span>北上广</span>
+              <a class="detail-pic1 " href="###"><img src="images/content-detail.png"></a>
+              <dl>
+	              <dt><h2><a href="###">北京天上人间温泉酒店</a></h2></dt>
+	              <dd><a href="###">酒店北京天上人间温泉酒店</a></dd>
+	             <dd><a href="###">原价:￥2999</a><em>￥1999</em></dd>
+              </dl>
+              <div class="buy"><a href="###">立即订购</a></div>
+          </div>
+         </div>
+
+         <div class=" detail-smallDetail">
+           <div class="smallDetailOuter firstOuter">
+              <span>北上广</span>
+              <a class="detail-pic1 " href="###"><img src="images/content-detail.png"></a>
+              <dl>
+	              <dt><h2><a href="###">北京天上人间温泉酒店</a></h2></dt>
+	              <dd><a href="###">酒店北京天上人间温泉酒店</a></dd>
+	              <dd><a href="###">原价:￥2999</a><em>￥1999</em></dd>
+              </dl>
+              <div class="buy"><a href="###">立即订购</a></div>
+           </div>
+           <div class="smallDetailOuter">
+	          <span>北上广</span>
+              <a class="detail-pic1 " href="###"><img src="images/content-detail.png"></a>
+              <dl>
+	              <dt><h2><a href="###">北京天上人间温泉酒店</a></h2></dt>
+	              <dd><a href="###">酒店北京天上人间温泉酒店</a></dd>
+	             <dd><a href="###">原价:￥2999</a><em>￥1999</em></dd>
+              </dl>
+              <div class="buy"><a href="###">立即订购</a></div>
+          </div>
+        </div><!--end of detail-smallDetail-->
+      </div><!--end of content-detail-->
+     
+      
+      <div id="content-detail">
+          <div class="detail-title">
+            <div class="detail-one flag2">双享 "泡"</div>
+            <div class="detail-two">| 此水只应天上有，人间难得几回 "泡"</div>
+            <a class="detail-three" href="###">查看全部温泉酒店>></a>
+          </div>
+          <div class="detail-picTitle">
+	            <span>北上广</span>
+	            <a href="###"><img src="images/content-title.png"></a>
+	            <dl>
+	              <dt><h2><a href="###">北京天上人间温泉酒店</a></h2></dt>
+	              <dd><a href="###">背景天上人间温泉北京</a></dd>
+	              <dd><a href="###">酒店北京天上人间温泉酒店</a></dd>
+	              <dd><h3>￥1999</h3></dd>
+	              <dd><a href="###">原价:￥2999</a></dd>
+	            </dl>
+	            <div class="buy"><a href="###">立即订购</a></div>
+          </div>
+
+          <div class=" detail-smallDetail">
+           <div class="smallDetailOuter firstOuter">
+              <span>北上广</span>
+              <a class="detail-pic1 " href="###"><img src="images/content-detail.png"></a>
+              <dl>
+	              <dt><h2><a href="###">北京天上人间温泉酒店</a></h2></dt>
+	              <dd><a href="###">酒店北京天上人间温泉酒店</a></dd>
+	              <dd><a href="###">原价:￥2999</a><em>￥1999</em></dd>
+              </dl>
+              <div class="buy"><a href="###">立即订购</a></div>
+           </div>
+           <div class="smallDetailOuter">
+	          <span>北上广</span>
+              <a class="detail-pic1 " href="###"><img src="images/content-detail.png"></a>
+              <dl>
+	              <dt><h2><a href="###">北京天上人间温泉酒店</a></h2></dt>
+	              <dd><a href="###">酒店北京天上人间温泉酒店</a></dd>
+	             <dd><a href="###">原价:￥2999</a><em>￥1999</em></dd>
+              </dl>
+              <div class="buy"><a href="###">立即订购</a></div>
+          </div>
+         </div>
+
+         <div class=" detail-smallDetail">
+           <div class="smallDetailOuter firstOuter">
+              <span>北上广</span>
+              <a class="detail-pic1 " href="###"><img src="images/content-detail.png"></a>
+              <dl>
+	              <dt><h2><a href="###">北京天上人间温泉酒店</a></h2></dt>
+	              <dd><a href="###">酒店北京天上人间温泉酒店</a></dd>
+	              <dd><a href="###">原价:￥2999</a><em>￥1999</em></dd>
+              </dl>
+              <div class="buy"><a href="###">立即订购</a></div>
+           </div>
+           <div class="smallDetailOuter">
+	          <span>北上广</span>
+              <a class="detail-pic1 " href="###"><img src="images/content-detail.png"></a>
+              <dl>
+	              <dt><h2><a href="###">北京天上人间温泉酒店</a></h2></dt>
+	              <dd><a href="###">酒店北京天上人间温泉酒店</a></dd>
+	             <dd><a href="###">原价:￥2999</a><em>￥1999</em></dd>
+              </dl>
+              <div class="buy"><a href="###">立即订购</a></div>
+          </div>
+        </div><!--end of detail-smallDetail-->
+      </div><!--end of content-detail-->
+
+
+      <div id="content-detail">
+          <div class="detail-title">
+            <div class="detail-one flag3">团圆 "泡"</div>
+            <div class="detail-two">| 感情,是 "泡" 出来的！</div>
+            <a class="detail-three" href="###">查看全部温泉酒店>></a>
+          </div>
+          <div class="detail-picTitle">
+	            <span>北上广</span>
+	            <a href="###"><img src="images/content-title.png"></a>
+	            <dl>
+	              <dt><h2><a href="###">北京天上人间温泉酒店</a></h2></dt>
+	              <dd><a href="###">背景天上人间温泉北京</a></dd>
+	              <dd><a href="###">酒店北京天上人间温泉酒店</a></dd>
+	              <dd><h3>￥1999</h3></dd>
+	              <dd><a href="###">原价:￥2999</a></dd>
+	            </dl>
+	            <div class="buy"><a href="###">立即订购</a></div>
+          </div>
+
+          <div class=" detail-smallDetail">
+           <div class="smallDetailOuter firstOuter">
+              <span>北上广</span>
+              <a class="detail-pic1 " href="###"><img src="images/content-detail.png"></a>
+              <dl>
+	              <dt><h2><a href="###">北京天上人间温泉酒店</a></h2></dt>
+	              <dd><a href="###">酒店北京天上人间温泉酒店</a></dd>
+	              <dd><a href="###">原价:￥2999</a><em>￥1999</em></dd>
+              </dl>
+              <div class="buy"><a href="###">立即订购</a></div>
+           </div>
+           <div class="smallDetailOuter">
+	          <span>北上广</span>
+              <a class="detail-pic1 " href="###"><img src="images/content-detail.png"></a>
+              <dl>
+	              <dt><h2><a href="###">北京天上人间温泉酒店</a></h2></dt>
+	              <dd><a href="###">酒店北京天上人间温泉酒店</a></dd>
+	             <dd><a href="###">原价:￥2999</a><em>￥1999</em></dd>
+              </dl>
+              <div class="buy"><a href="###">立即订购</a></div>
+          </div>
+         </div>
+
+         <div class=" detail-smallDetail">
+           <div class="smallDetailOuter firstOuter">
+              <span>北上广</span>
+              <a class="detail-pic1 " href="###"><img src="images/content-detail.png"></a>
+              <dl>
+	              <dt><h2><a href="###">北京天上人间温泉酒店</a></h2></dt>
+	              <dd><a href="###">酒店北京天上人间温泉酒店</a></dd>
+	              <dd><a href="###">原价:￥2999</a><em>￥1999</em></dd>
+              </dl>
+              <div class="buy"><a href="###">立即订购</a></div>
+           </div>
+           <div class="smallDetailOuter">
+	          <span>北上广</span>
+              <a class="detail-pic1 " href="###"><img src="images/content-detail.png"></a>
+              <dl>
+	              <dt><h2><a href="###">北京天上人间温泉酒店</a></h2></dt>
+	              <dd><a href="###">酒店北京天上人间温泉酒店</a></dd>
+	             <dd><a href="###">原价:￥2999</a><em>￥1999</em></dd>
+              </dl>
+              <div class="buy"><a href="###">立即订购</a></div>
+          </div>
+        </div><!--end of detail-smallDetail-->
+      </div><!--end of content-detail-->
+
+
+      <div id="content-detail">
+          <div class="detail-title">
+            <div class="detail-one flag4">更多超值酒店精选</div>
+            <a class="detail-three" href="###">查看全部温泉酒店>></a>
+          </div>
+          <div class="detail-picTitle">
+	            <span>北上广</span>
+	            <a href="###"><img src="images/content-title.png"></a>
+	            <dl>
+	              <dt><h2><a href="###">北京天上人间温泉酒店</a></h2></dt>
+	              <dd><a href="###">背景天上人间温泉北京</a></dd>
+	              <dd><a href="###">酒店北京天上人间温泉酒店</a></dd>
+	              <dd><h3>￥1999</h3></dd>
+	              <dd><a href="###">原价:￥2999</a></dd>
+	            </dl>
+	            <div class="buy"><a href="###">立即订购</a></div>
+          </div>
+
+          <div class=" detail-smallDetail">
+           <div class="smallDetailOuter firstOuter">
+              <span>北上广</span>
+              <a class="detail-pic1 " href="###"><img src="images/content-detail.png"></a>
+              <dl>
+	              <dt><h2><a href="###">北京天上人间温泉酒店</a></h2></dt>
+	              <dd><a href="###">酒店北京天上人间温泉酒店</a></dd>
+	              <dd><a href="###">原价:￥2999</a><em>￥1999</em></dd>
+              </dl>
+              <div class="buy"><a href="###">立即订购</a></div>
+           </div>
+           <div class="smallDetailOuter">
+	          <span>北上广</span>
+              <a class="detail-pic1 " href="###"><img src="images/content-detail.png"></a>
+              <dl>
+	              <dt><h2><a href="###">北京天上人间温泉酒店</a></h2></dt>
+	              <dd><a href="###">酒店北京天上人间温泉酒店</a></dd>
+	             <dd><a href="###">原价:￥2999</a><em>￥1999</em></dd>
+              </dl>
+              <div class="buy"><a href="###">立即订购</a></div>
+          </div>
+         </div>
+
+         <div class=" detail-smallDetail">
+           <div class="smallDetailOuter firstOuter">
+              <span>北上广</span>
+              <a class="detail-pic1 " href="###"><img src="images/content-detail.png"></a>
+              <dl>
+	              <dt><h2><a href="###">北京天上人间温泉酒店</a></h2></dt>
+	              <dd><a href="###">酒店北京天上人间温泉酒店</a></dd>
+	              <dd><a href="###">原价:￥2999</a><em>￥1999</em></dd>
+              </dl>
+              <div class="buy"><a href="###">立即订购</a></div>
+           </div>
+           <div class="smallDetailOuter">
+	          <span>北上广</span>
+              <a class="detail-pic1 " href="###"><img src="images/content-detail.png"></a>
+              <dl>
+	              <dt><h2><a href="###">北京天上人间温泉酒店</a></h2></dt>
+	              <dd><a href="###">酒店北京天上人间温泉酒店</a></dd>
+	             <dd><a href="###">原价:￥2999</a><em>￥1999</em></dd>
+              </dl>
+              <div class="buy"><a href="###">立即订购</a></div>
+          </div>
+        </div><!--end of detail-smallDetail-->
+      </div><!--end of content-detail-->
+    
+
+     <div id="content-picket">
+      <dl>
+       <dt>全国温泉红包大放送</dt>
+       <dd class="nav-btn-pic">
+          <a href="###">立即领取</a>
+       </dd>
+      </dl>
+     </div><!--end of content-picket-->
+     <div id="content-embed-topic">
+       <strong>Ta</strong><span>们正在竞选 "汤太郎、汤女郎"</span>
+       <wb:topic column="n" border="n" width="560" height="600" tags="%E8%B5%B5%E4%B8%BD%E9%A2%96%2C%E5%8E%BB%E5%93%AA%E5%84%BF%E6%B3%A1%E6%B1%A4%E8%BE%BE%E4%BA%BA" language="zh_cn" version="base" refer="y" footbar="y" url="%23" filter="n" ></wb:topic>
+     </div><!--end of content-embed-topic-->
+
+     <div id="toTop">
+      <h1>2014</h1>
+      <h2>去哪儿温泉节</h2>
+      <ul>
+       <li><a href="###">北上广</a></li>
+       <li><a href="###">北上广</a></li>
+       <li><a href="###">北上广</a></li>
+       <li><a href="###">北上广</a></li>
+       <li><a href="###">北上广</a></li>
+       <li><a href="###">北上广</a></li>
+       <li><a href="###">北上广</a></li>
+       <li><a href="###">北上广</a></li>
+       <li><a href="###">北上广</a></li>
+       <li><a href="###">北上广</a></li>
+       <li><a href="###">北上广</a></li>
+       <li><a href="###" id="box">返回顶部</a></li>
+      </ul>
+     </div> 
+  </div><!--end of content-main-->
+  <div id="footer">
+   <div id="footerItems">
+    <span>以下活动正在进行...</span>
+    <ul id="banner">
+     <li>预留banner</li>
+     <li>预留banner</li>
+     <li>预留banner</li>
+     <li>预留banner</li>
+    </ul>
+    <ul id="items">
+      <li><a href="###">关于Qunar com</a></li>
+      <li><a href="###">|联系我们</a></li>
+      <li><a href="###">|业务合作</a></li>
+      <li><a href="###">|加盟酒店直通车</a></li>
+      <li><a href="###">|旅游导航</a></li>
+      <li><a href="###">|营销专家</a></li> 
+      <li><a href="###">|常见问题</a></li>
+      <li><a href="###">|友谊链接</a></li>
+      <li><a href="###">|建议与投诉</a></li>
+      <li><a href="###">|About Us</a></li>
+    </ul>
+    <div  id="copyRight">Copyright @2011 Qunar.com inc All Rights Reserved信业务经营许可证060856 北京市公安局海淀分局备案编号 1100</div>
+   </div>
+   <div id="footerEnd"></div>
+  </div>
+<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>  
+ <script type="text/javascript">  
+ 	//document.write(returnCitySN["cip"]+','+returnCitySN["cname"])  
+ 	//将外网IP地址转化为城市名字
+ 	var cname = returnCitySN["cname"];
+ 	cname = cname.slice(0,cname.length-1);
+ </script>
+<script>
+   window.onload = function(){
+
+    //console.log(new Date(2016,4,11));
+    //将标签内部的内容转化为时间
+    function transStrToTime(str){
+      var arr = str.split(".");
+      var date = new Date(arr[0],(parseInt(arr[1])-1),arr[2]);
+      return date;
+    }
+    function transBackStage(){
+    	var timeLi = document.getElementsByClassName('title_time');
+    	var arr = "";
+        for(var i = 0;i<timeLi.length;i++){
+    	    var str = transStrToTime(timeLi[i].innerHTML);
+            if((new Date()-str)>0){
+            	arr+="Y";
+            }
+            else{
+            	arr+='N';
+            }
+        }
+        var len = 0;
+        if(arr.match(/Y/g)!=null){
+        	 len = arr.match(/Y/g).length;
+        }
+        var title_03 = document.getElementById("title_03");
+        var title_down = document.getElementsByClassName('title_down');
+        title_03.style.backgroundPosition = "0px -"+103*len+"px";
+        for(var j = 0;j<title_down.length;j++){
+        	if(j==len){
+        		title_down[len].className = "title_down";
+
+        	}else{
+        		title_down[j].className = "title_down hide";
+        	}
+        }
+
+    }
+    transBackStage();//三个阶段
+
+    function btnHover(){
+       var timeLi = document.getElementsByClassName('title_time');
+       var str = transStrToTime(timeLi[0].innerHTML);
+       var btns = document.querySelectorAll('dd.nav-btn');
+       if((new Date()-str)>=0){
+          btns[0].className = "nav-btn first";
+          btns[1].className = "nav-btn second";
+          btns[0].children[0].innerHTML ="点击进入";
+          btns[1].children[0].innerHTML ="有奖参与";
+       }
+       else{
+       	for(var i = 0;i<btns.length;i++){	
+          btns[i].style.backgroundPosition = "0px -78px";
+          btns[i].className ="nav-btn";
+          btns[i].children[0].innerHTML ="敬请期待";
+        } 
+       }    
+    }
+    btnHover();//点击进入、有奖参与、敬请期待
+
+
+ /*立即领取hover功能*/  
+ var btnPic = document.querySelectorAll('dd.nav-btn-pic a')[0];
+ console.log(btnPic.style.background);
+ btnPic.addEventListener("mouseover",function(){
+    this.style.backgroundPosition = "0px 0px"
+ },false);
+ btnPic.addEventListener("mouseout",function(){
+    this.style.backgroundPosition = "0px -26px"
+ },false)
+
+//hover IP时的功能
+//
+/*function getPos(o){//取元素坐标
+    var x = 0, y = 0;
+    do{
+        x += o.offsetLeft;
+        y += o.offsetTop;
+    }while(o=o.offsetParent);
+    return {'x':x,'y':y};
+}*/
+//根据前面获取的城市名字和页面中的城市名对比，将滑块滑倒相应位置
+function slideMoveToIpAddr(){
+   //IPAddr
+    var li = document.querySelectorAll("#IPList li");
+    var len = li.length;
+    for(var i = 0;i<len;i++){
+      if(li[i].innerHTML ==cname){
+      	li[i].className = "IPAddr boldFont";
+      }
+      else{
+      	li[i].className ="";
+      }
+    }
+}
+slideMoveToIpAddr();
+
+ //其实就是计算slideIP滑块的初始left值 ,在哪个地址就是哪个left值：==17px+index*55
+ function getIPlioffset(){
+ 	  var li = document.querySelectorAll("#IPList li");
+      var width = li[0].offsetWidth;   
+      for(var j = 0;j<li.length;j++){
+      	if(li[j].className=="IPAddr boldFont"){
+      		slideIP.style.left=17+width*j+"px";
+      		return width*j;
+      	}
+      }
+ }
+ //其实就是计算出滑块的css中的初始值 17px，传入mouseenter事件对应的回调函数中
+ function getSlideIpLeft(){
+    var slideIP = document.getElementById("slideIP");
+      slideIP.style.display="block";
+      var offset = getIPlioffset();
+      return (parseInt(slideIP.offsetLeft)-offset);
+ }
+//鼠标hover时的回调
+    function slideListHover(index,left){ 
+      var li = document.querySelectorAll("#IPList li");
+      var width = li[0].offsetWidth;      
+      slideIP.style.left=left+index*width+"px";
+      var len = li.length;
+      for(var i = 0;i<len;i++){
+      if(i==index){
+      	li[i].className = "IPAddr boldFont";
+      }
+      else{
+      	li[i].className ="";
+      }
+     }
+    }
+   //鼠标离开时的回调
+   function slideListHoverLeave(){	
+       //var slideIP = document.getElementById("slideIP");
+        //slideIP.style.left = "17px";
+        //slideIP.style.display="none";
+   }
+ 
+
+ //下面是hover时的具体调用了
+var slideLisIp = document.querySelectorAll("#IPList li");
+var slideIPlen = slideLisIp.length;
+var timerIp = null;
+var IPleft = getSlideIpLeft();
+//var ulIPList = document.getElementById("IPList");
+for(var i = 0;i<slideIPlen;i++){
+	slideLisIp[i].addEventListener("mouseenter", (function (index){
+		
+       return  function(){slideListHover(index,IPleft)};
+    })(i),false);
+   
+	slideLisIp[i].addEventListener("mouseleave",slideListHoverLeave,false);
+}
+//ulIPList.addEventListener("mouseleave",slideListHoverLeave,false);
+//hover IP时的功能
+
+
+
+
+
+
+   	//回到顶部功能
+	var timer = null;
+	var box = document.getElementById('box');
+	box.onclick = function(){
+			cancelAnimationFrame(timer);
+			timer = requestAnimationFrame(function fn(){
+			var oTop = document.body.scrollTop || document.documentElement.scrollTop;
+			if(oTop > 0){
+				document.body.scrollTop = document.documentElement.scrollTop = oTop - 50;
+				timer = requestAnimationFrame(fn);
+			}else{
+		  		cancelAnimationFrame(timer);
+			} 
+	});
+	}
+   }
+   
+</script>
+
+ </body>
+</html>
+
+			

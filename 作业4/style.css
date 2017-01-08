@@ -1,0 +1,280 @@
+	*{
+			margin:0px;
+			padding:0px;
+		}
+		body{
+			background:#F3F3F3;
+		}
+		 header img{
+		 	width:100%;
+		 }
+		 ul.containerUl{
+		 	background:white;
+		 	width:100%;
+		 }
+		 ul.containerUl li{
+		 	list-style-type:none;
+		 	
+		 }
+		  ul.containerUl>li{
+		  	width:94%;
+		  }
+		 ul.containerUl:first-child{
+		 	margin-bottom:10px;
+		 }
+
+		 ul.containerUl>li{
+			font-size:1.1em;
+			margin:0px 3%;
+			padding:1% 0%;
+		 }
+		 ul.containerUl>li>b{
+		 	font-size:1.1em;
+		 	color:#2BB7E1;
+		 }
+		 ul.containerUl>li span.detailSpan{
+			color:#25A4BB;		
+		 }
+		 ul.containerUl>li.dashed{
+		 	border-bottom:1px dashed #ddd;
+		 	position:relative;
+		 }
+		 ul.containerUl>li.solid{
+		 	border-bottom:1px solid #ddd;
+		 	position:relative;
+		 }
+		 ul.containerUl>li span.backImg{
+		 	background:url(./images/back.png) no-repeat -33px -9px;
+		 	width:20px;
+		 	height:20px;
+		 	display:inline-block;
+			vertical-align:text-top;
+		 }
+		 ul.containerUl>li .containersDiv,ul.containerUl>li .containersDivs{
+		 	display:inline-block;
+		 	vertical-align:middle;
+		 	position:absolute;
+		 	top:30%;
+		 	right:0%;
+		 }
+		 ul.containerUl>li .containersDivs{
+		 	right:3%;
+		 }
+		 ul.containerUl>li .containersDiv.first{
+			top:13%;
+		 }
+		 ul.containerUl>li  .containersDiv.sec{
+		 	top:29%;
+		 }
+		 ul.containerUl>li .containerDiv{
+		 	width:74%;
+		 	display:inline-block;
+		 	overflow: hidden;
+			text-overflow:ellipsis;
+			white-space: nowrap;
+		 }
+		 li .containerDiv span:last-child{
+		 	color:#B2B2B2;
+		 	font-size:10px;
+		 }
+		 ul.containerUl>li .containerDiv .backImgFlags{
+		 	background:url(./images/back.png) no-repeat -60px -8px;
+		 	height:23px;
+		 	width:145px;
+		 	display:inline-block;
+		 }
+
+		 /*第二个ul*/
+		  ul.containerUl.price>li{
+			font-size:1.1em;
+			padding:1% 3%;
+			margin:0%;
+		  }
+		  ul.containerUl.price>li .containersDiv{
+		  	right:3%;
+		  }
+		  ul.containerUl>li .backPhone{
+		  	background:url(./images/back.png) no-repeat -4px -4px;
+		 	width:21px;
+		 	height:27px;
+		 	display:inline-block;
+		 	vertical-align:middle;
+		 	padding-right:3%;
+		 	margin-bottom:2%;
+		  }
+		  .containerDiv .priceSpan{
+		  	font-size: 10px;
+		  	color:#B2B2B2;
+		  }
+		  .containerDiv .priceSpan.tuan,.containerDiv .priceSpan.eat,.containerDiv .priceSpan.cheap{
+			background:#25A4BB;
+			color:white;
+			display:inline-block;
+			padding:1px;
+			margin-right:2px;
+		  }
+		  .containerDiv .priceSpan.cheap{
+		  	background:#FF0000;
+		  }
+		  .containersDiv .backImgBtn{
+		  	width:65px;
+		  	height:27px;
+		  	display: inline-block;
+		  	background:url(./images/back.png) no-repeat -209px -7px;
+		  	vertical-align: middle;
+		  	position:absolute;
+		  	right:0%;
+		  	top:0%;
+		  }
+		  ul.containerUl.price>li .containersDiv{
+		  	font-size:10px;
+		  	color:#bcbcbc;
+		  }
+		   ul.containerUl.price>li span.detailSpans{
+		  	
+		  	color:#FF6F00;
+		  }
+
+		ul.containerUl.price>li span.detailSpans b{
+		  	font-size:20px;
+		 }
+
+		 /*第三个Ul酒店直销*/
+		 ul.containerUl.hotel{
+		 	background:#F0F0F0;
+		 }
+		 ul.containerUl.hotel>li .containersDiv{
+		 	top:10%;
+		 }
+		 
+		  ul.containerUl.hotel .backImgBuy{
+			width:56px;
+		  	height:56px;
+		  	display: inline-block;
+		  	background:url(./images/back.png) no-repeat -4px -40px;
+		   	position:absolute;
+		  	right:0%;
+		  	top:0%;
+		 }
+		 ul.containerUl.hotel>li .containersDiv,ul.containerUl.price>li .containersDiv{
+		 	width:38%;
+
+		 }
+		 ul.containerUl.hotel>li .detailUl>li,ul.containerUl.price>li .detailUl>li{
+		 	line-height:1.2;
+		 	text-align:right;
+		 	width:52%;
+		 }
+		 ul.containerUl.price.hotel>li .detailUl>li{
+			width:49%;
+		 }
+		 ul.containerUl.hotel>li.backTri{
+		 	padding-top:18px;
+		 	padding-bottom:3%;
+		 }
+		  ul.containerUl.hotel>li.backTri .backImgTri{
+		  	
+		  	background:url(./images/back.png) no-repeat -122px -73px;
+		  	width:18px;
+		  	height:18px;
+		  	position:absolute;
+		  	left:0px;
+		  	top:0px;
+
+		  }
+		  .titleFlag{
+		  	font-size:10px;
+		  	color:white;
+		  	background:#FF6600;
+		  	display:inline-block;
+		  	vertical-align: bottom;
+		  	margin-bottom:3px;
+		  }
+		  .titleSpans:nth-child(2n-1){
+		  	font-size:10px;
+		  	color:white;
+		  	background:#FF9036;
+		  	display:inline-block;
+		  	padding:1px;
+		  }
+		
+		  .titleSpans:nth-child(2n){
+			font-size:10px;
+		  	color:#FF9036;
+		  	border:1px solid #FF9036;
+		  	margin-right:5px;
+		  }
+		  .middleLi{
+		  	margin-top:10%;
+		  }
+		  .more{
+		  	text-align:center;
+		  }
+		  /*附近热销酒店*/
+		 ul.containerUl:last-child{
+			margin-top:15px;
+		 }
+		ul.containerUl:last-child>li .containersDiv{
+			top:11%;
+
+		 }
+		 ul.containerUl:last-child>li .containerDiv span.count{
+		 	font-size:1.1em;
+		 	color:#25B7DF;
+		 }
+		 ul.containerUl:last-child>li:last-child{
+			font-size:14px;
+			color:#999999;
+			line-height:1.5;
+			background:#F3F3F3;
+		 }
+		 /*footer*/
+		 footer>ul{
+		 	padding:8px 15px;
+		 }
+		 footer ul li{
+		 	float:left;
+		 	list-style-type:none;
+		 	width:24.9%;
+		 	text-align:center;
+		 }
+		 footer ul li a{
+		 	color:#9E9E9E;
+		 	font-size:12px;
+			
+		 }
+		 footer ul li>span{
+			
+			background:url(./images/back.png) no-repeat -120px -40px;
+		 	display:inline-block;
+		 	height:31px;
+		 	width:32px;
+		 	vertical-align: middle;
+		 	margin-right:4px;
+		 }
+		 footer ul li:nth-child(2)>span{
+		 	background-position:-151px -40px;
+		 }
+		 footer ul li:nth-child(3){
+		 	border-right:1px solid #ddd;
+		 }
+		 footer ul li:nth-child(3)>span{
+		 	background-position:-187px -40px;
+		 }
+		 footer ul li:nth-child(4){
+		 	line-height:29px;
+		 }
+		 footer ul li:nth-child(4)>span{
+		 	background-position:-221px -40px;
+		 	width:16px;
+		 	height:16px;
+		 	line-height:29px;
+		 }
+		 footer>div{
+		 	margin-top:40px;
+		 	color:#9E9E9E;
+		 	text-align:center;
+		 }
+		 footer>div span:first-child{
+			padding-right:5%;
+		 }
