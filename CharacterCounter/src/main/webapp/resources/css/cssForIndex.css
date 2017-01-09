@@ -1,0 +1,70 @@
+          body{
+              margin : 0px;
+              padding : 0px;
+              text-align : center;
+              font-size : 19px;
+              font-family : '宋体';
+          }
+
+          /*使得整体居于页面中央*/
+          #all{
+              width : 500px;
+              margin : 10px auto;
+              padding : 0px;
+          }
+
+          .statisticTable{
+              width : 300px;
+              height : 200px;
+              margin : 5px;
+              border : 1px solid black;
+              border-collapse : collapse;
+          }
+          .statisticTable th{
+              border : 1px solid black;
+              text-align : center;
+          }
+          .statisticTable td{
+              border : 1px solid black;
+              text-align : center;
+          }
+          /*一开始不要显示表单二，也就是文本输入框不要显示*/
+          #formDiv2{
+              display : none;
+          }
+          #btn,#submitFile,#submitContent,#reset{
+              background : #009ad6;
+              color : white;
+              width : 80px;
+              padding : 5px;
+              cursor : pointer;
+          }
+          #reset{
+              background : #FF9224
+          }
+          #textArea{
+              width : 300px;
+              height : 100px;
+          }
+          .radioTd{
+              padding : 5px;
+              padding-right : 20px;
+          }
+          .left{
+              text-align : left;
+          }
+          .right{
+              text-align : right;
+          }
+          caption {
+              text-align: left;
+              padding : 20px;
+              padding-left : 0px;
+          }
+          #formTable1{
+              width : 400px;
+          }
+          #formTable1 td{
+              padding : 20px;
+              padding-left : 0px;
+          }

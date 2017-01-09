@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+    <!-- 扫描web包，应用Spring的注解，主要是MyController-->
+    <context:component-scan base-package="com.baobao.web"/>
+
+    <!-- 配置内部资源视图解析器，将ModelAndView及字符串解析为具体的页面 -->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+          p:viewClass="org.springframework.web.servlet.view.JstlView"
+          p:prefix="/WEB-INF/views/"
+          p:suffix=".jsp"
+    />
+    <!-- XML视图解析器，bean名字视图，即将视图名映射为bean，如下。不可少，优先级大于内部资源解析器 -->
+    <bean class="org.springframework.web.servlet.view.BeanNameViewResolver" p:order="10"/>
+
+
+    <!-- 输出XML格式的数据-->
+    <!-- xml视图，entryList为解析为xml的model-->
+    <!-- 指定要解析的model属性和shaller实例-->
+  <bean id="entryListXml" class="org.springframework.web.servlet.view.xml.MarshallingView"
+        p:modelKey="entryList"
+        p:marshaller-ref="xmlMarshaller">
+      <property name="contentType" value="application/xml;charset=UTF-8" />
+  </bean>
+
+    <!-- shaller 实例bean -->
+<bean id="xmlMarshaller" class="org.springframework.oxm.xstream.XStreamMarshaller" p:encoding="UTF-8">
+      <property name="streamDriver">
+          <bean class="com.thoughtworks.xstream.io.xml.StaxDriver"/>
+      </property>
+      <property name="annotatedClasses">
+          <list>
+              <value>com.baobao.domain.Entry</value>
+          </list>
+      </property>
+</bean>
+
+    <!-- 文件上传，不可少，在项目路径下(web)建立临时文件夹，会被自动删除-->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"
+          p:defaultEncoding="UTF-8"
+          p:maxUploadSize="5242880"
+          p:uploadTempDir="/resources/upload/tmp"
+    />
+</beans>
