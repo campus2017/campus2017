@@ -22,13 +22,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="ExchangeRate" />
-        <module name="ExchangeRate1" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="ExchangeRate" target="1.5" />
-      <module name="ExchangeRate1" target="1.5" />
+      <module name="Rate" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
