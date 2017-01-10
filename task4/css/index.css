@@ -1,0 +1,370 @@
+@charset "utf-8";
+
+/* base css */
+body {
+    font-size: 14px;
+    color: #333;
+    background-color: rgb(243, 243, 243);
+}
+
+body, ul, li, div, span {
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    list-style: none
+}
+
+a:link {
+    color: #999;
+}
+
+.b-green {
+    background-color: rgb(37, 164, 187);
+}
+
+.b-red {
+    background-color: rgb(255, 0, 0);
+}
+
+.b-orange {
+    background-color: rgb(255, 102, 0);
+}
+
+.b-white {
+    background-color: rgb(255, 255, 255);
+}
+
+.border-orange {
+    border: 1px solid rgb(255, 102, 0);
+}
+
+.clear-r {
+    clear: right;
+}
+
+.color140,
+.list .list-judge,
+.remark,
+.copy-right {
+    color: rgb(140, 140, 140);
+}
+
+.color151 {
+    color: rgb(151, 151, 151);
+}
+
+.c-green {
+    color: rgb(37, 164, 187);
+}
+
+.c-orange {
+    color: rgb(255, 102, 0) !important;
+}
+
+.ellipsis {
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.float-l {
+    float: left;
+}
+
+.float-r {
+    float: right;
+}
+
+.font-w {
+    font-weight: bold;
+}
+
+.font12 {
+    font-size: 12px;
+}
+
+.font14 {
+    font-size: 14px;
+}
+
+.font16,
+.list .list-judge,
+.remark,
+.more-link,
+.copy-right {
+    font-size: 16px;
+}
+
+.green {
+    color: rgb(27, 169, 186);
+}
+
+.icon {
+    color: #fff;
+    padding: 2px;
+}
+
+.l-height25 {
+    line-height: 25px;
+}
+
+.l-height30 {
+    line-height: 30px;
+}
+
+.l-height50 {
+    line-height: 50px;
+}
+
+.l-height60 {
+    line-height: 60px;
+}
+
+.none-decoration {
+    text-decoration: none;
+}
+
+.width70 {
+    width: 70%;
+}
+
+/* special css */
+.head,
+.info .info-judge,
+.list-more,
+.copy-right {
+    height: 50px;
+    line-height: 50px;
+}
+
+.head {
+    text-align: center;
+    padding-left: 10px;
+    color: #fff;
+    font-size: 20px;
+    background-color: rgb(37, 164, 187);
+    border-bottom: 2px solid rgb(27, 122, 139);
+}
+
+.logo {
+    width: 40px;
+    line-height: 14px;
+}
+
+.logo img {
+    width: 40px;
+    height: 30px;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    background-image: url(../img/hotel-detail.png);
+    background-size: 100% 100%;
+}
+
+.banner .num {
+    color: #fff;
+    background-color: rgba(0, 0, 0, .3);
+    padding: 5px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.info,
+.period,
+.list,
+.nearby,
+.similar {
+    padding: 0 10px;
+    font-size: 16px;
+}
+
+.info {
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.info,
+.border-bottom {
+    border-bottom: 1px solid rgb(204, 204, 204);
+}
+
+.info,
+.period,
+.nearby,
+.similar {
+    background-color: #fff;
+}
+
+.info .info-judge,
+.info .info-addr {
+    border-bottom: 1px dotted rgb(204, 204, 204);
+}
+
+.info .info-addr,
+.info .info-detail {
+    height: 50px;
+    padding: 10px 0;
+}
+
+.period,
+.nearby,
+.similar {
+    height: 60px;
+    line-height: 60px;
+}
+
+.period,
+.list,
+.list-more,
+.nearby,
+.similar,
+.remark,
+.more-link {
+    border-top: 1px solid rgb(204, 204, 204);
+}
+
+.period img,
+.period span,
+.more-link img,
+.more-link a {
+    vertical-align: middle;
+}
+
+.period .cale {
+    display: inline-block;
+    width: 75%;
+}
+
+.list {
+    position: relative;
+    overflow: hidden;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    min-height: 70px;
+}
+
+.list .thumb {
+    position: absolute;
+    left: 0;
+    top: -3px;
+}
+
+.list .list-info {
+    width: 50%;
+    float: left;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+.list .list-judge {
+    line-height: 25px;
+    text-align: right;
+    width: 22%;
+    float: left;
+    left: 55%;
+}
+
+.list .list-judge,
+.list .list-pay .compare,
+.list .list-pay .book {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.list .list-pay .compare,
+.list .list-pay .book {
+    right: 10px;
+}
+
+.list .list-pay {
+    float: right;
+}
+
+.list .list-pay .compare {
+    padding: 5px 12px 5px 5px;
+    color: #fff;
+    background-color: rgb(37, 164, 187);
+    border-radius: 5px;
+}
+
+.list .list-pay .compare .transform {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    display: inline-block;
+    position: relative;
+    right: -3px;
+}
+
+.list .list-pay .book {
+    font-weight: bold;
+    border: 1px solid rgb(255, 102, 0);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.list .list-pay .book .b-ding {
+    color: #fff;
+    font-size: 25px;
+    background-color: rgb(255, 102, 0);
+}
+
+.list .list-pay .book .b-pay {
+    color: rgb(255, 102, 0);
+    background-color: #fff;
+    border-radius: 0 0 5px 5px;
+}
+
+.list-more {
+    color: rgb(27, 169, 186);
+    text-align: center;
+    font-size: 16px;
+}
+
+.nearby {
+    margin-top: 15px;
+}
+
+.remark {
+    line-height: 25px;
+    padding: 10px 10px;
+}
+
+.more-link {
+    height: 20px;
+    line-height: 20px;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.more-link ul {
+    overflow: hidden;
+}
+
+.more-link ul li {
+    width: 25%;
+    float: left;
+}
+
+.more-link .border-right {
+    border-right: 1px solid #999;
+    box-sizing: border-box;
+}
+
+.copy-right {
+    margin-top: 20px;
+    text-align: center;
+}

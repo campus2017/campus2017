@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+body {
+    font-size: 14px;
+}
+
+body, div {
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+.scroll-img {
+    width: 1015px;
+    height: 477px;
+    margin: auto;
+    position: relative;
+}
+
+.scroll-img .img {
+    float: left;
+    width: 180px;
+    border-left: 1px solid #999;
+    border-right: 1px solid #999;
+    border-bottom: 1px solid #999;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.scroll-img .img.item0 {
+    width: 475px;
+}
+
+.scroll-img .img.item1 {
+    left: -1px;
+}
+
+.scroll-img .img.item2 {
+    left: -2px;
+}
+
+.scroll-img .img.item3 {
+    left: -3px;
+}

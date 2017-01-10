@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>作业3</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<div class="head">
+    <div class="head-nav">
+        <span>E币兑换</span>
+        <span>E币明细</span>
+        <span class="active">兑换记录</span>
+    </div>
+</div>
+<div class="main">
+    <div class="main-nav">
+        <span class="btn active">全部</span>
+        <span class="btn">成功</span>
+        <span class="btn">失败</span>
+        <span>选择日期：</span>
+        <input class="data-from">
+        至
+        <input class="data-to">
+        <span class="btn btn-blue">搜索</span>
+        <span class="btn btn-red">重置</span>
+    </div>
+    <div class="main-content">
+        <div class="detail-type">
+            <div class="time">时间</div>
+            <div class="trade-name">商品名称</div>
+            <div class="number">数量</div>
+            <div class="e-pay">E币</div>
+            <div class="status">状态</div>
+            <div class="info">信息</div>
+            <div class="exchange-info">兑换信息</div>
+            <div class="confirm">确认</div>
+        </div>
+        <div id="detail-info">
+        </div>
+        <div class="paging">
+					<span class="home-page">
+						<a href="/#">首页</a>
+					</span>
+            <span class="color-red">1</span>
+            <span class="last-page">
+						<a href="/#">末页</a>
+					</span>
+            共<span class="total-page">1</span>页, 跳转到
+            <input class="input-num">页
+            <span class="confirm-btn">确定</span>
+        </div>
+    </div>
+</div>
+<script src="js/index.js"></script>
+</body>
+</html>

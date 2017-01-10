@@ -1,0 +1,216 @@
+@charset "utf-8";
+
+body {
+    font-size: 13px;
+}
+
+body, div, span {
+    margin: 0;
+    padding: 0;
+}
+
+div, span, input {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link {
+    color: rgb(0, 105, 202);
+}
+
+.btn {
+    color: rgb(0, 151, 225);
+    width: 70px;
+    display: inline-block;
+    height: 30px;
+    text-align: center;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn.active,
+.btn-blue {
+    color: #fff;
+    background-color: rgb(55, 117, 192);
+}
+
+.btn-red {
+    color: #fff;
+    background-color: rgb(255, 0, 0);
+}
+
+.color-red {
+    color: rgb(253, 85, 0);
+}
+
+.line-height29 {
+    line-height: 29.5px;
+}
+
+.head {
+    width: 985px;
+    height: 40px;
+    margin: 0 auto;
+    padding-top: 10px;
+    background: rgb(251, 252, 253);
+    border-bottom: 1px solid rgb(218, 218, 218);
+}
+
+.head-nav {
+    float: right;
+    margin-right: 15px;
+}
+
+.head-nav .active {
+    background-color: #fff;
+    border-bottom: 1px solid #fff;
+}
+
+.head-nav > span {
+    width: 90px;
+    height: 30px;
+    display: inline-block;
+    line-height: 30px;
+    text-align: center;
+    background-color: rgb(241, 241, 241);
+    border: 1px solid rgb(218, 218, 218);
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    cursor: pointer;
+}
+
+.main {
+    color: rgb(51, 51, 51);
+    width: 955px;
+    margin: 0 auto 80px auto;
+}
+
+.main-nav {
+    height: 30px;
+    line-height: 30px;
+    margin: 10px 0 20px 0;
+}
+
+.main-nav .data-from,
+.main-nav .data-to {
+    width: 175px;
+    height: 30px;
+    border: 1px solid rgb(204, 204, 204);
+}
+
+.main-content {
+    border: 1px solid rgb(229, 229, 229);
+}
+
+.main-content .detail-type,
+.main-content .detail-info {
+    padding-left: 10px;
+}
+
+.main-content .detail-type {
+    height: 30px;
+    line-height: 30px;
+    background-color: rgb(248, 248, 248);
+}
+
+.main-content .time {
+    float: left;
+    width: 110px;
+}
+
+.main-content .trade-name {
+    float: left;
+    width: 155px;
+}
+
+.main-content .number {
+    float: left;
+    width: 70px;
+}
+
+.main-content .e-pay {
+    float: left;
+    width: 70px;
+}
+
+.main-content .status {
+    float: left;
+    width: 70px;
+}
+
+.main-content .info {
+    float: left;
+    width: 250px;
+}
+
+.main-content .info.detail {
+    padding-right: 20px;
+}
+
+.main-content .info.detail > span {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    top: -2px;
+}
+
+.main-content .exchange-info {
+    float: left;
+    width: 95px;
+}
+
+.main-content .exchange-info .btn {
+    line-height: 29.5px;
+}
+
+.main-content .confirm {
+    float: left;
+    width: 120px;
+}
+
+.main-content .detail-info {
+    height: 60px;
+    line-height: 59px;
+    border-bottom: 1px solid rgb(243, 243, 243);
+    clear: both;
+}
+
+.main-content .paging {
+    text-align: right;
+    height: 40px;
+    line-height: 40px;
+    background-color: rgb(248, 248, 248);
+}
+
+.main-content .home-page,
+.main-content .last-page,
+.main-content .confirm-btn {
+    height: 30px;
+    line-height: 30px;
+    width: 45px;
+    display: inline-block;
+    border: 1px solid rgb(229, 229, 229);
+    text-align: center;
+}
+
+.main-content .home-page,
+.main-content .last-page {
+    background-color: #fff;
+}
+
+.main-content .confirm-btn {
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+
+.main-content .input-num {
+    margin-right: 5px;
+    height: 30px;
+    width: 50px;
+    border: 1px solid rgb(229, 229, 229);
+}
