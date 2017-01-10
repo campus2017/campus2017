@@ -1,2 +1,7 @@
-ื๗าต1/temp/
-
+.idea
+*.iml
+.class
+classes
+out
+target
+META-INF

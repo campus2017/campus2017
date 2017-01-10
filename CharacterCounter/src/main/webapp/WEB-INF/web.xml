@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <!-- 指定持久层和业务层的配置文件：在类路径下，初始化业务层Spring容器，也是父容器 -->
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>/WEB-INF/applicationContext.xml</param-value>
+    </context-param>
+    <listener>
+        <listener-class>
+            org.springframework.web.context.ContextLoaderListener
+        </listener-class>
+    </listener>
+    <!-- 初始化web层容器，同时指定过滤的URL，对应的web层配置文件必须为WEB-INF/baobao-servlet.xml -->
+    <servlet>
+        <servlet-name>baobao</servlet-name>
+        <servlet-class>
+            org.springframework.web.servlet.DispatcherServlet
+        </servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <!-- 过滤所有以html结尾的请求-->
+    <servlet-mapping>
+        <servlet-name>baobao</servlet-name>
+        <url-pattern>*.html</url-pattern>
+    </servlet-mapping>
+</web-app>
