@@ -156,6 +156,7 @@ div, span, button, a {
 #topbar .top-menu img {
     vertical-align: middle;
     padding-right: 5px;
+    border-width: 0;
 }
 
 #topbar .top-menu > a {
@@ -203,7 +204,8 @@ div, span, button, a {
     -ms-transform: rotate(-4deg);
     transform: rotate(-4deg);
     position: relative;
-    top: 12px;
+    top: 13px;
+    height: 65px;
 }
 
 #headbar .time-axis {
@@ -349,7 +351,7 @@ div, span, button, a {
     color: #fff;
     height: 105px;
     width: 100%;
-    padding: 10px 0;
+    padding: 13px 0;
     text-align: center;
     background-color: rgba(0, 0, 0, .5);
     position: absolute;
@@ -566,8 +568,8 @@ div, span, button, a {
 
 #content .content .goods-list-item2-info {
     height: 80px;
-    padding-left: 10px;
-    padding-top: 10px;
+    padding-left: 12px;
+    padding-top: 12px;
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -771,6 +773,8 @@ div, span, button, a {
 }
 
 .float-bar .float-text {
+    position: relative;
+    top: 5px;
     color: #fff;
     -webkit-transform: rotate(-3deg);
     -moz-transform: rotate(-3deg);

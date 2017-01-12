@@ -4,6 +4,20 @@ body {
     font-size: 13px;
 }
 
+body,
+.data-from,
+.data-to,
+.detail-info,
+.input-num {
+    background-color: white;
+}
+
+.data-from,
+.data-to {
+    vertical-align: top;
+    line-height: 26px;
+}
+
 body, div, span {
     margin: 0;
     padding: 0;
@@ -204,13 +218,18 @@ a:link {
 }
 
 .main-content .confirm-btn {
+    margin-right: 5px;
     border-radius: 5px;
     -moz-border-radius: 5px;
 }
 
 .main-content .input-num {
+    padding: 0;
     margin-right: 5px;
     height: 30px;
     width: 50px;
+    line-height: 26px;
+    margin-top: 4px;
+    vertical-align: top;
     border: 1px solid rgb(229, 229, 229);
 }

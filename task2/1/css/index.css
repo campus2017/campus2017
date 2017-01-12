@@ -26,23 +26,27 @@ body {
     left: 0;
     bottom: 0;
     right: 0;
+    background-color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, .5);
+    /* ie8下透明效果 */
+    filter: alpha(opacity=50);
     display: none;
 }
 
-#layer-bg .layer {
+#layer {
     width: 800px;
     height: 546px;
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     margin-left: -400px;
     margin-top: -273px;
     background-image: url(../../images/layer.png);
     background-size: 100% 100%;
+    display: none;
 }
 
-#layer-bg .layer .close {
+#layer .close {
     display: inline-block;
     width: 32px;
     height: 32px;
@@ -54,7 +58,7 @@ body {
     cursor: pointer;
 }
 
-#layer-bg .layer .close:hover {
+#layer .close:hover {
     top: -10px;
     background-image: url(../../images/close_hover.png);
 }

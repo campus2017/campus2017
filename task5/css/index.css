@@ -145,7 +145,7 @@ body {
     position: relative;
 }
 
-#fly .times-item.active::after {
+#fly .times-item.active:after {
     line-height: 12px;
     font-weight: normal;
     background-color: rgb(248, 73, 128);
@@ -160,7 +160,7 @@ body {
 #fly .charge-img {
     height: 70px;
     width: 105px;
-    background-image: url(../img/cal.png);
+    background: url(../img/cal.png) no-repeat;
     background-size: 100% 100%;
     position: relative;
 }
@@ -266,8 +266,8 @@ body {
     left: 85%;
 }
 
-#fly .baseline-left::before,
-#fly .baseline-right::after {
+#fly .baseline-left:before,
+#fly .baseline-right:after {
     width: 3px;
     height: 3px;
     border: 1px solid rgb(211, 211, 211);
@@ -278,7 +278,7 @@ body {
     background: #fff;
 }
 
-#fly .baseline-left::before {
+#fly .baseline-left:before {
     float: left;
     margin-left: -4px;
 }
@@ -294,25 +294,25 @@ body {
     top: -1px;
 }
 
-#fly .baseline-center::before,
-#fly .baseline-center::after {
+#fly .baseline-center:before,
+#fly .baseline-center:after {
     width: 55px;
     border-bottom: 1px solid rgb(211, 211, 211);
     content: ' ';
     display: inline-block;
 }
 
-#fly .baseline-center::before {
+#fly .baseline-center:before {
     float: left;
     margin-left: -55px;
 }
 
-#fly .baseline-center::after {
+#fly .baseline-center:after {
     float: right;
     margin-right: -55px;
 }
 
-#fly .baseline-right::after {
+#fly .baseline-right:after {
     float: right;
     margin-right: -4px;
 }
@@ -370,7 +370,7 @@ body {
     margin-top: -0.3rem;
 }
 
-#fly .booking-btn::after {
+#fly .booking-btn:after {
     border: 37.5px solid transparent;
     border-top: 15px solid rgb(38, 180, 211);
     content: " ";
