@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="cwj" >
+	<meta name="description" content="this a page of qunar test">
+	<title>Qunar test one</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+<header>
+	<span class="menu rh now">兑换记录</span>
+	<span class="menu rh">E币明细</span>
+	<span class="menu rh">E币兑换</span>
+</header>
+<div id="top">
+	<span id="all" class="toplist toplistlf now">全部</span>
+	<span id="suc" class="toplist toplistlf">成功</span>
+	<span id="fail" class="toplist toplistlf">失败</span>
+	<span class="toplist date">选择日期 ：</span><input id="startdate" type="datetime"></input>
+	<span class="toplist dateto"> 至 </span><input id="enddate" type="datetime"></input>
+	<span id="sear" class="toplist search">搜索</span>
+	<span id="reset" class="toplist reset">重置</span>
+</div>
+
+<script type="text/javascript">
+	var th='<tr><th class="firsttd">时间</th><th>商品名称</th><th>数量</th><th>E币</th><th>状态</th><th>信息</th><th>兑换信息</th><th>确认</th></tr>';
+	var no="<tr><td>0000-00-00 00:00:00</td><td>没有相符记录</td><td>0</td><td>0</td><td>兑换失败</td><td>没有相符记录</td><td><p>兑换信息</p></td><td></td></tr>";
+	var nowTag="all";
+	//all events
+	document.getElementById("all").addEventListener("click",function(){
+		document.getElementById(nowTag).classList.remove("now");
+		document.getElementById("all").classList.add("now");
+		nowTag="all";
+		loadXMLDoc("http://121.42.190.196:8866/getdata?way=all&startd=&endd=");
+	});
+	//success events
+	document.getElementById("suc").addEventListener("click",function(){
+		document.getElementById(nowTag).classList.remove("now");
+		document.getElementById("suc").classList.add("now");
+		nowTag="suc";
+		loadXMLDoc("http://121.42.190.196:8866/getdata?way=suc&startd=&endd=");
+	});
+	//failed evnets
+	document.getElementById("fail").addEventListener("click",function(){
+		document.getElementById(nowTag).classList.remove("now");
+		document.getElementById("fail").classList.add("now");
+		nowTag="fail";
+		loadXMLDoc("http://121.42.190.196:8866/getdata?way=fail&startd=&endd=");
+	});
+	//search events
+	document.getElementById("sear").addEventListener("click",function(){
+		document.getElementById(nowTag).classList.remove("now");
+		document.getElementById("sear").classList.add("now");
+		var startd=document.getElementById("startdate").value;
+		var endd=document.getElementById("enddate").value;
+		loadXMLDoc("http://121.42.190.196:8866/getdata?way=sear&startd="+startd+"&endd="+endd);
+	});
+	//reset events
+	document.getElementById("reset").addEventListener("click",function(){
+		document.getElementById("startdate").value=" ";
+		document.getElementById("enddate").value=" ";
+	});
+	//ajax json
+	function loadXMLDoc(url)
+	{
+	  var xmlhttp;
+	  if (window.XMLHttpRequest)
+	  {
+	    // IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+	    xmlhttp=new XMLHttpRequest();
+	  }
+	  else
+	  {
+	    // IE6, IE5 浏览器执行代码
+	    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	  }
+	  xmlhttp.onreadystatechange=function()
+	  {
+	    if (xmlhttp.readyState==4 && xmlhttp.status==200)
+	    {
+	    	var data=xmlhttp.responseText;
+	    	if(data=="nothing")
+	    	{
+	    		document.getElementById("tbdata").innerHTML=th;
+	    	}
+	    	else{
+	    		var json=eval("("+data+")");
+	    		var html=th;
+	    		for(x in json)
+	    		{	
+	    			html+="<tr>";
+	    			for(y in json[x])
+	    			{
+	    				html+="<td>"+json[x][y]+"</td>";
+	    			}
+	    			html+="</tr>";
+	    		}
+	    		document.getElementById("tbdata").innerHTML=html;
+	    	}	      
+	    }
+	  }
+	  xmlhttp.open("GET",url,true);
+	  xmlhttp.send();
+	}
+</script>
+
+<div id="table">
+<table id="tbdata">
+	<tr>
+		<th class="firsttd">时间</th>
+		<th>商品名称</th>
+		<th>数量</th>
+		<th>E币</th>
+		<th>状态</th>
+		<th>信息</th>
+		<th>兑换信息</th>
+		<th>确认</th>
+	</tr>
+	<tr>
+		 <td>2014-10-28 15:37:21</td>
+		<td>手机50元话费充值</td>
+		<td>1</td>
+		<td>190</td>
+		<td>兑换失败</td>
+		<td>充值失败，E币已退回。</td>
+		<td><p>兑换信息</p></td>
+		<td></td>
+	</tr>
+	<tr>
+		 <td>2014-10-23 21:34:44</td>
+		<td>手机50元话费充值</td>
+		<td>1</td>
+		<td>190</td>
+		<td>兑换失败</td>
+		<td>充值失败，E币已退回。</td>
+		<td><p>兑换信息</p></td>
+		<td></td>
+	</tr>
+	<tr>
+		 <td>2014-10-21 15:29:18</td>
+		<td>手机50元话费充值</td>
+		<td>1</td>
+		<td>190</td>
+		<td>兑换失败</td>
+		<td>充值失败，E币已退回。</td>
+		<td><p>兑换信息</p></td>
+		<td></td>
+	</tr>
+	<tr>
+		 <td>2014-10-21 15:06:51</td>
+		<td>手机50元话费充值</td>
+		<td>1</td>
+		<td>190</td>
+		<td>兑换失败</td>
+		<td>充值失败，E币已退回。</td>
+		<td><p>兑换信息</p></td>
+		<td></td>
+	</tr>
+	<tr>
+		 <td>2014-10-10 14:56:28</td>
+		<td>手机50元话费充值</td>
+		<td>1</td>
+		<td>190</td>
+		<td>兑换失败</td>
+		<td>充值失败，E币已退回。测试用例</td>
+		<td><p>兑换信息</p></td>
+		<td></td>
+	</tr>
+	<tr>
+		 <td>2014-09-25 14:03:00</td>
+		<td>手机50元话费充值</td>
+		<td>1</td>
+		<td>190</td>
+		<td>兑换失败</td>
+		<td>充值失败，E币已退回。</td>
+		<td><p>兑换信息</p></td>
+		<td></td>
+	</tr>
+	<tr>
+		 <td>2014-09-24 11:35:38</td>
+		<td>手机50元话费充值</td>
+		<td>1</td>
+		<td>190</td>
+		<td>兑换失败</td>
+		<td>充值失败，E币已退回。测试用例</td>
+		<td><p>兑换信息</p></td>
+		<td></td>
+	</tr>
+	<tr>
+		 <td>2014-09-24 14:34:59</td>
+		<td>博洋梦澜棉被</td>
+		<td>1</td>
+		<td>1049</td>
+		<td>兑换失败</td>
+		<td>您兑换的商品申请处理失败，金币已退回。测试用例</td>
+		<td><p>兑换信息</p></td>
+		<td></td>
+	</tr>
+	<tr>
+		 <td>2014-09-22 15:34:23</td>
+		<td>手机50元话费充值</td>
+		<td>1</td>
+		<td>190</td>
+		<td>兑换失败</td>
+		<td>充值失败，E币已退回。</td>
+		<td><p>兑换信息</p></td>
+		<td></td>
+	</tr>
+	<tr>
+		 <td>2014-09-01 12:38:36</td>
+		<td>手机50元话费充值</td>
+		<td>1</td>
+		<td>190</td>
+		<td>兑换失败</td>
+		<td>充值失败，E币已退回。</td>
+		<td><p>兑换信息</p></td>
+		<td></td>
+	</tr>
+	<tr>
+		 <td>2014-08-29 18:26:05</td>
+		<td>手机50元话费充值</td>
+		<td>1</td>
+		<td>190</td>
+		<td>兑换失败</td>
+		<td>充值失败，E币已退回。失败处理</td>
+		<td><p>兑换信息</p></td>
+		<td></td>
+	</tr>
+	<tr>
+		 <td>2014-08-29 18:24:37</td>
+		<td>米奇真空古堡杯</td>
+		<td>1</td>
+		<td>323</td>
+		<td>兑换失败</td>
+		<td>您兑换的商品申请处理失败，金币已退回。处理中。失败处理。</td>
+		<td><p>兑换信息</p></td>
+		<td> </td>
+	</tr>
+	<tr>
+		 <td>2014-08-18 17:41:38</td>
+		<td>手机50元话费充值</td>
+		<td>1</td>
+		<td>190</td>
+		<td>兑换失败</td>
+		<td>充值失败，E币已退回。</td>
+		<td><p>兑换信息</p></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td colspan="8" class="lasttr">
+			<div id="lastrow" class="rh">
+				<span class="page">首页</span>
+				<span class="page pageno">1</span>
+				<span class="page">末页</span>
+				<span>共1页，跳转到</span>
+				<input type="number"></input>
+				<span>页</span>
+				<span class="page pagego">确定</span>
+			</div>
+		</td>
+	</tr>
+</table>
+</div>
+
+
+</body>
+</html>

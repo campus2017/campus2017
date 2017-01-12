@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="cwj" >
+	<meta name="description" content="this a page of qunar test">
+	<meta name="keywords" content="qunar test 温泉">
+	<title>Qunar test one</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+
+<header style="margin: 0 auto;width: 961px;height: 478px; position: relative;overflow: hidden;border-right: solid 1px #cccccc;">
+	<img onmouseenter="changeById(0)" id="doorOne" class="on" style="border-left: solid 1px #cccccc;border-bottom: solid 1px #cccccc;position: absolute;left: 0;top: 0;" src="images/door1.png">
+	<img onmouseenter="changeById(1)" id="doorTwo" style="border-left: solid 1px #cccccc;border-bottom: solid 1px #cccccc;position: absolute;left: 477px;top: 0;" class="off" src="images/door2.png">
+	<img onmouseenter="changeById(2)" id="doorThree" style="border-left: solid 1px #cccccc;border-bottom: solid 1px #cccccc;position: absolute;left: 638px;top: 0;" class="off" src="images/door3.png">
+	<img onmouseenter="changeById(3)" id="doorFour" style="border-left: solid 1px #cccccc;border-bottom: solid 1px #cccccc;position: absolute;left: 799px;top: 0;" class="off" src="images/door4.png">
+</header>
+<script type="text/javascript">
+	var positions=[[0,477,638,799],[0,162,638,799],[0,162,323,799],[0,162,323,484]];
+	var ids=["doorOne","doorTwo","doorThree","doorFour"];
+	var changes=[];  //需要改变的图片索引
+	var step=0;    //步长
+	var settime=0; //动画计数
+	var ctlSet; //递归索引 用于停止动画
+	var selNo=0;//鼠标所在图片索引
+	var ctlInit; //等待完成上一动画索引 用于停止动画
+	var end=true;//动画完成标志
+	//动画递归调用 动画的具体实现
+	function action(){
+				settime++;
+				for(var x in changes)
+				{
+					document.getElementById(ids[changes[x]]).style.left=(step+parseFloat(document.getElementById(ids[changes[x]]).style.left))+"px";
+				}
+				if(settime==20)
+				{
+					settime=0;
+					end=true;
+					return 0;
+				}
+				else{
+					ctlSet=setTimeout("action()",10);
+				}
+
+			}
+	//动画执行		
+	function animate()
+	{	
+				
+			setTimeout("action()",100);		
+	}
+	//响应鼠标事件
+	function changeById(no){
+		selNo=no;
+		//等待上一动画完成
+		ctlInit=setInterval(function(){
+			if(end){
+				end=false;
+				clearInterval(ctlInit);
+				changes.length=0;
+				for(var i=1;i<4;i++)
+				{
+					if(parseInt(document.getElementById(ids[i]).style.left)!=positions[selNo][i])
+					{
+						changes.push(i);
+						var nowPosition=parseInt(document.getElementById(ids[i]).style.left);
+						var desPosition=positions[selNo][i];
+						step=(desPosition-nowPosition)/20;
+					}
+				}
+				if(changes.length>0)
+				{
+					animate();
+				}
+				else{
+					end=true;
+				}
+			}
+		},50);
+		
+	}
+	
+</script>
+	
+</body>
+</html>

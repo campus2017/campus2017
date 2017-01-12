@@ -1,0 +1,49 @@
+
+/*全局样式*/
+*{padding:0;margin:0;}
+div,dl,dt,dd,form,h1,h2,h3,h4,h5,h6,img,ol,ul,li,table,th,td,p,span,a{border:0;}
+img,input{border:none;vertical-align:middle;}
+body{font-family:Tahoma,Arial,Helvetica,"宋体";font-size:12px;text-align:center;background:#FFF;color:#000;}
+html{overflow-y:scroll;}
+ul,ol{list-style-type:none;}
+th,td,input{font-size:12px;}
+h3{font-size:14px;}
+button{border:none;cursor:pointer;font-size:12px;background-color:transparent;}
+select{border-width:1px;_zoom:1;border-style:solid;padding-top:2px;font-size:12px;}
+.clear{clear:both;font-size:1px;height:0;visibility:hidden;line-height:0;}
+.clearfix:after{content:"";display:block;clear:both;}
+.clearfix{zoom:1;}
+a:link,a:visited{text-decoration:none;color:#333;}
+a:hover,a:active{text-decoration:underline;color:#f60;}
+.lf{
+	float:left;
+}
+.rh{
+	float:right;
+}
+header{
+	line-height: 30px;
+	height: 30px;
+	width: 980px;
+	background-color: white;
+	text-align: center;
+	margin: 0 auto;
+}
+#hdLeft{
+	line-height: 30px;
+	height: 30px;
+	text-align: center;
+}
+#hdLeft .hdlist{
+	margin-left: 10px;
+}
+.hdRight{
+	text-align: center;
+}
+.hdRight .hdRhList{	
+	padding-right:10px;
+}
+.hdRight .hdRhList.lfBord{
+	padding-left:10px;
+	border-left:1px solid black;
+}

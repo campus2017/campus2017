@@ -1,0 +1,504 @@
+
+/*全局样式*/
+*{padding:0;margin:0;}
+div,dl,dt,dd,form,h1,h2,h3,h4,h5,h6,img,ol,ul,li,table,th,td,p,span,a{border:0;}
+img,input{border:none;vertical-align:middle;}
+body{font-family:Tahoma,Arial,Helvetica,"宋体";font-size:12px;text-align:center;background:#FFF;color:#000;}
+html{overflow-y:scroll;}
+ul,ol{list-style-type:none;}
+th,td,input{font-size:12px;}
+h3{font-size:14px;}
+button{border:none;cursor:pointer;font-size:12px;background-color:transparent;}
+select{border-width:1px;_zoom:1;border-style:solid;padding-top:2px;font-size:12px;}
+.clear{clear:both;font-size:1px;height:0;visibility:hidden;line-height:0;}
+.clearfix:after{content:"";display:block;clear:both;}
+.clearfix{zoom:1;}
+a:link,a:visited{text-decoration:none;color:#333;}
+a:hover,a:active{text-decoration:underline;color:#f60;}
+.lf{
+	float:left;
+}
+.rh{
+	float:right;
+}
+
+header{
+	line-height: 30px;
+	height: 30px;
+	width: 980px;
+	background-color: white;
+	text-align: center;
+	margin: 0 auto;
+}
+#hdLeft{
+	line-height: 30px;
+	height: 30px;
+	text-align: center;
+}
+#hdLeft .hdlist{
+	margin-left: 10px;
+}
+.hdRight{
+	text-align: center;
+}
+.hdRight .hdRhList{	
+	padding-right:10px;
+}
+.hdRight .hdRhList.lfBord{
+	padding-left:10px;
+	border-left:1px solid black;
+}
+.top{
+	height: 671px;
+	width: 100%;
+	background-image: url("../images/paobg.png");
+	background-size: 100% 100%;
+	margin: 0 auto;
+}
+.topup{
+	margin: 0 auto;
+	height: 560px;
+	vertical-align: bottom;
+}
+.topup img{
+	margin-top: 10px;
+}
+.topmid{
+	margin-top: -93px;
+	position: relative;
+}
+.topmid .ullist{
+	margin: 0 auto;
+	position: absolute;
+	top:55px;
+	left: 50%;
+	font-size: 35px;
+	color: white;
+	font-weight: bolder;
+	text-align: center;
+}
+.topmid .ullist .firstli{
+	margin-left: -435px;
+}
+.topmid .ullist .secli{
+	margin-left: -125px;
+}
+.topmid .ullist .thirdli{
+	margin-left: 110px;
+}
+.topdown{
+	margin-left: 15px;
+}
+.topdown img{
+	
+}
+.main{
+	background-color:#7ecef4;
+	padding-top: 30px;
+}
+.mainleftest{
+	position: absolute;
+	top: 170px;
+	left: -170px;
+	color: white;
+}
+.mainrhest{
+	position: absolute;
+	top: 170px;
+	left: 990px;
+	color: white;
+}
+.upp{
+	background-image: url('../images/upbg.png');
+	height: 37px;
+	width: 163px;
+	text-align: center;
+	line-height: 34px;
+	font-size: 16px;
+	font-weight: bolder;
+	margin-bottom: 15px;
+}
+.downp{
+	background-image: url('../images/downbg.png');
+	height: 37px;
+	width: 163px;
+	text-align: center;
+	line-height: 34px;
+	font-size: 16px;
+	font-weight: bolder;
+}
+.mainOne{
+	margin: 0 auto;
+	width: 980px;
+	height: 283px;
+	position: relative;
+}
+.moleft{
+	position: absolute;
+	top: 150px;
+	left: 70px;
+}
+.moleft .lilast{
+	margin-top: 10px;
+}
+.moright{
+	position: absolute;
+	top: 150px;
+	left: 570px;
+}
+.moright .lilast{
+	margin-top: 10px;
+}
+.mainTwo{
+	margin: 0 auto;
+	margin-top: 30px;
+	width: 982px;
+	position: relative;
+}
+.mtline{
+	position: absolute;top: 55px;
+	left: 66px;
+	z-index: 10;
+}
+.mainTwo .mtdata{
+	height: 133px;
+	position: relative;
+	margin-top: -133px;
+	color: white;
+}
+.mainTwo .mtdata span{
+	position: absolute;
+	font-weight: bold;
+	width: 90px;
+	height: 133px;
+	box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;
+}
+.mainTwo .mtdata span:hover{
+	background-image: url('../images/addrbg.png');
+}
+.mainMid{
+	width: 980px;
+	margin: 0 auto;
+	background-color: white;
+}
+.mmtop{
+	margin: 0 auto;
+	position: relative;
+	height: 90px;
+}
+.code{
+	position: absolute;
+	width: 160px;
+	height: 180px;
+	top: 10px;
+	left: -170px;
+	background-color: #ed5172;
+	border-bottom: solid 10px #9d0035;
+}
+.code p{
+	line-height: 25px;
+	color: white;
+}
+.codeimg{
+	margin: 0 auto;
+	height: 145px;
+	width: 145px;
+	background-color: white;
+}
+.jieri{
+	position: absolute;
+	width: 175px;
+	height: 530px;
+	top: 10px;
+	left: 985px;
+}
+.listtable{
+	background-image: url('../images/topup.png');
+	width: 175px;
+	height: 480px;
+
+}
+.listtable ul{
+	padding-top: 115px;
+}
+.listtable ul li{
+	width: 70px;
+    margin: 5px auto;
+    font-size: 16px;
+    color: white;
+    font-weight: bolder;
+    padding: 4px 10px;
+    cursor: pointer;
+}
+.listtable ul li:hover{
+	border-radius: 10px;
+	background-color: #a7de55;
+	color: #336d00;
+}
+.gotop{
+	margin: 0 auto;
+	background-image: url('../images/topdowner.png');
+	width: 111px;
+	height: 50px;
+	font-weight: bolder;
+	font-size: 20px;
+	color: white;
+	cursor: pointer;
+}
+.gotop p{
+	line-height: 50px;
+	cursor: pointer;
+}
+.mmtdata{
+	position: absolute;
+	top: 20px;
+	left: 20px;
+}
+.mmtdata .mmtlefter{
+	font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+	font-size: 40px;
+	font-weight: bolder;
+	color: #ed5172;
+	margin-left: 10px;
+	padding-right: 20px;
+	margin-right: 20px;
+	border-right: solid 1px #ed5172;
+}
+.mmtdata .mmtleft{
+	font-size: 20px;
+	font-weight: bold;
+	color: #ed5172;
+}
+.mmtright{
+	position: absolute;
+	right: 20px;
+	top:45px;
+	height: 50px;
+}
+.mmtright span{
+	font-size: 16px;
+	color: #ed5172;
+}
+.mmone{
+	position: relative;
+}
+.mmoLfet{
+	position: absolute;
+	top: 8px;
+	left: 17px;
+}
+.mmolfdata{
+	width: 65px;
+	position: relative;
+}
+.mmolfdata img{
+	opacity: 0.7;
+	position: absolute;top: 0;left: 0;
+}
+.mmolfdata span{
+	position: absolute;top: 7px;left: 10px;
+	color: white;
+	font-size:16px;
+}
+.mmorightup{
+	position: absolute;
+	top: 8px;
+	right: 17px;
+	width: 290px;
+}
+.mmorhdata{
+	position: relative;
+	width: 290px;
+}
+.mmorightup img{
+	position: absolute;
+	top: 0;right: 0;opacity: 0.6;
+}
+.mmorhdata .mmoul{
+	right: 0;top: 35px;
+	color: white;
+	margin: 0 20px;
+}
+.mmorhdata .mmolione{
+	padding-top: 20px;
+	padding-bottom: 15px;
+	font-size: 25px;
+	color: white;
+	font-weight: bolder;font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+}
+.mmorhdata .mmolitwo{
+	font-size: 14px;
+	color: white;
+	text-align: left;
+	line-height: 25px;
+}
+.mmorhdata .mmolithree{
+	padding-top: 30px;
+}
+.mmorightdown{
+	position: absolute;
+	top: 243px;
+	right: 17px;
+	width: 290px;
+	height: 72px;
+	background-color: #ed5172;
+}
+.mmorightdown p{
+	line-height: 72px;
+	font-weight: bolder;
+	font-size: 30px;
+	color: white;
+}
+.mmtwo{
+	margin: 0 auto;
+	width: 980px;
+	position: relative;
+	height: 335px;
+}
+.mmtlf{
+	position: absolute;
+	left: 10px;
+	top: 10px;
+}
+.mmtlall{
+	position: relative;
+}
+.mmtwn{
+	position: absolute;
+	left: 9px;
+	top: 10px;
+}
+.mmtwndata{
+	position: relative;
+}
+.mmtwndata img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0.6;
+}
+.mmtwndata p{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 65px;
+	line-height: 35px;
+	color: white;
+	font-size:16px;
+}
+.downbg{
+	position: absolute;
+	top:206px;
+	left: 9px;
+	opacity: 0.5;
+}
+.mmtldata{
+	position: absolute;
+	top:215px;
+	left: 25px;
+	color: white;
+	text-align: left;
+}
+.mmtldatarh{
+	position: absolute;
+	top:206px;
+	left: 354px;
+	height: 110px;
+	width: 115px;
+	background-color: #ed5172;
+}
+.mmtldatarh p{
+	line-height: 110px;
+	font-size: 22px;
+	color: white;
+	font-weight: bold;
+}
+.mmtrh{
+	position: absolute;
+	top: 10px;
+	left: 495px;
+}
+.hbao{
+	margin: 30px auto;
+	width: 982px;
+	height: 171px;
+	background-image: url('../images/hbbg.png');
+}
+.hbdata{
+	font-size: 50px;
+	font-weight: bolder;font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+	font-weight: bolder;
+	color: white;
+	padding-top: 25px;
+	padding-bottom: 20px;
+}
+.hbqu{
+	color: white;
+	margin: 0 auto;
+	line-height: 33px;
+	height: 37px;
+	width: 163px;
+	font-size: 20px;
+	font-weight: bold;
+
+	background-image: url('../images/lingqu.png');
+}
+.vote{
+	height: 55px;
+		margin-bottom: 10px;
+}
+textarea{
+	margin-bottom: 100px;
+}
+.footer{
+	height: 370px;background-color: white;
+}
+.footdata{
+	width: 980px;
+	margin: 0 auto;
+}
+.action{
+	color: #898989;
+	line-height: 50px;
+	font-size: 14px;
+}
+.banners{
+	height: 80px;
+}
+.banners p{
+	height: 60px;
+	margin-bottom: 20px;
+	background-color: #ebebeb;
+	color: #555555;
+	line-height: 60px;
+	font-size: 14px;
+	width: 480px;
+}
+.footnav{
+	height: 60px;
+	margin: 0 auto;
+}
+.footnav .divul{
+	height: 30px;
+	margin: 0 auto;
+}
+.footnav .divul a{
+	line-height: 30px;
+	padding: 0 5px;
+	color: #848484;
+	border-right: solid 1px #848484;
+}
+.footnav p{
+	line-height: 30px;
+	color: #848484;
+}
+.together{
+	margin-top: 10px;
+}
+footer{
+	height: 80px;
+	width: 100%;
+	background-color: #7ecef4;
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="cwj" >
+	<meta name="description" content="this a page of qunar test">
+	<meta name="keywords" content="qunar test 温泉">
+	<title>Qunar test one</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+<header>
+	<div id="hdLeft" class="lf">		
+		<a href="#" class="hdlist login" target="_blank">亲，请登录</a>
+		<a href="#" class="hdlist" target="_blank">免费注册</a>
+		<a href="#" class="hdlist" target="_blank">手机逛淘宝</a>
+		
+	</div>
+	<div id="hdRight" class="rh hdRight">
+		<div id="hdRhLf" class="lf">
+			<a href="#" target="_blank" class="hdRhList indexpage">淘宝网首页</a>
+			<a href="#" target="_blank" class="hdRhList more">我的淘宝<img src="images/more.png"></a>
+			<a href="#" target="_blank" class="hdRhList"><img src="images/bus.png"> 购物车<span>O</span><img src="images/more.png"></a>
+			<a href="#" target="_blank" class="hdRhList"><img src="images/get.png"> 收藏夹<img src="images/more.png"></a>
+			<a href="#" target="_blank" class="hdRhList">商品分类</a>
+		</div>
+		<div id="hdRhRh" class="rh">
+			<a href="#" target="_blank" class="hdRhList rhRhFirst">卖家中心<img src="images/more.png"></a>
+			<a href="#" target="_blank" class="hdRhList ">联系客服</a>
+			<a href="#" target="_blank" class="hdRhList "><img src="images/menu.png"> 网站导航<img src="images/more.png"></a>
+		</div>
+	</div>
+</header>
+<div id="top">
+	<span class="topLeft lf">
+		<img src="images/logo.png">
+	</span>
+	<span class="topRight rh">
+		<a href="#" class="topList">Android</a>
+		<a href="#" class="topList">iPhone</a>
+		<a href="#" class="topList">iPad</a>
+		<a href="#" class="topList">AndroidPad</a>
+		<a href="#" class="topList">WinPhone</a>
+		<a href="#" class="topList">软件市场</a>
+
+	</span>
+
+</div>
+<div id="middle">
+	<img src="images/firstpic.png">
+</div>
+<div id="midBottom">
+	<div class="showList lf">
+		<img src="images/one.png">
+		<p>微淘，上新、折扣、团购一网打尽</p>
+	</div>
+	<div class="showList lf">
+		<img src="images/two.png">
+		<p>一淘火眼，最强大的扫码软件</p>
+	</div>
+	<div class="showList lf">
+		<img src="images/three.png">
+		<p>淘宝旅游，一站式旅行服务</p>
+	</div>
+	<div class="showList lf">
+		<img src="images/four.png">
+		<p>淘宝手机助手，能挣钱的应用商店</p>
+	</div>
+	
+</div>
+<footer id="footer">
+	<a href="#" class="footList rhborder"><img src="images/weibo.png">关注微博</a>
+	<a href="#" class="footList rhborder"><img src="images/soft.png">软件市场</a>
+	<a href="#" class="footList">Copyright 2003-2014 Taobao.com 版权所有</a>
+</footer>
+<div id="tanchuang">	
+	<img class="show lf" src="images/layer.png">
+	<img class="close rh" src="images/close.png">
+</div>
+<div id="layer">
+
+</div>
+<script type="text/javascript">
+	$(function(){
+		$(".topList").click(function(){
+			$("#tanchuang").css("display","block");
+			$("#layer").css("display","block");
+		});
+		$(".close").mouseenter(function(){
+			$(".close").attr("src","images/close_hover.png");
+		});
+		$(".close").mouseout(function(){
+			$(".close").attr("src","images/close.png");
+		});
+		$(".close").click(function(){
+			$("#tanchuang").css("display","none");
+			$("#layer").css("display","none");
+		});
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+
+/*全局样式*/
+*{padding:0;margin:0;}
+div,dl,dt,dd,form,h1,h2,h3,h4,h5,h6,img,ol,ul,li,table,th,td,p,span,a{border:0;}
+img,input{border:none;vertical-align:middle;}
+body{font-family:Tahoma,Arial,Helvetica,"宋体";font-size:12px;text-align:center;background:#FFF;color:#000;}
+html{overflow-y:scroll;}
+ul,ol{list-style-type:none;}
+th,td,input{font-size:12px;}
+h3{font-size:14px;}
+button{border:none;cursor:pointer;font-size:12px;background-color:transparent;}
+select{border-width:1px;_zoom:1;border-style:solid;padding-top:2px;font-size:12px;}
+.clear{clear:both;font-size:1px;height:0;visibility:hidden;line-height:0;}
+.clearfix:after{content:"";display:block;clear:both;}
+.clearfix{zoom:1;}
+a:link,a:visited{text-decoration:none;color:#333;}
+a:hover,a:active{text-decoration:underline;color:#f60;}
+.lf{
+	float:left;
+}
+.rh{
+	float:right;
+}
+body,html{
+	width: 100%;
+}
+header{
+	height: 76px;
+	width: 100%;
+	background-color: white;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.leftest{
+	height: 75px;
+	width: 6%;
+	border-right: 1px solid #7DBCDC;
+	border-bottom: 1px solid #268FC5;
+	box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box; 
+}
+
+.datesel{
+	width: 11%;
+	height: 75px;
+	border-right: 1px solid #7DBCDC;
+	border-bottom: 1px solid #268FC5;
+	box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box; 
+}
+.datesel ul{
+	margin-top: 7px;
+	margin-bottom: 7px;
+	width: 100%;
+}
+
+.righter{
+	width: 6%;
+	height: 75px;
+	border-bottom: 1px solid #268FC5;
+	box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box; 
+}
+.rightest{
+	height: 76px;
+	width: 11%;
+}
+.rightest img{
+	width: 100%;
+	height: 100%;
+}
+.datesel ul li{
+	line-height: 20px;
+	text-align: center;
+}
+.datesel ul .onli{
+	font-size: 14px;
+	color: #0E83BF;
+	font-weight: bold;
+}
+
+.datesel.seled{
+	position: relative;
+	border-top: 1px solid #7DBCDC;
+	border-right: 1px solid #268FC5;
+	border-bottom: none;
+	font-size: 14px;
+	color: #0E83BF;
+	font-weight: bold;
+}
+.di{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.line{
+	width: 100%;
+	height: 22px;
+	margin-top: 5px;
+}
+.line img{
+	width: 100%;
+}
+
+.listtb{
+	width: 100%;
+}
+table th{
+	border: none;
+	/*border-collapse:collapse;*/
+	background-color: #26B4D3;
+	color: white;
+	font-size: 14px;
+	text-align: center;
+	
+}
+
+.listtb .rowone{
+	border: none;
+	background-color: #26B4D3;
+	height: 35px;
+}
+.listtb table{
+	width: 100%;
+}
+.listtb table tr{
+	width: 100%;
+	/*background-color: #26B4D3;*/
+}
+.listtb table tr th,.listtb table tr td{
+	width: 15%;
+	/*background-color: #26B4D3;*/
+}
+.listtb table tr .clone{
+	width: 10%;
+	line-height: 35px;
+	text-align: right;
+	padding-right: 20px;
+	box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box; 
+}
+.listtb .cltwo,.listtb .clfive{
+	text-align: left;
+}
+.listtb .clthree,.listtb .clsix{
+	text-align: right;
+}
+.rowtwo,.rowthree{
+	height: 94px;
+	background-color: #F3FBFD;
+}
+.listtb tr td ul{
+	height: 80px;
+	margin-top: 15px;
+	line-height: 20px;
+	color: #666666;
+}
+.listtb tr td ul .firstli{
+	color: black;
+}
+.listtb .clsix ul li{
+	height: 16px;
+	color: #0E83BF;
+}
+.listtb .clthree li,.listtb .clfive li{
+	height: 16px;
+	color: black;
+}
+.listtb .clthree .time,.listtb .clfive .time{
+	font-size: 16px;
+	font-weight: bolder;
+	height: 16px;
+	color: black;
+}
+.listtb .clfour li{
+	height: 16px;
+}

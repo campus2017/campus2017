@@ -1,0 +1,168 @@
+
+/*全局样式*/
+*{padding:0;margin:0;}
+div,dl,dt,dd,form,h1,h2,h3,h4,h5,h6,img,ol,ul,li,table,th,td,p,span,a{border:0;}
+img,input{border:none;vertical-align:middle;}
+body{font-family:Tahoma,Arial,Helvetica,"宋体";font-size:12px;text-align:center;background:#FFF;color:#000;}
+html{overflow-y:scroll;}
+ul,ol{list-style-type:none;}
+th,td,input{font-size:12px;}
+h3{font-size:14px;}
+button{border:none;cursor:pointer;font-size:12px;background-color:transparent;}
+select{border-width:1px;_zoom:1;border-style:solid;padding-top:2px;font-size:12px;}
+.clear{clear:both;font-size:1px;height:0;visibility:hidden;line-height:0;}
+.clearfix:after{content:"";display:block;clear:both;}
+.clearfix{zoom:1;}
+a:link,a:visited{text-decoration:none;color:#333;}
+a:hover,a:active{text-decoration:underline;color:#f60;}
+html,body{
+	width: 100%;
+	position: relative;
+}
+.lf{
+	float:left;
+}
+.rh{
+	float:right;
+}
+header{
+	margin-right: 30px;
+	margin-left: 30px;
+	height: 44px;
+	border-bottom: 1px solid #DADADA;
+}
+header .menu{
+	margin-right: 10px;
+	display: inline-block;
+	margin-top:10px; 
+	height: 33px;
+	width: 85px;
+	text-align: center;
+	line-height: 34px;
+	background-color: #F1F1F1;
+	border:1px solid #DADADA;
+}
+header .menu.now{
+	background-color: white;
+	border-bottom: 2px solid white;
+}
+#top{
+	padding:10px 40px;
+
+	text-align: left;
+}
+#top .toplist{
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 23px;
+	height: 23px;
+	cursor: pointer;
+}
+#top .toplistlf{
+	width: 63px;
+	color: #3775C0;
+
+}
+#top .toplist.now{
+	background-color: #3775C0;
+	border: 1px solid #3775C0;
+	border-radius: 3px;
+	color: white;
+	font-weight: bold;
+}
+#top .date{
+	margin-left: 30px;
+}
+#top input{
+	border: 1px solid #DADADA;
+	border-radius: 2px;
+	line-height: 60px;
+	height: 25px;
+}
+#top .search{
+	background-color: #3775C0;
+	border: 1px solid #3775C0;
+	border-radius: 3px;
+	color: white;
+	font-weight: bold;
+	width: 63px;
+}
+#top .reset{
+	background-color: red;
+	border: 1px solid red;
+	border-radius: 3px;
+	color: white;
+	font-weight: bold;
+	width: 63px;
+}
+#table{
+	padding: 10px 40px;
+	
+}
+#table table{
+	border: 1px solid #E5E5E5;
+	width: 100%;
+	border-collapse:collapse;
+
+}
+#table tr th{
+	background-color: #F8F8F8;
+	line-height: 35px;
+	height: 35px;
+	vertical-align: middle;
+	text-align: left;
+	padding-left: 5px;
+
+}
+#table tr td{
+	vertical-align: middle;
+	text-align: left;
+	height: 65px;
+	padding-left: 5px;
+	border-bottom: 1px solid #F3F3F3;
+}
+#table .firsttd{
+	width: 100px;
+	line-height: 30px;
+}
+#table table td p{
+	line-height: 23px;
+	height: 23px;
+	width: 68px;	
+	background-color: #3775C0;
+	border-radius: 3px;
+	text-align: center;
+	vertical-align: middle;
+	color: white;
+}
+#table tr td.lasttr{
+	height: 35px;
+	border-top: 2px solid #E5E5E5;
+	border-bottom: 1px solid #E5E5E5;
+}
+#lastrow .page{
+	display: inline-block;
+	line-height: 25px;
+	width: 45px;
+	text-align: center;
+	vertical-align: middle;
+	border:1px solid #E5E5E5;
+	color: #0069CA;
+}
+#lastrow{
+	margin-right: 20px;
+}
+#lastrow .page.pagego{
+	border:1px solid #E5E5E5;
+	color: black;
+}
+#lastrow .page.pageno{
+	border:none;
+	color: black;
+}
+#lastrow input{
+	border:1px solid #DADADA;
+	height: 23px;
+	width: 30px;
+}
