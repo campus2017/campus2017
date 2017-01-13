@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>Exhange</groupId>
+    <artifactId>Rate</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <dependencies>
+        <dependency>
+            <groupId>org.htmlparser</groupId>
+            <artifactId>htmlparser</artifactId>
+            <version>1.6</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.3.5</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+            <version>1.7.2</version>
+        </dependency>
+        <dependency>
+            <groupId>net.sourceforge.jexcelapi</groupId>
+            <artifactId>jxl</artifactId>
+            <version>2.6.12</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>3.1</version>
+            <systemPath>D:\JAVA\Homework\ExchangeRate\src\lib\commons-httpclient-3.1.jar</systemPath>
+            <scope>system</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>codec</artifactId>
+            <version>1.6</version>
+            <systemPath>D:\JAVA\Homework\ExchangeRate\src\lib\commons-codec-1.6.jar</systemPath>
+            <scope>system</scope>
+            </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>logging</artifactId>
+            <version>1.2</version>
+            <systemPath>D:\JAVA\Homework\ExchangeRate\src\lib\commons-logging-1.2.jar</systemPath>
+            <scope>system</scope>
+        </dependency>
+
+    </dependencies>
+    <build><defaultGoal>compile</defaultGoal></build>
+
+</project>
