@@ -1,0 +1,269 @@
+@charset "UTF-8";
+body,div,header,ul ,li,a,p,img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+    text-decoration: none;
+}
+html {
+    width:100%;
+    font-size: 100%;
+    font-family: Microsoft YaHei;
+}
+.clearFix {
+    clear: both;
+}
+/*默认*/
+header {
+    height: 3rem;
+    line-height: 3rem;
+    background-color: #25a4bb;
+    text-align: center;
+    font-size: 1.3rem;
+    color: #fff;
+}
+header div {
+    display: inline-block;
+}
+header .arrow-l {
+    float: left;
+    width: 1rem;
+    height:1rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    background-size: cover;
+    background: url(bgimg/bg.png) no-repeat;
+    background-position: -39px -165px;
+}
+header .index {
+    float: right;
+    width: 2.2rem;
+    height: 1.5rem;
+    margin-right: 0.1rem;
+    margin-top: 0.5rem;
+    background: url(bgimg/bg.png) no-repeat;
+    background-position: -1px -165px;
+    font-size: 0.5rem;
+    color: #fff;
+}
+.aprt-photo img {
+    width: 100%; 
+    height: 10rem;
+}
+/*  */
+.info {
+    width:100%;
+    font-size: 1rem;
+}
+.info ul.info-basic {
+    width: 100%;
+    height: 11rem;
+    border-bottom: 1px solid #d0d0d0;
+}
+.info-basic li {
+    width: 96%;
+    margin: 0 auto;
+    border-bottom: 1px dashed #dfdfdf;
+}
+.info-basic li div {
+    display: inline-block;
+}
+div.info-specific {
+    width: 68%;
+}
+div.look,
+.person-time .remark {
+    width: 25%;
+    text-align: right;
+    color: #4ab2cd;
+}
+div.look img,
+.person-time .remark img{
+    margin-left: 0.3rem;
+}
+.info-basic li.score {
+    height: 3rem; 
+    line-height: 3rem;
+}
+div  span.num {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #4ab2cd;
+}
+.info-basic li.address {
+    height: 4rem;
+}
+.info-basic li.address .info-specific {
+    margin: auto;
+}
+li.address .info-specific p.add-spe {
+    height: 2rem;
+    line-height: 2rem;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow:ellipsis;
+}
+li.address p.area {
+    font-size: 1rem;
+    color: #cacaca;
+}
+ 
+.info-basic li.time {
+    height: 5.5rem;
+    margin-top:0.5rem; 
+    border: none;
+}
+ 
+/*  */
+.info-price,
+.more {
+    margin-top: 1rem;
+    border-top: 1px solid #d0d0d0;
+    font-size: 1rem;
+}
+.info-price li,
+.more li {
+    border-bottom: 1px solid #d0d0d0;
+}
+.info-price li div {
+    display: inline-block;
+}
+.info-price li div p {
+    margin: 0.1rem;
+}
+.info-price li div p:last-child {
+    margin-bottom: 0.2rem;
+}
+.info-price li div:first-child,
+.more li div{
+    margin-left: 2%;
+}
+.person-time {
+    height: 3rem;
+    line-height: 3rem;
+}
+.person-time .time {
+    width: 62%
+}
+.person-time .time img {
+    margin-right: 0.2rem;
+}
+div.info-name {
+    width: 53%;
+}
+div.price-num {
+    width: 25%;
+    text-align: right;
+}
+li:not(.sub) div.options {
+    width: 15%;
+    height: 1.5rem;
+    border-radius: 0.3rem;
+    background-color: #1ba9ba;
+    color: #fff;
+    text-align: center;
+}
+.info-name .remark {
+    font-size: 0.9rem;
+    color: #ccc;
+}
+.info-name .remarks span {
+    margin: 0.5%;
+    background-color: #25a4bb;
+    color: #fff;
+}
+.info-name .remarks span.back {
+    background-color: #ff0000;
+}
+.info-price .sub,
+ul.more .remark,
+footer {
+    background-color: #f0f0f0;
+}
+.info-price .sub .options {
+    border:1px solid #ff9036;
+    border-radius: 0.3rem;
+    background-color: #ff9036;
+}
+.info-price .sub .options .pre {
+    text-align: center;
+    background-color: #ff9036;
+}
+.info-price .sub .options .pay {
+    background-color: #fff;
+    color:#ff9036; 
+}
+.price-more {
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    color: #44b0c4;
+}
+/*  */
+.more span {
+    color: #27b8df;
+}
+.more li:not(.remark) {
+    height: 3rem;
+    line-height: 3rem;
+}
+.more li.remark {
+    font-size: 0.9rem;
+    color:#9f9f9f;
+}
+/* footer */
+footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #a7a7a7;
+}
+footer div ul {
+    margin: 0 auto;
+}
+footer ul li {
+    float: left;
+    width: 25%;
+    margin-top: 0.3rem;
+}
+footer ul li img {
+      vertical-align: middle;
+}
+footer ul li:last-child {
+    width: 20%;
+    border-left: 1px solid #b3b3b3;
+}
+li.ticket,
+li.apartment {
+    text-decoration: underline;
+}
+div.copy {
+     line-height: 5rem;
+}
+.info-price .price-num {
+    color:#a2a2a2;
+    font-size: 0.9rem;
+}
+.nump {
+    color:#fe6900;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.cheap,
+.st {
+    color: #fff;
+    background-color: #ff6600;
+}
+.sale .remark span:not(.st) {
+    color: #ff6600;
+    border: 1px solid #ff6600;
+}
+.options {
+    margin-bottom: 1rem;
+    color: #fff;
+}
+.no {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
