@@ -1,0 +1,155 @@
+@charset"utf-8";
+body,div,ul,li,a {
+	border: 0;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+}
+.clearFix:after {
+	display: block;
+	clear: both;	
+	overflow: hidden;
+	visibility: hidden;
+	content: "";
+	height: 0;
+}
+.clearFix {
+	zoom:1;
+}
+
+/*  */
+.container {
+	width: 980px;
+	margin: 0 auto;
+	font-size: 15px;
+}
+.header {
+	width: 970px;
+	height: 40px;
+	border-bottom: 1px solid #dbdbdb;
+	background-color: #fcfcfe;
+	margin: 2px auto;	
+}
+.header ul {
+	width: 270px;
+	height: 24px;
+	margin-top: 15px;
+	float: right;
+}
+.header ul li {
+	width: 80px;
+	height: 24px;
+	line-height: 24px;
+	border: 1px solid #dbdbdb;
+	border-bottom: none;
+	border-radius: 4px 4px 0 0;
+	margin-right: 3px;
+	float: left;	 
+	background: #f1f0ee;
+	text-align: center;
+	cursor: pointer;
+}
+.header ul li.on {
+	height: 25px;
+	background: #fff;
+}
+#mar-r {
+	margin-right: 18px;
+}
+.select {
+	width: 950px;
+	height: 40px;
+	margin: 15px auto;
+}
+#sel {
+	display: inline-block;
+}
+.select a {
+	display: inline-block;
+	width: 70px;
+	height: 30px;
+	line-height: 30px;
+	border-radius: 4px;
+	text-align: center;
+	color: #4591d8;
+}
+.select a.selected,
+#search {
+	background: #3775c0;
+	color: #fff;
+}
+#reset {
+	background: #ff0000;
+	color: #fff;
+	margin-left: 3px;
+}
+label.from {
+	margin-left: 20px;
+}
+input {
+	display: inline-block;
+	width: 150px;
+	height: 25px;
+}
+input[type=date]::-webkit-inner-spin-button {
+	visibility: hidden;
+}
+.deal {
+	width: 950px;
+	margin: 0 auto;
+	border-collapse:collapse;
+	border: 2px solid #e6e6e6;
+}
+.deal thead {
+	background: #f8f8f8;
+}
+.deal thead tr {
+	height: 30px;
+}
+tbody tr td:nth-last-child(2) a{
+	display: inline-block;
+	width: 80px;
+	height: 30px;
+	border-radius: 4px;
+	background: #3775c0;
+	text-align: center;
+	line-height: 30px;
+	color: #fff;
+	cursor: pointer;
+}
+tbody tr {
+	border-bottom: 1px solid #f7f7f7;
+}
+.page {
+	width: 946px;
+	height: 40px;
+	margin: 0 auto;
+	border: 2px solid #e6e6e6;
+	line-height: 40px;
+	background: #f8f8f8;
+}
+.page .content {
+	float: right;
+	margin-right: 10px;
+}
+.page input {
+	width: 40px;
+	height: 23px;
+}
+.first,
+.last,
+.sure {
+	display: inline-block;
+	width: 50px;
+	height: 30px;
+	border: 1px solid #eaeaea;
+	background-color: #fff;
+	text-align: center;
+	line-height: 30px;
+	color: #5198db;
+}
+a.sure {
+	background: #f8f8f8;
+	color: #000;
+}

@@ -1,0 +1,31 @@
+@charset"utf-8";
+body,div,img,ul,li {
+	padding: 0;
+	border: 0;
+	margin: 0;
+	overflow: hidden;
+	list-style: none;
+}	
+.content {
+	width:1000px;
+	margin:0 auto;
+}
+.content ul {
+	width:1000px;
+	height: 478px;
+}
+.content ul li {
+	float: left;
+	width: 155px;
+	height: 477px;
+	border-left: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	cursor: pointer;	
+}
+.content ul li:last-child {
+	border-right: 1px solid #ccc;
+}
+.content ul li:first-child {
+	width: 457px;
+	/* position: absolute; */	
+} 
