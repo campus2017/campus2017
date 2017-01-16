@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="poi-3.15">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Desktop/poi-3.15.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/poi-ooxml-3.15.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
