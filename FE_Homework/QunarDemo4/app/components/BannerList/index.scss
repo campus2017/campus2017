@@ -1,0 +1,16 @@
+@charset "utf-8";
+.m-banner-list {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 350px;
+	.list {
+		margin: 0 20px;
+		list-style-type: none;
+		p {
+			text-align: center;
+			font-size: 14px;
+			color: #707070;
+		}
+	}
+}

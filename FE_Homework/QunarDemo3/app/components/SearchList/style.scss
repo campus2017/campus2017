@@ -1,0 +1,21 @@
+@charset "utf-8";
+.search-container {
+	flex: 1.5;
+	a {
+		display: inline-block;
+		width: 4.5rem;
+		height: 1.6rem;
+		margin: 1rem .1rem;
+		border-radius: 10%;
+		text-decoration: none;
+		text-align: center;
+		line-height: 1.6rem;
+		color: #fff;
+	}
+	.search-btn {
+		background: #3775c0;
+	}
+	.reset-btn {
+		background: #f00;
+	}
+}

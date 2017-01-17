@@ -1,0 +1,22 @@
+@charset "utf-8";
+.m-phone-nav {
+	flex: 1.1;
+	height: 100%;
+	.list {
+		display: inline-block;
+		padding: 0 10px;
+		list-style-type: none;
+		line-height: 90px;
+		a {
+			display: inline-block;
+			text-decoration: none;
+			color: #3399cc;
+		}
+	}
+	:nth-child(1) {
+		padding-left: 0;
+	}
+	:nth-child(6) {
+		padding-right: 0;
+	}
+}

@@ -1,0 +1,46 @@
+@charset "utf-8";
+.flight-infos {
+	margin-top: 20px;
+	.line {
+		width: 100%;
+		height: 5px;
+		background: #ffb400 url(../../lib/images/icons.png) 0 -55px;
+	}
+	.title {
+		display: flex;
+		height: 50px;
+		background: #26b4d3;
+		color: #fff;
+		li {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			list-style-type: none;
+		}
+		.flight-desc {
+			flex: 1.2;
+		}
+		.launch-time {
+			flex: 1;
+		}
+		.total-time {
+			flex: 1;
+			.arrow {
+				transform: rotate(90deg);
+			}
+		}
+		.land-time {
+			flex: 1.2;
+		}
+		.recommend-site {
+			flex: .5
+		}
+		.low-price {
+			flex: 1;
+			.arrow {
+				transform: rotate(90deg);
+			}
+		}
+	}
+	
+}

@@ -1,0 +1,47 @@
+@charset "utf-8";
+.item-info {
+	display: flex;
+	height: 3.5rem;
+	align-items: center;
+	list-style-type: none;
+	border-bottom: 1px solid #f3f3f3;
+	span{
+		padding: 0 .5rem;
+	}
+	span:nth-child(1) {
+		flex: 2;
+	}
+	span:nth-child(2) {
+		flex: 3;
+	}
+	span:nth-child(3) {
+		flex: 1;
+	}
+	span:nth-child(4) {
+		flex: 1;
+	}
+	span:nth-child(5) {
+		flex: 1;
+	}
+	span:nth-child(6) {
+		flex: 4;
+	}
+	a:nth-child(7) {
+		flex: 1;
+	}
+	span:nth-child(8) {
+		flex: 2;
+	}
+	
+	.exchange-info-btn {
+		margin: 0 .5rem;
+		width: 3.5rem;
+		height: 1.6rem;
+		text-decoration: none;
+		text-align: center;
+		line-height: 1.6rem;
+		border-radius: 15%;
+		background: #3775c0;
+		color: #fff;
+	}
+}

@@ -1,0 +1,13 @@
+@charset "utf-8";
+.date-container {
+	flex: 2;
+	display: flex;
+    align-items: center;
+    .to {
+    	margin: 0 .2rem;
+    }
+    input {
+    	width: 42%;
+    	border: 1px solid #ccc;
+    }
+}

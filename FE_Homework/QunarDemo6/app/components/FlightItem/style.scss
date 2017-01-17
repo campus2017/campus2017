@@ -1,0 +1,145 @@
+@charset "utf-8";
+.flight-item {
+	display: flex;
+	list-style-type: none;
+	background: #f3fbfd;
+	font-size: 13px;
+	&>div {
+		display: inline-block;
+		height: 180px;
+		margin: 10px 20px;
+	}
+	.flight-desc {
+		flex: 1.2;
+		.go,
+		.back {
+			margin-bottom: 40px;
+			.air-icon {
+				display: inline-block;
+				margin-right: 10px;
+				width: 23px;
+				height: 21px;
+				background: url(../../lib/images/icons.png) -45px 0 no-repeat;
+			}
+			.width,
+			.height {
+				margin-left: 32px;
+				color: #666;
+			}
+			.common {
+				color: #25b4d2;
+			}
+		}
+	}
+	.launch-time {
+		flex: 1;
+		.go,
+		.back {
+			margin-bottom: 45px;
+			.time {
+				display: block;
+				text-align: right;
+				margin: 2px 0 10px 0;
+				padding-right: 10px;
+				font-size: 18px;
+			}
+			.airport {
+				display: block;
+				padding-right: 10px;
+				text-align: right;
+			}
+		}
+	}
+	.total-time {
+		flex: 1;
+		.go,
+		.back {
+			margin-bottom: 19px;
+			color: #666;
+			.cost-time {
+				display: block;
+				height: 20px;
+				margin: 4px 0 16px 0;
+				text-align: center;
+			}
+			.transfer-wrap, 
+			.stop-wrap {
+				margin-bottom: 5px;
+				text-align: center;	
+			}
+			.transfer,
+			.stop {
+				background: #26b4d3;
+				color: #fff;
+			}
+		}
+	}
+	.land-time {
+		flex: 1.2;
+		.go,
+		.back {
+			margin-bottom: 45px;
+			.time {
+				display: block;
+				margin: 2px 0 10px 0;
+				padding-left: 40px;
+				font-size: 18px;
+			}
+			.airport {
+				display: block;
+				padding-left: 40px;
+			}
+		}
+	}
+	.recommend-site {
+		flex: .5;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		ul { 
+			list-style-type: none;
+			li {
+				margin-bottom: 20px;
+			}
+			.site {
+				color: #0e83bf;
+			}
+			.price {
+				color: #ff7200;
+			}
+		}
+	}
+	.low-price {
+		position: relative;
+		flex: 1;
+		margin-top: 40px;
+		.price {
+			color: #0e83bf;
+			font-size: 20px;
+		}
+		.tax-wrap {
+			color: #666;
+		}
+		.btn-ticket {
+			display: block;
+			margin-top: 5px;
+			margin-left: 15px;
+			width: 76px;
+			height: 25px;
+			text-align: center;
+			line-height: 25px;
+			background: #26b4d3;
+			color: #fff;
+		}
+		.triangle {
+			position: absolute;
+			top: 73px;
+			left: 16px;
+			width: 0;
+			height: 0;
+			border-left: 38px solid transparent;
+    		border-right: 38px solid transparent;
+    		border-top: 15px solid #26b4d3;
+		}
+	}
+}

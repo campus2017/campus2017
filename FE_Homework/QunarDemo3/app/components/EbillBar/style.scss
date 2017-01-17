@@ -1,0 +1,25 @@
+@charset "utf-8";
+.ebill-container {
+	overflow: hidden;
+	a {
+		position: relative;
+		float: right;
+		width: 5rem;
+		height: 2rem;
+		margin: 0 .2rem;
+		border: 1px solid #dbdbdb;
+		border-radius: 5%;
+		text-decoration: none;
+		text-align: center;
+		line-height: 2rem;
+		background: #f1f1f1;
+		color: #000;
+		border-bottom-width: 0;
+	}
+
+	.panel-bg {
+		z-index: 100;
+		border-bottom: 1px solid #fff;
+		background: #fff;
+	}
+}

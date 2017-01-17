@@ -1,0 +1,24 @@
+@charset "utf-8";
+$baseFont: 12px "宋体",Arial,Times;
+$baseSize: 30px;
+$baseColor: #959595;
+#header {
+	display: flex;
+	align-items:center;
+	height: $baseSize;
+	background-color: #fff;
+	nav {
+		flex: 2;
+		a {
+			color: $baseColor;
+			font: $baseFont;
+			text-decoration: none;
+		}
+	}
+	.m-header-lf {
+		padding-left: 18%;
+	}
+	.m-header-rg {
+		padding-left: 10%;
+	}
+}

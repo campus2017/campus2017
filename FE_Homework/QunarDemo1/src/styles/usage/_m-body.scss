@@ -1,0 +1,238 @@
+@charset "utf-8";
+.hor-center {
+	display: flex;
+	justify-content: center;
+}
+.img-border {
+	padding: 6px;
+	background: #fff;
+}
+
+#body {
+	.m-body-head {
+		position: relative;
+		.activity-tabs {
+			display: flex;
+			position: absolute;
+			bottom: 30px;
+			left: 25%;
+			width: 50%;
+			li:nth-child(1) {
+				background: url(../../image/blue_left.png);
+			}
+			li:nth-child(2) {
+				background: url(../../image/grey_middle.png);
+				margin-right: -15px;
+				z-index: 20;
+			}
+			li:nth-child(3) {
+				background: url(../../image/grey_right.png);
+			}
+			li {
+				flex: 1;
+				@extend .hor-center;
+				height: 110px;
+				cursor: pointer;
+				color: #fff;
+				span {
+					position: relative;
+					top: 50px;
+				}
+			}
+		}
+		.triangle-btn {
+			position: absolute;
+			top: 365px;
+			left: 435px;
+			width: 0;
+			height: 0;
+			border-left: 10px solid transparent;
+    		border-right: 10px solid transparent;
+    		border-top: 8px solid #fff;
+		}
+	}
+	.m-body-activities {
+		@extend .hor-center;
+		margin-top: 12px;
+		.wrap {
+			display: flex;
+			width: 50%;
+			padding: 5px 5px 4px 5px;
+			background: #78af24;
+			li {
+				flex: 1;
+				position: relative;
+				box-sizing: border-box;
+				cursor: pointer;
+				a {
+					position: absolute;
+					bottom: 15px;
+					left: 135px;
+					width: 100px;
+					height: 20px;
+					background: url(../../image/deep_btn.png) no-repeact;
+					background-size: cover;
+					&:hover {
+						background: url(../../image/light_btn.png) no-repeact;
+						background-size: cover;
+					}
+				}
+			}
+			li:nth-child(1) {
+				margin-right: -18px;
+			}
+			li:nth-child(2) {
+				margin-left: -18px;
+			}
+		}
+	}
+	.m-body-iptab {
+		@extend .hor-center;
+		margin-top: 15px;
+		.wrap {
+			width: 50%;
+		}
+	}
+	.m-body-hotels {
+		@extend .hor-center;
+		margin-top: -2px;
+		.wrap {
+			width: 50%;
+			background-color: #f3eedb;
+			.list {
+				padding: 6px;
+				.title {
+					position: relative;
+					height: 70px;
+					line-height: 70px;
+					a {
+						position: absolute;
+						right: 0;
+						top: 12px;
+						text-decoration: none;
+						font-size: 12px;
+						color: #ed5172;
+					}
+					h1 {
+						display: inline-block;
+						margin-left: 10px;
+						font-size: 35px;
+						font-weight: bold;
+						color: #ed5172;
+						.point {
+							display: inline-block;
+							width: 35px;
+							height: 35px;
+							margin-bottom: -5px;
+							border-radius: 50px;
+							background: #cf345a;
+						}
+						.split {
+							margin: 0 12px 0 6px;
+							font-weight: 100;
+						}
+						.subhead {
+							font-size: 18px;
+						}
+					}
+				}
+			}
+			.hotel-banner {
+				@extend .img-border;
+				margin-top: 12px;
+				margin-bottom: 3px;
+				img {
+					height: 200px;
+				}
+			}
+			.hotel-list {
+				overflow: hidden;
+				li {
+					position: relative;
+					width: 49.5%;
+					margin: 3px 0;
+					@extend .img-border;
+					box-sizing: border-box;
+					list-style-type: none;
+					cursor: pointer;
+					.mask {
+						position: absolute;
+						left: 6px;
+    					bottom: 8px;
+						width: 64%;
+						height: 35%;
+						opacity: .4;
+						background-color: #000;
+					}
+					.btn {
+							@extend .hor-center;
+							align-items: center;
+							position: absolute;
+							right: 6px;
+							bottom: 8px;
+							width: 33%;
+							height: 35%;
+							background: #ed5172;
+							color: #fff;
+						}
+				}
+				li:nth-child(odd) {
+					float: left;
+				}
+				li:nth-child(even) {
+					float: right;
+				}
+			}
+		}
+	}
+	.m-body-redpacket {
+		padding-top: 15px;
+		@extend .hor-center;
+		.wrap {
+			width: 50%;
+		}
+	}
+	.m-body-weibo {
+		padding-top: 20px;
+		@extend .hor-center;
+		.wrap {
+			width: 50%;
+			h3 {
+				text-align: center;
+				font-size: 20px;
+				font-weight: bold;
+				color: #fff;
+				span {
+					vertical-align: sub;
+					font-size: 35px;
+					color: #ed5172;
+				}
+			}
+			textarea {
+				width: 80%;
+				height: 150px;
+			}
+			.textarea-wrap {
+				margin: 10px 0 60px 0;
+				@extend .hor-center;
+			}
+		}
+	}
+	.m-body-aside {
+		img {
+			position: absolute;
+		    right: 170px;
+		    top: 830px;
+		    width: 150px;
+		    height: 400px;
+		}
+		a {
+			position: absolute;
+		    right: 197px;
+		    top: 1200px;
+		    width: 97px;
+		    height: 30px;
+		    cursor: pointer;
+		}
+	}
+}

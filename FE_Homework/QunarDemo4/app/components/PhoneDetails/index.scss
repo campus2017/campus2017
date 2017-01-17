@@ -1,0 +1,76 @@
+@charset "utf-8";
+.m-phone-details {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 60%;
+	height: 500px;
+	background: #f9f7f5;
+	color: #999;
+	ul {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 45%;
+		background: #fff;
+		.list {
+			display: inline-block;
+			margin: 25px 40px;
+			list-style-type: none;
+		}
+	}
+	div {
+		display: inline-block;
+	}
+	.download {
+		position: relative;
+		top: -50px;
+		width: 60%;
+		p {
+			text-align: center;
+		}
+		a {
+			display: inline-block;
+			width: 157px;
+			height: 50px;
+		}
+		.download-btns {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			.free_download {
+				background: url(../../lib/images/free_download.png) no-repeat;
+				margin-right: 10px;
+			}
+			.download-pc {
+				background: url(../../lib/images/download_pc.png) no-repeat;
+			}
+		}
+	}
+	.qr-code {
+		position: relative;
+		top: 45px;
+		img {
+			width: 80%;
+			height: 80%;
+		}
+		p {
+			font-size: 12px;
+		}
+	}
+	.close {
+		position: absolute;
+		top: -15px;
+		right: -13px;
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+		background: url(../../lib/images/close.png) no-repeat;
+		cursor: pointer;
+		&:hover {
+			cursor: pointer;
+			background: url(../../lib/images/close_hover.png) no-repeat;
+		}
+	}
+}

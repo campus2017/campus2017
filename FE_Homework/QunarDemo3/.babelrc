@@ -1,0 +1,4 @@
+//告诉babel，编译JS时候要用这两个presets编译
+{
+	"presets": ["es2015", "react"]
+}

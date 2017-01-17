@@ -1,0 +1,65 @@
+@charset "utf-8";
+.date-list {
+	display: flex;
+	height: 100px;
+	ul {
+		display: flex;
+		flex: 7;
+	}
+	a {
+		flex: .5;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-bottom: solid 1px #268fc5;
+	}
+	.btn-back {
+		border-right: solid 1px #7dbcdc;
+		span {
+			width: 20px;
+			height: 35px;
+			background: url(../../lib/images/icons.png) 0 0 no-repeat;
+		}
+	}
+	.btn-go {
+		span {
+			width: 20px;
+			height: 35px;
+			background: url(../../lib/images/icons.png) -22px 0 no-repeat;
+		}
+	}
+	.calendar {
+		flex: 1;
+		display: inline-block;
+		position: relative;
+		overflow: hidden;
+		color: #fff;
+		background: #67cae0;
+		span {
+			display: block;
+			margin: 5px;
+			width: 37px;
+			height: 37px;
+			background: url(../../lib/images/icons.png) -71px 0 no-repeat;
+		}
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: -11px;
+			left: -11px;
+			width: 60px;
+			height: 60px;
+			border: 5px solid #b3e5f0;
+			border-radius: 50%;
+		}
+		&:after {
+			content: '价格日历';
+			display: inline-block;
+			position: absolute;
+			right: 5px;
+			bottom: 7px;
+			font-size: 13px;
+		}
+	}
+}

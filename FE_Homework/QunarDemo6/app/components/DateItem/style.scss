@@ -1,0 +1,50 @@
+@charset "utf-8";
+.date-item {
+	position: relative;
+	display: inline-block;
+	flex: 1;
+	height: 100%;
+	padding-top: 10px;
+	box-sizing: border-box;
+	border-right: solid 1px #7dbcdc;
+	border-bottom: solid 1px #268fc5;
+	background: #f3fbfd;
+	cursor: pointer;
+	list-style-type: none;
+	span {
+		display: block;
+		width: 100%;
+		height: 20px;
+		line-height: 20px;
+		text-align: center;
+		font-size: 13px;
+	}
+	.price {
+		height: 40px;
+		line-height: 40px;
+		font-size: 16px;
+		color : #0e83bf;
+	}
+	.low {
+		display: block;
+		position: absolute;
+		top: 1px;
+		left: 1px;
+		width: 20px;
+		height: 20px;
+		line-height: 20px;
+		color: #fff;
+		background: #f84980;
+	}	
+	.hide {
+		display: none;
+	}
+}
+
+.selected-date {
+	background: #fff;
+	color: #0e83bf;
+	border-top: solid 1px #51a5d1;
+	border-right: solid 1px #268fc5;
+	border-bottom: solid 1px #fff;
+}

@@ -1,0 +1,374 @@
+@charset "utf-8";
+$border-style: 1px solid #979797;
+.hidden {
+	display: none;
+}
+@mixin font-center($lineHeight) {
+	text-align: center;
+	line-height: $lineHeight;
+}
+@mixin tickets-color($bgColor, $color) {
+	background: $bgColor;
+	color: $color;
+}
+//用来定义每栏左侧信息
+.info-wrap {
+	display: inline-block;
+	width: 70%;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    margin: .5rem;
+}
+//用来定义每栏右侧按钮的居中
+.right-btn-center {
+	display: inline-block;
+	float: right;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translateY(-50%);
+	color: #25a4bb;
+	b {
+		color: #979797;
+	}
+}
+
+
+#header {
+	height: 60px;
+	background: #25a4bb;
+	border-bottom: 1px solid #1b7a8b;
+	color: #fff;
+	.m-header-warp {
+		&:before {
+			content: '<';
+			position: absolute;
+			top: .8rem;
+			left: 1rem;
+			font-size: 2rem;
+			font-weight: blod;
+			color: #fff;
+		}
+		.title {
+			@include font-center(60px);
+			font-size: 1.5rem;
+		}
+		.link {
+			position: absolute;
+			top: 0;
+			right: 0;
+			text-decoration: none;
+			color: #fff;
+			span {
+				display: block;
+			}
+			.icon {
+				width: 50px;
+    			height: 37px;
+    			background: url(../../../image/camel_03.png) 0 6px no-repeat;
+    			background-size: 100% 105%;
+			}
+			.index {
+				font-size: .8rem;
+				text-align: center;
+				margin-top: .3rem;
+			}
+
+		}
+	}
+}
+
+#body {
+	.m-body-warp {
+		.introduce {
+			.photos {
+				height: 10rem;
+				overflow: hidden;
+				position: relative;
+				.photo-count {
+					position: absolute;
+					right: 0;
+					bottom: 0;
+					height: 1.7rem;
+					width: 3.2rem;
+					@include font-center(1.7rem);
+					background: rgba(0, 0, 0, .6);
+					color: #fff;
+				}
+			}
+			ul {
+				background: #fff;
+				li {
+					position: relative;
+					margin: .5rem;
+					border-bottom: 1px dotted #ccc;
+					.info-wrap {
+    					@extend .info-wrap;
+						span {
+							white-space: nowrap;
+						}
+						.area {
+							display: inline-block;
+    						margin-top: .5rem;
+							color: #979797;
+						}
+					}
+					.score {
+						font-size: 1.2rem;
+						color: #25a4bb;
+					}
+					.go-comment,
+					.go-location,
+					.go-installation {
+						@extend .right-btn-center;
+					}
+					.go-installation {
+						margin-right: .5rem;
+					}
+				}
+				.installation {
+					.icons {
+						li {
+							display: inline-block;
+							border-bottom-width: 0;
+							width: 1.5rem;
+							height: 1.5rem;
+							margin: 0;
+						}
+						li:nth-child(1) {
+							background: url(../../../image/service_icons.png) 0 6px no-repeat;
+						}
+						li:nth-child(2) {
+							background: url(../../../image/service_icons.png) -22px 7px no-repeat;
+						}
+						li:nth-child(3) {
+							background: url(../../../image/service_icons.png) -43px 6px no-repeat;
+						}
+						li:nth-child(4) {
+							background: url(../../../image/service_icons.png) -65px 6px no-repeat;
+						}
+						li:nth-child(5) {
+							background: url(../../../image/service_icons.png) -89px 6px no-repeat;
+						}
+					}
+					border-bottom: $border-style;
+					margin: .5rem 0;
+    				padding: 0 .5rem;
+				}
+			}
+		}
+		.price-parity,
+		.price-type {
+			.select-date {
+				position: relative;
+				border-top: $border-style;
+				border-bottom: $border-style;
+				background: #fff;
+				.info-wrap {
+    	     		@extend .info-wrap;
+				}
+				.days {
+					@extend .right-btn-center;
+					margin-right: .5rem;
+				}
+				.icondate {
+					display: inline-block;
+					width: 25px;
+					height: 25px;
+					background: url(../../../image/service_icons.png) -130px 7px no-repeat;
+				}
+			}
+			ul {
+				li {
+					position: relative;
+					border-bottom: $border-style;
+					padding: .5rem 0;
+					.left-info {
+						@extend .info-wrap;
+						margin-left: 1rem;
+						.tag-right {
+							@include tickets-color(#f60, #fff);
+						}
+						.feature-info {
+							color: #979797;
+						}
+						.tag-bottom {
+							.group-buying {
+								@include tickets-color(#25a4bb, #fff);
+							}
+							.midnight-snack {
+								@include tickets-color(#25a4bb, #fff);
+							}
+							.rebate-ticket {
+								@include tickets-color(#f00, #fff);
+							}
+							.reliably,
+							.confirm-speed {
+								@include tickets-color(#fff, #ff9036);
+								border:1px solid #ff9036;
+								b {
+									@include tickets-color(#ff9036, #fff);
+								}
+							}
+						}
+						span {
+							height: 1.5rem;
+							line-height: 1.5rem;
+						}
+					}
+					.right-info {
+						@extend .right-btn-center;
+						margin-right: 1rem;
+						div {
+							float: right;
+						}
+						.cost-wrap {
+							margin: .5rem .5rem 0 0;
+							.price {
+								color: #8c8c8c;
+								span {
+									color: #f60;
+								}
+								b {
+									font-size: 1.3rem;
+									color: #f60;
+								}
+							}
+							.prime-cost {
+								color: #8c8c8c;
+							}
+						}
+						.parity-btn {
+							width: 3.7rem;
+    						height: 2rem;
+							@include tickets-color(#1ba9ba, #fff);
+							border-radius: 25%;
+							@include font-center(2rem);
+						}
+						.pay-way-wrap {
+							width: 3.5rem;
+							height: 3.5rem;
+							background: #ff9036;
+							border: 1px solid #ff9036;
+							border-radius: 25%;
+							overflow: hidden;
+							span {
+								display: block;
+							}
+							.earnest {
+								@include tickets-color(#ff9036, #fff);
+								font-size: 1.5rem;
+								height: 55%;
+								@include font-center(2rem);
+							}
+							.pay {
+								@include tickets-color(#fff, #ff9036);
+								height: 45%;
+								@include font-center(1.5rem);
+							}
+						}
+					}
+					.like {
+							position: absolute;
+							top: 0;
+							left: 0;
+						 	width: 0;
+    						height: 0;
+    						border-top: 1rem solid #f60;
+    						border-right: 1rem solid transparent;
+					}
+				}
+				li:nth-child(1) {
+					background: #fff;
+				}
+			}
+			.more {
+				height: 3rem;
+				@include tickets-color(#f3f3f3, #25a4bb);
+				@include font-center(3rem);
+				border-bottom: $border-style;
+			}
+		}
+		.price-type {
+			background: #fff;
+		}
+		.other-info {
+			margin-top: 1.5rem;
+			background: #fff;
+			ul {
+				li {
+					padding: 0 1rem;
+					height: 3rem;
+					border-top: $border-style;
+					line-height: 3rem;
+					.count {
+						color: #4dc4ec;
+					}
+					.btn {
+						float: right;
+						font-size: 1.2rem;
+						font-weight: bold;
+						color: #979797;
+					}
+				}
+			}
+			.msg {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border-top: $border-style;
+				border-bottom: $border-style;
+				@include tickets-color(#f3f3f3, #999);
+				padding: .5rem 0;
+				.wrap {
+					width: 90%;
+					height: 100%;
+					line-height: 1.5rem;
+				}
+			}
+		}
+	}
+}
+
+#footer {
+	color: #9e9e9e;
+	nav {
+		padding: .8rem;
+		display: flex;
+		li {
+			display: inline-block;
+			flex: 1;
+			text-align: center;
+			line-height: 2rem;
+			a {
+				vertical-align: 0.3rem;
+				color: #9e9e9e;
+			}
+			.curpage {
+				text-decoration: none;
+			}
+			.icon {
+				display: inline-block;
+				width: 1.5rem;
+				height: 1.5rem;
+			}
+			.passenger-ticket {
+				background: url(../../../image/nav_icon.png) -57px 0 no-repeat;
+			}
+			.hotel {
+				background: url(../../../image/nav_icon.png) -29px 0 no-repeat;
+			}
+			.apartment {
+				background: url(../../../image/nav_icon.png) 0 0 no-repeat;
+			}
+			.more {
+				border-left: $border-style;
+				padding-left: .5rem;
+			}
+		}
+	}
+	.copyright {
+		height: 3rem;
+		@include font-center(3rem);
+	}
+}

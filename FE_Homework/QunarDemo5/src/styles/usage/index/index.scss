@@ -1,0 +1,47 @@
+@charset "utf-8";
+body, ul, li, p, h3 {
+	margin: 0;
+	padding: 0;
+}
+ul, ol {
+	list-style: none;
+}
+
+.size {
+	width: 170px;
+	height: 500px;
+}
+
+.wrapper {
+	width: 960px;
+	height: 500px;
+	border: 1px solid #d3d3d3;
+	margin: 0 auto;
+	ul *{
+		transition: all linear 0.1s;
+	}
+	li {
+		@extend .size;
+		float: left;
+		overflow: hidden;
+		a {
+			position: relative;
+			display: block;
+			@extend .size;
+			overflow: hidden;
+			text-decoration: none;
+			.line {
+				position: absolute;
+				right: 0;
+				top: 0;
+				width: 0;
+				height: 500px;
+				border: 1px solid #d3d3d3;
+			}
+		}
+	}
+	li.big,
+	li.big a {
+		width: 450px;
+	}
+}
