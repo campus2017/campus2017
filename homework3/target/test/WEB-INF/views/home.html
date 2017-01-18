@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>首页分页</title>
+<style>
+    td{
+        text-align :center;
+    }
+</style>
+</head>
+<body>
+<div id = 'conditions'>
+    <button>全部</button><button>成功</button><button>失败</button>
+    选择日期<input type = 'text' id = "beginTime">至<input type="text" id = "endTime"><button id = "search">搜索</button><input type = reset value = '重置'>
+</div>
+<table id= 'dataTable'></table>
+<div id = 'ajaxPage'></div>
+</body>
+<script>
+    var EventUtil = {
+        addHandler : function(element,type,handler){
+            if(element.addEventListener){
+                element.addEventListener(type,handler,false);
+            }else if(element.attachEvent){
+                element.attachEvent('on' + type,handler);
+            }else{
+                element['on' + type] = handler;
+            }
+        },
+        removeHandler: function(element,type,handler){
+            if(element.removeEventListener){
+                element.removeEventListener(type,handler,false);
+            }else if(element.detachevent){
+                element.detachevent('on' + type,handler);
+            }else{
+                element['on' + type] = null;
+            }
+        },
+        getEvent: function(event){
+            return event ? event : window.event;
+        },
+        getTarget: function(event){
+            return event.target || event.srcElement;
+        },
+        preventDefault: function(event){
+            if(event.preventDefault){
+                event.preventDefault();
+            } else{
+                event.returnValue = false;
+            }
+        },
+        stopPropagation: function(event){
+            if(event.stopPropagation){
+                event.stopPropagation();
+            }else{
+                event.cancelBubble = true;
+            }
+        }
+    };
+</script>
+<script>
+    function AjaxPager(options){
+        var defaultOptions = {
+            renderTo : "",
+            params:{},
+            url:"",
+            currentPage:1,
+            pageSize:10,
+            start:0,
+            end:5,
+            pageCount:1,
+            callBackMethod:function(){
+                alert('hello');
+            }
+
+        }
+        this.defaultOptions = defaultOptions;
+        if(typeof options != "undefined"){
+            for( var option in options){
+                this.defaultOptions[option] = options[option];
+            }
+        }
+        var that = this;
+        getAjaxPagerThis = function(){
+            return that;
+        }
+        this.init();
+        this.bindEvent();
+    }
+    AjaxPager.prototype.init = function () {
+        if(typeof this.defaultOptions.renderTo != "undefined" && this.defaultOptions.renderTo.trim() != ""){
+            var renderDiv = document.getElementById(this.defaultOptions.renderTo.trim());
+
+            var tempHtml = '';
+            tempHtml +="<a href='javascript:void(0)' id='totalCount'>共0条记录</a>";
+            tempHtml +="<a href='javascript:void(0)' id='topPage'>首页</a>";
+            tempHtml +="<a href='javascript:void(0)' id='endPage'>末页</a>";
+            tempHtml +="<span>跳转到</span>";
+            tempHtml +="<input type='text' size='2' id='pageIndex'>";
+            tempHtml +="<span>页</span>";
+            tempHtml +="<span id='pageSpan'>(0/0)</span>";
+            tempHtml +="<input id='go' type='button'  value='GO'>";
+
+            renderDiv.innerHTML = tempHtml;
+
+        }
+
+    }
+    AjaxPager.prototype.goPage = function(pageIndex){
+
+        if(typeof pageIndex == "undefined" || pageIndex == ""||pageIndex == null)
+            return;
+        if(isNaN(pageIndex)||pageIndex<1){
+            alert('页码不合法');
+        }
+        if(pageIndex>=this.defaultOptions.pageCount)
+            pageIndex = this.defaultOptions.pageCount;
+        this.defaultOptions.start = (pageIndex -1)*this.defaultOptions.pageSize;
+        this.defaultOptions.currentPage = pageIndex;
+        this.loadData(this);
+
+    };
+    AjaxPager.prototype.topPage = function(){
+        getAjaxPagerThis().defaultOptions.currentPage = 1;
+        getAjaxPagerThis().goPage(1);
+    };
+    AjaxPager.prototype.endPage = function(){
+        getAjaxPagerThis().defaultOptions.currentPage = getAjaxPagerThis().defaultOptions.pageCount;
+        getAjaxPagerThis().goPage(getAjaxPagerThis().defaultOptions.pageCount);
+    };
+    AjaxPager.prototype.jumpPage = function(){
+        var pageIndex = document.getElementById('pageIndex').value.trim();
+        getAjaxPagerThis().goPage(pageIndex);
+    };
+    AjaxPager.prototype.upDatePageArea = function(totalCount){
+        if(typeof(totalCount)!='undefined' ) {
+            if (parseInt(totalCount % this.defaultOptions.pageSize) == 0) {
+                this.defaultOptions.pageCount = parseInt(totalCount / this.defaultOptions.pageSize);
+            } else {
+                this.defaultOptions.pageCount = parseInt(totalCount / this.defaultOptions.pageSize) + 1;
+            }
+            var tempHtml = "";
+            if (this.defaultOptions.pageCount == 0) {
+                tempHtml = "(" + 0 + "/" + this.defaultOptions.pageCount + ")";
+            } else {
+                tempHtml = "(" + this.defaultOptions.currentPage + "/" + this.defaultOptions.pageCount + ")";
+            }
+            var pageSpan = document.getElementById("pageSpan");
+            pageSpan.innerHTML = tempHtml;
+            var pageIndex = document.getElementById("pageIndex");
+            pageIndex.value = this.defaultOptions.currentPage;
+            var totalCountDiv = document.getElementById("totalCount");
+            if (totalCount == 0)
+                totalCountDiv.innerHTML = "共0条数据";
+            else {
+                totalCountDiv.innerHTML = "共" + totalCount + "条记录";
+            }
+        }
+        else{
+            alert('记录总数不存在');
+            return ;
+        }
+
+    };
+    AjaxPager.prototype.loadData = function(){
+        var start = this.defaultOptions.start;
+        var end = this.defaultOptions.end;
+        var returnJson = null;
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function(){
+            if(xhr.readyState == 4){
+                if((xhr.status >= 200 && xhr.status < 300) || xhr.status == 304 ){
+                    returnJson = JSON.parse(xhr.responseText);
+                    getAjaxPagerThis().defaultOptions.callBackMethod(returnJson);
+                }else{
+                    alert("unsuccess" + xhr.status);
+                }
+            }
+        };
+
+        var postRequest = "start=" + start + "&end=" + end;
+        if(this.defaultOptions.params != null){
+            for(param in this.defaultOptions.params){
+                postRequest += "&" + param + "=" + this.defaultOptions.params[param];
+            }
+        }
+        xhr.open('post', 'http://localhost:8080/spittles', true);
+        xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+        xhr.send(postRequest);
+
+    };
+    AjaxPager.prototype.bindEvent = function(){
+        var topPage = document.getElementById('topPage');
+        var endPage = document.getElementById('endPage');
+        var go = document.getElementById('go')
+        EventUtil.addHandler(topPage,'click',this.topPage);
+        EventUtil.addHandler(endPage,'click',this.endPage);
+        EventUtil.addHandler(go,'click',this.jumpPage);
+
+    }
+</script>
+<script>
+    var pager;
+
+    function buildInfo(data){
+        //数组为空，表示没有查询到数据
+        var table  = document.getElementById('dataTable');
+        if(data.length==0){
+            var empty_data_info = "<tr><td colspan='5' style='color:red'>查询无数据</td></tr>";
+            table.innerHTML = empty_data_info;
+        }
+        else{
+            var tempHtml = "<tr><td>时间</td><td>商品名称</td><td>数量</td><td>E币</td><td>状态</td><td>信息</td>";
+            inforList = data['listInfo'];
+            for(var i=0,len = inforList.length;i<len;i++){
+                tempHtml += "<tr><td>" + inforList[i].time + "</td>";
+                tempHtml += "<td>" + inforList[i].name +"</td>";
+                tempHtml += "<td>" + inforList[i].number + "</td>";
+                tempHtml += "<td>" + inforList[i].egold + "</td>";
+                tempHtml += "<td>" + inforList[i].status + "</td>";
+                tempHtml += "<td>" + inforList[i].message + "</td>";
+                tempHtml += "</tr>";
+            }
+            table.innerHTML = tempHtml;
+            pager.upDatePageArea(data["totalCount"]);
+        }
+    }
+
+    function pageFirstRun() {
+        pager = new AjaxPager({
+            renderTo: 'ajaxPage',
+            url: "http://localhost:8080/spittles",
+            params: {
+                'beginTime': document.getElementById('beginTime').value,
+                'endTime': document.getElementById('endTime').value
+            },
+            callBackMethod: buildInfo
+        });
+        pager.topPage();
+
+    };
+    window.onload = pageFirstRun();
+    EventUtil.addHandler(document.getElementById('search'),'click',pageFirstRun);
+</script>
+</html>
