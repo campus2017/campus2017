@@ -50,11 +50,13 @@ public abstract class CharacterStream {
             }
         }
         Map<String,Integer> temp = Maps.newHashMap();
-        char[] charBuffer = datas.toCharArray();
-        for(char ch:charBuffer){
-            String key = String.valueOf(ch);
-            if(!key.trim().equals("")) {
-                temp.put(key, Optional.fromNullable(temp.get(key)).or(0) + 1);
+        if(datas != null) {
+            char[] charBuffer = datas.toCharArray();
+            for (char ch : charBuffer) {
+                String key = String.valueOf(ch);
+                if (!key.trim().equals("")) {
+                    temp.put(key, Optional.fromNullable(temp.get(key)).or(0) + 1);
+                }
             }
         }
         return temp;

@@ -18,9 +18,9 @@ public class CharacterStreams {
     public static CharacterStream pdf(InputStream in){
         return null;
     }
-    public static CharacterStream doc(InputStream in) {return null;}
+    public static CharacterStream doc(InputStream in) {return  new TextCharacterStream(in);}
     public static CharacterStream text(InputStream in){
-        return new TextCharacterStream(in);
+        return new PdfCharacterStream(in);
     }
     public static CharacterStream commons(InputStream in){
         return new TextCharacterStream(in);
