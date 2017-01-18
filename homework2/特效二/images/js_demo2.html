@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<head>
+    <style type="text/css">
+	    body { margin : 0;}
+	    .banner {
+		    position: relative;
+		    width: 955px;
+			height: 475px;
+			margin:0 auto;
+			overflow: hidden;
+		}
+		.banner img {
+		    display: block;
+            float:left;
+			width: 475px;
+			height: 475px;
+			margin-left: -315px;
+		}
+		#img-box { width: 1900px;}
+        #img1 { margin-left: 0;}
+        .active { margin-right: 315px;}
+	</style>
+</head>
+<body>
+    <div class="banner">
+	    <div id="img-box">
+	    <img id="img1" src="door1.png"/>
+		<img id="img2" class="active" src="door2.png"/>
+		<img id="img3" src="door3.png"/>
+		<img id="img4" src="door4.png"/>
+		</div>
+	</div>
+	<script>
+	window.onload = function(){
+	    var imgBox = document.getElementById("img-box");
+		var img = imgBox.children;
+		var imgNum = img.length;
+	    for (var i=0; i<imgNum; i++){
+		    (function(i){
+			    img[i].onmouseover = function(){
+				    if (this.className == "active") return;
+					if (window.interval) {
+					    for (var t=0; t<imgNum; t++){
+						    img[t].style.marginRight = "";
+						}
+						clearInterval(window.interval);
+					}
+					for (var j=0; j<imgNum; j++){
+					    if (img[j].className == "active"){
+						    img[j].style.marginRight = "315px";
+						    window.interval = setInterval(function(){
+								if(img[i].style.marginRight == "315px"){
+				                    clearInterval(interval);
+									img[j].className = "";
+							        img[i].className = "active";
+									img[i].style.marginRight = "";
+									img[j].style.marginRight = "";
+				                    return;
+			                    }
+								img[i].style.marginRight = img[i].style.marginRight.substring(0,img[i].style.marginRight.indexOf("px")) - (-5) + 'px';
+								img[j].style.marginRight = img[j].style.marginRight.substring(0,img[j].style.marginRight.indexOf("px")) - 5 + 'px';
+							},1);
+							break;
+						}
+					}
+				}
+			})(i)
+		} 
+	};
+	</script>
+</body>

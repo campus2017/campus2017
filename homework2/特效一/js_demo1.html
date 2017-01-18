@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<head>
+    <style type="text/css">
+	    body { margin : 0;}
+        .main {
+		    width:100%;
+		}
+		.main-box {
+		    display: block;
+			margin: 0 auto;
+		}
+		#modal {
+		    display: none;
+			position: fixed;
+			left: 0;
+			top: 0;
+			z-index: 1110;
+			width: 100%;
+			height: 100%;
+			background: #000;
+			opacity: 0.5;
+		}
+		#modal-dialog {
+		    display: none;
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			margin: -273px 0 0 -400px;
+            width:	800px;
+            height: 546px;			
+		    opacity: 1;
+			z-index: 1111;
+			background-color: White; 
+		}
+		.close-button {
+		    display: block;
+			position: absolute;
+			top: -10px;
+			right: -10px;
+			width: 32px;
+			height: 32px;
+			background: url('images/close.png');
+		}
+	</style>
+</head>
+<body>
+    <div class="main">
+	    <img class="main-box" src="images/m_taobao.png" onclick="openModal()"/>
+		<div id="modal">
+		</div>
+		<div id="modal-dialog">
+			<img src="images/layer.png"/>
+			<a class="close-button" onclick="closeModal()"></a>
+        </div>
+	</div>
+	<script>
+	function openModal() {
+	    document.getElementById('modal').style.display = "block";
+		document.getElementById('modal-dialog').style.display = "block";
+	}
+	function closeModal() {
+	    document.getElementById('modal').style.display = "none";
+		document.getElementById('modal-dialog').style.display = "none";
+	}
+	</script>
+</body>
