@@ -1,0 +1,399 @@
+﻿body { width: 100%;}
+.clearfix { clear: both;}
+/*头部*/
+.hotel-head {
+	position: relative;
+	height: 20px;
+	padding: 10px;
+	border-bottom: solid 1px #1b7a8b;
+	background: #25a4bb;
+	color: #fff;
+}
+.back {
+	display: block;
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	margin-left:10px;
+}
+.back:before {
+	display: block;
+	position: absolute;
+	top: 4px;
+	height: 8px; 	
+	width: 8px;  
+	border: 4px solid #fff;
+    content: '';	
+	border-right-width: 0; 
+	border-bottom-width: 0; 
+	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg); 
+}
+.hotel-name {
+	display: block;
+    width: 100%;
+	height: 20px;	
+	line-height: 20px;
+	text-align: center;
+	font: bold 16px '宋体';
+}
+.index-link {
+	display: block;
+	position: absolute;
+	top: 14px;
+	right: 30px;
+	color: #fff;
+	font-size: 12px;
+}
+
+/*主要内容*/
+.hotel-main {
+	line-height: 1.6;
+	color: #000;
+	font: 14px Arial,'宋体';
+}
+.banner {
+	position: relative;
+	height: 110px;
+	background: url('../image/hotel.jpg');
+}
+.img-num {
+	display: block;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 40px;
+	height: 20px;
+	background: #000;
+	filter:alpha(opacity=60);
+	-moz-opacity:0.6;
+	-khtml-opacity: 0.6;
+	opacity: 0.6;
+	color: #fff;
+	line-height: 20px;
+	font-size: 8px;
+	text-align:center;
+}
+.hotel-info-box>div {
+	position: relative;
+	padding: 10px;
+	border-bottom: dotted 1px #ccc;
+}
+.hotel-info-box b {
+	color: #25a4bb;
+	font-size: 16px;
+	font-weight:400;
+}
+.hotel-info-box a {
+	display: block;
+	position: absolute;
+	top: 50%;
+	right: 0;
+    width: 80px;
+	height: 20px;
+	margin-top: -10px;
+	padding-right: 26px;
+	color: #25a4bb;
+	text-align: right;
+}
+.hotel-info-box a:after,
+.date .duration:after,
+.hotel-link-box .nearby-hotel:after,
+.hotel-link-box .low-proce-hotel:after {
+	display: block;
+	position: absolute;
+	top: 3px; 
+	right: 7px;
+	content: ''; 
+	height: 7px; 
+	width: 7px; 
+	border: 3px solid #979797; 
+	border-left-width: 0; 
+	border-top-width: 0; 
+	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg); 	 
+}
+.hotel-info-box .address { padding: 6px 10px;}
+.address-text p{ 
+	width: 75%;
+	height: 20px;
+	overflow:hidden;
+	line-height: 20px;
+	white-space:nowrap;
+    text-overflow: ellipsis	;
+}
+.address-text .region {
+	color: #b2b2b2;
+	height: 18px;
+	line-height: 18px;
+	font-size: 12px;
+}
+.hotel-info {
+	height: 40px;
+}
+.hotel-info p {
+	display: block;
+	float: left;
+}
+.tel { margin-left: 16px;}
+.facilities {
+	display: block;
+	float: left;
+	height: 20px;
+}
+.facilities>span {
+	margin: 8px 2px 0 0;
+	color: #25a4bb;
+	font-size: 16px;
+}
+.comparative-price-box {
+	margin: 10px auto;
+	border-top: solid 1px #ccc;
+}
+.hotel-link-box {
+	margin-bottom: 20px;
+	border-top: solid 1px #ccc;
+}
+.date,
+.accordion-title,
+.price-item,
+.more-price,
+.nearby-hotel,
+.low-proce-hotel,
+.remarks {
+    display: -webkit-flex;
+    display: flex;
+    position: relative;
+    overflow:hidden;
+	padding: 8px 10px;
+	border-bottom: solid 1px #ccc;
+	align-items: center;
+}
+.date {
+	display: block;
+	position: relative;
+	height: 26px;
+	line-height: 26px;
+}
+.date .calendar-icon {
+	margin-right: 4px;
+	color: #29b4c4;
+	font-size: 16px;
+}
+.date .leave-date { margin-left: 10px;}
+.date .duration {
+	position: absolute;
+	right: 0;
+	height: 20px;
+	padding-right: 26px;
+	color: #25a4bb;
+	text-align: right;
+}
+.date .duration:after { top: 8px;}
+.comparative-price-box .hotel-type {
+	height: 20px;
+	line-height: 20px;
+}
+.comparative-price-box .tip {
+    height: 20px;
+	line-height: 20px;
+	color: #b2b2b2;
+	font-size: 12px;
+}
+.comparative-price-box .tip sup {
+	line-height: 8px;
+	font-size: 8px;
+}
+.due-button {
+	display: block;
+	position: absolute;
+	top: 50%;
+	right: 5px;
+	width: 40px;
+	height: 40px;
+	margin-top: -20px;
+	border: solid 1px #ff9036;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+.due-button:before {
+	display: block;
+	width: 100%;
+	height: 50%;	
+	content: '订';
+	background: #ff9036;
+	line-height: 18px;
+	color: #fff;
+	text-align: center;
+	font-weight: bold;
+}
+.due-button:after {
+	display: block;
+	width: 100%;
+	height: 50%;
+	color: #ff9036;
+	line-height: 18px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 12px
+}
+.offline-pay:after { content: '到店付';}
+.online-pay:after { content: '在线付';}
+.accordion-item .price {
+	position: relative;
+    flex-grow: 1;
+    padding-right: 60px;
+    text-align: right;
+}
+.accordion-item .price>p {
+    color: #ff9036;
+	font-family: Arial;
+}
+.accordion-item .price b {
+	font-size: 18px;
+}
+.accordion-item .price i {
+	color: #979797;
+	font-style: normal;
+	font-size: 12px;
+}
+.accordion-item .accordion-button {
+    display: block;
+	position: absolute;
+	top: 50%;
+	right: 4px;
+	width: 40px;
+	height: 12px;
+	margin-top: -10px;
+    padding: 4px;
+    -moz-border-radius: 4px;
+	border-radius: 4px;
+    background: #1ba9ba;
+    color: #fff;
+    line-height: 12px;
+    font-size: 12px;
+}
+.accordion-button.open>span,
+.accordion-button.close>span {
+	display: block;
+	position: absolute;
+	top: 5px;
+	right: 4px;
+	height: 9px;
+	width: 15px;
+	background: url('../image/button-open.png') no-repeat;
+}
+.accordion-button.close>span {background: url('../image/button-close.png') no-repeat;}
+.hotel-type .warning { margin-left: 4px;}
+.accordion-item .event-box { margin-top: 4px;} 
+.accordion-item .introduction {
+    width: 55%;
+}
+.accordion-item  .normal,
+.accordion-item  .error,
+.accordion-item .warning {
+	padding: 1px;
+	color: #fff;
+	font-size: 12px;
+}
+.accordion-item  .warning.reverse {
+    border: solid 1px #ff6600;	
+    background: #fff;
+	color: #ff6600;
+}
+.accordion-item  .warning.reverse:before {
+	content: '最';
+    border: none;	
+    background: #ff6600;
+	color: #fff;
+}
+.accordion-item  .normal { background: #25a4bb;}
+.accordion-item  .error { background: #ff0000;}
+.accordion-item .warning { background: #ff6600;}
+.accordion-bd  .more-price {
+	height: 24px;
+	justify-content: center;
+	line-height: 24px;
+	color: #25a4bb;
+	text-align: center;
+}
+.accordion-bd .praise { background: url('../image/praise.png') no-repeat;}
+.hotel-link-box a { color:#000}
+.hotel-link-box i {
+	height: 24px;
+	line-height: 24px;
+	color: #25a4bb;
+	font-style: normal;
+}
+.hotel-link-box .nearby-hotel:after,
+.hotel-link-box .low-proce-hotel:after  {
+	top: 14px;
+}
+.hotel-link-box .remarks { 
+    color: #aaa;
+	font-size : 12px;
+}
+.more-link { padding: 10px;}
+.more-link a {
+    display: block;
+	position: relative;
+    float: left;
+	width: 56px;
+    height: 22px;
+    margin-right: 20px;	
+    color: #aaa;
+	line-height: 22px;
+	text-align: right;
+}
+.more-link span { 
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 22px;
+	height: 22px;
+}
+.more-link .plane-link>span { background: url('../image/plane.png');}
+.more-link .hotel-link>span { background: url('../image/hotel.png');}
+.more-link .apartment-link>span { background: url('../image/apartment.png');}
+.more-link .more>span {
+    display: block;
+	position: absolute;
+	top: 5px;
+	left: 10px;
+	width: 12px;
+	height: 12px;	
+    background: url('../image/more.png') no-repeat;
+}
+.more-link .more {
+	padding-left: 10px;
+	width: 44px;
+	border-left: solid 1px #aaa;
+}
+/*页脚*/
+.hotel-footer {
+	display: block;
+	position: relative;
+	height: 30px;
+	line-height: 30px;
+	padding-left: 24px;
+	color: #aaa;
+	font-size : 12px;
+}
+.hotel-footer .suggestion {
+	position: absolute;
+	top : 0;
+    right: 0;
+	color: #aaa;
+}
+.hotel-footer-box {
+	position:relative;
+	width:210px;
+	margin: 0 auto;
+}
