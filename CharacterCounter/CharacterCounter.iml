@@ -72,5 +72,10 @@
     <orderEntry type="library" name="Maven: antlr:antlr:2.7.5" level="project" />
     <orderEntry type="library" name="Maven: jargs:jargs:1.0" level="project" />
     <orderEntry type="library" name="Maven: chardet:chardet:1.0" level="project" />
+    <orderEntry type="library" name="Maven: com.itextpdf:itextpdf:5.1.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.pdfbox:pdfbox:1.8.5" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.pdfbox:fontbox:1.8.5" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.pdfbox:jempbox:1.8.5" level="project" />
+    <orderEntry type="library" name="Maven: commons-logging:commons-logging:1.1.1" level="project" />
   </component>
 </module>
