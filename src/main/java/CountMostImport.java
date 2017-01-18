@@ -82,6 +82,8 @@ public class CountMostImport {
                                 classCount.put(line, 1);
                             }
                         }
+                    } else if (line.equals("")) {
+                        continue;
                     } else
                         break;
                 }
