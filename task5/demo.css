@@ -1,0 +1,236 @@
+@charset "utf-8"; 
+body,div,ul,li,table,thead,tbody,tr,td,span { 
+	margin: 0;
+	padding: 0;
+	border: 0;
+	list-style: none;
+	overflow: hidden;
+}
+/* 价格日历 */
+.cal {
+	width: 931px;
+	margin: 20px auto;
+	background-color: #fff;
+	cursor: pointer;
+}
+.cal ul {
+	width: 931px;
+	height:76px;
+}
+.cal li {
+	width:104px;
+	height:72px;
+	padding-top: 2px; 
+	float: left;
+	border-top:1px  solid #ffb400;
+	border-right:1px solid #7dbcdc;
+	border-bottom: 1px solid #268fc5;
+	background-color: #f3fbfd;
+}
+.cal li div {
+	font-family: Microsoft Yahei;
+	font-size: 13px;
+}
+.cal li.bor-no-right {
+	border-right: none;
+}
+.cal li.lower {
+	height:74px;
+	border-bottom: none;
+	border-top: none;
+	background-color: #fff;
+	color:#0e83bf;
+}
+.cal li.arrow-left,
+.cal li.arrow-right {
+	width: 49px;
+	background-color: #fff;
+}
+.cal li.arrow-left {
+	background: url(bgimg/fly.png) 0px 5px;
+}
+.cal li.arrow-right {
+	border-right: none;
+	background: url(bgimg/fly.png) 1060px 5px;
+}
+.cal li.price-cal {
+	width: 97px;
+	height: 76px;
+	border-bottom: none;
+	border-right: none;
+	background: url(bgimg/fly.png) 1008px 0px;
+	position: relative;
+	bottom: 0;
+	font-size: 12px;
+	color: #fff;
+	text-align: right;
+}
+.cal li p {
+	position: absolute;
+	right: 2px;
+	bottom: 2px;
+}
+.cal li span {
+	position: absolute;
+	background-color: #f84980;
+	font-size: 12px;
+	color: #fff;
+}
+.cal li div {
+	margin: 3px;
+	text-align: center;
+}
+.cal li div.price {
+	font-size: 16px;
+	color: #0e83bf;
+}
+/* 航班信息 */
+.fly {
+	width:931px;
+	margin:0 auto;
+} 
+table {
+	  border-collapse:collapse;
+}
+.td1 {
+	width: 188px;
+}
+.td2 {
+	width: 135px;
+	text-align: right;
+}
+.td3 {
+	width: 160px;
+}
+tbody .td3 {
+	color:#666; 
+}
+.td4 {
+	width: 197px;
+    	text-align: left;
+}
+.td5 {
+	width: 125px;
+    	text-align: left;
+}
+.td6 {
+	 text-align: left;
+	 font-family: microsoft YaHei;
+}
+.fly-info {
+	width: 931px;
+	text-align: center;
+}
+.boundary {
+	width: 931px;
+	height: 5px;
+	margin: 0 auto;
+	background: url(bgimg/fly.png) 0 -89px;
+}
+thead {
+	width: 931px;
+	border:none;
+	background-color: #26b4d3 ;
+	color: #fff;
+}
+thead tr {
+	height: 40px;
+	border:none;
+}
+.start-time,
+.fly-start {
+	text-align: right;
+}
+.arrive-time,
+.fly-arrive {
+	text-align: left;
+}
+tbody {
+	 background: #f3fbfd;
+}
+tbody tr {
+	height: 90px;
+}
+tbody tr div {
+	 font-family:Simsun;
+	 font-size: 13px;
+}
+.fly-name .bg {
+	margin-left: -15px;
+	background: url(bgimg/fly.png) 10px 177px;
+}
+.fly-name .wid {
+	margin-left: 35px;
+}
+.fly-name .wid span {
+	font-size: 13px;
+	color:#25b4d2;
+}
+.fly-name .small {
+	margin-left: 15px;
+}
+.fly-through div span {
+	background-color: #2db7d4;
+	color: #fff;
+	text-align: left;
+}
+.up-time,
+.down-time {
+	margin-top: -20px;
+	font-size: 18px;
+	font-weight: bold;
+	font-family: Arial;
+}
+.down-time span {
+	font-family: Simsun;
+    	font-weight: 500;
+    	font-size: 13px;
+    	color:#25B4D2;
+    	margin-left: 5px;
+}
+.stop {
+	margin-left: 4px;
+}
+.transfer span,
+.stop span {
+	margin-right: 4px;
+}
+.up-down {
+	height: 10px;
+	background: url(bgimg/fly.png) no-repeat -321px -165px;
+}
+.up-down-up {
+	height: 10px;
+	background: url(bgimg/fly.png) no-repeat -187px -165px;	
+}
+.up-down-down {
+	height: 10px;
+	background: url(bgimg/fly.png) no-repeat -485px -165px;
+}
+.fly-pek .fly-price,
+.fly-pek .fly-divide{
+	vertical-align: bottom;
+}
+.fly-las .fly-price {
+	vertical-align: top;
+}
+.fly-pek .fly-divide  div span{
+	font-size: 22px;
+	color:#0e83bf;
+}
+.tax {
+	color: #666;
+}
+.price {
+	color: #ff7200;
+	margin-left: 14px;
+}
+.fly-las .fly-divide {
+	background: url(bgimg/fly.png) no-repeat -803px -214px;
+}
+.tax {
+	margin-left: 24px;
+}
+.company {
+	color:#0e83bf;
+}

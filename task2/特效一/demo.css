@@ -1,0 +1,28 @@
+@charset"utf-8";
+body,div,img {
+	margin:0;
+	padding:0;
+	border:0; 
+}
+.container {
+	width: 100%;
+	height: 	965px;
+	margin: 0 auto;
+	z-index: -1;
+}	
+.container img {
+	width: 100%;
+}
+.pop {
+	width: 800px;
+	height: 546px;
+	background: url(images/layer.png) no-repeat;
+	background-size: cover;
+	position: fixed;
+	display: none; 
+}
+.pop img {
+	width: 32px;
+	height: 32px;
+	margin-left: 768px;
+}
