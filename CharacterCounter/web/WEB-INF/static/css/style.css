@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+#login {
+    background: #FFF;
+    left: 65%;
+    top: 25%;
+    position: absolute;
+    padding: 3% 3% 3% 3%; /*上左下右*/
+    width: auto;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2),
+    0 1px 5px rgba(0, 0, 0, 0.2),
+    0 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1226px;
+    }
+
+    #wel {
+        border-style: outset;
+        background-color: #9CF;
+    }
+
+    #welcome {
+        height: auto; /*高度自适应*/
+        margin-left: 4%; /*左外边距4%*/
+        text-align: center; /*块内文本居中*/
+    }
+
+    #logo {
+        padding-right: 15%; /*右移动10%*/
+        font-style: italic; /*指定文本字体样式为斜体*/
+        font-family: '楷体';
+        font-size: 45px;
+        color: #00F;
+        text-shadow: 1px 1px 0 rgba(51, 255, 0, 1); /*字体阴影*/
+    }
+
+    #info {
+        padding-top: 1%;
+        font-weight: bolder;
+        font-family: '宋体';
+        font-size: 20px;
+        color: #00F;
+        text-shadow: -1px 0 0 rgba(125, 0, 251, 1); /*字体阴影*/
+    }
+
+    #form2 {
+        border-style: outset;
+        border-width: 6px;
+        border-color: #FFE6FF;
+        border-radius: 10px;
+        height: auto;
+    }
+}
