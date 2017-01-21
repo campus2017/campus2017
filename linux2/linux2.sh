@@ -1,0 +1,3 @@
+#!/bin/bash
+# scp µœ÷‘∂≥ÃøΩ±¥
+scp dir1/filename root@l-test.dev.cn1:/tmp
