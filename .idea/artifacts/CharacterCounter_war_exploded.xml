@@ -48,6 +48,11 @@
           <element id="library" level="project" name="Maven: antlr:antlr:2.7.5" />
           <element id="library" level="project" name="Maven: jargs:jargs:1.0" />
           <element id="library" level="project" name="Maven: chardet:chardet:1.0" />
+          <element id="library" level="project" name="Maven: com.itextpdf:itextpdf:5.1.0" />
+          <element id="library" level="project" name="Maven: org.apache.pdfbox:pdfbox:1.8.5" />
+          <element id="library" level="project" name="Maven: org.apache.pdfbox:fontbox:1.8.5" />
+          <element id="library" level="project" name="Maven: org.apache.pdfbox:jempbox:1.8.5" />
+          <element id="library" level="project" name="Maven: commons-logging:commons-logging:1.1.1" />
         </element>
       </element>
       <element id="directory" name="META-INF">
