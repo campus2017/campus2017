@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8dc99494-dd51-4c5d-b0c5-c95b42b85b52" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/CharacterCounter_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/CharacterCounter_war_exploded.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="task.iws" />
@@ -1043,7 +1042,7 @@
       <workItem from="1484551356073" duration="195000" />
       <workItem from="1484749613553" duration="466000" />
       <workItem from="1484754818588" duration="5432000" />
-      <workItem from="1485056168076" duration="32000" />
+      <workItem from="1485056168076" duration="102000" />
     </task>
     <task id="LOCAL-00001" summary="作业">
       <created>1481379478703</created>
@@ -1157,7 +1156,21 @@
       <option name="project" value="LOCAL" />
       <updated>1484760230484</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="pdf">
+      <created>1485056224297</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1485056224297</updated>
+    </task>
+    <task id="LOCAL-00018" summary="pdf">
+      <created>1485056235318</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1485056235318</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1193,7 +1206,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71110000" />
+    <option name="totallyTimeSpent" value="71180000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
