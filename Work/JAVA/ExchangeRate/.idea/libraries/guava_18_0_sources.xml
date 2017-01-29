@@ -1,0 +1,19 @@
+<component name="libraryTable">
+  <library name="guava-18.0-sources">
+    <CLASSES>
+      <root url="jar://D:/Desktop/jar/guava-18.0/guava-18.0.jar!/" />
+      <root url="jar://D:/Desktop/jar/json/commons-beanutils-1.7.0.jar!/" />
+      <root url="jar://D:/Desktop/jar/json/commons-collections-3.1.jar!/" />
+      <root url="jar://D:/Desktop/jar/json/commons-lang-2.5.jar!/" />
+      <root url="jar://D:/Desktop/jar/json/commons-logging.jar!/" />
+      <root url="jar://D:/Desktop/jar/json/ezmorph-1.0.3.jar!/" />
+      <root url="jar://D:/Desktop/jar/json/json-lib-2.4-jdk15.jar!/" />
+      <root url="jar://D:/Desktop/jar/jsoup/jsoup-1.8.1.jar!/" />
+      <root url="jar://D:/Desktop/jar/jxl/jxl.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://D:/Desktop/jar/guava-18.0/guava-18.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

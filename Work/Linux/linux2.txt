@@ -1,0 +1,1 @@
+scp /dir1/文件名@l-test-dev.cn1@IP地址:/tmp
