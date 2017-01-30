@@ -30,7 +30,7 @@
                 </div>
                 <div class="col-md-4">
                     <input type="submit" id="submit" class="btn btn-primary btn-lg btn-block" value="统计" tabindex="3" />
-                    <input type="reset" id="reset" class="btn btn-warning btn-lg btn-block" value="清空内容" tabindex="4" />
+                    <button type="reset" id="reset" class="btn btn-warning btn-lg btn-block" tabindex="4">清空内容</button>
                 </div>
             </form:form>
         </div>
