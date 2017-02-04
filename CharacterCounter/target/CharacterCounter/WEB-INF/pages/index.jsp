@@ -24,15 +24,35 @@
     <div class="container">
         <div class="row">
             <h2>请输入一段文字</h2>
-            <form:form role="form" commandName="context" action="context_save" method="post">
-                <div class="col-md-8 form-group">
-                    <form:textarea path="text" class="form-control" rows="5"></form:textarea>
-                </div>
-                <div class="col-md-4">
-                    <input type="submit" id="submit" class="btn btn-primary btn-lg btn-block" value="统计" tabindex="3" />
-                    <button type="reset" id="reset" class="btn btn-warning btn-lg btn-block" tabindex="4">清空内容</button>
-                </div>
-            </form:form>
+            <div>
+                 <label class="checkbox-inline">
+                    <input type="radio" name="radio" id="upload" value="上传文件" checked>文件上传
+                </label>
+                <label class="checkbox-inline">
+                    <input type="radio" name="radio" id="input" value="上传文件">文本输入
+                </label>
+            </div>
+            <div id="tab1">
+               <form:form role="form" commandName="context" action="file_save" method="post" enctype="multipart/form-data">
+                   <div class="col-md-8">
+                       <input type="file" class="btn btn-info"  name="file"/>
+                   </div>
+                   <div class="col-md-4">
+                       <input type="submit" class="btn btn-info" value="统计"/>
+                   </div>
+               </form:form>
+            </div>
+            <div id="tab2" style="display: none;">
+                <form:form role="form" commandName="context" action="context_save" method="post">
+                    <div class="col-md-8 form-group">
+                        <form:textarea path="text" class="form-control" rows="5"></form:textarea>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="submit" id="submit" class="btn btn-info" value=" 统计 " tabindex="3" />
+                        <button type="reset" id="reset" class="btn btn-warning" tabindex="4">清空内容</button>
+                    </div>
+                </form:form>
+            </div>
         </div>
         <div class="row">
             <div class="col-md-8">
@@ -92,5 +112,21 @@
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
     <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
     <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            $("input[name='radio']").click(function () {
+                if($("#upload").is(":checked")){
+                    $("#tab1").css('display','block')
+                    $("#tab2").css('display','none')
+                }
+                if($("#input").is(":checked")){
+                    $("#tab1").css('display','none')
+                    $("#tab2").css('display','block')
+                }
+            })
+        })
+
+    </script>
 </body>
 </html>

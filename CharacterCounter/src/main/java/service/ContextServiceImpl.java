@@ -3,7 +3,10 @@ package service;
 import domain.Context;
 import domain.Statistics;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.*;
+import java.nio.Buffer;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -29,6 +32,54 @@ public class ContextServiceImpl implements ContextService{
 
         stat = new Statistics(letter, number, chinese, punctuation, top3);
         return stat;
+    }
+
+    @Override
+    public Statistics statFile(MultipartFile file){
+        String text = "";
+        try{
+            InputStream in = file.getInputStream();
+            text = convertStreamToString(in);
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+        int number = countNumber(text);
+        int letter = countLetter(text);
+        int chinese = countChinese(text);
+        int punctuation = countPunctuation(text);
+
+        Map<String, Integer> top3 = getTop3(text);
+
+        stat = new Statistics(letter, number, chinese, punctuation, top3);
+        return stat;
+    }
+
+    public static String convertStreamToString(InputStream is) {
+        /*
+          * To convert the InputStream to String we use the BufferedReader.readLine()
+          * method. We iterate until the BufferedReader return null which means
+          * there's no more data to read. Each line will appended to a StringBuilder
+          * and returned as String.
+          */
+        StringBuilder sb = new StringBuilder();
+        String line = null;
+        try{
+           BufferedReader reader = new BufferedReader(new InputStreamReader(is,"UTF-8"));
+           while ((line = reader.readLine()) != null) {
+               sb.append(line + "\n");
+           }
+        }catch (UnsupportedEncodingException e){
+            e.printStackTrace();
+        }catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                is.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        return sb.toString();
     }
 
     public static Map<String, Integer> getTop3(String text){
