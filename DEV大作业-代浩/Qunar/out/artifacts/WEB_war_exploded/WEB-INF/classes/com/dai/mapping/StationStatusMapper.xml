@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.dai.mapper.StationStatusMapper" >
+  <resultMap id="BaseResultMap" type="com.dai.pojo.StationStatus" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="stationid" property="stationid" jdbcType="VARCHAR" />
+    <result column="station" property="station" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="VARCHAR" />
+  </resultMap>
+
+  <cache  eviction="FIFO"  flushInterval="60000"  size="512"  readOnly="true"/>
+
+  <sql id="Base_Column_List" >
+    id, stationid, station, status
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from stationstatus
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from stationstatus
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.dai.pojo.StationStatus" >
+    insert into stationstatus (id, stationid, station, 
+      status)
+    values (#{id,jdbcType=INTEGER}, #{stationid,jdbcType=VARCHAR}, #{station,jdbcType=VARCHAR}, 
+      #{status,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.dai.pojo.StationStatus" >
+    insert into stationstatus
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="stationid != null" >
+        stationid,
+      </if>
+      <if test="station != null" >
+        station,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="stationid != null" >
+        #{stationid,jdbcType=VARCHAR},
+      </if>
+      <if test="station != null" >
+        #{station,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.dai.pojo.StationStatus" >
+    update stationstatus
+    <set >
+      <if test="stationid != null" >
+        stationid = #{stationid,jdbcType=VARCHAR},
+      </if>
+      <if test="station != null" >
+        station = #{station,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.dai.pojo.StationStatus" >
+    update stationstatus
+    set stationid = #{stationid,jdbcType=VARCHAR},
+      station = #{station,jdbcType=VARCHAR},
+      status = #{status,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

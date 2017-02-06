@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.dai.mapper.BackUpMapper" >
+  <resultMap id="BaseResultMap" type="com.dai.pojo.BackUp" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="userid" property="userid" jdbcType="INTEGER" />
+    <result column="backupon" property="backupon" jdbcType="INTEGER" />
+    <result column="backupday" property="backupday" jdbcType="VARCHAR" />
+    <result column="time" property="time" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, userid, backupon, backupday, time
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from backup
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from backup
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.dai.pojo.BackUp" >
+    insert into backup (id, userid, backupon, 
+      backupday, time)
+    values (#{id,jdbcType=INTEGER}, #{userid,jdbcType=INTEGER}, #{backupon,jdbcType=INTEGER}, 
+      #{backupday,jdbcType=VARCHAR}, #{time,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.dai.pojo.BackUp" >
+    insert into backup
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="userid != null" >
+        userid,
+      </if>
+      <if test="backupon != null" >
+        backupon,
+      </if>
+      <if test="backupday != null" >
+        backupday,
+      </if>
+      <if test="time != null" >
+        time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="userid != null" >
+        #{userid,jdbcType=INTEGER},
+      </if>
+      <if test="backupon != null" >
+        #{backupon,jdbcType=INTEGER},
+      </if>
+      <if test="backupday != null" >
+        #{backupday,jdbcType=VARCHAR},
+      </if>
+      <if test="time != null" >
+        #{time,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.dai.pojo.BackUp" >
+    update backup
+    <set >
+      <if test="userid != null" >
+        userid = #{userid,jdbcType=INTEGER},
+      </if>
+      <if test="backupon != null" >
+        backupon = #{backupon,jdbcType=INTEGER},
+      </if>
+      <if test="backupday != null" >
+        backupday = #{backupday,jdbcType=VARCHAR},
+      </if>
+      <if test="time != null" >
+        time = #{time,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.dai.pojo.BackUp" >
+    update backup
+    set userid = #{userid,jdbcType=INTEGER},
+      backupon = #{backupon,jdbcType=INTEGER},
+      backupday = #{backupday,jdbcType=VARCHAR},
+      time = #{time,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
