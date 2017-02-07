@@ -1,5 +1,7 @@
 package com.qunar.flight.model;
 
+import org.json.JSONString;
+
 import java.io.Serializable;
 import java.util.TreeMap;
 
@@ -64,4 +66,5 @@ public class TableModel implements Serializable{
                 ", mostThree=" + mostThree +
                 '}';
     }
+
 }

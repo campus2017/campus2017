@@ -12,6 +12,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.annotation.Resource;
 import java.io.UnsupportedEncodingException;
+import java.util.Map;
 
 /**
  * Created by nostalie.zhang on 2017/2/3.
