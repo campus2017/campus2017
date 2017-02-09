@@ -37,7 +37,8 @@ public class CountService {
             char c = text.charAt(i);
             if(charMap.containsKey(c))
                 charMap.put(c, charMap.get(c) + 1);
-            charMap.put(c, 1);
+            else
+                charMap.put(c, 1);
         }
 
         List<Map.Entry<Character, Integer>> charList = new LinkedList<Map.Entry<Character, Integer>>(charMap.entrySet());
@@ -54,8 +55,8 @@ public class CountService {
         CharCount thirdMore = new CharCount();
 
         theMost.setCountKey(charList.get(0).getKey());
-        secondMore.setCountKey(charList.get(0).getKey());
-        thirdMore.setCountKey(charList.get(0).getKey());
+        secondMore.setCountKey(charList.get(1).getKey());
+        thirdMore.setCountKey(charList.get(2).getKey());
 
         theMost.setCountValue(charList.get(0).getValue());
         secondMore.setCountValue(charList.get(1).getValue());
