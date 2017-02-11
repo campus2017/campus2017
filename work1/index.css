@@ -1,0 +1,155 @@
+body, div, ul, li, p{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: '微软雅黑', 'Arial';
+    background-color: #7ecef4;
+}
+
+.header{
+    background-color: white;
+}
+.header .q-header-container{
+    height: 30px;
+    width: 980px;
+    margin: 0 auto;
+}
+.header .q-header-container ul li {
+    float: left;
+    margin-right: 15px;
+}
+.header .q-header-container ul li a{
+    color: #777;
+    font-size: 12px;
+    line-height: 30px;
+    text-decoration: none;
+}
+.header .q-header-nav{
+    float: left;
+    list-style: none;
+}
+.header .q-header-nav .q-logo{
+    width: 135px;
+    height: 30px;
+    display: inline-block;
+    background: url("imgs/logo.png") no-repeat 0px 8px;
+}
+
+.header .q-header-user{
+    float: right;
+    list-style: none;
+}
+.header .q-header-user .separator{
+    padding-left: 15px;
+    border-left: 1px #777 solid;
+}
+
+.main .banner{
+    height: 670px;
+    background: url("imgs/banner.png") no-repeat center;
+}
+.main .banner .q-step-tab{
+    width: 100%;
+    position: absolute;
+    top:505px;
+}
+.main .banner .q-step-tab ul{
+    width: 980px;
+    height: 154px;
+    margin: auto;
+    list-style: none;
+}
+.main .banner .q-step-tab ul li{
+    position: absolute;
+    height: 113px;
+    width: 320px;
+    text-align: center;
+    padding: 40px 0 0 0;
+}
+.main .banner .q-step-tab ul li p{
+    margin: 0;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+.main .banner .q-step-tab .time{
+    font-size: 32px;
+}
+.main .banner .q-step-tab .triangle{
+    width: 0;
+    height: 0;
+    visibility: hidden;
+    position: relative;
+    top: 20px;
+    border-style: solid;
+    border-width: 18px;
+    border-color: white transparent transparent transparent;
+}
+.main .banner .q-step-tab .step-1{
+    width: 332px;
+    background: url("imgs/tab_1.png") no-repeat;
+}
+.main .banner .q-step-tab .step-1.overdue{
+    background: url("imgs/tab_color_1.png") no-repeat;
+}
+.main .banner .q-step-tab .step-2{
+    width: 331px;
+    margin-left: 318px;
+    z-index: 100;
+    background: url("imgs/tab_2.png") no-repeat;
+}
+.main .banner .q-step-tab .step-2.overdue{
+    background: url("imgs/tab_color_2.png") no-repeat;
+}
+.main .banner .q-step-tab .step-3{
+    width: 357px;
+    margin-left: 620px;
+    background: url("imgs/tab_3.png") no-repeat;
+}
+.main .banner .q-step-tab .step-3.overdue{
+    background: url("imgs/tab_color_3.png") no-repeat;
+}
+.main .q-content-container{
+    width: 980px;
+    margin: 0 auto;
+}
+.main .q-content-container .recommend{
+    height: 283px;
+    margin: 30px 0;
+    position: relative;
+    background-color: #78af24;
+}
+.main .q-content-container .recommend .left-tab{
+    width: 506px;
+    height: 263px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: url("imgs/pic_left.png") no-repeat;
+}
+.main .q-content-container .recommend .right-tab{
+    width: 506px;
+    height: 263px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: url("imgs/pic_right.png") no-repeat;
+}
+.main .q-content-container .recommend .mask{
+    background-color: rgba(0, 0, 0, .6);
+}
+
+
+.main .q-content-container .intro{
+    background-color: #f3eedb;
+}
+.main .q-content-container .intro .timeline{
+    height: 120px;
+    background-color: #ed5172;
+}
+.main .q-content-container .ticket{
+    height: 170px;
+    margin: 30px 0;
+    background: url("imgs/ticket.png") no-repeat center;
+}
