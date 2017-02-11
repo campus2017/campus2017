@@ -34,50 +34,50 @@
     </table>
     <br>
 
-    <%--<p>各统计内容如下</p><br>--%>
-    <%--<table border="1" width="200" cellpadding="0" cellspacing="0">--%>
-        <%--<tr>--%>
-            <%--<th>统计项</th>--%>
-            <%--<th>个数</th>--%>
-        <%--</tr>--%>
-        <%--<tr>--%>
-            <%--<td>英文字母</td>--%>
-            <%--<td>${statisticsInfo.letters}</td>--%>
-        <%--</tr>--%>
-        <%--<tr>--%>
-            <%--<td>数字</td>--%>
-            <%--<td>${statisticsInfo.numbers}</td>--%>
-        <%--</tr>--%>
-        <%--<tr>--%>
-            <%--<td>汉字</td>--%>
-            <%--<td>${statisticsInfo.chineseChars}</td>--%>
-        <%--</tr>--%>
-        <%--<tr>--%>
-            <%--<td>中英文标点</td>--%>
-            <%--<td>${statisticsInfo.punctuations}</td>--%>
-        <%--</tr>--%>
-    <%--</table>--%>
+    <p>各统计内容如下</p><br>
+    <table border="1" width="200" cellpadding="0" cellspacing="0">
+        <tr>
+            <th>统计项</th>
+            <th>个数</th>
+        </tr>
+        <tr>
+            <td>英文字母</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>数字</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>汉字</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>中英文标点</td>
+            <td></td>
+        </tr>
+    </table>
 
-    <%--<p>文字中出现频率最高的三个字是：</p><br>--%>
-    <%--<table border="1" width="200" cellpadding="0" cellspacing="0">--%>
-        <%--<tr>--%>
-            <%--<th>名称</th>--%>
-            <%--<th>个数</th>--%>
-        <%--</tr>--%>
-        <%--<tr>--%>
-            <%--<td height="20">${most.countKey}</td>--%>
-            <%--<td>${most.countValue}</td>--%>
-        <%--</tr>--%>
-        <%--<tr>--%>
-            <%--<td height="20">${secondMore.countKey}</td>--%>
-            <%--<td>${secondMore.countValue}</td>--%>
-        <%--</tr>--%>
-        <%--<tr>--%>
-            <%--<td height="20">${thirdMore.countKey}</td>--%>
-            <%--<td>${thirdMore.countValue}</td>--%>
-        <%--</tr>--%>
+    <p>文字中出现频率最高的三个字是：</p><br>
+    <table border="1" width="200" cellpadding="0" cellspacing="0">
+        <tr>
+            <th>名称</th>
+            <th>个数</th>
+        </tr>
+        <tr>
+            <td height="20"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td height="20"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td height="20"></td>
+            <td></td>
+        </tr>
 
-    <%--</table>--%>
+    </table>
 </form>
 
 </body>
