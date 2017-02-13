@@ -1,3 +1,0 @@
-
-
-cat $1 | cut -d ' ' -f 1 | uniq -c | sort -k 1 -n -r | awk '{print NR " " $2 " " $1}'
