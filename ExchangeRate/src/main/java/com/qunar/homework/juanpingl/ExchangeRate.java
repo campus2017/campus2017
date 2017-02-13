@@ -38,16 +38,11 @@ public class ExchangeRate
 	 * @throws IOException
 	 */
 	private Document getExchangeData() throws IOException {
-		Document doc = null;
-		try {
-			doc = Jsoup.connect(exchangeDataUrl)
-					.data("projectBean.startDate", fmt.print(startDay))
-					.data("projectBean.endDate", fmt.print(endDay))
-					.timeout(5000)
-					.get();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		Document doc = Jsoup.connect(exchangeDataUrl)
+                            .data("projectBean.startDate", fmt.print(startDay))
+                            .data("projectBean.endDate", fmt.print(endDay))
+                            .timeout(5000)
+                            .get();
 		return doc;
 	}
 
