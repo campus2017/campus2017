@@ -1,2 +1,1 @@
-
-scp  /dir1/1.txt root@192.168.60.135:/tmp
+scp -r dir1  l-test.dev.cn1:/tmp/
