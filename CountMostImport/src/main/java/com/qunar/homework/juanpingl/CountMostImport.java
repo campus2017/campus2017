@@ -9,6 +9,8 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.*;
 
 
@@ -100,10 +102,19 @@ public class CountMostImport {
 
             while ((line=br.readLine())!=null)
             {
-                if (line.trim().startsWith("import "))
-                {
+                // 忽略 import static 行
+                Pattern p = Pattern.compile("^import\\s+static\\s+");
+                Matcher m = p.matcher(line.trim());
+                if (m.find()) {
+                    continue;
+                }
+
+                // 匹配 import 开始行
+                p = Pattern.compile("^import\\s+");
+                m = p.matcher(line.trim());
+                if (m.find()) {
                     isImport = true;
-                    String temp = line.substring(6).trim().replace(";", "");
+                    String temp = line.trim().substring(6).replace(";", "");
                     if (importMap.containsKey(temp))
                     {
                         int count = importMap.get(temp);
