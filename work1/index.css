@@ -196,10 +196,70 @@ body{
     background-color: #f3eedb;
 }
 .q-intro .timeline{
-    height: 120px;
+    height: 118px;
+    padding-left: 22px;
     border-radius: 5px;
-    box-shadow: 0 5px #9d0035;
+    box-shadow: 0 8px #9d0035;
     background-color: #ed5172;
+}
+.q-intro .timeline::after{
+    content: "";
+    width: 850px;
+    height: 1px;
+    top: 60px;
+    left: 43px;
+    background: white;
+    position: relative;
+    display: block;
+}
+.q-intro .timeline .city{
+    float: left;
+    width: 85px;
+    height: 120px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    position: relative;
+}
+.q-intro .timeline .city p{
+    position: absolute;
+    bottom: 75px;
+    margin: auto;
+    width: 85px;
+}
+.q-intro .timeline .city:nth-child(2n) p{
+    top:75px;
+}
+.q-intro .timeline .city::after{
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    position: absolute;
+    left: 39px;
+    top: 58px;
+    background: white;
+}
+.q-intro .timeline .city:hover{
+    font-size: 24px;
+    font-weight: bold;
+}
+.q-intro .timeline .city:hover::before{
+    content: "";
+    width: 92px;
+    height: 133px;
+    background: url("imgs/time-line-hover.png") no-repeat;
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: -3px;
+}
+.q-intro .timeline .city:hover::after{
+    width: 10px;
+    height: 10px;
+    left: 36px;
+    top: 55px;
 }
 .q-detail-container .title{
     height: 55px;
