@@ -1,0 +1,39 @@
+body, div{
+    padding: 0;
+    margin: 0;
+}
+.main{
+    cursor: pointer;
+}
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+}
+.modal .modal-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 800px;
+    height: 546px;
+    margin-top: -273px;
+    margin-left: -400px;
+}
+.modal .modal-content .btn-close{
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: -16px;
+    right: -16px;
+    background: url("images/close.png");
+    cursor: pointer;
+}
+.modal .modal-content .btn-close:hover{
+    background: url("images/close_hover.png") 0 2px;
+}
