@@ -1,0 +1,23 @@
+* {
+	margin: 0;
+	padding:0;
+}
+#slide_doors {
+	margin:  0 auto;
+	position: relative;
+	height: 477px;
+	width: 1000px;
+	border: solid 1px #777;
+	border-top:none;
+	overflow: hidden;
+	box-shadow: 1px 1px 1px #777;
+	margin-top: 10px;
+}
+.door {
+	display: block;
+	float: left;
+	position: absolute;
+	top: 0;
+	cursor: pointer;
+	border:solid 1px #000;
+}

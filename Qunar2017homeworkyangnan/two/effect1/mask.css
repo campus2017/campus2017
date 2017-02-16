@@ -1,0 +1,76 @@
+* {
+	margin: 0;
+	padding:0;
+}
+a {
+	text-decoration: none;
+}
+li {
+	list-style: none;
+}
+/*导航条部分*/
+#nav {
+	width: 1264px;
+	height: 33px;
+	background: url(images/nav.png) no-repeat 0 0;
+	margin: 0 auto;
+}
+#mainInformation {
+	width: 1264px;
+	height: 863px;
+	background: url(images/mainInformation.png) no-repeat 0 0;
+	margin: 0 auto;
+}
+/*中间链接部分*/
+#navone {
+	width: 1264px;
+	height: 94px;
+	margin: 0 auto;
+}
+#navone span img{
+	margin-left: 160px;
+	float: left;
+}
+#navone ul {
+	float: left;
+	margin-left: 150px;
+}
+#navone ul li{
+	display: inline-block;
+	margin: 35px 10px;
+}
+#navone ul li a{
+	color: #3399cc;
+	font-family: "微软雅黑";
+}
+/*遮罩部分*/
+#mask {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+}
+#maskcontent {
+	width: 800px;
+	height: 546px;
+	position: absolute;
+	top:50%;
+	left: 50%;
+	margin-left: -400px;
+	margin-top: -273px;
+}
+#closeButton {
+	width: 32px;
+	height: 32px;
+	position: absolute;
+	top: -15px;
+	right: -15px;
+	cursor:pointer;
+	background:url(images/close.png) no-repeat 0 0;
+}
+#closeButton:hover{
+	background:url(images/close_hover.png) no-repeat 0 2px;
+}

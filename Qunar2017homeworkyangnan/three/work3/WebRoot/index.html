@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <meta charset="UTF-8">
+	<title>grid</title>
+	<link rel="stylesheet" type="text/css" href="grid.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	
+	<!-- 以下两个插件用于在IE8以及以下版本浏览器支持HTML5元素和媒体查询，如果不需要用可以移除 -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="bootstrap.min.js"></script>
+    
+  </head>
+  <body>
+	    <nav>
+	    	<ul id="navlist" class="nav nav-tabs">
+	    		<li><a href="#Eexchange" data-toggle="tab">E币兑换</a></li>
+	    		<li><a href="#Edetails" data-toggle="tab">E币明细</a></li>
+	    		<li class="active"><a href="#transactionHistory" data-toggle="tab">兑换记录</a></li>
+	    	</ul>
+	    </nav>
+	    <div id="main" class="tab-content">
+	    	<div id="Eexchange" class="tab-pane">E币兑换</div>
+	    	<div id="Edetails" class="tab-pane">E币明细</div>
+	    	<div id="transactionHistory" class="tab-pane in active">
+	    	    <div id="buttons">
+	    	    	<button id="all" class="btn btn-primary">全部</button>
+	    	    	<button id="success" class="btn btn-primary">成功</button>
+	    	    	<button id="fail" class="btn btn-primary">失败</button>
+	    	    	<span id="date">选择日期：<input type="text" class="form-control"><span>至</span><input type="text" class="form-control">
+	    	    	</span>
+	    	    	<button id="search" class="btn btn-primary">搜索</button>
+	    	    	<button id="reset" class="btn btn-warning">重置</button>
+	    	    </div>
+	    	    <div>
+	    	    	<table id="show">
+		    	         <tr id="tablecaption">
+				            <th id="timetd">时间</th>
+				            <th id="nametd">商品名称</th>
+				            <th id="numtd">数量</th>
+				            <th id="ecointd">E币</th>
+				            <th id="statustd">状态</th>
+				            <th id="infotd">信息</th>
+				            <th id="exchangetd">兑换信息</th>
+				            <th id="confirmtd">确认</th>
+	                    </tr>
+	                    <tbody id="tbody"></tbody>
+	    	    	</table>
+	    	    </div>
+	    	</div>
+	    </div>
+	    <script type="text/javascript" src="grid.js"></script>
+  </body>
+</html>

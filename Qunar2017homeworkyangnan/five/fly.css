@@ -1,0 +1,265 @@
+* {
+	padding:0; 
+	margin:0;
+	list-style: none;
+	font-size: 12px;
+}
+a {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+#tabContainer {
+	width: 912px;
+	margin: 40px auto;
+	overflow: hidden;
+}
+/*tab面板页部分*/
+#tabNav {
+	width: 912px;
+	height: 73px;
+	position: relative;
+}
+#tabNav li{
+	display: inline-block;
+	vertical-align: middle;
+	height: 73px;
+	width: 103px;
+	float: left;
+	border-bottom: solid 1px #268fc5;
+	border-left: solid 1px #268fc5;
+	background-color: #f3fbfd;
+	text-align: center;
+	/*position: relative;*/
+}
+#tabNav .select{
+	border-top:solid 1px #268fc5;
+	border-bottom-color:#fff;
+	background-color: #fff;
+}
+/*两个箭头部分*/
+#tabNav li:first-child {
+	width: 44px;
+	border-left:none;
+	background-color: #fff;
+	line-height: 73px;
+}
+#tabNav li:nth-child(9) {
+	width: 44px;
+	background-color: #fff;
+	line-height: 73px;
+}
+#tabNav li:first-child img {
+	vertical-align: middle;
+	cursor: pointer;
+}
+#tabNav li:nth-child(9) img{
+	vertical-align: middle;
+	cursor:pointer;
+}
+#tabNav li span{
+	display: block;
+	margin-top: 5px;
+}
+#tabNav li span:first-of-type{
+	margin-top: 10px;
+}
+.money {
+	font-size: 13px;
+	color: #0e83bf;
+	font-weight: bold;
+}
+.low {
+	position: absolute;
+	top:-3px;
+	left: 358px;
+	background-color: #f84980;
+	color: #fff;
+}
+/*内容部分信息*/
+#straight {
+	width: 912px;
+	height: 4px;
+	margin-top: 5px;
+}
+#tabConNav {
+	height: 35px;
+	background-color: #26b4d3;
+	margin-top: 10px;
+	line-height: 35px;
+}
+#tabConNav ul li {
+	display:inline-block;
+	color: #fff;
+	font-size: 14px;
+	vertical-align: middle;
+/*	border:solid 1px #000;*/
+}
+#flight_information {
+	margin-left: 69px;
+}
+#local_departure_time {
+	margin-left: 109px;
+}
+#total_travel_time {
+	margin-left: 42px;
+	position: relative;
+}
+#landing_time {
+	margin-left: 36px;
+}
+#websites_recommend {
+	margin-left: 112px;
+}
+#lowest_quotation {
+	margin-left:64px;
+	position: relative;
+}
+/*航班信息部分内容*/
+#tabContent {
+	background-color: #f3fbfd;
+	padding: 20px 20px 5px 33px;
+}
+
+/*以下部分是应该用js'写的*/
+.companylogo {
+	width: 35px;
+	height: 21px;
+	background: url(images/companylogo.png) 0 0 no-repeat;
+	float: left;
+}
+.flight {
+	height: 98px;
+	position: relative;
+}
+.companyInfo {
+	float: left;
+	margin-top: 4px;
+}
+.flightversion1,.flightversion2 {
+	color: #666;
+}
+.flightversion1 {
+	margin-top: 5px;
+}
+.flightversion1 a{
+	color: #25b4d2;
+}
+
+
+/*航班时间信息部分*/
+.time_airport_Info {
+	float: left;
+	margin-left: 55px;
+	position: relative;
+}
+.time_airport_leftInfo {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 300px;
+	text-align: left;
+}
+.start_time {
+	margin-left: 40px;
+}
+.start_time,.end_time {
+	font-family: "微软雅黑";
+	font-size: 20px;
+}
+.start_airport,.end_airport {
+	margin-top: 10px;
+}
+.time_airport_middleInfo {
+	position: absolute;
+	top: 0;
+	left: 150px;
+	width: 300px;
+}
+.duration {
+	margin-top: 8px;
+	color: #666;
+}
+.delayDay {
+	color: #25b4d2;
+	font-size: 16px;
+	font-family: "宋体";
+	margin-left: 1px;
+}
+.axislogo{
+	width: 214px;
+	height: 5px;
+	background: url(images/axis.png) 0 0 no-repeat;
+	position: absolute;
+	top: 28px;
+	left: 65px;
+}
+.time_airport_rightInfo {
+	position: absolute;
+	left: 252px;
+	top: 0;
+	text-align: left;
+	width: 500px;
+}
+.transform_stop_airport {
+	margin-top: 15px;
+}
+.transform_airport {
+	color: #666;
+}
+.transform_airport::before{
+	content:"转";
+	background-color: #2cb6d4;
+	color: #fff;
+	padding-left: 1px;
+}
+.stop_airport {
+	margin-top: 2px;
+	color: #666;
+}
+.stop_airport::before {
+	content:"停";
+	background-color: #2cb6d4;
+	color: #fff;
+	padding-left: 1px;
+}
+
+/*推荐网站部分*/
+.recommendWebsite {
+	position: absolute;
+	top:30px;
+	left: 655px;
+	text-align: right;
+}
+.recommendname a{
+	color: #0e83bf;
+}
+.recommendprice {
+	color: #ff7200;
+}
+
+/*最低票价部分*/
+.lowestprice {
+	float: right;
+	margin-right: 5px;
+	margin-top: -50px;
+	text-align: right;
+}
+.ticketprice span{
+	color: #0e83bf;
+	font-size: 22px;
+}
+.ticketprice span:first-child{
+	font-size: 12px;
+}
+.taxes {
+	margin-top: 3px;
+	color: #666;
+}
+.orderbotton {
+	width: 80px;
+	height: 42px;
+	background: url(images/order_button.png) 5px 0 no-repeat;
+	margin-top: 5px;
+}

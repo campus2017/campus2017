@@ -1,0 +1,69 @@
+@CHARSET "UTF-8";
+nav ,#main {
+	width: 980px;
+	margin: 0 auto;
+	border: solid 1px #eee;
+	padding: 5px;
+}
+#buttons {
+	position: relative;
+}
+#buttons button:first-child {
+	margin-left: 30px;
+}
+#buttons button:nth-child(5) {
+	margin-left: 600px;
+}
+#buttons {
+	margin-right: 10px;
+}
+button {
+	border：none;
+}
+
+#date {
+	display: inline-block;
+	position: absolute;
+	margin-left: 50px;
+}
+#show {
+	width: 980px;
+	margin-top: 20px;
+	border:solid 1px #eee;
+}
+#tablecaption {
+	background-color: #eee;
+	font-size:16px;
+}
+#tbody td{
+	/* border:solid 1px #eee; */
+	text-align:center;
+	height:50px;
+}
+#tbody tr{
+	border-top:solid 1px #eee;
+	border-bottom:solid 1px #eee;
+	
+}
+#timetd {
+	width:15%;
+}
+#nametd {
+	width:15%;
+}
+#numtd {
+	width:7%;
+}
+#ecointd {
+	width:7%;
+}
+#statustd {
+	width:7%;
+}
+#infotd {
+	width:20%;
+}
+#exchangetd {
+	width:15%;
+}
+

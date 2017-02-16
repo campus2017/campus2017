@@ -1,0 +1,449 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body{
+    font-size: 14px;
+    background-color: #f0f3f5;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+/*开头部分*/
+#header {
+	width: 100%;
+	height: 43px;
+	background-color: #25a4bb;
+	text-align: center;
+	position: relative;
+}
+#header span:first-child {
+	color: #fff;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 43px;
+	float: left;
+	margin-left: 15px;
+}
+#title {
+	font-size: 16px;
+	color: #fff;
+	line-height: 43px;
+}
+#headimg {
+	line-height: 43px;
+	float: right;
+	margin-right: 15px;
+}
+#header span:last-child {
+	color: #fff;
+	font-size: 16px;
+	position: absolute;
+	top: 27px;
+	right: 15px;
+	font-size: 12px;
+}
+/*酒店信息*/
+#main {
+	
+}
+#hotelInfo {
+	width: 100%;
+	border-bottom: 1px solid #ccc;
+	background-color: #fff;
+}
+/*酒店图片*/
+#hotelpic {
+	width: 100%;
+	position: relative;
+}
+#hotelpic img {
+	display: block;
+	width: 100%;
+}
+#hotelnum {
+	width: 60px;
+	height: 30px;
+	line-height: 30px;
+	background-color: rgba(0,0,0,0.5);
+	position: absolute;
+	right: 0;
+	bottom:0;
+	text-align: center;
+}
+#hotelnum span{
+	color: #fff;
+}
+/*酒店分数*/
+#hotelscore {
+	display: flex;
+	display: -webkit-flex;
+	margin: 0 3%;
+	width: 94%;
+	height: 40px;
+	border-bottom: 2px dotted #ccc;
+	align-items: center;
+	-webkit-align-items: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.left {
+	float: left;
+	width: 72%;
+}
+.right {
+	float: left;
+	width: 28%;
+	text-align: right;
+}
+.hotel_score {
+	font-size: 16px;
+    font-weight: bold;
+    color: #25a4bb;
+}
+.right span{
+	color: #25a4bb;
+}
+.right span::after{
+	content: ">";
+    font-size: 16px;
+    color: #cbcbcb;
+    font-weight:bold;
+}
+#hoteladdress {
+	display: flex;
+	display: -webkit-flex;
+	margin: 0 3%;
+	width: 94%;
+	height: 50px;
+	border-bottom: 2px dotted #ccc;
+	align-items: center;
+	-webkit-align-items: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.address_detail {
+	width: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.address_belong {
+	margin-top: 3px;
+	color: #989696;
+}
+#hoteltel {
+	display: flex;
+	display: -webkit-flex;
+	margin: 0 3%;
+	width: 94%;
+	height: 50px;
+	border-bottom: 2px dotted #ccc;
+	align-items: center;
+	-webkit-align-items: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	position: relative;
+}
+
+#hoteldate {
+	margin-top: 20px;
+	background-color: #fff;
+}
+#hoteldateInfo {
+	display: flex;
+	display: -webkit-flex;
+	margin: 0 3%;
+	width: 94%;
+	height: 50px;
+	line-height: 50px;
+	border-bottom: 2px dotted #ccc;
+	align-items: center;
+	-webkit-align-items: center;
+	padding-top: 5px;
+}
+.date {
+	font-size: 20px;
+	font-weight: bold;
+	vertical-align: middle;
+}
+#calender {
+	vertical-align: middle;
+}
+/*酒店信息展示部分*/
+.hoteldisplaylistone {
+	background-color: #fff; 
+}
+.hoteldisplayone {
+	display: flex;
+	display: -webkit-flex;
+	margin: 0 3%;
+	width: 94%;
+	height: 100px;
+	border-bottom: 1px solid #ccc;
+	align-items: center;
+	-webkit-align-items: center;
+	padding-top: 5px;
+}
+.hoteldisplay_left {
+	float: left;
+	width: 56%;
+}
+
+.hoteldisplay_head{
+	font-size: 20px;
+
+}
+.hoteldisplay_middle {
+	color: #989696;
+	margin-top: 10px;
+}
+.hoteldisplay_foot {
+	margin-top: 14px;
+}
+.color_tips{
+    font-size: 14px;
+    padding: 1px;
+    color: #fff;
+    padding-right: 2px;
+}
+.group_purchase {
+	background-color: #25a4bb;
+}
+.night_purchase {
+	background-color: #25a4bb;
+}
+.star_ticket{
+    background-color: #ff0000;
+}
+.hoteldisplay_right {
+	float: left;
+	width: 44%;
+	display: flex;
+	display: -webkit-flex;
+	text-align: right;
+	align-items: center;
+	-webkit-align-items: center;
+    justify-content: flex-end;
+    -webkit-justify-content: flex-end;
+}
+.coin_symbol {
+	font-size: 14px;
+    color: #ff6600;
+}
+.price_num {
+	font-weight: bold;
+    font-size: 20px;
+    color: #ff6600;
+}
+.price_start {
+	color: #8c8c8c;
+}
+.compare_price_btn {
+	margin: 0 0 0 5px;
+    width: 48px;
+    height: 20px;
+    line-height: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1ba9ba;
+    color: #fff;
+    outline: none;
+}
+.hoteldisplaytwo {
+	display: flex;
+	display: -webkit-flex;
+	margin: 0 3%;
+	width: 94%;
+	height: 100px;
+	border-bottom: 1px solid #ccc;
+	align-items: center;
+	-webkit-align-items: center;
+	padding-top: 5px;
+}
+.price_detail {
+	float: left;
+    width: 60%;
+    text-align: right;
+}
+.price_detail>span{
+	display: block;
+    margin: 3px 10px;
+    color: #989696;
+}
+.price_detail .price_num{
+    font-size: 20px;
+}
+.order_btn {
+	width: 45px;
+    height: 45px;
+    border: 1px solid #ff9036;
+    border-radius: 5px;
+    background-color: white;
+    line-height: 22px;
+    font-weight: bold;
+    color: #ff9036;
+    outline: 0;
+}
+.order_btn::before{
+    content: '订';
+    display: block;
+    width: 100%;
+    height: 22px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border: 0;
+    background-color: #ff9036;
+    text-align: center;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 700;
+    color: #fff;
+}
+#hoteldisplaythree {
+	display: flex;
+	display: -webkit-flex;
+	margin: 0 3%;
+	width: 94%;
+	height: 100px;
+	border-bottom: 1px solid #ccc;
+	align-items: center;
+	-webkit-align-items: center;
+	padding-top: 5px;
+	position: relative;
+}
+.cheapest{
+    background-color: #ff6600;
+    font-size: 20px;
+}
+.like_pic{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    background: url(images/zan.png);
+}
+#hoteldisplayfour {
+	display: flex;
+	display: -webkit-flex;
+	margin: 0 3%;
+	width: 94%;
+	height: 100px;
+	border-bottom: 1px solid #ccc;
+	align-items: center;
+	-webkit-align-items: center;
+	padding-top: 5px;
+	position: relative;
+}
+.hoteldisplaylists {
+	position: relative;
+}
+.most_tips {
+	border: 1px solid #ff9036;
+    font-size: 14px;
+    background-color: white;
+    color: #ff9036;
+}
+.most_tips::before{
+    content: "最";
+    background-color: #ff9036;
+    color: #fff;
+    padding-right: 2px;
+}
+.more_price_report {
+	height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+    color: #25a4bb;
+}
+/*附近火热和便宜的酒店*/
+#hotelnumsum {
+	margin-top: 15px;
+	background-color: #fff; 
+}
+
+.hotandcheaphotelrecommend {
+	margin: 0 3%;
+	width: 94%;
+	height: 100px;
+	line-height: 100px;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	padding-top: 5px;
+	position: relative;
+}
+.hotelnum {
+	color: #25a4bb;
+}
+.leftrecommend {
+	height: 100px;
+	line-height: 100px;
+    font-size: 20px;
+}
+.leftrecommend::after{
+	content: ">";
+    float: right;
+    font-size: 20px;
+    color: #cbcbcb;
+    font-weight: bold;
+}
+.hotel_attention {
+	margin: 0 3%;
+	width: 94%;
+	height: 100px;
+	line-height: 100px;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	padding-top: 5px;
+	position: relative;
+}
+/*底部的信息*/
+#footer {
+	width: 100%;
+	margin: 2% 0;
+	text-align: center;
+}
+.footer_nav {
+	width: 94%;
+	padding: 0 3%;
+	text-align: center;
+	height: 40px;
+}
+.footer_nav li{
+	display: inline-block;
+	color: #989696;
+	height: 23px;
+	line-height: 23px;
+	width: 24.3%;
+	text-align: center;
+}
+.footer_nav li img{
+	vertical-align: middle;
+}
+.footer_nav li span{
+	margin-left: 3px;
+	vertical-align: middle;
+}
+.footer_nav li:last-child{
+    border-left: 1px solid #989696;
+}
+.copyright {
+	width: 100%;
+	display: inline-block;
+	margin-top: 3%;
+	color: #989696;
+	font-size: 16px;
+
+}
+.copyright span{
+	width: 30%;
+	margin-left: 5%;
+}
