@@ -1,0 +1,19 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.main{
+    width: 958px;
+    height: 477px;
+    margin: 0 auto;
+    border: 1px solid lightgray;
+    position: relative;
+    overflow: hidden;
+}
+.main img{
+    position: absolute;
+    top: 0;
+    border: 1px solid #d1d1d1;
+    cursor: pointer;
+}
