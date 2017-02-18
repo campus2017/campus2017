@@ -2,21 +2,16 @@
     padding: 0;
     margin: 0;
 }
-
-.main{
+.main .slide-door{
     width: 958px;
     height: 477px;
     margin: 0 auto;
     border: 1px solid lightgray;
-}
-.main .slide-door{
-    float: left;
-    border-left: 1px solid #d1d1d1;
-    cursor: pointer;
-    width: 159px;
-    height: 477px;
+    position: relative;
     overflow: hidden;
 }
-.main .slide-door:first-child{
-    width: 475px;
+.main .slide-door img{
+    position: absolute;
+    cursor: pointer;
+    border-left: 1px solid #d1d1d1;
 }

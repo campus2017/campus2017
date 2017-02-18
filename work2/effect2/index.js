@@ -4,18 +4,20 @@
 window.onload = function(){
 
     for(var i=0;i<doors.length;i++){
-        doors[i].timer = null;
-        eventUtil.addHandler(doors[i], 'mouseover', function(){
-            slideAnimation(this, 475);
-            for(var j=0;j<doors.length;j++){
-                if(doors[j]!=this){
-                    slideAnimation(doors[j], 159);
+        (function (i) {
+            doors[i].timer = null;
+            eventUtil.addHandler(doors[i], 'mouseover', function(){
+                slideAnimation(this, 160*i);
+                for(var j=0;j<doors.length;j++){
+                    if(j!=i){
+                        slideAnimation(doors[j], (j<i ? 160*j : 160*j+315));
+                    }
                 }
-            }
-        });
+            });
+        })(i);
     }
 };
-var doors = document.getElementsByClassName('slide-door');
+var doors = document.getElementsByClassName('door');
 var eventUtil = {
     addHandler:function (ele, type, handler) {
         if(ele.addEventListener){
@@ -31,14 +33,13 @@ var eventUtil = {
 function slideAnimation(e, end) {
     clearInterval(e.timer);
 
-    var vel = e.offsetWidth-1>end ? -5 : 5;
-
+    var vel = e.offsetLeft>end ? -40 : 40;
     e.timer = setInterval(function () {
-        if(Math.abs(e.offsetWidth-1-end)<=Math.abs(vel)){
-            e.style.width = end+'px';
+        if(Math.abs(e.offsetLeft-end)<=Math.abs(vel)){
+            e.style.left = end+'px';
             clearInterval(e.timer);
         }else {
-            e.style.width = e.offsetWidth-1+vel+'px';
+            e.style.left = e.offsetLeft+vel+'px';
         }
     },30);
 }
