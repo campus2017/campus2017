@@ -1,4 +1,4 @@
-body{
+*{
     padding: 0;
     margin: 0;
 }
@@ -8,12 +8,15 @@ body{
     height: 477px;
     margin: 0 auto;
     border: 1px solid lightgray;
-    position: relative;
+}
+.main .slide-door{
+    float: left;
+    border-left: 1px solid #d1d1d1;
+    cursor: pointer;
+    width: 159px;
+    height: 477px;
     overflow: hidden;
 }
-.main img{
-    position: absolute;
-    top: 0;
-    border: 1px solid #d1d1d1;
-    cursor: pointer;
+.main .slide-door:first-child{
+    width: 475px;
 }
