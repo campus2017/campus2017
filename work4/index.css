@@ -4,6 +4,7 @@
 }
 body{
     background-color: #f3f3f3;
+    font-family: SimSun;
 }
 .header{
     width: 100%;
@@ -14,31 +15,360 @@ body{
     background-color: #25a4bb;
     border-bottom: 1px solid #1b7a8b;
 }
+.header .nav-btn-left{
+    width: 30px;
+    height: 40px;
+    float: left;
+    background: url("imgs/arrow_left.png") center right no-repeat;
+}
+.header .nav-btn-right{
+    width: 35px;
+    height: 12px;
+    line-height: 12px;
+    float: right;
+    font-size: 8px;
+    padding-top: 28px;
+    background: url("imgs/logo.png") no-repeat;
+}
 
 .main{
     width: 100%;
+    font-size: 14px;
 }
 .main .hotel-detail{
-    height: 260px;
     border-bottom: 1px solid #ccc;
     margin-bottom: 10px;
     background-color: white;
 }
+.hotel-detail .imgs{
+    position: relative;
+}
+.hotel-detail .imgs img{
+    width: 100%;
+}
+.hotel-detail .imgs .corner-tag{
+    height: 20px;
+    line-height: 20px;
+    width: 40px;
+    background-color: rgba(0, 0, 0, .6);
+    font-size: 12px;
+    color: white;
+    text-align: center;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.hotel-detail .info{
+    height: 40px;
+    margin: 0 10px;
+}
+.hotel-detail .info.high{
+    height: 60px;
+    border-top: 1px dotted #ccc;
+}
+.hotel-detail .info .btn-right,
+.room-detail .book-time .btn-right{
+    width: 70px;
+    height: 40px;
+    line-height: 40px;
+    float: right;
+    text-align: right;
+    padding-right: 20px;
+    color: #25a4bb;
+    background: url("imgs/arrow_right.png") 80px no-repeat;
+}
+.hotel-detail .info.high .btn-right{
+    height: 60px;
+    line-height: 60px;
+}
+.hotel-detail .info .score{
+    color: #333;
+    line-height: 40px;
+}
+.hotel-detail .info .score strong{
+    color: #25a4bb;
+}
+.hotel-detail .info .location{
+    height: 36px;
+    line-height: 36px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space:nowrap;
+}
+.hotel-detail .info .region{
+    color: #ccc;
+    font-size: 12px;
+}
+.hotel-detail .info .detail{
+    height: 32px;
+    line-height: 32px;
+}
+.hotel-detail .info .info-icons{
+    height: 19px;
+    background: url("imgs/icons.png") no-repeat;
+}
 .main .room-detail{
-    height: 260px;
     border-top: 1px solid #ccc;
     margin-bottom: 10px;
     background-color: white;
 }
-.main .others{
-    height: 145px;
+.room-detail .book-time{
+    height: 46px;
+    line-height: 46px;
+    padding: 0 10px;
+    border-bottom: 1px solid #ccc;
+}
+.room-detail .book-time .btn-right{
+    height: 46px;
+    line-height: 46px;
+}
+.room-detail .book-time .time{
+    padding-left: 26px;
+    background: url("imgs/calendar.png") 0 center no-repeat;
+}
+.room-detail .room{
+    height: 82px;
+    padding: 0 10px;
+    border-bottom: 1px solid #ccc;
+}
+.room-detail .room.brief{
+    height: 62px;
+}
+.room-detail .room .content-right{
+    position: relative;
+    float: right;
+    height: 100%;
+}
+.room-detail .room .content-right p{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -8px;
+    white-space: nowrap;
+    color: #8c8c8c;
+    font-size: 12px;
+}
+.room-detail .room .content-right .symbol{
+    color: #ff6600;
+    font-family: STHeiti;
+    font-size: 10px;
+}
+.room-detail .room .content-right .price{
+    color: #ff6600;
+    font-family: STHeiti;
+    font-size: 16px;
+    font-weight: bold;
+}
+.room-detail .room .content-right .compare-btn{
+    color: white;
+    padding: 4px;
+    background-color: #1ba9ba;
+    border-radius: 4px;
+    position: relative;
+    top: -3px;
+}
+.room-detail .room .content-right .compare-btn img{
+    position: relative;
+    top: 2px;
+    margin-left: 2px;
+}
+.room-detail .room .name{
+    padding-top: 12px;
+    font-size: 14px;
+}
+.room-detail .room .detail{
+    padding-top: 8px;
+    font-size: 12px;
+    color: #b2b2b2;
+}
+.room-detail .room .discount{
+    padding-top: 8px;
+    font-size: 12px;
+    color: white;
+}
+.room-detail .room .discount span{
+    background-color: #25a4bb;
+    padding: 2px;
+    margin-right: 4px;
+}
+.room-detail .room .discount .back{
+    background-color: #ff0000;
+}
+.room-detail .compare-price{
+    background-color: #f3f3f3;
+    border-bottom: 1px solid #ccc;
+}
+.room-detail .compare-price .price{
+    height: 75px;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    display: table;
+}
+.room-detail .compare-price .price.brief{
+    height: 56px;
+}
+.room-detail .compare-price .price .source-list{
+    display: table-cell;
+    vertical-align:middle;
+    width: 50%;
+    padding-left: 10px;
+}
+.room-detail .compare-price .price .source-list.corner-tag{
+    background: url("imgs/good.png") no-repeat;
+}
+.room-detail .compare-price .price .source-list .name span{
+    background-color: #ff6600;
+    padding: 2px;
+    margin-left: 4px;
+    font-size: 12px;
+    color: white;
+}
+.room-detail .compare-price .price .source-list .detail{
+    font-size: 12px;
+    color: #b2b2b2;
+    padding-top: 6px;
+}
+.room-detail .compare-price .price .source-list .discount{
+    margin-top: 6px;
+}
+.room-detail .compare-price .price .source-list .discount .back{
+    background-color: #ff0000;
+    padding: 2px;
+    margin-right: 4px;
+    font-size: 12px;
+    color: white;
+}
+.room-detail .compare-price .price .source-list .discount .recommend{
+    background-color: white;
+    border: 1px solid #ff9036;
+    padding: 2px 2px 2px 0;
+    margin-right: 4px;
+    font-size: 12px;
+    color: #ff9036;
+}
+.room-detail .compare-price .price .source-list .discount .recommend .first-word{
+    background-color: #ff9036;
+    padding: 2px;
+    color: white;
+}
+.room-detail .compare-price .price .price-detail{
+    width: 30%;
+    display: table-cell;
+    vertical-align:middle;
+    text-align: right;
+    padding: 0 8px;
+    font-size: 12px;
+    line-height: 18px;
+    color: #b2b2b2;
+}
+.room-detail .compare-price .price .price-detail .price-number{
+    color: #ff6600;
+    font-family: STHeiti;
+}
+.room-detail .compare-price .price .price-detail .price-number span{
+    font-size: 16px;
+}
+.room-detail .compare-price .price .order-btn{
+    width: 15%;
+    display: table-cell;
+    vertical-align:middle;
+}
+.room-detail .compare-price .price .order-btn .order{
+    height: 40px;
+    width: 40px;
+    border: 1px solid #ff6600;
+    border-radius: 4px;
+    margin-right: 10px;
+    float: right;
+    text-align: center;
+    background-color: white;
+}
+.room-detail .compare-price .price .order-btn .order .up{
+    height: 20px;
+    line-height: 20px;
+    background-color: #ff6600;
+    color: white;
+    font-size: 16px;
+}
+.room-detail .compare-price .price .order-btn .order .down{
+    height: 20px;
+    line-height: 20px;
+    color: #ff6600;
+    font-size: 12px;
+}
+.room-detail .compare-price .more{
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #25a4bb;
+}
+.main .other-hotel{
     border-top: 1px solid #ccc;
+}
+.other-hotel .recommend{
+    height: 45px;
+    line-height: 45px;
+    padding: 0 10px;
+    border-bottom: 1px solid #ccc;
+    background-color: white;
+}
+.other-hotel .recommend .btn-right{
+    width: 10px;
+    height: 45px;
+    float: right;
+    background: url("imgs/arrow_right.png") 0 no-repeat;
+}
+.other-hotel .recommend .number{
+    color: #25a4bb;
+}
+.other-hotel .note{
+    height: 40px;
+    line-height: 20px;
+    color: #999;
+    font-size: 12px;
+    padding: 5px 10px;
 }
 
 .footer{
     width: 100%;
     height: 86px;
+    font-size: 12px;
     color: #9e9e9e;
     text-align: center;
     border-top: 1px solid #ccc;
+}
+.footer .category-tab{
+    height: 44px;
+    list-style: none;
+    padding: 0 10px;
+}
+.footer .category-tab li{
+    float: left;
+    width: 25%;
+    height: 44px;
+    line-height: 44px;
+}
+.footer .category-tab li img{
+    position: relative;
+    top: 6px;
+    right: 5px;
+}
+.footer .category-tab li:last-child{
+    width: 24%;
+    height: 16px;
+    line-height: 16px;
+    margin-top: 13px;
+    border-left: 1px solid #9e9e9e;
+}
+.footer .category-tab li:last-child img{
+    position: relative;
+    top: 2px;
+    right: 5px;
+}
+.footer .domain{
+    font-size: 14px;
+    margin: 10px 0;
+}
+.footer .domain a{
+    margin-left: 30px;
 }
