@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>fe-work3</title>
+    <link rel="stylesheet" href="index.css"/>
+</head>
+<body>
+    <div class="main">
+        <ul class="exchange-tab">
+            <li>兑换记录</li>
+            <li>E币明细</li>
+            <li>E币兑换</li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-header">
+                <div class="filter selected">全部</div>
+                <div class="filter">成功</div>
+                <div class="filter">失败</div>
+                <div class="date-input">选择日期:<input type="date">至<input type="date"></div>
+                <div class="btn">搜索</div>
+                <div class="btn alert-btn">重置</div>
+            </div>
+            <table class="tab-table" id="record-table">
+                <tr>
+                    <th width="90px">时间</th>
+                    <th width="160px">商品名称</th>
+                    <th width="70px">数量</th>
+                    <th width="70px">E币</th>
+                    <th width="75px">状态</th>
+                    <th width="255px">信息</th>
+                    <th width="85px">兑换信息</th>
+                    <th>确认</th>
+                </tr>
+            </table>
+            <div class="tab-footer">
+                <div class="page-btn">首页</div>
+                <div class="page-num">1</div>
+                <div class="page-btn">末页</div>
+                <div>共一页,跳转到<input type="number">页</div>
+                <div class="confirm-btn">确定</div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
