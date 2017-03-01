@@ -2,12 +2,22 @@
   <artifact type="exploded-war" name="campus2017:war exploded">
     <output-path>$PROJECT_DIR$/out/artifacts/campus2017_war_exploded</output-path>
     <root id="root">
-      <element id="javaee-facet-resources" facet="campus2017/web/Web" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="campus2017" />
         </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Spring-4.3.6.RELEASE" />
+          <element id="library" level="project" name="Spring MVC-4.3.6.RELEASE" />
+          <element id="library" level="project" name="Maven: junit:junit:4.12" />
+          <element id="library" level="project" name="Maven: org.hamcrest:hamcrest-core:1.3" />
+          <element id="library" level="project" name="Maven: org.jsoup:jsoup:1.6.3" />
+          <element id="library" level="project" name="Maven: net.sourceforge.jexcelapi:jxl:2.6.12" />
+          <element id="library" level="project" name="Maven: log4j:log4j:1.2.14" />
+          <element id="library" level="project" name="Maven: jstl:jstl:1.2" />
+        </element>
       </element>
+      <element id="javaee-facet-resources" facet="campus2017/web/Web" />
     </root>
   </artifact>
 </component>
