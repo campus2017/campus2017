@@ -1,0 +1,1 @@
+awk '{a[$1] += 1;} END {for (i in a) printf("%d %s\n", a[i], i);}' access log |sort|uniq -c|head -n 10
