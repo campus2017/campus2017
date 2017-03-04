@@ -1,2 +1,1 @@
-
-scp  /dir1/1.txt root@192.168.60.135:/tmp
+scp  /dir1/test.txt root@192.168.1.66:/tmp
