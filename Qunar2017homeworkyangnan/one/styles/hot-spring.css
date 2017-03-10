@@ -59,25 +59,32 @@ a {
 	height: 703px;
 	background: #7ecef4 url(../images/child.png) no-repeat 50% 0;	
 }
-.time-axis {
+#time-axis {
 	width: 980px;
 	margin: 0 auto;
+	position: relative;
 }
 /*时间轴左边中间和右边*/
 #time-axis-left {
 	position: absolute;
-	top:507px;
-	left:183px;
+	/*top:507px;
+	left:183px;*/
+	left:0;
+	bottom: 50px;
 }
 #time-axis-center {
 	position: absolute;
-	top:503px;
-	left:500px;
+	/*top:503px;
+	left:500px;*/
+	left:320px;
+	bottom: 50px;
 }
 #time-axis-right {
 	position: absolute;
-	top:509px;
-	left:804px;
+	/*top:509px;
+	left:804px;*/
+	left:630px;
+	bottom: 50px;
 }
 /*左边时间块的背景图和文字*/
 #timeAxisLeftImg {
@@ -835,7 +842,7 @@ footer {
 /*右边的悬浮窗*/
 #floatWindow_right {
 	position: fixed;
-	left: 1150px;
+	right: 0px;
 	top: 100px;
 }
 #floatWindow_right div:first-child {
