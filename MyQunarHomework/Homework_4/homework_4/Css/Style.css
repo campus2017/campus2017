@@ -1,0 +1,1036 @@
+html {
+   /* font-size: 62.5%;   */  /*所有浏览器默认的html的font-size是16px. 10/16*100%=62.5%  10px*/
+}
+.wrap {
+    height: 400px;
+    width: 100%;
+border: 1px solid #000;
+}
+.head {
+    height: 2.29rem;/*43px*/
+    width: 100%;
+    background-color: #25a4bb;
+    border-bottom: 2px solid #1b7a8b;
+    display: flex;
+    justify-content: space-between;
+}
+.head h1 {
+    font-size: 1.33rem;
+    height: 1.33rem;
+    align-self: center;
+    color: #ffffff;
+  /*  padding-top: 10px;*/
+
+}
+.head .fir {
+    width: 0.8rem;
+}
+.head .sec {
+    width: 1.82rem;
+}
+.body {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.body .pic {
+    position: relative;
+}
+.body .pic img {
+    width: 100%;
+    height: 100%;
+}
+.body .pic>div {
+    width:20% ;
+    height:24%;
+  background-color: #788493;
+    opacity: .9;
+    color: #fff;
+    position: absolute;
+    bottom: 3.1%;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:1rem;
+}
+.body .List-1 {
+    height: 2.19rem;
+    border-bottom: 1px dashed #cccccc;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.body .List-1 p {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: #333333;
+}
+.body .List-1 .core {
+    color: #25b7df;
+    font-weight: bold;
+    margin-right: 0.2rem;
+}
+.body .List-1 .tilt {
+    margin: 0 0.2rem;
+}
+.body .List-1 .bad {
+    margin-left: 0.5rem;
+}
+.body .List-1 .look-comment {
+    color: #25a4bb;
+    font-size: 0.9rem;
+}
+.body .List-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px dashed #cccccc;
+    width: 90%;
+    height: 3.19rem;
+    margin: 0 auto;
+}
+.body .List-2 .left-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.body .List-2 .left-content .name {
+    width: 15em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space:nowrap;
+    font-size:0.9rem;
+    color: #333333;
+
+}
+.body .List-2>p {
+    display: flex;
+    align-items: center;
+}
+.body .List-2 .left-content .address {
+    font-size:0.8rem;
+    align-self: flex-start;
+    color: #b2b2b2;
+}
+.body .List-2 .look-map {
+    color: #25a4bb;
+    font-size: 0.9rem;
+}
+.List-3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 3.19rem;
+    margin: 0 auto;
+}
+.List-3 p .open-hour{
+    color: #333333;
+    margin-right: 1rem;
+}
+.List-3>p {
+    display: flex;
+
+}
+.List-3>p .hotel-facility {
+    color: #25a4bb;
+    display: flex;
+    align-items: center;
+    font-size:0.9rem ;
+}
+.List-4 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #cccccc;
+    width: 90%;
+    height: 3.19rem;
+    margin: 0 auto;
+}
+.body .body-1 {
+    border-bottom: 1px solid #cccccc;
+}
+.body .body-2 {
+    margin-top: 1.07rem;
+
+}
+.body .body-2 .List-4 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.body .body-2 .List-4 .fir {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #333333;
+}
+.body .body-2 .List-4 .fir .in {
+    margin-right: 0.6rem;
+}
+.body .body-2 .List-4 .fir .out .ld {
+    font-size: 0.8rem;
+}
+.body .body-2 .List-4 .sec {
+    color: #25a4bb;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+}
+.List-5 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #cccccc;
+    width: 100%;
+    height: 5.19rem;
+    margin: 0 auto;
+}
+.List-5 .left-5 {
+    margin-left: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+.List-5 .left-5 .description {
+    font-size: 1rem;
+}
+.List-5 .left-5 .window {
+    font-size: 0.8rem;
+    color: #b2b2b2;
+    margin: 0.3rem 0;
+}
+.List-5 .left-5 .order {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.List-5 .left-5 .order .fir,.List-5 .left-5 .order .sec{
+background-color: #25a4bb;
+    padding: 0.2rem;
+    color: #fff;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.2rem;
+}
+.List-5 .left-5 .order .thir {
+    background-color: #ff0000;
+    padding: 0.2rem;
+    color: #fff;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.2rem;
+}
+.List-5 .right-5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.List-5 .right-5 .fir{
+    color: #ff6600;
+    font-weight: 900;
+
+}
+.List-5 .right-5 .sec {
+    color: #8c8c8c;
+    font-size: 0.8rem;
+    margin-right: 1.2rem;
+}
+.List-5 .right-5 .thir {
+    width: 2.8rem;
+    height: 1.5rem;
+    background-color: #1ba9ba;
+    color: #fff;
+    font-size: 0.8rem;
+    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.List-5 .right-5 .thir {
+    margin-right: 0.5rem;
+}
+.List-6 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #cccccc;
+    width: 100%;
+    height: 5.19rem;
+    margin: 0 auto;
+    background-color: #f0f0f0;
+}
+.List-6 .left-content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.5rem;
+}
+.List-6 .left-content .fir {
+    font-size: 0.9rem;
+}
+.List-6 .left-content .sec {
+    font-size: 0.75rem;
+    margin: 0.3rem 0;
+    color: #999999;
+}
+.List-6 .left-content .thir {
+    width: 4rem;
+    height: 1.4rem;
+    font-size: 0.9rem;
+    background-color: #ff0000;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.List-6 .right-content {
+    display: flex;
+}
+.List-6 .right-content .right-content-left {
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 5.3rem;
+    height: 5rem;
+}
+.List-6 .right-content .right-content-left .fir {
+    font-size: 1rem;
+    font-weight: 900;
+    color:#fe6600
+}
+.List-6 .right-content .right-content-left .sec {
+    color: #8c8c8c;
+    margin: 0.5rem 0;
+}
+.List-6 .right-content .right-content-left .thir {
+    color:#8c8c8c;
+}
+.List-6 .right-content .right-content-right {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.5rem;
+    border-radius: 10%;
+    height: 80%;
+    align-self: center;
+    border: 1px solid #ff9036;
+    margin-right: 0.5rem;
+}
+
+.List-6 .right-content .right-content-right .up-content {
+    height: 50%;
+    color:  #fff;
+    font-weight: 900;
+    background-color:  #ff9036;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.List-6 .right-content .right-content-right  .down-content {
+    color: #ff9036;
+    font-size: 0.9rem;
+}
+
+/*List-7*/
+.List-7 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #cccccc;
+    width: 100%;
+    height: 5.19rem;
+    margin: 0 auto;
+    background-color: #f0f0f0;
+    position: relative;
+}
+.List-7 .left-content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.5rem;
+}
+.List-7 .left-content .fir div {
+    margin-left: 0.5rem;
+    font-size: 0.8rem;
+    width: 3rem;
+    height: 1.2rem;
+    background-color: #ff6600;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.List-7 .left-content .fir {
+    font-size: 0.9rem;
+    display: flex;
+}
+.List-7 .left-content .sec {
+    font-size: 0.75rem;
+    margin: 0.3rem 0;
+    color: #999999;
+}
+
+.List-7 .right-content {
+    display: flex;
+}
+.List-7 .right-content .right-content-left {
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 5.3rem;
+    height: 5rem;
+}
+.List-7 .right-content .right-content-left .fir {
+    font-size: 1rem;
+    font-weight: 900;
+    color:#fe6600
+}
+.List-7 .right-content .right-content-left .sec {
+    color: #8c8c8c;
+    margin: 0.5rem 0;
+}
+.List-7 .right-content .right-content-left .thir {
+    color:#8c8c8c;
+}
+.List-7 .right-content .right-content-right {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.5rem;
+    border-radius: 10%;
+    height: 80%;
+    align-self: center;
+    border: 1px solid #ff9036;
+    margin-right: 0.5rem;
+}
+
+.List-7 .right-content .right-content-right .up-content {
+    height: 50%;
+    color:  #fff;
+    font-weight: 900;
+    background-color:  #ff9036;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.List-7 .right-content .right-content-right  .down-content {
+    color: #ff9036;
+    font-size: 0.9rem;
+}
+.List-7 img {
+    position: absolute;
+    left: 0;
+    top:0;
+}
+
+/*List-8*/
+.List-8 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #cccccc;
+    width: 100%;
+    height: 5.19rem;
+    margin: 0 auto;
+    background-color: #f0f0f0;
+    position: relative;
+}
+.List-8 .left-content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.5rem;
+}
+
+.List-8 .left-content .fir {
+    font-size: 0.9rem;
+    display: flex;
+}
+.List-8 .left-content .sec {
+    font-size: 0.75rem;
+    margin: 0.3rem 0;
+    color: #ff9036;
+    display: flex;
+}
+.List-8 .left-content .sec .realible {
+    display: flex;
+    border:1px solid #ff9036;
+    margin-right: 0.5rem;
+
+}
+.List-8 .left-content .sec .confirm {
+    display: flex;
+    border:1px solid #ff9036;
+}
+.List-8 .left-content .sec .best {
+    background-color:#ff9036 ;
+    color: #fff;
+    padding-right: 0.3rem;
+}
+.List-8 .right-content {
+    display: flex;
+}
+.List-8 .right-content .right-content-left {
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 5.3rem;
+    height: 5rem;
+}
+.List-8 .right-content .right-content-left .fir {
+    font-size: 1rem;
+    font-weight: 900;
+    color:#fe6600
+}
+.List-8 .right-content .right-content-left .sec {
+    color: #8c8c8c;
+    margin: 0.5rem 0;
+}
+.List-8 .right-content .right-content-left .thir {
+    color:#8c8c8c;
+}
+.List-8 .right-content .right-content-right {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.5rem;
+    border-radius: 10%;
+    height: 80%;
+    align-self: center;
+    border: 1px solid #ff9036;
+    margin-right: 0.5rem;
+}
+
+.List-8 .right-content .right-content-right .up-content {
+    height: 50%;
+    color:  #fff;
+    font-weight: 900;
+    background-color:  #ff9036;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.List-8 .right-content .right-content-right  .down-content {
+    color: #ff9036;
+    font-size: 0.9rem;
+}
+.List-8 img {
+    position: absolute;
+    left: 0;
+    top:0;
+}
+
+/*List-9*/
+.List-9 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #cccccc;
+    width: 100%;
+    height: 5.19rem;
+    margin: 0 auto;
+    background-color: #f0f0f0;
+}
+.List-9 .left-content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.5rem;
+}
+.List-9 .left-content .fir {
+    font-size: 0.9rem;
+}
+.List-9 .left-content .sec {
+    font-size: 0.75rem;
+    margin: 0.3rem 0;
+    color: #999999;
+}
+.List-9 .right-content {
+    display: flex;
+}
+.List-9 .right-content .right-content-left {
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 5.3rem;
+    height: 5rem;
+}
+.List-9 .right-content .right-content-left .fir {
+    font-size: 1rem;
+    font-weight: 900;
+    color:#fe6600
+}
+.List-9 .right-content .right-content-left .sec {
+    color: #8c8c8c;
+    margin: 0.5rem 0;
+}
+.List-9 .right-content .right-content-left .thir {
+    color:#8c8c8c;
+}
+.List-9 .right-content .right-content-right {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.5rem;
+    border-radius: 10%;
+    height: 80%;
+    align-self: center;
+    border: 1px solid #ff9036;
+    margin-right: 0.5rem;
+}
+
+.List-9 .right-content .right-content-right .up-content {
+    height: 50%;
+    color:  #fff;
+    font-weight: 900;
+    background-color:  #ff9036;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.List-9 .right-content .right-content-right  .down-content {
+    color: #ff9036;
+    font-size: 0.9rem;
+}
+
+/*List-10*/
+.List-10 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #cccccc;
+    width: 100%;
+    height: 5.19rem;
+    margin: 0 auto;
+    background-color: #f0f0f0;
+}
+.List-10 .left-content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.5rem;
+}
+.List-10 .left-content .fir {
+    font-size: 0.9rem;
+}
+.List-10 .left-content .sec {
+    font-size: 0.75rem;
+    margin: 0.3rem 0;
+    color: #999999;
+}
+.List-10 .right-content {
+    display: flex;
+}
+.List-10 .right-content .right-content-left {
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 5.3rem;
+    height: 5rem;
+}
+.List-10 .right-content .right-content-left .fir {
+    font-size: 1rem;
+    font-weight: 900;
+    color:#fe6600
+}
+.List-10 .right-content .right-content-left .sec {
+    color: #8c8c8c;
+    margin: 0.5rem 0;
+}
+.List-10 .right-content .right-content-left .thir {
+    color:#8c8c8c;
+}
+.List-10 .right-content .right-content-right {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.5rem;
+    border-radius: 10%;
+    height: 80%;
+    align-self: center;
+    border: 1px solid #ff9036;
+    margin-right: 0.5rem;
+}
+
+.List-10 .right-content .right-content-right .up-content {
+    height: 50%;
+    color:  #fff;
+    font-weight: 900;
+    background-color:  #ff9036;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.List-10 .right-content .right-content-right  .down-content {
+    color: #ff9036;
+    font-size: 0.9rem;
+}
+
+/*List-11*/
+.List-11 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid #cccccc;
+    width: 100%;
+    height: 5.19rem;
+    margin: 0 auto;
+    background-color: #f0f0f0;
+}
+.List-11 p {
+    color: #25a4bb;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 5em;
+}
+
+/*List-12*/
+.List-12 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #cccccc;
+    width: 100%;
+    height: 5.19rem;
+    margin: 0 auto;
+}
+.List-12 .left-12 {
+    margin-left: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+.List-12 .left-12 .description {
+    font-size: 1rem;
+}
+.List-12 .left-12 .window {
+    font-size: 0.8rem;
+    color: #b2b2b2;
+    margin: 0.3rem 0;
+}
+.List-12 .left-12 .order {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.List-12 .left-12 .order .fir,.List-12 .left-12 .order .sec{
+    background-color: #25a4bb;
+    padding: 0.2rem;
+    color: #fff;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.2rem;
+}
+.List-12 .left-12 .order .thir {
+    background-color: #ff0000;
+    padding: 0.2rem;
+    color: #fff;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.2rem;
+}
+.List-12 .right-12 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.List-12 .right-12 .fir{
+    color: #ff6600;
+    font-weight: 900;
+
+}
+.List-12 .right-12 .sec {
+    color: #8c8c8c;
+    font-size: 0.8rem;
+    margin-right: 1.2rem;
+}
+.List-12 .right-12 .thir {
+    width: 2.8rem;
+    height: 1.5rem;
+    background-color: #1ba9ba;
+    color: #fff;
+    font-size: 0.8rem;
+    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.List-12 .right-12 .thir {
+    margin-right: 0.5rem;
+}
+
+/*List-13*/
+.List-13 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #cccccc;
+    width: 100%;
+    height: 5.19rem;
+    margin: 0 auto;
+}
+.List-13 .left-13 {
+    margin-left: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+.List-13 .left-13 .description {
+    font-size: 1rem;
+}
+.List-13 .left-13 .window {
+    font-size: 0.8rem;
+    color: #b2b2b2;
+    margin: 0.3rem 0;
+}
+.List-13 .left-13 .window span {
+    margin: 0 0.5rem;
+}
+.List-13 .left-13 .order {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.List-13 .left-13 .order .fir,.List-13 .left-13 .order .sec{
+    background-color: #25a4bb;
+    padding: 0.2rem;
+    color: #fff;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.2rem;
+}
+.List-13 .left-13 .order .thir {
+    background-color: #ff0000;
+    padding: 0.2rem;
+    color: #fff;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.2rem;
+}
+.List-13 .right-13 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.List-13 .right-13 .fir{
+    color: #ff6600;
+    font-weight: 900;
+
+}
+.List-13 .right-13 .sec {
+    color: #8c8c8c;
+    font-size: 0.8rem;
+    margin-right: 1.2rem;
+}
+.List-13 .right-13 .thir {
+    width: 2.8rem;
+    height: 1.5rem;
+    background-color: #1ba9ba;
+    color: #fff;
+    font-size: 0.8rem;
+    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.List-13 .right-13 .thir {
+    margin-right: 0.5rem;
+}
+
+/*List-14*/
+
+.List-14 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #cccccc;
+    width: 100%;
+    height: 5.19rem;
+    margin: 0 auto;
+}
+.List-14 .left-14 {
+    margin-left: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+.List-14 .left-14 .description {
+    font-size: 1rem;
+}
+.List-14 .left-14 .order {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+.List-14 .left-14 .order .sec{
+    background-color: #25a4bb;
+    padding: 0.2rem;
+    color: #fff;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.2rem;
+}
+.List-14 .left-14 .order .thir {
+    background-color: #ff0000;
+    padding: 0.2rem;
+    color: #fff;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.2rem;
+}
+.List-14 .right-14 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.List-14 .right-14 .fir{
+    color: #ff6600;
+    font-weight: 900;
+
+}
+.List-14 .right-14 .sec {
+    color: #8c8c8c;
+    font-size: 0.8rem;
+    margin-right: 1.2rem;
+}
+.List-14 .right-14 .thir {
+    width: 2.8rem;
+    height: 1.5rem;
+    background-color: #1ba9ba;
+    color: #fff;
+    font-size: 0.8rem;
+    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.List-14 .right-14 .thir {
+    margin-right: 0.5rem;
+}
+
+/*List-15*/
+.List-15 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #cccccc;
+    width: 100%;
+    height: 5.19rem;
+    margin-top: 1.5rem;
+    border-top: 2px solid #cccccc;
+}
+.List-15 p {
+  margin-left: 0.5rem;
+    color: #333333;
+}
+.List-15 p span {
+    color: #25b7df;
+}
+.List-15 .right-15 {
+    margin-right: 0.5rem;
+}
+
+/*List-16*/
+.List-16 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #cccccc;
+    width: 100%;
+    height: 5.19rem;
+
+}
+.List-16 p {
+    margin-left: 0.5rem;
+    color: #333333;
+}
+.List-16 p span {
+    color: #25b7df;
+}
+.List-16 .right-16 {
+    margin-right: 0.5rem;
+}
+
+/*List-17*/
+.List-17 {
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid #cccccc;
+    width: 100%;
+    height: 5.19rem;
+
+}
+.List-17 p {
+    color:#999999;
+    width: 25em;
+    font-size: 0.75rem;
+    display: flex;
+    justify-content: center;
+    line-height: 1.3rem;
+
+}
+/*List-18*/
+.List-18 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-bottom: 2px solid #cccccc;
+    width: 100%;
+    height: 9.19rem;
+
+}
+.List-18 .up-div {
+    width:100%;
+    color: #9e9e9e;
+    display: flex;
+    justify-content: space-around;
+}
+
+.List-18 .up-div div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.List-18 .up-div .ver-line {
+    height: 1rem;
+    width: 1px;
+    background-color: #9e9e9e;
+}
+.List-18 .up-div .underline {
+    text-decoration: underline;
+}
+.List-18 .down-div {
+    color: #9e9e9e;
+    display: flex;
+    justify-content: center;
+}
+.List-18 .down-div span {
+    margin-left: 1rem;
+}

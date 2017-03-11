@@ -1,0 +1,378 @@
+#wrap {
+    width: 1190px;
+    margin: 0 auto;
+    margin-top: 50px;
+
+}
+#wrap .head {
+    width: 100%;
+    height: 84px;
+    background-color: #f3fbfd;
+}
+#wrap .head ul {
+    width: 100%;
+    height: 100%;
+
+}
+#wrap .head ul li {
+   float: left;
+    width: 135px;
+    height:84px;
+    font-family: '宋体';
+    font-size: 14px;
+    text-align: center;
+    border-right: 2px solid #268fc5;
+    border-bottom: 2px solid #268fc5;
+    cursor: pointer;
+
+
+}
+#wrap .head ul li>div{
+    height: 100%;
+    width: 100%;
+    display: table;
+}
+#wrap .head ul li>div .content {
+    display: table-cell;
+    vertical-align: middle;
+    line-height: 25px;
+
+}
+#wrap .head ul li>div .content .price {
+    color: #0e83bf;
+    font-size: 18px;
+}
+
+#wrap .head ul .left-con {
+    height: 100%;
+    width: 46px;
+}
+#wrap .head ul .left-con img {
+    height: 100%;
+    width: 100%;
+}
+#wrap .head ul .right-con {
+     height: 100%;
+     width: 46px;
+    border-bottom: 2px solid #7dbcdc;
+    border-right:0;
+ }
+#wrap .head ul .right-con img {
+    height: 100%;
+    width: 100%;
+}
+#wrap .head ul .right-date img {
+    height: 100%;
+    width: 100%;
+}
+#wrap .head ul .low_price {
+    position: relative;
+}
+#wrap .head ul li .special_price {
+    width: 15px;
+    height: 15px;
+    color: #fff;
+    background-color: #f84980;
+    font-size: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    line-height: 20px;
+}
+/*body部分*/
+#wrap .body {
+    width:100%;
+    height: 400px;
+    position: relative;
+    top:20px;
+}
+#wrap .body .line {
+    background: repeating-linear-gradient(-45deg,#ffc740, #ffc740 5%,#ffb400 5%,#ffb400 10%);
+    position: relative;
+    width: 100%;
+    height: 5px;
+    top:10px;
+}
+#wrap .body .table {
+    border-collapse: collapse;
+    position: relative;
+    top:12px;
+
+}
+#wrap .body .table thead {
+    background-color: #26b4d3;
+    position: relative;
+   font-family: '宋体';
+    font-size: 14px;
+    color: #fff;
+    height: 40px;
+}
+#wrap .body .table thead tr {
+    height: 40px;
+}
+#wrap .body .table tbody {
+    font-family: '宋体';
+    font-size: 14px;
+}
+#wrap .body .table tbody td {
+    width: 300px;
+    height: 120px;
+    color: #666666;
+}
+#wrap .body .table tbody td .model {
+    margin-left: 53px;
+}
+#wrap .body .table tbody td .DM {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+}
+#wrap .body .table tbody td .commom {
+    color: #25b4d2;
+    margin-left: 3px;
+}
+#wrap .body .table tbody td .row-2 {
+    margin-left: 30px;
+}
+.start_fly .time {
+    font-family: Arial;
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+    float: right;
+    margin-right: 20px;
+}
+.start_fly .point {
+    clear: both;
+    float: right;
+    margin-right: 37px;
+    margin-top: 5px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    border: 1px solid #cecece;
+}
+.start_fly .airpoint {
+    clear: both;
+     color: #000;
+    float: right;
+    margin: 5px 20px 0 0;
+    font-size: 13px;
+}
+.start_fly .airpoint>span {
+    margin-left: 5px;
+}
+.start_fly .airpoint>span span {
+    margin-left: 2px;
+}
+.period p{
+    text-align: center;
+    position: relative;
+    top:15px;
+}
+.period .rectangle {
+    width: 30px;
+    height: 6px;
+    border: 1px solid #cacbcb;
+    margin: 5px auto;
+    position: relative;
+    top:15px;
+    background-color: #fff;
+    z-index: 100;
+}
+.period .turn {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #26b4d3;
+    text-align: center;
+    line-height: 20px;
+    margin-bottom: 3px;
+    font-size: 12px;
+    margin-right: 5px;
+    margin-left: 55px;
+    font-family: Arial;
+    color: #fff;
+}
+.period .stop {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #26b4d3;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    margin-right: 5px;
+    margin-left: 55px;
+    color: #fff;
+    font-family: Arial;
+
+}
+.period ul li{
+    font-size: 12px;
+    position: relative;
+    top:19px;
+}
+
+.end_fly .time {
+    font-family: Arial;
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+    float: left;
+    margin-left: 20px;
+}
+.end_fly .point {
+    clear: both;
+    float: left;
+    margin-left: 37px;
+    margin-top: 4px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    border: 1px solid #cecece;
+}
+.end_fly .airpoint {
+    clear: both;
+    color: #000;
+    float: left;
+    margin: 5px 0 0 20px;
+    font-size: 13px;
+}
+.end_fly .airpoint>span {
+    margin-left: 5px;
+}
+.end_fly .com {
+    color: #25b4d2;
+    font-weight: normal;
+    margin-left: 5px;
+}
+.recommend {
+    text-align: center;
+}
+.recommend div {
+    width: 80px;
+    height: 35px;
+    margin: 0 auto;
+    padding-top: 50px;
+    position: relative;
+    left: -9px;
+}
+.recommend .name {
+    color: #0e83bf;
+    float: right;
+}
+.recommend .price {
+    clear: both;
+    float: right;
+    color: #ff7200;
+}
+.last_price p,.last_price2 p{
+    color: #0e83bf;
+    font-size: 18px;
+    font-weight: bold;
+    float: right;
+}
+.last_price p .pri_icon,.last_price2 p .pri_icon {
+    font-size: 12px;
+    font-weight: normal;
+}
+.last_price p .ticket-price,.last_price2 p .ticket-price {
+    color:#333333;
+    font-size: 12px;
+    font-weight: normal;
+    margin-left: 3px;
+}
+.last_price .tax,.last_price2 .tax {
+    color: #666666;
+    font-size: 12px;
+    font-weight: normal;
+}
+.last_price div,.last_price2 div {
+    width: 80px;
+    height: 40px;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+thead th .up-icon {
+    position: relative;
+    left: 4px;
+    top:-5px;
+}
+thead th .down-icon {
+    position: relative;
+    top:1px;
+    left: -3px;
+}
+.temp-line1 {
+    width: 267px;
+    height: 1px;
+    background-color:#cacbcb;
+    position: absolute;
+    top:119px;
+    left: 382px;
+    z-index: 20;
+
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) { .temp-line1  {
+    width: 267px;
+    height: 1px;
+    background-color:#cacbcb;
+    position: absolute;
+    top:118px;
+    left: 389px;
+    z-index: 20; } }
+
+
+
+
+.temp-line2 {
+    width: 267px;
+    height: 1px;
+    background-color:#cacbcb;
+    position: absolute;
+    top:240px;
+    left: 382px;
+    z-index: 20;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) { .temp-line2  {
+    width: 267px;
+    height: 1px;
+    background-color:#cacbcb;
+    position: absolute;
+    top:238px;
+    left: 389px;
+    z-index: 20; } }
+
+.second-line .recommend div {
+    padding: 0;
+    width: 57px;
+    height: 34px;
+    position: relative;
+    top:-19px;
+    left: 3px;
+}
+tbody tr {
+    background-color: #f3fbfd;
+}
+tbody .last_price2 .bg_down {
+    position: relative;
+    top:-5px;
+}
+tbody .last_price2 .up_icon2 {
+    position: relative;
+    top: -48px;
+    left: 54px;
+}
+tbody .last_price2 div {
+    position: relative;
+    top:-40px;
+    left: 5px;
+}
+.body1,.body2,.body3,.body4,.body5,.body6 {
+    width: 100%;
+    height: 400px;
+    display: none;
+}

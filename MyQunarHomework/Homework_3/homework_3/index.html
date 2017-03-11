@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>homework3</title>
+    <link rel="stylesheet" type="text/css" href="Css/style.css">
+    <link rel="stylesheet" type="text/css" href="Css/reset.css">
+    <link rel="stylesheet" href="Css/jquery-ui-1.9.2.custom.css">
+    <script src="Js/head.js"></script>
+    <script src="Js/main.js"></script>
+    <script src="Js/body.js"></script>
+    <script src="Js/jquery-1.8.3.js"></script>
+    <script src="Js/jquery-ui-1.9.2.custom.js"></script>
+
+
+</head>
+<body>
+<div id="wrap">
+    <div class="head">
+        <div class="sub-head"></div>
+       <ul>
+           <li class="record">兑换记录</li>
+           <li class="detail">E币明细</li>
+           <li class="change">E币兑换</li>
+       </ul>
+    </div>
+    <div class="record-body clearFix">
+       <div class="record-body-head clearFix">
+           <ul class="fir">
+               <li class="all" onclick="record_body_head(this)">全部</li>
+               <li class="success" onclick="record_body_head(this)">成功</li>
+               <li class="fail" onclick="record_body_head(this)">失败</li>
+           </ul>
+           <ul class="date">
+               <li class="choose-date">选择日期：</li>
+               <li class="input-date"><input type="text" name="date-b" class="s"></li>
+               <li>至</li>
+               <li class="input-date"><input type="text" name="date-b" class="e"></li>
+           </ul>
+           <ul class="search">
+               <li><a href="#" onclick="search_for()"> 搜索</a></li>
+               <li class="reset"><a href="#" onclick="reset_date()">重置</a> </li>
+           </ul>
+
+       </div>
+        <div class="record-body-content" >
+            <form>
+            <table id="table">
+                <thead>
+                 <tr bgcolor="#f8f8f8"   >
+                     <th align="left">时间</th>
+                     <th align="left">商品名称</th>
+                     <th align="left">数量</th>
+                     <th align="left">E币</th>
+                     <th align="left">状态</th>
+                     <th align="left">信息</th>
+                     <th align="left">兑换信息</th>
+                     <th align="left">确认</th>
+                 </tr>
+                </thead>
+                <tbody id="table_body">
+
+                </tbody>
+                <!--          <tr class="con">
+                             <td >2014-10-28</br>15:37:21</td>
+                             <td >手机50元话费充值</td>
+                             <td >1</td>
+                             <td>190</td>
+                             <td>兑换失败</td>
+                             <td class="cont">充值失败,E币已退回。</td>
+                             <td ><div class="exinformation"><a href="#">兑换信息</a></div></td>
+                             <td></td>
+                         </tr>
+                      <tr class="con">
+                             <td >2014-10-23</br>21:36:44</td>
+                             <td >手机50元话费充值</td>
+                             <td>1</td>
+                             <td>190</td>
+                             <td>兑换失败</td>
+                             <td class="cont">充值失败,E币已退回。</td>
+                             <td ><div class="exinformation"><a href="#">兑换信息</a></div></td>
+                             <td></td>
+                         </tr>
+                         <tr class="con">
+                             <td >2014-10-21</br>15:29:18</td>
+                             <td >手机50元话费充值</td>
+                             <td>1</td>
+                             <td>190</td>
+                             <td>兑换失败</td>
+                             <td class="cont">充值失败,E币已退回。</td>
+                             <td ><div class="exinformation"><a href="#">兑换信息</a></div></td>
+                             <td></td>
+                         </tr>
+                         <tr class="con">
+                             <td >2014-10-21</br>15:06:51</td>
+                             <td >手机50元话费充值</td>
+                             <td>1</td>
+                             <td>190</td>
+                             <td>兑换失败</td>
+                             <td class="cont">充值失败,E币已退回。</td>
+                             <td ><div class="exinformation"><a href="#">兑换信息</a></div></td>
+                             <td></td>
+                         </tr>
+                         <tr class="con">
+                             <td >2014-10-10</br>14:56:28</td>
+                             <td >手机50元话费充值</td>
+                             <td>1</td>
+                             <td>190</td>
+                             <td>兑换失败</td>
+                             <td class="cont">充值失败,E币已退回。测试用例</td>
+                             <td ><div class="exinformation"><a href="#">兑换信息</a></div></td>
+                             <td></td>
+                         </tr>
+                         <tr class="con">
+                             <td >2014-09-25</br>14:03:00</td>
+                             <td >手机50元话费充值</td>
+                             <td>1</td>
+                             <td>190</td>
+                             <td>兑换失败</td>
+                             <td class="cont">充值失败,E币已退回。</td>
+                             <td ><div class="exinformation"><a href="#">兑换信息</a></div></td>
+                             <td></td>
+                         </tr>
+                         <tr class="con">
+                             <td >2014-09-24</br>11:35:38</td>
+                             <td >手机50元话费充值</td>
+                             <td>1</td>
+                             <td>190</td>
+                             <td>兑换失败</td>
+                             <td class="cont">充值失败,E币已退回。测试用例</td>
+                             <td ><div class="exinformation"><a href="#">兑换信息</a></div></td>
+                             <td></td>
+                         </tr>
+                         <tr class="con">
+                             <td >2014-09-24</br>11:34:59</td>
+                             <td >博洋梦澜棉被</td>
+                             <td>1</td>
+                             <td>1049</td>
+                             <td>兑换失败</td>
+                             <td class="cont">您兑换的商品申请处理失败，金币已退回。测试用例。</td>
+                             <td ><div class="exinformation"><a href="#">兑换信息</a></div></td>
+                             <td></td>
+                         </tr>
+                         <tr class="con">
+                             <td >2014-09-22</br>15:34:23</td>
+                             <td >手机50元话费充值</td>
+                             <td>1</td>
+                             <td>190</td>
+                             <td>兑换失败</td>
+                             <td class="cont">充值失败,E币已退回。</td>
+                             <td ><div class="exinformation"><a href="#">兑换信息</a></div></td>
+                             <td></td>
+                         </tr>
+                         <tr class="con">
+                             <td >2014-09-01</br>12:38:36</td>
+                             <td >手机50元话费充值</td>
+                             <td>1</td>
+                             <td>190</td>
+                             <td>兑换失败</td>
+                             <td class="cont">充值失败,E币已退回。</td>
+                             <td ><div class="exinformation"><a href="#">兑换信息</a></div></td>
+                             <td></td>
+                         </tr>
+                         <tr class="con">
+                             <td >2014-08-29</br>18:26:05</td>
+                             <td >手机50元话费充值</td>
+                             <td>1</td>
+                             <td>190</td>
+                             <td>兑换失败</td>
+                             <td class="cont">充值失败,E币已退回。失败处理</td>
+                             <td ><div class="exinformation"><a href="#">兑换信息</a></div></td>
+                             <td></td>
+                         </tr>
+                         <tr class="con">
+                             <td >2014-08-29</br>18:24:37</td>
+                             <td >米奇真空古堡杯</td>
+                             <td>1</td>
+                             <td>323</td>
+                             <td>兑换失败</td>
+                             <td class="cont">您兑换的商品申请处理失败，金币已退回。处理中。失败处理</td>
+                             <td ><div class="exinformation"><a href="#">兑换信息</a></div></td>
+                             <td></td>
+                         </tr>
+                         <tr class="con">
+                             <td >2014-08-18</br>17:41:38</td>
+                             <td >手机50元话费充值</td>
+                             <td>1</td>
+                             <td>190</td>
+                             <td>兑换失败</td>
+                             <td class="cont">充值失败,E币已退回。</td>
+                             <td ><div class="exinformation"><a href="#">兑换信息</a></div></td>
+                             <td></td>
+                         </tr>
+                         -->
+            </table>
+            </form>
+            <div class="end">
+                <ul class="clearFix">
+                <li ><a href="#"> 首页</a></li>
+                <li class="cur-page">1</li>
+                <li ><a href="#">末页</a></li>
+                    <li class="sour">共1页，跳转到</li>
+                    <li ><input type="text" name="page-number"></li>
+                    <li class="targ" >页</li>
+                    <li class="buttn"><input type="button" value="确定" ></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <div class="detail-body">
+        detail-body
+    </div>
+    <div class="change-body">
+        change-body
+    </div>
+    <div class="foot">
+
+    </div>
+</div>
+
+</body>
+</html>

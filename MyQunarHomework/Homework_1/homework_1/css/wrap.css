@@ -1,0 +1,21 @@
+#wrap {
+    height: 6300px;
+    margin: 0 auto;
+}
+.clearFix:after {
+    content: '';
+    clear: both;
+    height: 0;
+    background: lawngreen;
+    display: block;
+}
+ul,li,p{
+    margin: 0;
+    padding: 0;
+}
+a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: #fff;
+}

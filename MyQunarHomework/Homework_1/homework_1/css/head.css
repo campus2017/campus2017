@@ -1,0 +1,66 @@
+#head .background_1 {
+    width:100%;
+    position: relative;
+}
+#head .background_1 .left {
+    width:240px;
+    height: 100px;
+    /*border:1px red solid;*/
+    position:absolute;
+    bottom:35px;
+    left:25%;
+}
+.background_1>img{
+    width: 100%;
+    height:100%;
+}
+.left .left_0,.left .left_1 {
+    width: 100%;
+    height: 100%;
+}
+#head .background_1 .center {
+    width:240px;
+    height: 100px;
+    /*border:1px red solid;*/
+    position:absolute;
+    bottom:35px;
+    left:41%;
+}
+.center .center_0,.center .center_1 {
+    width: 100%;
+    height: 100%;
+}
+
+#head .background_1 .right {
+    width:240px;
+    height: 100px;
+    /*border:1px red solid;*/
+    position:absolute;
+    bottom:35px;
+    left:56.9%;
+}
+.right .right_0,.right .right_1 {
+    width: 100%;
+    height: 100%;
+}
+.right_1,.center_1,.left_1 {
+    position:absolute;
+    top:0;
+    left:0;
+    display:none;
+}
+.icon {
+    position:absolute;
+    top:20%;
+    left:35%;
+    display:none;
+}
+.content_left {
+    position: absolute;
+    top:40%;
+    left:25%;
+    color: white;
+    font-family: 微软雅黑;
+    font-size: 20px;
+}
+

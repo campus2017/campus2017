@@ -1,0 +1,240 @@
+#wrap {
+    width: 800px;
+    margin: 0 auto;
+    padding: 20px 10px 0 0;
+}
+.head {
+    width: 100%;
+    position: relative;
+}
+.sub-head {
+    height: 55px;
+    width: 100%;
+    background-color: #fbfcfd;
+   /* border-bottom: 1px solid #dadada;*/
+    position: relative;
+}
+
+.head ul {
+    position: absolute;
+    top:24px;
+    right: 0;
+
+}
+.head ul li {
+    width: 82px;
+    height: 31px;
+    background-color: #f1f1f1;
+    text-align: center;
+     line-height:31px;
+    float: right;
+   /* margin-top: 24px;*/
+    margin-right: 15px;
+    font-size: 14px;
+    font-family: '宋体';
+    border-top: 1px solid #dadada ;
+    border-left: 1px solid #dadada ;
+    border-right: 1px solid #dadada ;
+    position: relative;
+    z-index: 100;
+    cursor: pointer;
+border-radius: 10% 10% 0 0;
+
+
+}
+
+.head ul .target {
+    background-color: #fff;
+    position: relative;
+    z-index: 300;
+}
+.record-body,.detail-body,.change-body{
+    width: 798px;
+   /* height:200px;*/
+    background-color: #fff;
+    position: relative;
+    z-index: 200;
+    border-top: 1px solid #dadada;
+
+}
+.record-body-head ul {
+    float: left;
+}
+.record-body-head .fir li {
+    width: 67px;
+    height: 26px;
+    background-color: #fff;
+    font-family: '宋体';
+    font-size: 14px;
+    float: left;
+    margin-right: 5px;
+    margin-top: 10px;
+    text-align: center;
+    line-height: 26px;
+    border-radius: 8%;
+    color: #0c5fc4;
+    cursor: pointer;
+}
+.record-body-head .date li {
+    float: left;
+    height: 26px;
+    margin-top: 10px;
+    margin-right: 5px;
+    font-family: '宋体';
+    font-size: 14px;
+    line-height: 26px;
+}
+.record-body-head .date .input-date {
+    height: 25px;
+    position: relative;
+    top:0px;
+
+}
+.record-body-head .date .input-date input {
+    height: 100%;
+    border: 1px solid #cccccc;
+}
+.record-body-head .search {
+    font-family: '宋体';
+    font-size: 14px;
+}
+.record-body-head .search li {
+    width: 67px;
+    height: 26px;
+    background-color: #3775c0;
+    float: left;
+    margin-right: 5px;
+    margin-top: 10px;
+    text-align: center;
+    line-height: 26px;
+    border-radius: 8%;
+    color: #fff;
+    cursor: pointer;
+}
+.record-body-head .search .reset {
+    background-color:#ff0000;
+
+}
+/*下面是body-content表单的css*/
+.record-body-content table {
+    position: relative;
+    top: 20px;
+    width: 100%;
+    border-collapse: collapse;
+    border:1px solid #dadada;
+}
+.record-body-content table tr th{
+    color: #000;
+    font-family: '宋体';
+    font-size: 18px;
+    font-weight: 100;
+    height: 40px;
+}
+.record-body-content table tr td{
+    color: #000;
+    font-family: '宋体';
+    font-size: 14px;
+    font-weight: 100;
+    height: 67px;
+}
+.record-body-content table .exinformation {
+    display: inline-block;
+    margin-left: 5px;
+    width: 70px;
+    height: 30px;
+    border-radius: 10%;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    background-color: #3775c0;
+}
+.record-body-content table .cont {
+    width: 19em;
+    line-height: 2em;
+}
+.record-body-content table .con {
+    border-bottom: 1px solid #dadada;
+}
+.end  {
+      height: 40px;
+    font-family: '宋体';
+    font-size: 12px;
+    background-color:#fbfcfd ;
+    border: 1px solid #dadada;
+    margin-top: 10px;
+    position: relative;
+}
+.end ul {
+   position: absolute;
+    top:12px;
+    right:5px;
+
+}
+.end ul li {
+    float:left;
+    width: 40px;
+    height: 25px;
+    background-color: #fff;
+    margin-right: 1px;
+    line-height: 25px;
+    text-align: center;
+    color: #0c5fc4;
+    border: 1px solid #cccccc;
+
+}
+.end ul li a {
+    color:#0c5fc4 ;
+}
+.end ul .cur-page{
+    background-color:#fbfcfd  ;
+    color: red;
+    border: 0;
+    width: 20px;
+    height: 20px;
+
+}
+.end ul .sour {
+    background-color:#fbfcfd  ;
+    color: #000;
+    border: 0;
+    width: 78px;
+    height: 20px;
+}
+.end ul .targ {
+    background-color:#fbfcfd  ;
+    color: #000;
+    border: 0;
+    width: 20px;
+    height: 20px;
+}
+.end ul li input {
+    width: 100%;
+    height:100%;
+}
+.end ul .buttn {
+    width:40px;
+    height: 25px;
+    border-radius: 10%;
+    background-color: #fbfcfd;
+}
+/*
+.record-body-content table {
+   position: relative;
+    top: 20px;
+
+}
+.record-body-content table tr {
+    height: 30px;
+    text-align: left;
+
+}
+.record-body-content table tr th{
+    color: #000;
+    font-family: '宋体';
+    font-size: 14px;
+    font-weight: 100;
+}
+*/
+.detail-body,.change-body{
+    display: none;
+}

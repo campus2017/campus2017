@@ -1,0 +1,26 @@
+.Container {
+    height: 477px;
+    width: 965px;
+    border: 1px solid #000;
+margin: 50px auto;
+    position: relative;
+    overflow: hidden;
+
+}
+.Container img {
+    border: 1px solid gray;
+}
+.Container .door2 {
+    position: relative;
+    left: -5px;
+}
+.Container .door3 {
+    position: absolute;
+    top: 0px;
+    left: 635px;
+}
+.Container .door4 {
+    position: absolute;
+    top: 0px;
+    left: 795px;
+}
