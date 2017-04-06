@@ -1,0 +1,6 @@
+# 针对题目使用如下语句
+scp file user@l-test.dev.cn1:/tmp
+
+# 自测使用的语句
+scp -P 902 localhost_access_log.2015-11-05.txt u232@112.19.172.71:/tmp
+
