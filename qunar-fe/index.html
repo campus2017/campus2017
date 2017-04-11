@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>退票原因</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" /> 
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="stylesheet" href="./css/animate.css">
+	<link rel="stylesheet" href="./css/index.css">
+	<script>
+    (function (doc, win) {
+        var docEl = doc.documentElement;
+        docEl.style.fontSize = docEl.clientWidth / 7.5 + 'px';
+    })(document, window);
+	</script>
+	<script src="./componets/zepto.js"></script>
+	<script src="./componets/touch.js"></script>
+	<script src="./componets/iscroll.js"></script>
+	<script>
+	var myScroll;
+	function loaded() {
+		myScroll = new iScroll('wrapper',{});
+	}
+	document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+	/*Use this for high compatibility (iDevice + Android)*/
+	document.addEventListener('DOMContentLoaded', function () { setTimeout(loaded, 200); }, false);
+	</script>
+</head>
+<body>
+	<div id="wrapper" >
+		<div id="scroller">
+			<div class="mask"></div>
+			<div class="header">
+				<div class="title">问： 退票手续费不对</div>
+				<div class="tips">请根据您的实际情况选择您退票的原因</div>
+			</div>
+			<div class="reason">退票原因</div>
+			<ul class="reason-list">
+				<li>
+					<div class="reason-item-radio">
+						<input type="radio" id="xwd" name="xwd" value=0 >
+						<label for="xwd" class="iconfont"></label>
+					</div>
+					<div class="reason-item-text">
+						我想改变行程、我不想飞了我想改变行程、我不想飞了我想改变行程、我不想飞了我想改变行程、我不想飞了
+					</div>
+				</li>
+				<li>
+					<div class="reason-item-radio">
+						<input type="radio" id="xwd1" name="xwd" value=1>
+						<label for="xwd1" class="iconfont"></label>
+					</div>
+					<div class="reason-item-text">
+						我想改变行程、我不想飞了我想改变行程、我不想飞了我想改变行程、我不想飞了我想改变行程、我不想飞了
+					</div>
+				</li>
+				<li>
+					<div class="reason-item-radio">
+						<input type="radio" id="xwd2" name="xwd" value=2>
+						<label for="xwd2" class="iconfont"></label>
+					</div>
+					<div class="reason-item-text">
+						我想改变行程、我不想飞了我想改变行程、我不想飞了我想改变行程、我不想飞了我想改变行程、我不想飞了
+					</div>
+				</li>
+				<li>
+					<div class="reason-item-radio">
+						<input type="radio" id="xwd3" name="xwd" value=3>
+						<label for="xwd3" class="iconfont"></label>
+					</div>
+					<div class="reason-item-text">
+						我想改变行程、我不想飞了我想改变行程、我不想飞了我想改变行程、我不想飞了我想改变行程、我不想飞了
+					</div>
+				</li>
+				<li>
+					<div class="reason-item-radio">
+						<input type="radio" id="xwd4" name="xwd" value=4>
+						<label for="xwd4" class="iconfont"></label>
+					</div>
+					<div class="reason-item-text">
+						我想改变行程、我不想飞了我想改变行程、我不想飞了我想改变行程、我不想飞了我想改变行程、我不想飞了
+					</div>
+				</li>
+				<li>
+					<div class="reason-item-radio">
+						<input type="radio" id="xwd5" name="xwd" value=5>
+						<label for="xwd5" class="iconfont"></label>
+					</div>
+					<div class="reason-item-text">
+						我想改变行程、我不想飞了我想改变行程、我不想飞了我想改变行程、我不想飞了我想改变行程、我不想飞了
+					</div>
+				</li>
+			</ul>
+			<div class="footer">
+				<button class="submit disabled">提交</button>
+			</div>
+			<div class="dialog animated">
+				<div class="dialog-title">
+					<span>提示</span>
+					<i class="iconfont icon-close"></i>
+				</div>
+				<div class="dialog-content">病退的退款申请审核为14天，建议您耐心等待，如果您仍有问题，请点击发送问题给客服，我们将会有客服与您联系。</div>
+				<div class="chose">
+					<div class="ensure">发送问题给客服</div>
+					<div class="cancel">知道了</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/index.js"></script>
+</body>
+</html>

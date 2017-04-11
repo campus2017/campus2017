@@ -1,0 +1,231 @@
+
+body,ul,li {
+	padding:0;
+	margin:0;
+	border:0;
+}
+
+@font-face {font-family: "iconfont";
+    src: url('iconfont.eot?t=1491727008424'); /* IE9*/
+	src: url('iconfont.eot?t=1491727008424#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	url('iconfont.woff?t=1491727008424') format('woff'), /* chrome, firefox */
+	url('iconfont.ttf?t=1491727008424') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+	url('iconfont.svg?t=1491727008424#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+	font-family:"iconfont" !important;
+	font-size:16px;
+	font-style:normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.disabled{
+	opacity: .5;
+	pointer-events: none;
+}
+
+
+#wrapper {
+	position:absolute; 
+	top:0; bottom:0;
+	width:100%;
+	overflow:auto;
+}
+
+#scroller {
+	width:100%;
+	padding:0;
+}
+
+#scroller.gray .mask{
+	display: block;
+}
+
+#scroller.gray .dialog{
+	display: block;
+}
+
+#scroller .mask{
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: #000;
+	z-index: 1;
+	opacity: 0.5;
+	display: none;
+}
+
+#scroller .header{
+	height: 1.66rem;
+	background: #1ba9ba;
+	color: #fff;
+	padding-left: .28rem;
+	padding-top: .22rem;
+}
+
+#scroller .header .title{
+	font-size: .36rem;
+}
+
+#scroller .header .tips{
+	margin-top: .22rem;
+	font-size: .28rem;
+}
+
+#scroller .reason{
+	height: .70rem;
+	background: #f0f3f5;
+	font-size: .36rem;
+	padding-left: .2rem;
+	padding-top: .18rem;
+	color: #3b3b3b;
+	border-bottom: #1ba9ba solid .01rem;
+}
+
+#scroller .reason-list li{
+	padding-left: .2rem;
+	padding-top: .24rem;
+	padding-bottom: .24rem;
+	border-bottom: #eeeeee solid .01rem;
+	font-size: .36rem;
+}
+
+#scroller .reason-list li:after{
+	clear: both;
+	content: '';
+	display: table;
+}
+
+#scroller .reason-list .reason-item-radio{
+	width: .44rem;
+	height: .44rem;
+	float: left;
+	position: relative;
+}
+
+#scroller .reason-list .reason-item-radio label{
+	position: absolute;
+	top: 0;
+}
+
+#scroller .reason-list .reason-item-text{
+	margin-left: .20rem;
+	width: 6.4rem;
+	float: left;
+}
+
+input[type="radio"]{
+	visibility: hidden;
+}
+
+input[type="radio"] + label::before {
+	content: '\a0'; /* non-break space */
+	display: inline-block;
+	width: .42rem;
+	height: .42rem;
+	border: #e4e4e4 solid .01rem;
+	border-radius: 50%;
+}
+
+input[type="radio"]:checked + label::before {
+	content: '\e71e';
+	font-size: .48rem;
+	color: #1ba9ba;
+	border: none;
+}
+
+#scroller .footer{
+	margin-top: -0.01rem;
+	border-top: #dddddd  solid .01rem;
+	height: 1.44rem;
+	background: #f0f3f5;
+	position: relative;
+	display: flex;
+	justify-content: center;
+  	align-items: center;
+}
+#scroller .footer .submit{
+	width: 5.80rem;
+	height: .88rem;
+	background: #1ba9ba;
+	text-align: center;
+	line-height: .88rem;
+	color: #fff;
+	font-size: .36rem;
+	border-radius: 0.1rem;
+}
+
+.dialog{
+	width: 6.04rem;
+	height: 4.8rem;
+	z-index: 999;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -2.4rem;
+	margin-left: -3.02rem;
+	background: #f0f3f5;
+	border-radius: 0.2rem;
+	display: none;
+}
+
+.dialog .dialog-title{
+	height: .88rem;
+	background: #1ba9ba;
+	line-height: .44rem;
+	text-align: center;
+	position: relative;
+	border-top-left-radius: 0.2rem ;
+	border-top-right-radius: 0.2rem ;
+}
+
+.dialog .dialog-title span{
+	color: #fff;
+	font-size: .36rem;
+}
+
+.dialog .dialog-title .icon-close{
+	float: right;
+}
+
+.icon-close:before { 
+	color: #fff;
+	content: "\e723";
+	display: block;
+	margin-top: .22rem;
+	margin-right: .22rem;
+}
+
+.dialog .dialog-content{
+	padding: .32rem .24rem 0 .24rem;
+	font-size: .28rem;
+}
+
+.dialog .chose{
+	position: absolute;
+	bottom: 0;
+	font-size: .36rem;
+	display: -webkit-flex;
+	width: 100%;
+	display: flex;
+	height: .92rem;
+	line-height: .92rem;
+	text-align: center;
+	color: #1ba9ba;
+	border-top: #e6e6ea solid 0.01rem;
+	border-bottom-left-radius: 0.2rem ;
+	border-bottom-right-radius: 0.2rem ;
+}
+
+.dialog .chose .ensure{
+	flex: 1;
+	border-right: #e6e6ea solid 0.01rem;
+}
+
+.dialog .chose .cancel{
+	flex: 1;
+}
