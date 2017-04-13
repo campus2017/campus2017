@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	.container{
+		width: 1188px;
+		height: 477px;
+		margin: 0 auto;
+		background: #ccc;
+		overflow: hidden;
+		border: 1px solid #ccc;
+	}
+	</style>
+</head>
+<body>
+	<div class="container"></div>
+
+	<script>
+		'use strict'
+		var oCon=document.querySelector('.container');
+		oCon.style.position="relative";
+		//多少张图片都可以。
+		const imgSrc=["door1.png","door2.png","door3.png","door4.png"];
+		const containerWidth=oCon.offsetWidth;
+		const len=imgSrc.length;
+		for(var i=0;i<len;i++){
+			var oImg=new Image();
+			oImg.src=`images/${imgSrc[i]}`;
+			let oDiv=document.createElement('div');
+            oDiv.style.position="absolute";
+            oDiv.style.webkitTransition="all 0.5s ease-out";
+            oDiv.style.transition="all 0.5s ease-out";
+            oDiv.style.borderLeft="1px solid #ccc";
+            let j=i;
+			oImg.onload=function(){
+				oDiv.style.width=this.width;
+				let distance=(containerWidth-this.width)/(imgSrc.length-1);
+				if(j==0){
+					oDiv.style.left= 0;
+				}else{
+					oDiv.style.left=`${distance+j*distance}px`;
+				}
+				this.onmouseover=function(){
+					for(var x=len-1;x>=0;x--){
+						if(x<=j){
+							document.querySelectorAll('.container div')[x].style.left=`${x*distance}px`;//通过改变定位x的值，触发transition。但是后来实习时，组内分享，transform的translate的性能更好。
+						}else{
+							document.querySelectorAll('.container div')[x].style.left=`${distance+x*distance}px`;
+						}
+					}
+				}
+			}
+			oDiv.appendChild(oImg);
+			oCon.appendChild(oDiv);
+		}
+	</script>
+</body>
+</html>
