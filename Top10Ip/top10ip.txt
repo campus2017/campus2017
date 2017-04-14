@@ -1,0 +1,8 @@
+# awk 编程
+awk '{ips[$1]++} END{for (ip in ips) printf("%d %s\n", ips[ip], ip)}'\n file |sort -n -r | head -n 10
+
+# awk 提取 ip，使用 uniq 统计
+awk '{print $1}' file | sort | uniq -c | sort -nr | head -10
+
+# grep 提取 ip，使用 uniq 统计
+grep -Po '((?:(?:25[0-5]|2[0-4]\d|((1\d{2})|([1-9]?\d)))\.){3}(?:25[0-5]|2[0-4]\d|((1\d{2})|([1-9]?\d))))' file | sort | uniq -c | sort -rn | head -10
