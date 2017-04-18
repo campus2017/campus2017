@@ -1,0 +1,160 @@
+
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	height: auto;
+	width: 100%;
+	-webkit-overflow-scrolling: touch;
+}
+/*退票问题*/
+.return_question {
+	height: 2.0rem;
+	background-color: #1ba9ba;
+	padding-top: 0.35rem;
+}
+.return_question span {
+	color: #fff;
+	margin-left: 0.3rem;
+	display: block;
+}
+.return_question span:first-child{
+	font-size: 0.45rem;
+}
+.return_question span:last-child{
+	font-size: 0.3rem;
+}
+/*退票原因*/
+.return_reason {
+	background-color:#f0f3f5;
+	border-bottom: 1px solid #1ba9ba;
+	height: 1.4rem;
+	line-height: 1.4rem;
+}
+.return_reason span {
+	font-size: 0.45rem;
+	margin-left: 0.3rem;
+}
+/*退票选项*/
+.return_choices {
+	height: auto;
+}
+.return_choices li{
+	width: 100%;
+	display: flex;
+	display: -webkit-flex;
+	border-bottom: 1px solid #eee;
+	padding: 0.8rem 0;
+}
+.return_choices li:hover{
+	cursor: pointer;
+}
+.return_choices li span{
+	display: inline-block;
+	margin-left: 0.2rem;
+	margin-right: 0.3rem;
+	font-size: 0.45rem;
+}
+.return_choices li span:first-child {
+	display: inline-block;
+	margin-left: 0.3rem;
+	margin-top: 0.05rem;
+	color: rgb(212, 212, 212);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-size: 1.8em;
+}
+
+.return_choices li span:last-child {
+	margin-left: 0.1rem;
+	margin-right: 0.3rem;
+}
+
+/*提交按钮*/
+.return_button {
+	height: 2.4rem;
+	background-color:#f0f3f5;
+	line-height: 2.4rem;
+}
+.return_button button{
+	display: inline-block;
+	height: 1.4rem;
+	width: 80%;
+	border: 0;
+	background-color: #98c0c5;
+	border-radius: 3px;
+	color: #fff;
+	font-size: 0.45rem;
+	margin-left: 10%;
+}
+
+/*遮罩和对话框*/
+#mask {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.3);
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+#dialog{
+	width: 80%;
+	height: auto;
+	position: fixed;
+	/*top: 30%;*/
+	top: 100%; 
+	left: 10%;
+}
+#dialoghead {
+	color: #fff;
+	width: 100%;
+	height: 1.2rem;
+	line-height: 1.2rem;
+	background-color: #1ba9ba;
+	font-size: 0.45rem;
+	text-align: center;
+	border-top-left-radius:1em;
+    border-top-right-radius:1em;
+}
+#dialogmiddle {
+	font-size: 0.45rem;
+	padding: 0.4rem 0.4rem 2.0rem 0.4rem;
+	background-color: #f0f3f5;
+	border-bottom: 0.1em solid #e6e6ea;
+}
+#dialogfoot {
+	width: 100%;
+	height: 1.2rem;
+	line-height: 1.2rem;
+	display: flex;
+	background-color: #f0f3f5;
+	border-bottom-left-radius:1em;
+    border-bottom-right-radius:1em;
+    color: #1ba9ba;
+}
+#dialogfoot span{
+	display: inline-block;
+}
+#dialogfoot span:first-child{
+	border-right: 0.1em solid #e6e6ea;
+	flex: 1;
+	text-align: center;
+	font-size: 0.45rem;
+}
+#dialogfoot span:last-child{
+	flex: 1;
+	text-align: center;
+	font-size: 0.45rem;
+}
+#dialogclose {
+	height: 1.2rem;
+	line-height: 1.2rem;
+	position: absolute;
+	top: 0.05rem;
+	right: 0.3rem;
+}
+#dialogclose span {
+	color: #fff;
+	font-size: 0.6rem;
+}
