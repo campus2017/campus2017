@@ -1,2 +1,3 @@
 
-scp  /dir1/1.txt root@192.168.60.135:/tmp
+//linux中从本地目录dir1下拷贝文件linux2.txt到目标机的/tmp目录下
+scp  /dir1/linux2.txt root@192.168.1.65:/tmp
