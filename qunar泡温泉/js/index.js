@@ -16,7 +16,7 @@ $(function() {
 			var $item = $(item);
 			var date = $item.find('.date').html();
 			if(new Date(date).getTime() < new Date(todayDate).getTime()){
-				$item[0].style.backgroundImage='url(img/index/gray'+ (index+1)  +'.png)' ;
+				$item[0].style.backgroundImage='url(images/gray'+ (index+1)  +'.png)' ;
 			}
 		});
 	}
@@ -30,9 +30,10 @@ $(function() {
 	    	var localCity = remote_ip_info["city"] ;
 
 	    	cityName.on('focus',function(){
-	    		$lastItem.find('.white-point').remove();
-				$lastItem[0].style.fontWeight = 'normal'; 
-
+	    		if($lastItem){
+	    			$lastItem.find('.white-point').remove();
+					$lastItem[0].style.fontWeight = 'normal'; 
+	    		}
 				this.style.fontWeight = 'bolder'; 
 				$item.append('<div class="white-point"></div>');
 
