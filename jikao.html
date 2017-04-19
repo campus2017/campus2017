@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+	<title>jikao</title>
+	<!-- <link rel="stylesheet" href="css/font-awesome.css"> -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/jikao.css">
+	<script type="text/javascript" src="js/zepto.min.js"></script>
+	<script type="text/javascript" src="js/flexible.js"></script>
+</head>
+<body>
+    <div id="return_container">
+    	<div class="return_question">
+    		<span>问：退票手续费不对</span><br />
+    		<span>请根据您的实际情况选择您的退票原因</span>
+    	</div>
+    	<div class="return_reason">
+    		<span>退票原因</span>
+    	</div>
+    	<ul class="return_choices">
+    		<li><span class="fa fa-circle-thin"></span><span>我要改变行程，我不想飞了</span></li>
+    		<li><span class="fa fa-circle-thin"></span><span>我要改变行程，我不想飞了</span></li>
+    		<li><span class="fa fa-circle-thin"></span><span>我要改变行程，我不想飞了</span></li>
+    		<li><span class="fa fa-circle-thin"></span><span>我要改变行程，我不想飞了我要改变行程，我不想飞了我要改变行程，我不想飞了</span></li>
+    		<li><span class="fa fa-circle-thin picked"></span><span>我要改变行程，我不想飞了我要改变行程，我不想飞了我要改变行程，我不想飞了我要改变行程，我不想飞了我要改变行程，我不想飞了我要改变行程，我不想我要改变行程，我不想飞了我要改变行程，我不想飞了我要改变行程，我不想飞了飞了</span></li>
+    		<li><span class="fa fa-circle-thin"></span><span>我要改变行程，我不想飞了我要改变行程，我不想飞了我要改变行程，我不想飞了</span></li>
+    		<li><span class="fa fa-circle-thin"></span><span>我要改变行程，我不想飞了我要改变行程，我不想飞了我要改变行程，我不想飞了</span></li>
+    	</ul>
+    	<div class="return_button">
+    		<button id="tijiao_button">提交</button>
+    	</div>
+    </div>
+    <!-- 遮罩层 -->
+	<div id="mask"></div>
+	<div id="dialog">
+		<div id="dialoghead">提示</div>
+		<div id="dialogmiddle">病退的退款申请审核未14天，建议您耐心等待，如果您仍有问题，请点击发送问题给客户，我们将会有客服与您联系。</div>
+		<div id="dialogfoot">
+			<span>发送问题给客服</span>
+			<span>知道了</span>
+		</div>
+		<div id="dialogclose"><span class="fa fa-times"></span></div>
+	</div>
+    <script type="text/javascript" src="js/jikao.js"></script>
+</body>
+</html>
