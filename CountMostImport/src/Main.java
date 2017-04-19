@@ -61,7 +61,9 @@ public class CountMostImportClass {
     }
 
     public String getMostImportClazzName(){
+		
         int max = Integer.MIN_VALUE;
+		int max11 = Integer.MIN_VALUE;
         String clazzName = null;
         for(Entry item: this.importClassRecords.entrySet()){
             String key = (String) item.getKey();
