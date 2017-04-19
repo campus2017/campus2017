@@ -4,8 +4,10 @@ import java.io.File;
 import java.io.FileReader;
 
 public class CountMostImportClass {
+
     String dirName;
     HashMap<String, Integer> importClassRecords;
+
     public MostImportClass(String dir){
         this.dirName = dir;
         importClassRecords = new HashMap<String, Integer>();
@@ -74,7 +76,9 @@ public class CountMostImportClass {
         return clazzName;
     }
 
+    public static void main(String [] args){
 
+    }
 
 }
 

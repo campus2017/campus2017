@@ -4,6 +4,7 @@ import java.io.IOException;
 
 /* 统计一个 Java 文件的有效行数 */
 public class Main {
+
     public static void main(String[] args) {
         if(args == null){
             return;
@@ -12,14 +13,14 @@ public class Main {
     }
     //得到有效行数
     public static int getEffectiveLines(String path){
-        FileReader file_reader = null;
-        BufferedReader buffer_reader = null;
+        FileReader fileReader = null;
+        BufferedReader bufferReader = null;
         int count =0;
         try {
-            file_reader = new FileReader(path);
-            buffer_reader = new BufferedReader(file_reader);
+            fileReader = new FileReader(path);
+            bufferReader = new BufferedReader(fileReader);
             String line = null;
-            while((line = buffer_reader.readLine())!=null){
+            while((line = bufferReader.readLine())!=null){
                 line = line.trim();
                 if(!line.isEmpty()&&!isAnnotation(line)){
                     count++;
@@ -29,8 +30,8 @@ public class Main {
             e.printStackTrace();
         }finally{
             try {
-                buffer_reader.close();
-                file_reader.close();
+                bufferReader.close();
+                fileReader.close();
             } catch (IOException e) {
                 e.printStackTrace();
             }
