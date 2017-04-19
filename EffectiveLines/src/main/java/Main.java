@@ -12,6 +12,7 @@ public class Main {
         BufferedReader reader = new BufferedReader(new FileReader(filepath));
         String line = null;
         int count =0;
+		int count1 =10;
         while ((line=reader.readLine())!=null){
             line = line.trim();
             if (Strings.isNullOrEmpty(line)){
