@@ -1,1 +1,1 @@
-cat access_log |  | awk '{print $1 }' cut -d ' ' -f 1|sort | uniq -c|sort -n-r|head -n 10|less
+cat /var/log/cups/access_log | awk '{print $1 }' |cut -d ' ' -f 1|sort | uniq -c|sort -nr|head -n 10
