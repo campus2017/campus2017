@@ -1,7 +1,7 @@
 import java.io.*;
 
 /**
- * Created by dang on 2017/4/19.
+ * Created by 黄准 on 2017/4/19.
  * All right reserved.
  */
 public class EffectiveLines {
@@ -27,24 +27,11 @@ public class EffectiveLines {
     }
 
     private static boolean isEffectiveLines(String tempLine) {
-        if (tempLine.equals("")) {
+        if (tempLine.trim().equals("")) {
             return false;
-        } else {
-            String tempLineWithoutSpace = null;
-            for (int i = 0; i < tempLine.length(); i++) {
-                if (tempLine.charAt(i) != ' ') {
-                    tempLineWithoutSpace = tempLine.substring(i, tempLine.length());
-                    break;
-                }
-            }
-            if (tempLineWithoutSpace == null) {
-                return false;
-            } else if (tempLineWithoutSpace.length() == 1) {
-                return true;
-            } else if (tempLineWithoutSpace.charAt(0) == '/' && tempLineWithoutSpace.charAt(1) == '/') {
+        } else if (tempLine.trim().startsWith("//") || (tempLine.trim().startsWith("/*")) && tempLine.trim().endsWith("*/")) {
 //                System.out.println("注释行");
-                return false;
-            }
+            return false;
         }
         return true;
     }
@@ -54,6 +41,6 @@ public class EffectiveLines {
 //        String test = "   1//";
 //        System.out.println(e.isEffectiveLines(test));
         String fileName = "F:/IdeaProjects/EffectiveLines/src/main/java/EffectiveLines.java";
-        System.out.println("文件："+fileName+" 的有效行数为："+EffectiveLines.countLinesByFilename(fileName));
+        System.out.println("文件：" + fileName + " 的有效行数为：" + EffectiveLines.countLinesByFilename(fileName));
     }
 }

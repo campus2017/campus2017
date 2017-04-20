@@ -26,6 +26,7 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
 import qunar.fury.ExchangeRate;
+
 public class ExchangeRate {
 
     public static Document getDataByJsoup(String url) {
@@ -35,11 +36,12 @@ public class ExchangeRate {
             String title = doc2.body().toString();
         } catch (SocketTimeoutException e) {
             System.out.println("Socket连接超时");
-        } catch (IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
         }
         return doc2;
     }
+
     public static void getThirtyAvg() {
         double dol = 0;
         double eng = 0;
@@ -88,35 +90,34 @@ public class ExchangeRate {
         WritableWorkbook wwb = null;
         OutputStream os = null;
         try {
-            String[] title = { "1美元对人民币", "1欧元元对人民币", "1港币对人民币" };
+            String[] title = {"1美元对人民币", "1欧元元对人民币", "1港币对人民币"};
             String filePath = "./excl/JXL.xls";
             File file = new File(filePath);
             file.createNewFile();
             os = new FileOutputStream(filePath);
             wwb = Workbook.createWorkbook(os);
             WritableSheet sheet = wwb.createSheet("sheet1", 0);
-            Label label = new Label(0,0,"30天内RMB汇率中间价");
+            Label label = new Label(0, 0, "30天内RMB汇率中间价");
             sheet.addCell(label);
             for (int i = 0; i < title.length; i++) {
-                label = new Label(1 , i , title[i]);
+                label = new Label(1, i, title[i]);
                 sheet.addCell(label);
             }
-            label = new Label ( 2, 0 , df.format(dol));
+            label = new Label(2, 0, df.format(dol));
             sheet.addCell(label);
-            label = new Label ( 2, 1 , df.format(eng));
+            label = new Label(2, 1, df.format(eng));
             sheet.addCell(label);
-            label = new Label ( 2 , 2 , df.format(hon));
+            label = new Label(2, 2, df.format(hon));
             sheet.addCell(label);
             wwb.write();
-        } catch(FileNotFoundException e){
+        } catch (FileNotFoundException e) {
             System.out.println("文件没找到");
-        }  catch (WriteException e) {
+        } catch (WriteException e) {
             System.out.println("输入异常");
-        }
-        catch (Exception exception) {
+        } catch (Exception exception) {
             exception.printStackTrace();
-        } finally{
-            if(wwb != null)
+        } finally {
+            if (wwb != null)
                 try {
                     wwb.close();
                 } catch (WriteException e) {
@@ -126,7 +127,7 @@ public class ExchangeRate {
                     // TODO Auto-generated catch block
                     e.printStackTrace();
                 }
-            if(os != null)
+            if (os != null)
                 try {
                     os.close();
                 } catch (IOException e) {
@@ -134,6 +135,7 @@ public class ExchangeRate {
                 }
         }
     }
+
     public static void main(String[] args) {
         ExchangeRate.getThirtyAvg();
     }

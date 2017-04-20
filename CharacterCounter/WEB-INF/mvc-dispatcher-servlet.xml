@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
 <beans>
-	<bean id="simpleUrlHandlerMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
-	<property name="mappings">
-		<props>
-			<prop key="/count.do">characterCountController</prop>
-		</props>
-	</property>
-	</bean>
-	<bean id="characterCountController" class="com.charactercounter.tools.CharacterCounter"></bean>
+    <bean id="simpleUrlHandlerMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+        <property name="mappings">
+            <props>
+                <prop key="/count.do">characterCountController</prop>
+            </props>
+        </property>
+    </bean>
+    <bean id="characterCountController" class="com.charactercounter.tools.CharacterCounter"></bean>
 </beans>
