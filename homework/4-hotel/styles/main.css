@@ -1,0 +1,507 @@
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f3f3f3;
+    font: normal 14px '宋体', sans-serif;
+    color: #000;
+    -webkit-font-smoothing: antialiased;
+}
+
+a,
+a:visited {
+    display: inline-block;
+    text-decoration: none;
+    outline: 0;
+    color: #25a4bb;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*button*/
+
+.check-price-btn,
+.check-price-btn:visited {
+    display: inline-block;
+    font: 12px '微软雅黑', sans-serif;
+    color: #fff;
+    background: #1ba9ba;
+    text-decoration: none;
+    margin: 14px auto;
+    outline: 0;
+    border: none;
+    height: 20px;
+    width: 48px;
+    border-radius: 4px;
+    line-height: 20px;
+    position: relative;
+    padding-left: 5px;
+}
+
+.check-price-btn:after {
+    content: url(../images/button-arrow.png);
+    position: absolute;
+    right: 5px;
+    bottom: 0;
+}
+
+.onshow>.product-booking-list,
+.onshow>.other-price {
+    display: block;
+}
+
+.onshow .check-price-btn:after {
+    transform: rotate(180deg);
+}
+
+
+/*预定按钮*/
+
+.booking-btn,
+.booking-btn:visited {
+    display: block;
+    background: #fff;
+    color: #ff9036;
+    outline: 0;
+    font: 12px '微软雅黑', sans-serif;
+    height: 42px;
+    width: 42px;
+    text-align: center;
+    border: 1px solid #ff9036;
+    border-radius: 4px;
+}
+
+.booking-btn>p:first-child {
+    margin: 0;
+    font: 20px '宋体';
+    color: #fff;
+    background: #ff9036;
+    height: 21px;
+    line-height: 21px;
+    font-weight: bold;
+}
+
+.booking-btn>p:last-child {
+    margin: 0;
+    height: 19px;
+    line-height: 19px;
+    font-weight: bold;
+}
+
+
+/*tag*/
+
+.tag {
+    display: inline-block;
+    padding: 2px;
+    color: #fff;
+    font-size: 12px;
+}
+
+.tag-best {
+    background: #fff;
+    color: #ff9036;
+    font-size: 12px;
+    padding: 1px 1px 1px 0;
+    border: 1px solid #ff9036;
+}
+
+.tag-best:before {
+    content: '最';
+    color: #fff;
+    font-size: 12px;
+    background: #ff9036;
+    padding: 2px 3px 2px 1px;
+}
+
+.tag-recommend {
+    position: relative;
+}
+
+.tag-recommend:before {
+    content: url(../images/tag-recommend.png);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.blue-bg {
+    background: #25a4bb;
+}
+
+.red-bg {
+    background: #ff0000;
+}
+
+.yellow-bg {
+    background: #ff6600;
+}
+
+
+/*overlay*/
+
+.overlay {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, .6);
+}
+
+
+/*clearfix*/
+
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+header {
+    background: #fff;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.nav {
+    display: flex;
+    height: 43px;
+    background: #25a4bb;
+    justify-content: space-between;
+    border-bottom: 1px solid #1b7a8b;
+}
+
+.nav-back {
+    display: flex;
+    align-items: center;
+    margin-left: 16px;
+}
+
+.nav-product-title {
+    display: flex;
+    font: bold 16px '宋体';
+    color: #fff;
+    align-self: center;
+}
+
+.nav-home {
+    width: 33px;
+    background: url(../images/logo.png) no-repeat;
+    text-align: center;
+}
+
+.home-btn,
+.home-btn:visited {
+    color: #fff;
+    padding-top: 24px;
+    font-size: 10px;
+}
+
+.banner {
+    display: flex;
+}
+
+.banner>img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.product-rate,
+.product-location,
+.product-info {
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    border-bottom: 1px dotted #ccc;
+    margin: 0 10px;
+}
+
+.product-rate-detail {
+    display: flex;
+    align-items: center;
+}
+
+.product-rate-detail>p>span {
+    font: 14px 'Arial';
+}
+
+.product-rate-detail>p>span:first-child {
+    font-size: 16px;
+    color: #25a4bd;
+    font-weight: bold;
+}
+
+.view-rate,
+.view-map,
+.view-service,
+.booking-total {
+    display: flex;
+    align-items: center;
+    background: url(../images/arrow-r.png) right center no-repeat;
+    padding-right: 16px;
+    color: #25a4bb;
+}
+
+.product-location {
+    display: flex;
+    justify-content: space-between;
+    height: 54px;
+}
+
+.product-location-info,
+.product-info-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.product-location-area {
+    font-size: 12px;
+    color: #b2b2b2;
+    margin-top: 8px;
+}
+
+.product-info {
+    height: 58px;
+    border-bottom: none;
+}
+
+.product-info-item {
+    font-family: 'Arial';
+}
+
+.product-info-service {
+    margin-top: 10px;
+}
+
+.product-booking {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 15px;
+}
+
+.booking-info {
+    display: flex;
+    justify-content: space-between;
+    height: 47px;
+    border-bottom: 1px solid #ccc;
+    background: #fff;
+    padding: 0 10px;
+    align-items: center;
+}
+
+.booking-date {
+    background: url(../images/booking-date.png) no-repeat left center;
+    padding: 2px 0 2px 26px;
+    height: 20px;
+}
+
+.booking-date>span {
+    font-family: 'Arial';
+}
+
+.product-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-title-col,
+.product-booking-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 83px;
+    border-bottom: 1px solid #ccc;
+    padding: 0 10px;
+    background: #fff;
+}
+
+.product-item-info,
+.product-booking-info,
+.booking-price-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.product-item-detail,
+.product-booking-sales,
+.product-sales-ordin,
+.product-sales-reduce {
+    font-size: 12px;
+    color: #b2b2b2;
+    margin: 8px 0;
+}
+
+.product-item-price>span:first-child,
+.product-item-price>span:nth-child(2) {
+    color: #ff6600;
+    font: 9px 'Arial';
+}
+
+.product-item-price>span:nth-child(2) {
+    font: bold 18px 'Arial';
+}
+
+.product-item-price {
+    font-size: 12px;
+    color: #8c8c8c;
+}
+
+.product-booking-list {
+    background: #f0f0f0;
+    display: none;
+}
+
+.product-booking-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 14px 0 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.product-booking-item {
+    height: 76px;
+    padding: 0 15px 0 10px;
+    background: #f0f0f0;
+}
+
+.product-booking-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.booking-price-detail {
+    align-items: flex-end;
+    position: absolute;
+    right: 66px;
+}
+
+.product-sales-price {
+    color: #ff6600;
+    font: bold 20px 'Arial';
+}
+
+.product-sales-price>span {
+    font-size: 9px;
+}
+
+.product-sales-ordin {
+    margin: 6px 0px;
+}
+
+.product-sales-reduce {
+    margin: 0;
+}
+
+.booking-info-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.other-price {
+    display: none;
+    text-align: center;
+    padding: 12px 0;
+}
+
+.tag-container {
+    margin-top: 8px;
+}
+
+.other-product {
+    border-top: 1px solid #ccc;
+}
+
+.hotel-nearby,
+.hotel-similar {
+    padding: 0 10px;
+    height: 46px;
+    line-height: 46px;
+    border-bottom: 1px solid #ccc;
+    background: #fff url(../images/arrow-r.png) no-repeat right center content-box;
+}
+
+.hotel-nearby>span,
+.hotel-similar>span {
+    color: #25b7df;
+}
+
+.declaraction {
+    color: #999;
+    padding: 6px 10px;
+    font-size: 12px;
+    line-height: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.service-item {
+    display: flex;
+    justify-content: space-between;
+    height: 42px;
+    padding: 10px 20px;
+}
+
+.service-item>div:nth-child(1),
+.service-item>div:nth-child(2),
+.service-item>div:nth-child(3) {
+    color: #9e9e9e;
+    padding-left: 26px;
+    text-decoration: underline;
+    height: 22px;
+    line-height: 22px;
+    background: url(../images/footer-fly.png) no-repeat left center;
+}
+
+.service-item>div:nth-child(2) {
+    background: url(../images/footer-hotel.png) no-repeat left center;
+    text-decoration: none;
+}
+
+.service-item>div:nth-child(3) {
+    background: url(../images/footer-department.png) no-repeat left center;
+}
+
+.view-service-item {
+    background: url(../images/arrow-d.png) no-repeat 4px center;
+    padding-left: 18px;
+    border-left: 1px solid #acacac;
+    height: 22px;
+    line-height: 22px;
+}
+
+.view-service-item>a,
+.right-info,
+.right-info>a {
+    color: #9e9e9e;
+}
+
+.right-info {
+    margin-top: 10px;
+    padding: 8px 38px;
+}
+
+.right-info>span {
+    font-family: 'arial';
+}
+
+.right-info>a {
+    float: right;
+}

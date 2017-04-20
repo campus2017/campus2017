@@ -1,0 +1,32 @@
+.overlay {
+    background: #000;
+    opacity: .75;
+    filter: alpha(opacity=75);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 100;
+}
+
+.layer {
+    position: fixed;
+    top: 30%;
+    left: 30%;
+    width: 800px;
+    height: 546px;
+    background: url(../images/layer.png) no-repeat;
+    z-index: 101;
+}
+
+.layer-close {
+    width: 32px;
+    height: 32px;
+    background: url(../images/close.png) no-repeat;
+    position: absolute;
+    top: -16px;
+    right: -16px;
+}
+
+.layer-close:hover {
+    background: url(../images/close_hover.png) no-repeat;
+}

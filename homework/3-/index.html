@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-tab cf">
+            <ul class="tab-container cf">
+                <li><a href="">E币兑换</a></li>
+                <li><a href="">E币明细</a></li>
+                <li class="on"><a href="">兑换记录</a></li>
+            </ul>
+        </div>
+        <div class="header-search">
+            <ul class="search-condition">
+                <li><button>全部</button></li>
+                <li><button class="unselect">成功</button></li>
+                <li><button class="unselect">失败</button></li>
+            </ul>
+            <form action="" class="search-date cf">
+                <p>选择日期：<input type="text" class="date-input">&nbsp;至&nbsp;<input type="text" class="date-input"></p>
+                <button type="submit">搜索</button>
+                <button class="btn-r">重置</button>
+            </form>
+        </div>
+    </header>
+    <section class="query-result">
+        <table>
+            <tr class="query-header">
+                <th align="left">时间</th>
+                <th align="left">商品名称</th>
+                <th align="left">数量</th>
+                <th align="left">E币</th>
+                <th align="left">状态</th>
+                <th align="left">信息</th>
+                <th align="left">兑换信息</th>
+                <th align="left">确认</th>
+            </tr>
+        </table>
+        <div class="page cf">
+            <form action="" class="page-content">
+                <button class="page-jump-btn">首页</button>
+                <p>&nbsp;1&nbsp;</p>
+                <button class="page-jump-btn">末页</button>
+                <p>共<span>1</span>页，跳转到&nbsp;<input type="text" class="page-input">&nbsp;页&nbsp;</p>
+                <button class="page-jump-sub" type="submit">确定</button>
+            </form>
+        </div>
+    </section>
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>

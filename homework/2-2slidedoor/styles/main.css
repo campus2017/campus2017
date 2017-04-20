@@ -1,0 +1,9 @@
+.slide-item {
+    float: left;
+    height: 477px;
+    overflow: hidden;
+}
+
+.slide-item>img {
+    display: block;
+}
