@@ -2,41 +2,49 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.util.Scanner;
-
 import com.google.common.base.Strings;
+
 /**
- * Created by asus on 2017/1/16.
+ * Created by Leviathan on 2017/4/20.
  */
 public class Main {
-    public static int count(String filepath) throws Exception {
-        BufferedReader reader = new BufferedReader(new FileReader(filepath));
-        String line = null;
-        int count =0;
-        while ((line=reader.readLine())!=null){
-            line = line.trim();
-            if (Strings.isNullOrEmpty(line)){
-                continue;
-            }else if((line.startsWith("/*")&&line.endsWith("*/"))){
-                continue;
+
+    // match block comments /* */
+    private static final String pattenMultiLine = "/\\*[^*]*\\*+(?:[^/*][^*]*\\*+)*/";
+    // match single line comments //
+    private static final String pattenSingleLine = "//.*";
+
+    private static int count(String filepath) throws Exception {
+
+        int count = 0;
+        try(BufferedReader br = new BufferedReader(new FileReader(filepath))) {
+            String line = null;
+            while((line = br.readLine()) != null) {
+                if(isValidLine(line)) {
+                    count++;
+                }
             }
-            count++;
         }
-        reader.close();
         return count;
     }
+
+    private static boolean isValidLine(String line) {
+        String cleanLine = line.replaceAll(pattenMultiLine, "").replaceAll(pattenSingleLine, "").trim();
+        return !Strings.isNullOrEmpty(cleanLine);
+    }
+
+
     public static void main(String []args){
-        System.out.println("请输入文件路径：");
 
-        Scanner scanner = new Scanner(System.in);
-        String path = scanner.nextLine();
-
+        System.out.println("Input file path:");
+        Scanner sc = new Scanner(System.in);
+        String path = sc.nextLine();
         File file = new File(path);
         if (!file.exists()) {
-            System.out.println("文件不存在！");
-            return;
+            System.out.printf("Error: cannot find file \"%s\"", path);
         }else {
             try {
-                System.out.println("该java文件有效代码行数:"+count(path));
+                System.out.println("Effective lines: " + count(path));
             } catch (Exception e) {
                 e.printStackTrace();
             }
