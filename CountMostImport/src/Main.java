@@ -1,80 +1,169 @@
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.io.IOException;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import java.util.*;
+/*
+三、根据指定项目目录下（可以认为是java源文件目录）中，统计被import最多的类，前十个是什么。
+ */
 
-public class CountMostImportClass {
-    String dirName;
-    HashMap<String, Integer> importClassRecords;
-    public MostImportClass(String dir){
-        this.dirName = dir;
-        importClassRecords = new HashMap<String, Integer>();
-        this.statisticsClazz(new File(this.dirName));
+public class Main {
+
+    private Map<String,Integer> importMap =new HashMap<String,Integer>();
+
+    private class Pair implements Comparable<Pair>
+    {
+        String importName;
+        int count;
+        Pair(String name, int count)
+        {
+            importName = name;
+            this.count = count;
+        }
+
+        public int compareTo(Pair o)
+        {
+            return o.count - count;
+        }
+
+        @Override
+        public String toString()
+        {
+            return '"' + importName + '"' + ": " + count;
+        }
     }
 
-    public int get(String clazzName){
-        Integer value = importClassRecords.get(clazzName);
-        if(value==null) return 0;
-        return value;
-    }
-    public void processFile(File file){
-        BufferedReader reader;
-        try {
-            reader = new BufferedReader(new FileReader(file));
-        } catch (FileNotFoundException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
+    /*
+     *
+     * @param dir
+     */
+    public void getFile(String dir)
+    {
+        if (dir == null)
+        {
             return;
         }
-        String line = null;
-        try {
-            while((line = reader.readLine()) != null){
-                line = line.trim();
-                if(line.startsWith("public")||line.startsWith("class")){
-                    break;
+
+        File file =new File(dir);
+        if (!file.exists())
+        {
+            System.out.println("File Not Exists");
+            return;
+        }
+
+        Stack<File> stack = new Stack<File>();
+        stack.push(file);
+
+        while (!stack.isEmpty())
+        {
+            file = stack.peek();
+            stack.pop();
+
+            for(File f :file.listFiles())
+            {
+                if (f.isFile())
+                {
+                    countImport(f);
+                } else if (f.isDirectory()){
+                    stack.push(f);
                 }
-                if(line.startsWith("import")){
-                    String className = line.substring(6, line.length()-1).trim();
-                    Integer value = importClassRecords.get(className);
-                    if(value==null){
-                        importClassRecords.put(className, 1);
-                    }else{
-                        importClassRecords.put(className, value+1);
+
+            }
+        }
+
+    }
+
+    /*
+     *
+     * @param file
+     */
+    public void countImport(File file)
+    {
+        if (!file.getName().contains(".java"))
+        {
+            return;
+        }
+        BufferedReader br = null;
+
+        try {
+            br = new BufferedReader(new FileReader(file));
+            String line = null;
+            boolean isImport = false;
+
+            while ((line=br.readLine())!=null)
+            {
+                // 忽略 import static 行
+                Pattern p = Pattern.compile("^import\\s+static\\s+");
+                Matcher m = p.matcher(line.trim());
+                if (m.find()) {
+                    continue;
+                }
+
+                // 匹配 import 开始行
+                p = Pattern.compile("^import\\s+");
+                m = p.matcher(line.trim());
+                if (m.find()) {
+                    isImport = true;
+                    String temp = line.trim().substring(6).replace(";", "");
+                    if (importMap.containsKey(temp))
+                    {
+                        int count = importMap.get(temp);
+                        count++;
+                        importMap.put(temp,count);
+                    } else {
+                        importMap.put(temp,1);
                     }
                 }
             }
+
         } catch (IOException e) {
             e.printStackTrace();
-        }
-    }
-
-    public void statisticsClazz(File file){
-        if(!file.isDirectory()){
-            processFile(file);
-        }else{
-            File [] files = file.listFiles();
-            for(File tmpFile: files){
-                statisticsClazz(tmpFile);
+        } finally {
+            if (br != null)
+            {
+                try {
+                    br.close();
+                } catch (IOException e)
+                {
+                    e.printStackTrace();
+                }
             }
         }
-
     }
 
-    public String getMostImportClazzName(){
-        int max = Integer.MIN_VALUE;
-        String clazzName = null;
-        for(Entry item: this.importClassRecords.entrySet()){
-            String key = (String) item.getKey();
-            int value = (Integer)item.getValue();
-            if(value>max){
-                max = value;
-                clazzName = key;
-            }
+    /**
+     *
+     */
+    public void countTop10Import()
+    {
+        List<Pair> list = new ArrayList<Pair>();
+        Set<String> importNames = importMap.keySet();
+        for(String importName :importNames)
+        {
+            Pair pair = new Pair(importName,importMap.get(importName));
+            list.add(pair);
         }
-        return clazzName;
+
+        Pair[] pairArray = new Pair[0];
+        pairArray = list.toArray(pairArray);
+        Arrays.sort(pairArray);
+        int N=0;
+        for (Pair pair : pairArray)
+        {
+            if (++N >10)
+            {
+                break;
+            }
+            System.out.println(pair);
+        }
     }
 
-
-
+    public static void main(String[] args) {
+        String dirPath = "\\Users\\Administrator\\IdeaProjects\\CountMostImport\\src";
+        Main c = new Main();
+        c.getFile(dirPath);
+        c.countTop10Import();
+    }
 }
-
