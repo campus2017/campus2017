@@ -1,0 +1,1 @@
+scp /dir/temp.txt root@l-test.dev.cn1:/tmp

@@ -1,0 +1,3 @@
+awk '{a[$1] +=1;} END {for(i in a) printf(¡°%s %d\n¡±,a[i],i);}' apache_log |sort -nr|head -n 10
+
+
