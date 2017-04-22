@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="CountMostImport" />
+        <module name="ExchangeRate" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="CountMostImport" target="1.5" />
+      <module name="ExchangeRate" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
