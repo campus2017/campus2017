@@ -32,7 +32,7 @@ public class Main {
             }
 
         }
-        FileOutputStream os=new FileOutputStream("/Users/lfz/15.xls");
+        FileOutputStream os=new FileOutputStream("/Users/lfz/rate.xls");
         workbook.write(os);
         os.close();
     }
