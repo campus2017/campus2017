@@ -1,0 +1,1 @@
+scp /dir1/ÎÄ¼şÃû root@l-test.dev.cn1:/tmp
