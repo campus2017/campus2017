@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+.slide-container {
+	height: 477px;
+	width: 950px;
+	border: 1px solid #000;
+	margin: 0px auto;
+	margin-top: 80px;
+	position: relative;
+	border: solid 1px #777;
+	border-top:none;
+	overflow: hidden;
+	box-shadow: 1px 1px 1px #777;
+}
+
+img {
+	border: 1px solid gray;
+}
+
+.door2 {
+	position: absolute;
+	left: 475px;
+}
+
+.door3 {
+	position: absolute;
+	top: 0px;
+	left: 635px;
+}
+
+.door4 {
+	position: absolute;
+	top: 0px;
+	left: 795px;
+}
