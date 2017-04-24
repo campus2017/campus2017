@@ -7,16 +7,28 @@
     <groupId>com.qunar.fresh2017</groupId>
     <artifactId>ExchangeRate</artifactId>
     <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <jsoup-version>1.7.3</jsoup-version>
+        <poi-version>3.9</poi-version>
+        <httpcomponents-version>4.0.2</httpcomponents-version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.jsoup</groupId>
             <artifactId>jsoup</artifactId>
-            <version>1.7.3</version>
+            <version>${jsoup-version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi</artifactId>
-            <version>3.9</version>
+            <version>${poi-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>${httpcomponents-version}</version>
         </dependency>
     </dependencies>
 
