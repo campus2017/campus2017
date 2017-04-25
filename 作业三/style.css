@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding:0;
+}
+
+/*内容水平居中*/
+#main{
+    display: table;
+    margin:auto;
+    font-size: 14px;
+}
+/*工具栏样式*/
+#main .tools{
+    overflow: hidden;
+}
+
+#main .tools div{
+    float: left;
+
+}
+
+#main .tab ul{
+    list-style: none;
+    color: rgb(55,117,192);
+}
+
+#main .tab ul li{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.tab ul li.active{
+    color: white;
+    background-color: rgb(55,117,192);
+    height: 24px;
+    width: 60px;
+    line-height: 24px;
+    text-align: center;
+    border-radius: 3px;
+
+}
+
+
+.tools .search form input{
+    height: 20px;
+}
+
+.tools .search form button{
+    width: 60px;
+    height: 24px;
+    color: white;
+    border-radius: 3px;
+    border: none;
+}
+button#so{
+    background-color:rgb(55,117,192);
+
+ }
+.tools .search form button[type=reset]{
+    background-color: rgb(255,0,0);
+}
+
+
+/*表格样式*/
+table tr{
+    text-align: left;
+    height: 45px;
+}
+
+
+table tr td:first-child{
+    width: 120px;
+}
+table  tr td:nth-child(2){
+    width: 180px;
+}
+
+table tr td:nth-child(3){
+    width: 100px;
+}
+table tr td:nth-child(4){
+    width: 100px;
+}
+table tr td:nth-child(5){
+    width: 100px;
+}
+table tr td:nth-child(6){
+    width: 250px;
+}
+
+table tr td:nth-child(7){
+    width: 100px;
+}
+
+table tr td:nth-child(8){
+    width: 100px;
+}
+
+.exchange{
+    display: block;
+    background-color: rgb(55,117,192);
+    text-align: center;
+    width: 72px;
+    height: 22px;
+    line-height: 22px;
+    border-radius: 3px;
+    color: white;
+}
+
+
+
+.footer{
+    text-align: right;
+}
+
+.footer a{
+    color: #5a8fff;
+    text-decoration: none;
+}
+
+.footer input{
+    width: 25px;
+}
+
+
+
+
+
+
+
+

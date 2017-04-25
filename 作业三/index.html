@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="main">
+    <div class="tools">
+        <div class="tab">
+            <ul>
+                <li id="all" class="active">全部</li>
+                <li id="success">成功</li>
+                <li id="failure">失败</li>
+            </ul>
+        </div>
+        <div class="search">
+           <form>
+               <lable>选择日期：</lable>
+               <!--直接使用type="date"未考虑兼容性-->
+                <input type="date">
+                <lable>至</lable>
+                <input type="date">
+                <button id="so">搜索</button>
+                <button type="reset">重置</button>
+           </form>
+        </div>
+    </div>
+    <div class="content">
+        <table>
+            <thead>
+            <tr>
+                <td>时间</td>
+                <td>商品名称</td>
+                <td>数量</td>
+                <td>E币</td>
+                <td>状态</td>
+                <td>信息</td>
+                <td>兑换信息</td>
+                <td>确认</td>
+            </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <div class="footer">
+        <a href="">首页</a>
+        <span id="page_num">1</span>
+        <a href="">末页</a>
+        <span id="page_count"></span>
+        <span>跳转到</span>
+        <input type="text">
+        <span>页</span>
+        <button>确定</button>
+    </div>
+</div>
+<script src="index.js"></script>
+</body>
+</html>

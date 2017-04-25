@@ -1,0 +1,21 @@
+#sliding{
+    position: relative;
+    width: 955px;
+    height: 477px;
+    margin: auto;
+    overflow: hidden;
+    border-right: 1px solid gray;
+    border-bottom: 1px solid gray;
+
+}
+
+#sliding .door{
+    width: 475px;
+    height: 477px;
+    border-left: 1px solid gray;
+    box-sizing: border-box;
+    position: absolute;
+    top:0;
+    overflow: hidden;
+    transition: left 0.3s linear 0s;//过渡效果使用CSS3暂未考虑兼容性
+}
