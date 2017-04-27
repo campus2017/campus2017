@@ -1,0 +1,4 @@
+sudo scp /home/young/dir1/test_scp l-test.dev.cn1@192.168.1.111:/home/young/tmp
+
+【说明】
+利用虚拟机进行了测试，“l-test.dev.cn1”在测试过程中是实际的用户名，命令其他部分跟实际测试中的一样
