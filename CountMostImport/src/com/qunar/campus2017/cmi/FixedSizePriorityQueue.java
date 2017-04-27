@@ -2,6 +2,7 @@ package com.qunar.campus2017.cmi;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.PriorityQueue;
 
 /**
@@ -9,7 +10,7 @@ import java.util.PriorityQueue;
  */
 public class FixedSizePriorityQueue<E extends  Comparable> {
 
-        private PriorityQueue<E> queue; //use as a maxHeap
+        private PriorityQueue<E> queue; //use as a minHeap
         private final int maxSize;  // fixed heap size
 
         public FixedSizePriorityQueue(int maxSize) {
@@ -24,7 +25,7 @@ public class FixedSizePriorityQueue<E extends  Comparable> {
                 queue.add(e);
             } else { // Queue full
                 E peek = queue.peek();
-                if (e.compareTo(peek) < 0) {
+                if (e.compareTo(peek) > 0) {
                     queue.poll();
                     queue.add(e);
                 }
@@ -33,7 +34,14 @@ public class FixedSizePriorityQueue<E extends  Comparable> {
 
         public ArrayList<E> sortedList() {
             ArrayList<E> list = new ArrayList<E>(queue);
-            Collections.sort(list); // sort the topN list.
+            Collections.sort(list, new Comparator<E>(){
+
+                @Override
+                public int compare(E o1, E o2) {
+                    return o2.compareTo(o1);
+                }
+
+            }); // sort the topN list.
             return list;
         }
     }

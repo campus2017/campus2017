@@ -25,6 +25,6 @@ public class ImportCountEntry implements Comparable<ImportCountEntry>{
 
     @Override
     public int compareTo(ImportCountEntry o) {
-        return o.count.compareTo(this.count);
+        return this.count.compareTo(o.count);
     }
 }
