@@ -22,7 +22,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" scope="PROVIDED" name="Tomcat 7.0.75" level="application_server_libraries" />
+    <orderEntry type="library" scope="PROVIDED" name="Tomcat 8.5.14" level="application_server_libraries" />
     <orderEntry type="library" name="Spring-4.3.6.RELEASE" level="project" />
     <orderEntry type="library" name="Spring MVC-4.3.6.RELEASE" level="project" />
     <orderEntry type="module-library">
