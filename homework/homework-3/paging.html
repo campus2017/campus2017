@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>paging</title>
+<link rel="stylesheet" href="styles/paging.css">
+<script src="scripts/paging.js"></script>
+</head>
+
+<body>
+	<header>
+		<ul>
+			<li class="e-tab-record tab-click-on" id="e-tab-record"><a>兑换记录</a></li>
+			<li class="e-tab-detail" id="e-tab-detail"><a>E币明细</a></li>
+			<li class="e-tab-exchange" id="e-tab-exchange"><a>E币兑换</a></li>
+		</ul>
+	</header>
+	<section class="e-exchange-container" id="e-exchange-container">E币兑换</section>
+	<section class="e-detail-container" id="e-detail-container">E币明细</section>
+	<section class="e-record-container" id="e-record-container">
+		<div class="e-record-filter">
+			<div class="display-category">
+				<button class="category-button display-category-click-on">全部</button>
+				<button class="category-button">成功</button>
+				<button class="category-button">失败</button>
+			</div>
+			<div class="choice-time">
+				<span>选择日期：</span><span><input type="text" /></span><span>至</span><span><input
+					type="text" /></span>
+			</div>
+			<div class="search-function">
+				<button class="function-search">搜索</button>
+				<button class="function-reset">重置</button>
+			</div>
+		</div>
+
+		<table class="e-record-info">
+			<tr class="e-record-info-title">
+				<th>时间</th>
+				<th>商品名称</th>
+				<th>数量</th>
+				<th>E币</th>
+				<th>状态</th>
+				<th>信息</th>
+				<th>兑换信息</th>
+				<th>确认</th>
+			</tr>
+		</table>
+		<div class="page-info">
+			<span><button class="page-info-start">首页</button></span> <span
+				class="page-num">1</span> <span><button class="page-info-end">末页</button></span>
+			<span>共1页，跳转到</span><span><input type="text" /></span><span>页</span><span><button
+					class="page-info-confirm">确定</button>
+		</div>
+	</section>
+</body>
+</html>

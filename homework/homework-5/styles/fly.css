@@ -1,0 +1,258 @@
+@charset "utf-8";
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+.flight-info {
+	width: 912px;
+	height: 350px;
+	margin: 20px auto;
+}
+
+ul {
+	text-align: center;
+	position: relative;
+}
+
+li {
+	list-style: none;
+	float: left;
+	cursor: pointer;
+}
+
+.date {
+	float: left;
+	width: 102px;
+	height: 70px;
+	padding-top: 5px;
+	font-size: 14px;
+	border-left: 1px solid #268fc5;
+	border-bottom: 1px solid #268fc5;
+	background: #f3fbfd;
+}
+
+.nav-click {
+	float: left;
+	width: 102px;
+	height: 70px;
+	padding-top: 5px;
+	font-size: 14px;
+	border-top: 1px solid #268fc5;
+	border-left: 1px solid #268fc5;
+	border-bottom: 0px solid #268fc5;
+	background: white;
+}
+
+.date-back {
+	height: 75px;
+	border-bottom: 1px solid #0e83bf;
+	background: #f3fbfd;
+}
+
+.date-forward {
+	height: 75px;
+	border-left: 1px solid #7dbcdc;
+	border-bottom: 1px solid #0e83bf;
+	background: #f3fbfd;
+}
+
+.money {
+	font-size: 16px;
+	color: #0e83bf;
+	margin: 0
+}
+
+.low {
+	top: 2px;
+	left: 358px;
+	position: absolute;
+	background-color: #f84980;
+	color: #fff;
+}
+
+.flight-nav-text {
+	height: 35px;
+	margin-top: -5px;
+	padding-top: 10px;
+	background: #26b4d3;
+	font-size: 16px;
+	color: #fff;
+	text-align: center;
+}
+
+.info {
+	margin-left: 56px;
+}
+
+.up-icon, .down-icon {
+	cursor: pointer;
+}
+
+.total-time, .lowest-price {
+	position: relative;
+}
+
+.up-icon {
+	top: 6px;
+	position: absolute;
+}
+
+.flight-content-left {
+	height: 200px;
+	width: 640px;
+	float: left;
+}
+
+.flight-content-left-info {
+	height: 100px;
+	width: 640px;
+}
+
+.flight-content-middle {
+	height: 200px;
+	width: 100px;
+	float: left;
+}
+
+.flight-content-title {
+	margin: 20px 0px 0px 40px;
+	float: left;
+}
+
+.flight-content-share {
+	margin: 45px 0px 0px 5px;
+	float: left;
+	color: #25b4d2;;
+	font-size: 10px;
+	cursor: pointer;
+}
+
+.flight-content-total-time {
+	float: left;
+}
+
+.flight-content {
+	width: 912px;
+	height: 200px;
+	background-color: #f3fbfd;
+}
+
+.info-top, .flight-version-width {
+	border-bottom: 0.1rem dotted #ccc;
+}
+
+.flight-content-total-time-up {
+	height: 40px;
+	line-height: 60px;
+}
+
+.flight-version-width, .flight-version-shape {
+	color: #666;
+	font-size: 12px;
+	font-family: ' Arial ';
+}
+
+.flight-start-location, .flight-change-location, .flight-end-location {
+	font-size: 12px;
+	color: #666;
+	float: left;
+	margin-top: 3px;
+}
+
+.flight-content-total-time img {
+	margin-left: 130px;
+}
+
+.flight-start-time {
+	font-family: "微软雅黑";
+	font-size: 20px;
+	margin-left: 70px;
+}
+
+.flight-total-time {
+	font-size: 12px;
+	color: #666;
+	margin-left: 90px;
+}
+
+.flight-end-time {
+	font-family: "微软雅黑";
+	font-size: 20px;
+	margin-left: 60px;
+}
+
+.flight-start-location {
+	margin-left: 50px;
+}
+
+.flight-change-location {
+	margin-left: 60px;
+}
+
+.change-icon {
+	background-color: #26b4d3;
+	font-size: 12px;
+	font-family: Arial;
+	color: #fff;
+}
+
+.flight-end-location {
+	margin-left: 50px;
+}
+
+.flight-start-location-down {
+	margin-left: 20px;
+}
+
+.flight-add-time {
+	color: #25b4d2;
+	font-size: 16px;
+	font-family: "宋体";
+	margin-left: 1px;
+}
+
+.flight-content-middle-up {
+	padding-top: 50px;
+	padding-left: 10px;
+	height: 65px;
+}
+
+.flight-content-middle-down {
+	padding-left: 10px;
+}
+
+.flight-content-middle-title {
+	font-size: 14px;
+	color: #0e83bf;
+}
+
+.flight-content-middle-money {
+	color: #ff7200;
+	font-size: 12px;
+	margin-left: 5px;
+	font-family: 'Arial';
+}
+
+.flight-content-right-money span {
+	font-size: 20px;
+	color: #0e83bf;
+}
+
+.flight-content-right {
+	float: left;
+	padding-top: 50px;
+	margin-left: 40px;
+}
+
+.flight-content-right-tax {
+	font-size: 12px;
+	margin-left: 10px;
+	color: #666;
+}
+
+.flight-content-right img {
+	margin: 10px 0 0 10px;
+	cursor: pointer;
+}

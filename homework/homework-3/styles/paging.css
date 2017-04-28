@@ -1,0 +1,154 @@
+@charset "utf-8";
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+header {
+	width: 1000px;
+	height: 50px;
+	margin: 0px auto;
+	background: #fbfcfd;
+	border-bottom: 1px solid #e0e0e0;
+}
+
+a {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+header li {
+	list-style: none;
+}
+
+.e-exchange-container, .e-detail-container {
+	width: 1000px;
+	height: 50px;
+	margin: 0px auto;
+	display: none;
+}
+
+.e-tab-exchange, .e-tab-detail, .e-tab-record {
+	width: 80px;
+	height: 30px;
+	margin: 19px 9px 0px 0px;
+	font-size: 15px;
+	float: right;
+	text-align: center;
+	line-height: 30px;
+	background: #f1f1f1;
+	border: 1px solid #e0e0e0;
+	float: right;
+}
+
+.tab-click-on {
+	background: #fff;
+	border-bottom: none;
+}
+
+.e-record-filter {
+	width: 960px;
+	height: 50px;
+	line-height: 50px;
+	margin: 0 auto;
+}
+
+.e-record-filter button {
+	border: none;
+	border-radius: 4px;
+	font-size: 14px;
+	width: 65px;
+	height: 30px;
+	width: 65px;
+	cursor: pointer;
+}
+
+.category-button {
+	color: #3775c0;
+	background: #fff;
+}
+
+.display-category-click-on, .function-search {
+	color: #fff;
+	background: #3775c0;
+}
+
+.display-category {
+	float: left;
+}
+
+.choice-time {
+	margin-left: 60px;
+	float: left;
+}
+
+.choice-time input {
+	width: 190px;
+	height: 30px;
+	margin-left: 5px;
+	border: 1px solid #ccc;
+}
+
+.search-function {
+	float: left;
+	margin-left: 60px;
+}
+
+.function-reset {
+	color: #fff;
+	background: red;
+}
+
+.e-record-info {
+	width: 960px;
+	margin: 0 auto;
+	border: 1px solid #ccc;
+}
+
+.e-record-info-title {
+	height: 30px;
+	background: #f8f8f8;
+}
+
+.e-record-info-title th {
+	padding-left: 5px;
+	text-align: left;
+	font-weight: normal;
+}
+
+.page-info {
+	width: 310px;
+	height: 35px;
+	line-height: 35px;
+	padding-left: 650px;
+	background: #f8f8f8;
+	margin: 0 auto;
+	font-size: 14px;
+	border: 1px solid #ccc;
+	background: #f8f8f8;
+	background: #f8f8f8;
+	border: 1px solid #ccc;
+	background: #f8f8f8;
+}
+
+.page-info input {
+	width: 30px;
+	height: 20px;
+	margin-left: 5px;
+	border: 1px solid #ccc;
+}
+
+.page-info button {
+	width: 46px;
+	height: 26px;
+	color: #3775c0;
+	border: 1px solid #e6e6e6;
+	border-radius: 4px;
+	background: #fff;
+	cursor: pointer;
+}
+
+.page-num {
+	color: red;
+}

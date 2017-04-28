@@ -1,0 +1,289 @@
+@charset "utf-8";
+
+* {
+	margin: 0rem;
+	padding: 0rem;
+}
+
+header {
+	height: 2.69rem;
+	line-height: 2.69rem;
+	width: 100%;
+	background-color: #25a4bb;
+	border-bottom: 2px solid #1b7a8b;
+	display: flex;
+}
+
+body {
+	color: #000;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.back-icon, .hotel-name, .qunar-logo {
+	float: left;
+}
+
+.hotel-name {
+	margin: 0 auto;
+}
+
+.hotel-name p {
+	font-size: 1.125rem;
+	color: #ffffff;
+}
+
+.hotel-picture {
+	position: relative;
+	width: 100%;
+}
+
+.hotel-picture img {
+	width: 100%;
+}
+
+.hotel-picture div {
+	bottom: 0.5rem;;
+	right: 1rem;
+	position: absolute;
+}
+
+.hotel-score {
+	height: 45px;
+	line-height: 45px;
+	float: left;
+}
+
+.hotel-open-year {
+	height: 60px;
+	float: left;
+}
+
+.hotel-score span:first-child {
+	color: #25a4bb;
+}
+
+.hotel-score-container {
+	width: 90%;
+	height: 45px;
+	line-height: 45px;
+	border-bottom: 0.2rem dotted #ccc;
+	margin: 0 auto;
+}
+
+.hotel-facilities-container {
+	width: 90%;
+	height: 60px;
+	margin: 0 auto;
+}
+
+.hotel-comment, .hotel-facilities, .hotel-days {
+	height: 45px;
+	display: flex;
+	float: right;
+}
+
+.hotel-comment a, .hotel-map a, .hotel-days a {
+	font-size: 0.9rem;
+	color: #25a4bb;
+	font-size: 0.9rem;
+}
+
+.hotel-facilities a {
+	font-size: 0.9rem;
+	color: #25a4bb;
+	margin-top: 12px;
+	font-size: 0.9rem;
+}
+
+.hotel-location-container {
+	width: 90%;
+	height: 65px;
+	border-bottom: 0.2rem dotted #ccc;
+	margin: 0 auto;
+}
+
+.hotel-location {
+	float: left;
+	height: 60px;
+	margin-top: 10px;
+}
+
+.hotel-location p:last-child {
+	font-size: 0.8rem;
+	color: #989696;
+}
+
+.hotel-map {
+	height: 65px;
+	display: flex;
+	float: right;
+	display: flex;
+}
+
+.hotel-map a {
+	margin-top: 22px;
+	font-size: 0.9rem;
+}
+
+.hotel-info {
+	height: 173px;
+	border-bottom: 0.1rem solid #ccc;
+}
+
+.hotel-price {
+	width: 100%;
+	margin-top: 10px;
+	padding-top: 4px;
+	border-top: 0.1rem solid #ccc;
+}
+
+.hotel-time-container {
+	width: 90%;
+	height: 45px;
+	line-height: 45px;
+	border-bottom: 0.1rem solid #ccc;
+	margin: 0 auto;
+}
+
+.hotel-time {
+	height: 45px;
+	line-height: 45px;
+	display: flex;
+	float: left;
+}
+
+.hotel-time img {
+	margin-top: 2px;
+}
+
+.hotel-layout {
+	width: 90%;
+	height: 83px;
+	border-bottom: 0.1rem solid #ccc;
+	margin: 0 auto;
+}
+
+.hotel-layout-left {
+	float: left;
+}
+
+.hotel-layout-right {
+	height: 83px;
+	line-height: 83px;
+	float: right;
+}
+
+.hotel-layout-middle {
+	color: #989696;
+	font-size: 0.9rem;
+}
+
+.team-buying, .night-purchase {
+	background-color: #25a4bb;
+	font-size: 0.95px;
+	padding: 1px;
+	color: #fff;
+	padding-right: 2px;
+}
+
+.star-ticket {
+	background-color: red;
+	font-size: 0.95px;
+	padding: 1px;
+	color: #fff;
+	padding-right: 2px;
+}
+
+.hotel-layout {
+	padding-top: 10px
+}
+
+.money {
+	font-weight: bold;
+	font-size: 1.2rem;
+	color: #ff6600;
+}
+
+.price-start {
+	color: #8c8c8c;
+}
+
+.compare-price {
+	width: 60px;
+	height: 35px;
+	line-height: 30px;
+	background-color: #1ba9ba;
+	color: #fff;
+	font-size: 0.9rem;
+	border-radius: 6px;
+	display: inline-block;
+}
+
+.compare-price span {
+	margin-left: 8px;
+}
+
+.compare-price img {
+	margin-top: 10px;
+}
+
+.hotel-others {
+	margin-top: 15px;
+	border-top: 0.1rem solid #ccc;
+}
+
+.hotel-others-container {
+	width: 90%;
+	height: 45px;
+	line-height: 45px;
+	border-bottom: 0.1rem solid #ccc;
+	margin: 0 auto;
+}
+
+.hotel-others-info {
+	height: 45px;
+	line-height: 45px;
+	float: left;
+}
+
+.hotel-others-info span:last-child {
+	color: #25a4bb;
+}
+
+.declaraction {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: #999999;
+	width: 90%;
+	font-size: 0.9rem;
+	margin: 0 auto;
+	border-bottom: 0.1rem solid #ccc;
+	color: #999999;
+}
+
+.footer-icon {
+	padding-top: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.footer-icon div {
+	display: flex;
+	align-items: center;
+	margin-left: 15px;
+}
+
+.right-info {
+	padding-top: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
