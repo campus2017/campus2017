@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+    <h3>请输入一段文字</h3>
+</head>
+<body>
+    <form action="#" th:action="@{/}"  th:object="${inputContent}" method="post" enctype="multipart/form-data">
+        <input id="uploadText" type="radio" name="uploadType" value="file" onclick="showTextStyle()" checked="checked" />
+        <label for="uploadText">文本输入</label>
+        &nbsp;&nbsp;
+        <input id="uploadFile" type="radio" name="uploadType" value="text" onclick="showFileStyle()" />
+        <label for="uploadFile">文件上传</label>
+
+        <div id="textStyle" >
+            <div style="float: left; width: auto; height: auto;">
+                <textarea id="text" name="text" rows="4" cols="50" th:text="${inputText}"></textarea>
+            </div>
+            <div style="float: left">
+                <div style="padding-top: 5px; padding-left: 8px">
+                    <input type = "image" name="submitText" th:src = "@{/images/submit.png}" />
+                </div>
+                <div style="padding-top: 10px; padding-left: 8px">
+                    <img th:src="@{/images/clear.png}"  onclick="clearContent()" />
+                </div>
+            </div>
+        </div>
+        <div id="fileStyle" style="display: none">
+            <input type="file" id="file" name="file" />
+            <br />
+            <input type="image" name="submitFile" th:src="@{/images/submit.png}" />
+        </div>
+        <div style="position:absolute;left:10px;top:160px;text-align: center">
+            <table border="1" cellspacing="0" width="300">
+                <caption style="text-align: left">各统计内容的个数如下：</caption>
+                <tr>
+                    <td width="150">统计项</td>
+                    <td width="150">个数</td>
+                </tr>
+                <tr>
+                    <td height="30">英文字母</td>
+                    <td height="30" th:text="${english}">${english}</td>
+                </tr>
+                <tr>
+                    <td height="30">数字</td>
+                    <td th:text="${numeric}">${numeric}</td>
+                </tr>
+                <tr>
+                    <td height="30">中文汉字</td>
+                    <td th:text="${chinese}">${chinese}</td>
+                </tr>
+                <tr>
+                    <td height="30">中英文标点符号</td>
+                    <td th:text="${punctuation}">${punctuation}</td>
+                </tr>
+            </table>
+        </div>
+        <div style="position:absolute; left:10px; top:350px; text-align: center">
+            <table border="1" cellspacing="0" width="300">
+                <caption style="text-align: left">文字中出现频率最高的三个字是：</caption>
+                <tr>
+                    <td height="30">名称</td>
+                    <td height="30">个数</td>
+                </tr>
+
+                <tr>
+                    <td height="30" th:text="${top1Char}"></td>
+                    <td height="30" th:text="${top1Count}"></td>
+                </tr>
+                <tr>
+                    <td height="30" th:text="${top2Char}"></td>
+                    <td height="30" th:text="${top2Count}"></td>
+                </tr>
+                <tr>
+                    <td height="30" th:text="${top3Char}"></td>
+                    <td height="30" th:text="${top3Count}"></td>
+                </tr>
+
+            </table>
+        </div>
+    </form>
+</body>
+
+<script type="text/javascript">
+    function clearContent() {
+        document.getElementById("text").value="";
+        return false;
+    }
+    function showFileStyle() {
+        document.getElementById("fileStyle").style.display="";
+        document.getElementById("textStyle").style.display="none";
+    }
+    function showTextStyle() {
+        document.getElementById("fileStyle").style.display="none";
+        document.getElementById("textStyle").style.display="";
+    }
+</script>
+
+</html>
