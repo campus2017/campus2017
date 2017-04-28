@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>org.apache.maven.archetypes</groupId>
+  <artifactId>maven-archetype-webapp</artifactId>
+  <versioning>
+    <latest>1.0</latest>
+    <release>1.0</release>
+    <versions>
+      <version>1.0-alpha-1</version>
+      <version>1.0-alpha-2</version>
+      <version>1.0-alpha-3</version>
+      <version>1.0-alpha-4</version>
+      <version>1.0</version>
+    </versions>
+    <lastUpdated>20090325190621</lastUpdated>
+  </versioning>
+</metadata>

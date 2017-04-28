@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.glassfish.hk2.external:bean-validator:2.1.92">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/maven/repository/org/glassfish/hk2/external/bean-validator/2.1.92/bean-validator-2.1.92.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/maven/repository/org/glassfish/hk2/external/bean-validator/2.1.92/bean-validator-2.1.92-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/maven/repository/org/glassfish/hk2/external/bean-validator/2.1.92/bean-validator-2.1.92-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
