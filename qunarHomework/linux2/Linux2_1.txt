@@ -1,4 +1,5 @@
 sudo scp /home/young/dir1/test_scp l-test.dev.cn1@192.168.1.111:/home/young/tmp
 
-��˵����
-��������������˲��ԣ���l-test.dev.cn1���ڲ��Թ�������ʵ�ʵ��û����������������ָ�ʵ�ʲ����е�һ��
+【说明】
+1.利用虚拟机进行了测试并实现了题目要求的功能，上面命令中“l-test.dev.cn1”是根据题目要求来写的，在测试过程中是实际的用户名，命令其他部分跟实际测试中的一样
+2.实际测试中，dir和tmp目录放在了home目录下
