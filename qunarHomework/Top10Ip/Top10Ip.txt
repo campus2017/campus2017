@@ -1,1 +1,4 @@
 cat /var/log/cups/access_log | awk '{print $1 }' |cut -d ' ' -f 1|sort | uniq -c|sort -nr|head -n 10
+
+【说明】
+/var/log/cups/access_log是本地电脑上的相关日志文件的路径
