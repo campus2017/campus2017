@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.dai.mapper.LineFlowMapper" >
+  <resultMap id="BaseResultMap" type="com.dai.pojo.LineFlow" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="line" property="line" jdbcType="VARCHAR" />
+    <result column="flow" property="flow" jdbcType="DOUBLE" />
+    <result column="time" property="time" jdbcType="TIMESTAMP" />
+  </resultMap>
+
+  <cache  eviction="FIFO"  flushInterval="60000"  size="512"  readOnly="true"/>
+
+  <sql id="Base_Column_List" >
+    id, line, flow, time
+  </sql>
+  <select id="selectTime" resultMap="BaseResultMap" parameterType="string" statementType="STATEMENT">
+    select
+    <include refid="Base_Column_List" />
+    from ${table}
+    where DATE_FORMAT(time,'%Y-%m-%d %H:%i:%s') like ${time} ;
+  </select>
+</mapper>

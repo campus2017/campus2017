@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.dai.mapper.SubwayFlowMapper" >
+  <resultMap id="BaseResultMap" type="com.dai.pojo.SubwayFlow" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="start" property="start" jdbcType="VARCHAR" />
+    <result column="end" property="end" jdbcType="VARCHAR" />
+    <result column="flow" property="flow" jdbcType="DOUBLE" />
+    <result column="time" property="time" jdbcType="VARCHAR" />
+    <result column="flowno" property="flowno" jdbcType="VARCHAR" />
+    <result column="line" property="line" jdbcType="VARCHAR" />
+  </resultMap>
+
+  <cache  eviction="FIFO"  flushInterval="60000"  size="512"  readOnly="true"/>
+
+  <sql id="Base_Column_List" >
+    id, start, end, flow, time, flowno, line
+  </sql>
+  <select id="select" resultMap="BaseResultMap" parameterType="string" statementType="STATEMENT">
+    select
+    <include refid="Base_Column_List" />
+    from ${_parameter}
+    where time =
+    (
+    SELECT time FROM ${_parameter} WHERE id =
+    (
+    SELECT MAX(id) FROM ${_parameter}
+    )
+    )
+  </select>
+
+  <select id="selectTime" resultMap="BaseResultMap" parameterType="string" statementType="STATEMENT">
+    select
+    <include refid="Base_Column_List" />
+    from ${table}
+    where DATE_FORMAT(time,'%Y-%m-%d %H:%i:%s') like ${time} ;
+  </select>
+
+  <select id="selectTop5" resultMap="BaseResultMap" parameterType="string" statementType="STATEMENT">
+    select
+    <include refid="Base_Column_List" />
+    from ${_parameter}
+    where time =
+    (
+    SELECT time FROM ${_parameter} WHERE id =
+    (
+    SELECT MAX(id) FROM ${_parameter}
+    )
+    ) order by flow DESC limit 0,5
+  </select>
+
+  <select id="selectTimeTop5" resultMap="BaseResultMap" parameterType="string" statementType="STATEMENT">
+    select
+    <include refid="Base_Column_List" />
+    from ${table}
+    where DATE_FORMAT(time,'%Y-%m-%d %H:%i:%s') like ${time} order by flow DESC limit 0,5;
+  </select>
+
+  <select id="selectTimeByLine" resultMap="BaseResultMap" parameterType="string" statementType="STATEMENT">
+    select
+    <include refid="Base_Column_List" />
+    from ${table}
+    where DATE_FORMAT(time,'%Y-%m-%d %H:%i:%s') like ${time} and line LIKE ${line} order by flow DESC ;
+  </select>
+</mapper>

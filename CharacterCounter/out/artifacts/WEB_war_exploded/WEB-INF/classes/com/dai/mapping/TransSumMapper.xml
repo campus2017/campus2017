@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.dai.mapper.TransSumMapper" >
+  <resultMap id="BaseResultMap" type="com.dai.pojo.TransSum" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="transStation" property="transstation" jdbcType="VARCHAR" />
+    <result column="sum" property="sum" jdbcType="INTEGER" />
+    <result column="time" property="time" jdbcType="TIMESTAMP" />
+    <result column="stationid" property="stationid" jdbcType="VARCHAR" />
+  </resultMap>
+
+  <cache  eviction="FIFO"  flushInterval="60000"  size="512"  readOnly="true"/>
+
+  <sql id="Base_Column_List" >
+    id, transStation, sum, time,stationid
+  </sql>
+  <select id="selectTime" resultMap="BaseResultMap" parameterType="string" statementType="STATEMENT">
+    select
+    <include refid="Base_Column_List" />
+    from ${table}
+    where DATE_FORMAT(time,'%Y-%m-%d %H:%i:%s') like ${time} ;
+  </select>
+  <select id="selectTimeTop10" resultMap="BaseResultMap" parameterType="string" statementType="STATEMENT">
+    select
+    <include refid="Base_Column_List" />
+    from ${table}
+    where DATE_FORMAT(time,'%Y-%m-%d %H:%i:%s') like ${time} order by sum DESC limit 0,10;
+  </select>
+</mapper>
