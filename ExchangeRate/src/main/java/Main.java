@@ -5,6 +5,9 @@ import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
+import org.apache.http.params.BasicHttpParams;
+import org.apache.http.params.CoreConnectionPNames;
+import org.apache.http.params.HttpParams;
 import org.apache.http.util.EntityUtils;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
@@ -22,6 +25,7 @@ import java.util.*;
 /**
  * Created by dang on 2017/4/22.
  * All right reserved.
+ * reference url:http://jinnianshilongnian.iteye.com/blog/2089792
  */
 public class Main {
 
@@ -48,12 +52,23 @@ public class Main {
     public static String getHTTPResponse(String url, Map<String, String> params, String charEncode) throws IOException {
         HttpClient httpclient = new DefaultHttpClient();
         HttpPost httpPost = new HttpPost(url);
-        List<BasicNameValuePair> nameValuePairs = new ArrayList();
+        ArrayList nameValuePairs = new ArrayList();
         Set keySet = params.keySet();
+        HttpParams httpParams = new BasicHttpParams();
         for (Object key : keySet) {
             nameValuePairs.add(new BasicNameValuePair((String) key, params.get(key)));
+            httpParams.setParameter( (String) key, params.get(key));
         }
-
+        //设置连接超时时间
+        Integer CONNECTION_TIMEOUT = 2 * 1000; //设置请求超时2秒钟 根据业务调整
+        Integer SO_TIMEOUT = 2 * 1000; //设置等待数据超时时间2秒钟 根据业务调整
+//定义了当从ClientConnectionManager中检索ManagedClientConnection实例时使用的毫秒级的超时时间
+//这个参数期望得到一个java.lang.Long类型的值。如果这个参数没有被设置，默认等于CONNECTION_TIMEOUT，因此一定要设置
+        Long CONN_MANAGER_TIMEOUT = 500L; //该值就是连接不够用的时候等待超时时间，一定要设置，而且不能太大 ()
+        httpParams.setIntParameter(CoreConnectionPNames.CONNECTION_TIMEOUT, CONNECTION_TIMEOUT);
+        httpParams.setIntParameter(CoreConnectionPNames.SO_TIMEOUT, SO_TIMEOUT);
+//        httpParams.setLongParameter(ClientPNames.CONN_MANAGER_TIMEOUT, CONN_MANAGER_TIMEOUT);
+        httpPost.setParams(httpParams);
         httpPost.setEntity(new UrlEncodedFormEntity(nameValuePairs, charEncode));
         HttpResponse httpResponse = httpclient.execute(httpPost);
         HttpEntity httpEntity = httpResponse.getEntity();
