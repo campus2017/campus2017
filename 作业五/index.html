@@ -1,33 +1,160 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/module/m-calendar.css">
+    <link rel="stylesheet" href="styles/module/m-flight.css">
 </head>
 <body>
 <div id="main">
-    <div class="calendar">
-        <div class="prev arrow"><i class="iconfont">&#xe63e;</i></div>
-        <ul>
-            <li><div><p class="date"><span>02-19</span><span>去</span></p><p class="date"><span>03-04</span><span>回</span></p><p class="price"><span>¥</span><span>3440</span></p></div></li>
-            <li><div><p class="date"><span>02-20</span><span>去</span></p><p class="date"><span>03-04</span><span>回</span></p><p class="price"><span>¥</span><span>2278</span></p></div></li>
-            <li><div><p class="date"><span>02-21</span><span>去</span></p><p class="date"><span>03-04</span><span>回</span></p><p class="price"><span>¥</span><span>2933</span></p></div></li>
-            <li><div><p class="date"><span>02-22</span><span>去</span></p><p class="date"><span>03-04</span><span>回</span></p><p class="price"><span>¥</span><span>3076</span></p></div></li>
-            <li><div><p class="date"><span>02-23</span><span>去</span></p><p class="date"><span>03-04</span><span>回</span></p><p class="price"><span>¥</span><span>2170</span></p></div></li>
-            <li><div><p class="date"><span>02-24</span><span>去</span></p><p class="date"><span>03-04</span><span>回</span></p><p class="price"><span>¥</span><span>2018</span></p></div></li>
-            <li><div><p class="date"><span>02-25</span><span>去</span></p><p class="date"><span>03-04</span><span>回</span></p><p class="price"><span>¥</span><span>2108</span></p></div></li>
+    <!-- 日历模块 -->
+    <div class="m-calendar">
+        <div class="m-calendar-arrow m-calendar-prev"><i class="icon-arrow icon-arrow-prev"></i></div>
+        <ul class="m-calendar-datelist">
+            <li>
+                <div>
+                    <p class="date"><span>02-19</span><span>去</span></p>
+                    <p class="date"><span>03-04</span><span>回</span></p>
+                    <p class="price"><span>¥</span><span>3440</span></p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <p class="date"><span>02-20</span><span>去</span></p>
+                    <p class="date"><span>03-04</span><span>回</span></p>
+                    <p class="price"><span>¥</span><span>2278</span></p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <p class="date"><span>02-21</span><span>去</span></p>
+                    <p class="date"><span>03-04</span><span>回</span></p>
+                    <p class="price"><span>¥</span><span>2933</span></p>
+                </div>
+            </li>
+            <li class="date-picked">
+                <div>
+                    <p class="date"><span>02-22</span><span>去</span></p>
+                    <p class="date"><span>03-04</span><span>回</span></p>
+                    <p class="price"><span>¥</span><span>3076</span></p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <p class="date"><span>02-23</span><span>去</span></p>
+                    <p class="date"><span>03-04</span><span>回</span></p>
+                    <p class="price"><span>¥</span><span>2170</span></p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <p class="date"><span>02-24</span><span>去</span></p>
+                    <p class="date"><span>03-04</span><span>回</span></p>
+                    <p class="price"><span>¥</span><span>2018</span></p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <p class="date"><span>02-25</span><span>去</span></p>
+                    <p class="date"><span>03-04</span><span>回</span></p>
+                    <p class="price"><span>¥</span><span>2108</span></p>
+                </div>
+            </li>
         </ul>
-        <div class="next arrow"><i class="iconfont">&#xe63d;</i></div>
+        <div class="m-calendar-arrow m-calendar-next"><i class="icon-arrow icon-arrow-next"></i></div>
         <div class="calendar_icon"><span>价格日历</span></div>
     </div>
-    <div class="flight">
-        <div class="head">
+    <!-- /日历模块 -->
+    <!-- 航班模块 -->
+    <div class="m-flight">
+        <div class="m-flight-hd">
             <div class="divider"></div>
-            <div class="banner"></div>
+            <div class="banner">
+                <ul>
+                    <li class="flight-info">航班信息</li>
+                    <li class="flight-depart">当地起飞时间</li>
+                    <li class="flight-duration flight-sort"><span>旅行总时长</span></li>
+                    <li class="flight-arrival">当地降落时间</li>
+                    <li class="flight-website">推荐网站</li>
+                    <li class="flight-lstp flight-sort"><span>最低报价</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="m-flight-list">
+            <ul>
+                <li>
+                    <div class="flight-info">
+                        <i class="icon-flight"></i>
+                        <div>
+                            <p class="font-dark-black">达美航空</p>
+                            <p class="font-light-black">DL128 330(宽)</p>
+                            <p class="font-light-black">DL4785 CRJ(小)</p>
+                        </div>
+                        <p class="font-share">共享</p>
+                    </div>
+                    <div class="flight-depart">
+                        <p class="depart-time font-dark-black">01:20</p>
+                        <p class="depart-airport font-mid-black">首都机场 PEK T3</p>
+                    </div>
+                    <div class="flight-duration font-light-black">
+                        <p class="flight-time">约16小时</p>
+                        <p class="flight-transfer"><span class="flight-tips">转</span><span>旧金山SFO</span></p>
+                        <p class="flight-stop"><span class="flight-tips">停</span><span>洛杉矶机场</span></p>
+                    </div>
+                    <div class="flight-arrival">
+                        <p><span class="arrival-time font-dark-black">17:15</span><span class="additional">+1天</span></p>
+                        <p class="arrival-airport font-mid-black">麦克卡兰国际机场 LAS</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="flight-info">
+                        <i class="icon-flight"></i>
+                        <div>
+                            <p class="font-dark-black">达美航空</p>
+                            <p class="font-light-black">DL128 330(宽)</p>
+                            <p class="font-light-black">DL4785 CRJ(小)</p>
+                        </div>
+                        <p class="font-share">共享</p>
+                    </div>
+                    <div class="flight-depart">
+                        <p class="depart-time font-dark-black">01:20</p>
+                        <p class="depart-airport font-mid-black">首都机场 PEK T3</p>
+                    </div>
+                    <div class="flight-duration font-light-black">
+                        <p class="flight-time">约16小时</p>
+                        <p class="flight-transfer"><span class="flight-tips">转</span><span>旧金山SFO</span></p>
+                        <p class="flight-stop"><span class="flight-tips">停</span><span>洛杉矶机场</span></p>
+                    </div>
+                    <div class="flight-arrival">
+                        <p><span class="arrival-time font-dark-black">17:15</span><span class="additional">+1天</span></p>
+                        <p class="arrival-airport font-mid-black">麦克卡兰国际机场 LAS</p>
+                    </div>
+                </li>
+            </ul>
+            <div class="flight-website">
+                <div>
+                    <p class="font-blue">达美航空</p>
+                    <p class="font-yellow">¥4091</p>
+                </div>
+                <div>
+                    <p class="font-blue">留学生票</p>
+                    <p class="font-yellow">¥4085</p>
+                </div>
+            </div>
+            <div class="flight-lstp">
+                <p><span class="font-blue">¥</span><span class="ticket_price font-blue">2259</span><span class="font-dark-black">票价</span></p>
+                <p class="font-light-black">¥2784税费</p>
+                <div class="booking">
+                    <span>订票</span>
+                    <i></i>
+                </div>
+            </div>
         </div>
     </div>
+    <!-- /航班模块 -->
 </div>
-<script src="index.js"></script>
+<script src="scripts/index.js"></script>
 </body>
 </html>
