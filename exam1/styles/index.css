@@ -1,0 +1,136 @@
+/*reset样式*/
+body,header,section,footer,ul,li,h3,p{
+    margin: 0;
+    padding: 0;
+}
+h3{
+    font-weight: normal;
+}
+button{
+    border: none;
+}
+
+/*自适应屏幕*/
+@media screen and (max-width: 640px){
+    html{
+        font-size: 60px;
+    }
+}
+
+@media  screen and (min-width: 640px) and (max-width: 900px) {
+    html{
+        font-size: 80px;
+    }
+}
+@media screen and (min-width: 900px){
+    html{
+        font-size: 100px;
+    }
+
+}
+
+body{
+    /*background-color: #f0f3f5;*/
+    background-color: red;
+}
+
+
+
+/*头部样式*/
+header{
+    box-sizing: border-box;
+    height:1.5rem;
+    padding: 0.2rem 0 0.4rem 0.4rem;
+    background-color: #00a8b9;
+    color: #fff;
+}
+
+
+header h3{
+    font-weight: normal;
+    font-size: 0.25rem;
+}
+
+
+header p{
+    font-size: 0.2rem;
+    margin-top: 0.2rem;
+}
+
+
+/*内容样式*/
+
+/*内容高度问题待解决*/
+
+.content{
+    font-size: 14px;
+}
+
+.content h3{
+    width: 100%;
+    height: 0.7rem;
+    line-height: 0.8rem;
+    padding-left: 0.4rem;
+    border-bottom: 2px solid #00a8b9;
+}
+
+
+.reason-list .item{
+    width: 100%;
+    margin-bottom: 0.05rem;
+    padding: 0.1rem;
+    background-color: #ffffff;
+    overflow: hidden;
+
+}
+
+.reason-list .item input{
+    float: left;
+}
+
+.reason-list .item label
+{
+    display: block;
+    overflow: hidden;
+}
+
+
+
+/*页脚样式*/
+footer{
+    display: flex;
+    height: 1.2rem;
+}
+
+footer button{
+    display: block;
+    margin: auto;
+    width: 90%;
+    height: 0.8rem;
+    border-radius: 0.05rem;
+    background-color: #00a8b9;
+    font-size: 0.25rem;
+    color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
