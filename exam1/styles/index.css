@@ -10,6 +10,25 @@ button{
     border: none;
 }
 
+/*icon-font样式*/
+@font-face {
+    font-family: "iconfont";
+    src: url('../icon-font/iconfont.eot'); /* IE9*/
+    src: url('../icon-font/iconfont.eot#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../icon-font/iconfont.woff') format('woff'), /* chrome, firefox */
+    url('../icon-font/iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    url('../icon-font/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+    font-family:"iconfont" !important;
+    font-size:16px;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 /*自适应屏幕*/
 @media screen and (max-width: 640px){
     html{
@@ -30,9 +49,10 @@ button{
 }
 
 body{
-    /*background-color: #f0f3f5;*/
-    background-color: red;
+    background-color: #f0f3f5;
+
 }
+
 
 
 
@@ -74,6 +94,18 @@ header p{
     border-bottom: 2px solid #00a8b9;
 }
 
+#container{
+    width: 98%;
+    margin: 0 auto;
+    /*使用calc计算列表容器的高度*/
+    height: calc(100vh - 3.5rem);
+    overflow: hidden;
+}
+
+
+
+
+
 
 .reason-list .item{
     width: 100%;
@@ -86,7 +118,27 @@ header p{
 
 .reason-list .item input{
     float: left;
+    display: none;
 }
+
+.reason-list .item i{
+    float: left;
+    font-size: 0.25rem;
+    line-height: 0.30rem;
+    margin-right: 0.1rem;
+    color: #d0d0d0;
+}
+
+
+.reason-list .item.selected i{
+    float: left;
+    font-size: 0.25rem;
+    line-height: 0.30rem;
+    margin-right: 0.1rem;
+    color: #00a8b9;
+}
+
+
 
 .reason-list .item label
 {
@@ -100,6 +152,7 @@ header p{
 footer{
     display: flex;
     height: 1.2rem;
+    position: relative;
 }
 
 footer button{
@@ -109,9 +162,13 @@ footer button{
     height: 0.8rem;
     border-radius: 0.05rem;
     background-color: #00a8b9;
+    opacity: 0.1;
     font-size: 0.25rem;
+    font-weight: normal;
     color: #ffffff;
 }
+
+
 
 
 
