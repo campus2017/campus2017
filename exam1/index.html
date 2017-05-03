@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     <title>退票</title>
     <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/dialog.css">
 </head>
 <body>
     <header>
@@ -33,11 +34,22 @@
         </div>
     </section>
     <footer>
-        <div class="mask"></div>
-        <button disabled>提交</button>
+        <button  class="submit" disabled>提交</button>
     </footer>
+    <aside class="dialog">
+        <i class="dialog-close iconfont">&#xe61d;</i>
+        <h3>提示</h3>
+        <div class="dialog-detail">病退的退款申请审核为14天，建议您耐心等待，如果您仍有问题，请点击发送问
+            题给客服，我们将会有客服与您联系。
+        </div>
+        <div class="dialog-foot">
+            <span>发送问题给客服</span>
+            <span>知道了</span>
+        </div>
+    </aside>
     <script src="scripts/iscroll.js"></script>
     <script src="scripts/index.js"></script>
+    <script src="scripts/dialog.js"></script>
 </body>
 </html>
 

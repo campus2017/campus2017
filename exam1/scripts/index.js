@@ -19,8 +19,6 @@ var button=document.getElementsByTagName('button')[0];
 //用户选择单选按钮事件
 reason_list.addEventListener('click',function (event) {
     var target=event.target;
-    console.log(target.tagName);
-
     if(target.tagName==='LI'){
         return;
     }

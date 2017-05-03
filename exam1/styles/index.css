@@ -79,9 +79,6 @@ header p{
 
 
 /*内容样式*/
-
-/*内容高度问题待解决*/
-
 .content{
     font-size: 14px;
 }
@@ -101,10 +98,6 @@ header p{
     height: calc(100vh - 3.5rem);
     overflow: hidden;
 }
-
-
-
-
 
 
 .reason-list .item{

@@ -1,0 +1,108 @@
+
+
+.dialog {
+    z-index: 100;
+    width:90%;
+    height: 4.0rem;
+    position:absolute;
+    background-color: #f0f3f5;
+    left:50%;
+    top:200%;
+    margin-left: -45%;
+    margin-top:-1.5rem;
+    border-radius: 0.2rem;
+    overflow: hidden;
+    font-size: 16px;
+    transition: top 0.5s ease 0s;
+}
+
+
+.dialog .dialog-close{
+    display: inline-block;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    position: absolute;
+    font-size: 0.4rem;
+    right: 0.2rem;
+    color: #ffffff;
+}
+
+.dialog h3 {
+    width: 100%;
+    height: 0.8rem;
+    color: #ffffff;
+    text-align: center;
+    line-height: 0.8rem;
+    background-color: #00a8b9;
+}
+
+.dialog .dialog-detail {
+    padding: 0.2rem;
+}
+
+
+.dialog .dialog-foot {
+    width: 100%;
+    height: 0.8rem;
+    position: absolute;
+    left:0;
+    bottom: 0;
+    border-top: 2px solid #e6e6ea;
+    line-height: 0.8rem;
+
+    /*消除内部inline-block的留白*/
+    font-size: 0;
+}
+
+.dialog .dialog-foot span {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 50%;
+    font-size: 0.25rem;
+    text-align: center;
+    color: #1ba9ba;
+}
+
+.dialog .dialog-foot span+span {
+    border-left: 2px solid #e6e6ea;
+}
+
+
+#mask{
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.2);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
