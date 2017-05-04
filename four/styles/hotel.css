@@ -1,0 +1,396 @@
+header {
+  width: 100%;
+  height: 43px;
+  background: #25A4BB;
+  border-bottom: 1px solid #1B7A8B; }
+  header .button-back {
+    width: 13px;
+    height: 34px;
+    background: url(../image/back.png);
+    float: left;
+    border: none;
+    outline: none;
+    margin-left: 17px;
+    margin-top: 4.5px; }
+  header p {
+    font-family: "SimSun";
+    font-size: 18px;
+    color: #FFF;
+    line-height: 43px;
+    width: 108px;
+    margin: 0 auto; }
+  header img {
+    float: right;
+    margin-right: 2px;
+    margin-top: 4.5px; }
+
+.photo {
+  width: 100%;
+  height: 111px;
+  overflow: hidden;
+  position: relative; }
+  .photo img {
+    width: 100%;
+    position: absolute;
+    top: -20px; }
+  .photo .photo-amount {
+    width: 41px;
+    height: 19px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    text-align: center; }
+    .photo .photo-amount p {
+      font-family: "Microsoft Yahei";
+      font-size: 12px;
+      color: #FFF;
+      line-height: 19px; }
+
+.hotel-info {
+  width: 100%;
+  margin: 0 auto;
+  border-bottom: 1px solid #CCC; }
+  .hotel-info div {
+    width: 94%;
+    margin: 0 auto; }
+    .hotel-info div a {
+      font-family: "Microsoft Yahei";
+      font-size: 14px;
+      color: #25A4BB;
+      float: right; }
+      .hotel-info div a img {
+        margin-left: 8px; }
+
+.comment {
+  height: 40px;
+  line-height: 40px; }
+  .comment p {
+    font-family: "Microsoft Yahei";
+    font-size: 14px;
+    color: #000;
+    float: left; }
+    .comment p span {
+      font-family: "Arial";
+      color: #25A4BB;
+      font-weight: bold; }
+  .comment a img {
+    margin-top: 13px; }
+
+.map {
+  height: 53px;
+  border-top: 1px dotted #D0D0D0;
+  border-bottom: 1px dotted #D0D0D0; }
+  .map p:first-child {
+    font-family: "Microsoft Yahei";
+    font-size: 14px;
+    color: #000;
+    width: 200px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    line-height: 32px; }
+  .map p:nth-child(2) {
+    font-family: "Microsoft Yahei";
+    font-size: 12px;
+    color: #B2B2B2; }
+  .map a {
+    line-height: 53px;
+    margin-top: -48px; }
+    .map a img {
+      margin-top: 19.5px; }
+
+.facility {
+  height: 58px; }
+  .facility p {
+    font-family: "Arial";
+    font-size: 12px;
+    color: #000;
+    line-height: 32px; }
+    .facility p span {
+      font-family: "Microsoft Yahei";
+      font-size: 14px;
+      color: #000; }
+  .facility a {
+    line-height: 58px;
+    margin-top: -33px; }
+    .facility a img {
+      margin-top: 22px; }
+
+.book {
+  width: 100%;
+  margin-top: 10px; }
+
+.book-time {
+  padding-left: 3%;
+  padding-right: 3%;
+  border-top: 1px solid #CCC;
+  border-bottom: 1px solid #CCC;
+  height: 46px;
+  line-height: 46px; }
+  .book-time button {
+    width: 17px;
+    height: 20px;
+    border: none;
+    outline: none;
+    background: url(../image/calendar.png);
+    float: left;
+    margin-top: 13px;
+    margin-right: 10px; }
+  .book-time p {
+    float: left;
+    font-family: "Microsoft Yahei";
+    font-size: 14px;
+    color: #000; }
+  .book-time a {
+    float: right;
+    font-family: "Microsoft Yahei";
+    font-size: 14px;
+    color: #25A4BB; }
+    .book-time a img {
+      margin-top: 16px; }
+
+.room-list {
+  width: 100%; }
+  .room-list li {
+    border-bottom: 1px solid #CCC;
+    position: relative; }
+  .room-list button {
+    margin: auto 0;
+    position: absolute;
+    top: 0;
+    bottom: 12px;
+    right: 0;
+    width: 48px;
+    height: 20px;
+    border: none;
+    outline: none;
+    background: #1BA9BA;
+    font-family: "Microsoft Yahei";
+    font-size: 12px;
+    color: #FFF;
+    line-height: 20px;
+    border-radius: 5px; }
+    .room-list button img {
+      margin-top: 6.5px;
+      margin-left: 5px; }
+  .room-list .room-wrap {
+    height: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+    position: relative;
+    overflow: hidden; }
+  .room-list .room-price {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 12px;
+    right: 55px;
+    font-family: "Microsoft Yahei";
+    font-size: 12px;
+    color: #8C8C8C;
+    height: 16px; }
+    .room-list .room-price span {
+      color: #F60; }
+      .room-list .room-price span:first-child {
+        font-family: "SimSun";
+        font-size: 10px; }
+      .room-list .room-price span:last-child {
+        font-family: "Arial";
+        font-size: 14px;
+        font-weight: bold; }
+  .room-list .room-type {
+    font-family: "Microsoft Yahei";
+    font-size: 14px;
+    color: #000;
+    margin-top: 12px;
+    margin-bottom: 9px; }
+  .room-list .room-detail {
+    font-family: "Microsoft Yahei";
+    font-size: 12px;
+    color: #B2B2B2; }
+  .room-list .room-benefit {
+    margin-top: 9px;
+    margin-bottom: 11px; }
+    .room-list .room-benefit span {
+      height: 16px;
+      background: #25A4BB;
+      font-family: "Microsoft Yahei";
+      font-size: 12px;
+      color: #FFF;
+      line-height: 16px;
+      display: inline-block;
+      margin-right: 5px; }
+      .room-list .room-benefit span:last-child {
+        margin-right: 0; }
+      .room-list .room-benefit span.room-cashback {
+        background: #FF0000; }
+
+.room-seller li {
+  border-top: 1px solid #CCC;
+  border-bottom: none;
+  position: relative; }
+  .room-seller li > img {
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .room-seller li:last-child {
+    height: 40px;
+    text-align: center; }
+    .room-seller li:last-child a {
+      font: 14px "Microsoft Yahei";
+      color: #25A4BB;
+      line-height: 40px; }
+.room-seller .room-pay {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #FF953F;
+  border-radius: 4px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto 0; }
+  .room-seller .room-pay span {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    font-family: "Microsoft Yahei";
+    font-size: 12px; }
+    .room-seller .room-pay span:first-child {
+      height: 21px;
+      background: #FF953F;
+      color: #FFF; }
+    .room-seller .room-pay span:nth-child(2) {
+      height: 19px;
+      color: #FF953F; }
+.room-seller .room-type {
+  margin-bottom: 7px; }
+.room-seller .room-cashback {
+  height: 16px;
+  background: #25A4BB;
+  font-family: "Microsoft Yahei";
+  font-size: 12px;
+  color: #FFF;
+  line-height: 16px;
+  background: #FF0000;
+  display: inline-block;
+  margin-top: 9px;
+  margin-bottom: 8px; }
+.room-seller .room-nocashback {
+  margin-bottom: 19px; }
+.room-seller .room-payment {
+  text-align: right;
+  float: right;
+  margin-right: 55px;
+  margin-bottom: 7px; }
+  .room-seller .room-payment p {
+    font-family: "Microsoft Yahei";
+    font-size: 12px;
+    color: #8C8C8C; }
+    .room-seller .room-payment p:first-child {
+      font-family: "Arial";
+      font-size: 15px;
+      font-weight: bold;
+      color: #F60; }
+.room-seller .room-type span {
+  height: 14px;
+  color: #FFF;
+  background: #F60;
+  margin-left: 5px;
+  font-size: 12px;
+  line-height: 14px; }
+.room-seller .room-good {
+  height: 14px;
+  border: 1px solid #FF9036;
+  font-family: "Microsoft YaHei";
+  font-size: 12px;
+  line-height: 14px;
+  color: #FF9036;
+  margin-right: 4px; }
+  .room-seller .room-good span {
+    color: #FFF;
+    background: #FF9036; }
+
+.other-hotel {
+  width: 100%;
+  border-top: 1px solid #CCC;
+  margin-top: 15px; }
+  .other-hotel li {
+    height: 46px;
+    position: relative;
+    border-bottom: 1px solid #CCC; }
+    .other-hotel li p {
+      font-family: "Microsoft Yahei";
+      font-size: 14px;
+      color: #000;
+      line-height: 46px;
+      margin-left: 10px; }
+      .other-hotel li p span {
+        color: #25B7DF; }
+    .other-hotel li img {
+      position: absolute;
+      top: 16px;
+      right: 10px; }
+    .other-hotel li:last-child {
+      height: 50px; }
+      .other-hotel li:last-child p {
+        width: 290px;
+        font-size: 12px;
+        color: #999999;
+        line-height: 20px;
+        height: 40px;
+        word-wrap: break-word;
+        word-break: normal;
+        position: absolute;
+        top: 0;
+        left: 10px;
+        bottom: 0;
+        right: 0;
+        margin: auto 0; }
+
+footer div {
+  height: 22px;
+  margin-top: 10px;
+  margin-left: 20px; }
+  footer div a {
+    margin-right: 24px;
+    font-family: "Microsoft Yahei";
+    font-size: 12px;
+    color: #9E9E9E;
+    line-height: 100%; }
+    footer div a:first-child {
+      text-decoration: underline; }
+    footer div a:nth-child(3) {
+      text-decoration: underline; }
+    footer div a img {
+      margin-right: 5px; }
+  footer div > span {
+    font-family: "Microsoft Yahei";
+    font-size: 16px;
+    color: #9E9E9E;
+    line-height: 100%;
+    margin-right: 14px;
+    display: inline-block; }
+  footer div button {
+    height: 100%;
+    border: none;
+    outline: none;
+    font-family: "Microsoft Yahei";
+    font-size: 14px;
+    color: #9E9E9E;
+    line-height: 100%;
+    background: none; }
+    footer div button img {
+      display: inline-block;
+      margin-right: 5px; }
+footer p {
+  text-align: center;
+  margin-top: 29px;
+  font-family: "Microsoft Yahei";
+  font-size: 14px;
+  color: #9E9E9E; }
+  footer p span {
+    margin-left: 29px; }
+
+/*# sourceMappingURL=hotel.css.map */

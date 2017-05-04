@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/hotel.css" />
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script src="scripts/hotel.js"></script>
+    <title>酒店</title>
+</head>
+<body>
+    <!-- 头部信息 -->
+    <header>
+        <button class="button-back"></button>
+        <img src="image/logo.png" alt="logo">
+        <p>北京有怡公寓</p>      
+    </header>
+    <!-- 示例图片 -->
+    <div class="photo">
+        <img src="image/photo.png" alt="酒店示例图片">
+        <div class="photo-amount">
+            <p>共9张</p>
+        </div>
+    </div>
+    <!-- 酒店信息 -->
+    <div class="hotel-info">
+        <div class="comment">
+            <p><span>3.9</span>分 / 好评65 差评9</p>
+            <a href="#">看点评<img src="image/next.png" alt="看点评"></a>
+        </div>
+        <div class="map">
+            <p>北京朝阳区西大望路甲12号北京国家广告产业园生活区1号楼</p>
+            <p>[商圈]大望路区域</p>
+            <a href="#">看地图<img src="image/next.png" alt="看地图"></a>
+        </div>
+        <div class="facility">
+            <p>2014年<span>开业</span> 4008909123</p>
+            <img src="image/wifi.png" alt="wifi">
+            <img src="image/ring.png" alt="ring">
+            <img src="image/luggage.png" alt="luggage">
+            <img src="image/bath.png" alt="bath">
+            <img src="image/water.png" alt="water">
+            <a href="#">酒店设施<img src="image/next.png" alt="看地图"></a>
+        </div>
+    </div>
+    <!-- 预定酒店 -->
+    <div class="book">
+        <div class="book-time">
+            <button></button>
+            <p>02月27日入住&nbsp;&nbsp;&nbsp;02月28日离店</p>
+            <a href="#">共1晚&nbsp;<img src="image/next.png" alt="next"></a>
+        </div>
+        <ul class="room-list">
+            <li>
+                <div class="room-wrap">
+                    <button>比价<img src="image/up.png" alt="比价"></button>
+                    <p class="room-price"><span>￥</span><span>122</span>起</p>
+                    <p class="room-type">精致家庭房</p>
+                    <p class="room-detail">有窗</p>
+                    <p class="room-benefit"><span>团</span><span>夜宵</span><span class="room-cashback">可返星券</span></p>
+                </div>
+                <ul class="room-seller">
+                    <li>
+                        <div class="room-wrap clearfix">
+                            <div class="room-pay">
+                                <span>订</span>
+                                <span>到店付</span>
+                            </div>
+                            <div class="room-payment">
+                                <p><span>￥</span><span>135</span></p>
+                                <p>付款 ￥ 135</p>
+                                <p>可返：135星券</p>
+                            </div>
+                            <p class="room-type">酒店直销</p>
+                            <p class="room-detail">(限时抢购，节省33元)-优惠价</p>
+                            <p><span class="room-cashback">可返星券</span></p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="image/top_left.png" alt="左上角图标">
+                        <div class="room-wrap clearfix">
+                            <div class="room-pay">
+                                <span>订</span>
+                                <span>到店付</span>
+                            </div>
+                            <div class="room-payment">
+                                <p><span>￥</span><span>122</span></p>
+                                <p>付款 ￥ 135</p>
+                                <p>可返：￥ 13</p>
+                            </div>
+                            <p class="room-type">酒店直销<span>最便宜</span></p>
+                            <p class="room-detail room-nocashback">(今日特价)-优惠价</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="image/top_left.png" alt="左上角图标">
+                        <div class="room-wrap clearfix">
+                            <div class="room-pay">
+                                <span>订</span>
+                                <span>在线付</span>
+                            </div>
+                            <div class="room-payment">
+                                <p><span>￥</span><span>168</span></p>
+                            </div>
+                            <p class="room-type">酒店直销</p>
+                            <p class="room-detail room-nocashback"><span class="room-good"><span>最</span>可靠</span><span class="room-good"><span>最</span>快确认</span></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="room-wrap clearfix">
+                            <div class="room-pay">
+                                <span>订</span>
+                                <span>到店付</span>
+                            </div>
+                            <div class="room-payment">
+                                <p><span>￥</span><span>129</span></p>
+                                <p>付款 ￥ 135</p>
+                                <p>可返：￥ 6</p>
+                            </div>
+                            <p class="room-type">五星旅游网</p>
+                            <p class="room-detail room-nocashback">(今日特价)-优惠价</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="room-wrap clearfix">
+                            <div class="room-pay">
+                                <span>订</span>
+                                <span>到店付</span>
+                            </div>
+                            <div class="room-payment">
+                                <p><span>￥</span><span>124</span></p>
+                                <p>付款 ￥ 135</p>
+                                <p>可返：￥ 11</p>
+                            </div>
+                            <p class="room-type">爱游网</p>
+                            <p class="room-detail room-nocashback">(今日特价)-优惠价</p>
+                        </div>
+                    </li>
+                    <li><a href="#">更多报价...</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="room-wrap">
+                    <button>比价<img src="image/down.png" alt="比价"></button>
+                    <p class="room-price"><span>￥</span><span>135</span>起</p>
+                    <p class="room-type">温馨家庭房</p>
+                    <p class="room-detail">25㎡</p>
+                    <p class="room-benefit"><span>团</span><span>夜宵</span><span class="room-cashback">可返星券</span></p>  
+                </div>
+            </li>
+            <li>
+                <div class="room-wrap">
+                    <button>比价<img src="image/down.png" alt="比价"></button>
+                    <p class="room-price"><span>￥</span><span>288</span>起</p>
+                    <p class="room-type">标准房</p>
+                    <p class="room-detail">有窗 双床 32㎡</p>
+                    <p class="room-benefit"><span>夜宵</span><span class="room-cashback">可返星券</span></p>
+                </div> 
+            </li>
+            <li>
+                <div class="room-wrap">
+                    <button>比价<img src="image/down.png" alt="比价"></button>
+                    <p class="room-price"><span>￥</span><span>899</span>起</p>
+                    <p class="room-type">豪华大床房</p>
+                    <p class="room-benefit"><span>夜宵</span></p>
+                </div>  
+            </li>
+        </ul>
+    </div>
+    <ul class="other-hotel">
+        <li>
+            <p>附近热销酒店<span>（85家）</span></p>
+            <img src="image/next.png" alt="next">
+        </li>
+        <li>
+            <p>同类低价酒店<span>（45家）</span></p>
+            <img src="image/next.png" alt="next">
+        </li>
+        <li><p>注：房型信息以代理商、酒店及订单填写页实际内容为准，去哪儿不保证所有信息的准确性，仅供参考。</p></li>
+    </ul>
+    <footer>
+        <div>
+            <a href="#"><img src="image/ticket.png" alt="机票">机票</a>
+            <a href="#"><img src="image/hotel.png" alt="酒店">酒店</a>
+            <a href="#"><img src="image/apartment.png" alt="酒店">酒店</a>
+            <span>|</span>
+            <button><img src="image/more.png" alt="更多">更多</button>
+        </div>
+        <p>Qunar 京ICP备05021087<span>意见反馈</span></p>
+    </footer>
+</body>
+</html>

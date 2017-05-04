@@ -1,0 +1,77 @@
+@charset "UTF-8";
+.header {
+  width: 1265px;
+  background: #F5F5F5;
+  margin: 0 auto;
+}
+
+.nav {
+  width: 1265px;
+  height: 95px;
+  margin: 0 auto;
+  position: relative;
+}
+.nav img {
+  position: absolute;
+  top: 30.5px;
+  left: 160px;
+}
+.nav ul {
+  float: right;
+  margin-right: 153px;
+}
+.nav ul li {
+  margin-left: 41px;
+  float: left;
+}
+.nav ul li a {
+  font-family: "SimSun";
+  font-size: 14px;
+  color: #3399CC;
+  line-height: 95px;
+}
+.nav ul li a:hover {
+  cursor: pointer;
+}
+
+.main {
+  width: 1265px;
+  margin: 0 auto;
+}
+
+/*外层模态框样式*/
+.modal-overlay {
+  visibility: hidden;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  z-index: 1000;
+  background: rgba(33, 33, 33, 0.5);
+}
+
+/*模态框样式*/
+.modal-data {
+  width: 800px;
+  height: 546px;
+  margin: 100px auto;
+  position: relative;
+}
+.modal-data #button-close {
+  width: 32px;
+  height: 32px;
+  background: url(../image/close.png);
+  position: absolute;
+  top: 0;
+  left: 768px;
+  border: none;
+  outline: none;
+}
+.modal-data #button-close:hover {
+  background: url(../image/close_hover.png);
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=poplayer.css.map */

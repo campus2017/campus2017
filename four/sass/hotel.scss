@@ -1,0 +1,529 @@
+@charset "utf-8"; 
+
+header{
+    width: 100%;
+    height: 43px;
+    background: #25A4BB;
+    border-bottom: 1px solid #1B7A8B;
+    .button-back{
+        width: 13px;
+        height: 34px;
+        background: url(../image/back.png);
+        float: left;
+        border: none;
+        outline:none;
+        margin: {
+            left: 17px;
+            top: (43px-34px)/2;
+        }
+    }
+    p{
+        font-family: "SimSun";
+        font-size: 18px;
+        color: #FFF;
+        line-height: 43px;
+        width: 108px;
+        margin: 0 auto;
+    }
+    img{
+        float: right;
+        margin: {
+            right: 2px;
+            top: (43px-34px)/2;
+        }
+    }
+}
+.photo{
+    width: 100%;
+    height: 111px;
+    overflow: hidden;
+    position: relative;
+    img{
+        width: 100%;
+        position: absolute;
+        top: -20px;
+    }
+    .photo-amount{
+        width: 41px;
+        height: 19px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, .6);
+        text-align: center;
+        p{
+            font-family: "Microsoft Yahei";
+            font-size: 12px;
+            color: #FFF;
+            line-height: 19px;
+        }
+    }
+}
+.hotel-info{
+    width: 100%;
+    margin: 0 auto;
+    border-bottom: 1px solid #CCC;
+    div{
+        width: 94%;
+        margin: 0 auto;
+        a{
+            font-family: "Microsoft Yahei";
+            font-size: 14px;
+            color: #25A4BB;
+            float: right;
+            img{
+                margin-left: 8px;
+            }
+        }
+    }
+}
+.comment{
+    height: 40px;
+    line-height: 40px;
+    p{
+        font-family: "Microsoft Yahei";
+        font-size: 14px;
+        color: #000;
+        float: left;
+        span{
+            font-family: "Arial";
+            color: #25A4BB;
+            font-weight: bold;
+        }
+    }
+    a{
+        img{
+            margin:{
+                top: 0+(40-14px)/2;
+            }
+        }
+    }
+}
+.map{
+    height: 53px;
+    border:{
+        top: 1px dotted #D0D0D0;
+        bottom: 1px dotted #D0D0D0;
+    }
+    p{
+        &:first-child{
+            font-family: "Microsoft Yahei";
+            font-size: 14px;
+            color: #000;
+            width: 200px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            line-height: 32px;
+        }
+        &:nth-child(2){
+            font-family: "Microsoft Yahei";
+            font-size: 12px;
+            color: #B2B2B2;
+        }
+    }
+    a{
+        line-height: 53px;
+        margin: {
+            top: -(32px+16px);
+        }
+        img{
+            margin:{
+                top: (53px-14px)/2;
+            }
+        }
+    }
+}
+.facility{
+    height: 58px;
+    p{
+        font-family: "Arial";
+        font-size: 12px;
+        color: #000;
+        line-height: 32px;
+        span{
+            font-family: "Microsoft Yahei";
+            font-size: 14px;
+            color: #000;
+        }
+    }
+    a{
+        line-height: 58px;
+        margin:{
+            top: -33px;
+        }
+        img{
+            margin:{
+                top: (58px-14px)/2;
+            }
+        }
+    }
+}
+.book{
+    width: 100%;
+    margin-top: 10px;
+}
+.book-time{
+    padding:{
+        left: 3%;
+        right: 3%;
+    }
+    border:{
+        top: 1px solid #CCC;
+        bottom: 1px solid #CCC;
+    }
+    height: 46px;
+    line-height: 46px;
+    button{
+        width: 17px;
+        height: 20px;
+        border: none;
+        outline: none;
+        background: url(../image/calendar.png);
+        float: left;
+        margin: {
+            top: (46px-20)/2;
+            right: 10px;
+        }
+    }
+    p{
+        float: left;
+        font-family: "Microsoft Yahei";
+        font-size: 14px;
+        color: #000;
+    }
+    a{
+        float: right;
+        font-family: "Microsoft Yahei";
+        font-size: 14px;
+        color: #25A4BB;
+        img{
+            margin:{
+                top: (46px-14px)/2;
+            }
+        }
+    }
+}
+.room-list{
+    width: 100%; 
+    li{
+        border-bottom: 1px solid #CCC;
+        position: relative;
+    }
+    button{
+        margin: auto 0;
+        position: absolute;
+        top: 0;
+        bottom: 12px; //等于room-type中margin-top的值
+        right: 0;
+        width: 48px;
+        height: 20px;
+        border: none;
+        outline: none;
+        background: #1BA9BA;
+        font-family: "Microsoft Yahei";
+        font-size: 12px;
+        color: #FFF;
+        line-height: 20px;
+        img{
+            margin:{
+                top: (20-7px)/2;
+                left: 5px;
+            }
+        }
+        border-radius: 5px;
+    }
+    .room-wrap{
+        height: 100%;
+        margin:{
+            left: 10px;
+            right: 10px;
+        }
+        position: relative;
+        overflow: hidden;
+    } 
+    .room-price{
+        margin: auto;
+        position: absolute;
+        top: 0;
+        bottom: 12px; 
+        right: 48px+7px;
+        font-family: "Microsoft Yahei";
+        font-size: 12px;
+        color: #8C8C8C;
+        height: 16px;
+        span{
+            color: #F60;
+            &:first-child{
+                font-family: "SimSun";
+                font-size: 10px;
+            }
+            &:last-child{
+                font-family: "Arial";
+                font-size: 14px;
+                font-weight: bold;
+            }
+        }
+    }
+    .room-type{
+        font-family: "Microsoft Yahei";
+        font-size: 14px;
+        color: #000;
+        margin: {
+            top: 12px;
+            bottom: 9px;
+        }
+    }
+    .room-detail{
+        font-family: "Microsoft Yahei";
+        font-size: 12px;
+        color: #B2B2B2;
+    }
+    .room-benefit{
+        margin: {
+            top: 9px;
+            bottom: 11px;
+        }
+        span{
+            height: 16px;
+            background: #25A4BB;
+            font-family: "Microsoft Yahei";
+            font-size: 12px;
+            color: #FFF;
+            line-height: 16px;
+            display: inline-block;
+            margin:{
+                right: 5px;
+            }
+            &:last-child{
+                margin-right: 0;
+            }
+            &.room-cashback{
+                background: #FF0000;
+            }
+        }
+    }
+}
+.room-seller{
+    li{
+        border-top: 1px solid #CCC;
+        border-bottom: none;
+        position: relative;
+        &>img{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        &:last-child{
+            height: 40px;
+            a{
+                font: 14px "Microsoft Yahei";
+                color: #25A4BB;
+                line-height: 40px;
+            }
+            text-align: center;
+        }
+    }
+    .room-pay{
+        width: 40px;
+        height: 40px;
+        border: 1px solid #FF953F;
+        border-radius: 4px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto 0;
+        //float: right;
+        span{
+            width: 100%;
+            display: inline-block;
+            text-align: center;
+            font-family: "Microsoft Yahei";
+            font-size: 12px;
+            &:first-child{
+                height: 21px; 
+                background: #FF953F;
+                color: #FFF;
+            }
+            &:nth-child(2){
+                height: 19px;
+                color: #FF953F;
+            }
+        }
+    }
+    .room-type{
+        margin-bottom: 7px;
+    }
+    .room-cashback{
+        height: 16px;
+        background: #25A4BB;
+        font-family: "Microsoft Yahei";
+        font-size: 12px;
+        color: #FFF;
+        line-height: 16px;
+        background: #FF0000;
+        display: inline-block;
+        margin:{
+            top: 9px;
+            bottom: 8px;
+        }
+    }
+    .room-nocashback{
+        margin-bottom: 19px;
+    }
+    .room-payment{
+        text-align: right;
+        float: right;
+        margin:{
+            right: 55px;
+            bottom: 7px;
+        }
+        p{   
+            font-family: "Microsoft Yahei";
+            font-size: 12px;
+            color: #8C8C8C;
+            &:first-child{
+                font-family: "Arial";
+                font-size: 15px;
+                font-weight: bold;
+                color: #F60;
+            }
+        } 
+    }
+    .room-type{
+        span{
+            height: 14px;
+            color: #FFF;
+            background: #F60;
+            margin-left: 5px;
+            font-size: 12px;
+            line-height: 14px;
+        }
+    }
+    .room-good{
+        height: 14px;
+        border: 1px solid #FF9036;
+        font-family: "Microsoft YaHei";
+        font-size: 12px;
+        line-height: 14px;
+        color: #FF9036;
+        margin-right: 4px;
+        span{
+            color: #FFF;
+            background: #FF9036;
+        }
+    }
+}
+.other-hotel{
+    width: 100%;
+    border-top: 1px solid #CCC;
+    margin:{
+        top: 15px;
+    }
+    li{
+        height: 46px;
+        position: relative;
+        border-bottom: 1px solid #CCC;
+        p{
+            font-family: "Microsoft Yahei";
+            font-size: 14px;
+            color: #000;
+            line-height: 46px;
+            margin-left: 10px;
+            span{
+                color: #25B7DF;
+            }
+        }
+        img{
+            position: absolute;
+            top: (46px-14px)/2;
+            right: 10px;
+        }
+        &:last-child{
+            height: 50px;
+            p{
+                width: 290px;
+                font-size: 12px;
+                color: #999999;
+                line-height: 20px;
+                height: 40px;
+                word-wrap: break-word;
+                word-break: normal;
+                position: absolute;
+                top: 0;
+                left: 10px;
+                bottom: 0;
+                right: 0;
+                margin: auto 0;
+            }
+        }
+    }
+}
+footer{
+    div{
+        height: 22px;
+        margin:{
+            top: 10px;
+            left: 20px;
+        }
+        a{
+            margin:{
+                right: 24px;
+            }
+            font-family: "Microsoft Yahei";
+            font-size: 12px;
+            color: #9E9E9E;
+            line-height: 100%;
+            &:first-child{
+                text-decoration: underline;
+            }
+            &:nth-child(3){
+                text-decoration: underline;
+            }
+            img{
+                margin-right: 5px;
+            }
+        }
+        &>span{
+            font-family: "Microsoft Yahei";
+            font-size: 16px;
+            color: #9E9E9E;
+            line-height: 100%;
+            margin:{
+                right: 14px;
+            }
+            display: inline-block;
+        }
+        button{
+            height: 100%;
+            border: none;
+            outline: none;
+            font-family: "Microsoft Yahei";
+            font-size: 14px;
+            color: #9E9E9E;
+            line-height: 100%;
+            background: none;
+            img{
+                display: inline-block;
+                margin:{
+                    right: 5px;
+                }
+            }
+        }
+    }
+    p{
+        text-align: center;
+        margin:{
+            top: 29px;
+        }
+        font-family: "Microsoft Yahei";
+        font-size: 14px;
+        color: #9E9E9E;
+        span{
+            margin:{
+                left: 29px;
+            }
+        }
+    }
+}

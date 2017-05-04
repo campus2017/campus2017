@@ -1,0 +1,79 @@
+@charset "utf-8";
+//字体设置
+@mixin font($family, $size, $color){
+    font-family: $family;
+    font-size: $size;
+    color: $color;
+}
+.header{
+    width: 1265px;
+    background: #F5F5F5;
+    margin: 0 auto;
+}
+.nav{
+    width: 1265px;
+    height: 95px;
+    margin: 0 auto;
+    position: relative;
+    img{
+        position: absolute;
+        top: 0px+95px/2-34px/2; //div高度的一半减去img高度的一半，垂直居中
+        left: 160px;
+    }
+    ul{
+        float: right;
+        margin:{
+            right: 153px;
+        }
+        li{
+            margin:{
+                left: 41px;
+            }
+            float: left;
+            a{
+                @include font("SimSun", 14px, #3399CC);
+                line-height: 95px;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+.main{
+    width: 1265px;
+    margin: 0 auto;
+}
+/*外层模态框样式*/
+.modal-overlay{
+    visibility: hidden;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    z-index: 1000;
+    background: rgba(33,33,33,0.5);
+}
+/*模态框样式*/
+.modal-data{
+    width: 800px;
+    height: 546px;
+    margin: 100px auto;
+    position: relative;
+    #button-close{
+        width: 32px;
+        height: 32px;
+        background: url(../image/close.png);
+        position: absolute;
+        top: 0;
+        left: 0px+800px-32px;
+        border: none;
+        outline: none;
+        &:hover{
+            background: url(../image/close_hover.png);
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+#door{
+    width: 475px+160px*3;
+    height: 477px;
+    margin: 0px auto;
+    overflow: hidden;
+    position: relative;   
+    img{
+        border: 1px solid #CCC;
+        position: absolute;
+        top: 0px;
+        overflow: auto;
+        &:first-child{
+            left: 0px;
+        }
+        &:nth-child(2){
+            left: 160px;
+        }
+        &:nth-child(3){
+            left: 160px*2;
+        }
+        &:nth-child(4){
+            left: 160px*3;
+        }
+    }
+}

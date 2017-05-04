@@ -1,0 +1,27 @@
+#door {
+  width: 955px;
+  height: 477px;
+  margin: 0px auto;
+  overflow: hidden;
+  position: relative;
+}
+#door img {
+  border: 1px solid #CCC;
+  position: absolute;
+  top: 0px;
+  overflow: auto;
+}
+#door img:first-child {
+  left: 0px;
+}
+#door img:nth-child(2) {
+  left: 160px;
+}
+#door img:nth-child(3) {
+  left: 320px;
+}
+#door img:nth-child(4) {
+  left: 480px;
+}
+
+/*# sourceMappingURL=door.css.map */

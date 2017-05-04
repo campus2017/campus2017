@@ -1,0 +1,21 @@
+body,p,form,input,button,dl,dt,dd,ul,ol,li,h1,h2,h3,h4{margin:0;padding:0;list-style:none;}
+body,button,input,select,textarea{font:12px Arial, Helvetica, sans-serif;color:#333;}
+input,select,textarea{font-size:100%;}
+a{text-decoration:none;color:#333;}
+a:hover{text-decoration:none;}
+a.blue_link{color:#06c;}
+a.blue_link:hover{color:#f60;}
+.clearfix:after{display:block;content:".";height:0;visibility:hidden;clear:both;font-size:0;line-height:0;}
+.clearfix{*zoom:1;}
+img{border:0 none;vertical-align:top;}
+em{font-style:normal;}
+button::-moz-focus-inner{padding:0;border:none;}
+.wrap{width:980px;margin:0 auto;}
+.fl{float:left;}
+.fr{float:right;}
+.mt{margin-top:10px;}
+.ml{margin-left:10px;}
+.mt5{margin-top:5px;}
+.mt10{margin-top:10px;}
+.mb{margin-bottom:10px;}
+.none{display:none;}
