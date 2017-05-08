@@ -1,1 +1,0 @@
-scp -r dir1  l-test.dev.cn1:/tmp/
