@@ -1,0 +1,5 @@
+web工程：网页打开地址为，http://localhost:8080/CharacterCounter/index.jsp
+其他工程的主程序入口都在:com.qunar.main.Main类的mian方法
+所有工程都需要依赖包：
+1、CharacterCount工程依赖jar包在:Web/WEB-INF/lib文件夹中
+2、其他所有工程的依赖jar包都在工程目录下的lib文件夹里

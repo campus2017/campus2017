@@ -1,4 +1,0 @@
-程序的入口地址：com.qunar.main.Main类里的主函数，命令运行后直接输入文件夹地址就行，工程根目录下有一个FileFolder文件夹，可以测试
-可以统计的import类是:
-1:import java.util.*;
-2:import="java.util.*";
