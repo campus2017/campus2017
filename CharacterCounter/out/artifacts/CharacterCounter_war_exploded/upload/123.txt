@@ -1,0 +1,5 @@
+这是一个比较danteng的问题，闲来无聊刚开始学习Java想看看如何在java上实现ctrl+z结束输入，百度发现居然没有一个答案，于是自己调试发现在Scanner类键入ctrl+z时会抛出NoSuchElementException异常，于是用catch捕获改异常return就行。
+
+这是一题用改方法oj的题目:
+
+1014:Checking order
