@@ -1,0 +1,1 @@
+scp /home/sean/dataset/access_log/accesslog.txt administrator@192.168.1.103:/tmp
