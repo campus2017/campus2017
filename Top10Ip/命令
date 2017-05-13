@@ -1,0 +1,2 @@
+单个文件:cat /home/sean/dataset/access_log/accesslog.txt | awk '{printf("%s\n",$5)}'| cut -d : -f 1 | sort | uniq -c | sort -n -r | head -n +10 | sed 's/^[\t]*//g' | awk '{printf("Ip地址:%s   访问次数:%s\n",$2,$1)}' |  tee  /home/sean/dataset/result
+文件夹:find /home/sean/dataset/access_log -name "*accesslog*" -exec cat {} \; | awk '{printf("%s\n",$5)}'| cut -d : -f 1 | sort | uniq -c | sort -n -r | head -n +10 | sed 's/^[\t]*//g' | awk '{printf("Ip地址:%s   访 问次数:%s\n",$2,$1)}' |  tee  /home/sean/dataset/result
