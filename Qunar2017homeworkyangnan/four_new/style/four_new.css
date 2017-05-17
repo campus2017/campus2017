@@ -1,0 +1,385 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+ul li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+html {
+	font-size: 62.5%;
+}
+/*header部分*/
+.header {
+	width: 100%;
+	background-color: #25a4bb;
+}
+.header ul {
+	width: 100%;
+	height: 8rem;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-webkit-justify-content:space-between;
+	justify-content:space-between;
+	-webkit-align-items:center;
+	align-items:center;
+	padding: 0.5rem 0;
+}
+.header ul li {
+	display:inline-block;
+	color: #fff;
+}
+/*左边的返回*/
+.header .header-back {
+	font-size: 4rem;
+	padding-left: 3rem;
+}
+/*中间的文字*/
+.header .header-title {
+	font-size:4rem;
+}
+/*右边的图片和首页*/
+.header .header-img {
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-webkit-flex-direction:column;
+	flex-direction:column;
+	-webkit-align-items:center;
+	align-items:center;
+	font-size: 2rem;
+	padding-right: 0.3rem;
+}
+.header .header-img img {
+	width: 6rem;
+	height: 6rem;
+}
+/*hotel详细信息部分*/
+/*hotel图片*/
+.hotel-info-detail-img {
+	position: relative;
+}
+.hotel-info-detail-img img{
+	width: 100%;
+	height: 100%;
+}
+.hotel-info-detail-img span {
+	padding: 0.8rem;
+	font-size: 3.5rem;
+	color: #fff;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	background-color: rgba(0,0,0,0.3);
+}
+/*hotel评分*/
+.hotel-info-detail-rated,.hotel-info-detail-address,.hotel-info-detail-establishment{
+	width: 95%;
+	height: auto;
+	border-bottom: 0.4rem dotted #ccc;
+	margin: auto;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-webkit-justify-content:space-between;
+	justify-content:space-between;
+	-webkit-align-items:center;
+	align-items:center;
+	font-size: 4rem;
+	padding: 2rem 0;
+}
+.hotel-info-detail-rated div:first-child span:last-child{
+	margin-right:1rem;
+}
+.hotel-info-detail-rated-score {
+	color: #25a4bb;
+}
+.hotel-info-detail-rated-hr {
+	font-size: 3rem;
+}
+.detail-link{
+	color:#25a4bb;
+	display: inline-block;
+	margin-right: 0.7rem;
+}
+.detail-link+span {
+	color: #aaa;
+}
+/*hotel地址*/
+.hotel-info-detail-address div:first-child{
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-webkit-flex-direction:column;
+	flex-direction:column;
+	-webkit-align-items:flex-start;
+	align-items:flex-start;
+}
+.address-detail {
+	width: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+/*hotel设施*/
+.hotel-info-detail-establishment {
+	border:none;
+}
+.establishment-icon {
+	margin-top: 2rem;
+	color:#25a4bb;
+}
+.establishment-icon span{
+	margin-right: 0.4rem;
+}
+.establishment-tel {
+	margin-left: 2rem;
+}
+/*详细信息与列表间隔*/
+.hotel-blank {
+	width: 100%;
+	height: 4rem;
+	background-color: #f0f3f5;
+	border-top:0.4rem solid #ccc;
+	border-bottom:0.4rem solid #ccc;
+}
+/*详细信息列表*/
+.hotel-list-based {
+	width: 100%;
+	height: auto;
+	padding: 3rem 0;
+	font-size: 4rem;
+	border-bottom:0.4rem solid #ccc;
+	position: relative;
+}
+.list-one ,.list-two,.list-three,.list-four,.list-five{
+	width: 95%;
+	margin: auto;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-webkit-justify-content:space-between;
+	justify-content:space-between;
+	-webkit-align-items:center;
+	align-items:center;
+}
+.list-one div:first-child span:first-child{
+	color: #25a4bb;
+}
+.checkin-date ,.checkout-date{
+	margin-left: 0.4rem;
+}
+.list-detail{
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-webkit-flex-direction:column;
+	flex-direction:column;
+	-webkit-align-items:flex-start;
+	align-items:flex-start;
+}
+/*列表的第二个酒店信息*/
+/*左边详细信息*/
+.list-type {
+	color: #aaa;
+	margin-top: 1rem;
+}
+.list-choice {
+	margin-top: 1rem;
+	color: #fff;
+}
+.list-two-detail div span:first-child,.list-two-detail div span:nth-of-type(2){
+	background-color: #25a4bb;
+	margin-right: 0.5rem;
+	padding:0.2rem;
+}
+.return-start {
+	background-color: red;
+	padding:0.2rem;
+}
+/*右侧价格信息*/
+.list-price {
+	-webkit-flex-direction:row;
+	flex-direction:row;
+	-webkit-align-items:center;
+	align-items:center;
+	font-size: 5rem;
+	
+}
+.price {
+	color: #ff9036;
+}
+.price:first-letter{
+	font-size: 4rem;
+}
+.price span {
+	color: #aaa;
+	font-size: 4rem;
+}
+.compareprice {
+	width: 10rem;
+	height: 5rem;
+	background-color: #25a4bb;
+	color: #fff;
+	border-radius: 1.5rem;
+	font-size: 3rem;
+	margin-left: 1rem;
+}
+/*第三个信息*/
+.changebgColor{
+	background-color: #f0f3f5;
+}
+.list-price-detail {
+	-webkit-align-items:flex-end;
+	align-items:flex-end;
+}
+.pay ,.pay-return{
+	font-size: 3.5rem;
+	color: #aaa;
+	margin-top: 0.5rem;
+}
+.orderbutton {
+	width: 10rem;
+	height: 12rem;
+	border: 0.4rem solid #ff9036;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    font-weight: bold;
+    color: #ff9036;
+    line-height:6.5rem;
+    outline: 0;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+.orderbutton::before{
+    content: '订';
+    display: block;
+    width: 100%;
+    height: 5rem;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    border: 0;
+    background-color: #ff9036;
+    line-height: 6.5rem;
+    text-align: center;
+    color: #fff;
+    font-size: 4rem;
+}
+/*第四个酒店*/
+.good {
+	position: absolute;
+	top: 0;
+	left:0;
+	width: 3rem;
+	height: 3rem;
+}
+.list-four-detail .list-name span{
+	background-color: red;
+	color: #fff;
+	margin-left: 1.5rem;
+}
+/*第五个酒店*/
+.tipgroup {
+	margin-top: 1rem;
+}
+.most_tip {
+	border: 0.4rem solid #ff9036;
+    font-size: 3.5rem;
+    background-color: #fff;
+    color: #ff9036;
+}
+.most_tip:before{
+    content: "最";
+    background-color: #ff9036;
+    color: #fff;
+    padding-right: 0.2rem;
+}
+/*更多报价*/
+.more-price {
+	width: 100%;
+	height: 10rem;
+	line-height: 10rem;
+	background-color: #f0f3f5;
+	font-size: 4rem;
+	text-align: center;
+	vertical-align: middle;
+	color: #25a4bb;
+}
+.space {
+	width: 100%;
+	height: 8rem;
+	background-color: #f0f3f5;
+}
+.hotel_attention {
+	background-color: #f0f3f5;
+	width: 100%;
+	height: 10rem;
+	line-height: 10rem;
+	border-bottom: 0.4rem solid #ccc;
+	font-size: 2rem;
+	text-align: center;
+	vertical-align: middle;
+}
+
+
+footer {
+	width: 100%;
+	background-color: #f0f3f5;
+	padding-bottom: 2rem;
+}
+.footer_nav {
+	width: 100%;
+	text-align: center;
+	height: 4rem;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-webkit-justify-content:space-around;
+	justify-content:space-around;
+	-webkit-align-items:center;
+	align-items:center;
+}
+.footer_nav li{
+	display: inline-block;
+	color: #989696;
+	font-size:3rem;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-webkit-justify-content:space-around;
+	justify-content:space-around;
+	-webkit-align-items:center;
+	align-items:center;
+	padding-top: 3rem;
+}
+.footer_nav li img{
+	width: 3rem;
+	height: 3rem;
+}
+
+.footer_nav li:last-child img{
+	padding-left: 4rem;
+    border-left: 0.4rem solid #989696;
+}
+.copyright {
+	width: 100%;
+	color: #989696;
+	font-size: 3rem;
+	text-align: center;
+	display: block;
+	margin:6rem auto;
+}
+.copyright span{
+	text-align: center;
+	margin-left: 3rem;
+}
+
+
+
+
+
+
+
