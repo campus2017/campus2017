@@ -319,9 +319,13 @@ html {
 	height: 10rem;
 	line-height: 10rem;
 	border-bottom: 0.4rem solid #ccc;
-	font-size: 2rem;
+	font-size: 3rem;
 	text-align: center;
+}
+.hotel_attention span{
+	display: inline-block;
 	vertical-align: middle;
+	line-height: 4rem;
 }
 
 
