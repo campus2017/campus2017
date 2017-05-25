@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEA,IAAI;EACA,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,MAAM",
+"sources": ["../sass/fly.scss"],
+"names": [],
+"file": "fly.css"
+}
