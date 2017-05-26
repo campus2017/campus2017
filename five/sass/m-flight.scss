@@ -1,0 +1,41 @@
+@charset "utf-8"; 
+
+.m-flight{
+    width: 100%;
+    margin:{
+        top: 14px;
+    }
+    &>img{
+        display: block;
+    }
+    .header{
+        width: 100%;
+        height: 35px;
+        background: #26B4D3;
+        li{
+            float: left;
+            font-family: "SimSun";
+            font-size: 14px;
+            line-height: 35px;
+            color: #FFF;
+            &:first-child{
+                width: 190px;
+            }
+            &:nth-child(2){
+                width: 161px;
+            }
+            &:nth-child(3){
+                width: 112px;
+            }
+            &:nth-child(4){
+                width: 179px;
+            }
+            &:nth-child(5){
+                width: 126px;
+            }
+            &:nth-child(6){
+                width: 144px;
+            }
+        }
+    }
+}

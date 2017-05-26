@@ -1,0 +1,29 @@
+.m-flight {
+  width: 100%;
+  margin-top: 14px; }
+  .m-flight > img {
+    display: block; }
+  .m-flight .header {
+    width: 100%;
+    height: 35px;
+    background: #26B4D3; }
+    .m-flight .header li {
+      float: left;
+      font-family: "SimSun";
+      font-size: 14px;
+      line-height: 35px;
+      color: #FFF; }
+      .m-flight .header li:first-child {
+        width: 190px; }
+      .m-flight .header li:nth-child(2) {
+        width: 161px; }
+      .m-flight .header li:nth-child(3) {
+        width: 112px; }
+      .m-flight .header li:nth-child(4) {
+        width: 179px; }
+      .m-flight .header li:nth-child(5) {
+        width: 126px; }
+      .m-flight .header li:nth-child(6) {
+        width: 144px; }
+
+/*# sourceMappingURL=m-flight.css.map */
