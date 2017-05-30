@@ -1,0 +1,9 @@
+备注：在学习过程中，总结的个人笔记及遇到的问题都写成了博客，博客网址已注明。
+
+
+学习时间	学习内容			问题与总结
+2017-05-12	构建基本脚本			http://blog.csdn.net/u014656992/article/details/71749975
+2017-05-16	结构化命令			http://blog.csdn.net/u014656992/article/details/72326690
+2017-05-17	sed和gawk内容			http://blog.csdn.net/u014656992/article/details/72393610
+2017-05-18	正则表达式			http://blog.csdn.net/u014656992/article/details/72472380
+
