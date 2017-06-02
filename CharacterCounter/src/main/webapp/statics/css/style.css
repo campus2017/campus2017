@@ -1,0 +1,74 @@
+*{
+    padding:0;
+    margin:0;
+}
+.divTitle{
+    text-align: left;
+}
+div{
+    margin-top: 20px;
+}
+textarea{
+    resize:none;
+    width: 250px;
+    height: 80px;
+    max-width: 250px;
+    max-height: 80px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+table{
+    margin:10px 0px 5px 0px;
+}
+td{
+    width:125px;
+    height:30px;
+    text-align:center;
+    padding:0;
+}
+
+.button{
+    color:white;
+    background-color:lightskyblue;
+    width:70px;
+    height:25px;
+    border:none;
+}
+.btnClear{
+    color:white;
+    background-color:coral;
+    width:70px;
+    height:25px;
+    border:none;
+}
+
+.new-contentarea{
+    margin:0;
+    padding:0;
+    width: 250px;
+    height:30px;
+    text-align: left;
+}
+.btn-upload-img{
+    background-color: lightskyblue;
+    color:white;
+    text-align: left;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 25px;
+    text-decoration: none;
+}
+.new-contentarea input[type=file]{
+    background: #333 none repeat scroll 0 0;
+    margin: 0;
+    opacity: 0;
+    text-align: left;
+    left:0;
+    position: absolute;
+    color: black;
+    height: 25px;
+    width: 40px;
+}
+label{
+    font-size:5px;
+}
