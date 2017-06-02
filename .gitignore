@@ -1,5 +1,5 @@
 #IDEA
-.iml
+*.iml
 .idea/
 target/
 
