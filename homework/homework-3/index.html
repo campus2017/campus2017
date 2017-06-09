@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Index</title>
+</head>
+<body>
+	<nav>
+		<ul class="tab">
+			<li class="tab-item">比特币兑换</li>
+			<li class="tab-item">比特币明细</li>
+			<li class="tab-item on">兑换记录</li>
+		</ul>
+	</nav>
+	<main class="main-content">
+		<ul class="select">
+			<li class="select-item active ">全部</li>
+			<li class="select-item">成功</li>
+			<li class="select-item">失败</li>
+			<li>
+				选择日期：
+				<input type="date" name="">至
+				<input type="date" name="">
+				<span class="btn primary-btn">搜索</span>
+				<span class="btn danger-btn">重置</span>	
+			</li>
+		</ul>
+		<table id="tablebody" class="data-table">		  		
+		</table>		
+        <section class="pagenation">
+            <span class="btn">首页</span>
+            <span class="btn">末页</span>
+            <p>共<span>1</span>页，跳转到<input type="number" class="page-input">页</p>
+            <span type="submit">确定</span>
+        </section>
+
+	</main>
+</body>
+<script type="text/javascript">
+function getURL(URL) {
+    return new Promise(function (resolve, reject) {
+        var req = new XMLHttpRequest();
+        req.open('GET', URL, true);
+        req.onload = function () {
+            if (req.status === 200) {
+                resolve(req.responseText);
+            } else {
+                reject(new Error(req.statusText));
+            }
+        };
+        req.onerror = function () {
+            reject(new Error(req.statusText));
+        };
+        req.send();
+    });
+}
+function  createTable(data) {
+	let tablebody = `
+		<tr class='table-hd'>
+			<th>时间</th>
+			<th>商品名称</th>
+			<th>数量</th>
+			<th>E币</th>
+			<th>状态</th>
+			<th>信息</th>
+			<th>兑换信息</th>
+			<th>确认</th>
+		 </tr>`
+	for (let i = 0; i < data.length; i++) {
+		tablebody += `<tr><td>${data[i].time}</td>
+			<td>${data[i].name}</td>
+			<td>${data[i].number}</td>
+			<td>${data[i].eCoin}</td>
+			<td>${data[i].status}</td>
+			<td>${data[i].info}</td>
+			<td><span class='primary-btn btn'>兑换信息</span></td>
+			<td></td>`
+	}
+	return tablebody;
+}
+var URL = "http://localhost:4000/";
+getURL(URL).then(function onFulfilled(value){    
+    document.getElementById(`tablebody`)
+    tablebody.innerHTML = createTable(JSON.parse(value));
+}).catch(function onRejected(error){
+    console.error(error);
+});	
+</script>
+<style type="text/css">
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+     -webkit-font-smoothing: antialiased;
+}
+html,body,div,li,section,ul,a,h1,h2,h3,h4{
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+html,body{
+	height: 100%;
+}
+nav,.main-content {
+	width: 80%;
+	margin: 0 auto;
+}
+table{
+	border: 1px solid #ccc;
+	padding: 0 3px;
+	border-collapse:collapse;
+}
+#tablebody td,
+#tablebody th {
+  padding: 10px;
+  font-size: 14px;
+  font-weight: normal;
+  text-align: left;
+}
+#tablebody tr{
+	border-bottom: 1px solid #ccc;
+}
+.table-hd{
+	background-color: #f8f8f8;
+}
+.table-hd>th:nth-child(1){
+	width: 10%;
+}
+.table-hd>th:nth-child(2){
+	width: 15%;
+}
+.table-hd>th:nth-child(3){
+	width: 10%;
+}
+.table-hd>th:nth-child(4){
+	width: 10%;
+}
+.table-hd>th:nth-child(5){
+	width: 10%;
+}
+.table-hd>th:nth-child(6){
+	width: 25%;
+}
+.table-hd>th:nth-child(7){
+	width: 10%;
+}
+.table-hd>th:nth-child(8){
+	width: 10%;
+}
+.btn {
+	border-radius: 4px;
+	padding: 2px 8px;
+	font-size: 14px;
+	color: #3775c0;
+}
+.primary-btn {
+	background: #3775c0;
+	color: #fff;
+}
+.danger-btn {
+	background: red;
+	color: #fff;
+}
+.tab{
+	width: 100%;
+	display: inline-flex;
+	justify-content: flex-end;
+	border-bottom: 1px solid #e0e0e0;
+}	
+.tab-item {	
+	padding: 2px 8px;
+	background-color: #f1f1f1;
+	border: 1px solid #e0e0e0;
+	border-radius: 4px 4px 0 0;
+	border-width: 1px 1px 0 1px;
+	margin: 0 0 0 10px;
+	font-size: 14px;
+}
+.tab .on{
+	background: #fff;
+	border-bottom: 1px solid #fff;
+}
+
+.main-content .select {
+	display: flex;
+	justify-content: flex-start;
+	margin: 10px 0;
+}
+.main-content .select .select-item{
+	color: #3775c0;
+	padding: 2px 8px;
+	margin: 0 20px;
+}
+.select .active {
+	border-radius: 4px;
+	color: #fff !important;
+	background-color: #3775c0;
+}
+.pagenation{
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	background-color: #f8f8f8;
+}
+</style>
+</html>

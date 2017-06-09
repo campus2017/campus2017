@@ -1,0 +1,66 @@
+.icon{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background-size:cover;
+	vertical-align: middle;
+}
+.icon-logo{
+	@extend .icon;	
+	width: 30px;
+	height: 30px;
+	background: url('../../images/logo.png') center no-repeat;
+
+}
+.icon-back{
+	@extend .icon;	
+	background: url('../../images/back-btn.png') center no-repeat;
+}
+.arow-right-icon{
+	@extend .icon;	
+	background: url('../../images/arrow-r.png') center no-repeat;
+}
+.arow-up-icon{
+	@extend .icon;	
+	background: url('../../images/button-arrow.png') center no-repeat;
+}
+.icon-wifi {
+	@extend .icon;
+	background: url('../../images/product-info-service1.png') center no-repeat;
+}
+.icon-notification {
+	@extend .icon;
+	background: url('../../images/product-info-service2.png') center no-repeat;
+}
+.icon-bracket {
+	@extend .icon;
+	background: url('../../images/product-info-service3.png') center no-repeat;
+}
+.icon-shower {
+	@extend .icon;
+	background: url('../../images/product-info-service4.png') center no-repeat;
+}
+.icon-hydrant {
+	@extend .icon;
+	background: url('../../images/product-info-service5.png') center no-repeat;
+}
+.icon-calendar {
+	@extend .icon;
+	background: url('../../images/booking-date.png') center no-repeat;
+}
+.icon-plane {
+	@extend .icon;
+	background: url('../../images/footer-fly.png') center no-repeat;
+}
+.icon-hotel {
+	@extend .icon;
+	background: url('../../images/footer-hotel.png') center no-repeat;
+}
+.icon-department {
+	@extend .icon;
+	background: url('../../images/footer-department.png') center no-repeat;
+}
+.icon-more {
+	@extend .icon;
+	background: url('../../images/arrow-d.png') center no-repeat;
+}

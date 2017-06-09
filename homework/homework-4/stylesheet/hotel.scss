@@ -1,0 +1,247 @@
+@import "zhouxiaoxiao";
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+body {
+	background: $lightGray;	
+}
+.list-style{
+	padding: 10px;
+	border-bottom:1px solid #ccc;
+}
+.btn-left-ative{
+	font-size: 14px;
+	background: white;
+	border: 1px solid $warningColor;
+	border-radius: 2px;
+	padding-right: 2px;
+	color: $warningColor;
+}
+.btn-left-ative>span{
+	background: $warningColor;
+	color :white;
+	padding: 1px;
+}
+/**
+ * 房间信息
+ */
+.room { 
+	// nav
+	&-nav {	 
+		@extend .fx-btw-center;
+		background: $primaryColor;
+		&-logo{
+			@extend .fx-btw-center;
+			>a{
+				color:#fff;
+				font-size:12px;
+			}
+		}
+		&-header {
+			font: bold 16px '宋体';
+			color: #fff;
+		}
+	}
+	// 轮播
+	&-pics{
+		li{
+			width: 100%;
+			height: 100%;
+			img{
+				width: 100%;
+				height: 100%;
+			}
+		}	
+	}
+	&-info {
+		background: #fff;		
+		border-bottom:1px solid #ccc;
+		&-item{
+			@extend .fx-v-btw;
+			padding: 10px 0;
+			margin: 0 10px;
+			border-bottom:1px dotted #ccc;
+			>a{
+				color: $primaryColor;
+				@extend .fx-h-center;
+			}
+		}
+		&-item:nth-last-child(1){
+			border:none;
+		}
+	}
+	//评分
+	&-comment {
+		.active-score {
+			font-size: 16px;
+			color: $primaryColor;
+			font: 18px bold;
+		}
+	}
+	&-location {		
+		&-detail{
+			margin :3px 0;
+			width: 200px;
+			overflow: hidden;
+			white-space:nowrap; 
+			text-overflow:ellipsis;
+			display: inline-block;
+		}		
+		.room-tag {
+			color: $normalGray;
+			font-size: 12px;
+		}
+	}
+}
+.order-time {
+	@extend .fx-btw-center;
+	@extend .fx-h-center;
+	@extend .list-style;
+	margin: 10px 0 0 0;
+	background: #fff;
+	border-top:1px solid #ccc;
+	.order-date {
+		margin-left: 10px;
+	}
+	&-total{
+		@extend .fx-h-center;
+		color: $primaryColor;
+	}
+
+}
+/**
+ * 推荐房型
+ */
+.recomend-rooms {	
+	margin: 0 0 10px 0;
+	background: #fff;
+	&-item{
+		display: block;
+		.special-info {
+			color: #b2b2b2;
+			font-size: 12px;
+			margin: 8px 0;
+		}
+	}
+	&-detail{
+		@extend .fx-btw-center;
+		@extend .list-style;
+		background: white;
+	}
+}
+.recomend-hotel {
+	background: white;
+	&-item {
+		@extend .fx-btw-center;	
+		@extend .list-style;
+	}
+	
+}
+
+.basic-price {
+	color: $warningColor;
+	font: bold 18px 'Arial';
+}
+.show .compare-price{
+	height: auto;
+}
+.compare-price {
+	width: 100%;
+	height: 0;
+	transition: all .3s ease;
+	overflow: hidden;
+	background: $lightGray;	
+	&-item{
+		display: block;
+		@extend .list-style;
+		position: relative;
+		.recommend-icon{
+			position: absolute;
+			top: 0 ;
+			left: 0;
+		}
+	}
+	&-detail {
+		@extend .fx-v-btw;		
+	}
+	.hotel-info{
+		@extend .fx-hs-ard;
+	}
+	.price-info {
+		@extend .fx-h-center;
+		&-detail {
+			@extend .fx-hs-right;
+			margin: 0 10px 0 0;
+		}
+		.order-btn {
+			flex: 1;
+			width: 42px;
+			height: 42px;
+			border: 1px solid $warningColor;
+			border-radius: 3px;
+			background: #fff;
+			.active{
+				width: 100%;
+				height: 24px;
+				line-height: 24px;
+				display: inline-block;
+				background: $warningColor;
+				color:white;
+				text-align: center;
+				font:  bold 20px  "宋体" ;
+			}
+			.normal {
+				display: inline-block;				
+				width: 100%;
+				height: 18px;
+				line-height: 18px;
+				font:  bold 12px  "宋体" ;
+				text-align: center;
+				color: $warningColor;
+
+			}
+		}
+	}
+	.more-price {
+		@extend .btn;
+		color: $primaryColor;
+		width: 100%;
+	}
+}
+.show .compare-price{
+	min-height: 0px;
+	transition: all .3s ease;
+}
+.show .arow-up-icon{
+	transform:rotate(180deg); 
+	transition: all .3s ease;
+}
+.declaraction {
+    color: #999;
+    padding: 6px 10px;
+    font-size: 12px;
+    line-height: 20px;
+    border-bottom: 1px solid #ccc;
+}
+.q-service{
+	padding: 10px 0;	
+	&-item{
+		@extend .fx-hv-center;
+		font-size : 14px;
+		color: #999;
+	}
+	&-item:nth-last-child(1){
+		border-left: 2px solid #ccc;
+	}
+}
+.copy-right {
+	@extend .fx-v-ard;
+	font-size : 14px;
+	color: #999;
+	padding: 10px 0;		
+}

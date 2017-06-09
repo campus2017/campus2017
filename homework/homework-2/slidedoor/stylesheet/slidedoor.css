@@ -1,0 +1,13 @@
+#slidedoor {
+	margin: 0 auto;
+	padding: 0;
+}
+.slide-item {
+    float: left;
+    height: 100%;
+    list-style: none;
+}
+.slide-item li {
+    display: block;
+    overflow: hidden;
+}

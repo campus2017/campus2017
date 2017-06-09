@@ -1,0 +1,487 @@
+#qr_code {
+	width: 100px;
+	height: 100px;
+	background: #ed5172;
+    border-bottom: 8px solid #9d0035;
+	position: absolute;
+	left: -120px;
+}
+.hotpool-festival-time,
+.hotpool-festival-theme{
+	position: absolute;
+	color: white;	
+	left: 50%;
+	transform: translateX(-50%) rotate(-8deg);
+}
+.hotpool-festival-time{
+	top:30px;	
+	font-size: 18px;
+}
+.hotpool-festival-theme {
+	top:50px;
+	font-size: 12px;	
+	width: 100%;
+}
+#hotpool-festival-location {
+	width: 100px;
+	height: auto;
+	position: absolute;
+	right: -150px;
+	background: #78af24;
+	text-align: center;
+	border-radius: 65px 65px 0 0;
+}
+#hotpool-festival-location img{
+	width: 160px;
+	margin: 20px 0px 0 -30px;
+}
+.hotpool-festival-item{
+	display: block;
+	background: #78af24;
+	width: 60%;
+	margin: 0 auto;
+	font-size: 12px
+	padding: 10px 0;
+	border-radius: 15px;
+	margin: 5px auto;
+	color: #fff;
+}
+.hotpool-festival-item:hover{
+	background: #a7de55;
+	color:#336d00;
+}
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+     -webkit-font-smoothing: antialiased;
+}
+html,body,div,li,section,ul,a,h1,h2,h3,h4{
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+html,body{
+	height: 100%;
+	background-color: #7ecef4;
+}
+.q-nav {
+	display: flex;
+	justify-content: space-between;
+	padding:2px 22.5%;
+	width: 100%;
+	margin: 0 auto;	
+	background: #fff;
+}
+.q-nav .logo{
+	position: relative;
+}
+.q-nav .logo::before{ 
+	content:"";
+	background:url('../images/logo.png') no-repeat;
+	width: 26px;
+	height: 26px;
+	display: block;
+	position: absolute;
+	top:-6px;
+	left: -26px;
+}
+.q-hd-service li {
+	display: inline-block;
+	font-size: 12px;
+}
+.q-hd-service li a { 
+	color: #ccc;
+}
+.q-hd-service li a:hover{
+	color: #ff9036;
+}
+.hotpool-banner {
+	position: relative;
+}
+.time-line {
+	overflow: hidden;
+	position: absolute;
+	width: 50%;
+	height: 20%;
+	left:25.5%;
+	bottom: 40px;
+}
+.time-line-item{
+	height: 100%;
+	width: 33%;
+	color: #fff;
+}
+.time-line-item .time-node{
+	text-align: center;
+	margin: 10px 0;
+}
+.time-line-item .activity-node{
+	text-align: center;
+	font-size: 18px;
+}
+.time-line-item:nth-of-type(1){
+	background: url('../images/timeline-first-grey.png') no-repeat center;
+	background-size: 100%;
+	width:33%;	
+}
+.time-line-item:nth-of-type(2){
+	background: url('../images/timeline-second.png') no-repeat center;
+	width:33%;
+}
+.time-line-item:nth-of-type(3){
+	background: url('../images/timeline-third.png') no-repeat center;
+	background-size: cover;
+	width:33%;
+}
+.hotpool-banner .time-line-item{
+	float: left;
+}
+.location-line{
+	background: #ed5172;
+    border-radius: 8px;
+    box-shadow: 0px 8px 0px #9d0035;
+    width: 55%;
+    margin: 8px auto;
+}
+/*--------------------*/
+.activity-wrapper{
+	width: 55%;
+	margin: 20px auto;
+	overflow: hidden;
+	background: #78af24;
+}
+.activity-hotel,	
+.activity-prize{
+	position: relative;
+	float: left;
+	width: 50%;
+	height: 200px;
+	padding: 10px 0; 
+}
+.activity-hotel{
+	left: 10px;
+}
+.activity-prize{
+	right: 10px;
+}
+.activity img{
+	width: 100%;
+	height: 100%;
+}
+.activity .activity-title{
+	font-size: 18px;
+}
+.activity .activity-detail{
+	font-size: 12px;
+	margin: 2px 0;	
+}
+.overlay{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	position: absolute;
+	color: white;
+	bottom: 10px;
+	width: 100%;
+	height: 80px;
+}
+.activity .more-btn{
+	width: 45%;
+	padding: 2px;
+	text-align: center;
+	background-color: #959595;
+	border-radius: 50px;
+	box-shadow: 0 5px 0 #626262;
+}
+.activity .more-btn:hover{	
+	background: #a7de55;	
+    box-shadow: 0 5px 0 #336d00;
+	
+}
+/*--------------------*/
+.location-line ul{	
+	width: 100%;
+	display: flex;
+    justify-content: space-around;
+}
+.location-line li{
+	padding: 25px 0;
+	color: white;
+	width: 11%;	
+	text-align: center;
+	position: relative;
+}
+.location-line li:hover {
+	transform: scale(1.1);
+	background: #9d0035;
+	border-radius: 8px;
+}
+.location-line .dot {
+	width: 5px;
+	height: 5px;
+	background-color: white;
+	border-radius: 50%;
+	display: inline-block;
+	position: absolute;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.location-line .line {
+	width: 50%;
+	height: 1px;
+	background-color: white;
+	position: absolute;
+	top:50%;
+	left: 50%;
+}
+.right-line{
+	width: 50%;
+	height: 1px;
+	background-color: white;
+	position: absolute;
+	top:50%;
+	left: 0;	
+}
+.location-line li:nth-of-type(2n+1)>span{
+	padding-bottom: 30px;
+	display: inline-block;
+}
+.location-line li:nth-of-type(2n)>span{
+	padding-top: 30px;
+	display: inline-block;
+}
+.hotpool-hotels {
+	position: relative;
+	width: 55%;
+	margin: 0 auto;
+	padding: 10px 10px;
+	background: #f3eedb;
+}
+.hotpool-hotels-lists {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.hotpool-hotels-item {
+	border: 5px solid white;
+	height: 270px;
+	position: relative;
+}
+.hotpool-hotels-theme{
+	color: #ed5172;
+	display: flex;
+	align-items: flex-end;
+	margin: 10px  0;
+}
+.hotpool-advantage {
+	font: normal 16px "微软雅黑", sans-serif;
+}
+.more-hotel{
+	color: #ed5172;
+	display: flex;
+	align-items: flex-end;
+	margin: 0 0 10px 0;
+}
+.hotpool-hotels-item:not(:nth-of-type(1)){
+	width: 49%;	
+	margin: 10px auto;
+}
+.hotpool-hotels-item:nth-of-type(1){
+	position: relative;
+	width: 100%;
+	height: 270px;
+	border: 5px solid white;	
+}
+.hotpool-hotels-item .first-img{
+	width: 100%;
+	height: 260px;
+}
+.hotpool-hotels-item .sub-product {
+	width: 100%;
+	height: 260px;
+}
+.hotpool-hotels-item .top-info {
+	position: absolute;
+    top: 0;
+    right: 0;
+    color: white;
+    width: 200px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0,0,0,.6);
+}
+.hotpool-hotels-item .order-btn{
+	text-align: center;	
+	background-color: #ed5172;
+}
+.top-info .top-order-btn{	
+	bottom: 0px;
+	width: 100%;
+	height: 50px;
+	line-height: 50px;	
+}
+.top-info .hotel-name{
+	margin: 20px auto;
+	font: bold 24px 微软雅黑, sans-serif
+}
+.top-info .sale-price,
+.top-info .origin-price{
+	font-style: italic;
+}
+.top-info .origin-price{
+	text-decoration: line-through;
+}
+.top-info .sale-price{
+	font-size: 32px;
+}
+.top-info.origin-price,
+.top-info .intro {
+	font-size: 12px;
+}
+.info {
+	color: white;
+}
+.sub-info{
+	width: 100%;
+	height: 80px;
+	position: absolute;
+	bottom: 0;
+	background-color: rgba(0,0,0,.6);
+}
+.sub-info h4,
+.sub-info .intro,
+.sub-info .origin-price,
+.sub-info .sale-price{
+	padding-left: 10px;
+	width: 80%;
+}
+.sub-info .intro {
+	font-size: 12px;
+}
+.sub-info .origin-price,
+.sub-info .sale-price{
+	width: auto;
+	display: inline-block;
+	font-style: italic;
+}
+.sub-info .origin-price{
+	text-decoration: line-through;
+	font-size: 12px;
+}
+.sub-info .sale-price{
+	font-size: 24px;
+}
+.sub-order-btn{
+	width: 20%;
+	height: 100%;
+	line-height: 80px;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.ticket {
+	position: relative;
+	width: 55%;
+	height: 120px;
+	margin: 0 auto;	
+	background: url('../images/ticket-bg.png') no-repeat center;
+	background-size: cover;
+}
+.ticket .ticket-title{
+	color: white;
+	position: absolute;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.get-ticket-btn{
+	display: inline-block;
+	width: 100px;
+	height: 25px;
+	line-height: 25px;
+	border-radius: 15px;
+	text-align: center;
+	box-shadow: 0 5px 0 #336d00;
+	background:#a7de55;
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.wb-topic {
+	width: 55%;
+	margin: 0 auto;
+}
+.wb-topic .wb-topic-title {
+	text-align: center;
+	color: #fff;
+	margin: 10px auto;
+}
+.wb-topic .wb-topic-title>span{
+	color: #ed5172;
+}
+.wb-comment {
+	height: 200px;
+	width: 100%;
+	overflow: scroll;	
+	box-shadow: -1px -2px 1px #918d8d;
+}
+footer{
+	background:#fff;
+	padding: 20px 0;
+	margin: 30px 0;
+}
+.more-activity{
+	text-align: center;
+	color: #ccc;
+}
+.pre-banner{
+	width: 55%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.pre-banner-item {
+	width: 45%;
+	margin: 10px 0;
+	height: 80px;
+	line-height: 80px;
+	text-align: center;
+	background-color: #ccc;
+	color: #fff;
+}
+.about-info,
+.copyright-info,
+.co-campany{
+	width: 55%;
+	margin: 0 auto;
+	text-align: center;
+	color: #ccc;
+	font-size: 12px;
+}
+.about-info li{
+	display: inline-block;
+	padding: 0 5px 0 0;
+	border-right: 2px solid #ccc;
+	color: #ccc;
+}
+.about-info li a{
+	color: gray;
+	font-size: 12px;
+}
+.co-campany li{
+	display: inline-block;
+}

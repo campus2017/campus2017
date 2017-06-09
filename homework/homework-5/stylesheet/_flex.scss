@@ -1,0 +1,158 @@
+.fx{
+	// 单个物体
+	// 水平方向
+	&-v-start {
+		display: flex;
+		justify-content: flex-start;
+	}	
+	
+	&-v-center {
+		display: flex;	
+		justify-content:center;	
+	}
+
+	&-v-end {
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	&-v-btw{
+		display: flex;
+		justify-content:space-between;
+	}
+
+	&-v-ard{
+		display: flex;
+		justify-content: space-around;
+	}
+	/**
+	 * 垂直方向
+	 */
+	&-h-start {
+		display: flex;
+		align-content: flex-start;
+	}
+
+	&-h-center {
+		display: flex;
+		flex-direction: column;
+		align-items:center;
+	}
+
+	&-h-end {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+	}
+	&-h-btw {
+		display: flex;
+		flex-direction: column;
+		justify-content:space-between;
+	}
+	&-h-ard {
+		display: flex;
+		flex-direction: column;
+		justify-content:space-around;
+	}
+	&-hv-center {
+		display: flex;
+		justify-content:center;
+		align-items:center;
+	}
+	// 高度自适应盒子高度
+	&-hs-strh {
+		display: flex;
+		flex-direction: column;
+		align-items:stretch;	
+	}
+	
+	// 多个物体
+	// 竖直方向，从右边到左边	
+	&-hs-right{
+		display: flex;
+		flex-direction: column;
+		align-items:flex-end;		
+	}
+	// 竖直方向，从左边到右边
+	&-hs-left{
+		display: flex;
+		flex-direction: column;
+		align-items:flex-start;		
+	}
+	// 垂直方向，居中对齐
+	&-hs-center{
+		display: flex;
+		flex-direction: column;
+		align-items:center;		
+	}
+	&-hs-cntard{
+		display: flex;
+		flex-direction: column;
+		align-items:center;		
+		justify-content: space-around;		
+	}
+	&-hs-btw{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	&-hs-ard{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;		
+	}
+	// 两端对齐，垂直居中
+	&-btw-center {
+		display: flex;
+		align-items: center;		
+		justify-content:space-between;
+	}	
+}
+// 水平方向
+/**------水平等分-----**/
+[layout="flex-v-every"] {
+	display: flex;	
+	>*{
+		flex:1;
+	}
+}
+
+/**------中间自适应----**/
+[layout="flex-v-middle"] {
+	display: flex;	
+	>*:nth-child(2) {
+		flex:1;
+	}		
+}
+/**-----平方向，超过父元素不换行-----*/
+[layout="flex-v-nowrap"] {
+	display: flex;	
+	flex-shrink:0;		
+}
+// 垂直方向
+[layout="flex-h-middle"] {
+	display: flex;	
+	flex-direction: column;
+	align-items:stretch;		
+}
+[layout="flex-h-every"] {
+	display: flex;	
+	flex-direction: column;
+	>*{
+		flex: 1;	
+	}
+	
+}
+/**----中间自适应-----*/
+[layout="flex-h-middle"] {
+	display: flex;	
+	flex-direction: column;
+	>*:nth-child(2) {
+		flex:1;
+	}		
+}
+/**----多行多列-----*/
+[layout="flex-multi-cols-rows"]{
+	display: flex;
+	flex-wrap:wrap;		
+}

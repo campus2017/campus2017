@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="stylesheet/dist/hotel.css">
+</head>
+<body>
+<!-- 房间详情 -->
+	<div class="room">
+		<nav class="room-nav">
+			<span><i class="icon-back"></i></span>
+			<h1 class="room-nav-header">北京有怡公寓</h1>
+			<span class="room-nav-logo">
+				<a href="#">							
+					<span><i class="icon-logo"></i>首页</span>
+				</a>
+			</span>
+		</nav>
+
+		<div class="room-pics">
+			<ul  layout="flex-v-nowrap">
+				<li><a href=""><img src="./images/banner.png" alt="Qunar"></a></li>
+			</ul>				
+		</div>
+		
+		<div class="room-info">
+			<ul>
+				<li class="room-info-item room-comment">
+					<div>
+						<span class="room-score"><span class="active-score">3.9</span>分/</span>
+						<span>好评65</span>
+						<span>差评9</span>
+					</div>
+					<a href="#comments">看点评<i class="arow-right-icon"></i></a>
+				</li>
+				
+				<li class="room-info-item  room-location">
+					<div layout="flex-h-middle">
+						<span class="room-location-detail">北京市朝阳区西大望路甲12号北...</span>
+						<span class="room-tag">[商圈]大望路区域</span>
+					</div>
+					<a href="#searchmap">看地图<i class="arow-right-icon"></i></a>
+				</li>
+				
+				<li class="room-info-item  room-detail">
+					<div layout="flex-h-middle">
+						<span>2014年开业 4008909123</span>
+						<span><i class="icon-wifi"></i>							
+						<i class="icon-notification"></i>
+						<i class="icon-bracket"></i>
+						<i class="icon-shower"></i>
+						<i class="icon-hydrant"></i></span>
+					</div>
+					<a href="#searchotel">酒店设施<i class="arow-right-icon"></i></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+<!-- 预定时间-->
+	<div class="order-time">
+		<span class="fx-h-center"><i class="icon-calendar"></i><span class="order-date">02月27日入住 02月28日离店</span></span> 
+		<a class="order-time-total"href="">共一晚<i class="arow-right-icon"></i></a>
+	</div>
+<!-- 推荐房型-->
+	<div class="recomend-rooms">
+		<ul>
+			<li class="recomend-rooms-item">
+				<div class="recomend-rooms-detail">
+					<div class="fx-h-strh">
+						<span class="basic-info">精致家庭房</span>
+						<div class="special-info"><span>有窗</span></div>
+						<div class="discount-info">
+							<span class="primay-btn-small">团</span>
+							<span class="primay-btn-small">夜销</span>
+							<span class="hot-btn-small">可返星圈</span>
+						</div>
+					</div>
+					<div class="price-info">
+						<span class="basic-price">¥122起 </span>
+						<span class="primay-btn-small">比价<i class="arow-up-icon"></i></span>
+					</div>
+				</div>										
+				<div class="compare-price">
+					<ul>
+						<li class="compare-price-item">
+							<div class="compare-price-detail">
+								<div class='hotel-info'>
+									<span class="basic-info">酒店直销</span>
+									<span class="special-info">(限时促销，节省33元)-优惠价</span>
+									<div class="discount-info">
+										<span class="hot-btn-small">可返星圈</span>
+									</div>
+								</div>
+								<div class="price-info">
+									<div class="price-info-detail">
+										<span class="basic-price">¥122 </span>
+										<span class="special-info">付款135</span>
+										<span class="special-info">可返135星券</span>
+									</div>
+									<span class="order-btn"><span class="active">订</span><span class="normal">到店付</span></span>
+								</div>
+							</div>								
+						</li>							
+						<li class="compare-price-item">
+							<i class="recommend-icon">
+								<img src="images/tag-recommend.png" alt="推荐房型" width="20px">
+							</i>
+							<div class="compare-price-detail">
+								<div class="hotel-info">
+									<span class="basic-info">酒店直销</span>
+									<span class="special-info">(限时促销，节省33元)-优惠价</span>
+								</div>
+								<div class="price-info">
+									<div class="price-info-detail">
+										<span class="basic-price">¥122 </span>
+										<span class="special-info">付款135</span>
+										<span class="special-info">可返13</span>
+									</div>
+									<span class="order-btn"><span class="active">订</span><span class="normal">到店付</span></span>
+								</div>
+							</div>								
+						</li>
+						<li class="compare-price-item">
+							<div class="compare-price-detail">
+								<i class="recommend-icon">
+									<img src="images/tag-recommend.png" alt="推荐房型" width="20px">
+								</i>
+								<div class="hotel-info">
+									<span class="basic-info">酒店夜销</span>									
+									<div class="discount-info">
+										<span class="btn-left-ative"><span>最</span>可靠</span>
+										<span class="btn-left-ative"><span>最</span>快</span>
+									</div>
+
+								</div>
+								<div class="price-info">
+									<div class="price-info-detail">
+										<span class="basic-price">¥168 </span>
+									</div>
+									<span class="order-btn"><span class="active">订</span><span class="normal">在线付</span></span>
+								</div>
+							</div>								
+						</li>
+						<li class="compare-price-item">
+							<div class="compare-price-detail">
+								<div class='hotel-info'>
+									<span class="basic-info">五星旅游网</span>
+									<span class="special-info">(今日特价)-优惠价</span>
+									<div class="discount-info">
+										<span class="hot-btn-small">可返星圈</span>
+									</div>
+								</div>
+								<div class="price-info">
+									<div class="price-info-detail">
+										<span class="basic-price">¥122 </span>
+										<span class="special-info">付款135</span>
+										<span class="special-info">可返￥6</span>
+									</div>
+									<span class="order-btn"><span class="active">订</span><span class="normal">到店付</span></span>
+								</div>
+							</div>								
+						</li>
+						<li class="compare-price-item">
+							<div class="compare-price-detail">
+								<div class="hotel-info">
+									<span class="basic-info">爱游网</span>
+									<span class="special-info">(今日特价)-优惠价</span>
+								</div>
+								<div class="price-info">
+									<div class="price-info-detail">
+										<span class="basic-price">¥122 </span>
+										<span class="special-info">付款135</span>
+										<span class="special-info">可返￥6</span>
+									</div>
+									<span class="order-btn"><span class="active">订</span><span class="normal">到店付</span></span>
+								</div>
+							</div>								
+						</li>
+						<li class="compare-price-item">
+							<a class="more-price" href="">更多报价</a>
+						</li>						
+					</ul>
+				</div>
+			</li>
+			<li class="recomend-rooms-item">
+				<div class="recomend-rooms-detail">
+					<div class="fx-h-strh">
+						<span class="basic-info">温馨家庭房</span>
+						<div class="special-info"><span>25m</span></div>
+						<div class="discount-info">
+							<span class="primay-btn-small">团</span>
+							<span class="primay-btn-small">夜销</span>
+							<span class="hot-btn-small">可返星圈</span>
+						</div>
+					</div>
+					<div class="price-info">
+						<span class="basic-price">¥135起 </span>
+						<span class="primay-btn-small">比价<i class="arow-up-icon"></i></span>
+					</div>
+				</div>
+				<div class="compare-price">
+					<ul>
+						<li class="compare-price-item">
+							<div class="compare-price-detail">
+								<div class='hotel-info'>
+									<span class="basic-info">酒店直销</span>
+									<span class="special-info">(限时促销，节省33元)-优惠价</span>
+									<div class="discount-info">
+										<span class="hot-btn-small">可返星圈</span>
+									</div>
+								</div>
+								<div class="price-info">
+									<div class="price-info-detail">
+										<span class="basic-price">¥122 </span>
+										<span class="special-info">付款135</span>
+										<span class="special-info">可返135星券</span>
+									</div>
+									<span class="order-btn"><span class="active">订</span><span class="normal">到店付</span></span>
+								</div>
+							</div>								
+						</li>							
+						<li class="compare-price-item">
+							<i class="recommend-icon">
+								<img src="images/tag-recommend.png" alt="推荐房型" width="20px">
+							</i>
+							<div class="compare-price-detail">
+								<div class="hotel-info">
+									<span class="basic-info">酒店直销</span>
+									<span class="special-info">(限时促销，节省33元)-优惠价</span>
+								</div>
+								<div class="price-info">
+									<div class="price-info-detail">
+										<span class="basic-price">¥122 </span>
+										<span class="special-info">付款135</span>
+										<span class="special-info">可返13</span>
+									</div>
+									<span class="order-btn"><span class="active">订</span><span class="normal">到店付</span></span>
+								</div>
+							</div>								
+						</li>
+						<li class="compare-price-item">
+							<div class="compare-price-detail">
+								<i class="recommend-icon">
+									<img src="images/tag-recommend.png" alt="推荐房型" width="20px">
+								</i>
+								<div class="hotel-info">
+									<span class="basic-info">酒店夜销</span>									
+									<div class="discount-info">
+										<span class="btn-left-ative"><span>最</span>可靠</span>
+										<span class="btn-left-ative"><span>最</span>快</span>
+									</div>
+
+								</div>
+								<div class="price-info">
+									<div class="price-info-detail">
+										<span class="basic-price">¥168 </span>
+									</div>
+									<span class="order-btn"><span class="active">订</span><span class="normal">在线付</span></span>
+								</div>
+							</div>								
+						</li>
+						<li class="compare-price-item">
+							<div class="compare-price-detail">
+								<div class='hotel-info'>
+									<span class="basic-info">五星旅游网</span>
+									<span class="special-info">(今日特价)-优惠价</span>
+									<div class="discount-info">
+										<span class="hot-btn-small">可返星圈</span>
+									</div>
+								</div>
+								<div class="price-info">
+									<div class="price-info-detail">
+										<span class="basic-price">¥122 </span>
+										<span class="special-info">付款135</span>
+										<span class="special-info">可返￥6</span>
+									</div>
+									<span class="order-btn"><span class="active">订</span><span class="normal">到店付</span></span>
+								</div>
+							</div>								
+						</li>
+
+						<li class="compare-price-item">
+							<div class="compare-price-detail">
+								<div class="hotel-info">
+									<span class="basic-info">爱游网</span>
+									<span class="special-info">(今日特价)-优惠价</span>
+								</div>
+								<div class="price-info">
+									<div class="price-info-detail">
+										<span class="basic-price">¥122 </span>
+										<span class="special-info">付款135</span>
+										<span class="special-info">可返￥6</span>
+									</div>
+									<span class="order-btn"><span class="active">订</span><span class="normal">到店付</span></span>
+								</div>
+							</div>								
+						</li>
+						<li class="compare-price-item">
+							<a class="more-price" href="">更多报价</a>
+						</li>						
+					</ul>
+				</div>						
+			</li>
+			<li class="recomend-rooms-item">
+				<div class="recomend-rooms-detail">
+					<div class="fx-h-strh">					
+						<span class="basic-info">标准房</span>
+						<div class="special-info">
+							<span>有窗</span>
+							<span>双床</span>
+							<span>32m</span>
+						</div>
+						<div class="discount-info">
+							<span class="primay-btn-small">团</span>
+							<span class="primay-btn-small">夜销</span>
+							<span class="hot-btn-small">可返星圈</span>
+						</div>
+					</div>
+					<div class="price-info">
+						<span class="basic-price">¥135起 </span>
+						<span class="primay-btn-small">比价<i class="arow-up-icon"></i></span>
+					</div>
+				</div>
+				<div class="compare-price">
+					<ul>
+						<li class="compare-price-item">
+							<div class="compare-price-detail">
+								<div class='hotel-info'>
+									<span class="basic-info">酒店直销</span>
+									<span class="special-info">(限时促销，节省33元)-优惠价</span>
+									<div class="discount-info">
+										<span class="hot-btn-small">可返星圈</span>
+									</div>
+								</div>
+								<div class="price-info">
+									<div class="price-info-detail">
+										<span class="basic-price">¥122 </span>
+										<span class="special-info">付款135</span>
+										<span class="special-info">可返135星券</span>
+									</div>
+									<span class="order-btn"><span class="active">订</span><span class="normal">到店付</span></span>
+								</div>
+							</div>								
+						</li>							
+						<li class="compare-price-item">
+							<i class="recommend-icon">
+								<img src="images/tag-recommend.png" alt="推荐房型" width="20px">
+							</i>
+							<div class="compare-price-detail">
+								<div class="hotel-info">
+									<span class="basic-info">酒店直销</span>
+									<span class="special-info">(限时促销，节省33元)-优惠价</span>
+								</div>
+								<div class="price-info">
+									<div class="price-info-detail">
+										<span class="basic-price">¥122 </span>
+										<span class="special-info">付款135</span>
+										<span class="special-info">可返13</span>
+									</div>
+									<span class="order-btn"><span class="active">订</span><span class="normal">到店付</span></span>
+								</div>
+							</div>								
+						</li>
+						<li class="compare-price-item">
+							<div class="compare-price-detail">
+								<i class="recommend-icon">
+									<img src="images/tag-recommend.png" alt="推荐房型" width="20px">
+								</i>
+								<div class="hotel-info">
+									<span class="basic-info">酒店夜销</span>									
+									<div class="discount-info">
+										<span class="btn-left-ative"><span>最</span>可靠</span>
+										<span class="btn-left-ative"><span>最</span>快</span>
+									</div>
+
+								</div>
+								<div class="price-info">
+									<div class="price-info-detail">
+										<span class="basic-price">¥168 </span>
+									</div>
+									<span class="order-btn"><span class="active">订</span><span class="normal">在线付</span></span>
+								</div>
+							</div>								
+						</li>
+						<li class="compare-price-item">
+							<div class="compare-price-detail">
+								<div class='hotel-info'>
+									<span class="basic-info">五星旅游网</span>
+									<span class="special-info">(今日特价)-优惠价</span>
+									<div class="discount-info">
+										<span class="hot-btn-small">可返星圈</span>
+									</div>
+								</div>
+								<div class="price-info">
+									<div class="price-info-detail">
+										<span class="basic-price">¥122 </span>
+										<span class="special-info">付款135</span>
+										<span class="special-info">可返￥6</span>
+									</div>
+									<span class="order-btn"><span class="active">订</span><span class="normal">到店付</span></span>
+								</div>
+							</div>								
+						</li>
+						<li class="compare-price-item">
+							<div class="compare-price-detail">
+								<div class="hotel-info">
+									<span class="basic-info">爱游网</span>
+									<span class="special-info">(今日特价)-优惠价</span>
+								</div>
+								<div class="price-info">
+									<div class="price-info-detail">
+										<span class="basic-price">¥122 </span>
+										<span class="special-info">付款135</span>
+										<span class="special-info">可返￥6</span>
+									</div>
+									<span class="order-btn"><span class="active">订</span><span class="normal">到店付</span></span>
+								</div>
+							</div>								
+						</li>
+						<li class="compare-price-item">
+							<a class="more-price" href="">更多报价</a>
+						</li>						
+					</ul>
+				</div>						
+			</li>
+			<li class="recomend-rooms-item">
+				<div class="recomend-rooms-detail">
+					<div class="fx-h-strh">
+						<span class="basic-info">豪华大床房</span>
+						<div class="discount-info">								
+							<span class="primay-btn-small">夜销</span>
+						</div>
+					</div>
+					<div class="price-info">
+						<span class="basic-price">¥135起 </span>
+						<span class="primay-btn-small">比价<i class="arow-up-icon"></i></span>
+					</div>
+				</div>
+				<div class="compare-price">
+					<ul>
+						<li class="compare-price-item">
+							<div class="compare-price-detail">
+								<div class='hotel-info'>
+									<span class="basic-info">酒店直销</span>
+									<span class="special-info">(限时促销，节省33元)-优惠价</span>
+									<div class="discount-info">
+										<span class="hot-btn-small">可返星圈</span>
+									</div>
+								</div>
+								<div class="price-info">
+									<div class="price-info-detail">
+										<span class="basic-price">¥122 </span>
+										<span class="special-info">付款135</span>
+										<span class="special-info">可返135星券</span>
+									</div>
+									<span class="order-btn"><span class="active">订</span><span class="normal">到店付</span></span>
+								</div>
+							</div>								
+						</li>							
+						<li class="compare-price-item">
+							<i class="recommend-icon">
+								<img src="images/tag-recommend.png" alt="推荐房型" width="20px">
+							</i>
+							<div class="compare-price-detail">
+								<div class="hotel-info">
+									<span class="basic-info">酒店直销</span>
+									<span class="special-info">(限时促销，节省33元)-优惠价</span>
+								</div>
+								<div class="price-info">
+									<div class="price-info-detail">
+										<span class="basic-price">¥122 </span>
+										<span class="special-info">付款135</span>
+										<span class="special-info">可返13</span>
+									</div>
+									<span class="order-btn"><span class="active">订</span><span class="normal">到店付</span></span>
+								</div>
+							</div>								
+						</li>
+						<li class="compare-price-item">
+							<div class="compare-price-detail">
+								<i class="recommend-icon">
+									<img src="images/tag-recommend.png" alt="推荐房型" width="20px">
+								</i>
+								<div class="hotel-info">
+									<span class="basic-info">酒店夜销</span>									
+									<div class="discount-info">
+										<span class="btn-left-ative"><span>最</span>可靠</span>
+										<span class="btn-left-ative"><span>最</span>快</span>
+									</div>
+
+								</div>
+								<div class="price-info">
+									<div class="price-info-detail">
+										<span class="basic-price">¥168 </span>
+									</div>
+									<span class="order-btn"><span class="active">订</span><span class="normal">在线付</span></span>
+								</div>
+							</div>								
+						</li>
+						<li class="compare-price-item">
+							<div class="compare-price-detail">
+								<div class='hotel-info'>
+									<span class="basic-info">五星旅游网</span>
+									<span class="special-info">(今日特价)-优惠价</span>
+									<div class="discount-info">
+										<span class="hot-btn-small">可返星圈</span>
+									</div>
+								</div>
+								<div class="price-info">
+									<div class="price-info-detail">
+										<span class="basic-price">¥122 </span>
+										<span class="special-info">付款135</span>
+										<span class="special-info">可返￥6</span>
+									</div>
+									<span class="order-btn"><span class="active">订</span><span class="normal">到店付</span></span>
+								</div>
+							</div>								
+						</li>
+						<li class="compare-price-item">
+							<div class="compare-price-detail">
+								<div class="hotel-info">
+									<span class="basic-info">爱游网</span>
+									<span class="special-info">(今日特价)-优惠价</span>
+								</div>
+								<div class="price-info">
+									<div class="price-info-detail">
+										<span class="basic-price">¥122 </span>
+										<span class="special-info">付款135</span>
+										<span class="special-info">可返￥6</span>
+									</div>
+									<span class="order-btn"><span class="active">订</span><span class="normal">到店付</span></span>
+								</div>
+							</div>								
+						</li>
+						<li class="compare-price-item">
+							<a class="more-price" href="">更多报价</a>
+						</li>
+					</ul>
+				</div>						
+			</li>				
+		</ul>
+	</div>
+<!-- 推荐酒店-->
+	<div class="recomend-hotel">
+		<ul>
+			<li class="recomend-hotel-item">附近热销酒店<a href=""><i class="arow-right-icon"></i></a>
+			<li class="recomend-hotel-item">同类低价酒店<a href=""><i class="arow-right-icon"></i></a>
+		</ul>	
+	</div>
+	<footer>
+		<div class="declaraction">注:房型信息以代理商、酒店及订单填写页实际内容为准，去哪儿不保证所有信息的准确性，仅供参考</div>
+		<div class="q-service">
+			<ul layout="flex-v-every">
+				<a class="q-service-item" href=""><i class="icon-plane"></i>飞机</a>
+				<a class="q-service-item" href=""><i class="icon-hotel"></i>酒店</a>
+				<a class="q-service-item" href=""><i class="icon-department"></i>公寓</a>
+				<a class="q-service-item" href=""><i class="icon-more"></i>更多</a>
+			</ul>
+		</div>
+		<div class="copy-right">
+			<span>Qunar京ICP备05021087</span>
+			<span>意见反馈</span>
+		</div>
+	</footer>
+</body>
+<script src="../homework-4/javascript/hotel.js"></script>
+</html>

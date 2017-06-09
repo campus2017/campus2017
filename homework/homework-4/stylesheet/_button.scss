@@ -1,0 +1,26 @@
+.btn{
+	display: inline-block;	
+	vertical-align: middle;
+	text-align: center;
+  	white-space: nowrap;  	
+  	&-left-active {  		
+		@include button-left-active(red,14px);
+  	}
+}
+.primay-btn{
+	background: $primaryColor;
+	color: white;	
+	&-small{
+		@extend .btn,.primay-btn;
+		@include button-size(3px, 2px, 2px,3px);
+	}
+}
+
+.hot-btn{
+	background: $dangerColor;
+	color: white;
+	&-small{
+		@extend .btn,.hot-btn;
+		@include button-size(3px, 2px, 2px,3px);
+	}
+}
