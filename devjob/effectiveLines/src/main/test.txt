@@ -1,0 +1,101 @@
+
+
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by Fernflower decompiler)
+//
+
+package com.google.common.math;
+
+import com.google.common.annotations.GwtCompatible;
+import java.math.BigInteger;
+import javax.annotation.Nullable;
+
+@GwtCompatible
+final class MathPreconditions {
+    static int checkPositive(@Nullable String role, int x) {
+        if(x <= 0) {
+            String var2 = String.valueOf(String.valueOf(role));
+            throw new IllegalArgumentException((new StringBuilder(26 + var2.length())).append(var2).append(" (").append(x).append(") must be > 0").toString());
+        } else {
+            return x;
+        }
+    }
+
+    static long checkPositive(@Nullable String role, long x) {
+        if(x <= 0L) {
+            String var3 = String.valueOf(String.valueOf(role));
+            throw new IllegalArgumentException((new StringBuilder(35 + var3.length())).append(var3).append(" (").append(x).append(") must be > 0").toString());
+        } else {
+            return x;
+        }
+    }
+
+    static BigInteger checkPositive(@Nullable String role, BigInteger x) {
+        if(x.signum() <= 0) {
+            String var2 = String.valueOf(String.valueOf(role));
+            String var3 = String.valueOf(String.valueOf(x));
+            throw new IllegalArgumentException((new StringBuilder(15 + var2.length() + var3.length())).append(var2).append(" (").append(var3).append(") must be > 0").toString());
+        } else {
+            return x;
+        }
+    }
+
+    static int checkNonNegative(@Nullable String role, int x) {
+        if(x < 0) {
+            String var2 = String.valueOf(String.valueOf(role));
+            throw new IllegalArgumentException((new StringBuilder(27 + var2.length())).append(var2).append(" (").append(x).append(") must be >= 0").toString());
+        } else {
+            return x;
+        }
+    }
+
+    static long checkNonNegative(@Nullable String role, long x) {
+        if(x < 0L) {
+            String var3 = String.valueOf(String.valueOf(role));
+            throw new IllegalArgumentException((new StringBuilder(36 + var3.length())).append(var3).append(" (").append(x).append(") must be >= 0").toString());
+        } else {
+            return x;
+        }
+    }
+
+    static BigInteger checkNonNegative(@Nullable String role, BigInteger x) {
+        if(x.signum() < 0) {
+            String var2 = String.valueOf(String.valueOf(role));
+            String var3 = String.valueOf(String.valueOf(x));
+            throw new IllegalArgumentException((new StringBuilder(16 + var2.length() + var3.length())).append(var2).append(" (").append(var3).append(") must be >= 0").toString());
+        } else {
+            return x;
+        }
+    }
+
+    static double checkNonNegative(@Nullable String role, double x) {
+        if(x < 0.0D) {
+            String var3 = String.valueOf(String.valueOf(role));
+            throw new IllegalArgumentException((new StringBuilder(40 + var3.length())).append(var3).append(" (").append(x).append(") must be >= 0").toString());
+        } else {
+            return x;
+        }
+    }
+
+    static void checkRoundingUnnecessary(boolean condition) {
+        if(!condition) {
+            throw new ArithmeticException("mode was UNNECESSARY, but rounding was necessary");
+        }
+    }
+
+    static void checkInRange(boolean condition) {
+        if(!condition) {
+            throw new ArithmeticException("not in range");
+        }
+    }
+
+    static void checkNoOverflow(boolean condition) {
+        if(!condition) {
+            throw new ArithmeticException("overflow");
+        }
+    }
+
+    private MathPreconditions() {
+    }
+}
