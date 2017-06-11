@@ -18,6 +18,7 @@
             font-size: 14px;
             line-height: 35px;
             color: #FFF;
+            text-align: center;
             &:first-child{
                 width: 190px;
             }
@@ -36,6 +37,227 @@
             &:nth-child(6){
                 width: 144px;
             }
+        }
+        .sort{
+            width: 7px;
+            height: 10px;
+            background: url(../image/sort.png);
+            outline: none;
+            border: none;
+            margin:{
+                left: 6px;
+            }
+        }
+    }
+    .info{
+        position: relative;
+    }
+    .detail{
+        height: 93px;
+        position: relative;
+    }
+    .flight-info{
+        width: 190px;
+        height: 100%;
+        position: relative;
+        img{
+            position: absolute;
+            left: 34px;
+            top: 14px;
+        }
+        p{
+            position: relative;
+            left: 69px;
+            top: 17px;
+            &:nth-child(2){
+                font-family: "SimSun";
+                font-size: 12px;
+                line-height: 16px;
+            }
+            &:nth-child(3){
+                font-family: "Arial","SimSun";
+                font-size: 12px;
+                line-height: 16px;
+                color: #666;
+            }
+            &:nth-child(4){
+                font-family: "Arial","SimSun";
+                font-size: 12px;
+                line-height: 16px;
+                color: #666;
+            }
+        }
+        span{
+            position: absolute;
+            left: 156px;
+            top: 36px;
+            font-family: "SimSun";
+            font-size: 12px;
+            line-height: 16px;
+            color: #25b4d2;
+        }
+    }
+    .launch-time{
+       width: 161px;
+       height: 100%;
+       position: absolute;
+       top: 0;
+       left: 190px;
+       p{
+            &:first-child{
+                font-family: "Arial";
+                font-size: 18px;
+                position: absolute;
+                left: 84px;
+                top: 17px;
+            }
+            &:nth-child(2){
+                font-family: "Arial","SimSun";
+                font-size: 12px;
+                position: absolute;
+                right: 22px;
+                top: 50px;
+            }
+       }
+    }
+    .duration{
+        width: 112px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 190px+161px;
+        p{
+            &:first-child{
+                font-family: "Arial","SimSun";
+                font-size: 12px;
+                color: #666;
+                position: absolute;
+                left: 35px;
+                top: 19px;
+            }
+            &:nth-child(2){
+                font-family: "Arial","SimSun";
+                font-size: 12px;
+                color: #666;
+                position: absolute;
+                left: 23px;
+                top: 50px;
+                
+            }
+            &:nth-child(3){
+                font-family: "Arial","SimSun";
+                font-size: 12px;
+                color: #666;
+                position: absolute;
+                left: 23px;
+                top: 67px;
+            }
+            span{
+                display: inline-block;
+                width: 14px;
+                height: 14px;
+                color: #FFF;
+                background: #26B4D3;
+                text-align: center;
+                line-height: 14px;
+                margin-right: 7px;
+            }
+        }
+    }
+    .arrive-time{
+        width: 179px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 190px+161px+112px;
+        p{
+            &:first-child{
+                font-family: "Arial";
+                font-size: 18px;
+                position: absolute;
+                top: 17px;
+                left: 24px;
+                span{
+                    font-family: "Arial","SimSun";
+                    font-size: 12px;
+                    line-height: 18px;
+                    color: #25b4d2;
+                    margin-left: 7px;
+                }
+            }
+            &:nth-child(2){
+                font-family: "Arial","SimSun";
+                font-size: 12px;
+                position: absolute;
+                top: 50px;
+                left: 24px;
+            }
+        }
+    }
+    .website{
+        width: 126px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 190px+161px+112px+179px;
+        text-align: center;
+        a{
+            font-family: "Arial","SimSun";
+            font-size: 12px;
+            line-height: 16px;
+            color: #25b4d2;
+            display: inline-block;
+            margin-top: 40px;
+        }
+        p{
+            font-family: "Arial";
+            font-size: 12px;
+            line-height: 16px;
+            color: #FF7200;
+        }
+    }
+    .lowest-price{
+        position: absolute;
+        top: 0;
+        right: 22px;
+        height: 100%;
+        text-align: right;
+        p{
+            font-family: "Arial";
+            &:first-child{
+                font-size: 26px;
+                color: #0e83bf;
+                margin-top: 49px;
+                span{
+                    &:first-child{
+                        font-size: 14px;
+                    }
+                    &:last-child{
+                        font-size: 12px;
+                        color: #000;
+                    }
+                }
+            }
+            &:nth-child(2){
+                font-size: 12px;
+                color: #666;
+                line-height: 26px;
+            }
+        }
+        button{
+           width: 75px;
+           height: 40px; 
+           border: none;
+           outline: none;
+           background: url(../image/order-bg.png);
+           position: relative;
+           span{
+                font-family: "SimSun";
+                color: #FFF;
+                position: absolute;
+                top: 7px;
+                left: 15px;
+           }
         }
     }
 }

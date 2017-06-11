@@ -12,7 +12,8 @@
       font-family: "SimSun";
       font-size: 14px;
       line-height: 35px;
-      color: #FFF; }
+      color: #FFF;
+      text-align: center; }
       .m-flight .header li:first-child {
         width: 190px; }
       .m-flight .header li:nth-child(2) {
@@ -25,5 +26,182 @@
         width: 126px; }
       .m-flight .header li:nth-child(6) {
         width: 144px; }
+    .m-flight .header .sort {
+      width: 7px;
+      height: 10px;
+      background: url(../image/sort.png);
+      outline: none;
+      border: none;
+      margin-left: 6px; }
+  .m-flight .info {
+    position: relative; }
+  .m-flight .detail {
+    height: 93px;
+    position: relative; }
+  .m-flight .flight-info {
+    width: 190px;
+    height: 100%;
+    position: relative; }
+    .m-flight .flight-info img {
+      position: absolute;
+      left: 34px;
+      top: 14px; }
+    .m-flight .flight-info p {
+      position: relative;
+      left: 69px;
+      top: 17px; }
+      .m-flight .flight-info p:nth-child(2) {
+        font-family: "SimSun";
+        font-size: 12px;
+        line-height: 16px; }
+      .m-flight .flight-info p:nth-child(3) {
+        font-family: "Arial","SimSun";
+        font-size: 12px;
+        line-height: 16px;
+        color: #666; }
+      .m-flight .flight-info p:nth-child(4) {
+        font-family: "Arial","SimSun";
+        font-size: 12px;
+        line-height: 16px;
+        color: #666; }
+    .m-flight .flight-info span {
+      position: absolute;
+      left: 156px;
+      top: 36px;
+      font-family: "SimSun";
+      font-size: 12px;
+      line-height: 16px;
+      color: #25b4d2; }
+  .m-flight .launch-time {
+    width: 161px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 190px; }
+    .m-flight .launch-time p:first-child {
+      font-family: "Arial";
+      font-size: 18px;
+      position: absolute;
+      left: 84px;
+      top: 17px; }
+    .m-flight .launch-time p:nth-child(2) {
+      font-family: "Arial","SimSun";
+      font-size: 12px;
+      position: absolute;
+      right: 22px;
+      top: 50px; }
+  .m-flight .duration {
+    width: 112px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 351px; }
+    .m-flight .duration p:first-child {
+      font-family: "Arial","SimSun";
+      font-size: 12px;
+      color: #666;
+      position: absolute;
+      left: 35px;
+      top: 19px; }
+    .m-flight .duration p:nth-child(2) {
+      font-family: "Arial","SimSun";
+      font-size: 12px;
+      color: #666;
+      position: absolute;
+      left: 23px;
+      top: 50px; }
+    .m-flight .duration p:nth-child(3) {
+      font-family: "Arial","SimSun";
+      font-size: 12px;
+      color: #666;
+      position: absolute;
+      left: 23px;
+      top: 67px; }
+    .m-flight .duration p span {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      color: #FFF;
+      background: #26B4D3;
+      text-align: center;
+      line-height: 14px;
+      margin-right: 7px; }
+  .m-flight .arrive-time {
+    width: 179px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 463px; }
+    .m-flight .arrive-time p:first-child {
+      font-family: "Arial";
+      font-size: 18px;
+      position: absolute;
+      top: 17px;
+      left: 24px; }
+      .m-flight .arrive-time p:first-child span {
+        font-family: "Arial","SimSun";
+        font-size: 12px;
+        line-height: 18px;
+        color: #25b4d2;
+        margin-left: 7px; }
+    .m-flight .arrive-time p:nth-child(2) {
+      font-family: "Arial","SimSun";
+      font-size: 12px;
+      position: absolute;
+      top: 50px;
+      left: 24px; }
+  .m-flight .website {
+    width: 126px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 642px;
+    text-align: center; }
+    .m-flight .website a {
+      font-family: "Arial","SimSun";
+      font-size: 12px;
+      line-height: 16px;
+      color: #25b4d2;
+      display: inline-block;
+      margin-top: 40px; }
+    .m-flight .website p {
+      font-family: "Arial";
+      font-size: 12px;
+      line-height: 16px;
+      color: #FF7200; }
+  .m-flight .lowest-price {
+    position: absolute;
+    top: 0;
+    right: 22px;
+    height: 100%;
+    text-align: right; }
+    .m-flight .lowest-price p {
+      font-family: "Arial"; }
+      .m-flight .lowest-price p:first-child {
+        font-size: 26px;
+        color: #0e83bf;
+        margin-top: 49px; }
+        .m-flight .lowest-price p:first-child span:first-child {
+          font-size: 14px; }
+        .m-flight .lowest-price p:first-child span:last-child {
+          font-size: 12px;
+          color: #000; }
+      .m-flight .lowest-price p:nth-child(2) {
+        font-size: 12px;
+        color: #666;
+        line-height: 26px; }
+    .m-flight .lowest-price button {
+      width: 75px;
+      height: 40px;
+      border: none;
+      outline: none;
+      background: url(../image/order-bg.png);
+      position: relative; }
+      .m-flight .lowest-price button span {
+        font-family: "SimSun";
+        color: #FFF;
+        position: absolute;
+        top: 7px;
+        left: 15px; }
 
 /*# sourceMappingURL=m-flight.css.map */
