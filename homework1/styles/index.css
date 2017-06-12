@@ -1,0 +1,143 @@
+html,
+body,
+div,
+ul,
+li,
+section,
+a,
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+html,
+body {
+    height: 100%;
+    /*background: url(../image/head.png) no-repeat scroll 0 0/contain #7ecef4;*/
+    background-color: #7ecef4;
+}
+
+.g-hd {
+    overflow: hidden;
+    background-color: #fff;
+    line-height: 25px;
+}
+
+.g-hd .left-nav {
+    float: left;
+    margin-left: 25%;
+}
+
+.g-hd .right-nav {
+    float: right;
+    margin-right: 25%;
+}
+
+.g-hd .logo{
+    /*background: url(../image/logo.png) no-repeat;*/
+    /*padding-left: 25px;*/
+    /*display: inline-block;*/
+}
+
+.g-hd .logo::before {
+    content: url(../image/logo.png);
+    width: 23px;
+    height: 23px;
+    display: block;
+    float: left;
+}
+
+.g-hd li {
+    display: inline-block;
+}
+
+.g-hd a {
+    color: #777;
+    font-size: 12px;
+}
+
+.m-timeline {
+    position: relative;
+}
+
+.m-timeline .items {
+    position: absolute;
+    overflow: hidden;
+    text-align: center;
+    width: 50%;
+    height: 22.7%;
+    left: 25%;
+    bottom: 6%;
+    color: #fff;
+}
+
+.m-timeline .item-grey {
+    position: absolute;
+    bottom: 0;
+    width: 33.7%;
+    height: 96.7%;
+    background: url(../image/timeline-blue-grey.png) no-repeat center;
+    background-size: 100%;
+}
+
+.m-timeline .item-grey.item {
+    background: url(../image/timeline-blue.png) no-repeat center;
+    background-size: 100%;
+}
+
+.m-timeline .item-grey:nth-of-type(2) {
+    position: absolute;
+    left: 32.3%;
+    height: 100%;
+    width: 34.3%;
+    background: url(../image/timeline-green-grey.png) no-repeat center;
+    background-size: 100%;
+}
+
+.m-timeline .item-grey:nth-of-type(2).item {
+    background: url(../image/timeline-green.png) no-repeat center;
+    background-size: 100%;
+}
+
+.m-timeline .item-grey:nth-of-type(3) {
+    right: 0;
+    width: 36.3%;
+    background: url(../image/timeline-red-grey.png) no-repeat center;
+    background-size: 100%;
+}
+
+.m-timeline .item-grey:nth-of-type(3).item {
+    background: url(../image/timeline-red.png) no-repeat center;
+    background-size: 100%;
+}
+
+.m-timeline .point::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 65%;
+    border-width: 10px 10px 0;
+    border-style: solid;
+    border-color: #fff transparent transparent;
+    margin-left: -10px;
+}
+
+.m-timeline .time {
+    margin-top: 17%;
+}
+
+.m-timeline .node {
+    font-size: 18px;
+}
