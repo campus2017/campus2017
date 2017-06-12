@@ -1,0 +1,70 @@
+package Question1;
+
+import java.io.*;  
+import java.util.regex.*;
+
+public class EffectiveLines {
+    
+    public int findNormalLines(File file){
+    	int normalLines = 0;
+    	int commentLines = 0;
+    	boolean isComment = false;
+    	if(file.getName().matches(".*\\.java$") == false){
+    		System.out.println("文件输入格式不对!");
+    		normalLines = -1;
+    	}else{
+    	        BufferedReader br = null;  
+    	        try {  
+    	            br = new BufferedReader(new FileReader(file));  
+    	            String line = "";  
+    	            while((line=br.readLine()) != null)  
+    	            {
+    	            	line = line.trim();
+						if(line.length() == 0){//空白行
+    	            		continue;
+    	            	}else if(line.startsWith("//")){//以//开始的注释行
+    	            		continue;
+    	            	}else if(line.startsWith("/*") && line.endsWith("*/")){//以/*开始的注释行，并且当行直接结束
+    	            		continue;
+    	            	}else if(line.startsWith("/*") && !line.endsWith("*/")){//以/*开始并且当行未结束
+    	            		isComment = true;
+    	            		
+    	            	}else if(isComment){
+    	            		if(line.endsWith("*/")){
+    	            			isComment = false;
+    	            		}
+    	            	}
+    	            	else{
+    	            		normalLines = normalLines + 1;
+    	            			
+    	            		}
+    	            	}
+    	            }catch (FileNotFoundException e) {  
+        	            e.printStackTrace();  
+        	        } catch (IOException e) {  
+        	            e.printStackTrace();  
+        	        } finally  
+        	        {  
+        	            if(br != null)  
+        	            {  
+        	                try {  
+        	                    br.close();  
+        	                    br = null;  
+        	                } catch (IOException e) {  
+        	                    e.printStackTrace();  
+        	                }  
+        	                  
+        	            }  
+        	        }  
+        	    }
+		return normalLines;
+    	
+    	}
+public static void main(String args[]){
+	EffectiveLines el = new EffectiveLines();
+	File file = new File("C:\\Users\\Echo\\Desktop\\demo1\\src\\util\\jdbc.java");
+	int s = el.findNormalLines(file);
+	System.out.println(s);
+}
+}  	         
+
