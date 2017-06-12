@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>泡温泉</title>
+	<style>
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+a {
+	text-decoration: none;
+}
+li {
+	list-style: none;
+}
+body {
+	background: #7ecef4
+}
+.head {
+	width: 100vw;
+	height: 36.5vw;
+	background: url(img/topbg.jpg) no-repeat;
+	background-size: 100%;
+}
+.timeline {
+	position: absolute;
+	top: 26vw;
+}
+.timeline li {
+	float: left;
+	height: 9vw;
+	width: 18vw;
+	position: absolute;
+	left: 41vw;
+	background-image: url(img/time2.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+.timeline li:first-child {
+	background-image: url(img/time1.png);
+	left: 23.8vw;
+	top: .2vw;
+}
+.timeline li:last-child {
+	background-image: url(img/time3.png);
+	left: 57.8vw;
+	top: .8vw;
+}
+.banner {
+	width: 960px;
+	height: 275px;
+	margin: 20px auto;
+	padding: 10px;
+	background: #78af24;
+	position: relative;
+}
+.banner img {
+	width: 495px;
+	position: absolute;
+}
+.banner img:last-child {
+	right: 10px;
+	top: 10px;
+}
+.main {
+	width: 960px;
+	margin: 0 auto;
+	background: #f3eedb;
+}
+.locline {
+	width: 100%;
+	height: 100px;
+	background: #9d0035;
+	border-radius: 5px;
+}
+.loc_inside {
+	width: 100%;
+	height: 90px;
+	background: #ed5172;
+	border-radius: 5px;
+}
+.first-container h2{
+	background-image: url(img/icon1.png);
+}
+.second-container h2{
+	background-image: url(img/icon2.png);
+}
+.container {
+	padding: 10px;
+	background: #fff;
+}
+.container:after {
+	display: block;
+	content: "";
+	clear: both;
+}
+.container h2{
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+	font-size: 12px;
+	padding-left: 60px;
+	background-repeat: no-repeat;
+	vertical-align: bottom;
+}
+.container .title {
+	font-size: 36px;
+	padding-right: 20px;
+	border-right: 1px solid #ed5172;
+}
+.container h2 {
+	color: #ed5172;
+}
+.container h2 a {
+	color: #ed5172;
+	float: right;
+}
+.first-box {
+	width: 100%;
+	height: 280px;
+	position: relative;
+}
+.first-box .shadow .btn {
+	width: 100%;
+	height: 80px;
+	line-height: 80px;
+}
+.main-img {
+	width: 100%;
+	height: 100%;
+}
+.shadow {
+	position: absolute;
+	color: #fff;
+	background: rgba(0, 0, 0, 0.5);
+}
+.shadow h3 {
+	margin: 20px 20px
+}
+.shadow p {
+	margin: 20px 20px
+}
+.shadow .btn{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 120px;
+	height: 130px;
+	text-align: center;
+	font-size: 24px;
+	line-height: 130px;
+	background: #ed5172;
+}
+.first-box .shadow {
+	width: 260px;
+	height: 100%;
+	top: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.5);
+}
+.box .shadow {
+	bottom: 0;
+	padding-right: 100px;
+	width: 100%;
+	height: 130px;
+}
+.tab {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 5px;
+	color: #fff;
+	background: rgba(0, 0, 0, 0.5);
+}
+.box {
+	width: 49%;
+	margin-top: 20px;
+	float: left;
+	position: relative;
+}
+.box:nth-child(2n) {
+	float: right;
+}
+
+	</style>
+</head>
+<body>
+<div class="head">
+	<ul class="timeline">
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</div>
+<div class="banner">
+	<img src="img/banner1.png">
+	<img src="img/banner2.png">
+</div>
+<div class="main">
+	<div class="locline">
+		<div class="loc_inside">
+
+		</div>
+	</div>
+	<div class="container first-container">
+		<h2>
+			<span class="title">人生第一泡</span>
+			<span>经济实惠，泡初体验</span>
+			<a href="#">查看全部温泉酒店</a>
+		</h2>
+		<div class="first-box">
+			<img class="main-img" src="./img/blockbg.jpg">
+			<div class="shadow">
+				<h3>北京天上人间温泉酒店</h3>
+				<p>北京天上人间温泉酒店北京天上人间温泉酒店北京天上人间温泉酒店</p>
+				<div class="btn">立即预定</div>
+			</div>
+			<div class="tab">北上广</div>
+		</div>
+		<div class="box">
+			<img class="main-img" src="./img/sblockbg.jpg">
+			<div class="shadow">
+				<h3>北京天上人间温泉酒店</h3>
+				<p>北京天上人间温泉酒店北京天上人间温泉酒店北京天上人间温泉酒店</p>
+				<div class="btn">立即预定</div>
+			</div>
+			<div class="tab">北上广</div>
+		</div>
+		<div class="box">
+			<img class="main-img" src="./img/sblockbg.jpg">
+			<div class="shadow">
+				<h3>北京天上人间温泉酒店</h3>
+				<p>北京天上人间温泉酒店北京天上人间温泉酒店北京天上人间温泉酒店</p>
+				<div class="btn">立即预定</div>
+			</div>
+			<div class="tab">北上广</div>
+		</div>
+		<div class="box">
+			<img class="main-img" src="./img/sblockbg.jpg">
+			<div class="shadow">
+				<h3>北京天上人间温泉酒店</h3>
+				<p>北京天上人间温泉酒店北京天上人间温泉酒店北京天上人间温泉酒店</p>
+				<div class="btn">立即预定</div>
+			</div>
+			<div class="tab">北上广</div>
+		</div>
+		<div class="box">
+			<img class="main-img" src="./img/sblockbg.jpg">
+			<div class="shadow">
+				<h3>北京天上人间温泉酒店</h3>
+				<p>北京天上人间温泉酒店北京天上人间温泉酒店北京天上人间温泉酒店</p>
+				<div class="btn">立即预定</div>
+			</div>
+			<div class="tab">北上广</div>
+		</div>
+	</div>
+	<div class="container second-container">
+		<h2>
+			<span class="title">双享“泡”</span>
+			<span>此水只应天上有，人间难得几回“泡”</span>
+			<a href="#">查看全部温泉酒店</a>
+		</h2>
+		<div class="first-box">
+			<img class="main-img" src="./img/blockbg.jpg">
+			<div class="shadow">
+				<h3>北京天上人间温泉酒店</h3>
+				<p>北京天上人间温泉酒店北京天上人间温泉酒店北京天上人间温泉酒店</p>
+				<div class="btn">立即预定</div>
+			</div>
+			<div class="tab">北上广</div>
+		</div>
+		<div class="box">
+			<img class="main-img" src="./img/sblockbg.jpg">
+			<div class="shadow">
+				<h3>北京天上人间温泉酒店</h3>
+				<p>北京天上人间温泉酒店北京天上人间温泉酒店北京天上人间温泉酒店</p>
+				<div class="btn">立即预定</div>
+			</div>
+			<div class="tab">北上广</div>
+		</div>
+		<div class="box">
+			<img class="main-img" src="./img/sblockbg.jpg">
+			<div class="shadow">
+				<h3>北京天上人间温泉酒店</h3>
+				<p>北京天上人间温泉酒店北京天上人间温泉酒店北京天上人间温泉酒店</p>
+				<div class="btn">立即预定</div>
+			</div>
+			<div class="tab">北上广</div>
+		</div>
+		<div class="box">
+			<img class="main-img" src="./img/sblockbg.jpg">
+			<div class="shadow">
+				<h3>北京天上人间温泉酒店</h3>
+				<p>北京天上人间温泉酒店北京天上人间温泉酒店北京天上人间温泉酒店</p>
+				<div class="btn">立即预定</div>
+			</div>
+			<div class="tab">北上广</div>
+		</div>
+		<div class="box">
+			<img class="main-img" src="./img/sblockbg.jpg">
+			<div class="shadow">
+				<h3>北京天上人间温泉酒店</h3>
+				<p>北京天上人间温泉酒店北京天上人间温泉酒店北京天上人间温泉酒店</p>
+				<div class="btn">立即预定</div>
+			</div>
+			<div class="tab">北上广</div>
+		</div>
+	</div>
+	<div class="container second-container">
+		<h2>
+			<span class="title">团圆“泡”</span>
+			<span>感情，是“泡”出来的！</span>
+			<a href="#">查看全部温泉酒店</a>
+		</h2>
+		<div class="first-box">
+			<img class="main-img" src="./img/blockbg.jpg">
+			<div class="shadow">
+				<h3>北京天上人间温泉酒店</h3>
+				<p>北京天上人间温泉酒店北京天上人间温泉酒店北京天上人间温泉酒店</p>
+				<div class="btn">立即预定</div>
+			</div>
+			<div class="tab">北上广</div>
+		</div>
+		<div class="box">
+			<img class="main-img" src="./img/sblockbg.jpg">
+			<div class="shadow">
+				<h3>北京天上人间温泉酒店</h3>
+				<p>北京天上人间温泉酒店北京天上人间温泉酒店北京天上人间温泉酒店</p>
+				<div class="btn">立即预定</div>
+			</div>
+			<div class="tab">北上广</div>
+		</div>
+		<div class="box">
+			<img class="main-img" src="./img/sblockbg.jpg">
+			<div class="shadow">
+				<h3>北京天上人间温泉酒店</h3>
+				<p>北京天上人间温泉酒店北京天上人间温泉酒店北京天上人间温泉酒店</p>
+				<div class="btn">立即预定</div>
+			</div>
+			<div class="tab">北上广</div>
+		</div>
+		<div class="box">
+			<img class="main-img" src="./img/sblockbg.jpg">
+			<div class="shadow">
+				<h3>北京天上人间温泉酒店</h3>
+				<p>北京天上人间温泉酒店北京天上人间温泉酒店北京天上人间温泉酒店</p>
+				<div class="btn">立即预定</div>
+			</div>
+			<div class="tab">北上广</div>
+		</div>
+		<div class="box">
+			<img class="main-img" src="./img/sblockbg.jpg">
+			<div class="shadow">
+				<h3>北京天上人间温泉酒店</h3>
+				<p>北京天上人间温泉酒店北京天上人间温泉酒店北京天上人间温泉酒店</p>
+				<div class="btn">立即预定</div>
+			</div>
+			<div class="tab">北上广</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
