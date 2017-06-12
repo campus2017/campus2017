@@ -97,7 +97,6 @@ body {
 }
 
 .m-timeline .item-grey:nth-of-type(2) {
-    position: absolute;
     left: 32.3%;
     height: 100%;
     width: 34.3%;
