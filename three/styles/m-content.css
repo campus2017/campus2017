@@ -1,0 +1,29 @@
+.m-content{
+    width: 980px;
+    margin: 0 auto;
+}
+.m-content .tag{
+
+}
+.m-content>.tag li{
+    float: left;
+    width: 79px;
+    height: 28px;
+    text-align: center;
+    border: 1px solid #DADADA;
+    border-radius: 3px 3px 0 0;
+    background: #F1F1F1;
+    margin-left: 5px;
+}
+.m-content>.tag li:first-child{
+    margin-left: 0;
+}
+.m-content>.tag li span{
+    font-family: "Arial","SimSun";
+    font-size: 12px;
+    line-height: 28px;
+}
+.m-content>.tag .selected{
+    background: #FFF;
+    border-bottom-color: #FFF;
+}

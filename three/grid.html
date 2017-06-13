@@ -3,12 +3,32 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
-    <link rel="stylesheet" href="">
+    <title>业务系统</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/m-content.css">
     <script src="scripts/jquery-3.2.1.min.js"></script>
     <script src="scripts/getData.js"></script>
 </head>
 <body>
-    
+    <div class="m-content">
+        <ul class="tag clearfix">
+            <li><span>E币兑换</span></li>
+            <li><span>E币明细</span></li>
+            <li class="selected"><span>兑换记录</span></li>
+        </ul>
+        <div class="header">
+            <ul class="tag">
+                <li><span>全部</span></li>
+                <li><span>成功</span></li>
+                <li><span>失败</span></li>
+            </ul>
+            <span>选择日期：</span>
+            <input type="text">
+            <span>至</span>
+            <input type="text">
+            <button>搜索</button>
+            <button>重置</button>
+        </div>
+    </div>
 </body>
 </html>
