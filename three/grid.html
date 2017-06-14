@@ -18,16 +18,39 @@
         </ul>
         <div class="header">
             <ul class="tag">
-                <li><span>全部</span></li>
+                <li class="selected"><span>全部</span></li>
                 <li><span>成功</span></li>
                 <li><span>失败</span></li>
             </ul>
-            <span>选择日期：</span>
+            <span class="choose-date">选择日期：</span>
             <input type="text">
             <span>至</span>
             <input type="text">
-            <button>搜索</button>
-            <button>重置</button>
+            <button class="search">搜索</button>
+            <button class="reset">重置</button>
+        </div>
+        <table>
+            <tr>
+                <th class="time"><span>时间</span></th>
+                <th class="name">商品名称</th>
+                <th class="amount">数量</th>
+                <th class="e-coin">E币</th>
+                <th class="state">状态</th>
+                <th class="info">信息</th>
+                <th class="exch-info">兑换信息</th>
+                <th class="confirm">确认</th>
+            </tr>
+        </table>
+        <div class="table-foot">
+            <span class="first-page">首页</span>
+            <span class="current-page"></span>
+            <span class="last-page">末页</span>
+            <span>共</span>
+            <span class="all-page"></span>
+            <span>页，跳转到</span>
+            <input type="text">
+            <span>页</span>
+            <button>确定</button>
         </div>
     </div>
 </body>
