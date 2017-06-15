@@ -1,13 +1,7 @@
-package com.langsin.tcp6;
-
-
 import java.io.BufferedReader;
 import java.io.File;
-
 import java.io.FileReader;
 import java.io.IOException;
-
-
 public class Main {
 	public int pro(){
 		int count=0;
