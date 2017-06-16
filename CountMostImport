@@ -1,0 +1,114 @@
+
+import java.io.*;  
+import java.util.ArrayList;
+import java.util.regex.*;
+ 
+
+public class CountMostImport {
+	public static ArrayList <String> str = new  ArrayList<String>();
+    public static ArrayList <Integer> count = new ArrayList<Integer>();
+	
+	  public static void recur(File file)  
+	    {  
+	        File[] files = file.listFiles();  
+	        for(int i=0; i<files.length; i++)  
+	        {  
+	            //若源文件是目录，则递归  
+	            if(files[i].isDirectory() == true)  
+	            {  
+	                recur(files[i]);  
+	            }  
+	            //若源文件是普通文件且为java源文件，则逐行分析之  匹配文件名时用到了正则表达式  
+	            else if((files[i].isFile() == true) && files[i].getName().matches(".*\\.java$"))  
+	            {  
+	                parse(files[i]);  
+	            }  
+	        }  
+	    }  
+	  
+	  public static void parse(File file)  
+	    {  
+	        BufferedReader br = null;
+	        String line = "";
+            String temp = "";
+            int index = 0; 
+	        try {  
+	            br = new BufferedReader(new FileReader(file));  
+	            while((line=br.readLine()) != null)  
+	            { 
+	                line = line.trim(); 
+	                if(line.startsWith("public")){
+	                	break;
+	                }else{
+	                if(line.startsWith("import"))
+	                {    
+	                	temp = line.substring(6);
+	                	temp = temp.replace(";","");
+	                	if(str.contains(temp)){
+	                		index = str.indexOf(temp);
+	                		count.set(index,count.get(index)+1);
+	                	}else{
+	                		str.add(temp);
+	                		count.add(1);
+	                		//System.out.println(temp);
+	                		
+	                	}
+	                }
+	               } 
+	        }
+	           
+	        } catch (FileNotFoundException e) {  
+	            e.printStackTrace();  
+	        } catch (IOException e) {  
+	            e.printStackTrace();  
+	        } finally  
+	        {  
+	            if(br != null)  
+	            {  
+	                try {  
+	                    br.close();  
+	                    br = null;  
+	                } catch (IOException e) {  
+	                    e.printStackTrace();  
+	                }  
+	                  
+	            } 
+	        }  
+	    }  
+	
+	
+	public static void main(String args[]){
+		File file = new File("C:\\Users\\Echo\\Desktop\\demo1\\src");
+		CountMostImport.recur(file);
+		int right_print = 0;
+		System.out.println(count.size());
+		int max = 0;
+		 while( right_print < count.size())//打印   
+		 { 
+       for(int i = 0; i < count.size(); i++){
+    	   max = count.get(0);
+    	   if(max < count.get(i)){
+    		   max = count.get(i);
+    	   }
+       }
+       for(int j = 0 ; j < count.size();j++){
+    	   if(right_print < 10){
+    	   if (count.get(j) == max){
+    		   System.out.println(str.get(j));
+    		   right_print = right_print + 1;
+    		   count.set(j, 0);
+    	   }
+    	   }
+       }
+        }
+	}
+		 
+    
+	
+  
+}  
+
+
+
+
+
