@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="net.sourceforge.jexcelapi:jxl:2.6.12" type="repository">
+    <properties maven-id="net.sourceforge.jexcelapi:jxl:2.6.12" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/jxl-2.6.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/log4j-1.2.14.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
