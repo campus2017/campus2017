@@ -1,0 +1,137 @@
+.e-money{
+	width: 1000px;
+	margin:30px auto;
+}
+.e-money-tab{
+	height: 29px;
+    margin: 0 10px;
+    border-bottom: 1px solid #ccc;
+    list-style: none;
+    padding-right: 15px;
+}
+.e-money-tab li{
+	float: right;
+    line-height: 28px;
+    padding: 0 18px;
+    margin-left: 5px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    cursor: pointer;
+}
+.e-money-tab .exchange-record:hover{
+	background-color: white;
+    border-bottom: 1px solid white;
+}
+.e-money .tab-content{
+    padding: 10px 20px 0px;
+}
+.tab-content .tab-content-header{
+    height: 26px;
+    margin-bottom: 20px;
+}
+.tab-content .tab-content-header .record{
+	float: left;
+    width: 65px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    color: #3775c0;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.tab-content .tab-content-header .selected{
+    color: #fff;
+    background-color: #3775c0;
+}
+.tab-content .tab-content-header .date-input{
+    float: left;
+    height: 26px;
+    line-height: 26px;
+    margin-left: 10px;
+}
+.tab-content .tab-content-header .date-input input{
+    height: 20px;
+    margin: 0 3px;
+    width: 200px;
+}
+.tab-content .tab-content-header .search,.reset{
+    width: 65px;
+    float: left;
+    margin-left: 5px;
+    height: 26px;
+    line-height: 26px;
+    color: white;
+    border-radius: 4px;
+    text-align: center;
+    background-color: #3775c0;
+    cursor: pointer;
+}
+.tab-content .tab-content-header .reset{
+	background-color: #ff0000;
+}
+.tab-content .tab-content-table{
+    width: 100%;
+    text-align: left;
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+}
+.tab-content .tab-content-table th{
+    height: 30px;
+    background-color: #f8f8f8;
+    padding-left: 10px;
+}
+.tab-content .tab-content-table td{
+    height: 64px;
+    padding-left: 10px;
+    border-bottom: 1px solid #ccc;
+}
+.tab-content .tab-content-table .exchange-info{
+    width: 65px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #3775c0;
+}
+.tab-content .tab-content-footer{
+    height: 32px;
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    padding-left: 628px;
+    padding-top: 3px;
+}
+.tab-content .tab-content-footer div{
+    display: inline-block;
+}
+.tab-content .tab-content-footer .first-page,.last-page{
+    width: 44px;
+    height: 24px;
+    line-height: 24px;
+    border: 1px solid #ccc;
+    color: #3775c0;
+    text-align: center;
+    cursor: pointer;
+}
+.tab-content .tab-content-footer .page-num{
+    padding: 0 10px;
+    color: red;
+}
+.tab-content .tab-content-footer input{
+    width: 39px;
+    height: 24px;
+    margin: 0 5px;
+}
+.tab-content .tab-content-footer .confirm{
+    width: 44px;
+    height: 24px;
+    line-height: 24px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #f8f8f8;
+    text-align: center;
+    cursor: pointer;
+}

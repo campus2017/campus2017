@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="styles/reset.css">
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
+<body>
+<div class="e-money">
+	<ul class="e-money-tab">
+	    <li class="exchange-record" id="exchange-record">点击获得兑换记录</li>
+	    <li>E币明细</li>
+		<li>E币兑换</li>		
+	</ul>
+	<div class="tab-content">
+		<div class="tab-content-header">
+			<div class="record selected">全部</div>
+		    <div class="record">成功</div>
+		    <div class="record">失败</div>
+		    <div class="date-input">选择日期: <input type="date">至<input type="date"></div>
+		    <div class="search" id="search">搜索</div>
+		    <div class="reset">重置</div>
+		</div>
+		<table class="tab-content-table" id="tab-content-table" >
+			<tr>
+				<th width="90px">时间</th>
+                <th width="160px">商品名称</th>
+                <th width="70px">数量</th>
+                <th width="70px">E币</th>
+                <th width="75px">状态</th>
+                <th width="255px">信息</th>
+                <th width="85px">兑换信息</th>
+                <th>确认</th>
+			</tr>
+		</table>
+		<div class="tab-content-footer">
+            <div class="first-page">首页</div>
+            <div class="page-num">1</div>
+            <div class="last-page">末页</div>
+            <div>共一页，跳转到<input type="number">页</div>
+            <div class="confirm">确定</div>
+        </div>
+	</div>
+</div>
+<script type="text/javascript" src="scripts/script.js"></script>
+</body>
+</html>

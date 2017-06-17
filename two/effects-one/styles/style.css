@@ -1,0 +1,65 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.main{
+width: 1267px;
+height: 965px;
+margin: 0 auto;
+position: relative;
+background:url(../images/m_taobao.png) no-repeat 0 0;
+}
+.list{
+	top: 72px;
+	left: 520px;
+	list-style: none;
+	position: absolute;
+	background: white;
+}
+.list li{
+	float: left;
+	margin-left: 40px;
+}
+.list li a{
+	text-decoration: none;
+	color: #3399cc;
+	font-family: "微软雅黑";
+}
+.mask{
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: #808080;
+	opacity:0.5;
+	position: fixed;
+	display: none;
+}
+.dialog{
+	width:800px;
+	height: 546px;
+	display: none;
+	position:fixed;
+	left:50%;
+	top:50%;
+	margin-left: -400px;
+	margin-top: -273px;
+
+
+}
+.dialog-main{
+	width: 100%;
+	height: 100%;
+}
+.dialog-btn{
+	width: 32px;
+	height: 32px;
+	position: absolute;
+	top: -16px;
+	left: 784px;
+	cursor: pointer;
+	background:url(../images/close.png) no-repeat 0px 0px;
+}
+.dialog-btn:hover{
+	background:url(../images/close_hover.png) no-repeat 0px 0px;
+}

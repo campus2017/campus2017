@@ -1,0 +1,31 @@
+*{
+	margin:0;
+	padding: 0;
+}
+.container
+{
+	width: 955px;
+	height:477px;
+	margin:0 auto;
+	border-bottom: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	overflow: hidden;
+	position: relative;
+}
+.container img
+{
+	position: absolute;
+	display: block;
+	border-left: 1px solid #ccc;	
+}
+.door2 {
+	left: 475px;
+}
+
+.door3 {
+	left: 635px;
+}
+
+.door4 {
+	left: 795px;
+}
