@@ -73,6 +73,12 @@ public class EffectiveLines {
         } catch (IOException e) {
             System.out.println("出现了IO问题");
             e.printStackTrace();
+        } finally {
+            try {
+                bufferedReader.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
         return lineCount;
     }
