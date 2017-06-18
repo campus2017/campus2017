@@ -1,0 +1,133 @@
+h4{
+    padding: 0;
+    margin: 0;
+}
+
+textarea{
+    padding: 0;
+}
+
+
+*{
+    margin-top: 10px;
+    font-family: "微软雅黑";
+    font-size: 16px;
+    color: #333;
+}
+
+fieldset{
+    border-radius: 8px;
+    width:550px;
+    margin:0px auto;
+}
+
+
+
+/* a file */
+.file{
+  position: relative;
+  display: inline-block;
+  background: #D0EEFF;
+  border: 1px solid #99D3F5;
+  border-radius: 4px;
+  padding: 4px 12px;
+  color: #1E88C7;
+  text-decoration: none;
+  text-indent: 0;
+  line-height: 20px;
+}
+
+
+.file input{
+  position: absolute;
+  right: 0;
+  top: 0;
+  opacity: 0;/*关键点*/
+  filter: alpha(opacity=0);/*兼容ie*/
+  font-size: 50px;/* 增大不同浏览器的可点击区域 */
+  cursor: pointer;
+}
+
+
+
+.file:hover, .mybutton:hover{
+  background: #AADFFD;
+  border-color: #78C3F3;
+  color: #004974;
+  text-decoration: none;
+}
+
+
+
+.content{
+    margin-left: 30px;
+}
+
+#textredio{
+    margin-left:40px;
+}
+
+.mybutton{
+    padding: 4px 12px;
+    display: inline-block;
+    background: #D0EEFF;
+    border: 1px solid #99D3F5;
+    border-radius: 4px;
+    color: #1E88C7;
+    line-height: 20px;
+    cursor: pointer;
+    width:90px;
+}
+
+
+
+#filebut{
+    float:right;
+    margin-right: 20px;
+}
+
+
+table{
+    border-collapse: collapse;
+    border: none;
+    text-align:center;
+}
+
+td,th{
+    border: solid #000 1px;
+    width:200px;
+    height:35px;
+}
+
+
+textarea{
+    width:76%;
+    height: 100px;
+}
+
+
+.textbut{
+    float:right;
+    display: inline;
+    position:absolute;
+    width:20%;
+    height:100%;
+    margin-left:15px;
+    margin-top: 15px;
+}
+
+.textcon{
+    width:100%;
+    position:relative;
+}
+
+
+.fileinfo, .fileerror{
+  font-size:14px;
+  margin-top:2px;
+}
+
+
+.fileerror{
+  color:#ff0000;
+}

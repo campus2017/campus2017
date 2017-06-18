@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>CharacterCounter</title>
+
+	<link href="static/css/content.css" rel="stylesheet" />
+    <script type="text/javascript" src="static/js/jquery.js"></script>
+    <script type="text/javascript" src="static/js/content.js"></script>
+</head>
+<body>
+	<div>
+		<fieldset>  
+			<legend>CharacterCounter</legend>
+
+			<h4>请选择下面选项</h4>
+			<div class="content">
+				<label for="fileredio"><input name="option" class="options" checked id="fileredio" type="radio" />文件上传</label>
+				<label for="textredio"><input name="option" class="options" id="textredio" type="radio" />文本输入</label>
+
+				<div class="filecon">
+					<a class="file">上传文件<input type="file" id="file" name="uploadfie"/></a>
+					<span class="filename"></span>
+					<input class="mybutton" id="filebut" type="submit" name="uploadfie" value="统计"></input>
+					<div class="fileinfo">只支持txt文本文件或word文档，大小不能超过20M</div>
+				</div>
+
+				<div class="textcon" style="display:none;">
+					<textarea id="text-area" placeholder="请输入文本内容"></textarea>
+					<div class="textbut">
+						<input class="mybutton" type="submit" id="text-count" value="统计"></input>
+						<input class="mybutton" type="submit" id="text-clear" value="清空内容"></input>
+					</div>
+				</div>
+				<div class="fileerror"></div>
+
+				<div>
+					<p>各统计内容的个数如下：</p>
+					<table>
+						<tr>
+							<th>统计项</th>
+							<th>个数</th>
+						</tr>
+						<tr>
+							<td>英文字母</td>
+							<td id="letterNum"></td>	
+						</tr>
+						<tr>
+							<td>数字</td>
+							<td id="digitNum"></td>
+						</tr>
+						<tr>
+							<td>中文汉字</td>
+							<td id="chineseNum"></td>
+						</tr>
+						<tr>
+							<td>中英文标点符号</td>
+							<td id="punctuationNum"></td>
+						</tr>						
+					</table>
+
+					<p>文字中出现频率最高的三个字符是：</p>
+					<table>
+						<tr>
+							<th>名称</th>
+							<th>个数</th>
+						</tr>
+						<tr>
+							<td id="frename1"></td>
+							<td id="frenum1"></td>	
+						</tr>
+						<tr>
+							<td id="frename2"></td>
+							<td id="frenum2"></td>
+						</tr>
+						<tr>
+							<td id="frename3"></td>
+							<td id="frenum3"></td>
+						</tr>						
+					</table>
+
+				</div>
+			</div>
+			<br>
+		
+		</fieldset>
+	</div>
+
+</body>
+</html>

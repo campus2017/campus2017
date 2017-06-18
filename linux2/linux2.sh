@@ -1,0 +1,1 @@
+scp  /dir1/linux2.sh  user@l-test.dev.cn1:/tmp/
