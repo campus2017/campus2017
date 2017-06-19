@@ -1,1 +1,1 @@
-cat *_access_*.txt | awk '{print $1}' | sort | uniq -c | sort -nr | head -n 10
+cat *access_log* | awk '{print $1}' | sort | uniq -c | sort -nr | head -n 10
