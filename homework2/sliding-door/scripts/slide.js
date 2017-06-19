@@ -34,30 +34,23 @@
         }
         this.duration = duration;
         var that = this;
-        this.slideLeft = function (step) {
-            return that._slide(0, step);
-        };
-        this.slideRight = function (step) {
-            return that._slide(1, step);
-        };
+        this.__slide = function (step) {
+            return that._slide(step);
+        }
     };
 
     SlideDoor.prototype.slide = function (direction) {
         var that = this;
-        animation.list.remove(that.slideRight);
-        animation.list.remove(that.slideLeft);
-        if(direction === 0){
-            that.slideLeft.startT = new Date().getTime();
-            animation.list.push(that.slideLeft);
-        }else {
-            that.slideRight.startT = new Date().getTime();
-            animation.list.push(that.slideRight);
+        that.direction = direction;
+        if(animation.list.indexOf(that.__slide) === -1){
+            that.__slide.startT = new Date().getTime();
+            animation.list.push(that.__slide);
         }
         animation.play(0);
     };
 
-    SlideDoor.prototype._slide = function (dir, step) {
-
+    SlideDoor.prototype._slide = function (step) {
+        var dir = this.direction;
         var edge = (dir === 0)? this.left : this.right;
         var _step = (dir === 0)? -step : step;
         var lastP = this.nowP || this.org;
