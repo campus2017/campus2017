@@ -13,13 +13,6 @@
         }
     }
 
-    Array.prototype.remove=function (val) {
-        var index = this.indexOf(val);
-        if(index >= 0){
-            this.splice(index, 1);
-        }
-    };
-
     var SlideDoor = function (element, slideWidth, org, position, duration) {
         this.element = element;
         this.slideWidth=slideWidth;
@@ -33,23 +26,19 @@
             this.right = org;
         }
         this.duration = duration;
-        var that = this;
-        this.__slide = function (step) {
-            return that._slide(step);
-        }
     };
 
     SlideDoor.prototype.slide = function (direction) {
         var that = this;
         that.direction = direction;
-        if(animation.list.indexOf(that.__slide) === -1){
-            that.__slide.startT = new Date().getTime();
-            animation.list.push(that.__slide);
+        if(animation.list.indexOf(that) === -1){
+            that.startT = new Date().getTime();
+            animation.list.push(that);
         }
-        animation.play(0);
+        animation.play();
     };
 
-    SlideDoor.prototype._slide = function (step) {
+    SlideDoor.prototype.slideStep = function (step) {
         var dir = this.direction;
         var edge = (dir === 0)? this.left : this.right;
         var _step = (dir === 0)? -step : step;
@@ -73,33 +62,30 @@
 
         list:[],
 
-        play: function (flag) {
+        playing: 0,
+
+        play: function () {
             var that = this;
-            if(flag === 0 && that.playing == 1){
+            if(that.playing === 1){
                 return;
             }
             that.playing = 1;
+            that.lastT = new Date().getTime();
 
-            if(that.list.length === 0){
-                this.playing = 0;
-                return;
-            }
-
-            var nowT = new Date().getTime();
-            var lastT = that.lastT || nowT;
-            var step, result;
-            that.list.forEach(function (v, i) {
-                step = Math.min(nowT - lastT, nowT - v.startT);
-                result = v(step);
-                if(!result) {
-                    that.list.splice(i, 1);
+            (function _play() {
+                if(that.list.length === 0){
+                    that.playing = 0;
+                    return;
                 }
-            });
-            that.lastT = nowT;
-
-            raf(function () {
-                that.play(1);
-            });
+                var nowT = new Date().getTime();
+                that.list.forEach(function (e, i) {
+                    if(!e.slideStep(Math.min(nowT - that.lastT, nowT - e.startT))) {
+                        that.list.splice(i, 1);
+                    }
+                });
+                that.lastT = nowT;
+                raf(_play);
+            })();
         }
     };
 
@@ -112,9 +98,9 @@
         new SlideDoor(_doors[3], 33.33, 83.33, 1, 300)
     ];
 
-    doors.forEach(function (v, i) {
+    doors.forEach(function (e, i) {
         (function (index) {
-            v.element.onmouseover = function () {
+            e.element.onmouseover = function () {
                 for (var j=0; j<4; j++) {
                     if(j <= index){
                         doors[j].slide(0);
