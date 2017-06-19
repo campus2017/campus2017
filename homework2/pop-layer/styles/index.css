@@ -1,0 +1,69 @@
+html,
+body,
+div,
+ul,
+li,
+section,
+a,
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img{
+    display: block;
+    width: 100%;
+}
+
+.m-mask {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+    text-align: center;
+    font-size: 0;
+}
+
+.m-mask .layer {
+    position: relative;
+    width: 60%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.m-mask:after {
+    content: "";
+    width: 0;
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.m-mask .layer .close-btn {
+    position: absolute;
+    width: 6%;
+    height: 0;
+    padding-bottom: 6%;
+    top: -3%;
+    right: -3%;
+    background: url(../images/close.png) no-repeat center;
+    background-size: contain;
+}
+
+.m-mask .layer .close-btn:hover {
+    background: url(../images/close_hover.png) no-repeat center;
+    background-size: contain;
+}

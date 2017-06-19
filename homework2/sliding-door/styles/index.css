@@ -1,0 +1,52 @@
+html,
+body,
+div,
+ul,
+li,
+section,
+a,
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    text-align: center;
+}
+
+#m-doors {
+    position: relative;
+    margin: 0 auto;
+    width: 80%;
+    border: 1px solid #999;
+    border-top-width: 0;
+    overflow: hidden;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+#m-doors .door {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    border-left: 1px solid #999;
+}
+
+#m-doors .door:first-child {
+    position: relative;
+    border-left-width: 0;
+}
