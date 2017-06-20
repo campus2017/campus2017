@@ -18,10 +18,16 @@ $(document).ready(function(){
     //获取数据
     const getDataPromise = new function(){
         return new Promise(function(resolve,reject){
-            $.get("/index",function(str,status){
-                let temp = $.parseJSON(str);
-                console.log(temp);
-            });
+        	$.get("/three/index",function(str,status){
+        		data = $.parseJSON(str.replace(/'/g, '"'));
+        		console.log(data);
+        		if(status == "success"){
+                    resolve(data);
+                }else{
+                    reject();
+                }
+        	});
+        	/*本地数据模拟
             $.get("data/data.json",function(str,status){
                 data =  $.parseJSON(str);
                 if(status == "success"){
@@ -29,7 +35,7 @@ $(document).ready(function(){
                 }else{
                     reject();
                 }
-            });
+            });*/
         });
     };
 
