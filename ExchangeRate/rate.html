@@ -1,0 +1,1585 @@
+<!doctype html>
+<html lang="zh-CN">
+ <head> 
+  <meta charset="utf-8"> 
+  <title>中国人民银行/外汇管理局美元/人民币历史汇率与趋势图 -- 一站式汇率--快易理财网</title> 
+  <meta name="description" content="美元/人民币历史汇率与趋势图 USD 快易汇率,一站式汇率,所有汇率,一网打尽。"> 
+  <meta name="keywords" content="中国人民银行/外汇管理局美元/人民币汇率,USD,快易汇率,一站式汇率,实时外汇牌价,现钞,现汇,买入价,卖出价,人民币"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> 
+  <meta name="applicable-device" content="pc,mobile"> 
+  <link href="/static/style/main.css?1234" rel="stylesheet"> 
+  <link href="/static/style/user.css?1234" rel="stylesheet"> 
+  <link type="text/css" rel="stylesheet" href="/static/style/jquery.jqplot.min.css" media="All"> 
+  <style>
+    .panel-body tr {line-height: 25px;}
+    .table {border-collapse: collapse;border-color: gray;color: #666666;}
+    .table td, .table thead th {border:1px solid #BACDDE; border-top: 1px solid #BACDDE !important;}
+    .table thead th {padding:2px;font-weight:bold;font-size:14px;height:24px;line-height:18px;vertical-align: top;}
+    .table thead tr {background-color:#ebf6ff;}
+    .table tr {height: 18px;}
+</style> 
+  <style>
+            #dialog_user_message .row { margin-top: 15px; }
+        </style> 
+ </head> 
+ <body> 
+  <div class="navbar navbar-default navbar-fixed-top"> 
+   <div class="container"> 
+    <div class="navbar-header"> 
+     <div style="float:left;"> 
+      <ul class="nav navbar-nav"> 
+       <li class="dropdown main_menu"> <a class="dropdown-toggle" data-toggle="dropdown" href="#">快易理财网 <span class="caret"></span></a> 
+        <ul class="dropdown-menu" aria-labelledby="download"> 
+         <li role="presentation"><a role="menuitem" tabindex="-1" href="/">首页</a></li> 
+         <li role="presentation"><a role="menuitem" tabindex="-1" href="/stock">股票</a></li> 
+         <li role="presentation"><a role="menuitem" tabindex="-1" href="/ipo">新股在线</a></li> 
+         <li role="presentation"><a role="menuitem" tabindex="-1" href="/bank">银行</a></li> 
+         <li role="presentation"><a role="menuitem" tabindex="-1" href="/huilv">一站式汇率</a></li> 
+         <li role="presentation"><a role="menuitem" tabindex="-1" href="/stats">数据</a></li> 
+        </ul> </li> 
+      </ul> 
+     </div> 
+     <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> 
+    </div> 
+    <div class="navbar-collapse collapse" id="navbar-main"> 
+     <ul class="nav navbar-nav sub_menu"> 
+      <li id="submenu_main" class="submenu_main"><a href="/huilv">一站式汇率</a></li> 
+      <li id="submenu_safe"><a href="/bank/rmbfx/b-safe.html">央行汇率</a></li> 
+      <li id="submenu_market" class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false"> 市场汇率 <span class="caret"></span> </a> 
+       <ul class="dropdown-menu" role="menu" aria-labelledby="drop2"> 
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="/huilv/market.html">人民币即期汇率</a></li> 
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="/huilv/offshore.html">离岸人民币汇率</a></li> 
+       </ul> </li> 
+      <li id="submenu_card" class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false"> 银行卡汇率 <span class="caret"></span> </a> 
+       <ul class="dropdown-menu" role="menu" aria-labelledby="drop2"> 
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="/upcurrency.html">中国银联汇率</a></li> 
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="/huilv/i-visa.html">VISA汇率</a></li> 
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="/huilv/i-mastercard.html">万事达-MasterCard汇率</a></li> 
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="/huilv/i-jcb.html">JCB汇率</a></li> 
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="/huilv/i-dinersclub.html">大来卡-DinersClub汇率</a></li> 
+        <li class="divider"></li> 
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="/huilv/whichcard.html">出国该刷哪张卡?</a></li> 
+        <li class="divider"></li> 
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#" class="disabled-link">相关信息:</a></li> 
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="/bank/upatmcharge.html" target="_blank">银联卡境外取现手续费</a></li> 
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="/upatm.html" target="_blank">银联网络境外ATM机构</a></li> 
+       </ul> </li> 
+      <li id="submenu_bank" class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false"> 银行牌价 <span class="caret"></span> </a> 
+       <ul class="dropdown-menu" role="menu"> 
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="/bank/rmbfx/b-boc.html">中国银行外汇牌价</a></li> 
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="/bank/rmbfx/b-icbc.html">工商银行外汇牌价</a></li> 
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="/bank/rmbfx/b-ccb.html">建设银行外汇牌价</a></li> 
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="/bank/rmbfx/b-abc.html">农业银行外汇牌价</a></li> 
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="/bank/rmbfx/b-bocm.html">交通银行外汇牌价</a></li> 
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="/bank/rmbfx/b-psbc.html">邮储银行外汇牌价</a></li> 
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="/bank/rmbfx/b-cmb.html">招商银行外汇牌价</a></li> 
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="/bank/rmbfx/b-ceb.html">光大银行外汇牌价</a></li> 
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="/bank/rmbfx/b-hxb.html">华夏银行外汇牌价</a></li> 
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="/bank/rmbfx/b-cgb.html">广发银行外汇牌价</a></li> 
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="/bank/rmbfx/b-spdb.html">浦发银行外汇牌价</a></li> 
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="/bank/rmbfx/b-cib.html">兴业银行外汇牌价</a></li> 
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="/bank/rmbfx/b-citic.html">中信银行外汇牌价</a></li> 
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="/bank/rmbfx/b-cmbc.html">民生银行外汇牌价</a></li> 
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="/bank/rmbfx/b-pab.html">平安银行外汇牌价</a></li> 
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="/huilv/bank.html">更多银行...</a></li> 
+        <li class="divider"></li> 
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="/bank/rmbfx.html">各大银行汇率汇总比较</a></li> 
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="/huilv/listpricehist/hkd/chao_sell.html">历史综合汇率最佳银行</a></li> 
+       </ul> </li> 
+      <li id="submenu_ccy" class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false"> 按货币查询 <span class="caret"></span> </a> 
+       <ul class="dropdown-menu" role="menu"> 
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="/huilv/c-hkd.html">港币 - HKD</a></li> 
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="/huilv/c-usd.html">美元 - USD</a></li> 
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="/huilv/c-eur.html">欧元 - EUR</a></li> 
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="/huilv/c-twd.html">新台币 - TWD</a></li> 
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="/huilv/c-thb.html">泰国铢 - THB</a></li> 
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="/huilv/c-jpy.html">日元 - JPY</a></li> 
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="/huilv/c-sgd.html">新加坡元 - SGD</a></li> 
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="/huilv/c-nzd.html">新西兰元 - NZD</a></li> 
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="/huilv/c-aud.html">澳大利亚元 - AUD</a></li> 
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="/huilv/c-krw.html">韩国元 - KRW</a></li> 
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="/huilv/c-myr.html">马来西亚元 - MYR</a></li> 
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="/huilv/c-cad.html">加拿大元 - CAD</a></li> 
+        <li class="divider"></li> 
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:" onclick="huilvbase_showccy();">更多货币...</a></li> 
+       </ul> </li> 
+      <li id="submenu_tool" class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false"> 汇率工具 <span class="caret"></span> </a> 
+       <ul class="dropdown-menu" role="menu"> 
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="/huilv/calc.html">汇率计算器</a></li> 
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="/bank/xrate/reminder.html">汇率提醒</a></li> 
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="/huilv/app/android">手机App</a></li> 
+       </ul> </li> 
+     </ul> 
+     <ul class="nav navbar-nav navbar-right"> 
+      <li id="menu_register" style="display:none;"><a href="/account/register" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Expo');">注册</a></li> 
+      <li id="menu_login" style="display:none;"><a href="/account/login" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Blog');">登录</a></li> 
+      <li id="menu_profile" style="display:none;" class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false"> <i class="glyphicon glyphicon-user"></i> &nbsp;<span id="menu_profile_dropdown"></span> <span class="caret"></span> </a> 
+       <ul class="dropdown-menu" role="menu" aria-labelledby="drop2"> 
+        <li role="presentation"><a id="menu_profile_main" role="menuitem" tabindex="-1" href=""><i class="fa fa-home" style="color:#1995dc;"></i> &nbsp; 我的首页</a></li> 
+        <li role="presentation"><a id="menu_profile_edits" role="menuitem" tabindex="-1" href=""><i class="fa fa-edit" style="color:#1995dc;"></i> &nbsp; 我的编辑</a></li> 
+        <li role="presentation"><a id="menu_profile_messages" role="menuitem" tabindex="-1" href=""><i class="fa fa-envelope-open-o" style="color:#1995dc;"></i> &nbsp; 我的消息</a></li> 
+        <li role="presentation" class="divider"></li> 
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:;" onclick="ucLogin_exit();"><i class="fa fa-power-off" style="color:#1995dc;"></i> &nbsp; 退出</a></li> 
+       </ul> </li> 
+     </ul> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="container"> 
+   <div id="old_version_switcher" style="display:none;margin-top:10px;">
+     IE版本10以下的用户请切换到旧版本以获得更好的显示效果: 
+    <a href="/huilv/switch/old" rel="nofollow">切换</a> 
+   </div> 
+   <form class="form-horizontal" role="form" name="form1" id="form1" method="post"> 
+    <div class="form-group" style="margin-top:10px;"> 
+     <div class="text-center"> 
+      <h3>中国人民银行/外汇管理局美元历史汇率与走势图</h3> 
+     </div> 
+    </div> 
+    <div class="form-group"> 
+     <div style="margin-top:15px;"> 
+      <div style="float:left;margin-top:5px;margin-left:15px;"> 
+       <label>查询区间:</label> 
+      </div> 
+      <div class="input-group" style="float:left;margin-left:25px;margin-top:5px;"> 
+       <label>从</label> 
+      </div> 
+      <div class="input-group date" id="datetimepicker1" style="width:160px;float:left;margin-left:5px;"> 
+       <input id="datefrom" name="datefrom" type="text" class="form-control" style="background-color: white;" readonly> 
+       <span class="input-group-addon"> <span class="glyphicon glyphicon-calendar"></span> </span> 
+      </div> 
+      <div class="input-group" style="float:left;margin-left:15px;margin-top:5px;"> 
+       <label>至</label> 
+      </div> 
+      <div class="input-group date" id="datetimepicker2" style="width:160px;float:left;margin-left:5px;"> 
+       <input id="dateto" name="dateto" type="text" class="form-control" style="background-color: white;" readonly> 
+       <span class="input-group-addon"> <span class="glyphicon glyphicon-calendar"></span> </span> 
+      </div> 
+      <div style="float:left;margin-left:30px;"> 
+       <button id="query" type="button" class="btn btn-primary" style="width:80px;">查&nbsp;询</button> 
+      </div> 
+      <div style="clear:both;"></div> 
+     </div> 
+    </div> 
+    <div class="form-group"> 
+     <div class="col-xs-12 col-md-7"> 
+      <div class="table-responsive"> 
+       <table class="table"> 
+        <thead> 
+         <tr> 
+          <th>日期</th> 
+          <th>中间价</th> 
+          <th>备注</th> 
+         </tr> 
+        </thead> 
+        <tbody>
+         <tr> 
+          <td align="center" style="width:130px;">06月16日</td> 
+          <td align="left" style="padding-left:20px;">6.7995</td> 
+          <td style="padding-left:10px;">100美元 = 679.9500人民币</td> 
+         </tr> 
+         <tr> 
+          <td align="center" style="width:130px;">06月15日</td> 
+          <td align="left" style="padding-left:20px;">6.7852</td> 
+          <td style="padding-left:10px;">100美元 = 678.5200人民币</td> 
+         </tr> 
+         <tr> 
+          <td align="center" style="width:130px;">06月14日</td> 
+          <td align="left" style="padding-left:20px;">6.7939</td> 
+          <td style="padding-left:10px;">100美元 = 679.3900人民币</td> 
+         </tr> 
+         <tr> 
+          <td align="center" style="width:130px;">06月13日</td> 
+          <td align="left" style="padding-left:20px;">6.7954</td> 
+          <td style="padding-left:10px;">100美元 = 679.5400人民币</td> 
+         </tr> 
+         <tr> 
+          <td align="center" style="width:130px;">06月12日</td> 
+          <td align="left" style="padding-left:20px;">6.7948</td> 
+          <td style="padding-left:10px;">100美元 = 679.4800人民币</td> 
+         </tr> 
+         <tr> 
+          <td align="center" style="width:130px;">06月09日</td> 
+          <td align="left" style="padding-left:20px;">6.7971</td> 
+          <td style="padding-left:10px;">100美元 = 679.7100人民币</td> 
+         </tr> 
+         <tr> 
+          <td align="center" style="width:130px;">06月08日</td> 
+          <td align="left" style="padding-left:20px;">6.793</td> 
+          <td style="padding-left:10px;">100美元 = 679.3000人民币</td> 
+         </tr> 
+         <tr> 
+          <td align="center" style="width:130px;">06月07日</td> 
+          <td align="left" style="padding-left:20px;">6.7858</td> 
+          <td style="padding-left:10px;">100美元 = 678.5800人民币</td> 
+         </tr> 
+         <tr> 
+          <td align="center" style="width:130px;">06月06日</td> 
+          <td align="left" style="padding-left:20px;">6.7934</td> 
+          <td style="padding-left:10px;">100美元 = 679.3400人民币</td> 
+         </tr> 
+         <tr> 
+          <td align="center" style="width:130px;">06月05日</td> 
+          <td align="left" style="padding-left:20px;">6.7935</td> 
+          <td style="padding-left:10px;">100美元 = 679.3500人民币</td> 
+         </tr> 
+         <tr> 
+          <td align="center" style="width:130px;">06月02日</td> 
+          <td align="left" style="padding-left:20px;">6.807</td> 
+          <td style="padding-left:10px;">100美元 = 680.7000人民币</td> 
+         </tr> 
+         <tr> 
+          <td align="center" style="width:130px;">06月01日</td> 
+          <td align="left" style="padding-left:20px;">6.809</td> 
+          <td style="padding-left:10px;">100美元 = 680.9000人民币</td> 
+         </tr> 
+         <tr> 
+          <td align="center" style="width:130px;">05月31日</td> 
+          <td align="left" style="padding-left:20px;">6.8633</td> 
+          <td style="padding-left:10px;">100美元 = 686.3300人民币</td> 
+         </tr> 
+         <tr> 
+          <td align="center" style="width:130px;">05月26日</td> 
+          <td align="left" style="padding-left:20px;">6.8698</td> 
+          <td style="padding-left:10px;">100美元 = 686.9800人民币</td> 
+         </tr> 
+         <tr> 
+          <td align="center" style="width:130px;">05月25日</td> 
+          <td align="left" style="padding-left:20px;">6.8695</td> 
+          <td style="padding-left:10px;">100美元 = 686.9500人民币</td> 
+         </tr> 
+         <tr> 
+          <td align="center" style="width:130px;">05月24日</td> 
+          <td align="left" style="padding-left:20px;">6.8758</td> 
+          <td style="padding-left:10px;">100美元 = 687.5800人民币</td> 
+         </tr> 
+         <tr> 
+          <td align="center" style="width:130px;">05月23日</td> 
+          <td align="left" style="padding-left:20px;">6.8661</td> 
+          <td style="padding-left:10px;">100美元 = 686.6100人民币</td> 
+         </tr> 
+         <tr> 
+          <td align="center" style="width:130px;">05月22日</td> 
+          <td align="left" style="padding-left:20px;">6.8673</td> 
+          <td style="padding-left:10px;">100美元 = 686.7300人民币</td> 
+         </tr> 
+         <tr> 
+          <td align="center" style="width:130px;">05月19日</td> 
+          <td align="left" style="padding-left:20px;">6.8786</td> 
+          <td style="padding-left:10px;">100美元 = 687.8600人民币</td> 
+         </tr> 
+         <tr> 
+          <td align="center" style="width:130px;">05月18日</td> 
+          <td align="left" style="padding-left:20px;">6.8612</td> 
+          <td style="padding-left:10px;">100美元 = 686.1200人民币</td> 
+         </tr> 
+         <tr> 
+          <td align="center" style="width:130px;">05月17日</td> 
+          <td align="left" style="padding-left:20px;">6.8635</td> 
+          <td style="padding-left:10px;">100美元 = 686.3500人民币</td> 
+         </tr> 
+         <tr> 
+          <td align="center" style="width:130px;">05月16日</td> 
+          <td align="left" style="padding-left:20px;">6.879</td> 
+          <td style="padding-left:10px;">100美元 = 687.9000人民币</td> 
+         </tr> 
+        </tbody>
+       </table> 
+       <input id="hidChart_hui_buy" type="hidden" value="[]"> 
+       <input id="hidChart_chao_buy" type="hidden" value="[]"> 
+       <input id="hidChart_sell" type="hidden" value="[]"> 
+       <input id="hidChart_middle_value" type="hidden" value="[[new Date('2017-05-16'),6.879],[new Date('2017-05-17'),6.8635],[new Date('2017-05-18'),6.8612],[new Date('2017-05-19'),6.8786],[new Date('2017-05-22'),6.8673],[new Date('2017-05-23'),6.8661],[new Date('2017-05-24'),6.8758],[new Date('2017-05-25'),6.8695],[new Date('2017-05-26'),6.8698],[new Date('2017-05-31'),6.8633],[new Date('2017-06-01'),6.809],[new Date('2017-06-02'),6.807],[new Date('2017-06-05'),6.7935],[new Date('2017-06-06'),6.7934],[new Date('2017-06-07'),6.7858],[new Date('2017-06-08'),6.793],[new Date('2017-06-09'),6.7971],[new Date('2017-06-12'),6.7948],[new Date('2017-06-13'),6.7954],[new Date('2017-06-14'),6.7939],[new Date('2017-06-15'),6.7852],[new Date('2017-06-16'),6.7995]]"> 
+      </div> 
+     </div> 
+     <div class="col-xs-12 col-md-5"> 
+      <div> 
+       <div id="chart2" style="height:240px;"></div> 
+       <div style="float:left;">
+        2017-05-16
+       </div> 
+       <div style="float:right;">
+        2017-06-16
+       </div> 
+       <div style="clear:both;"></div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="form-group"> 
+     <div style="text-align: center; margin: 10px 0px 10px 0px;">
+      <!-- start of adsense --> 
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> 
+      <!-- ky_huilv_bank_pc_728_90 --> 
+      <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-7428758777241086" data-ad-slot="1920740851"></ins> 
+      <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+                </script> 
+     </div> 
+     <!-- end of adsense --> 
+    </div> 
+   </form> 
+   <div id="dialg_ccy_menu" class="modal fade" role="dialog"> 
+    <div class="modal-dialog modal-lg"> 
+     <div class="modal-content"> 
+      <div class="modal-header"> 
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button> 
+       <h4 class="modal-title">选择货币</h4> 
+      </div> 
+      <div class="modal-body"> 
+       <div class="container-fluid"> 
+        <div class="form-group" style="margin-top:10px;"> 
+         <div class="col-xs-12 col-md-1"> 
+          <h5>亚洲</h5> 
+         </div> 
+         <div class="col-xs-12 col-md-11"> 
+          <ul class="list-inline"> 
+           <li class="itm"><a href="/huilv/c-hkd.html">
+             <div class="na_flag na_flag_15_hkg"></div>
+             <div>
+              港币
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-mop.html">
+             <div class="na_flag na_flag_15_mac"></div>
+             <div>
+              澳门元
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-twd.html">
+             <div class="na_flag na_flag_15_twn"></div>
+             <div>
+              新台币
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-sgd.html">
+             <div class="na_flag na_flag_15_sgp"></div>
+             <div>
+              新加坡元
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-jpy.html">
+             <div class="na_flag na_flag_15_jpn"></div>
+             <div>
+              日元
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-thb.html">
+             <div class="na_flag na_flag_15_tha"></div>
+             <div>
+              泰国铢
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-php.html">
+             <div class="na_flag na_flag_15_phi"></div>
+             <div>
+              菲律宾比索
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-krw.html">
+             <div class="na_flag na_flag_15_kop"></div>
+             <div>
+              韩国元
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-myr.html">
+             <div class="na_flag na_flag_15_mas"></div>
+             <div>
+              马来西亚元
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-vnd.html">
+             <div class="na_flag na_flag_15_vie"></div>
+             <div>
+              越南盾
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-mvr.html">
+             <div class="na_flag na_flag_15_mdv"></div>
+             <div>
+              马尔代夫拉菲亚
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-idr.html">
+             <div class="na_flag na_flag_15_ina"></div>
+             <div>
+              印尼盾
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-inr.html">
+             <div class="na_flag na_flag_15_ind"></div>
+             <div>
+              印度卢比
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-lak.html">
+             <div class="na_flag na_flag_15_la"></div>
+             <div>
+              老挝基普
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-mmk.html">
+             <div class="na_flag na_flag_15_mmr"></div>
+             <div>
+              缅元
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-lkr.html">
+             <div class="na_flag na_flag_15_lka"></div>
+             <div>
+              斯里兰卡卢比
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-pkr.html">
+             <div class="na_flag na_flag_15_pak"></div>
+             <div>
+              巴基斯坦卢比
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-npr.html">
+             <div class="na_flag na_flag_15_nep"></div>
+             <div>
+              尼泊尔卢比
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-sar.html">
+             <div class="na_flag na_flag_15_ksa"></div>
+             <div>
+              沙特亚尔
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-ils.html">
+             <div class="na_flag na_flag_15_isr"></div>
+             <div>
+              以色列新谢克尔
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-azn.html">
+             <div class="na_flag na_flag_15_aze"></div>
+             <div>
+              阿塞拜疆马纳特
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-aed.html">
+             <div class="na_flag na_flag_15_are"></div>
+             <div>
+              阿联酋迪拉姆
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-kzt.html">
+             <div class="na_flag na_flag_15_kaz"></div>
+             <div>
+              哈萨克斯坦坚戈
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-mnt.html">
+             <div class="na_flag na_flag_15_mng"></div>
+             <div>
+              蒙古图格里克
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-afn.html">
+             <div class="na_flag na_flag_15_afg"></div>
+             <div>
+              阿富汗尼
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-amd.html">
+             <div class="na_flag na_flag_15_arm"></div>
+             <div>
+              亚美尼亚德拉姆
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-bhd.html">
+             <div class="na_flag na_flag_15_bhr"></div>
+             <div>
+              巴林第纳尔
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-bdt.html">
+             <div class="na_flag na_flag_15_bgd"></div>
+             <div>
+              孟加拉塔卡
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-btn.html">
+             <div class="na_flag na_flag_15_bhu"></div>
+             <div>
+              不丹努尔特鲁姆
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-bnd.html">
+             <div class="na_flag na_flag_15_brn"></div>
+             <div>
+              文莱元
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-khr.html">
+             <div class="na_flag na_flag_15_khm"></div>
+             <div>
+              柬埔寨瑞尔
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-cyp.html">
+             <div class="na_flag na_flag_15_cyp"></div>
+             <div>
+              塞浦路斯镑
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-gel.html">
+             <div class="na_flag na_flag_15_geo"></div>
+             <div>
+              格鲁吉亚拉里
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-irr.html">
+             <div class="na_flag na_flag_15_irn"></div>
+             <div>
+              伊朗里亚尔
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-iqd.html">
+             <div class="na_flag na_flag_15_irq"></div>
+             <div>
+              伊拉克第纳尔
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-jod.html">
+             <div class="na_flag na_flag_15_jor"></div>
+             <div>
+              约旦第纳尔
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-kwd.html">
+             <div class="na_flag na_flag_15_kwt"></div>
+             <div>
+              科威特第纳尔
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-kgs.html">
+             <div class="na_flag na_flag_15_kgz"></div>
+             <div>
+              吉尔吉斯斯坦索姆
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-lbp.html">
+             <div class="na_flag na_flag_15_lbn"></div>
+             <div>
+              黎巴嫩镑
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-omr.html">
+             <div class="na_flag na_flag_15_omn"></div>
+             <div>
+              阿曼里亚尔
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-qar.html">
+             <div class="na_flag na_flag_15_qat"></div>
+             <div>
+              卡塔尔利尔
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-syp.html">
+             <div class="na_flag na_flag_15_syr"></div>
+             <div>
+              叙利亚镑
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-tjs.html">
+             <div class="na_flag na_flag_15_tjk"></div>
+             <div>
+              塔吉克斯坦索莫尼
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-tmt.html">
+             <div class="na_flag na_flag_15_tkm"></div>
+             <div>
+              土库曼斯坦马纳特
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-uzs.html">
+             <div class="na_flag na_flag_15_uzb"></div>
+             <div>
+              乌兹别克斯坦苏姆
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-yer.html">
+             <div class="na_flag na_flag_15_yem"></div>
+             <div>
+              也门里亚尔
+             </div></a></li> 
+           <hr style="border-top:1px dashed rgb(224, 219, 211);height:1px;border-bottom: 0px;"> 
+          </ul> 
+         </div> 
+        </div> 
+        <div class="form-group" style="margin-top:10px;"> 
+         <div class="col-xs-12 col-md-1"> 
+          <h5>欧洲</h5> 
+         </div> 
+         <div class="col-xs-12 col-md-11"> 
+          <ul class="list-inline"> 
+           <li class="itm"><a href="/huilv/c-eur.html">
+             <div class="na_flag na_flag_15_eu"></div>
+             <div>
+              欧元
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-gbp.html">
+             <div class="na_flag na_flag_15_gbr"></div>
+             <div>
+              英镑
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-chf.html">
+             <div class="na_flag na_flag_15_sui"></div>
+             <div>
+              瑞士法郎
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-sek.html">
+             <div class="na_flag na_flag_15_swe"></div>
+             <div>
+              瑞典克朗
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-dkk.html">
+             <div class="na_flag na_flag_15_den"></div>
+             <div>
+              丹麦克朗
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-nok.html">
+             <div class="na_flag na_flag_15_nor"></div>
+             <div>
+              挪威克朗
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-rub.html">
+             <div class="na_flag na_flag_15_rus"></div>
+             <div>
+              卢布
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-huf.html">
+             <div class="na_flag na_flag_15_hun"></div>
+             <div>
+              匈牙利福林
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-czk.html">
+             <div class="na_flag na_flag_15_cze"></div>
+             <div>
+              捷克克朗
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-hrk.html">
+             <div class="na_flag na_flag_15_hrv"></div>
+             <div>
+              克罗地亚库纳
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-try.html">
+             <div class="na_flag na_flag_15_tr"></div>
+             <div>
+              土耳其里拉
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-rsd.html">
+             <div class="na_flag na_flag_15_srv"></div>
+             <div>
+              塞尔维亚第纳尔
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-uah.html">
+             <div class="na_flag na_flag_15_ukr"></div>
+             <div>
+              乌克兰格里夫纳
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-bgn.html">
+             <div class="na_flag na_flag_15_bgr"></div>
+             <div>
+              保加利亚列瓦
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-lvl.html">
+             <div class="na_flag na_flag_15_lva"></div>
+             <div>
+              拉脱维亚拉图
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-ron.html">
+             <div class="na_flag na_flag_15_rou"></div>
+             <div>
+              罗马尼亚新列伊
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-isk.html">
+             <div class="na_flag na_flag_15_isl"></div>
+             <div>
+              冰岛克朗
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-pln.html">
+             <div class="na_flag na_flag_15_pol"></div>
+             <div>
+              波兰兹罗提
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-ltl.html">
+             <div class="na_flag na_flag_15_ltu"></div>
+             <div>
+              立陶宛里塔斯
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-all.html">
+             <div class="na_flag na_flag_15_alb"></div>
+             <div>
+              阿尔巴尼亚列克
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-byr.html">
+             <div class="na_flag na_flag_15_blr"></div>
+             <div>
+              白俄罗斯卢布
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-bam.html">
+             <div class="na_flag na_flag_15_bih"></div>
+             <div>
+              波黑可兑换马克
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-eek.html">
+             <div class="na_flag na_flag_15_est"></div>
+             <div>
+              爱沙尼亚克伦尼
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-gip.html">
+             <div class="na_flag na_flag_15_gib"></div>
+             <div>
+              直布罗陀镑
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-mkd.html">
+             <div class="na_flag na_flag_15_mkd"></div>
+             <div>
+              马其顿第纳尔
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-mdl.html">
+             <div class="na_flag na_flag_15_mda"></div>
+             <div>
+              摩尔多瓦列伊
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-skk.html">
+             <div class="na_flag na_flag_15_svk"></div>
+             <div>
+              斯洛伐克克朗
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-sit.html">
+             <div class="na_flag na_flag_15_svn"></div>
+             <div>
+              斯洛文尼亚托拉尔
+             </div></a></li> 
+           <hr style="border-top:1px dashed rgb(224, 219, 211);height:1px;border-bottom: 0px;"> 
+          </ul> 
+         </div> 
+        </div> 
+        <div class="form-group" style="margin-top:10px;"> 
+         <div class="col-xs-12 col-md-1"> 
+          <h5>美洲</h5> 
+         </div> 
+         <div class="col-xs-12 col-md-11"> 
+          <ul class="list-inline"> 
+           <li class="itm"><a href="/huilv/c-usd.html">
+             <div class="na_flag na_flag_15_usa"></div>
+             <div>
+              美元
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-cad.html">
+             <div class="na_flag na_flag_15_can"></div>
+             <div>
+              加拿大元
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-brl.html">
+             <div class="na_flag na_flag_15_bra"></div>
+             <div>
+              巴西雷亚尔
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-ars.html">
+             <div class="na_flag na_flag_15_arg"></div>
+             <div>
+              阿根廷比索
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-dop.html">
+             <div class="na_flag na_flag_15_DOM"></div>
+             <div>
+              多米尼加比索
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-mxn.html">
+             <div class="na_flag na_flag_15_mex"></div>
+             <div>
+              墨西哥比索
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-clp.html">
+             <div class="na_flag na_flag_15_chl"></div>
+             <div>
+              智利比索
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-awg.html">
+             <div class="na_flag na_flag_15_abw"></div>
+             <div>
+              阿鲁巴弗罗林
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-bsd.html">
+             <div class="na_flag na_flag_15_bhs"></div>
+             <div>
+              巴哈马元
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-bbd.html">
+             <div class="na_flag na_flag_15_brb"></div>
+             <div>
+              巴巴多斯元
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-bzd.html">
+             <div class="na_flag na_flag_15_blz"></div>
+             <div>
+              伯利兹元
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-bmd.html">
+             <div class="na_flag na_flag_15_bmu"></div>
+             <div>
+              百慕大元
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-bob.html">
+             <div class="na_flag na_flag_15_bol"></div>
+             <div>
+              玻利维亚诺
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-kyd.html">
+             <div class="na_flag na_flag_15_cym"></div>
+             <div>
+              开曼群岛元
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-cop.html">
+             <div class="na_flag na_flag_15_col"></div>
+             <div>
+              哥伦比亚比索
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-crc.html">
+             <div class="na_flag na_flag_15_cri"></div>
+             <div>
+              哥斯达黎加科郎
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-xcd.html">
+             <div class="na_flag na_flag_15_nil"></div>
+             <div>
+              东加勒比元
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-svc.html">
+             <div class="na_flag na_flag_15_slv"></div>
+             <div>
+              萨尔瓦多科朗
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-fkp.html">
+             <div class="na_flag na_flag_15_flk"></div>
+             <div>
+              福克兰群岛镑
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-gtq.html">
+             <div class="na_flag na_flag_15_gtm"></div>
+             <div>
+              危地马拉格查尔
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-gyd.html">
+             <div class="na_flag na_flag_15_guy"></div>
+             <div>
+              圭亚那元
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-htg.html">
+             <div class="na_flag na_flag_15_hti"></div>
+             <div>
+              海地古德
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-hnl.html">
+             <div class="na_flag na_flag_15_hnd"></div>
+             <div>
+              洪都拉斯伦皮拉
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-jmd.html">
+             <div class="na_flag na_flag_15_jam"></div>
+             <div>
+              牙买加元
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-ang.html">
+             <div class="na_flag na_flag_15_ant"></div>
+             <div>
+              荷属安的列斯盾
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-nio.html">
+             <div class="na_flag na_flag_15_nca"></div>
+             <div>
+              尼加拉瓜科多巴
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-pab.html">
+             <div class="na_flag na_flag_15_pan"></div>
+             <div>
+              巴拿马巴尔博亚
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-pyg.html">
+             <div class="na_flag na_flag_15_pry"></div>
+             <div>
+              巴拉圭瓜拉尼
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-pen.html">
+             <div class="na_flag na_flag_15_per"></div>
+             <div>
+              秘鲁新索尔
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-srd.html">
+             <div class="na_flag na_flag_15_sur"></div>
+             <div>
+              苏里南元
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-ttd.html">
+             <div class="na_flag na_flag_15_tto"></div>
+             <div>
+              特立尼达和多巴哥元
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-uyu.html">
+             <div class="na_flag na_flag_15_ury"></div>
+             <div>
+              乌拉圭新比索
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-vef.html">
+             <div class="na_flag na_flag_15_ven"></div>
+             <div>
+              委内瑞拉强势玻利瓦尔
+             </div></a></li> 
+           <hr style="border-top:1px dashed rgb(224, 219, 211);height:1px;border-bottom: 0px;"> 
+          </ul> 
+         </div> 
+        </div> 
+        <div class="form-group" style="margin-top:10px;"> 
+         <div class="col-xs-12 col-md-1"> 
+          <h5>大洋洲</h5> 
+         </div> 
+         <div class="col-xs-12 col-md-11"> 
+          <ul class="list-inline"> 
+           <li class="itm"><a href="/huilv/c-aud.html">
+             <div class="na_flag na_flag_15_aus"></div>
+             <div>
+              澳大利亚元
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-nzd.html">
+             <div class="na_flag na_flag_15_nzl"></div>
+             <div>
+              新西兰元
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-xpf.html">
+             <div class="na_flag na_flag_15_nil"></div>
+             <div>
+              太平洋法郎
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-fjd.html">
+             <div class="na_flag na_flag_15_fji"></div>
+             <div>
+              斐济元
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-pgk.html">
+             <div class="na_flag na_flag_15_png"></div>
+             <div>
+              巴布亚新几内亚基那
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-wst.html">
+             <div class="na_flag na_flag_15_wsm"></div>
+             <div>
+              萨摩亚塔拉
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-sbd.html">
+             <div class="na_flag na_flag_15_slb"></div>
+             <div>
+              所罗门群岛元
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-top.html">
+             <div class="na_flag na_flag_15_ton"></div>
+             <div>
+              汤加潘加
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-vuv.html">
+             <div class="na_flag na_flag_15_vut"></div>
+             <div>
+              瓦努阿图瓦图
+             </div></a></li> 
+           <hr style="border-top:1px dashed rgb(224, 219, 211);height:1px;border-bottom: 0px;"> 
+          </ul> 
+         </div> 
+        </div> 
+        <div class="form-group" style="margin-top:10px;"> 
+         <div class="col-xs-12 col-md-1"> 
+          <h5>非洲</h5> 
+         </div> 
+         <div class="col-xs-12 col-md-11"> 
+          <ul class="list-inline"> 
+           <li class="itm"><a href="/huilv/c-egp.html">
+             <div class="na_flag na_flag_15_egy"></div>
+             <div>
+              埃及镑
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-zar.html">
+             <div class="na_flag na_flag_15_zaf"></div>
+             <div>
+              南非兰特
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-ngn.html">
+             <div class="na_flag na_flag_15_ngr"></div>
+             <div>
+              尼日利亚奈拉
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-dzd.html">
+             <div class="na_flag na_flag_15_aae"></div>
+             <div>
+              阿尔及利亚第纳尔
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-mad.html">
+             <div class="na_flag na_flag_15_mar"></div>
+             <div>
+              摩洛哥迪拉姆
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-tnd.html">
+             <div class="na_flag na_flag_15_tun"></div>
+             <div>
+              突尼斯第纳尔
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-aoa.html">
+             <div class="na_flag na_flag_15_ago"></div>
+             <div>
+              安哥拉宽扎
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-bwp.html">
+             <div class="na_flag na_flag_15_bwa"></div>
+             <div>
+              博茨瓦纳普拉
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-bif.html">
+             <div class="na_flag na_flag_15_bdi"></div>
+             <div>
+              布隆迪法郎
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-cve.html">
+             <div class="na_flag na_flag_15_cpv"></div>
+             <div>
+              佛得角埃斯库多
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-xof.html">
+             <div class="na_flag na_flag_15_nil"></div>
+             <div>
+              西非法郎
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-xaf.html">
+             <div class="na_flag na_flag_15_nil"></div>
+             <div>
+              中非法郎
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-kmf.html">
+             <div class="na_flag na_flag_15_com"></div>
+             <div>
+              科摩罗法郎
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-cdf.html">
+             <div class="na_flag na_flag_15_cod"></div>
+             <div>
+              刚果法郎
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-djf.html">
+             <div class="na_flag na_flag_15_dji"></div>
+             <div>
+              吉布提法郎
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-gqe.html">
+             <div class="na_flag na_flag_15_gnq"></div>
+             <div>
+              赤道几内亚埃奎勒
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-ern.html">
+             <div class="na_flag na_flag_15_eri"></div>
+             <div>
+              厄立特里亚纳克法
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-etb.html">
+             <div class="na_flag na_flag_15_eth"></div>
+             <div>
+              埃塞俄比亚比尔
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-gmd.html">
+             <div class="na_flag na_flag_15_gmb"></div>
+             <div>
+              冈比亚达拉西
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-ghs.html">
+             <div class="na_flag na_flag_15_gha"></div>
+             <div>
+              加纳塞地
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-gnf.html">
+             <div class="na_flag na_flag_15_gin"></div>
+             <div>
+              几内亚法郎
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-kes.html">
+             <div class="na_flag na_flag_15_ken"></div>
+             <div>
+              肯尼亚先令
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-lsl.html">
+             <div class="na_flag na_flag_15_lso"></div>
+             <div>
+              莱索托洛蒂
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-lrd.html">
+             <div class="na_flag na_flag_15_lbr"></div>
+             <div>
+              利比里亚元
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-lyd.html">
+             <div class="na_flag na_flag_15_lby"></div>
+             <div>
+              利比亚第纳尔
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-mga.html">
+             <div class="na_flag na_flag_15_mdg"></div>
+             <div>
+              马达加斯加阿里亚里
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-mwk.html">
+             <div class="na_flag na_flag_15_mwi"></div>
+             <div>
+              马拉维克瓦查
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-mro.html">
+             <div class="na_flag na_flag_15_mrt"></div>
+             <div>
+              毛里塔尼亚乌吉亚
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-mur.html">
+             <div class="na_flag na_flag_15_mus"></div>
+             <div>
+              毛里求斯卢比
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-mzn.html">
+             <div class="na_flag na_flag_15_moz"></div>
+             <div>
+              莫桑比克梅蒂卡尔
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-nad.html">
+             <div class="na_flag na_flag_15_nam"></div>
+             <div>
+              纳米比亚元
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-rwf.html">
+             <div class="na_flag na_flag_15_rwa"></div>
+             <div>
+              卢旺达法郎
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-std.html">
+             <div class="na_flag na_flag_15_stp"></div>
+             <div>
+              圣多美和普林西比多布拉
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-scr.html">
+             <div class="na_flag na_flag_15_syc"></div>
+             <div>
+              塞舌尔卢比
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-sll.html">
+             <div class="na_flag na_flag_15_sle"></div>
+             <div>
+              塞拉利昂利昂
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-sos.html">
+             <div class="na_flag na_flag_15_som"></div>
+             <div>
+              索马里先令
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-ssp.html">
+             <div class="na_flag na_flag_15_ssd"></div>
+             <div>
+              南苏丹镑
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-shp.html">
+             <div class="na_flag na_flag_15_shn"></div>
+             <div>
+              圣海伦娜磅
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-sdg.html">
+             <div class="na_flag na_flag_15_sud"></div>
+             <div>
+              苏丹镑
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-szl.html">
+             <div class="na_flag na_flag_15_swz"></div>
+             <div>
+              史瓦济兰里兰吉尼
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-tzs.html">
+             <div class="na_flag na_flag_15_tza"></div>
+             <div>
+              坦桑尼亚先令
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-ugx.html">
+             <div class="na_flag na_flag_15_uga"></div>
+             <div>
+              乌干达先令
+             </div></a></li> 
+           <li class="itm"><a href="/huilv/c-zmw.html">
+             <div class="na_flag na_flag_15_zmb"></div>
+             <div>
+              赞比亚克瓦查
+             </div></a></li> 
+           <hr style="border-top:1px dashed rgb(224, 219, 211);height:1px;border-bottom: 0px;"> 
+          </ul> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="modal-footer"> 
+       <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button> 
+      </div> 
+     </div>
+     <!-- /.modal-content --> 
+    </div>
+    <!-- /.modal-dialog --> 
+   </div>
+   <!-- /.modal --> 
+   <style>
+    .form-group .itm {width:110px;line-height: 18px;padding: 0px 0px 8px 0px;}
+    .form-group .itm img {height:15px;border:1px solid #BACDDE;}
+    .form-group .na_flag {border:1px solid #BACDDE;}
+</style> 
+   <script>
+    var isIE9OrBelow = function()
+    {
+       return /MSIE\s/.test(navigator.userAgent) && parseFloat(navigator.appVersion.split("MSIE")[1]) < 10;
+    };
+
+    $(document).ready(function () {
+        if (isIE9OrBelow)
+        {
+            $('#old_version_switcher').show();
+        }
+    });
+
+    function huilvbase_showccy()
+    {
+        $('#dialg_ccy_menu').modal('show');
+    }
+</script> 
+   <div id="dialog_user_login" class="modal fade" role="dialog"> 
+    <div class="modal-dialog modal-md"> 
+     <div class="modal-content"> 
+      <div class="modal-header"> 
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button> 
+       <h4 class="modal-title">本操作需要登录</h4> 
+      </div> 
+      <div class="modal-body"> 
+       <div class="container-fluid"> 
+        <div class="row"> 
+         <label class="col-md-5 text-right">本操作需要登录</label> 
+         <div class="col-md-2"> 
+          <a href="/account/login" target="_blank"><i class="fa fa-sign-in"></i>&nbsp;登录</a> 
+         </div> 
+         <div class="col-md-5"> 
+          <a href="/account/mobilelogin" target="_blank"><i class="fa fa-mobile-phone"></i>&nbsp;免注册快捷登录</a> 
+         </div> 
+        </div> 
+        <div class="row"> 
+         <label class="col-md-5 text-right">&nbsp;</label> 
+         <div class="col-md-7"> 
+          <a href="/account/register" target="_blank"><i class="fa fa-user-o"></i>&nbsp;注册</a> 
+         </div> 
+        </div> 
+        <div class="row"> 
+         <label class="col-md-5 text-right">如果您已经登录请刷新:</label> 
+         <div class="col-md-7"> 
+          <a href="javascript:" onclick="location.reload();"><i class="fa fa-refresh"></i>&nbsp;点此处刷新</a> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="modal-footer"> 
+       <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="dialog_general_dialog" class="modal fade" role="dialog"> 
+    <div class="modal-dialog modal-sm"> 
+     <div class="modal-content"> 
+      <div class="modal-header"> 
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button> 
+       <h4 class="modal-title"><span id="dialog_general_dialog_title"></span></h4> 
+      </div> 
+      <div class="modal-body"> 
+       <div class="container-fluid"> 
+        <div class="row"> 
+         <label id="dialog_general_dialog_body"></label> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="modal-footer"> 
+       <div> 
+        <button onclick="btn_general_dialog_okay_click()" id="btn_general_dialog_okay" name="btn_general_dialog_okay" type="button" class="btn btn-default">确认</button> 
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="dialog_user_message" class="modal fade" role="dialog"> 
+    <div class="modal-dialog modal-md"> 
+     <div class="modal-content"> 
+      <div class="modal-header"> 
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button> 
+       <h4 class="modal-title">发送消息</h4> 
+      </div> 
+      <div class="modal-body"> 
+       <div class="container-fluid"> 
+        <div class="row"> 
+         <label class="col-md-2" for="dialog_user_message_to">收件人:</label> 
+         <div class="col-md-10"> 
+          <input class="form-control" name="dialog_user_message_to" id="dialog_user_message_to" type="text" readonly> 
+         </div> 
+        </div> 
+        <div class="row"> 
+         <label class="col-md-2" for="dialog_user_message_title">标题:</label> 
+         <div class="col-md-10"> 
+          <input class="form-control" name="dialog_user_message_title" id="dialog_user_message_title" type="text"> 
+         </div> 
+        </div> 
+        <div class="row"> 
+         <label class="col-md-2" for="dialog_user_message_content">内容:</label> 
+         <div class="col-md-10"> 
+          <textarea class="form-control" name="dialog_user_message_content" id="dialog_user_message_content" rows="4"></textarea> 
+         </div> 
+        </div> 
+        <div class="row" style="display: none;" id="dialog_user_message_error_div"> 
+         <div class="alert alert-warning"> 
+          <span id="dialog_user_message_error"></span> 
+         </div> 
+        </div> 
+        <div class="modal-footer"> 
+         <button type="button" class="btn btn-default" onclick="dialog_user_message_send()">发送</button> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <footer class="footer"> 
+   <div class="container" style="border-top: 1px solid #C2D9F2;"> 
+    <div> 
+     <a href="/about/about.html" target="_blank">关于快易理财网</a> |&nbsp;
+     <a href="/about/contact.html" target="_blank">联系我们</a>&nbsp;|&nbsp; Copyright © 2012 - 2017 
+     <a href="/" target="_blank">快易理财网</a> 
+    </div> 
+    <div style="margin-top:4px;">
+     <strong>声明：</strong>快易理财网的信息及分析结果仅供投资理财参考，不构成实际操作建议！
+    </div> 
+    <div style="margin-top:4px;"> 
+     <a href="http://www.miibeian.gov.cn" target="_blank">苏ICP备15002115号</a> &nbsp;&nbsp; 本页快照时间: 2017-06-16 20:25:02 
+    </div> 
+   </div> 
+  </footer> 
+  <script src="/static/script/main.js?1234567"></script> 
+  <script src="/static/script/user.js"></script> 
+  <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]--> 
+  <script>
+            var refreshTimer_ucLoginBar;
+
+            $(document).ready(function () {
+
+                $.contextMenu({
+                    selector: '.ky_user_context_menu',
+                    trigger: 'left',
+                    callback: function(key, options) {
+                        if (key === "message")
+                        {
+                            if (readCookie("user_id", "") == ""){
+                                $('#dialog_user_login').modal('show');
+                            }
+                            else{
+                                $('#dialog_user_message_error_div').hide();
+                                $('#dialog_user_message_to').val(options.$trigger.attr('name'));
+                                $('#dialog_user_message').modal('show');
+                            }
+                        }
+                    },
+                    items: {
+                        "message": { name: "发送消息", icon: "fa-send" }
+
+                    }
+                });
+
+                $(function () {
+                    refreshTimer_ucLoginBar = setTimeout(pageRefresh_ucLoginBar, 500);
+                });
+            });
+
+            function dialog_user_message_send(){
+
+                if (readCookie("user_id", "") == ""){
+                    $('#dialog_user_login').modal('show');
+                }
+                else{
+                    var postData = {};
+                    postData['to'] = $('#dialog_user_message_to').val();
+                    postData['title'] = $('#dialog_user_message_title').val();
+                    postData['content'] = $('#dialog_user_message_content').val();
+
+                    if (!postData['to']){
+                        $('#dialog_user_message_error').text('收件人不能为空');
+                        $('#dialog_user_message_error_div').show();
+                        return;
+                    }
+
+                    if (!postData['title']){
+                        $('#dialog_user_message_error').text('标题不能为空');
+                        $('#dialog_user_message_error_div').show();
+                        return;
+                    }
+
+                    if (!postData['content']){
+                        $('#dialog_user_message_error').text('内容不能为空');
+                        $('#dialog_user_message_error_div').show();
+                        return;
+                    }
+
+                    $('#dialog_user_message_error_div').hide();
+
+                    $.ajax({
+                        type: 'POST',
+                        url: "/service/user/send_message.html",
+                        timeout: 10000,
+                        data: postData,
+                        success: function(msg){
+                            if (msg.error == 'n/a'){
+                                $('#dialog_user_message').modal('hide');
+                                show_general_dialog('发送成功', '消息成功发送');
+                            }
+                            else{
+                                $('#dialog_user_message_error').text(msg.error);
+                                $('#dialog_user_message_error_div').show();
+                            }
+                        },
+                        error: function(jqXHR, textStatus, errorThrown){
+                            $('#dialog_user_message_error').text('发生错误, 请重试');
+                            $('#dialog_user_message_error_div').show();
+                        }
+                    });
+                }
+            }
+
+            function ucLogin_exit(){
+                $.get( "/account/service/logout", function( data ) {
+                    eraseCookie("user_id");
+                    eraseCookie("user_seq");
+                    eraseCookie("user_name");
+
+                    window.location.reload();
+                });
+            }
+
+            pageRefresh_ucLoginBar = function () {
+                clearTimeout(refreshTimer_ucLoginBar);
+
+                if (readCookie("user_id", "") == "") {
+                    $("#menu_register").show();
+                    $("#menu_login").show();
+                }
+                else
+                {
+                    $('#menu_profile_dropdown').text(decodeURI(readCookie("user_name", "")));
+                    $("#menu_profile_main").attr("href", "/u/" + readCookie("user_seq", ""));
+                    $('#menu_profile_edits').attr('href', "/u/" + readCookie("user_seq", "") + '/edits.html');
+                    $('#menu_profile_messages').attr('href', "/u/" + readCookie("user_seq", "") + '/messages.html');
+                    $("#menu_profile").show();
+                }
+            };
+
+            var general_dialog_callback = undefined;
+
+            function btn_general_dialog_okay_click()
+            {
+                if (general_dialog_callback === undefined){
+                    return;
+                }
+                general_dialog_callback();
+                $('#dialog_general_dialog').modal('hide');
+            }
+
+            function show_general_dialog(title, body, callback) {
+                $('#dialog_general_dialog_title').text(title);
+                $('#dialog_general_dialog_body').text(body);
+                $('#dialog_general_dialog').modal('show');
+
+                if (callback === undefined){
+                    $('#btn_general_dialog_okay').hide();
+                    return;
+                }
+
+                $('#btn_general_dialog_okay').show();
+                general_dialog_callback = callback;
+            }
+
+            function hide_general_dialog(){
+                $('#dialog_general_dialog').modal('hide');
+            }
+        </script> 
+  <script language="javascript" type="text/javascript" src="/static/script/jquery.jqplot.min.js"></script> 
+  <script language="javascript" type="text/javascript" src="/static/script/jqplot.cursor.min.js"></script> 
+  <script language="javascript" type="text/javascript" src="/static/script/jqplot.dateAxisRenderer.min.js"></script> 
+  <script language="javascript" type="text/javascript" src="/static/script/jqplot.highlighter.min.js"></script> 
+  <!--[if IE]><script language='javascript' type='text/javascript' src='/static/script/excanvas.min.js'></script><![endif]--> 
+  <script>
+        $(document).ready(function () {
+            $(function () {
+
+                $('#datetimepicker1').datetimepicker({
+                    locale: 'zh-cn',
+                    format: 'YYYY-MM-DD',
+                    defaultDate: '2017-05-16',
+                    maxDate: '2017-06-16',
+                    minDate: '2013-04-04',
+                    ignoreReadonly: true
+                });
+
+                $('#datetimepicker2').datetimepicker({
+                    locale: 'zh-cn',
+                    format: 'YYYY-MM-DD',
+                    defaultDate: '2017-06-16',
+                    maxDate: '2017-06-16',
+                    ignoreReadonly: true
+                });
+
+                $('#datetimepicker1').on("dp.change", function (e) {
+                    var selected_date = $('#datetimepicker1').data("DateTimePicker").date();
+                    $('#datetimepicker2').data("DateTimePicker").minDate(selected_date)
+                });
+
+                $('#datetimepicker2').on("dp.change", function (e) {
+                    var selected_date = $('#datetimepicker2').data("DateTimePicker").date();
+                    $('#datetimepicker1').data("DateTimePicker").maxDate(selected_date)
+                });
+
+                $('#query').click(function(){
+                    document.form1.submit()
+                });
+
+                    show_chart('chart2','中间价走势图',get_values('hidChart_middle_value'),get_values('hidChart_middle_value'));
+            });
+        });
+
+        function get_values(type)
+        {
+            var rates = $("#" + type).val();
+
+            if (rates.length < 8) {
+                return null;
+            }
+
+            return eval(rates);
+        }
+
+        function show_chart(chart_id,title,hui_data,chao_data)
+        {
+            if (chao_data == null && hui_data == null)
+                var data = []
+            else if (chao_data == null)
+                var data = [hui_data];
+            else if (hui_data == null)
+                var data = [chao_data];
+            else
+                var data = [hui_data,chao_data];
+
+            plot1 = $.jqplot(chart_id, data, {
+                seriesDefaults: {
+                    showMarker: false,
+                    shadow: false
+                },
+                title: title,
+                axes: {
+                    xaxis: {
+                        renderer: $.jqplot.DateAxisRenderer,
+                        tickOptions: { formatString: '%y年%m月%d日' },
+                        tickInterval: '1 day',
+                        min: data[0][0][0],
+                        max: data[0][data[0].length-1][0],
+                        showTicks: false
+                    },
+                    yaxis: {
+                        tickOptions: { formatString: '%.4f' }
+                    }
+                },
+                series:[
+                    {lineWidth:2, markerOptions:{style:''}},
+                    {lineWidth:2, markerOptions:{style:''}}
+                ],
+                highlighter: {
+                    show: true,
+                    useAxesFormatters: true,
+                    formatString: "日期: %s, 汇率: %.4f",
+                    sizeAdjust: 3
+                },
+                cursor: {
+                    show: false
+                }
+            });
+        }
+
+    </script> 
+  <script>
+                var _hmt = _hmt || [];
+                (function() {
+                  var hm = document.createElement("script");
+                  hm.src = "//hm.baidu.com/hm.js?830230e7ac8535c01b1d4bfe7c665b47";
+                  var s = document.getElementsByTagName("script")[0];
+                  s.parentNode.insertBefore(hm, s);
+                })();
+            </script>  
+ </body>
+</html>
