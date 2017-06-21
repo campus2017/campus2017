@@ -1,0 +1,2 @@
+scp dir1/filename l-test.dev.cn1@ip:/tmp
+#ip为目标机ip地址
