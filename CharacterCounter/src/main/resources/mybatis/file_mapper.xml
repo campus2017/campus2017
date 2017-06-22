@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.xuchunh.charcounter.dao.FileDao">
+
+    <select id="getContentById" resultType="String">
+        SELECT content FROM file WHERE id = #{id}
+    </select>
+
+    <insert id="insertAndGetId" useGeneratedKeys="true" keyProperty="id" parameterType="cn.xuchunh.charcounter.model.FileInfo">
+        INSERT INTO file(name, time, content) VALUES (#{name}, NOW(), #{content})
+    </insert>
+
+</mapper>
