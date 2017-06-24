@@ -16,6 +16,5 @@ public class Main {
         for(Map.Entry<String, Integer> ic: r){
             System.out.println(ic.getKey()+":"+ic.getValue());
         }
-
     }
 }
