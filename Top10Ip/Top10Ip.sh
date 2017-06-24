@@ -1,0 +1,1 @@
+awk '{print $1}' apache_log| sort | uniq -c | sort -n -k 1 -r | head -n 10
