@@ -142,9 +142,6 @@ public class CountMostImport {
         T.getContentFromFile();
         T.processContent();
         T.getTopTen(T,T.numMax,T.IMPORT_MAXNUM,T.list);
-//        System.out.println(T.maxImport);
-//        System.out.println(T.IMPORT_MAXNUM );
-//        System.out.println(T.numMax.size());
         int e=0;
         if(T.list.size()>10)
             e=10;
