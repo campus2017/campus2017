@@ -3,6 +3,6 @@
 
 #第一步：遍历所有的access_log文件中的Ip及次数并输出到countIp文件中
 cat localhost_access_log.* |cut -d ' ' -f1 | sort |uniq -c | sort -nr | awk '{print $0 }' | less | tee /home/Lee/countIp.txt
-#第二步：对countIp进行wordcount统计并将结果输出到outfile，代码略
+#第二步：对countIp进行wordcount统计并将结果输出到outfile，该部分代码略
 #第三步：读出outfile中值最大的十个Ip
 cat /home/Lee/outfile | sort -t ' ' -k 2 -n |cut -d ' ' -f1|uniq -c| head -n 10 |less
