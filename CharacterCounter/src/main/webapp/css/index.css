@@ -1,0 +1,55 @@
+body{
+
+}
+.container{
+    width: 500px;
+    height: auto;
+    margin: 0 auto;
+    border: 1px solid black;
+    padding: 30px;
+}
+.input{
+    width: inherit;
+    height: 120px;
+}
+.input textarea{
+    width: 65%;
+    height: inherit;
+    display: inline-block;
+}
+.input div{
+
+    display: inline-block;
+    width: 33%;
+    height: inherit;
+    vertical-align: top;
+    text-align: center;
+}
+.commit {
+    margin-top: 10px;
+    width: 60%;
+    height: 30px;
+    background-color: deepskyblue;
+    color: white;
+
+}
+.clear {
+    width: 60%;
+    height: 30px;
+    background-color: coral;
+    color: white;
+
+}
+table{
+    border-collapse: collapse;
+    width: 65%;
+}
+table,tr,td,th{
+    border: 1px solid black;
+}
+tr{
+    height: 25px;
+}
+td{
+    width: 50%;
+}
