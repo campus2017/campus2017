@@ -1,2 +1,2 @@
-# 基于ssh通过scp命令来实现跨机器拷贝文件
+#基于ssh通过scp命令来实现跨机器拷贝文件
 scp /dir1/file root@l-test.dev.cn1:/tmp
