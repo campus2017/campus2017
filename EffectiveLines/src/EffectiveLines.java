@@ -21,7 +21,6 @@ public class EffectiveLines {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         System.out.println("有效代码行数： " + cntCode);
