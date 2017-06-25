@@ -133,7 +133,6 @@ public class CountMostImport {
         }
         if(max>0)
             T.getTopTen(T,numMax,max-1,list);
-        //return list;
     }
     public static void main(String[] args) throws Exception {
 // TODO Auto-generated method stub
