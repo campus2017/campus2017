@@ -1,0 +1,8 @@
+#思路：首先遍历tomcat logs中所有的localhost_access_log文件，分别统计出每一个日志文件中的所有访问Ip及次数，并全都输出到一个文件countIp中；
+#然后利用hadoop再对countIp进行统计，统计其中多有的Ip及次数，并去重；最后找出top10即可。
+
+#第一步：遍历所有的access_log文件中的Ip及次数并输出到countIp文件中
+cat localhost_access_log.* |cut -d ' ' -f1 | sort |uniq -c | sort -nr | awk '{print $0 }' | less | tee /home/Lee/countIp.txt
+#第二步：对countIp进行wordcount统计并将结果输出到outfile，代码略
+#第三步：读出outfile中值最大的十个Ip
+cat /home/Lee/outfile | sort -t ' ' -k 2 -n |cut -d ' ' -f1|uniq -c| head -n 10 |less
