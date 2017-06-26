@@ -9,16 +9,16 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.math.BigDecimal;
 import java.net.SocketTimeoutException;
-import java.text.DecimalFormat;
 
 import com.google.common.collect.Ordering;
 import com.google.common.collect.TreeBasedTable;
+import jxl.write.*;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
 import org.joda.time.DateTime;
 
 import jxl.Workbook;
-import jxl.write.*;
+
 
 import java.util.Set;
 import java.util.Map;
@@ -75,7 +75,7 @@ public class ExchangeRate {
                 tableCell=new BigDecimal(rate);
                 rateTable.put(date,"欧元",tableCell);
 
-                rate = row.child(1).html();
+                rate = row.child(4).html();
                 rate=rate.substring(0,rate.lastIndexOf("&")).trim();
                 tableCell=new BigDecimal(rate);
                 rateTable.put(date,"港元",tableCell);
@@ -89,33 +89,53 @@ public class ExchangeRate {
     }
 
     private void writeToExcel()throws IOException{
-       DecimalFormat df=new DecimalFormat("######0.00");
+       //DecimalFormat df=new DecimalFormat("#######.##");
+       WritableFont font=new WritableFont(WritableFont.TIMES,12,WritableFont.BOLD);
+       WritableCellFormat format=new WritableCellFormat(font);
        WritableWorkbook wwb=null;
        Set<DateTime> rows=rateTable.rowKeySet();
        Map<String,BigDecimal> rowValue;
        Set<String> countries;
        OutputStream os=null;
        try{
-           String[] title={"1 dollar to RMB","1 dollar to euro","1 dollar to HongKong dollar"};
-           String filePath="JXL.xls";
+           String[] title={"100 Dollar to CNY(¥)","100 Euro to CNY(¥)","100 HongKong Dollar to CNY(¥)"};
+           String filePath="Exchange.xls";
            File file=new File(filePath);
            file.createNewFile();
            os=new FileOutputStream(filePath);
            wwb=Workbook.createWorkbook(os);
-           WritableSheet sheet=wwb.createSheet("sheet1",0);
-           Label label=new Label(0,0,"near 30 days exchange rate");
-           sheet.addCell(label);
-           for(DateTime date:rows){
-               rowValue=rateTable.row(date);
-               countries = rowValue.keySet();
-               for(String country:countries) {
-                   label = new Label(2, 0, rateTable.get(date, country).toString());
-                   label = new Label(2, 1, rateTable.get(date, country).toString());
-                   label = new Label(2, 2, rateTable.get(date, country).toString());
-                   sheet.addCell(label);
-                   wwb.write();
-               }
+           WritableSheet sheet=wwb.createSheet("Near 30 days exchange rate",0);
+           //sheet.setRowView(1,300);
+           sheet.setColumnView(0,300);
+           sheet.setColumnView(1,300);
+           sheet.setColumnView(2,300);
+          // Label label=new Label(0,0,"Near 30 days exchange rate");
+           //sheet.addCell(label);
+           for(int t=0;t<title.length;t++){
+               Label label=new Label(t,0,title[t],format);
+               sheet.addCell(label);
            }
+           int i=1;
+           for(DateTime date:rows) {
+               rowValue = rateTable.row(date);
+               countries = rowValue.keySet();
+               System.out.println(rowValue);
+
+               Label label = new Label(0, i, rateTable.get(date, "美元").toString());
+               sheet.addCell(label);
+               //wwb.write();
+               System.out.println(label);
+
+               Label label1 = new Label(1, i, rateTable.get(date, "欧元").toString());
+               sheet.addCell(label1);
+               // wwb.write();
+
+               Label label2 = new Label(2, i, rateTable.get(date, "港元").toString());
+               sheet.addCell(label2);
+               //wwb.write();
+               i++;
+           }
+           wwb.write();
 
        }catch(FileNotFoundException e){
            System.out.println("File not found");
