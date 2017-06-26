@@ -6,7 +6,7 @@ import java.util.*;
 
 public class CountMostImport {
     private HashMap<String,Integer> map = new HashMap<String,Integer>();
-
+//  C++ pair
     private class Pair implements Comparable<Pair>{
         String importer;
         int count;
@@ -21,7 +21,7 @@ public class CountMostImport {
             return importer+"----->"+count;
         }
     }
-
+//analyze the java file
     private void numberOfImport(File f)throws Exception{
         FileInputStream in = new FileInputStream(f);
         BufferedReader reader = new BufferedReader(new InputStreamReader(in));
@@ -45,6 +45,8 @@ public class CountMostImport {
         }
         reader.close();
     }
+
+    //read the directory or java file
     private void searchDirectory(File file)throws FileNotFoundException{
         if(file==null||!file.exists())
             throw new FileNotFoundException(file+" ,file not found!");
@@ -66,6 +68,8 @@ public class CountMostImport {
             }
         }
     }
+
+    //get the most import file
     private String getMostImport(){
         Iterator<String> iter=map.keySet().iterator();
         String result="";
@@ -80,6 +84,7 @@ public class CountMostImport {
         }
         return result;
     }
+    //statistics erery import file and sort it use array
     private void frontTenImport(){
         Iterator<String> iter=map.keySet().iterator();
         List<Pair> pairs=new ArrayList<Pair>();
