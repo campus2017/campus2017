@@ -1,0 +1,1 @@
+scp /root/dir1/CopyTestFile.txt root@47.88.103.123:/tmp
