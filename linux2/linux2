@@ -1,0 +1,5 @@
+# linux 下如何从本地目录 dir1 拷贝一个文件到目标机 l-test.dev.cn1 的/tmp 目录下;
+# 假设 dir1 在当前用户主目录,文件名为 file
+# 接下来需要输入目标主机上 root 用户的密码
+
+scp dir1/file root@l-test.dev.cn1:/tmp
