@@ -1,0 +1,15 @@
+body,div,dl,dt,dd,ul,li,h1,h2,h3,h4,h5,h6,input,a,p,textarea{
+	margin:0;
+	padding: 0;
+	font-family: "微软雅黑","Arial";
+}
+ul,ol{list-style: none;}
+li{float: left;}
+a{text-decoration: none; display: inline-block;color: rgb(119,119,119);}
+img{border: none;display: block;}
+/*ie下清除浮云*/
+.clearfloat{zoom:1;overflow: auto;} 
+.clearfloat:after{display: block;content: "";visibility: hidden;height: 0;clear: both;}
+.fl{float: left;}
+.fr{float: right;}
+

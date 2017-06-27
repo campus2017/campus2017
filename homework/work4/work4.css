@@ -1,0 +1,72 @@
+body{background-color: rgb(243,243,243);}
+span{display: inline-block;}
+h3{font-size: 18px;}
+.position{position: relative;}
+.white{background-color: #fff;}
+/* 头部 */
+.header{width: 80%; height: 40px; background-color: rgb(37,164,187); margin: 0 auto;text-align: center;
+	position: relative; line-height: 40px;}
+.title{font-size: 16px; font-weight:300;color: white; display: inline-block;}
+.left-arrow{position: absolute; left: 1%; top:10px;}
+.camera{position: absolute; right: 1%;}
+.first-page{position: absolute; right: 1%; top:10px;font-size: 10px; color: white;}
+.apartment{width: 80%; margin:0 auto;height:108px;background:  url(images/apartment.png) no-repeat; background-size: 100% 100%;}
+/* 酒店信息部分 */
+li{padding: 10px 0; border-bottom: 1px dashed #ccc;position: relative;}
+.msg li,.right-arrow-li{background: url(images/right-arrow.png) no-repeat right;}
+.msg li:last-child{border-bottom: none;}
+.middle{width: 80%; margin: 0 auto; padding: 0 1%;}
+.middle1{border-bottom: 1px solid rgb(204,204,204);}
+.middle2{border-top: 1px solid rgb(204,204,204);}
+.middle2 li{border-bottom: none;}
+.score{color: rgb(37,164,187);font-size:20px;  }
+.blue-font{color: rgb(37,164,187);}
+.grey-font{font-size: 14px; color: #bbb;}
+.icon{width: 22px; height: 18px; display: inline-block; margin: 2px 0 0 -3px;}
+.wifi{background: url(images/icons.png) 0 0;}
+.warn{background:url(images/icons.png) -22px 0;}
+.pillbox{background:url(images/icons.png) -44px 0;}
+.bath{background:url(images/icons.png) -66px 0;}
+.water{background:url(images/icons.png) -88px 0;}
+.outside{background-color: red; position: absolute; top:50%;}
+.verticl-mid1{position: absolute; top:50%;margin-top: -12px;right: 2%;}
+.verticl-mid1:hover{cursor: pointer;}
+
+/* 其他酒店营销活动 */
+.callendar{background: url(images/callendar.png);display: inline-block; width: 16px; height: 19px;
+			margin-bottom: -4px;}
+.white-font{font-size: 16px; color: #fff; padding: 0 1px; margin: 3px 0.5% 0 0;display: inline-block;}
+.blue-back{background-color: rgb(36,164,187);}
+.red-back{background-color: rgb(255,0,0);}
+.small-orange{color: rgb(255,102,6);font-size: 18px;font-weight: bold;}
+.verticl-mid2{position: absolute;right: 0;top: 50%;margin-top: -12px;width: 12%;}
+.verticl-mid2:hover{cursor: pointer;}
+.radius{border-radius: 5px; width: 45%;padding: 2px;}
+
+.right-block{ position: absolute;right: 0;top: 50%;width: 15%; height: 70px;}
+.pay-block{width: 50px; height: 50px;position: absolute;right: 0;top: 50%;border:1px solid rgb(255,102,6);
+	 padding: 0; text-align: center;}
+.pay-block:hover{cursor: pointer;} 
+.orange-font{color: rgb(255,102,6);font-size: 20px;font-weight: bold;}
+.orange-back{background-color:rgb(255,102,6); display: inline-block; width: 100%; height: 50%;
+	text-align: center;color: #fff; font-size:18px;font-weight: bold;}
+.redorange-back{color: #fff; background-color: rgb(255,102,0);font-size: 14px;font-weight: normal;
+ 				margin-left: 2px;}
+.orange-words{color: rgb(255,102,6);font-weight: bold;}
+.orange-border{border:1px solid  rgb(255,102,6); margin-top: 10px;}
+.orange-back2{background-color:rgb(255,102,6); color: #fff;}
+.orange-back2+.orange-words{font-weight: normal; margin-left: -2px;}
+.margin-top1{margin-top: -3.1%;}
+.margin-top11{margin-top: -17%;}
+.margin-top2{margin-top: -3%; }
+.margin-top22{margin-top: -17%; }
+.more-price{color: rgb(37,164,187); text-align: center; line-height: 60px; height: 60px;}
+/* 友情链接 */
+.link{ display: flex; justify-content: space-around; }
+.link img{vertical-align: middle;margin-right: 4px;}
+.link li{float: left;text-decoration: underline; height:40px;line-height: 40px;}
+#hotel-li,#more{text-decoration: none;}
+.link li:hover{cursor: pointer;}
+/* 尾部信息 */
+footer{color: grey; text-align: center;}
+.qunar{margin-right: 20%; margin-top: 40px;}

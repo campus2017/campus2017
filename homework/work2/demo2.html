@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo2test</title>
+	<style>
+			*{padding: 0;margin: 0;}
+			ul{list-style: none;}
+			li{border: 1px solid #ccc; position: absolute;width: 475px;height: 477px;}
+			.wrapper{width: 950px; height: 477px; margin: 0 auto;position: relative;overflow: hidden;}
+			.pic1{background-image: url(images/door1.png);}
+			.pic2{left: 475px; z-index: 2;background-image: url(images/door2.png);}
+			.pic3{left: 635px; z-index: 3;background-image: url(images/door3.png);}
+			.pic4{left: 795px; z-index: 4;background-image: url(images/door4.png);}
+	</style>
+</head>
+<script>
+	window.onload = function() {
+		var pics = document.getElementsByClassName('pic');
+		var oUl = document.getElementById('ulwrapper');
+		var lis = document.getElementsByClassName('pic');
+
+		oUl.onmouseover = function(e){
+			var event = e || window.event;
+			var target = event.target||event.srcElement;
+			var index = Array.prototype.indexOf.call(lis,target);
+			//当前图片往前面移动
+			for (var i = 0; i <= index; i++) {
+				move(lis[i],160*i,-1);
+			}
+			//防止两种极端情况发生
+			if (index==lis.length-1) {return;}
+			if (lis[index].offsetLeft==160*index && lis[index+1].offsetLeft==475+160*(index+1)) {return;}
+			//当前图片的后面图片往后面移
+			if (lis[index].offsetLeft==160*index) {
+				for (var j = lis.length-1; j >index ; j--) {
+					move(lis[j],475+160*(j-1),1);
+				}
+			}
+		}
+		//图片移动，控制速度
+		function move(obj,len,symbol) {
+			// body...
+			var timer = setInterval(function(){
+				var offleft = obj.offsetLeft;
+				//速度一定要取整
+				var speed = symbol*Math.ceil(Math.abs(len-offleft)/10);
+				if (speed<0) {
+					if (offleft<=len) {
+						clearInterval(timer);
+						return;
+					}else{
+						obj.style.left = offleft+speed+'px';
+						if (speed<-5) {speed++;}
+					}
+				}else{
+					if (offleft>=len) {
+						clearInterval(timer);
+						return;
+					}else{
+						obj.style.left = offleft+speed+'px';
+						if (speed>5) {speed--;}
+					}
+				}
+			},10);
+		}
+	}
+</script>
+<body>
+	<div class="wrapper" id="wrapper">
+		<ul id="ulwrapper">
+			<li class="pic pic1"></li>
+			<li class="pic pic2"></li>
+			<li class="pic pic3"></li>
+			<li class="pic pic4"></li>
+		</ul>
+	</div>
+</body>
+</html>

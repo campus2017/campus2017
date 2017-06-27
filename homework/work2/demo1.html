@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo1</title>
+	<style>
+		*{padding: 0;margin: 0;}
+		.bcg{position:relative;width: 1267px; height: 965px; background-image: url(images/m_taobao.png);}
+		.mask{width: 100%;height: 965px;position: absolute;left:0;top:0;background-color:rgba(0,0,0,.4);display: none;} 
+		.click-word{width: 50px;height: 24px; position: absolute;left: 590px;top: 65px;}
+		.out-layer{width:800px; height: 546px;position: fixed;left: 50%;top: 50%; z-index: 5;}
+		.layer{width:800px; height: 546px;background-image: url(images/layer.png);position: absolute; left: -50%;top: -50%;display: none;}
+		.close{width: 32px;height: 32px;background-image: url(images/close.png);position: absolute;right: -10px;top: -10px;}
+	</style>
+</head>
+<script type="text/javascript">
+	window.onload = function() {
+		var clickword = document.getElementById('click-word');
+		var layer = document.getElementById('layer');
+		var mask = document.getElementById('mask');
+		var close = document.getElementById('close');
+		clickword.onclick = function(){
+			layer.style.display = "block";
+			mask.style.display = "block";
+		}
+		close.onmouseover = function(){
+			close.style.backgroundImage = "url(images/close_hover.png)";
+		}
+		close.onmouseout = function(){
+			close.style.backgroundImage = "url(images/close.png)";
+		}
+		close.onclick = function(){
+			layer.style.display = "none";
+			mask.style.display = "none";
+		}
+	}
+</script>
+<body>
+	<div class="bcg" id="bcg">
+		<div class="click-word" id="click-word"></div>
+	</div>
+	<div class="mask" id="mask"></div>
+	<div class="out-layer">
+		<div class="layer" id="layer">
+			<div class="close" id="close"></div>
+		</div>
+	</div>
+	
+</body>
+</html>
