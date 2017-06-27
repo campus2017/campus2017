@@ -14,14 +14,13 @@ import java.util.List;
 @Controller
 public class CharacterCounterAction {
 
-    private int ccount = 0; //汉字
-    private int ecount = 0; //英文字母
-    private int ncount = 0; //数字
-    private int bcount = 0; //标点符号
-    private String input =null;
-
-    @RequestMapping(value = "/result.do")
+        @RequestMapping(value = "/result.do")
     public ModelAndView counter() {
+         int ccount = 0; //汉字
+         int ecount = 0; //英文字母
+         int ncount = 0; //数字
+         int bcount = 0; //标点符号
+         String input =null;
         input = "你你是3谁我A3AB，;d13";
         HashMap<Character, Integer> num = new HashMap<>();
         char[] c = null;

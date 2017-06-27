@@ -25,7 +25,7 @@
     <main class="mdl-layout__content" >
         <div class="mdl-grid">
             <h6>请输入一段文字</h6>
-            <form id="text_form" action="characterCounterAction" method="post" style="text-align:left">
+            <form id="text_form" action="/result.do" method="post" style="text-align:left">
                 <table>
                     <tr>
                         <td rowspan="2" >
