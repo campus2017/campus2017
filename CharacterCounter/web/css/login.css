@@ -1,0 +1,32 @@
+main{
+    width: auto;
+}
+
+.mdl-grid{
+    max-width: 500px;
+}
+
+.mdl-layout__tab-panel{
+    height: 150px;
+}
+
+#file_selected_name{
+    margin:auto;
+}
+
+#begin{
+    text-align: center;
+}
+
+table{
+    width: 100%;
+    margin-top: 20px;
+}
+
+.mdl-textfield__input{
+    width: 100%;
+}
+
+caption{
+    font-size: large;
+}
