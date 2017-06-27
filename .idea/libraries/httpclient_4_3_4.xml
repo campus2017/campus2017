@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="httpclient-4.3.4">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/ExchangeRate/lib/httpclient-4.3.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
