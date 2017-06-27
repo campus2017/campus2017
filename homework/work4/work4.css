@@ -36,13 +36,13 @@ li{padding: 10px 0; border-bottom: 1px dashed #ccc;position: relative;}
 .callendar{background: url(images/callendar.png);display: inline-block; width: 16px; height: 19px;
 			margin-bottom: -4px;}
 .white-font{font-size: 16px; color: #fff; padding: 0 1px; margin: 3px 0.5% 0 0;display: inline-block;}
-.blue-back{background-color: rgb(36,164,187);}
+.blue-back{background-color: rgb(36,164,187); }
 .red-back{background-color: rgb(255,0,0);}
 .small-orange{color: rgb(255,102,6);font-size: 18px;font-weight: bold;}
-.verticl-mid2{position: absolute;right: 0;top: 50%;margin-top: -12px;width: 12%;}
+.verticl-mid2{position: absolute;right: -4%;top: 50%;margin-top: -12px;width: 200px;}
 .verticl-mid2:hover{cursor: pointer;}
-.radius{border-radius: 5px; width: 45%;padding: 2px;}
-
+.radius{border-radius: 5px; width: 65px;padding: 2px;}
+.price{padding-right: 10%;}
 .right-block{ position: absolute;right: 0;top: 50%;width: 15%; height: 70px;}
 .pay-block{width: 50px; height: 50px;position: absolute;right: 0;top: 50%;border:1px solid rgb(255,102,6);
 	 padding: 0; text-align: center;}
@@ -56,10 +56,10 @@ li{padding: 10px 0; border-bottom: 1px dashed #ccc;position: relative;}
 .orange-border{border:1px solid  rgb(255,102,6); margin-top: 10px;}
 .orange-back2{background-color:rgb(255,102,6); color: #fff;}
 .orange-back2+.orange-words{font-weight: normal; margin-left: -2px;}
-.margin-top1{margin-top: -3.1%;}
-.margin-top11{margin-top: -17%;}
-.margin-top2{margin-top: -3%; }
-.margin-top22{margin-top: -17%; }
+.margin-top1{margin-top: -35px;}
+.margin-top11{margin-top: -25px;}
+.margin-top2{margin-top: -34px; }
+.margin-top22{margin-top: -28px; }
 .more-price{color: rgb(37,164,187); text-align: center; line-height: 60px; height: 60px;}
 /* 友情链接 */
 .link{ display: flex; justify-content: space-around; }
