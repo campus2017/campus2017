@@ -3,8 +3,11 @@ package com.action;
 import com.utils.Sort;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
 import java.util.List;
 
@@ -15,13 +18,15 @@ import java.util.List;
 public class CharacterCounterAction {
 
         @RequestMapping(value = "/result.do")
-    public ModelAndView counter() {
+//        public ModelAndView counter() {
+        public ModelAndView counter(@RequestParam("text") String input,  HttpServletRequest request,
+                                    HttpServletResponse response) {
          int ccount = 0; //汉字
          int ecount = 0; //英文字母
          int ncount = 0; //数字
          int bcount = 0; //标点符号
-         String input =null;
-        input = "你你是3谁我A3AB，;d13";
+//         String input =null;
+//        input = "你hai,哈哈！哦";
         HashMap<Character, Integer> num = new HashMap<>();
         char[] c = null;
         c = input.toCharArray();
