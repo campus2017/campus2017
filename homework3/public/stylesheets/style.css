@@ -1,0 +1,169 @@
+html,
+body,
+div,
+ul,
+li,
+section,
+a,
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 微软雅黑, sans-serif;
+    font-size: 16px;
+    line-height: 2;
+    padding: 1%;
+}
+
+.m-nav {
+    position: relative;
+    border-bottom: thin solid #ddd;
+    border-radius: 1px;
+    text-align: right;
+    padding-right: 1.5%;
+    background-color: #fdfdff;
+}
+
+.m-nav .item {
+    display: inline-block;
+    position: relative;
+    top: 1px;
+    border-radius: 4px 4px 0 0;
+    padding: 0 1.5%;
+    border: thin solid #ddd;
+    background-color: #eee;
+}
+
+.m-nav .item.active {
+    border-bottom: thin solid #fff;
+    background-color: white;
+}
+
+.m-content {
+    margin: 1%;
+}
+
+.m-content .select {
+    margin-bottom: 2%;
+}
+
+.m-content .select .u-select {
+    padding: 0 2%;
+}
+
+.m-content .select .u-select.anti {
+    color: blue;
+    background-color: white;
+}
+
+.m-content .select .u-select.reset {
+    background-color: red;
+}
+
+.m-content .select label:first-of-type {
+    margin-left: 2%;
+}
+
+.m-content .result {
+    border: thin solid #ddd;
+}
+
+.m-content .footer {
+    padding: 0.2% 0.5%;
+    border-top: thin solid #ddd;
+    text-align: right;
+    background-color: #eee;
+}
+
+.m-content .footer input {
+    width: 3%;
+}
+
+.m-content .footer .confirm {
+    background-color: transparent;
+    color: #000;
+}
+
+table .u-select {
+    padding: 0 10%;
+}
+
+.u-select {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+}
+
+.u-button {
+    display: inline-block;
+    border: thin solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+    color: blue;
+    cursor: pointer;
+    padding: 0 1%;
+}
+
+.u-page-num {
+    display: inline-block;
+    padding: 0 0.2%;
+    cursor: pointer;
+}
+
+.u-page-num.current {
+    color: red;
+}
+
+input {
+    font-family: 微软雅黑, sans-serif;
+    font-size: 16px;
+}
+
+table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+table tr {
+    border: thin solid #eee;
+}
+
+table thead {
+    background-color: #eee;
+}
+
+table th,
+table td {
+    padding: 0 0.5%;
+    font-weight: normal;
+}
+
+thead #message {
+    width: 30%;
+}
+
+thead #name {
+    width: 20%;
+}
+
+thead #time,
+thead #confirm{
+    width: 10%;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>homework3</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+<body>
+    <ul class="m-nav">
+        <li class="item">E币兑换</li>
+        <li class="item">E币明细</li>
+        <li class="item active">兑换记录</li>
+    </ul>
+    <div class="m-content">
+        <div class="select">
+            <span id="all" class="u-select">全部</span>
+            <span id="success" class="u-select anti">成功</span>
+            <span id="default" class="u-select anti">失败</span>
+            <label for="start-time">选择日期：<input type="date" id="start-time" name="start-time"></label>
+            <label for="end-time">至 <input type="date" id="end-time" name="end-time"></label>
+            <span id="search" class="u-select">搜索</span>
+            <span id="reset" class="u-select reset">重置</span>
+        </div>
+        <div class="result">
+            <table>
+                <thead>
+                    <tr>
+                        <th id="time">时间</th><th id="name">商品名称</th><th id="num">数量</th><th id="money">E币</th><th id="status">状态</th><th id="message">信息</th><th id="ex-message">兑换信息</th><th id="confirm">确认</th>
+                    </tr>
+                </thead>
+                <tbody id="tBody">
+                </tbody>
+            </table>
+            <div class="footer">
+                <span class="u-button" id="first-page">首页</span>
+                <span id="pages">
+                    <span class="u-page-num current">1</span>
+                    <span class="u-page-num">2</span>
+                </span>
+                <span class="u-button" id="end-page">末页</span>
+                共<span id="page-num">1</span>页，
+                <label for="jump">跳转到 <input type="text" id="jump" name="jump" placeholder=""> 页</label>
+                <span class="u-button confirm" id="verify">确定</span>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="javascripts/script.js"></script>
+</html>
