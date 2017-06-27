@@ -1,0 +1,2 @@
+#scp¿ç»úÆ÷¿½±´ÎÄ¼ş
+scp /dir1/file root@l-test.dev.cn1:/tmp
