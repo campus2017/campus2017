@@ -1,6 +1,7 @@
 package cn.xuchunh.effectivelines.test;
 
 import cn.xuchunh.effectivelines.EffectiveLines;
+import org.junit.Assert;
 import org.junit.Test;
 
 import java.io.FileNotFoundException;
@@ -25,17 +26,17 @@ public class EffectiveLinesTest {
 
     @Test(expected = IllegalArgumentException.class)
     public void testInvalidJavaFile() throws IOException {
-        EffectiveLines.effectiveLines("./String");
+        EffectiveLines.effectiveLines("./Test");
     }
 
     @Test(expected = FileNotFoundException.class)
     public void testInvalidPath() throws IOException {
-        EffectiveLines.effectiveLines("xuchunh/String.java");
+        EffectiveLines.effectiveLines("xuchunh/Test.java");
     }
 
     @Test
     public void testNormalCase() throws IOException {
-        System.out.println(EffectiveLines.effectiveLines(EffectiveLines.class.getResource("/").getPath() + "String.java"));
+        Assert.assertEquals(12, EffectiveLines.effectiveLines(EffectiveLines.class.getResource("/").getPath() + "Test.java"));
     }
 
 }

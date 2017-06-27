@@ -23,24 +23,23 @@ public class EffectiveLines {
         Preconditions.checkArgument(path.endsWith(".java"), "there is no valid java file");
 
         int effectiveNum = 0;
-        int multiCommentNum = 0;
 
         try (BufferedReader reader = new BufferedReader(new FileReader(path))) {
             String s;
             while ((s = reader.readLine()) != null) {
                 s = s.trim();
                 if (s.startsWith("/*")) {
-                    multiCommentNum++;
-                } else if (s.endsWith("*/")) {
-                    multiCommentNum--;
-                }
-
-                if (multiCommentNum != 0) {
-                    if (!s.startsWith("//") && !Strings.isNullOrEmpty(s)) {
-                        effectiveNum++;
+                    // 非单行结束
+                    if (!s.endsWith("*/")) {
+                        while ((s = reader.readLine()) != null) {
+                            if (s.endsWith("*/")) {
+                                break;
+                            }
+                        }
                     }
+                } else if (!s.startsWith("//") && !Strings.isNullOrEmpty(s)) {
+                    effectiveNum++;
                 }
-
             }
         }
 
