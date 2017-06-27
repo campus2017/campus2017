@@ -30,7 +30,7 @@
                     <tr>
                         <td rowspan="2" >
                             <div class="mdl-textfield mdl-js-textfield">
-                                <textarea  style="width:380px" type="text" rows="10"  id="text_area"></textarea>
+                                <textarea  name="text" style="width:380px" type="text" rows="10"  id="text_area"></textarea>
                                 <label border="1" class="mdl-textfield__label" for="text_area">请在此处输入文内容</label>
                             </div>
 
