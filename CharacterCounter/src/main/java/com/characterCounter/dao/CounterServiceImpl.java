@@ -59,6 +59,7 @@ public class CounterServiceImpl implements CounterService {
         //逆序set
         ImmutableMultiset<String> set = Multisets.copyHighestCountFirst(charactersMultiSet);
         ImmutableSet<Multiset.Entry<String>> entries = set.entrySet();
+
         //取最大的前3个entry
         int num = 3;
         for(Multiset.Entry<String> entry : entries) {

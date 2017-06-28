@@ -48,6 +48,7 @@
                 <div class="container" style="margin-top: auto">
                     <div class="col-sm-10 col-md-10 col-lg-10" style="margin-top: 8px">
                         <input type="file" name="file" id="file">
+                        <span class="text-danger" id="fail-msg"></span>
                     </div>
                     <div class="col-sm-2 col-md-2 col-lg-2">
                         <button type="submit" class="btn btn-primary" style="margin-top: 2px">统计</button>
@@ -75,11 +76,12 @@
             </form>
         </div>
     </div>
-    <div class="text-danger msg">&nbsp;</div>
+    &nbsp;
+    &nbsp;
     <div class="container">
         <div>
             <p>各统计内容的个数如下：</p>
-            <table class="table table-striped table-bordered table-hover table-responsive">
+            <table class="table table-striped table-bordered table-hover table-responsive all-char">
                 <thead>
                 <tr>
                     <th>统计项</th>
@@ -109,7 +111,7 @@
 
         <div>
             <p>文字中出现频率最高的三个字是：</p>
-            <table class="table table-striped table-bordered table-hover table-responsive">
+            <table class="table table-striped table-bordered table-hover table-responsive top3-char">
                 <thead>
                 <tr>
                     <th>名称</th>
@@ -119,15 +121,15 @@
                 <tbody>
                 <tr>
                     <td id="top0">&nbsp;</td>
-                    <td id="count0"></td>
+                    <td id="count0">&nbsp;</td>
                 </tr>
                 <tr>
                     <td id="top1">&nbsp;</td>
-                    <td id="count1"></td>
+                    <td id="count1">&nbsp;</td>
                 </tr>
                 <tr>
                     <td id="top2">&nbsp;</td>
-                    <td id="count2"></td>
+                    <td id="count2">&nbsp;</td>
                 </tr>
                 </tbody>
             </table>
