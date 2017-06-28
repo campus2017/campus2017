@@ -15,7 +15,7 @@ $(function(){
             success: function(data){
                 if(data.status == "success") {
                     //console.log("1")
-                    $("#fail-msg").empty(); //清空错误提示
+                    $("#fail-msg").empty(); //清空上一次错误提示信息
                     $("#engAlphabet").html(data.msg["engAlphabet"]);
                     $("#number").html(data.msg["number"]);
                     $("#chiCharacters").html(data.msg["chiCharacters"]);
@@ -26,25 +26,18 @@ $(function(){
                         $("#count" + i).html(data.msg["highFrequency"][i].count);
                     }
                 } else if(data.status == "failed") {
-                    $("#fail-msg").empty();
-                    $("#fail-msg").html(data.msg+"");
+                    $("#fail-msg").empty();//清空上一次错误提示信息
+                    $("#fail-msg").html(data.msg);
                 }
             }
         });
-        return e.preventDefault();
+        return e.preventDefault(); // 阻止submit
     });
 
+    //清空
     $("#reset").click(function () {
-        $("#engAlphabet").html("");
-        $("#number").html("");
-        $("#chiCharacters").html("");
-        $("#punctuation").html("");
-        for(i = 0; i < 3; i++) {
-            $("#top" + i).html("&nbsp;");
-        }
-        for(i = 0; i < 3; i++) {
-            $("#count" + i).html("");
-        }
+        $(".all-char tbody tr td:odd").html("");
+        $(".top3-char tbody tr td").html("&nbsp");
     })
 
 });
