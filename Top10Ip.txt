@@ -1,0 +1,1 @@
+awk '{a[$1]++;}END{for(i in a){printf("%s \t %s \n",a[i],i);}}' ./locallhost_access_log.2016-11-25|sort -bn|tail -n 10
