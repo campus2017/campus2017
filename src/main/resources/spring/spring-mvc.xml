@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:component-scan base-package="com.graphene.freshguide.service"/>
+    <context:component-scan base-package="com.graphene.freshguide.controller"/>
+
+    <mvc:annotation-driven enable-matrix-variables="true">
+        <mvc:message-converters register-defaults="true">
+            <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+                <property name="objectMapper" ref="mvcObjectMapper"/>
+            </bean>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
+
+    <bean id="mvcObjectMapper" class="com.fasterxml.jackson.databind.ObjectMapper">
+        <property name="propertyNamingStrategy">
+            <bean class="com.fasterxml.jackson.databind.PropertyNamingStrategy.SnakeCaseStrategy"/>
+        </property>
+        <property name="timeZone" value="GMT+8"/>
+        <property name="serializationInclusion" value="NON_NULL"/>
+    </bean>
+
+    <bean id="mvcSerializationConfig" class="com.fasterxml.jackson.databind.SerializationConfig"
+          factory-bean="mvcObjectMapper" factory-method="getSerializationConfig"/>
+
+    <bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+        <property name="targetObject" ref="mvcSerializationConfig"/>
+        <property name="targetMethod" value="without"/>
+        <property name="arguments">
+            <list>
+                <value type="com.fasterxml.jackson.databind.SerializationFeature">
+                    WRITE_NULL_MAP_VALUES
+                </value>
+            </list>
+        </property>
+    </bean>
+
+    <mvc:cors>
+        <mvc:mapping path="/**"
+                     allowed-origins="*"
+                     allowed-methods="POST, GET, OPTIONS, DELETE, PUT"
+                     allowed-headers="Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With"
+                     allow-credentials="true"/>
+    </mvc:cors>
+
+</beans>

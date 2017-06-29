@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <script src="http://libs.baidu.com/jquery/2.1.1/jquery.min.js"></script>
+    <title>字符统计</title>
+</head>
+<body>
+<div class="container">
+    <h1>请选择一段文字</h1>
+    <div>
+        <form id="text-form">
+            <div>
+                <textarea id="text-input"
+                          rows="3" cols="80"
+                          required></textarea>
+            </div>
+            <div>
+                <button type="submit">统计</button>
+                <button type="reset">清空内容</button>
+            </div>
+        </form>
+        <div>
+            <p>各统计内容的个数如下：</p>
+            <table>
+                <thead>
+                <tr>
+                    <th>统计项</th>
+                    <th>个数</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>英文字母</td>
+                    <td id="alpha"></td>
+                </tr>
+                <tr>
+                    <td>数字</td>
+                    <td id="number"></td>
+                </tr>
+                <tr>
+                    <td>中文汉字</td>
+                    <td id="chinese"></td>
+                </tr>
+                <tr>
+                    <td>中英文标点符号</td>
+                    <td id="punctuation"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <p>文字中出现频率最高的三个字符是：</p>
+            <table>
+                <thead>
+                <tr>
+                    <th>名称</th>
+                    <th>个数</th>
+                </tr>
+                </thead>
+                <tbody id="tops"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        let text = $('#text-input')
+        $('#text-form').submit(function (e) {
+            let data = {text: text.val()}
+            $.ajax({
+                url: 'http://127.0.0.1:8680/count',
+                type: 'POST',
+                data: JSON.stringify(data),
+                dataType: 'json',
+                crossDomain: false,
+                contentType: 'application/json;charset=utf-8',
+                success: function (res) {
+                    if (res.code === 0) {
+                        let stats = res.data.stats
+                        $('#alpha').html(stats.english_letter)
+                        $('#number').html(stats.number)
+                        $('#chinese').html(stats.chinese_character)
+                        $('#punctuation').html(stats.punctuation)
+                        let tops = res.data.tops
+                        let topsBody = $('#tops')
+                        topsBody.empty()
+                        for (let i = 0; i < 3; i++) {
+                            let item = tops[i] ? tops[i] : {character: '', count: ''}
+                            let t = document.createElement('td')
+                            let v = document.createElement('td')
+                            t.innerHTML = item.character
+                            v.innerHTML = item.count
+                            let tr = document.createElement('tr')
+                            tr.appendChild(t)
+                            tr.appendChild(v)
+                            topsBody.append('', tr)
+                        }
+                    } else {
+                        alert('出错了, 错误码: ' + res.code + ', 错误信息: ' + res.message)
+                    }
+                },
+                error: function () {
+                    alert('出错了，请检查网络！')
+                }
+            })
+            return e.preventDefault()
+        })
+    })
+</script>
+</body>
+</html>
