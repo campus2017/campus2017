@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>去哪儿网作业</title>
+<link rel="stylesheet" href="base.css">
+<link rel="shortcut icon" href="logo1.png">
+<script type="text/javascript" src="jquery-1.6.4.js"></script>
+<style type="text/css">
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.bg {
+	background: url("bg.png") repeat-x;
+	width: 100%;
+	height: 1000px;
+	padding-top: 100px;
+}
+
+.bg .content {
+	width: 800px;
+	height: 800px;
+	margin: 0 auto;
+	background-color: white;
+}
+
+.bg .content h1 {
+	padding: 10px 0 10px 10px;
+	font-family: "SimSun";
+	font-weight: 600;
+	font-size: 14px;
+}
+
+.bg .content h2 {
+	padding: 20px 0 10px 25px;
+}
+
+.bg .content p {
+	padding: 0 0 10px 10px;
+}
+
+.bg .content .sc {
+	padding: 0 0 10px 25px;
+	width: 330px;
+}
+
+.bg .content .btn_tj {
+	width: 60px;
+	height: 20px;
+	line-height: 20px;
+	font-family: "SimSun";
+	font-weight: 600;
+	color: white;
+	background-color: #00ccff;
+}
+
+.bg .content .btn_sc {
+	width: 200px;
+	float: left;
+}
+
+.bg .content .btn_tj {
+	float: right;
+}
+
+table .first {
+	font-family: "SimSun";
+	font-weight: 600;
+}
+
+table {
+	margin-left: 25px;
+	height: 125px;
+	width: 250px;
+	table-layout: fixed;
+}
+
+table, td, th {
+	border: 1px solid;
+	text-align: center;
+}
+
+.bg .content .wbsr {
+	padding: 0 0 10px 25px;
+	width: 330px;
+	display: none;
+}
+
+.bg .content .wbsr textarea {
+	width: 250px;
+	height: 60px;
+}
+
+.bg .content .wbsr .qk {
+	width: 60px;
+	height: 60px;
+}
+
+.bg .content .wbsr .qk input {
+	width: 60px;
+	height: 20px;
+	margin-top: 10px;
+	font-family: "SimSun";
+	font-weight: 600;
+	color: white;
+	background-color: #00ccff;
+}
+
+.bg .content .wbsr .qk .btn_qk {
+	height: 20px;
+	background-color: #ff9900;
+}
+</style>
+</head>
+<body>
+	<div class=bg>
+		<div class=content>
+			<h1>请选择一段文字</h1>
+			<div>
+				<p>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input id="file" type="radio"
+						checked="checked" name="content" value="file" />文件上传
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input
+						id="text" type="radio" name="content" value="text" />文本输入
+				</p>
+				<div id="wbsr" class="clearfix wbsr">
+					<div  class="fl">
+						<textarea id="area" rows="" cols=""></textarea>
+					</div>
+					<div class="fr qk">
+						<div>
+							<input id="btn_qk_tj" class="btn_qk_tj" type="button" value="统计" />
+						</div>
+						<div>
+							<input id="btn_qk" class="btn_qk" type="button" value="清空内容" />
+						</div>
+					</div>
+				</div>
+				<div id="sc" class="clearfix sc">
+					<input id="btn_sc" class="btn_sc" type="file" value="上传文件" /> 
+					<input id="btn_tj" class="btn_tj" type="button" value="统计" />
+				</div>
+			</div>
+			<h2>各统计内容的个数如下：</h2>
+			<table>
+				<tr class="first">
+					<td>统计项</td>
+					<td>个数</td>
+				</tr>
+				<tr>
+					<td>英文字母</td>
+					<td id="englist"></td>
+				</tr>
+				<tr>
+					<td>数字</td>
+					<td id="number"></td>
+				</tr>
+				<tr>
+					<td>中文汉字</td>
+					<td id="chinese"></td>
+				</tr>
+				<tr>
+					<td>中英文标点符号</td>
+					<td id="char"></td>
+				</tr>
+			</table>
+			<h2>文字中出现频率最高的三个字是：</h2>
+			<table>
+				<tr class="first">
+					<td>名称</td>
+					<td>个数</td>
+				</tr>
+				<tr>
+					<td id="top1"></td>
+					<td id="value1"></td>
+				</tr>
+				<tr>
+					<td id="top2"></td>
+					<td id="value2"></td>
+				</tr>
+				<tr>
+					<td id="top3"></td>
+					<td id="value3"></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+$(function () {
+	$("#file").change(function(){
+		if($("#file").attr("checked")=="checked"){
+			$("#wbsr").css("display","none");
+			$("#sc").css("display","block");
+		}
+	})
+	
+	$("#text").change(function(){
+		if($("#text").attr("checked")=="checked"){
+			$("#sc").css("display","none");
+			$("#wbsr").css("display","block");
+		}
+	})
+	
+	$("#btn_qk").click(function(){
+		$("textarea").val("");
+	})
+	
+	$("#btn_qk_tj").click(function(){
+		$.post("http://localhost:8080/work/tongji","{cotent:"+$("textarea").val()+"}",function(data){
+			if(data.error==200){
+				$("#englist").html(data.englistCount);
+				$("#chinese").html(data.chineseCount);
+				$("#number").html(data.numberCount);
+				$("#char").html(data.charCount);
+				$("#top1").html(data.top3[0]);
+				$("#top2").html(data.top3[1]);
+				$("#top3").html(data.top3[2]);
+				$("#value1").html(data.value3[0]);
+				$("#value2").html(data.value3[1]);
+				$("#value3").html(data.value3[2]);
+			}
+		})
+	})
+})
+</script>
+</html>

@@ -1,0 +1,106 @@
+@charset "UTF-8";
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.bg {
+	background: url("/images/bg.png") repeat-x;
+	width: 100%;
+	height: 1000px;
+	padding-top: 100px;
+}
+
+.bg .content {
+	width: 800px;
+	height: 800px;
+	margin: 0 auto;
+	background-color: white;
+}
+
+.bg .content h1 {
+	padding: 10px 0 10px 10px;
+	font-family: "SimSun";
+	font-weight: 600;
+	font-size: 14px;
+}
+
+.bg .content h2 {
+	padding: 20px 0 10px 25px;
+}
+
+.bg .content p {
+	padding: 0 0 10px 10px;
+}
+
+.bg .content .sc {
+	padding: 0 0 10px 25px;
+	width: 330px;
+}
+
+.bg .content .btn_tj {
+	width: 60px;
+	height: 20px;
+	line-height: 20px;
+	font-family: "SimSun";
+	font-weight: 600;
+	color: white;
+	background-color: #00ccff;
+}
+
+.bg .content .btn_sc {
+	width: 200px;
+	float: left;
+}
+
+.bg .content .btn_tj {
+	float: right;
+}
+
+table .first {
+	font-family: "SimSun";
+	font-weight: 600;
+}
+
+table {
+	margin-left: 25px;
+	height: 125px;
+	width: 250px;
+	table-layout: fixed;
+}
+
+table, td, th {
+	border: 1px solid;
+	text-align: center;
+}
+
+.bg .content .wbsr {
+	padding: 0 0 10px 25px;
+	width: 330px;
+	display: none;
+}
+
+.bg .content .wbsr textarea {
+	width: 250px;
+	height: 60px;
+}
+
+.bg .content .wbsr .qk {
+	width: 60px;
+	height: 60px;
+}
+
+.bg .content .wbsr .qk input {
+	width: 60px;
+	height: 20px;
+	margin-top: 10px;
+	font-family: "SimSun";
+	font-weight: 600;
+	color: white;
+	background-color: #00ccff;
+}
+
+.bg .content .wbsr .qk .btn_qk {
+	height: 20px;
+	background-color: #ff9900;
+}
