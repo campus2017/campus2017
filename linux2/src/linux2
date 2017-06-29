@@ -1,0 +1,1 @@
+rsync -avz /dir1/ root@1-test.dev.cn1:/tmp
