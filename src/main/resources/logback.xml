@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <!--参考文章：-->
+    <!--http://blog.csdn.net/wangjunjun2008/article/details/18732019-->
+    <!--http://blog.csdn.net/evankaka/article/details/50637994-->
+
+    <!--输出到控制台的设置-->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>[%d{HH:mm:ss.SSS} [%t] %p %logger{36}.%M:%L]-%m%n</Pattern>
+            <charset>UTF-8</charset>
+        </layout>
+    </appender>
+
+    <!--级别：ALL > TRACE > DEBUG > INFO > WARN > ERROR-->
+    <!--对特定目录或是类进行指定级别输出，而不使用root的级别-->
+    <logger name="com.qunar" level="TRACE"/>
+
+    <!--myibatis log configure-->
+    <logger name="com.apache.ibatis" level="TRACE"/>
+    <logger name="java.sql.Connection" level="DEBUG"/>
+    <logger name="java.sql.Statement" level="DEBUG"/>
+    <logger name="java.sql.PreparedStatement" level="DEBUG"/>
+
+    <!--默认所有级别是 debug，使用控制台和文件两种类型都进行输出输出，如果只要使用一种控制台输出的话，则下面把FILE那一行去掉即可-->
+    <root level="TRACE">
+        <appender-ref ref="STDOUT" />
+    </root>
+
+</configuration>
