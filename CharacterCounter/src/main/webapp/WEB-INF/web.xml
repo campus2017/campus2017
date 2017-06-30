@@ -33,4 +33,7 @@
         <filter-name>encodingFilter</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
+    <welcome-file-list>
+        <welcome-file>/WEB-INF/pages/charactercounter.jsp</welcome-file>
+    </welcome-file-list>
 </web-app>
