@@ -1,0 +1,27 @@
+<component name="libraryTable">
+  <library name="Spring-4.3.9.RELEASE" type="spring">
+    <properties version="4.3.9.RELEASE" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/CharacterCounter/lib/spring-aspects-4.3.9.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CharacterCounter/lib/spring-aop-4.3.9.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CharacterCounter/lib/spring-beans-4.3.9.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CharacterCounter/lib/spring-context-support-4.3.9.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CharacterCounter/lib/spring-context-4.3.9.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CharacterCounter/lib/spring-expression-4.3.9.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CharacterCounter/lib/spring-instrument-4.3.9.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CharacterCounter/lib/spring-instrument-tomcat-4.3.9.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CharacterCounter/lib/spring-core-4.3.9.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CharacterCounter/lib/spring-jms-4.3.9.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CharacterCounter/lib/spring-jdbc-4.3.9.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CharacterCounter/lib/spring-messaging-4.3.9.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CharacterCounter/lib/spring-oxm-4.3.9.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CharacterCounter/lib/spring-orm-4.3.9.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CharacterCounter/lib/spring-test-4.3.9.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CharacterCounter/lib/spring-tx-4.3.9.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CharacterCounter/lib/commons-logging-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/CharacterCounter/lib/aopalliance-1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
