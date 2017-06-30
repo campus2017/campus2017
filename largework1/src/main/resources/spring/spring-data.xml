@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xsi:schemaLocation="http://www.springframework.org/schema/context
+     			http://www.springframework.org/schema/context/spring-context-4.1.xsd
+     			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+     			http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-4.1.xsd
+    			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.1.xsd
+     			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.1.xsd
+     			http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-4.1.xsd">
+
+<!-- jdbc配置文件  开始-->
+<bean id="basePropertyPlaceHolder" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+	<property name="systemPropertiesModeName" value="SYSTEM_PROPERTIES_MODE_OVERRIDE" />
+	<property name="ignoreResourceNotFound" value="true" />
+	<property name="locations">
+		<list>
+			<value>classpath:database/jdbc.properties</value>
+		</list>
+	</property>
+</bean>
+<!-- jdbc配置文件  end-->
+
+<!-- Mysql 配置 start -->
+<bean id="jdbcDataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+	<property name="driverClassName" value="${mysql.driverClassName}"/>
+	<property name="url" value="${mysql.url}"/>
+	<property name="username" value="${mysql.username}"/>
+	<property name="password" value="${mysql.password}"/>
+</bean>
+<!-- Mysql 配置 end -->
+
+<!-- session factory 配置  start -->
+<bean id="sqlSessionFactoryUser" class="org.mybatis.spring.SqlSessionFactoryBean">
+	<property name="dataSource" ref="jdbcDataSource"/>
+	<property name="configLocation" value="classpath:database/mybatis-config.xml"/>
+</bean>
+
+<bean id="baseMapperUser" class="org.mybatis.spring.mapper.MapperFactoryBean" abstract="true" lazy-init="true"> 
+	<property name="sqlSessionFactory" ref="sqlSessionFactoryUser"/>
+</bean>
+<!-- session factory 配置  end -->
+
+<!-- 具体数据库操作 start -->
+
+<!-- <bean id="demoDAO" parent="baseMapperUser">  
+    <property name="mapperInterface" value="com.conference.dao.IDemoDAO"/>  
+</bean> -->
+<!-- 具体数据库操作 start -->
+
+
+<!--吉龙  start-->
+<bean id="adminAccountDAO" parent="baseMapperUser">  
+    <property name="mapperInterface" value="com.conference.dao.IAdminAccountDAO"/>  
+</bean> 
+<bean id="conferenceForSearchDAO" parent="baseMapperUser">  
+    <property name="mapperInterface" value="com.conference.dao.IConferenceForSearchDAO"/>  
+</bean>
+<bean id="sharedDomainDAO" parent="baseMapperUser">  
+    <property name="mapperInterface" value="com.conference.dao.ISharedDomainDAO"/>  
+</bean>
+<bean id="sharedEmailQueueDAO" parent="baseMapperUser">  
+    <property name="mapperInterface" value="com.conference.dao.ISharedEmailQueueDAO"/>  
+</bean>
+<bean id="sharedUserDetailDAO" parent="baseMapperUser">  
+    <property name="mapperInterface" value="com.conference.dao.ISharedUserDetailDAO"/>  
+</bean>
+<bean id="sharedUserLoginDAO" parent="baseMapperUser">  
+    <property name="mapperInterface" value="com.conference.dao.ISharedUserLoginDAO"/>  
+</bean>
+<bean id="conferenceEmailDAO" parent="baseMapperUser">  
+    <property name="mapperInterface" value="com.conference.dao.IConferenceEmailDAO"/>  
+</bean>
+<bean id="conferenceDAO" parent="baseMapperUser">  
+    <property name="mapperInterface" value="com.conference.dao.IConferenceDAO"/>  
+</bean>
+<bean id="conferenceApplicationDAO" parent="baseMapperUser">  
+    <property name="mapperInterface" value="com.conference.dao.IConferenceApplicationDAO"/>  
+</bean>
+<bean id="conferenceSponsorDAO" parent="baseMapperUser">  
+    <property name="mapperInterface" value="com.conference.dao.IConferenceSponsorDAO"/>  
+</bean>
+<bean id="conferenceStaffDAO" parent="baseMapperUser">  
+    <property name="mapperInterface" value="com.conference.dao.IConferenceStaffDAO"/>  
+</bean>
+<bean id="conferenceAdministratorDAO" parent="baseMapperUser">  
+    <property name="mapperInterface" value="com.conference.dao.IConferenceAdministratorDAO"/>  
+</bean>
+<bean id="conferenceHostDAO" parent="baseMapperUser">  
+    <property name="mapperInterface" value="com.conference.dao.IConferenceHostDAO"/>  
+</bean>
+<!--吉龙  end-->
+
+<!-- niuxingcheng start -->
+<bean id="conferencePaperReviewDAO" parent="baseMapperUser">  
+    <property name="mapperInterface" value="com.conference.dao.IConferencePaperReviewDAO"/>  
+</bean> 
+<bean id="chairDAO" parent="baseMapperUser">  
+    <property name="mapperInterface" value="com.conference.dao.IChairDAO"/>  
+</bean> 
+<bean id="conferencePaperDAO" parent="baseMapperUser">  
+    <property name="mapperInterface" value="com.conference.dao.IConferencePaperDAO"/>  
+</bean>
+<bean id="conferenceTrackDAO" parent="baseMapperUser">  
+    <property name="mapperInterface" value="com.conference.dao.IConferenceTrackDAO"/>  
+</bean>
+<bean id="conferenceTrackStaffDAO" parent="baseMapperUser">  
+    <property name="mapperInterface" value="com.conference.dao.IConferenceTrackStaffDAO"/>  
+</bean>
+
+<bean id="conferencePaperReviewResultDAO" parent="baseMapperUser">  
+    <property name="mapperInterface" value="com.conference.dao.IConferencePaperReviewResultDAO"/>  
+</bean>
+<bean id="sharedEmailTemplateDAO" parent="baseMapperUser">  
+    <property name="mapperInterface" value="com.conference.dao.ISharedEmailTemplateDAO"/>  
+</bean>
+<bean id="conferencePaperSupportDAO" parent="baseMapperUser">  
+    <property name="mapperInterface" value="com.conference.dao.IConferencePaperSupportDAO"/>  
+</bean>
+<!-- niuxingcheng end  -->
+
+
+<!-- liubo start -->
+<bean id="conferencePaperAttachmentDAO" parent="baseMapperUser">  
+    <property name="mapperInterface" value="com.conference.dao.IConferencePaperAttachmentDAO"/>  
+</bean>
+<bean id="sharedAttachmentCategoryDAO" parent="baseMapperUser">  
+    <property name="mapperInterface" value="com.conference.dao.ISharedAttachmentCategoryDAO"/>  
+</bean>
+<bean id="conferenceTrackConfigDAO" parent="baseMapperUser">  
+    <property name="mapperInterface" value="com.conference.dao.IConferenceTrackConfigDAO"/>  
+</bean>
+<bean id="conferenceTrackEditorDAO" parent="baseMapperUser">  
+    <property name="mapperInterface" value="com.conference.dao.IConferenceTrackEditorDAO"/>  
+</bean>
+<!-- liubo end  -->
+
+
+<!-- LuoHao start -->
+<bean id="conferencePaperAuthorDAO" parent="baseMapperUser">  
+    <property name="mapperInterface" value="com.conference.dao.IConferencePaperAuthorDAO"/>  
+</bean>
+<bean id="conferencePaperRecommendReviewersDAO" parent="baseMapperUser">  
+    <property name="mapperInterface" value="com.conference.dao.IConferencePaperRecommendReviewersDAO"/>  
+</bean>
+
+<!-- LuoHao end -->
+
+<!-- liudan start -->
+<bean id="reviewer" parent="baseMapperUser">  
+    <property name="mapperInterface" value="com.conference.dao.IConferenceReviewerDAO"/>  
+</bean> 
+<bean id="sharedSupportProjectDAO" parent="baseMapperUser">  
+    <property name="mapperInterface" value="com.conference.dao.ISharedSupportProjectDAO"/>  
+</bean>
+
+
+<bean id="conferenceEditorialTypeDAO" parent="baseMapperUser">  
+    <property name="mapperInterface" value="com.conference.dao.IConferenceEditorialTypeDAO"/>  
+</bean> 
+<bean id="conferenceEditorialBoardDAO" parent="baseMapperUser">  
+    <property name="mapperInterface" value="com.conference.dao.IConferenceEditorialBoardDAO"/>  
+</bean> 
+<bean id="conferencePaperFeeVolumnDAO" parent="baseMapperUser">  
+    <property name="mapperInterface" value="com.conference.dao.IConferencePaperFeeVolumnDAO"/>  
+</bean> 
+<!-- liudan start -->
+
+<!--  jiangzhenwei start -->
+
+<bean id="conferenceTempletIndexDAO" parent="baseMapperUser">  
+    <property name="mapperInterface"  value="com.conference.dao.IConferenceTempletIndexDAO"/>  
+</bean> 																					
+
+<bean id="conferenceTempletDAO" parent="baseMapperUser">
+	<property name="mapperInterface" value="com.conference.dao.IConferenceTempletDAO"/>
+</bean>
+
+<bean id="ConferenceTempletZuWeiHuiDAO" parent="baseMapperUser">
+	<property name="mapperInterface" value="com.conference.dao.IConferenceTempletCommitteeDAO"/>
+</bean>
+<bean id="ConferenceTempletZanZhuJiHuiDAO" parent="baseMapperUser">
+	<property name="mapperInterface" value="com.conference.dao.IConferenceTempletSponsorDAO"/>
+</bean>
+<bean id="ConferenceTempletHuiChangDAO" parent="baseMapperUser">
+	<property name="mapperInterface" value="com.conference.dao.IConferenceTempletVenueDAO"/>
+</bean>
+<bean id="ConferenceTempletNewsDAO" parent="baseMapperUser">
+	<property name="mapperInterface" value="com.conference.dao.IConferenceTempletNewsDAO"/>
+</bean>
+<bean id="ConferenceTempletContactDAO" parent="baseMapperUser">
+	<property name="mapperInterface" value="com.conference.dao.IConferenceTempletContactDAO"/>
+</bean>
+<bean id="ConferenceTempletCallforpaperDAO" parent="baseMapperUser">
+	<property name="mapperInterface" value="com.conference.dao.IConferenceTempletCallforpaperDAO"/>
+</bean>
+
+
+<bean id="ConferenceChairDAO" parent="baseMapperUser">
+	<property name="mapperInterface" value="com.conference.dao.IConferenceChairDAO"/>
+</bean>
+<bean id="ConferenceChiefChairDAO" parent="baseMapperUser">
+	<property name="mapperInterface" value="com.conference.dao.IConferenceChiefChairDAO"/>
+</bean>
+<bean id="ConferencePlateDAO" parent="baseMapperUser">
+	<property name="mapperInterface" value="com.conference.dao.IConferencePlateDAO"/>
+</bean>
+<!-- jiangzhenwei end -->
+
+
+
+</beans>
