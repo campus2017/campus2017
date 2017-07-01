@@ -23,7 +23,7 @@ import java.util.List;
 public class MainController {
     @Autowired
     private CharacterCounterService service;
-    @RequestMapping("charactercounter")
+    @RequestMapping("charactercounter1")
     public String page() {
         return "charactercounter";
     }

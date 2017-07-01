@@ -2,173 +2,178 @@
   Created by IntelliJ IDEA.
   User: woo
   Date: 6/30
-  Time: 23:39
+  Time: 21:46
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page import="me.woostam.Word" %>
 <%@ page import="me.woostam.TextInfo" %>
-<%@ page import="java.lang.String" %>
 <%@ page import="java.util.List" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="utf-8" %>
+<%@ page import="javax.xml.soap.Text" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>字符统计</title>
-    <style>
-        a {
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>统计</title>
+    <style type="text/css">
+        table,th,td {border:1px solid black;text-align:center}
+        table.singlineBorder {border-collapse:collapse;}
+        #count1{position: absolute;
+            left:415px;
+            top:170px;
+            padding:6px 12px;
             display: inline-block;
-            width: 80px;
-            height: 30px;
-            background: #00ccff;
-            position: relative;
-            border-radius:6px;
+            background: #1E90FF;
+            border: 1px solid #99D3F5;
+            border-radius: 4px;
+            color: #FFFFFF;
             text-decoration: none;
-            color: #fff;
-        }
-        input[type='file'] {
-            opacity: 0;
-            position: absolute;
-            width: 80px;
-            height: 30px;
-            left: 0;
+            text-indent: 0;
+            line-height: 20px;
+            width:90px}
+        #reset1{position: relative;
+            bottom:14px;
+            padding:6px 12px;
+            display: inline-block;
+            background: #FF8000;
+            border: 1px solid #99D3F5;
+            border-radius: 4px;
+            margin:6px 0px 0px 15px;
+            color: #FFFFFF;
+            text-decoration: none;
+            text-indent: 0;
+            line-height: 20px;
+            width:90px}
+        .file:hover {
+            background: #AADFFD;
+            border-color: #78C3F3;
+            color: #004974;
+            text-decoration: none;
         }
     </style>
     <script type="text/javascript">
-        function hide(i) {
-            if (i == 0) {
-                document.getElementById('text').style.visibility = 'hidden';
-                document.getElementById('file').style.visibility = 'visible';
-            } else if (i == 1) {
-                document.getElementById('file').style.visibility = 'hidden';
-                document.getElementById('text').style.visibility = 'visible';
-            }
+
+        window.onload=function autochioce(){
+            document.getElementById("textarea").style.display="none";
+            document.getElementById("goup").style.display="block";
         }
-        function ClearTextArea() {
-            document.getElementById('t').value = '';
+        function divClick(){
+
+            var show="";
+            var apm = document.getElementsByName("ways");
+            for(var i=0;i<apm.length;i++){
+                if(apm[i].checked)
+                    show = apm[i].value;
+            }
+
+            switch (show){
+                case '1':
+                    document.getElementById("textarea").style.display="none";
+                    document.getElementById("goup").style.display="block";
+                    break;
+                case '2':
+                    document.getElementById("textarea").style.display="block";
+                    document.getElementById("goup").style.display="none";
+                    break;
+            }
         }
     </script>
     <%
-        TextInfo textInfo = (TextInfo) request.getAttribute("textInfo");
         List<Word> list = (List<Word>) request.getAttribute("top");
+        TextInfo textInfo = (TextInfo) request.getAttribute("textInfo");
     %>
 </head>
 <body>
-<div align="center">
-    <table>
-        <tr>
-            <td>
-                <span onclick="hide()">
-                    <input type="radio" name="type" onclick="hide(0)">文件上传
-                    <input type="radio" name="type" onclick="hide(1)" checked>文本输入
-                </span>
-            </td>
-        </tr>
-        <%--文件上传--%>
-        <tr id="file" style="visibility: hidden">
-            <td>
-                <form action="/filecounter" method="post" enctype="multipart/form-data">
-                    <a href="#">
-                        上传文件<input type="file" name="file"/>
-                    </a>
-                    <input type="submit" style="width: 80px;height: 30px;background-color: #00ccff" value="统计">
-                </form>
-            </td>
-        </tr>
-        <%--文本输入--%>
-        <tr id="text">
-            <td>
-                <table>
-                    <tr>
-                        <form id="form" action="/textcounter" method="post">
-                            <td width="200px" height="35">
-                                <textarea id="t" name="text" rows="5" cols="30"></textarea>
-                            </td>
-                            <td width="200px" height="35">
-                                <table>
-                                    <tr>
-                                        <td width="300px">
-                                            <input type="submit" id="btn_submit"
-                                                   style="width: 80px;height: 30px;background-color: #00ccff"
-                                                   value="统计"/>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td width="200px" height="35">
-                                            <input type="button" style="width: 80px;height: 30px;background: #ff9900"
-                                                   value="清空" onclick="ClearTextArea();"/>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </form>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                各项统计内容的个数如下：
-                <table border="1" cellpadding="0" cellspacing="0" width="233px">
-                    <tr align="center">
-                        <td width="200px" height="35">统计项</td>
-                        <td width="200px" height="35">个数</td>
-                    </tr>
-                    <tr align="center">
-                        <td width="200px" height="35">英文字母</td>
-                        <td width="200px" height="35"><%= textInfo == null ? "" : textInfo.getEnCount() + ""%>
-                        </td>
-                    </tr>
-                    <tr align="center">
-                        <td width="200px" height="35">数字</td>
-                        <td width="200px" height="35"><%= textInfo == null ? "" : textInfo.getDigitCount() + ""%>
-                        </td>
-                    </tr>
-                    <tr align="center">
-                        <td width="200px" height="35">中文汉字</td>
-                        <td width="200px" height="35"><%= textInfo == null ? "" : textInfo.getCnCount() + ""%>
-                        </td>
-                    </tr>
-                    <tr align="center">
-                        <td width="200px" height="35">中英文标点符号</td>
-                        <td width="200px" height="35"><%= textInfo == null ? "": textInfo.getPunCount() + ""%>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                文字中出现频率最高的三个字是：
-                <table border="1" cellpadding="0" cellspacing="0" width="233px">
-                    <tr align="center">
-                        <td width="200px" height="35">名称</td>
-                        <td width="200px" height="35">个数</td>
-                    </tr>
-                    <tr align="center">
-                        <td width="200px" height="35"><%= list == null ? "" : list.get(0).getWord()%>
-                        </td>
-                        <td width="200px" height="35"><%= list == null ? "" : list.get(0).getCnt() + ""%>
-                        </td>
-                    </tr>
-                    <tr align="center">
-                        <td width="200px"
-                            height="35"><%= list == null ? "" : (list.size() < 2 ? "" : list.get(1).getWord()) %>
-                        </td>
-                        <td width="200px"
-                            height="35"><%= list == null ? "" : (list.size() < 2 ? "" : list.get(1).getCnt() + "") %>
-                        </td>
-                    </tr>
-                    <tr align="center">
-                        <td width="200px"
-                            height="35"><%= list == null ? "" : (list.size() < 3 ? "" : list.get(2).getWord()) %>
-                        </td>
-                        <td width="200px"
-                            height="35"><%= list == null ? "" : (list.size() < 3 ? "" : list.get(2).getCnt()+"") %>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
+<form action="/filecounter" method="post" enctype="multipart/form-data">
+    <label>你的方式:</label></br>
+    <label>文件上传</label>
+    <input type="radio" value="1" name="ways" onclick="divClick();" checked="checked"/>&nbsp;&nbsp;&nbsp;&nbsp;
+    <label>文本输入</label>
+    <input type="radio" value="2"  name="ways" onclick="divClick();"/>
+    <div></div>
+</form>
+<div class="form_row" id="goup" >
+    <form action="/filecounter" method="post" enctype="multipart/form-data">
+        <input type="file" value="上传文件" name="file" />
+        <input type="submit" style="width: 80px;height: 30px;background-color: #00ccff" value="统计">
+    </form>
 </div>
+</br></br>
+<div class="form_row" id="textarea">
+    <form action="/textcounter" method="post" >
+        <label>&nbsp;&nbsp;</label>
+        <textarea name="text" cols="50" rows="10">请在此输入文本内容...</textarea>
+        <input type="submit" value="统计"  name="submit" id="count1"/>
+        <input type="reset" value="清空内容"  name="reset" id="reset1"/>
+    </form>
+</div>
+
+
+<div>
+    <table cellpadding="7px" class="singlineBorder" width=30%>
+        各统计内容的个数如下：
+            <tr>
+                <th width=50%>统计项</th>
+                <th>个数</th>
+            </tr>
+            <tr>
+                <td>英文字母</td>
+                <td>
+                    <%= textInfo == null ? "" : textInfo.getEnCount() + ""%>
+                </td>
+            </tr>
+            <tr>
+                <td>数字</td>
+                <td>
+                    <%= textInfo == null ? "" : textInfo.getDigitCount() + ""%>
+                </td>
+            </tr>
+            <tr>
+                <td>中文汉字</td>
+                <td>
+                    <%= textInfo == null ? "" : textInfo.getCnCount()+ ""%>
+                </td>
+            </tr>
+            <tr>
+                <td>中英文标点符号</td>
+                <td>
+                    <%= textInfo == null ? "" : textInfo.getPunCount() + ""%>
+                </td>
+            </tr>
+    </table>
+    </div>
+    <div>
+        <table cellpadding="7px" class="singlineBorder" width=30%>
+            文字中出现频率最高的三个字是：
+            <tr>
+                <th>名称</th>
+                <th>个数</th>
+            </tr>
+            <tr>
+                <td>
+                    <%= list == null ? "" : list.get(0).getWord() %>
+                </td>
+                <td>
+                    <%= list == null ? "" : list.get(0).getCnt() + "" %>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <%= list == null ? "" : (list.size() < 2 ? "" : list.get(1).getWord()) %>
+                </td>
+                <td>
+                    <%= list == null ? "" : (list.size() < 2 ? "" : list.get(1).getCnt()+"") %>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <%= list == null ? "" : (list.size() < 3 ? "" : list.get(2).getWord()) %>
+                </td>
+                <td>
+                    <%= list == null ? "" : (list.size() < 3 ? "" : list.get(2).getCnt()+"") %>
+                </td>
+                </tr>
+        </table>
+    </div>
 </body>
 </html>
+
