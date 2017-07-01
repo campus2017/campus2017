@@ -1,91 +1,52 @@
-import java.io.*;
-
 /**
- * Created by isc on 2016/11/20.
+ * Created by Administrator on 2017/02/21.
  */
-public class EffectiveLines {
 
-    public static void main(String[]args){
-        String filePath = "G:\\IDEA_Workspace_2016_12_16\\EffectiveLines\\src\\Test2.java";
-        System.out.println(calculateLinesAccordingPath(filePath));
-    }
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
-    private static String calculateLinesAccordingPath(String path) {
-        File file = new File(path);
-        return countCodeLines(file);
-    }
-
-    /**
-     *
-     * @param file
-     * @return 行数
-     */
-    private static String countCodeLines(File file){
-        int lines=0;
-        //判断是否为.java文件
-        if(isJavaFile(file)){
-            FileReader filereader = null;
-            BufferedReader bufferReader=null;
-            try{
-                filereader = new FileReader(file);
-                bufferReader = new BufferedReader(filereader);
-                String lineContent;
-                while(bufferReader.ready()){
-                    //去掉开头可能存在的空格
-                    lineContent = bufferReader.readLine().trim();
-                   if(isBlankLine(lineContent))
-                        continue;
-                    if(isAnnotation(lineContent))
-                        continue;
-                    lines++;
-                }
-            }catch (Exception e){
-                return e.getMessage();
-            }finally {
-                closeReader(filereader,bufferReader);
-            }
+public class effectiveLines {
+    static int cntLines=0;
+   // static int positon=0;
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        BufferedReader br = null;
+        try {
+            br = new BufferedReader(new FileReader("Main.java"));
+            String line=null;
+            while((line = br.readLine()) != null)
+                pattern(line);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
         }
-        return String.valueOf(lines) ;
+        System.out.println("代码有效行： " + cntLines);
     }
 
-    private static boolean isJavaFile(File file){
-        if(file.getName().matches(".*\\.java$")) {
-            return true;
-        }
-        return false;
-    }
+   ////////******* 注释 *********//////////
+    /////////////注释
+    private static void pattern(String line) {
+        // TODO Auto-generated method stub
+        String regxNodeBegin = "\\s*//*\\*.*"; //  \s表示空格等      \\* 表示字符*   .表示任意字符
+        String regxNodeEnd = ".*\\*//*\\s*";
+        String regx = "\\s*///*.*";
+        String regxSpace = "\\s*";
+        positon++;
+        if(line.matches(regxNodeBegin) && line.matches(regxNodeEnd))  //主要表示 /*  */这种注释
+            return ;
 
-    private static boolean isBlankLine(String lineContent){
-        if(lineContent.matches("^[\\s && [^\\n]]*$"))
-            return true;
-        return false;
-    }
+        if(line.matches(regx))   //主要表示 // 这种注释
+            return;
 
-    /*   注释的情况:
-    * 1. /* 2. // 3. * 4.  */
-    private static boolean isAnnotation(String lineContent){
-
-        if((lineContent.matches("^/\\*.*")))  //   表示/*  \\表示转义  \\* —> *
-            return true;
-        if (lineContent.matches("^//.*"))    //  表示//
-            return true;
-        if(lineContent.matches("^\\*.*"))    // 表示 *
-            return true;
-        if(lineContent.matches(".*\\*/"))  //表示  */
-            return true;
-        return  false;
-    }
-
-    private static void closeReader(FileReader fileReader,BufferedReader bufferedReader){
-        if (bufferedReader != null) {
-            try {
-                bufferedReader.close();
-                if (fileReader != null) {
-                    fileReader.close();
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
+        if(line.matches(regxSpace))  //表示空行
+            return;
+       // System.out.println("代码有效行位置： " + positon);
+        cntLines++;
     }
 }

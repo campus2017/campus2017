@@ -1,0 +1,3 @@
+scp  /dir1/test.txt  root@l-test.dev.cn1:/tmp
+»ò
+sshpass -p 'password' scp  /dir1/test.txt  root@l-test.dev.cn1:/tmp
