@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文本上传</title>
+    <link href="css/character.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/ajaxfileupload.js"></script>
+    <script type="text/javascript" src="js/characterCounter.js"></script>
+</head>
+<body>
+<div class="content">
+    <ul class="toolbar">
+        <li style="border:none;">
+            <label>请选择一段文字：</label>
+            <cite><input name="status" type="radio" value="" id="upload" onclick="showDiv('upload');"  checked="checked"/>文件上传
+                   <input name="status" type="radio" value="" id="input" onclick="showDiv('input');"/>文本输入
+            </cite>
+        </li>
+    </ul>
+</div>
+<div class="content">
+    <div id="uploadinfo" class="mydiv">
+        <table >
+            <tr>
+                 <td><input type="file"   value="上传文件" id="fileUpload" name="fileUpload" style=" float:left; width:160px;" /></td>
+                 <td><input type="button"  value="统计" onclick="countfile();"  style=" float:right; width:80px;" /></td>
+            </tr>
+       </table>
+    </div>
+    <div id="inputinfo" class="mydiv" style="display:none;">
+       <table>
+        <tr>
+            <td>
+              <textarea class=""  id="charactercount" rows="4" cols="107"
+                                      required style="max-height: 100px;max-width: 100%; float: left"></textarea>
+           </td>
+           <td>
+             <input   type="button" value="统计"  style="width: 80px ; height:20px; float: left; margin-bottom:30px " onclick="count();"> </input>
+             <input type="button" value="清空内容" style="width: 80px; height:20px;float: left"  onclick="emptyContent();" > </input>
+           </td>
+        </tr>
+       </table>
+    </div>
+    </div>
+<div class="content">
+<label>各统计内容的个数如下：</label>
+<table class="tablelist"id="ta">
+    <thead>
+    <tr>
+        <th>统计项</th>
+        <th>个数</th>
+    </tr>
+    </thead>
+    <tbody id="allContents">
+    <tr>
+        <td>英文字母</td>
+        <td><span id="englishcount"></span></td>
+
+    </tr>
+    <tr>
+        <td>数字</td>
+        <td><span id="digitcount"></span></td>
+
+    </tr>
+    <tr>
+        <td>中文汉字</td>
+        <td><span id="chaniesecount"></span></td>
+
+    </tr>
+    <tr>
+        <td>中英文标点符号</td>
+        <td><span id="punctuationcount"></span></td>
+    </tr>
+    </tbody>
+</table>
+</div>
+<div class="content">
+    <label>文字中出现频率最高的三个数字：</label>
+    <table class="tablelist"id="tab">
+        <thead>
+        <tr>
+            <th>名称</th>
+            <th>个数</th>
+        </tr>
+        </thead>
+        <tbody id="allContent">
+        <tr>
+            <td><span id="countMostKey0"></span></td>
+            <td><span id="countMostValue0"></span></td>
+
+        </tr>
+        <tr>
+            <td><span id="countMostKey1"></span></td>
+            <td> <span id="countMostValue1"></span></td>
+
+        </tr>
+        <tr>
+            <td><span id="countMostKey2"></span></td>
+            <td><span id="countMostValue2"></span></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

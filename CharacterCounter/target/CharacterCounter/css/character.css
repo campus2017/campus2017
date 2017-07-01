@@ -1,0 +1,40 @@
+.tools .toolbar{
+    text-align: center;
+}
+
+.content{
+    margin: 0 auto ;
+    text-align: center;
+    margin-top: 5%;
+    width: 60%;
+}
+.content .mydiv table{
+    width: 100%;
+    text-align: left;
+    height: 100px;
+    float: left;
+}
+.content label{
+    color: black;
+    float: left;
+    margin-top: 0px;
+    margin-bottom: 2%;
+}
+.content .tablelist{
+    margin: auto;
+    width: 100%;
+    border-collapse: collapse;
+    color: rgba(0,0,0,1);
+    text-align: center;
+    height: 40px;
+}
+.content .tablelist tr td{
+    border: 1px  solid rgba(0,0,0,1);
+    width: 50%;
+    height:50px;
+}
+.content .tablelist tr th{
+    border: 1px  solid rgba(0,0,0,1);
+    width: 50%;
+    height:50px;
+}
