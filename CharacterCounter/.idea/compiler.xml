@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="CharacterCounter" />
+        <module name="characterCounter" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="CharacterCounter" target="1.8" />
+      <module name="characterCounter" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
