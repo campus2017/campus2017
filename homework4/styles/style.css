@@ -1,0 +1,401 @@
+html,
+body,
+div,
+ul,
+li,
+section,
+a,
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: 微软雅黑, sans-serif;
+    background-color: #eee;
+}
+
+.m-list-item {
+    position: relative;
+    overflow: hidden;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.m-list-item .left,
+.m-list-item .right,
+.m-list-item .middle{
+    display: table-cell;
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+.m-list-item .line{
+    display: block;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    line-height: 1.5;
+}
+
+.title {
+    font-size: 20px;
+}
+
+.subtitle {
+    color: #aaa;
+}
+
+.small-word {
+    line-height: 1;
+    font-size: 1px;
+}
+
+.big-num {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.bigger-num {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.blue-num {
+    color: #7ecef4;
+    font-weight: bold;
+}
+
+.blue-word {
+    color: #7ecef4;
+}
+
+.white-word {
+    color: #fff;
+}
+
+.orange-word {
+    color: orange;
+}
+
+.icon {
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: bottom;
+    height: 1.5em;
+    width: 1.5em;
+    background: no-repeat center/contain content-box;
+}
+
+.right-arrow {
+    padding: 0.25em 0;
+    width: 1em;
+    background-image: url("../image/arrow-r.png");
+    background-position: right;
+}
+
+.calender {
+    padding: 0.1em 0;
+    background-image: url("../image/calendar.png");
+}
+
+.wifi {
+    background-image: url("../image/wifi.png");
+}
+
+.water {
+    background-image: url("../image/water.png");
+}
+
+.ring {
+    background-image: url("../image/ring.png");
+}
+
+.luggage {
+    background-image: url("../image/luggage.png");
+}
+
+.bath {
+    background-image: url("../image/bath.png");
+}
+
+.down-arrow {
+    padding: 0.2em;
+    background-image: url("../image/arrow-d.png");
+}
+
+.up-arrow {
+    padding: 0.2em;
+    background-image: url("../image/arrow-u.png");
+}
+
+.back-icon {
+    background-image: url("../image/back.png");
+}
+
+.logo {
+    background-image: url("../image/logo.png");
+}
+
+.ticket {
+    background-image: url("../image/ticket.png");
+}
+
+.hotel {
+    background-image: url("../image/hotel.png");
+}
+
+.apartment {
+    background-image: url("../image/apartment.png");
+}
+
+.more {
+    padding: 0.2em 0 0.3em 0;
+    background-image: url("../image/more.png");
+}
+
+.expand {
+    display: inline-block;
+    padding: 0 0.2em;
+    border-radius: 4px;
+    background-color: #1db6c9;
+    color: white;
+}
+
+.tag {
+    display: inline-block;
+    border: 1px solid;
+    line-height: 1.2;
+    color: white;
+}
+
+.blue-tag {
+    background-color: #1db6c9;
+    border-color: #1db6c9;
+}
+
+.red-tag {
+    background-color: red;
+    border-color: red;
+}
+
+.orange-tag {
+    background-color: orange;
+    border-color: orange;
+}
+
+.combine-tag {
+    border-color: orange;
+    background-color: white;
+    color: orange;
+}
+
+.combine-tag .em {
+    border-right: 1px solid orange;
+    display: inline-block;
+    background-color: orange;
+    color: white;
+}
+
+.pay {
+    display: inline-block;
+    border-radius: 6px;
+    border: 2px solid orange;
+    overflow: hidden;
+    vertical-align: bottom;
+}
+
+.pay .order {
+    background-color: orange;
+    color: white;
+    text-align: center;
+    border-bottom: 2px solid orange;
+    line-height: 1;
+    font-size: 20px;
+}
+
+.pay .sub-pay {
+    background-color: white;
+    color: orange;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.approve-icon {
+    position: absolute;
+    width: 1.4em;
+    height: 1.4em;
+    top: 0;
+    left: 0;
+}
+
+.approve-icon:before {
+    content: "";
+    display: block;
+    border: 0.7em solid;
+    border-color: orange transparent transparent orange;
+}
+
+.approve-icon:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 45%;
+    height: 45%;
+    background: url(../image/hand.png) no-repeat center/contain;
+}
+
+.g-head.m-list-item {
+    background-color: #1db6c9;
+    border-bottom: 1px solid #1d80a6;
+    height: 46px;
+}
+
+.g-head .left {
+    padding: 0 0 0 3%;
+}
+
+.g-head .middle {
+    text-align: center;
+}
+
+.g-head .right>.line {
+    line-height: 2.5;
+}
+
+.g-head .right>.line>.logo {
+    width: 2.5em;
+    height: 2.5em;
+}
+
+.g-body {
+    height: calc(100% - 47px);
+    overflow: auto;
+}
+
+.g-lists {
+    border-bottom: 1px solid #aaa;
+    background-color: white;
+}
+
+.g-lists .photo {
+    position: relative;
+}
+
+.g-lists .photo img{
+    display: block;
+    width: 100%;
+}
+
+.g-lists .photo .subscript {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0.5% 1%;
+    color: white;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.g-lists .m-list-item {
+    margin: 0 2.5%;
+    padding: 2% 0;
+    width: 95%;
+    border-bottom: 1px dotted #aaa;
+}
+
+.g-lists .m-list-item:last-child {
+    border-width: 0;
+}
+
+.g-lists .left {
+    width: 70%;
+}
+
+.g-others,
+.g-goods-list {
+    margin-top: 5%;
+    border-top: 1px solid #aaa;
+}
+
+.g-annotation,
+.g-others .m-list-item,
+.g-goods-list .m-list-item{
+    border-bottom: 1px solid #aaa;
+}
+
+.g-others .left,
+.g-goods-list .m-list-item .left {
+    padding: 2% 0 2% 2.5%;
+}
+
+.g-others .right,
+.g-goods-list .m-list-item .right {
+    padding: 2% 2.5% 2% 2%;
+}
+
+.g-others,
+.g-request,
+.g-goods{
+    background-color: white;
+}
+
+.g-others .right,
+.g-request .right {
+    width: 25%;
+    text-align: right;
+}
+
+.g-head .right,
+.g-lists .right,
+.g-price .middle,
+.g-goods .right {
+    text-align: right;
+}
+
+.g-price .left {
+    width: 55%;
+}
+
+.g-price .right {
+    width: 19%;
+}
+
+.g-more .middle {
+    text-align: center;
+    color: #7ecef4;
+    padding: 2%;
+}
+
+.g-annotation  .middle{
+    text-align: left;
+    padding: 2% 2.5%;
+}
+
+.footer {
+    padding: 2%;
+    text-align: center;
+}
+
+.footer .icon {
+    vertical-align: middle;
+}
+
+.footer .underline {
+    text-decoration: underline;
+}
