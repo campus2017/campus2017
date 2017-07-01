@@ -1,0 +1,158 @@
+@charset "utf-8";
+.header {
+	width: 980px;
+	height: 31px;
+	margin: 0 auto;
+	padding: 20px 20px 0 20px;
+	background-color: #FBFCFD;
+	border-bottom: 1px solid #DADADA;
+}
+.header .item {
+	width: 80px;
+	height: 30px;
+	line-height: 30px;
+	border: 1px solid #DADADA;
+	border-radius: 3px;
+	background-color: #F1F1F1;
+	margin-left: 5px;
+	text-align: center;
+	font-size: 14px;
+	border-bottom: none;
+}
+.header .active {
+	background-color: #FFF;
+	border-bottom: 1px solid #FFF;
+}
+.options {
+	width: 1000px;
+	margin: 0 auto;
+	padding: 10px 0 0 0;
+	font-size: 14px;
+}
+.options .btn {
+	margin-left: 5px;
+	width: 68px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	border-radius: 5px;
+	background-color: #FFF;
+	color: #3775C0;
+}
+.options .btn-blue {
+	margin-left: 5px;
+	width: 68px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	border-radius: 5px;
+	background-color: #3775C0;
+	color: #FFF;
+}
+.options .btn-red {
+	margin-left: 5px;
+	width: 68px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	border-radius: 5px;
+	background-color: #F00;
+	color: #FFF;
+}
+.options .date {
+	margin-left: 30px;
+	height: 25px;
+	line-height: 25px;
+}
+.table {
+	width: 1000px;
+	margin: 0 auto;
+	margin-top: 20px;
+	border: 1px solid #E5E5E5;
+	font-size: 13px;
+}
+.table thead {
+	background-color: #F8F8F8;
+}
+.table thead td {
+	height: 35px;
+	line-height: 35px;
+}
+.table .td1 {
+	padding-left: 20px;
+	width: 120px;
+}
+.table .td2 {
+	width: 180px;
+}
+.table .td3 {
+	width: 70px;
+}
+.table .td4 {
+	width: 70px;
+}
+.table .td5 {
+	width: 75px;
+}
+.table .td6 {
+	width: 220px;
+	padding-right: 30px;
+}
+.table .td7 {
+	width: 95px;
+}
+.table .td8 {
+	width: 125px;
+}
+.table tbody td {
+	height: 65px;
+	line-height: 32px;
+	border-bottom: 1px solid #F3F3F3;
+}
+.table tbody .ex-info {
+	height: 30px;
+	width: 90px;
+	line-height: 30px;
+	text-align: center;
+	border-radius: 5px;
+	background-color: #3775C0;
+	color: #FFF;
+}
+.footer {
+	height: 35px;
+	text-align: right;
+	line-height: 35px;
+	background-color: #F8F8F8;
+	padding-right: 20px;
+	border-top: 2px solid #E5E5E5;
+}
+.footer div {
+	display: inline-block;
+}
+.footer .text {
+	display: inline-block;
+	width: 45px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	border: 1px solid #E5E5E5;
+	background-color: #FFF;
+	color: #3775C0;
+	font-size: 14px;
+}
+.footer .index {
+	color: #F00;
+}
+.footer .search {
+	width: 35px;
+	height: 20px;
+}
+.footer .confirm {
+	display: inline-block;
+	width: 50px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	border: 1px solid #CCC;
+	border-radius: 5px;
+}

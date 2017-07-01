@@ -1,0 +1,267 @@
+@charset "utf-8";
+.m-calendar {
+	width: 912px;
+	margin: 0 auto;
+	height: 73px;
+	border-top: 1px solid #FFF;
+}
+.m-calendar div {
+	float: left;
+	height: 100%;
+	border-right: 1px solid #33A7DC;
+	border-bottom: 1px solid #33A7DC;
+}
+.m-calendar .leftArrow {
+	width: 47px;
+	background-color: #FFF;
+	background-image: url(../image/left.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.m-calendar .cal-item {
+	width: 102px;
+	background-color: #F3FBFD;
+	text-align: center;
+}
+.m-calendar .active {
+	border-top: 1px solid #33A7DC;
+	border-bottom: none;
+	color: #0E83BF;
+	font-weight: bold;
+	background-color: #FFF;
+}
+.m-calendar .active:after {
+	display: block;
+	width: 15px;
+	font-size: 10px;
+	line-height: 15px;
+	color: #FFF;
+	content: "低";
+	background-color: #F84980;
+	position: relative;
+	top: -60px;
+	left: 1px;
+}
+.cal-item p {
+	font-size: 12px;
+	line-height: 12px;
+	margin-top: 9px;
+}
+.cal-item .price {
+	font-size: 14px;
+	line-height: 10px;
+	color: #0e83bf;
+	font-weight: bold;
+}
+.m-calendar .rightArrow {
+	width: 47px;
+	border-right: none;
+	background-color: #FFF;
+	background-image: url(../image/right.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.m-calendar .cal {
+	width: 96px;
+	border-right: none;
+	background-image: url(../image/calendar.png);
+}
+.cal span {
+	position: relative;
+	left: 43px;
+	top: 50px;
+	font-size: 12px;
+	color: #FFF;
+}
+.m-flight {
+	width: 912px;
+	margin: 0 auto;
+}
+.m-flight .bg-line {
+	width: 912px;
+	height: 4px;
+	margin: 15px auto 1px auto;
+	background-image: url(../image/bg-line.png);
+}
+.m-flight .flight-title {
+	height: 35px;
+	background-color: #26B4D3;
+	font-size: 14px;
+	color: #FFF;
+	line-height: 35px;
+}
+.flight-title div {
+	height: 100%;
+}
+.company-logo {
+	float: left;
+	width: 65px;
+	text-align: right;
+}
+.flight-info {
+	float: left;
+	width: 125px;
+}
+.start-time {
+	float: left;
+	width: 140px;
+	text-align: right;
+}
+.spend-time {
+	float: left;
+	width: 150px;
+	text-align: center;
+}
+.end-time {
+	float: left;
+	width: 165px;
+}
+.recomment-web {
+	float: left;
+	width: 105px;
+	text-align: right;
+}
+.lowest-price {
+	float: left;
+	width: 150px;
+	text-align: right;
+}
+.flight-title .tri-up {
+	position: relative;
+	top: -12px;
+	border: 4px solid transparent;
+	border-bottom: 4px solid #FFF;
+}
+.flight-title .tri-down {
+	position: relative;
+	left: -8px;
+	top: 12px;
+	border: 4px solid transparent;
+	border-top: 4px solid #FFF;
+}
+.flight-detail {
+	font-size: 13px;
+	color: #666;
+	background-color: #F3FBFD;
+	padding: 20px 0;
+}
+.flight-detail-left, .flight-detail-right {
+	float: left;
+}
+.flight-detail-left .company-logo {
+	height: 30px;
+	background: url(../image/fly-icon.png);
+	background-repeat: no-repeat;
+	background-position: 30px;
+}
+.company-name {
+	color: #000;
+}
+.dashed-bottom {
+	border-bottom: 1px dashed #E0E3E4;
+}
+.flight-info span {
+	display: inline-block
+}
+.share {
+	color: #26B4D3;
+}
+.start-time span, .end-time span {
+	display: block;
+}
+.start-time .time, .end-time .time {
+	color: #000;
+	font-size: 18px;
+	font-weight: bold;
+}
+.start-time .location, .end-time .location {
+	margin-top: 15px;
+	color: #333;
+}
+.end-time .time {
+	display: inline-block;
+}
+.end-time .added {
+	display: inline-block;
+	color: #26B4D3;
+	margin-left: 10px;
+}
+.flight-detail .spend-time {
+	margin-bottom: 10px;
+	padding-top: 5px;
+}
+.spend-time .travel {
+	text-align: left;
+	padding: 15px 0 0 30px;
+}
+.bg-blue {
+	color: #FFF;
+	background-color: #26b4d3;
+}
+.bg-wline {
+	position: relative;
+	left: 300px;
+	top: 25px;
+	width: 214px;
+	height: 5px;
+	background: url(../image/bg-wline.png);
+}
+.flight-detail-left .split-line {
+	width: 550px;
+	margin: 0 0 10px 60px;
+	border-bottom: 1px dashed #E0E3E4;
+}
+.flight-detail-right .recomment-web {
+	padding-top: 20px;
+}
+.flight-detail-right .recomment-web span {
+	display: block;
+}
+.recomment-web .text {
+	margin-top: 15px;
+	color: #0E83BF;
+}
+.recomment-web .price {
+	color: #FF7200;
+}
+.flight-detail-right .lowest-price {
+	padding-top: 30px;
+}
+.lowest-price .money {
+	color: #0E83BF;
+}
+.lowest-price .number {
+	color: #0E83BF;
+	font-size: 25px;
+	font-weight: bold;
+}
+.lowest-price .text {
+	color: #000;
+}
+.lowest-price .tax {
+	line-height: 25px;
+}
+.lowest-price .book-btn {
+	float: right;
+	width: 75px;
+	height: 30px;
+	line-height: 30px;
+	color: #FFF;
+	text-align: center;
+	background-color: #26B4D3;
+}
+.book-btn .tri-up {
+	position: relative;
+	top: -8px;
+	left: 5px;
+	border: 4px solid transparent;
+	border-bottom: 4px solid #FFF;
+}
+.flight-detail-right .tri-down {
+	position: relative;
+	top: 30px;
+	left: 75px;
+	width: 0;
+	border: 37.5px solid transparent;
+	border-top: 15px solid #26B4D3;
+}

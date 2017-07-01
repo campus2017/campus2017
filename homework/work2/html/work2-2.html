@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>work2-2_slidingdoors</title>
+		<link rel="stylesheet" href="../styles/reset.css" />
+		<link rel="stylesheet" href="../styles/work2-2.css" />
+	</head>
+	<body>
+		<div class="slidingdoors">
+			<ul class="clearfloat">
+				<li><img src="../image/work2-2/door1.png" alt="picture1" /></li>
+				<li><img src="../image/work2-2/door2.png" alt="picture2" /></li>
+				<li><img src="../image/work2-2/door3.png" alt="picture3" /></li>
+				<li><img src="../image/work2-2/door4.png" alt="picture4" /></li>
+			</ul>
+		</div>
+	</body>
+	<script>
+		var lis = document.getElementsByTagName('li');
+		var init = function(){
+			for(var i=0; i<lis.length; i++){
+				lis.item(i).style.width = "160px";
+			}
+		}
+		for(var i=0; i<lis.length; i++){
+			var li = lis.item(i);
+			li.onmouseover = function(){
+				init();
+				this.style.width = "475px";
+			}
+		}
+	</script>
+</html>

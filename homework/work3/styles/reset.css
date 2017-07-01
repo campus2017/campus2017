@@ -1,0 +1,64 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+}
+ol, ul, li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    display: block;
+}
+img {
+    border: none;
+    display: block;
+}
+.clearfloat {
+    zoom: 1;
+}
+.clearfloat:after {
+    display: block;
+    clear: both;
+    content: "";
+    visibility: hidden;
+    height: 0;
+}
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+.ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.height60 {
+	height: 60px;
+}
+.height50 {
+	height: 50px;
+}
+.height40 {
+	height: 40px;
+}
+.height30 {
+	height: 30px;
+}
+.l-height60 {
+	line-height: 60px;
+}
+.l-height50 {
+	line-height: 50px;
+}
+.l-height40 {
+	line-height: 40px;
+}
+.l-height30 {
+	line-height: 30px;
+}
+.l-height25 {
+	line-height: 25px;
+}

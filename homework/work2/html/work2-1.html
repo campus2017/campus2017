@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>work2-1_modalBox</title>
+		<link rel="stylesheet" href="../styles/reset.css" />
+		<link rel="stylesheet" href="../styles/work2-1.css" />
+	</head>
+	<body>
+		<div class="main">
+			<img class="taobao-head" src="../image/work2-1/m_taobao_header.png" alt="header" />
+			<img class="taobao-logo" src="../image/work2-1/m_taobao_logo.png" alt="logo" />
+			<ul class="clearfloat">
+				<li><a>Android</a></li>
+				<li><a>iPhone</a></li>
+				<li><a>iPad</a></li>
+				<li><a>AndroidPad</a></li>
+				<li><a>WinPhone</a></li>
+				<li><a>软件市场</a></li>
+			</ul>
+			<img src="../image/work2-1/m_taobao_main.png" alt="main" />
+		</div>
+		<div class="modal-box" style="display: none;">
+			<div class="box">
+				<img class="layer" src="../image/work2-1/layer.png" alt="layer" />
+				<img class="close" src="../image/work2-1/close.png" alt="close" />
+			</div>
+		</div>
+	</body>
+	<script>
+		var modelBox = document.getElementsByClassName("modal-box").item(0);
+		var li = document.getElementsByTagName('li').item(0);
+		var closeBtn = document.getElementsByClassName('close').item(0);
+		closeBtn.onmouseover = function(){
+			closeBtn.setAttribute('src','../image/work2-1/close_hover.png');
+		}
+		closeBtn.onmouseout = function(){
+			closeBtn.setAttribute('src','../image/work2-1/close.png');
+		}
+		var trigger = function(){
+			modelBox.style.display = (modelBox.style.display == "none")? "block" : "none";
+		}
+		closeBtn.onclick = function(){
+			trigger();
+		}
+		li.onclick = function(){
+			trigger();
+		}
+	</script>
+</html>

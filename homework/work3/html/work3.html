@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>work3_json</title>
+		<link rel="stylesheet" href="../styles/reset.css" />
+		<link rel="stylesheet" href="../styles/work3.css" />
+	</head>
+	<body>
+		<div class="header clearfloat">
+			<div class="item fr active">兑换记录</div>
+			<div class="item fr">E币明细</div>
+			<div class="item fr">E币兑换</div>
+		</div>
+		<div class="options clearfloat">
+			<div class="btn-blue fl">全部</div>
+			<div class="btn fl">成功</div>
+			<div class="btn fl">失败</div>
+			<div class="date fl">
+				选择日期：<input type="text" />
+				至<input type="text" />
+			</div>
+			<div class="btn-blue fl">搜索</div>
+			<div class="btn-red fl">重置</div>
+		</div>
+		<div class="table">
+			<table cellpadding="0" cellspacing="0">
+				<thead>
+					<tr>
+						<td class="td1">时间</td>
+						<td class="td2">商品名称</td>
+						<td class="td3">数量</td>
+						<td class="td4">E币</td>
+						<td class="td5">状态</td>
+						<td class="td6">信息</td>
+						<td class="td7">兑换信息</td>
+						<td class="td8">确认</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="td1">2014-10-28 15:37:21</td>
+						<td class="td2">手机50元话费充值</td>
+						<td class="td3">1</td>
+						<td class="td4">190</td>
+						<td class="td5">兑换失败</td>
+						<td class="td6">充值失败，E币已退回。充值失败，E币已退回。</td>
+						<td class="td7">
+							<div class="ex-info">兑换信息</div>
+						</td>
+						<td class="td8"></td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="footer">
+				<div>
+					<span class="text">首页</span>
+					<span class="index">1</span>
+					<span class="text">末页</span>
+				</div>
+				<div>
+					<span>共1页，跳转到</span>
+					<input type="text" class="search" />
+					<span>页</span>
+				</div>
+				<div>
+					<span class="confirm">确定</span>
+				</div>
+			</div>
+		</div>
+		<script src="../scripts/work3.js"></script>
+	</body>
+</html>

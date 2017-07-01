@@ -1,0 +1,16 @@
+@charset "utf-8";
+ul {
+	margin: 0 auto;
+	width: 963px;
+}
+ul li {
+	float: left;
+	width: 160px;
+	border: 1px solid #ddd;
+	overflow: hidden;
+	transition: width .1s linear;
+	-webkit-transition: width .1s linear;
+}
+ul li:first-child {
+	width: 475px;
+}
