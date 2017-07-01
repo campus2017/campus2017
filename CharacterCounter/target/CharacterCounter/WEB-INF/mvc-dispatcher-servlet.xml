@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:task="http://www.springframework.org/schema/task"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-4.2.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd
+        http://www.springframework.org/schema/task
+        http://www.springframework.org/schema/task/spring-task-4.2.xsd">
+    <mvc:annotation-driven/>
+    <!--指明 controller 所在包，并扫描其中的注解-->
+    <!--<context:component-scan base-package="com.CharacterCounter.controller"/>-->
+    <context:component-scan base-package="com.CharacterCounter.controller" >
+        <!--<context:include-filter type="annotation" expression="org.springframework.web.bind.annotation.ControllerAdvice"/>-->
+    </context:component-scan>
+    <!-- 静态资源(js、image等)的访问 -->
+
+    <!-- 静态资源配置 -->
+
+    <!--<mvc:default-servlet-handler/>-->
+
+    <!-- 开启注解 -->
+
+
+    <!--ViewResolver 视图解析器-->
+    <!--用于支持Servlet、JSP视图解析-->
+    <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" lazy-init="false" />
+    <bean id="jspViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+        <property name="prefix" value="/WEB-INF/pages/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="maxUploadSize" value="104857600" />
+        <property name="maxInMemorySize" value="4096" />
+        <property name="defaultEncoding" value="UTF-8"></property>
+    </bean>
+    <bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping"></bean>
+</beans>
