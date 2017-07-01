@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>弹出层</title>
+    <style>
+*{
+  margin: 0;
+  padding: 0;
+}
+.dialog {
+  position: fixed;
+  display: none;
+  width: 600px;
+  height: 600px;
+  border: 2px solid #6ef;
+  z-index: 2;
+  background: #fff;
+}
+.dialog .close {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="link">aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div class="dialog">
+      <div class="close">x</div>
+    </div>
+  </body>
+  <script>
+let Dialog = function (className) {
+  this.dom = document.getElementsByClassName(className)[0]
+  this.dom.getElementsByClassName('close')[0].addEventListener('click', this.hide.bind(this))
+}
+Dialog.prototype.showMask = function () {
+  let mask = document.getElementById('mask')
+  if (mask) {
+    mask.style.display = 'block'
+  } else {
+    mask = document.createElement('div')
+    let height = document.body.clientHeight
+    let width = document.body.clientWidth
+    mask.setAttribute('id', 'mask')
+    mask.setAttribute('style', `position:absolute; top:0; width: ${width}px; height: ${height}px; background:rgba(0,0,0,0.5); `)
+    document.body.appendChild(mask)
+  }
+}
+Dialog.prototype.hideMask = function () {
+  let mask = document.getElementById('mask')
+  mask.style.display = 'none'
+}
+Dialog.prototype.resize = function () {
+  let top = ( window.innerHeight - this.dom.clientHeight ) / 2
+  let left = ( window.innerWidth - this.dom.clientWidth ) / 2
+  this.dom.setAttribute('style', `display: block; top: ${top}px; left: ${left}px`)
+}
+Dialog.prototype.hide = function () {
+  this.dom.style.display = 'none'
+  this.hideMask()
+}
+Dialog.prototype.show = function () {
+  this.dom.setAttribute('style', 'display: block')
+  this.showMask()
+  this.resize()
+}
+let dialog = new Dialog('dialog')
+document.getElementsByClassName('link')[0].addEventListener('click', dialog.show.bind(dialog))
+
+
+  </script>
+</html>
