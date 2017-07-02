@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <link rel="stylesheet" href="index.css"/>
+        </head>
+        <body>
+                <div class="bg">
+                    <img src="image/m_taobao.png" id="btn-show">
+                </div>
+                <div class="detail-wrap" id="detail">
+                    <div class="detail-content">
+                        <img src="image/layer.png">
+                        <div class="btn-close" id="btn-close"></div>
+                    </div>
+                </div>
+                <script>
+                        var eventUtil = {
+                            addHandler:function (ele, type, handler) {
+                                if(ele.addEventListener){
+                                    ele.addEventListener(type, handler, false);
+                                }else if(ele.attachEvent){
+                                    ele.attachEvent('on'+type, handler);
+                                }else {
+                                    ele['on'+type] = handler;
+                                }
+                            }
+                        };
+
+                        var btnShow = document.getElementById('btn-show');
+                        var btnClose = document.getElementById('btn-close');
+                        var detail = document.getElementById('detail');
+                        eventUtil.addHandler(btnShow, 'click', function () {
+                            detail.style.display = 'block';
+                        });
+                        eventUtil.addHandler(btnClose, 'click', function () {
+                            detail.style.display = 'none';
+                        });
+                </script>
+</body>
+</html>

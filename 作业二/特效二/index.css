@@ -1,0 +1,41 @@
+body {
+	margin:0 0;
+	padding: 0 0;
+}
+
+.container {
+	position: relative;
+	width: 710px;
+	height: 350px;
+	margin: 0 auto;
+	overflow: hidden;
+	border-left: 1px solid #a9a9a9;
+	border-right: 1px solid #a9a9a9;
+	border-bottom: 1px solid #a9a9a9;
+}
+
+.container .item {
+	position: absolute;
+	width: 350px;
+	border-left: 1px solid #a9a9a9;
+	border-right: 1px solid #a9a9a9;
+	border-bottom: 1px solid #a9a9a9;
+}
+
+.container .item1 {
+	left: 0;
+}
+
+.container .item2 {
+	left: 350px;
+}
+
+.container .item3 {
+	left: 470px;
+}
+
+.container .item4 {
+	left: 590px;
+}
+
+

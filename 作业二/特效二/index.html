@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+		<head>
+		    <meta charset="UTF-8">
+		    <link rel="stylesheet" type="text/css" href="index.css">
+
+		</head>
+		<body>
+				<div class="container">
+						<img class="item item1" src="image/door1.png">
+						<img class="item item2" src="image/door2.png">
+						<img class="item item3" src="image/door3.png">
+						<img class="item item4" src="image/door4.png">
+				</div>
+				<script>
+                        //事件
+						var eventUtil = {
+                            addHandler:function (ele, type, handler) {
+                                if(ele.addEventListener){
+                                    ele.addEventListener(type, handler, false);
+                                }else if(ele.attachEvent){
+                                    ele.attachEvent('on'+type, handler);
+                                }else {
+                                    ele['on'+type] = handler;
+                                }
+                            }
+                        };
+                        //事件回调函数
+                        function bindListener(ele, index, array) {
+                        	eventUtil.addHandler(ele, 'mouseover', function(){
+                        		//根据position-left控制图片的显示
+                        		if (index==0) {
+                        			array[1].style.left = "350px";
+                        			array[2].style.left = "470px";
+                        			array[3].style.left = "590px";
+                        		}
+                        		if (index==1) {
+                        			array[1].style.left = "120px";
+                        			array[2].style.left = "470px";
+                        			array[3].style.left = "590px";
+                        		}
+                        		if (index==2) {
+                        			array[1].style.left = "120px";
+                        			array[2].style.left = "240px";
+                        			array[3].style.left = "590px";
+                        		}
+                        		if (index==3) {
+                        			array[1].style.left = "120px";
+                        			array[2].style.left = "240px";
+                        			array[3].style.left = "360px";
+                        		}
+                        	});
+                        };
+						var items = document.getElementsByClassName('item');
+						items = [].slice.call(items);
+						items.forEach(bindListener);
+				</script>
+
+		</body>
+</html>
