@@ -1,0 +1,108 @@
+/***************防止浏览器刷新时ng-if的闪烁问题***********/
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak, .ng-hide:not(.ng-hide-animate) {
+    display: none !important;
+}
+
+ng\:form {
+    display: block;
+}
+
+/**************************end*************************/
+/*水平剧中*/
+.contain {
+    width: 500px;
+    margin: auto;
+}
+
+.panel-body {
+    position: relative;
+}
+
+#warnings {
+    position: absolute;
+    width: 200px;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.upload {
+    overflow: hidden;
+    position: relative;
+}
+
+.upload input {
+    position: absolute;
+    height: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer;
+}
+
+table th, table td {
+    text-align: center;
+}
+
+.table_1 tbody tr {
+    height: 37px;
+}
+
+.table_1 tbody tr:nth-child(even) {
+    background: rgb(245, 245, 245);
+}
+
+.radio_method {
+    -webkit-animation: radio_method 0.5s ease-in-out;
+    -o-animation: radio_method 0.5s ease-in-out;
+    animation: radio_method 0.5s ease-in-out;
+}
+
+@keyframes radio_method {
+    from {
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+    to {
+        opacity: 1;
+        filter: alpha(opacity=100);
+    }
+}
+
+@-webkit-keyframes radio_method {
+    from {
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+    to {
+        opacity: 1;
+        filter: alpha(opacity=100);
+    }
+}
+
+@-moz-keyframes radio_method {
+    from {
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+    to {
+        opacity: 1;
+        filter: alpha(opacity=100);
+    }
+}
+
+@-o-keyframes warnings {
+    from {
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+    to {
+        opacity: 1;
+        filter: alpha(opacity=100);
+    }
+}
+
+
+

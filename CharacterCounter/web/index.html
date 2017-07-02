@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CharacterCounter</title>
+    <link rel="stylesheet" href="static/css/main.css">
+    <link href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div ng-app="myApp">
+    <div ng-controller="myCtrl">
+        <div class="panel panel-info contain">
+            <div class="panel-heading">
+                <h3 class="panel-title">CharacterCounter</h3>
+            </div>
+            <div class="panel-body">
+                <div id="warnings" class="alert alert-warning">
+                    <strong><span ng-bind="form.warnings.title"></span></strong>
+                </div>
+                <form role="form">
+                    <div class="form-group">
+                        <label>请输入一段文字</label>
+                    </div>
+                    <div class="radio">
+                        <label for="radio_0" class="radio-inline">
+                            <input type="radio" ng-model="form.radio_method" value="0" id="radio_0"
+                                   name="radio_method">文件上传</label>
+                        <label for="radio_1" class="radio-inline">
+                            <input type="radio" ng-model="form.radio_method" value="1" id="radio_1"
+                                   name="radio_method">文本输入</label>
+                    </div>
+                    <div class="radio_method" ng-if="form.radio_method==0">
+                        <div class="form-group">
+                            <button class="btn btn-info upload">
+                                <input type="file"
+                                       onchange="angular.element(this).scope().fileNameChanged()">上传文件
+                            </button>
+                            <span ng-bind="form.uploadName"></span>
+                            <button class="btn btn-info" style="float:right" ng-click="statistics()">统计</button>
+                        </div>
+                    </div>
+                    <div class="radio_method" ng-if="form.radio_method==1" ng-cloak>
+                        <div class="form-group">
+                            <textarea class="form-control" rows="5" ng-model="form.content"
+                                      style="resize:none"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-info" ng-click="statistics()">统计</button>
+                            <button class="btn btn-warning" style="float:right" ng-click="clearContent()">清空内容</button>
+                        </div>
+                    </div>
+                </form>
+                <div class="table_0">
+                    <h4>各统计内容的个数如下：</h4>
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                        <tr>
+                            <th>统计项</th>
+                            <th>个数</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>英文字母</td>
+                            <td><span ng-bind="words.statistics.us"></span></td>
+                        </tr>
+                        <tr>
+                            <td>数字</td>
+                            <td><span ng-bind="words.statistics.number"></span></td>
+                        </tr>
+                        <tr>
+                            <td>中文汉字</td>
+                            <td><span ng-bind="words.statistics.cn"></span></td>
+                        </tr>
+                        <tr>
+                            <td>中英文标点符号</td>
+                            <td><span ng-bind="words.statistics.sign"></span></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table_1">
+                    <h4>文字中出现频率最高的三个字是：</h4>
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                        <tr>
+                            <th>名称</th>
+                            <th>个数</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="word in words.sort|limitTo:3">
+                            <td><span ng-bind="word.key"></span></td>
+                            <td><span ng-bind="word.value"></span></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+<script src="/static/js/mainCtrl.js"></script>
+<script src="/static/js/mainService.js"></script>
+</body>
+</html>
