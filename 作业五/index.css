@@ -1,0 +1,215 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.main{
+    height: 320px;
+    width: 910px;
+    margin: 20px auto;
+    font-family: SimSun;
+    background-color: white;
+}
+.main .label-tab{
+    height: 93px;
+}
+.main .label-tab .calendar-tab{
+    height: 74px;
+    list-style: none;
+}
+.main .label-tab .calendar-tab li{
+    float: left;
+    height: 73px;
+    cursor: pointer;
+    border-top: 1px solid white;
+    border-right: 1px solid #7dbcdc;
+    border-bottom: 1px solid #0e83bf;
+}
+.main .label-tab .calendar-tab .day{
+    width: 102px;
+    font-size: 12px;
+    text-align: center;
+    color: #333333;
+    background-color: #f3fbfd;
+    position: relative;
+}
+.main .label-tab .calendar-tab .day p{
+    margin-top: 10px;
+    height: 12px;
+}
+.main .label-tab .calendar-tab .day p:last-child{
+    color: #0e83bf;
+    font-weight: bold;
+}
+.main .label-tab .calendar-tab .day:hover{
+    background-color: white;
+    color: #0e83bf;
+    font-weight: bold;
+    border-top: 1px solid #7dbcdc;
+    border-bottom: 1px solid white;
+}
+.main .label-tab .calendar-tab .day .low-price{
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    background: url("imgs/low_price.png") no-repeat;
+}
+.main .label-tab .calendar-tab .calendar{
+    width: 96px;
+    height: 74px;
+    border-top: 1px solid white;
+    border-bottom: none;
+    border-right: none;
+    background: url("imgs/calendar.png") no-repeat;
+}
+.main .label-tab .calendar-tab .back{
+    width: 45px;
+    background: url("imgs/arrow_left.png") center no-repeat;
+}
+.main .label-tab .calendar-tab .forward{
+    width: 46px;
+    background: url("imgs/arrow_right.png") center no-repeat;
+}
+.main .label-tab .decoration-line{
+    height: 4px;
+    margin-top: 14px;
+    background: -o-repeating-linear-gradient(-45deg, #ffb400, #ffb400 10px, #ffc740 10px, #ffc740 20px);
+    background: -ms-repeating-linear-gradient(-45deg, #ffb400, #ffb400 10px, #ffc740 10px, #ffc740 20px);
+    background: -moz-repeating-linear-gradient(-45deg, #ffb400, #ffb400 10px, #ffc740 10px, #ffc740 20px);
+    background: -webkit-repeating-linear-gradient(-45deg, #ffb400, #ffb400 10px, #ffc740 10px, #ffc740 20px);
+}
+.main .label-content{
+    width: 100%;
+    font-size: 12px;
+    border-collapse: collapse;
+}
+.main .label-content th{
+    color: white;
+    height: 32px;
+    font-size: 14px;
+    background-color: #26b4d3;
+}
+.main .label-content th img{
+    margin-left: 5px;
+}
+.main .label-content .info{
+    width: 122px;
+    padding-left: 68px;
+    text-align: left;
+    position: relative;
+}
+.main .label-content .info .separate-line{
+    width: 575px;
+    position: absolute;
+    top: 0px;
+    border-top: 1px dashed #ccc;
+    z-index: 10;
+}
+.main .label-content .info img{
+    position: absolute;
+    left: 34px;
+}
+.main .label-content .info .name{
+    line-height: 20px;
+}
+.main .label-content .info .type{
+    color: #666;
+    line-height: 18px;
+}
+.main .label-content .info .type span{
+    color: #26b4d3;
+}
+.main .label-content .start-time{
+    width: 130px;
+    text-align: right;
+}
+.main .label-content .up{
+    height: 32px;
+    margin-top: 18px;
+    font-size: 18px;
+    font-family: '微软雅黑', 'Arial';
+}
+.main .label-content .end-time .up span{
+    color: #26b4d3;
+    font-size: 12px;
+    font-family: SimSun;
+    position: relative;
+    top:-3px;
+    left: 7px;
+}
+.main .label-content .down{
+    height: 42px;
+}
+.main .label-content .total-time{
+    width: 165px;
+    text-align: center;
+    position: relative;
+}
+.main .label-content .total-time .time-line{
+    position: absolute;
+    top: 40px;
+    left: -24px;
+}
+.main .label-content .total-time .up{
+    font-size: 12px;
+    font-family: SimSun;
+}
+.main .label-content .total-time .down{
+    padding-left: 42px;
+    text-align: left;
+}
+.main .label-content .total-time .down p{
+    margin-bottom: 3px;
+}
+.main .label-content .total-time .transfer{
+    background-color: #26b4d3;
+    padding: 1px;
+    color: white;
+    margin-right: 3px;
+}
+.main .label-content .end-time{
+    width: 130px;
+    text-align: left;
+}
+.main .label-content .recommend p{
+    color: #0e83bf;
+    width: 100px;
+    text-align: right;
+}
+.main .label-content .recommend .price{
+    color: #ff7200;
+    font-size: 10px;
+    margin: 1px 0 15px;
+}
+.main .label-content .lowest-price{
+    width: 145px;
+}
+.main .label-content .lowest-price p{
+    width: 120px;
+    text-align: right;
+    margin-top: 6px;
+}
+.main .label-content .lowest-price .money-icon{
+    color: #0e83bf;
+    margin-right: 5px;
+    font-family: '微软雅黑', 'Arial';
+}
+.main .label-content .lowest-price .price{
+    color: #0e83bf;
+    font-size: 20px;
+    margin-right: 5px;
+    font-family: '微软雅黑', 'Arial';
+}
+.main .label-content .lowest-price .tax-price{
+    color: #666;
+}
+.main .label-content .lowest-price .order-btn{
+    height: 40px;
+    cursor: pointer;
+    background: url("imgs/order_btn.png") 45px no-repeat;
+}
+.main .label-content td{
+    height: 92px;
+    background-color: #f3fbfd;
+}

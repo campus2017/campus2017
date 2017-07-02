@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>homework3</title>
+    <style>
+    .grid-container{
+      margin: 0 auto;
+      width: 80%;
+    }
+    .grid-head{
+
+    }
+
+    .gird-cow-1{
+      width: 8%;
+    }
+    .gird-cow-2{
+      width: 18%;
+    }
+    .grid-row{
+
+    }
+    table{
+      width: 100%;
+      /*border-collapse :collapse ;*/
+
+    }
+    td{
+      text-align: center;
+      border-top: 1px solid #bbbbbb;
+      height: 80px;
+      vertical-align:middle
+    }
+    td:first-child{
+      border-left: 1px solid #bbbbbb;
+    }
+    td:last-child{
+      border-right: 1px solid #bbbbbb;
+    }
+    th{
+      background-color: #bbbbbb;
+      padding: 8px 0px 8px 0px;
+
+    }
+    .button{
+      padding: 4px 12px 4px 12px;
+      border-radius: 8px;
+      color: blue;
+    }
+    .blue{
+      background-color: blue;
+      color: white;
+    }
+    .red{
+      background-color: red;
+      color: white;
+    }
+    tr:last-child td{
+      border-bottom: 1px solid #bbbbbb;
+    }
+    .date-picker-container{
+      display: inline-block;
+      margin-left: 80px;
+    }
+    .header{
+      padding-top: 10px;
+      padding-bottom: 20px;
+      margin: 0 auto;
+      width: 80%;
+    }
+    .small－input{
+      width: 30px;
+    }
+    .footer{
+      background-color: #bbbbbb;
+      padding: 20px 0px 20px 0px;
+    }
+    .footer-warp{
+      position: relative;
+      left: 750px;
+    }
+    .footer .button{
+      border: 1px solid #000000;
+    }
+    .button.sure{
+      color: #000000;
+      border: none;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <span class="button blue">全部</span>
+      <span class="button ">成功</span>
+      <span class="button ">失败</span>
+      <div class="date-picker-container">
+        选择日期：
+        <input class="date-picker" type="text"/>
+        至
+        <input class="date-picker" type="text"/>
+        <span class="button blue">搜索</span>
+        <span class="button red">重置</span>
+      </div>
+    </div>
+    <div class="grid-container">
+      <table border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <th class="grid-cow gird-cow-1">时间</th>
+          <th class="grid-cow gird-cow-2">商品名称</th>
+          <th class="grid-cow gird-cow-1">数量</th>
+          <th class="grid-cow gird-cow-1">E币</th>
+          <th class="grid-cow gird-cow-1">状态</th>
+          <th class="grid-cow gird-cow-2">信息</th>
+          <th class="grid-cow gird-cow-1">兑换信息</th>
+          <th class="grid-cow gird-cow-1">确认</th>
+        </tr>
+
+        <tr>
+          <td class="grid-cow gird-cow-1">2013-10-21</td>
+          <td class="grid-cow gird-cow-2">手机10元话费充值</td>
+          <td class="grid-cow gird-cow-1">1</td>
+          <td class="grid-cow gird-cow-1">190</td>
+          <td class="grid-cow gird-cow-1">兑换失败</td>
+          <td class="grid-cow gird-cow-2">充值失败,E币已退回</td>
+          <td class="grid-cow gird-cow-1 "><span class="button blue">兑换信息</span></td>
+          <td class="grid-cow gird-cow-1"></td>
+        </tr>
+
+        <tr>
+          <td class="grid-cow gird-cow-1">2013-10-21</td>
+          <td class="grid-cow gird-cow-2">米奇真空大学时光</td>
+          <td class="grid-cow gird-cow-1">1</td>
+          <td class="grid-cow gird-cow-1">190</td>
+          <td class="grid-cow gird-cow-1">兑换失败</td>
+          <td class="grid-cow gird-cow-2">充值失败,E币已退回,测试用例,大苏打大苏打,测试用例,</td>
+          <td class="grid-cow gird-cow-1 "><span class="button blue">兑换信息</span></td>
+          <td class="grid-cow gird-cow-1"></td>
+        </tr>
+
+        <tr>
+          <td class="grid-cow gird-cow-1">2013-10-21</td>
+          <td class="grid-cow gird-cow-2">波波萌系</td>
+          <td class="grid-cow gird-cow-1">1</td>
+          <td class="grid-cow gird-cow-1">190</td>
+          <td class="grid-cow gird-cow-1">兑换失败</td>
+          <td class="grid-cow gird-cow-2">充值失败</td>
+          <td class="grid-cow gird-cow-1"><span class="button blue">兑换信息</span></td>
+          <td class="grid-cow gird-cow-1"></td>
+        </tr>
+
+        <tr>
+          <td class="grid-cow gird-cow-1">2013-10-21</td>
+          <td class="grid-cow gird-cow-2">手机10元话费充值</td>
+          <td class="grid-cow gird-cow-1">1</td>
+          <td class="grid-cow gird-cow-1">190</td>
+          <td class="grid-cow gird-cow-1">兑换失败</td>
+          <td class="grid-cow gird-cow-2">充值失败,E币已退回</td>
+          <td class="grid-cow gird-cow-1 "><span class="button blue">兑换信息</span></td>
+          <td class="grid-cow gird-cow-1"></td>
+        </tr>
+
+        <tr>
+          <td class="grid-cow gird-cow-1">2013-10-21</td>
+          <td class="grid-cow gird-cow-2">米奇真空大学时光</td>
+          <td class="grid-cow gird-cow-1">1</td>
+          <td class="grid-cow gird-cow-1">190</td>
+          <td class="grid-cow gird-cow-1">兑换失败</td>
+          <td class="grid-cow gird-cow-2">充值失败,E币已退回,测试用例,大苏打大苏打,测试用例,</td>
+          <td class="grid-cow gird-cow-1 "><span class="button blue">兑换信息</span></td>
+          <td class="grid-cow gird-cow-1"></td>
+        </tr>
+
+        <tr>
+          <td class="grid-cow gird-cow-1">2013-10-21</td>
+          <td class="grid-cow gird-cow-2">手机10元话费充值</td>
+          <td class="grid-cow gird-cow-1">1</td>
+          <td class="grid-cow gird-cow-1">190</td>
+          <td class="grid-cow gird-cow-1">兑换失败</td>
+          <td class="grid-cow gird-cow-2">充值失败,E币已退回</td>
+          <td class="grid-cow gird-cow-1 "><span class="button blue">兑换信息</span></td>
+          <td class="grid-cow gird-cow-1"></td>
+        </tr>
+
+        <tr>
+          <td class="grid-cow gird-cow-1">2013-10-21</td>
+          <td class="grid-cow gird-cow-2">米奇真空大学时光</td>
+          <td class="grid-cow gird-cow-1">1</td>
+          <td class="grid-cow gird-cow-1">190</td>
+          <td class="grid-cow gird-cow-1">兑换失败</td>
+          <td class="grid-cow gird-cow-2">充值失败,E币已退回,测试用例,大苏打大苏打,测试用例,</td>
+          <td class="grid-cow gird-cow-1 "><span class="button blue">兑换信息</span></td>
+          <td class="grid-cow gird-cow-1"></td>
+        </tr>
+
+        <tr>
+          <td class="grid-cow gird-cow-1">2013-10-21</td>
+          <td class="grid-cow gird-cow-2">波波萌系</td>
+          <td class="grid-cow gird-cow-1">1</td>
+          <td class="grid-cow gird-cow-1">190</td>
+          <td class="grid-cow gird-cow-1">兑换失败</td>
+          <td class="grid-cow gird-cow-2">充值失败</td>
+          <td class="grid-cow gird-cow-1"><span class="button blue">兑换信息</span></td>
+          <td class="grid-cow gird-cow-1"></td>
+        </tr>
+
+        <tr>
+          <td class="grid-cow gird-cow-1">2013-10-21</td>
+          <td class="grid-cow gird-cow-2">波波萌系</td>
+          <td class="grid-cow gird-cow-1">1</td>
+          <td class="grid-cow gird-cow-1">190</td>
+          <td class="grid-cow gird-cow-1">兑换失败</td>
+          <td class="grid-cow gird-cow-2">充值失败</td>
+          <td class="grid-cow gird-cow-1"><span class="button blue">兑换信息</span></td>
+          <td class="grid-cow gird-cow-1"></td>
+        </tr>
+
+      </table>
+      <div class="footer">
+        <div class="footer-warp">
+        <span class="button">首页</span>
+        1
+        <span class="button">末页</span>
+        共1页，跳转到
+        <input class="date-picker small－input" type="text"/>
+        页
+        <span class="button sure">确定</span>
+      </div>
+      </div>
+    </div>
+
+    <script src="./index.js"></script>
+    <script>
+    </script>
+  </body>
+</html>

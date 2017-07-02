@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="./animation2.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="container">
+        <div class="door door-1">
+          <img src="./imgs/door1.png">
+        </div>
+        <div class="door door-2">
+          <img src="./imgs/door2.png">
+        </div>
+        <div class="door door-3">
+          <img src="./imgs/door3.png">
+        </div>
+        <div class="door door-4">
+          <img src="./imgs/door4.png">
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+    window.onload=function () {
+      var doors=document.getElementsByClassName("door");
+      for (var i = 0; i < doors.length; i++) {
+        (function (index) {
+          doors[index].addEventListener("click",function () {
+            if (index==0) {
+              for (var i = 0; i < doors.length; i++) {
+                doors[i].className=doors[i].className.replace("active","");
+              }
+            }else{
+              for (var i = 1; i <=index; i++) {
+                  if (doors[i].className.search("active")==-1) {
+                    doors[i].className=doors[i].className+" active";
+                  }else {
+                    for (var j = index+1; j < doors.length; j++) {
+                      doors[j].className=doors[j].className.replace("active","");
+                    }
+                  }
+              }
+            }
+          })
+        })(i)
+      }
+    }
+    </script>
+  </body>
+</html>

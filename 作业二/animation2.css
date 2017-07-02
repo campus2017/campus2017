@@ -1,0 +1,39 @@
+*{
+  padding: 0px;
+  margin: 0px;
+}
+.container{
+  margin: 0 auto;
+  width: 77%;
+  position: relative;
+  height: 481px;
+  overflow: hidden;
+}
+.door{
+  position: absolute;
+  -moz-transition: all   1s;
+  -webkit-transition: all  1s;
+  -o-transition: all  1s;
+  transition: all  1s;
+  transform:translateX(0px);
+}
+.door-1{
+  left: 0px;
+}
+.door-2{
+  left:440px;
+}
+.door-3{
+  left: 600px;
+}
+.door-4{
+  left: 760px;
+}
+
+.active{
+  -moz-transition: all   1s;
+  -webkit-transition: all  1s;
+  -o-transition: all  1s;
+  transition: all  1s;
+  transform:translateX(-270px);
+}
