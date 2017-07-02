@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+		<head>
+				<meta charset="UTF-8">
+                <link rel="stylesheet" href="index.css">
+		</head>
+		<body>
+				<!-- 导航模块 -->
+				<div class="m-navigator">
+						<ul>
+								<li class="tab current">兑换记录</li>
+								<li class="tab">E币明细</li>
+								<li class="tab">E币兑换</li>
+
+						</ul>
+				</div>
+				<!-- /导航模块 -->
+				<!-- 输入模块 -->
+				<div class="m-inputline">
+							    <span class="choose">全部</span>
+							    <span class="choose">成功</span>
+							    <span class="choose">失败</span>
+							    <label>选择日期：</label><input type="text" name="start-time" id="start-time"/><label> 至 </label><input type="text" name="end-time" id="end-time"/>
+							    <span id="search"> 搜索 </span>
+							    <span id="reset"> 重置 </span>
+				</div>
+				<!-- /输入模块 -->
+				
+				<!-- 内容模块 -->
+				<div class="m-content">
+						<div class="m-content-header">
+							<ul>
+								<li>时间</li>
+								<li>商品名称</li>
+								<li>数量</li>
+								<li>E币</li>
+								<li>状态</li>
+								<li>信息</li>
+								<li>兑换信息</li>
+								<li>确认</li>
+							</ul>
+						</div>
+						<!-- 待显示 -->
+						<div class="m-content-detail" id="root">
+						</div>
+				</div>
+				<!-- /内容模块 -->
+				
+				<!-- 页脚模块 -->
+				<div class="m-footer">
+						<span> 确定 </span>
+						<span> 页 </span>
+						<input type="text" />
+						<span> 共1页，跳转到</span>
+						<span> 末页 </span>
+						<span> 1 </span>
+						<span> 首页 </span>	
+				</div>
+				<!-- /页脚模块 -->
+				
+ 				<script>
+						//data用于存储查询到的数据
+						var data = [];
+						//创建浏览器兼容的XMLHttpRequest对象
+						function createXHR() {
+							if (typeof XMLHttpRequest != 'undefined') {
+								return new XMLHttpRequest();
+							}
+							else if (typeof ActiveXObject != 'undefined') {
+								if (typeof arguments.callee.activeXString != 'string'){ 
+
+									var versions = ['MSXML2.XMLHttp.6.0', 'MSXML2.XMLHttp.3.0','MSXML2.XMLHttp'],
+									i, len;
+									for (i=0, len=versions.length; i<len; i++) {
+										try {
+											new ActiveXObject(versions[i]);
+											arguments.callee.activeXString = versions[i];
+											break;
+										} catch (ex) {}
+									}
+
+
+								}
+								return new ActiveXObject(arguments.callee.activeXString);
+							} else {
+								throw new Error("No XML Object");
+							}
+						};
+
+						//浏览器兼容的事件绑定方法
+						var eventUtil = {
+                            addHandler:function (ele, type, handler) {
+                                if(ele.addEventListener){
+                                    ele.addEventListener(type, handler, false);
+                                }else if(ele.attachEvent){
+                                    ele.attachEvent('on'+type, handler);
+                                }else {
+                                    ele['on'+type] = handler;
+                                }
+                            }
+                        };
+
+                        function createBloc(data) {
+                        	var length = data.length;
+                        	var root = document.getElementById('root');
+                        	var ids = ['date','time','name','number','eCoin','status','info'];
+                        	for (var i=0; i<length; i++) {
+
+                        		var detailBox = document.createElement('div');
+                        		detailBox.className = 'detail-box';
+                        		var ulBox = document.createElement('ul');
+                        		var li = document.createElement('li');
+                        		var txtp = document.createElement('p');
+                        		var txt = document.createTextNode(data[i][ids[0]]);
+                        		txtp.appendChild(txt);
+                        		li.appendChild(txtp);
+                        		var txtp = document.createElement('p');
+                        		var txt = document.createTextNode(data[i][ids[1]]);
+                        		txtp.appendChild(txt);
+                        		li.appendChild(txtp);
+                        		ulBox.appendChild(li);
+                        		for (var j=2; j<7; j++) {
+                        				var name = ids[j];
+                        				var li = document.createElement('li');
+	                        			var txt = document.createTextNode(data[i][name]);
+	                        			li.appendChild(txt);
+	                        			ulBox.appendChild(li);
+                        			}
+                        		var li = document.createElement('li');
+                        		var txt = document.createTextNode('兑换信息');
+                        		li.appendChild(txt);
+	                        	ulBox.appendChild(li);
+	                        	detailBox.appendChild(ulBox);
+	                        	root.appendChild(detailBox);
+                        	}
+                        };
+
+                        //点击查询后的回调处理函数
+						function searchData() {
+							var xhr = new createXHR();
+							xhr.onreadystatechange = function() {
+							if (xhr.readyState == 4) {
+								if (xhr.status == 200 && xhr.status <300) {
+									alert('success');
+									data = JSON.parse(xhr.responseText);
+									createBloc(data);
+									footer.style.display = 'block';
+								}
+							} else {
+								
+							}};
+							
+							xhr.open('get', 'http://localhost:8888/search', true);
+							xhr.send(null);    
+							
+						};
+
+						//tab处理函数，mouseover时显示当前的，利用classname:current控制
+						function showCurrentTab(ele, index, array){
+							eventUtil.addHandler(ele, 'mouseover', function() {
+								array.forEach(function(ele){
+									ele.className='tab';
+								});
+								ele.className = 'tab current';
+							});
+						};
+						var footer = document.getElementsByClassName('m-footer')[0];
+						var search = document.getElementById('search');
+						eventUtil.addHandler(search, 'click', searchData);
+
+						var tabs = document.getElementsByClassName('tab');
+						tabs = [].slice.call(tabs);
+						tabs.forEach(showCurrentTab);
+						
+
+				</script>
+		</body>
+</html>
