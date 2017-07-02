@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>table</title>
+    <style>
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+.clearfix::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.nav {
+  width: 100%;
+  margin-top: 10px;
+  border-bottom: 1px solid rgba(0,0,0,0.4)
+}
+.nav ul {
+  float: right;
+  position: relative;
+  bottom: -1px
+}
+.nav .active {
+  background: #fff;
+  border-bottom: 1px solid #fff;
+}
+.nav li{
+  display: inline-block;
+  padding: 3px 5px;
+  margin-right: 5px;
+  border: 1px solid rgba(0,0,0,0.4);
+  border-bottom: none;
+  background: rgba(0,0,0,0.1);
+
+}
+.main {
+  margin: 0 10px
+}
+.type {
+  margin: 10px 0
+}
+.type li {
+  display: inline-block;
+  padding: 3px 20px;
+  color: #3a63d3;
+  border-radius: 3px;
+}
+.type .active {
+  background: #3a63d3;
+  color: #fff
+}
+.table {
+  border: 1px solid rgba(0,0,0,0.2);
+}
+.table table {
+  width: 100%;
+  border-spacing: 0;
+  text-align: left
+}
+.table thead {
+  background: rgba(0,0,0,0.05);
+  padding-left: 5px;
+  width: 100%
+}
+.table td, .table th{
+  height: 50px;
+  padding-left: 5px;
+  border-bottom: 1px solid rgba(0,0,0,0.3)
+}
+.botton {
+  display: inline-block;
+  padding: 5px;
+  background: #3a63d3;
+  border-radius: 5px;
+  color: #fff;
+}
+    </style>
+  </head>
+  <body>
+    <div class="nav clearfix">
+      <ul class="">
+        <li class="">
+          E币兑换
+        </li>
+        <li class="">
+          E币兑换
+        </li>
+        <li class="active">
+          兑换记录
+        </li>
+      </ul>
+    </div>
+    <div class="main">
+      <ul class="type">
+        <li class="active">全部</li>
+        <li>成功</li>
+        <li>失败</li>
+      </ul>
+      <div class="table">
+        <table>
+          <thead>
+            <tr>
+              <th>时间</th>
+              <th>商品名称</th>
+              <th>数量</th>
+              <th>E币</th>
+              <th>状态</th>
+              <th>信息</th>
+              <th>兑换信息</th>
+              <th>确认</th>
+            </tr>
+          </thead>
+          <tbody id="tbody">
+            <tr>
+              <td>324</td>
+              <td>324</td>
+              <td>324</td>
+              <td>324</td>
+              <td>324</td>
+              <td>324</td>
+              <td>324</td>
+              <td>324</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript">
+  function getTemplete(data) {
+    let res = ""
+    data.map(item => {
+      let temp = ""
+      for (let key in item) {
+        if (key === "date") {
+          let time = new Date(+item[key])
+          let timeStr = time.getSeconds() < 10 ? `${time.getFullYear()}-${time.getMonth()+1}-${time.getDate()} ${time.getHours()}:${time.getMinutes()}:0${time.getSeconds()}`
+          :`${time.getFullYear()}-${time.getMonth()+1}-${time.getDate()} ${time.getHours()}:${time.getMinutes()}:${time.getSeconds()}`
+          temp += `<td>${timeStr}</td>`
+        } else {
+          temp += `<td>${item[key]}</td>`
+        }
+      }
+      res += "<tr>" + temp + "<td><div class='botton'>兑换信息</div></td><td></td></tr>"
+    })
+    return res
+  }
+  fetch('./test.json')
+  .then(res => res.json())
+  .then(data => {
+    let templete = getTemplete(data)
+    document.getElementById('tbody').innerHTML = templete
+  })
+  </script>
+</html>
