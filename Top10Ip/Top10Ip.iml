@@ -7,7 +7,5 @@
     </content>
     <orderEntry type="jdk" jdkName="1.7" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="jsoup-1.10.1" level="project" />
-    <orderEntry type="library" name="poi-3.6-20091214" level="project" />
   </component>
 </module>
