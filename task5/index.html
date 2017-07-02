@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>fly</title>
+    <style media="screen">
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+li {
+  list-style: none;
+}
+.box {
+  width: 880px;
+  margin: 0 auto;
+}
+.clearfix::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.left, .right, .timecal, .timeList, .timeList li {
+  float: left;
+  box-sizing: border-box;
+  height: 80px;
+}
+.left, .right {
+  font-size: 40px;
+  line-height: 80px;
+  color: #7dbcdc;
+  border-bottom: 1px solid #268fc5
+}
+.timeList li:first-child {
+  border-left: 1px solid #7dbcdc
+}
+.timeList li {
+  width: 100px;
+  padding: 10px 20px;
+  background: #f3fbfd;
+  border-bottom: 1px solid #268fc5;
+  border-right: 1px solid #7dbcdc
+}
+.timeList .active {
+  background: #fff;
+  border-bottom: none;
+}
+.timeList .price {
+  color: #0e83bf;
+  font-weight: bold;
+}
+.timecal {
+  width: 100px;
+  text-align: right;
+  padding: 55px 5px 0 0;
+  background: #67cae0;
+  color: #fff;
+}
+.list {
+  margin-top: 20px;
+  border-top: 4px solid #ffb400
+}
+.list table{
+  width: 100%;
+  border-spacing: 0;
+}
+.list thead {
+  background: #26b4d3;
+  color: #fff;
+}
+.list th {
+  height: 40px;
+  font-weight: normal;
+}
+    </style>
+  </head>
+  <body>
+  <div class="box">
+    <div class="bar clearfix">
+      <div class="left">
+        《
+      </div>
+      <ul class="timeList clearfix">
+        <li>
+          <span class="time">02-19 去</span>
+          <span class="time">03-19 回</span>
+          <span class="price">￥ 3349</span>
+        </li>
+        <li>
+          <span class="time">02-19 去</span>
+          <span class="time">03-19 回</span>
+          <span class="price">￥ 3349</span>
+        </li>
+        <li>
+          <span class="time">02-19 去</span>
+          <span class="time">03-19 回</span>
+          <span class="price">￥ 3349</span>
+        </li>
+        <li class="active">
+          <span class="time">02-19 去</span>
+          <span class="time">03-19 回</span>
+          <span class="price">￥ 3349</span>
+        </li>
+        <li>
+          <span class="time">02-19 去</span>
+          <span class="time">03-19 回</span>
+          <span class="price">￥ 3349</span>
+        </li>
+        <li>
+          <span class="time">02-19 去</span>
+          <span class="time">03-19 回</span>
+          <span class="price">￥ 3349</span>
+        </li>
+        <li>
+          <span class="time">02-19 去</span>
+          <span class="time">03-19 回</span>
+          <span class="price">￥ 3349</span>
+        </li>
+      </ul>
+      <div class="right">
+        》
+      </div>
+      <div class="timecal">
+        价格日历
+      </div>
+    </div>
+    <div class="list">
+      <table>
+        <thead>
+          <th>航班信息</th>
+          <th>起飞时间</th>
+          <th>旅行时长</th>
+          <th>当地降落时间</th>
+          <th>推荐网站</th>
+          <th>最低报价</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  </body>
+</html>
