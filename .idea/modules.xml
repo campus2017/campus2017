@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/CharacterCounter/CharacterCounter.iml" filepath="$PROJECT_DIR$/CharacterCounter/CharacterCounter.iml" />
       <module fileurl="file://$PROJECT_DIR$/CountMostImport/CountMostImport.iml" filepath="$PROJECT_DIR$/CountMostImport/CountMostImport.iml" />
       <module fileurl="file://$PROJECT_DIR$/EffectiveLines/EffectiveLines.iml" filepath="$PROJECT_DIR$/EffectiveLines/EffectiveLines.iml" />
       <module fileurl="file://$PROJECT_DIR$/ExchangeRate/ExchangeRate.iml" filepath="$PROJECT_DIR$/ExchangeRate/ExchangeRate.iml" />
