@@ -37,6 +37,7 @@ public class ExchangeRate {
 
     /**
      * 生成中间价 Excel 文件
+     *
      * @param startDate
      * @param endDate
      */
@@ -75,7 +76,7 @@ public class ExchangeRate {
             Element next = tableHead.get(i);
             String text = next.text();
             if (StringUtils.containsAny(text, countryNames)) {
-
+            //过滤空格
                 countryOrder.put(text.replaceAll("\\u00A0", ""), i);
             }
         }

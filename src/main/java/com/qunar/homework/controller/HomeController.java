@@ -12,10 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.Reader;
-import java.io.StringReader;
+import java.io.*;
 import java.util.Date;
 import java.util.Map;
 
@@ -34,31 +31,33 @@ public class HomeController {
 
     @ResponseBody
     @RequestMapping("/uploadFile")
-    public Map<String, String> uploadFile(@RequestParam("file") CommonsMultipartFile file) {
+    public Map<String, Object> uploadFile(@RequestParam("file") CommonsMultipartFile file) {
         File newFile = new File(uploadDir + DateFormatUtils.format(new Date(), "yyyyMMddHHmmss") + file.getOriginalFilename());
         try {
             file.transferTo(newFile);
-            log.info(" 成功上传文件：{}",newFile.getName());
+            log.info(" 成功上传文件：{}", newFile.getName());
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        Map<String, String> result = Maps.newHashMap();
-        result.put("name", "lvshichang");
-        result.put("age", "23");
-
+        Map<String, Object> result = Maps.newHashMap();
+        try {
+            result= homeService.countWords(new FileReader(newFile));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         return result;
     }
 
     @ResponseBody
     @RequestMapping("/uploadWords")
-    public Map<String, Integer> uploadWords(@RequestParam("words")String words) {
+    public Map<String, Object> uploadWords(@RequestParam("words") String words) {
 
         Reader reader = new StringReader(words);
 
-        Map<String, Integer> result = null;
+        Map<String, Object> result = Maps.newHashMap();
         try {
-            result = homeService.countWords(reader);
+            result= homeService.countWords(reader);
         } catch (IOException e) {
             e.printStackTrace();
         }
