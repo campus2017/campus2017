@@ -1,0 +1,4 @@
+FILE_PATH="access log"
+Result="result"
+awk '{count[$1]++}END{for(name in count) print name,count[name]}' $FILE_PATH > ip_not_sort
+sort -k 2 -n -r ip_not_sort > $Result
