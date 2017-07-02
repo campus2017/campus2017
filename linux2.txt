@@ -1,0 +1,1 @@
+scp dir1/file pei.wu@l-test.dev.cn1:/temp
