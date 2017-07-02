@@ -1,0 +1,77 @@
+*{
+    font-family: "Microsoft Yahei";
+}
+#SelectA{
+    display:block;
+    height: 95px;
+    line-height:95px;
+}
+#SelectB{
+    display: none;
+    position: relative;
+}
+#textFile{
+    display:none;
+}
+#SelectA label,#SelectA span,#SelectA .submit,#SelectB span,#SelectB .submit{
+    display: inline-block;
+}
+
+
+#SelectB textarea{
+    overflow-y: scroll;
+}
+#SelectB .position{
+    position:absolute;
+    top: 5px;
+    left: 383px;
+}
+#SelectB .position1{
+    position:absolute;
+    top: 50px;
+    left: 383px;
+    background-color: #FF9900;
+}
+.submit{
+    width:84px;
+    height: 36px;
+    font-size:16px;
+    text-align: center;
+    line-height:28px;
+    color:white;
+    background-color: #25d6ff;
+    padding:3px 10px;
+    border-radius: 5px;
+    border:none;
+}
+#SelectA label{
+    background-color: #25d6ff;
+    padding:3px 10px;
+    border-radius: 5px;
+    width:64px;
+    height: 30px;
+    text-align: center;
+    line-height:30px;
+    color:white;
+}
+#filename{
+    width:240px;
+    margin-left:20px;
+    margin-right:20px;
+    /*border:solid black 1px;*/
+}
+table{
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+table caption{
+    text-align: left;
+    margin-bottom: 15px;
+}
+table td,table th{
+    text-align: center;
+    width: 180px;
+    height: 30px;
+    line-height: 30px;
+    border:solid black 1px;
+}
