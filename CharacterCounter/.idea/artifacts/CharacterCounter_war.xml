@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="CharacterCounter:war">
-    <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="mvc.war">
-      <element id="artifact" artifact-name="CharacterCounter:war exploded" />
-    </root>
-  </artifact>
-</component>
