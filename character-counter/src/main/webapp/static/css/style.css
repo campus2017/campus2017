@@ -1,0 +1,46 @@
+.center-block{
+    width:900px
+}
+.boder-row{
+    margin-bottom: 15px;
+}
+.row{
+    margin-bottom: 10px;
+}
+.btn{
+    border-radius: 0px;
+    height: 25px;
+    width: 84px;
+    padding:0;
+
+}
+.btn-primary{
+    background: rgb(0,204,255);
+    border-color:rgb(0,204,255);
+}
+.btn-warning{
+    background: rgb(255,153,0);
+    border-color:rgb(255,153,0);
+}
+.btn-margin{
+    margin-bottom: 10px;
+}
+.text_area{
+    resize:none;
+    width: 250px;
+    height: 80px;
+    padding: 0;
+    font-size: 12px;
+    border:1px solid black;
+}
+.table-bordered {
+    border: 1px solid black;
+}
+.table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th{
+    border: 1px solid black;
+    text-align:center;
+}
+
+.double-btn{
+    margin-top: 5px;
+}

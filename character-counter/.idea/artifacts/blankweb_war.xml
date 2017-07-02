@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="blankweb:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="blankweb.war">
+      <element id="artifact" artifact-name="blankweb:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/campus2017.iml" filepath="$PROJECT_DIR$/.idea/campus2017.iml" />
+      <module fileurl="file://$PROJECT_DIR$/character-counter/character-counter.iml" filepath="$PROJECT_DIR$/character-counter/character-counter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/count-most-import/count-most-import.iml" filepath="$PROJECT_DIR$/count-most-import/count-most-import.iml" />
+      <module fileurl="file://$PROJECT_DIR$/effective-lines/effective-lines.iml" filepath="$PROJECT_DIR$/effective-lines/effective-lines.iml" />
+      <module fileurl="file://$PROJECT_DIR$/exchange-rate/exchange-rate.iml" filepath="$PROJECT_DIR$/exchange-rate/exchange-rate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/linux2/linux2.iml" filepath="$PROJECT_DIR$/linux2/linux2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/top10ip/top10ip.iml" filepath="$PROJECT_DIR$/top10ip/top10ip.iml" />
+    </modules>
+  </component>
+</project>

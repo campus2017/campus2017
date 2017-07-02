@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <option name="DEFAULT_COMPILER" value="Eclipse" />
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="blankweb" />
+        <module name="character-counter" />
+        <module name="count-most-import" />
+        <module name="CountMostImport" />
+        <module name="dubbo-producer" />
+        <module name="effective-lines" />
+        <module name="effectivelines" />
+        <module name="exchange-rate" />
+        <module name="linux2" />
+        <module name="SpringBootTestCase" />
+        <module name="top10ip" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="blankweb" target="1.8" />
+      <module name="campus2017" target="1.8" />
+      <module name="character-count" target="1.8" />
+      <module name="character-counter" target="1.8" />
+      <module name="count-most-import" target="1.8" />
+      <module name="dubbo-producer" target="1.8" />
+      <module name="effective-lines" target="1.8" />
+      <module name="exchange-rate" target="1.8" />
+      <module name="gs-serving-web-content" target="1.8" />
+      <module name="linux2" target="1.8" />
+      <module name="top10ip" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
