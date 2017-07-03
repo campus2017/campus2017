@@ -6,20 +6,20 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Collections;
 
+
 public class CountMostImport {
 
     private String dir;
-    private static HashMap<String,Integer> importRecords;
-    private static ArrayList<MostImportClass> mostImportClassList;
-
+    private HashMap<String,Integer> importRecords;
 
     public CountMostImport(){
-        this.dir= "/Users/wst/Desktop/CountMostImport/src/com/qunar";
+        this.dir= "E:\\java_project\\CountMostImport\\src\\com\\qunar";
         importRecords = new HashMap<String, Integer>();
-        this.staticsAllFiles(new File(dir));
     }
-
-    public static void getTopKParams(int k){
+    
+    public void getTopKParams(int k){
+    		staticsAllFiles(new File(dir));
+    		ArrayList<MostImportClass> mostImportClassList = changeHashMapToList();
         Collections.sort(mostImportClassList, new SortByValue());
         Integer i = 0;
         for (MostImportClass mostImportClass : mostImportClassList) {
@@ -79,7 +79,7 @@ public class CountMostImport {
     }
 
 
-    private static ArrayList<MostImportClass> changeHashMapToList(){
+    private ArrayList<MostImportClass> changeHashMapToList(){
         ArrayList<MostImportClass> list = new ArrayList<MostImportClass>();
         for(Map.Entry item: importRecords.entrySet()){
             String key = (String) item.getKey();
@@ -91,8 +91,8 @@ public class CountMostImport {
 
     public static void main(String[] args)
     {
-        mostImportClassList =  changeHashMapToList();
-        getTopKParams(10);
+        CountMostImport test = new CountMostImport();
+        test.getTopKParams(10);
     }
 
 }
