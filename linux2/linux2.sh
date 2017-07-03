@@ -1,0 +1,1 @@
+scp -r /dir1 l-test.dev.cn1@192.168.60.135:/tmp
