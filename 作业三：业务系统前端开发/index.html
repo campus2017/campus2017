@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="css/index.css" />
+	</head>
+	<body>
+		<div class="header">
+			<ul class="header-list">
+				<li>E币兑换</li>
+				<li>E币明细</li>
+				<li class="active">兑换记录</li>
+			</ul>
+		</div>
+		<div class="content">
+			<div class="content-nav">
+				<input type="button" class="btn active" value="全部"/>
+				<input type="button" class="btn" value="成功" />
+				<input type="button" class="btn" value="失败" />
+				选择日期：<input type="text" class="startTime"/>&nbsp;至&nbsp;
+				<input type="text" class="endTime"/>
+				<input type="button" class="btn search" value="搜索" id="search" onclick="find()">
+				<input type="button" class="btn reset" value="重置">
+			</div>
+			<ul class="content-list">
+				<li></li>
+				<li></li>
+				<li class="main">
+					<table class="info" id="tbMain" cellspacing="20" cellpadding="10">
+							<tr>
+								<td class="time">时间</td>
+								<td class="product_name">商品名称</td>
+								<td class="number">数量</td>
+								<td class="e-currency">E币</td>
+								<td class="state">状态</td>
+								<td class="description">信息</td>
+								<td class="exchange-info">兑换信息</td>
+								<td class="confirm">确认</td>
+							</tr>
+							
+					</table>
+					<div id="page">
+						<ul>
+							<li><a href="#" class="firstPage" onclick="goPage(0)">首页</a></li>
+							<li id="currentPage">1</li>
+							<li><a href="#" class="endPage" onclick="goPage(-1)">末页</a></li>
+							<li>
+								<span id="totalPage">共1页</span>，跳转到<input type="text" class="text" id="inputNum"/>页
+								<input class="conbtn" value="确定" type="button" onclick="goPage(1)"/>
+							</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<script>
+		//可以进行标签页的切换
+			var headerList = document.querySelectorAll(".header-list li");
+			var contentList = document.querySelectorAll(".content-list>li");
+			
+			for(var i=0;i<headerList.length;i++){
+				headerList[i].index = i;
+				headerList[i].onclick = function(){
+					for(var j=0;j<contentList.length;j++){
+
+						contentList[j].style.display = "none";
+						headerList[j].style.background = "rgb(241,241,241)";
+					}
+					contentList[this.index].style.display = "inline-block";
+					headerList[this.index].style.background = "#fff";
+				}
+				
+			}
+			
+			
+			window.onload = function(){
+				var xhr = createXHR();
+				xhr.open('get','info.json',true);
+				xhr.onreadystatechange = function(){
+					if(xhr.readyState ==4){
+						if((xhr.status>=200 && xhr.status<300) || xhr.status==304){
+							var result=JSON.parse(xhr.responseText);
+							getData(result);			
+						}
+					}
+				}
+				xhr.send();
+			}
+			
+			
+			function getData(result){
+				currentPage = document.getElementById("currentPage");
+				currentNum = parseInt(result['current_page']);//当前页数
+				var totalPage = document.getElementById("totalPage");
+				totalNum = parseInt(result['total_page']);//总页数
+				
+				currentPage.innerHTML = result['current_page'];
+				totalPage.innerHTML = "<span>共"+result['total_page']+"页</span>";
+
+				var info = result["record"];
+				totalLen = info.length;//总行数
+				perLen = 13;  //每页行数
+				tbody = document.getElementById("tbMain");
+				startRow = (currentNum-1)*perLen;//每页起始项
+				endRow = currentNum*perLen;//每页结束项
+				endRow = endRow > totalLen ? totalLen : endRow;
+				
+				for(var i=0;i<totalLen;i++){
+					var row = document.createElement("tr");
+					var pers = info[i];
+					for(key in pers){
+						var td = document.createElement("td");
+						if(key=="exchange_info"){
+							td.innerHTML = "<input type='button' class='tdbtn' value='兑换信息'/>";
+						}else{
+							td.innerHTML = pers[key];
+						}
+						row.appendChild(td);
+					}
+					tbody.appendChild(row);
+				}
+				irow = tbody.rows;
+				for(var i= (startRow+1);i<=endRow;i++){
+					irow[i].style.display = "table-row";
+				}
+
+			}
+			
+			//根据不同页数的跳转
+			function goPage(index){
+				var inputNum = parseInt(document.getElementById("inputNum").value);
+				if(index==0){
+					inputNum = 1;
+					document.getElementById("inputNum").value="";
+				}
+				else if(index==-1){
+					inputNum = totalNum;
+					document.getElementById("inputNum").value="";
+				}
+				if(inputNum>0 && inputNum<=totalNum){
+					currentPage.innerHTML = inputNum;
+					var startRow = (inputNum-1)*13;
+					var endRow = inputNum*13;
+					
+					endRow = (endRow > totalLen)? totalLen : endRow; 
+					for(var i= 1;i<=totalLen;i++){
+						if(i>startRow && i<=endRow){
+							irow[i].style.display = "table-row";
+						}else{
+							irow[i].style.display = "none";
+						}
+					}
+				}
+				
+			}
+			
+			function createXHR(){
+				if(typeof XMLHttpRequest!="undefined"){
+					return new XMLHttpRequest();
+				}else if(typeof ActiveXObject !="undefined"){
+					var version = ["MSXML2.XMLHttp.6.0","MSXML2.XMLHttp.3.0","MSXML2.XMLHttp"];
+					for(var i=0;i<version.length;i++){
+						try{
+							return new ActiveXObject(version[i]);
+						}catch(ex){
+							
+						}
+					}
+				}else{
+					throw new Error("不支持");
+				}
+			}
+			
+			
+		</script>
+	</body>
+</html>

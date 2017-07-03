@@ -1,0 +1,183 @@
+@charset "utf-8";
+
+* {
+	padding:0;
+	margin:0;
+	font-size:13px;
+}
+/*导航头样式*/
+.header {
+	width:900px;
+	height:50px;
+	margin:0 auto;
+	background:rgb(251, 252, 253);
+	border-bottom:1px solid rgb(241,241,241);
+}
+.header .header-list {
+	list-style: none;
+	float:right;
+	margin-right:10px;
+	padding-top:16px;
+}
+.header-list li {
+	display:inline-block;
+	width:100px;
+	height:33px;
+	line-height:33px;
+	border:1px solid rgb(218,218,218);
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	text-align:center;
+	background:rgb(241,241,241);
+	cursor:pointer;
+}
+.header-list .active {
+		background:#fff;
+		border-bottom:1px solid #fff;
+}
+/*主体内容样式*/
+.content {
+	width:900px;
+	margin:10px auto;
+	font-size:14px;
+}
+.content-nav {
+	margin-left:13px;
+	padding:10px;
+}
+.content-nav .btn {
+	width:50px;
+	height:25px;
+	border:1px solid #fff;
+	border-radius:4px;
+	background-color:#fff;
+	color:rgb(0, 105, 202);
+}
+.content-nav .active {
+	background-color: rgb(55, 117, 192);
+	color:#fff;
+}
+.content-nav .search {
+	background-color: rgb(55, 117, 192);
+	color:#fff;
+}
+.content-nav .reset {
+	background-color: rgb(255, 0, 0);
+	color:#fff;
+}
+.content-list {
+	margin-top:10px;
+	text-align:center;
+}
+.content-list>li {
+	display:none;
+	width:850px;
+	border:1px solid rgb(229,229,229);
+}
+.content-list .main {
+	display:inline-block;
+	width:850px;
+}
+/*表格样式*/
+.main .info {
+	width:100%;
+	height:30px;
+	border-collapse: collapse;
+	text-align:left;
+}
+/*表格属性行样式*/
+.info tr:first-child {
+	height:30px;
+	background:rgb(248, 248, 248);
+}
+.info span {
+	display:inline-block;
+	float:left;
+	width:100px;
+	height:20px;
+	line-height:20px;
+	text-align:left;
+	padding:5px;
+	margin-left:5px;
+}
+.info .time {
+	width:100px;
+}
+.info .product-name {
+	width:110px;
+}
+.info .number {
+	width:30px;
+}
+.info .e-currency {
+	width:30px;
+}
+.info .state {
+	width:55px;
+}
+.info .description {
+	width:240px;
+}
+.info .exchange-info{
+	width:77px;
+}
+/*表格内容样式*/
+.info {
+	width:850px;
+	background:#fff;
+}
+.info tr:not(:first-child) {
+	display:none;
+	height:50px;
+	border-bottom:1px solid rgb(229,229,229);	
+}
+.info tr td {
+	padding-left:20px;
+	font-size:13px;
+	line-height:2.2;
+}
+.info .tdbtn {
+	width:60px;
+	height:28px;
+	background-color: rgb(55, 117, 192);
+	border-radius:4px;
+	border:none;
+	line-height:28px;
+	color:#fff;
+}
+.main #page {
+	height:30px;
+	width:100%;
+	background:rgb(248, 248, 248);
+	line-height:30px;
+}
+#page ul {
+	float:right;
+	margin-right: 5px;
+	list-style:none;
+}
+#page ul li {
+	display:inline-block;
+	padding-right:5px;
+}
+#page .firstPage,
+#page .endPage {
+	display:inline-block;
+	width:40px;
+	height:20px;
+	line-height:20px;
+	border:1px solid rgb(229,229,229);
+	background:#fff;
+	color:rgb(0,105,202);
+	text-decoration: none;
+}
+#page .text {
+	width:25px;
+	margin:3px;
+}
+#page .conbtn {
+	width:40px;
+}
+#page #currentPage {
+	color:rgb(255,0,0);
+}

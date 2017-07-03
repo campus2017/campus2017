@@ -1,0 +1,30 @@
+@charset "utf-8";
+ 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none
+}
+
+div {
+  width: 960px;
+  height: 477px;
+  margin: 50px auto;
+  border: 1px solid #ccc;
+  overflow: hidden;
+}
+ 
+div li {
+  width: 475px;
+  height: 477px;
+  float: left;
+  border:1px solid #ccc;
+  /*background-image: url(images/1.jpg);*/
+}
+ 
+div ul {
+  width: 1000px;
+} 
