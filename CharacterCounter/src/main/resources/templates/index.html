@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<body>
+    <form action="/count/" method="post">
+        <input type="text" name="text" value="$!{text}"><br>
+        <input type="submit" value="统计">
+        <input type="reset" value="清除">
+    </form><br>
+    <form method="post" action="/upload/" enctype="multipart/form-data">
+        文件上传：<input type="file" name="file">
+        <input type="submit" value="统计">
+    </form>
+    中文：$!{chinese}
+    英文：$!{eng}
+    数字：$!{num}
+    标点：$!{punc}
+</body>
+</html>
