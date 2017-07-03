@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>字符统计</title>
+</head>
+<body>
+<h3>请输入一段文字</h3>
+
+<form class="content_input" action="/input" method="post">
+
+    <textarea name="input_content" rows="10" cols="40"></textarea>
+
+    <div class="buttons">
+        <input type="submit" value="统计" style="background-color:darkturquoise; color: #efefef">
+        <input type="reset" value="清空内容" style="background-color:orange; color: #efefef">
+    </div>
+</form>
+
+<table>
+    <caption>各统计内容的个数如下：</caption>
+    <tr>
+        <th>统计项</th>
+        <th>个数</th>
+    </tr>
+    <tr>
+        <td>英文字母</td>
+        <td>英文字母个数</td>
+    </tr>
+    <tr>
+        <td>数字</td>
+        <td>数字个数</td>
+    </tr>
+    <tr>
+        <td>中文汉字</td>
+        <td>中文汉字个数</td>
+    </tr>
+    <tr>
+        <td>中英文标点符号</td>
+        <td>中英文标点符号个数</td>
+    </tr>
+</table>
+
+<table>
+    <caption>文字中出现频率最高的三个字是：</caption>
+
+    <tr>
+        <th>名称</th>
+        <th>个数</th>
+    </tr>
+    <tr>
+        <td>英文字母</td>
+        <td>英文字母个数</td>
+    </tr>
+    <tr>
+        <td>数字</td>
+        <td>数字个数</td>
+    </tr>
+    <tr>
+        <td>中文汉字</td>
+        <td>中文汉字个数</td>
+    </tr>
+</table>
+</body>
+</html>
