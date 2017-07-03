@@ -9,24 +9,6 @@ import java.util.*;
 public class CountMostImport {
     private HashMap<String, Integer> map = new HashMap<String, Integer>();
 
-    private class Pair implements Comparable<Pair> {
-        String importer;
-        int count;
-
-        Pair(String ip, int ct) {
-            importer = ip;
-            count = ct;
-        }
-
-        public int compareTo(Pair pth) {
-            return pth.count - count;
-        }
-
-        public String toString() {
-            return importer + "----->" + count;
-        }
-    }
-
     private void countImport(File f) throws Exception {
         FileInputStream in = new FileInputStream(f);
         BufferedReader reader = new BufferedReader(new InputStreamReader(in));
@@ -44,8 +26,6 @@ public class CountMostImport {
                 } else {
                     map.put(str, value + 1);
                 }
-            } else {
-                continue;
             }
         }
         reader.close();
@@ -73,11 +53,11 @@ public class CountMostImport {
     }
 
     private String getMostImport() {
-        Iterator<String> iter = map.keySet().iterator();
+        Iterator<String> iterator = map.keySet().iterator();
         String result = "";
         int max = 0;
-        while (iter.hasNext()) {
-            String key = iter.next();
+        while (iterator.hasNext()) {
+            String key = iterator.next();
             // System.out.println(key+" "+map.get(key));
             if (map.get(key) > max) {
                 max = map.get(key);
@@ -89,35 +69,53 @@ public class CountMostImport {
 
     private void frontTenImport() {
         Iterator<String> iter = map.keySet().iterator();
-        List<Pair> pairs = new ArrayList<Pair>();
+        List<Entry> entries = new ArrayList<Entry>();
         int cnt = 0;
         while (iter.hasNext()) {
             cnt++;
             String key = iter.next();
-            Pair pair = new Pair(key, map.get(key));
-            pairs.add(pair);
+            Entry entry = new Entry(key, map.get(key));
+            entries.add(entry);
         }
-        Pair[] pairArr = new Pair[0];
-        pairArr = pairs.toArray(pairArr);
-        Arrays.sort(pairArr);
+        Entry[] entryArr = new Entry[0];
+        entryArr = entries.toArray(entryArr);
+        Arrays.sort(entryArr);
         for (int i = 0; i < 10 && i < cnt; i++) {
-            System.out.println(pairArr[i].toString());
+            System.out.println(entryArr[i].toString());
         }
     }
 
     public static void main(String[] args) {
-        CountMostImport cmi = new CountMostImport();
+        CountMostImport countMostImport = new CountMostImport();
         System.out.println("Please Enter the name of java file or directory");
         Scanner in = new Scanner(System.in);
         String filePath = in.nextLine();
         File file = new File(filePath);
         try {
-            cmi.searchDirectory(file);
-            String mostImport = cmi.getMostImport();
+            countMostImport.searchDirectory(file);
+            String mostImport = countMostImport.getMostImport();
             System.out.println(mostImport);
-            cmi.frontTenImport();
+            countMostImport.frontTenImport();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
+    }
+}
+
+class Entry implements Comparable<Entry> {
+    private String importer;
+    private int count;
+
+    Entry(String ip, int ct) {
+        importer = ip;
+        count = ct;
+    }
+
+    public int compareTo(Entry another) {
+        return another.count - count;
+    }
+
+    public String toString() {
+        return importer + "-----" + count;
     }
 }
