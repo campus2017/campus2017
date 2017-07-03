@@ -4,15 +4,28 @@
 <html>
 <head>
     <title>result</title>
+
+    <style type="text/css">
+        table.one
+        {
+            table-layout: fixed;
+        }
+    </style>
+
 </head>
 <body>
-<p> 输入的字符串：</p>
-${inputString}
-<p></p>
 
-<table border="0" style="border:1px solid #000000;">
+<p> 输入的字符串：</p>
+
+${inputString}
+
+
+
+<p>各统计内容的个数如下：</p>
+
+<table border="1" cellspacing="0"  cellpadding="5"  class="one" width="400px" style="text-align: center" >
     <tr>
-        <td>统计项</td>
+        <td width="50%">统计项</td>
         <td>个数</td>
     </tr>
  <tr>
@@ -34,23 +47,23 @@ ${inputString}
 </table>
 
 
-<p></p>
+<p >文字中出现频率最高的三个字是：</p>
 
-<table border="0" style="border:1px solid #000000;">
-    <tr >
-        <td>名称</td>
+<table  border="1" cellspacing="0"  cellpadding="5"  class="one" width="400px" style="text-align: center;" >
+    <tr>
+        <td width="50%" height=" 50px">名称</td>
         <td>个数</td>
     </tr>
     <tr>
-        <td>${mostOneName}</td>
-        <td>${mostOneValue}</td>
+        <td height=" 50px">${mostOneName}</td>
+        <td >${mostOneValue}</td>
     </tr>
     <tr>
-        <td>${mostTwoName}</td>
+        <td height=" 50px">${mostTwoName}</td>
         <td>${mostTwoValue}</td>
     </tr>
     <tr>
-        <td>${mostThreeName}</td>
+        <td height=" 50px">${mostThreeName}</td>
         <td>${mostThreeValue}</td>
     </tr>
 </table>
