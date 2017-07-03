@@ -1,1 +1,1 @@
-awk '{print $1"}' /usr/java/apache-tomcat-7.0.78/logs/localhost_access_log.* | uniq -c | sort -nr| head -n 10
+awk '{print $1"}' /usr/apache-tomcat-7.0.78/logs/localhost_access_log.* | uniq -c | sort -nr| head -n 10
