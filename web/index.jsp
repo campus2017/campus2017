@@ -6,37 +6,40 @@
   To change this template use File | Settings | File Templates.
 --%>
 
-<%@ page language="java" pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page language = "java" pageEncoding = "UTF-8"%>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core"%>
 <!doctype html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <script type="text/javascript" >
-      function clearTable(){
-          tdSpans=document.getElementsByName("tdSpan");
-          for(var i=0;i<tdSpans.length;i++){
+  <meta charset = "utf-8">
+  <script type = "text/javascript" >
+      function clearTable() {
+          tdSpans = document.getElementsByName("tdSpan");
+          for(var i = 0; i < tdSpans.length; i++){
               tdSpans[i].innerHTML = "&nbsp";
           }
       }
-      function showTextarea(){
+      function showTextarea() {
           document.getElementById("hidden").style.display = "inline";
           document.getElementById("show").style.display = "none";
           clearTable();
       }
-      function hiddenTextarea(){
+      function hiddenTextarea() {
           document.getElementById("hidden").style.display = "none";
           document.getElementById("show").style.display = "inline";
           clearTable();
       }
-      function checkForm(form){
-          if(form.radio.value=="upload_radio"){
-              if (form.submit_upload.value==""){
+      function checkForm(form) {
+          if(form.radio.value == "upload_radio"){
+              if (form.submit_upload.value == ""){
                   alert("请上传文件!");
                   form.userId.focus();
                   return false;
               }
           }
+      }
+      function numDesc(a, b) {
+          return b - a;
       }
 
       function display(text) {
@@ -50,31 +53,46 @@
           chineseChar.innerHTML = obj.chineseChar;
           punctuation.innerHTML = obj.punctuation;
 
-          var arr = [];
+          var arrKey = [];
+          var arrValue = [];
           var flag = 0;
-          for ( var key in obj) {
-              if (key != "englishLet" && key != "number" && key != "chineseChar"
+          for(var key in obj) {
+              if(key != "englishLet" && key != "number" && key != "chineseChar"
                   && key != "punctuation") {
-                  arr[flag] = key;
-                  flag++;
-                  arr[flag] = obj[key];
+                  arrKey[flag] = key;
+                  arrValue[flag] = obj[key];
                   flag++;
               }
           }
+          var arrValueCopy = arrValue;
+          arrValueCopy.sort(numDesc);
+
           var first = document.getElementById("first");
-          first.innerHTML = arr[0];
+          for(var i = 0; i < 3; i++) {
+              if(arrValueCopy[0] == arrValue[i]) {
+                  first.innerHTML = arrKey[i];
+              }
+          }
           var firstValue = document.getElementById("firstValue");
-          firstValue.innerHTML = arr[1];
+          firstValue.innerHTML = arrValueCopy[0];
 
           var second = document.getElementById("second");
-          second.innerHTML = arr[2];
+          for(var i = 0; i < 3; i++) {
+              if(arrValueCopy[1] == arrValue[i]) {
+                  second.innerHTML = arrKey[i];
+              }
+          }
           var secondValue = document.getElementById("secondValue");
-          secondValue.innerHTML = arr[3];
+          secondValue.innerHTML = arrValueCopy[1];
 
           var third = document.getElementById("third");
-          third.innerHTML = arr[4];
+          for(var i = 0; i < 3; i++) {
+              if(arrValueCopy[2] == arrValue[i]) {
+                  third.innerHTML = arrKey[i];
+              }
+          }
           var thirdValue = document.getElementById("thirdValue");
-          thirdValue.innerHTML = arr[5];
+          thirdValue.innerHTML = arrValueCopy[2];
       }
 
       function createXMLHttpRequest() {

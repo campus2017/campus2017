@@ -18,12 +18,7 @@ public class EffectiveLines {
      */
     private boolean legalLine(String line){
         String l = line.trim();
-        if(l.matches(regexSpace) || l.matches(regexSingleLine) || l.matches(regexMultiLine)) {
-            return false;
-        }
-        else {
-            return true;
-        }
+        return !(l.matches(regexSpace) || l.matches(regexSingleLine) || l.matches(regexMultiLine));
     }
 
     /**
@@ -39,7 +34,7 @@ public class EffectiveLines {
             if(file.exists()) {
                 try {
                     bufferedReader = new BufferedReader(new FileReader(file));
-                    String line = null;
+                    String line;
                     try {
                         line = bufferedReader.readLine();
                         while(line != null) {

@@ -1,10 +1,10 @@
 package com.qunar.campus2017.characterCounter.util;
 
 /**
- * Created by CM on 2017/2/26.
+ * Created by chunming.xcm on 2017/2/26.
  */
 public class Punctuation {
-    public static boolean isPunctuation(char ch){
+    public static boolean isPunctuation(char ch) {
         if(isCjkPunc(ch)) return true;
         if(isEnPunc(ch)) return true;
 
@@ -18,7 +18,7 @@ public class Punctuation {
 
         return false;
     }
-    private static boolean isEnPunc(char ch){
+    private static boolean isEnPunc(char ch) {
         if (0x21 <= ch && ch <= 0x22) return true;
         if (ch == 0x27 || ch == 0x2C) return true;
         if (ch == 0x2E || ch == 0x3A) return true;
@@ -26,7 +26,7 @@ public class Punctuation {
 
         return false;
     }
-    private static boolean isCjkPunc(char ch){
+    private static boolean isCjkPunc(char ch) {
         if (0x3001 <= ch && ch <= 0x3003) return true;
         if (0x301D <= ch && ch <= 0x301F) return true;
 
