@@ -7,7 +7,7 @@ import java.util.Map;
  */
 public class CollectionUtils {
     /**
-     * 增加一个字符到map,并统计出现的数量
+     * 增加一个字符到map,并更新出现的数量
      * @param map
      * @param c
      */

@@ -78,6 +78,11 @@ public class CountServiceImpl implements ICountService {
         return res;
     }
 
+    /**
+     * 将map按照value排序 第二种方法
+     * @param map
+     * @return
+     */
     private List<Map.Entry<Character, Integer>> sortMap(Map<Character, Integer> map) {
         Set<Map.Entry<Character, Integer>> set = map.entrySet();
         ArrayList<Map.Entry<Character, Integer>> list = Lists.newArrayList(set);
@@ -86,14 +91,5 @@ public class CountServiceImpl implements ICountService {
         }); why?*/
         Collections.sort(list,( Map.Entry<Character, Integer> o1,Map.Entry<Character, Integer>  o2) -> o2.getValue()-o1.getValue()); // lambda表达式
         return list;
-    }
-
-    public static void main(String[] args) {
-        Object[] res = new CountServiceImpl().countFromString("abcefaefeff1男2男女女男3男女4女男男女5女男6男女女，，，，，，，，，，，，，，，，，，.>>>>>");
-        for (Object re : res) {
-            System.out.println(re);
-        }
-
-
     }
 }

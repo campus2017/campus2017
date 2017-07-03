@@ -1,6 +1,7 @@
 package kevin.vo;
 
 /**
+ * 保存出现频率最高的字符用于前端显示
  * Created by Kevin on 2017/6/25.
  */
 public class TopCharacter {

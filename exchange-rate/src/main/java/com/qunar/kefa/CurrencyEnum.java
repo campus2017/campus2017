@@ -1,7 +1,7 @@
 package com.qunar.kefa;
 
 /**
- * 汇率枚举
+ * 汇率的枚举
  * Created by KevinZhang on 2017/6/26.
  */
 public enum CurrencyEnum {

@@ -3,6 +3,7 @@ package com.qunar.er.vo;
 import java.util.Date;
 
 /**
+ * 表示Excel的一个数据行
  * Created by KevinZhang on 2017/6/26.
  */
 public class Line {

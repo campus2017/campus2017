@@ -31,19 +31,6 @@
         <property name="defaultEncoding" value="UTF-8"/>
         <property name="resolveLazily" value="true"/>
     </bean>
-
-    <!-- SpringMVC在超出上传文件限制时，会抛出org.springframework.web.multipart.MaxUploadSizeExceededException -->
-    <!-- 该异常是SpringMVC在检查上传的文件信息时抛出来的，而且此时还没有进入到Controller方法中 -->
-    <bean id="exceptionResolver"
-          class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
-        <property name="exceptionMappings">
-            <props>
-                <!-- 遇到MaxUploadSizeExceededException异常时，自动跳转到XXX页面 -->
-                <prop key="org.springframework.web.multipart.MaxUploadSizeExceededException">跳转XXX页面</prop>
-            </props>
-        </property>
-    </bean>
-
     <!-- 定义跳转的文件的前后缀 ，视图模式配置-->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <!--关闭对http 1.0 的支持，两者重定向方法不一样-->

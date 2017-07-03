@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
          version="3.0">
     <display-name>Archetype Created Web Application</display-name>
-    <!-- Spring和mybatis的配置文件 -->
+    <!-- Spring配置文件 -->
     <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>classpath:spring-mvc.xml</param-value>
@@ -40,11 +40,6 @@
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
-  <!--  &lt;!&ndash; 防止Spring内存溢出监听器 &ndash;&gt;
-    <listener>
-        <listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>
-    </listener>-->
-
     <!-- Spring MVC servlet -->
     <servlet>
         <servlet-name>SpringMVC</servlet-name>
@@ -58,8 +53,8 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>SpringMVC</servlet-name>
-        <!-- 此处可以可以配置成*.do，对应struts的后缀习惯
-         可配置为 /*  jsp显示源码
+        <!--
+         可配置为 /*  jsp显示源码！！
          -->
         <url-pattern>/</url-pattern>
     </servlet-mapping>

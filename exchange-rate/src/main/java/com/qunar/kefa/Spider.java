@@ -30,6 +30,11 @@ public class Spider {
             e.printStackTrace();
         }
     }
+
+    /**
+     * 爬取数据
+     * @return
+     */
     public Map.Entry<CurrencyEnum, Map<Date, Line>> getData(){
         Map<Date,Line> map = Maps.newTreeMap();
         Elements trs = doc.select(".table tr");
@@ -63,10 +68,16 @@ public class Spider {
 
     }
 
+    /**
+     * 拼接时间查询的参数
+     * @param start
+     * @param duration
+     * @return
+     */
     private String getParam(Date start, int duration) {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         String to = sdf.format(start);
-        String from = sdf.format(new Date(start.getTime() - duration * ONE_DAY));
+        String from = sdf.format(new Date(start.getTime() - (duration-1) * ONE_DAY));
         return "?datefrom="+from+"&dateto="+to;
     }
 

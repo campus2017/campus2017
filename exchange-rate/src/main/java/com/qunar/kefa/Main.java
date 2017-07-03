@@ -4,6 +4,7 @@ import com.google.common.collect.Maps;
 import com.google.common.collect.Sets;
 import com.qunar.er.vo.Line;
 
+import java.io.File;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
@@ -36,11 +37,16 @@ public class Main {
             }
             integrateMap(res,resPart);
         }
-        boolean b = ExcelWriter.writeFile("exchange-rate\\res\\近30天汇率统计.xls", res); // 位于本工程本项目的res文件夹下
+        boolean b = ExcelWriter.writeFile("exchange-rate"+ File.separator+"res"+File.separator+"近30天汇率统计.xls", res); // 位于本工程本项目的res文件夹下，兼容windows、Linux/Unix 文件系统
         System.out.println(b?"Success!":"Failed，remote site error！");
         executorService.shutdown();
     }
 
+    /**
+     * 汇总多线程运行的结果
+     * @param res
+     * @param resPart
+     */
     private static void integrateMap(Map<Date,Line> res, Map.Entry<CurrencyEnum, Map<Date, Line>> resPart) {
         CurrencyEnum currency = resPart.getKey();
         Map<Date, Line> part = resPart.getValue();

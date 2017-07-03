@@ -13,7 +13,7 @@ import java.util.regex.Pattern;
 public class CountMostImport {
     private Multimap<String, Integer> map = HashMultimap.create();
     private static final Pattern staticp =
-            Pattern.compile("(?:import\\s+static\\s+)((?:[a-zA-Z]+?\\.)+)(?:.)"); // 一次编译，到处使用
+            Pattern.compile("(?:import\\s+static\\s+)((?:[a-zA-Z]+?\\.)+)(?:.)"); // 常量，不需要多次实例化
     private static final Pattern p = Pattern.compile("(?:import\\s+)((?:[a-zA-Z]+?\\.)+[a-zA-Z]+);");
 
     private File input() {
@@ -35,6 +35,11 @@ public class CountMostImport {
         return files;
     }
 
+    /**
+     * 深度优先遍历文件夹
+     * @param filePath
+     * @param filesList
+     */
     private void dfs(File filePath, ArrayList<File> filesList) {
         if (filePath.isFile()) {
             filesList.add(filePath);
@@ -49,13 +54,18 @@ public class CountMostImport {
         return;
     }
 
+    /**
+     * 若文件过多，可考虑多线程并发执行，此处需求不大，所以未实现
+     * @param allFiles
+     * @return
+     */
     private void parseFiles(List<File> allFiles) {
             parseSerially(allFiles);
     }
 
     public List<String> parseSerially(List<File> allFiles) {
         for (File file : allFiles) {
-            try (BufferedReader br = new BufferedReader(new FileReader(file));) {
+            try (BufferedReader br = new BufferedReader(new FileReader(file))) {
                 String line = br.readLine();
                 while (line != null) {
                     line = line.trim();
@@ -81,7 +91,7 @@ public class CountMostImport {
         Matcher staticm = staticp.matcher(line);
         Matcher m = p.matcher(line);
         while (staticm.find()) {
-            String add = staticm.group(1);
+            String add = staticm.group(1); // 分组
             putMap(add.substring(0, add.length() - 1));
         }
         while (m.find()) {
@@ -91,6 +101,10 @@ public class CountMostImport {
 
     }
 
+    /**
+     * 以 import的类=出现的数量 的形式存在Multimap中
+     * @param str
+     */
     private void putMap(String str) {
         Collection<Integer> values = this.map.get(str);
         Iterator<Integer> iterator = values.iterator();
@@ -105,24 +119,28 @@ public class CountMostImport {
     }
 
     /**
-     * 开始计数
+     * 计数逻辑：获取文件夹下所有文件-> 解析文件，获得类及导入的次数->获取前n个类
      */
     public void doCount() {
-        File input = input();
+        File input = input();// 循环读取，直到读取到合法路径
         while (input == null) {
-            input = input;
+            input = input();
         }
-        List<File> allFiles = getAllFiles(input);
-        parseFiles(allFiles);
-        topImport(10);
+        List<File> allFiles = getAllFiles(input);// 获取文件
+        parseFiles(allFiles);//解析文件，获得类及导入的次数
+        topImport(10);//获取前n个类
     }
 
+    /**
+     * 取前n个
+     * @param topn
+     */
     private void topImport(int topn) {
         TreeMultimap<Integer, String> treeMultimap = TreeMultimap.create();
-        Multimaps.invertFrom(this.map, treeMultimap);
-        List<Integer> topNumbers = Ordering.natural().greatestOf(treeMultimap.keySet(), topn);
+        Multimaps.invertFrom(this.map, treeMultimap);// Key Value 倒置，Key 相同时，value为Set（一对多），不会丢失数据。使用TreeMultiMap，key有序，便于后续的排序
+        List<Integer> topNumbers = Ordering.natural().greatestOf(treeMultimap.keySet(), topn);// 按照 Key 排序
         int index = 0;
-        for (Integer topNumber : topNumbers) {
+        for (Integer topNumber : topNumbers) {// 打印前n个class，当出现个数相同时，按照字典序排序
             Set<String> strings = treeMultimap.get(topNumber);
             for (String string : strings) {
                 System.out.println(string);
