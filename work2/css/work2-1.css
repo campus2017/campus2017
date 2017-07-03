@@ -1,0 +1,32 @@
+#main{
+	width: 100%;
+}
+.mask {
+	position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,.75);
+    z-index: 1000;
+}
+.panle {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+	transform: translate(-50%,-50%);
+    width: 800px;
+    height: 546px;
+    background: url(../images/layer.png) no-repeat;
+    z-index: 101;
+}
+.close-btn {
+	position: absolute;
+	top: -16px;
+    right: -16px;
+	width: 32px;
+    height: 32px;
+    background: url(../images/close.png) no-repeat;
+    
+}
+.close-btn:hover{
+    background: url(../images/close_hover.png) no-repeat;
+}
