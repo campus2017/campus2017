@@ -12,6 +12,9 @@
 li {
   list-style: none;
 }
+.fl {
+  float: left;
+}
 .box {
   width: 880px;
   margin: 0 auto;
@@ -61,18 +64,115 @@ li {
   margin-top: 20px;
   border-top: 4px solid #ffb400
 }
-.list table{
+.list .head {
   width: 100%;
-  border-spacing: 0;
+  height: 60px;
+  line-height: 60px;
+  background: #26b4d3;
+  color: #fff
 }
-.list thead {
+.list li {
+  padding-left: 20px
+}
+.list .head li {
+  width: 120px;
+  float: left;
+  text-align: center;
+}
+.body {
+  background: #f3fbfd
+}
+.info {
+  width: 120px;
+  height: 80px;
+  padding-left: 20px
+}
+.body li {
+  width: 100%;
+  padding: 15px 0;
+}
+.flyTime {
+  position: relative;
+  height: 80px;
+}
+.startTime {
+  width: 110px;
+  text-align: right;
+}
+.start-t {
+  font-size: 24px;
+}
+.start-p {
+  margin-top: 5px
+}
+.wayTime {
+  width: 210px;
+  margin-top: 7px;
+  text-align: center;
+}
+.stay-p {
+  width: 100px;
+  display: inline-block;
+  margin-top: 10px;
+  line-height: 24px;
+}
+.stay-p .flag {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
   background: #26b4d3;
   color: #fff;
 }
-.list th {
-  height: 40px;
-  font-weight: normal;
+.arriveTime {
+  text-align: left;
 }
+.timeBack {
+  position: absolute;
+  top: 25px;
+  left: 70px;
+  width: 300px;
+  height: 10px;
+  background: url(./timebg.png) no-repeat 100% 100%;
+  background-size: 100%;
+}
+.back {
+  margin-top: 20px
+}
+.state {
+  width: 80px;
+  padding: 30px 25px;
+  text-align: right;
+}
+.state-s {
+  margin-top: 10px;
+  color: #0e83bf;
+}
+.state-p {
+  color: #ff7200;
+  font-size: 12px;
+}
+.minPrice {
+  width: 120px;
+  padding: 30px;
+  text-align: right;
+}
+.minPrice-p span{
+  color: #0e83bf
+}
+.minPrice-p .num {
+  font-size: 32px;
+}
+.minPrice-b {
+  color: #666;
+}
+.minPrice-btn {
+  display: inline-block;
+  width: 80px;
+  height: 60px;
+  background: url(./buybtn.png) no-repeat;
+}
+
     </style>
   </head>
   <body>
@@ -126,23 +226,92 @@ li {
       </div>
     </div>
     <div class="list">
-      <table>
-        <thead>
-          <th>航班信息</th>
-          <th>起飞时间</th>
-          <th>旅行时长</th>
-          <th>当地降落时间</th>
-          <th>推荐网站</th>
-          <th>最低报价</th>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <ul class="head clearfix">
+        <li>航班信息</li>
+        <li>起飞时间</li>
+        <li>旅行总时长</li>
+        <li>当地降落时间</li>
+        <li>推荐网站</li>
+        <li>最低报价</li>
+      </ul>
+      <ul class="body">
+        <li class="clearfix">
+          <div class="fl">
+            <div class="info">
+              <span>达美航空</span>
+              <span>DL128 330(宽)</span> <span>共享</span>
+              <span>DL4785 CRJ(小)</span>
+            </div>
+            <div class="info back">
+              <span>达美航空</span>
+              <span>DL128 330(宽)</span> <span>共享</span>
+              <span>DL4785 CRJ(小)</span>
+            </div>
+          </div>
+          <div class="fl">
+            <div class="flyTime">
+              <div class="fl startTime">
+                <div class="start-t">01:20</div>
+                <div class="start-p">首都机场</div>
+              </div>
+              <div class="fl wayTime">
+                <div class="">约16小时</div>
+                <div class="stay-p">
+                  <span class="flag">转</span>旧金山SFO
+                  <span class="flag">停</span>洛杉矶机场
+                </div>
+              </div>
+              <div class="fl arriveTime">
+                <div class="start-t">17:15 <span>+1天</span></div>
+                <div class="start-p">首都机场</div>
+              </div>
+              <div class="timeBack"></div>
+            </div>
+            <div class="flyTime back">
+              <div class="fl startTime">
+                <div class="start-t">01:20</div>
+                <div class="start-p">首都机场</div>
+              </div>
+              <div class="fl wayTime">
+                <div class="">约16小时</div>
+                <div class="stay-p">
+                  <span class="flag">转</span>旧金山SFO
+                  <span class="flag">停</span>洛杉矶机场
+                </div>
+              </div>
+              <div class="fl arriveTime">
+                <div class="start-t">17:15 <span>+1天</span></div>
+                <div class="start-p">首都机场</div>
+              </div>
+              <div class="timeBack"></div>
+            </div>
+          </div>
+          <div class="fl state">
+            <div class="state-s">
+              达美航空
+            </div>
+            <div class="state-p">
+              ￥4000
+            </div>
+            <div class="state-s">
+              留学生票
+            </div>
+            <div class="state-p">
+              ￥4000
+            </div>
+          </div>
+          <div class="fl minPrice">
+            <div class="minPrice-p">
+              <span>￥</span><span class="num">2259</span>票价
+            </div>
+            <div class="minPrice-b">
+              ￥2784税费
+            </div>
+            <div class="minPrice-btn">
+            </div>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
   </body>
