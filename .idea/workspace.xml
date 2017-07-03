@@ -1,168 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="66e8e715-025d-42ca-8f69-faebab1d470b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/.idea/artifacts/CharacterCounter_war.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/.idea/artifacts/CharacterCounter_war_exploded.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/.idea/compiler.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_1_11.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/.idea/libraries/Maven__ch_qos_logback_logback_core_1_1_11.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/.idea/libraries/Maven__com_fasterxml_classmate_1_3_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_8_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_8_8.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_8_8.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/.idea/libraries/Maven__javax_servlet_jstl_1_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/.idea/libraries/Maven__javax_validation_validation_api_1_1_0_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/.idea/libraries/Maven__junit_junit_3_8_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_8_5_14.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_8_5_14.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_8_5_14.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/.idea/libraries/Maven__org_aspectj_aspectjrt_1_8_9.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/.idea/libraries/Maven__org_hibernate_hibernate_validator_5_3_5_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_0_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_21.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_25.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/.idea/libraries/Maven__org_slf4j_log4j_over_slf4j_1_7_25.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_21.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/.idea/libraries/Maven__org_springframework_boot_spring_boot_1_5_3_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_1_5_3_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_1_5_3_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_1_5_3_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_1_5_3_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_1_5_3_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/.idea/libraries/Maven__org_springframework_data_spring_data_commons_1_12_5_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_1_10_5_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/.idea/libraries/Maven__org_springframework_spring_aop_4_3_5_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/.idea/libraries/Maven__org_springframework_spring_beans_4_3_5_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/.idea/libraries/Maven__org_springframework_spring_context_4_3_5_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/.idea/libraries/Maven__org_springframework_spring_core_4_3_5_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/.idea/libraries/Maven__org_springframework_spring_expression_4_3_5_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/.idea/libraries/Maven__org_springframework_spring_jdbc_4_2_8_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/.idea/libraries/Maven__org_springframework_spring_orm_4_2_8_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/.idea/libraries/Maven__org_springframework_spring_tx_4_2_8_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/.idea/libraries/Maven__org_springframework_spring_web_4_3_8_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/.idea/libraries/Maven__org_springframework_spring_webmvc_4_3_8_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/.idea/libraries/Maven__org_yaml_snakeyaml_1_17.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/src/main/java/controller/MainController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/src/main/java/domain/Context.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/src/main/java/domain/Statistics.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/src/main/java/utils/ContextService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/src/main/java/utils/ContextServiceImplements.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/src/main/webapp/WEB-INF/pages/index.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/src/main/webapp/WEB-INF/pages/index11.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/src/main/webapp/WEB-INF/web.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/target/classes/controller/MainController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/target/classes/domain/Context.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/target/classes/domain/Statistics.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/target/classes/utils/ContextService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/target/classes/utils/ContextServiceImplements.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/target/mvc.war" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/target/mvc/META-INF/MANIFEST.MF" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/target/mvc/WEB-INF/classes/controller/MainController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/target/mvc/WEB-INF/classes/domain/Context.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/target/mvc/WEB-INF/classes/domain/Statistics.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/target/mvc/WEB-INF/classes/utils/ContextService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/target/mvc/WEB-INF/classes/utils/ContextServiceImplements.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/target/mvc/WEB-INF/lib/aspectjrt-1.8.9.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/target/mvc/WEB-INF/lib/classmate-1.3.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/target/mvc/WEB-INF/lib/commons-logging-1.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/target/mvc/WEB-INF/lib/hibernate-validator-5.3.5.Final.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/target/mvc/WEB-INF/lib/jackson-annotations-2.8.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/target/mvc/WEB-INF/lib/jackson-core-2.8.8.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/target/mvc/WEB-INF/lib/jackson-databind-2.8.8.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/target/mvc/WEB-INF/lib/jboss-logging-3.3.0.Final.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/target/mvc/WEB-INF/lib/jcl-over-slf4j-1.7.21.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/target/mvc/WEB-INF/lib/jstl-1.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/target/mvc/WEB-INF/lib/jul-to-slf4j-1.7.25.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/target/mvc/WEB-INF/lib/log4j-over-slf4j-1.7.25.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/target/mvc/WEB-INF/lib/logback-classic-1.1.11.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/target/mvc/WEB-INF/lib/logback-core-1.1.11.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/target/mvc/WEB-INF/lib/slf4j-api-1.7.21.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/target/mvc/WEB-INF/lib/snakeyaml-1.17.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/target/mvc/WEB-INF/lib/spring-aop-4.3.5.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/target/mvc/WEB-INF/lib/spring-beans-4.3.5.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/target/mvc/WEB-INF/lib/spring-boot-1.5.3.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/target/mvc/WEB-INF/lib/spring-boot-autoconfigure-1.5.3.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/target/mvc/WEB-INF/lib/spring-boot-starter-1.5.3.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/target/mvc/WEB-INF/lib/spring-boot-starter-logging-1.5.3.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/target/mvc/WEB-INF/lib/spring-boot-starter-tomcat-1.5.3.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/target/mvc/WEB-INF/lib/spring-boot-starter-web-1.5.3.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/target/mvc/WEB-INF/lib/spring-context-4.3.5.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/target/mvc/WEB-INF/lib/spring-core-4.3.5.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/target/mvc/WEB-INF/lib/spring-data-commons-1.12.5.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/target/mvc/WEB-INF/lib/spring-data-jpa-1.10.5.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/target/mvc/WEB-INF/lib/spring-expression-4.3.5.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/target/mvc/WEB-INF/lib/spring-jdbc-4.2.8.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/target/mvc/WEB-INF/lib/spring-orm-4.2.8.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/target/mvc/WEB-INF/lib/spring-tx-4.2.8.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/target/mvc/WEB-INF/lib/spring-web-4.3.8.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/target/mvc/WEB-INF/lib/spring-webmvc-4.3.8.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/target/mvc/WEB-INF/lib/tomcat-embed-core-8.5.14.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/target/mvc/WEB-INF/lib/tomcat-embed-el-8.5.14.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/target/mvc/WEB-INF/lib/tomcat-embed-websocket-8.5.14.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/target/mvc/WEB-INF/lib/validation-api-1.1.0.Final.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/target/mvc/WEB-INF/mvc-dispatcher-servlet.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/target/mvc/WEB-INF/pages/index.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/target/mvc/WEB-INF/pages/index11.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CharacterCounter/target/mvc/WEB-INF/web.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CountMostImport/.idea/libraries/Maven__junit_junit_4_10.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CountMostImport/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CountMostImport/.idea/uiDesigner.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CountMostImport/.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CountMostImport/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CountMostImport/src/main/java/CountMostImport.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CountMostImport/src/main/java/MostImportClass.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CountMostImport/src/main/java/TopK.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CountMostImport/src/test/java/TestTopK.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/EffectiveLines/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/EffectiveLines/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/EffectiveLines/.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/EffectiveLines/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/EffectiveLines/out/production/EffectiveLines/EffectiveLines.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/EffectiveLines/out/production/EffectiveLines/Test2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/EffectiveLines/src/EffectiveLines.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/EffectiveLines/src/Test2.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ExchangeRate/.idea/compiler.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ExchangeRate/.idea/libraries/Maven__com_github_virtuald_curvesapi_1_04.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ExchangeRate/.idea/libraries/Maven__commons_codec_commons_codec_1_10.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ExchangeRate/.idea/libraries/Maven__org_apache_commons_commons_collections4_4_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ExchangeRate/.idea/libraries/Maven__org_apache_poi_poi_3_15.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ExchangeRate/.idea/libraries/Maven__org_apache_poi_poi_ooxml_3_15.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ExchangeRate/.idea/libraries/Maven__org_apache_poi_poi_ooxml_schemas_3_15.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ExchangeRate/.idea/libraries/Maven__org_apache_xmlbeans_xmlbeans_2_6_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ExchangeRate/.idea/libraries/Maven__org_jetbrains_annotations_15_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ExchangeRate/.idea/libraries/Maven__org_jsoup_jsoup_1_7_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ExchangeRate/.idea/libraries/Maven__stax_stax_api_1_0_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ExchangeRate/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ExchangeRate/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ExchangeRate/.idea/uiDesigner.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ExchangeRate/.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ExchangeRate/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ExchangeRate/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ExchangeRate/src/main/java/com/qunar/entity/Rate.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ExchangeRate/src/main/java/com/qunar/main/Main.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ExchangeRate/src/main/java/com/qunar/utils/DownHtml.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ExchangeRate/src/main/java/com/qunar/utils/ExportToExcel.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ExchangeRate/src/main/java/com/qunar/utils/ParseHtml.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ExchangeRate/src/main/resources/js.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ExchangeRate/target/classes/com/qunar/entity/Rate.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ExchangeRate/target/classes/com/qunar/main/Main.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ExchangeRate/target/classes/com/qunar/utils/DownHtml.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ExchangeRate/target/classes/com/qunar/utils/ExportToExcel.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ExchangeRate/target/classes/com/qunar/utils/ParseHtml.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ExchangeRate/target/classes/js.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Top10Ip/Top10Ip.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/linux2/linux2.sh" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CharacterCounter/CharacterCounter.iml" afterPath="$PROJECT_DIR$/CharacterCounter/CharacterCounter.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EffectiveLines/EffectiveLines.iml" afterPath="$PROJECT_DIR$/EffectiveLines/EffectiveLines.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ExchangeRate/ExchangeRate.iml" afterPath="$PROJECT_DIR$/ExchangeRate/ExchangeRate.iml" />
-    </list>
+    <list default="true" id="66e8e715-025d-42ca-8f69-faebab1d470b" name="Default" comment="" />
     <ignored path="campus2017.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -304,7 +143,7 @@
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="E:/campus2017" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -772,7 +611,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="1" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
