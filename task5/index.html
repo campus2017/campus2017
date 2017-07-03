@@ -83,9 +83,11 @@ li {
   background: #f3fbfd
 }
 .info {
-  width: 120px;
+  width: 128px;
   height: 80px;
-  padding-left: 20px
+  padding-left: 30px;
+  margin-left: 20px;
+  background: url(./logo.png) no-repeat
 }
 .body li {
   width: 100%;
@@ -96,7 +98,7 @@ li {
   height: 80px;
 }
 .startTime {
-  width: 110px;
+  width: 80px;
   text-align: right;
 }
 .start-t {
@@ -130,7 +132,7 @@ li {
 .timeBack {
   position: absolute;
   top: 25px;
-  left: 70px;
+  left: 40px;
   width: 300px;
   height: 10px;
   background: url(./timebg.png) no-repeat 100% 100%;
@@ -163,8 +165,11 @@ li {
 .minPrice-p .num {
   font-size: 32px;
 }
-.minPrice-b {
+.gray {
   color: #666;
+}
+.share {
+  color: #25b4d2
 }
 .minPrice-btn {
   display: inline-block;
@@ -238,14 +243,14 @@ li {
         <li class="clearfix">
           <div class="fl">
             <div class="info">
-              <span>达美航空</span>
-              <span>DL128 330(宽)</span> <span>共享</span>
-              <span>DL4785 CRJ(小)</span>
+              <div><span>达美航空</span></div>
+              <div><span class="gray">DL128 330(宽)</span> <span class="share">共享</span></div>
+              <div><span class="gray">DL4785 CRJ(小)</span></div>
             </div>
             <div class="info back">
-              <span>达美航空</span>
-              <span>DL128 330(宽)</span> <span>共享</span>
-              <span>DL4785 CRJ(小)</span>
+              <div><span>达美航空</span></div>
+              <div><span class="gray">DL128 330(宽)</span> <span class="share">共享</span></div>
+              <div><span class="gray">DL4785 CRJ(小)</span></div>
             </div>
           </div>
           <div class="fl">
@@ -304,7 +309,7 @@ li {
             <div class="minPrice-p">
               <span>￥</span><span class="num">2259</span>票价
             </div>
-            <div class="minPrice-b">
+            <div class="minPrice-b gray">
               ￥2784税费
             </div>
             <div class="minPrice-btn">
