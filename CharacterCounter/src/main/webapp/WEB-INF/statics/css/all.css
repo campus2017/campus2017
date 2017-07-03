@@ -1,0 +1,62 @@
+.body{
+    width: 600px ;
+    MARGIN: 0 AUTO ;
+}
+.first{
+    font-size: 18px ;
+    font-weight: bold ;
+    margin-top: 40px ;
+}
+.all{
+    position: relative ;
+}
+
+.fileupload{
+    width: 80px ;
+    height: 40px ;
+    background: #0FF ;
+    position: absolute;
+    top: 50px;
+}
+.filename{
+    position: absolute;
+    margin-left: 100px ;
+    top: 60px;
+}
+
+.leftbutton{
+    position: absolute;
+    top: 0px;
+    left: 510px;
+}
+.count{
+    width: 80px ;
+    height: 40px ;
+    background: #0FF ;
+}
+.cleanword{
+    width: 80px ;
+    height: 40px ;
+    background: #FF9933 ;
+    margin-top: 20px;
+}
+.words{
+    width: 500px;
+    height: 110px;
+    margin-top: 30px;
+}
+
+.down{
+    position: absolute ;
+    top: 170px;
+}
+table{
+    border-collapse: collapse ;
+    margin-top: 10px;
+}
+th,td{
+    border: 1px solid black;
+    width: 250px ;
+    height: 40px ;
+    text-align: center ;
+}
