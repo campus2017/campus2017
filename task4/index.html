@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title></title>
+    <style media="screen">
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background: #f3f3f3;
+        }
+
+        @font-face {font-family: "iconfont";
+          src: url('iconfont.eot?t=1499076186697'); /* IE9*/
+          src: url('iconfont.eot?t=1499076186697#iefix') format('embedded-opentype'), /* IE6-IE8 */
+          url('iconfont.woff?t=1499076186697') format('woff'), /* chrome, firefox */
+          url('iconfont.ttf?t=1499076186697') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+          url('iconfont.svg?t=1499076186697#iconfont') format('svg'); /* iOS 4.1- */
+        }
+
+        .iconfont {
+          font-family:"iconfont" !important;
+          font-size:16px;
+          font-style:normal;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+
+        .icon-ring:before { content: "\e646"; }
+
+        .icon-right:before {
+            content: "\e650";
+            color: #979797;
+        }
+
+        .icon-qunaer:before {
+            content: "\e603";
+            font-size: 30px;
+        }
+
+        .icon-down:before { content: "\e607"; }
+
+        .icon-bao-copy:before { content: "\e61d"; }
+
+        .icon-left:before { content: "\ec88"; }
+
+        .icon-rili:before { content: "\e682"; }
+
+        .icon-reshuilinyu:before { content: "\e66a"; }
+
+        .icon-wifi:before { content: "\e643"; }
+
+        .icon-up:before { content: "\e78a"; }
+
+        .icon-xiyi:before { content: "\e767"; }
+
+        .title {
+            background: #25a4bb;
+            height: 45px;
+            line-height: 45px;
+            color: #fff;
+            position: relative;
+            border-bottom: 1px solid #1b7a8b;
+        }
+        .title-content {
+            text-align: center;
+            font-size: 18px;
+        }
+        .title-prev, .title-home {
+            width: 45px;
+            height: 45px;
+            position: absolute;
+            text-align: center;
+            top: 0;
+        }
+        .title-prev {
+            left: 0;
+        }
+        .title-home {
+            line-height: 18px;
+            right: 0;
+            font-size: 12px;
+        }
+        .pic {
+            position: relative;
+            height: 150px;
+            background: url('./img.jpg') #fff;
+        }
+        .pic-amount {
+            position: absolute;
+            padding: 5px;
+            right: 0;
+            bottom: 0;
+            color: #fff;
+            background: #000;
+            opacity: .7;
+            font-size: 14px;
+        }
+        .descrption {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+            background: #fff;
+        }
+        .descrption-item {
+            border-bottom: 1px dashed #ccc;
+            padding: 10px;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        .descrption-item.last {
+            border: none;
+        }
+        .descrption-title {
+            width: 80%;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .gray {
+            color: #ccc;
+            font-size: 12px;
+            white-space: nowrap;
+        }
+        .descrption-icons {
+            color: #29b4c4;
+        }
+        .point {
+            font-size: 24px;
+            color: #25a4bb;
+        }
+        .descrption-right, .duration-right {
+            position: absolute;
+            right: 0;
+            color: #25a4bb;
+        }
+        .duration {
+            margin-top: 10px;
+            position: relative;
+            background: #fff;
+            border-top: 1px solid #ccc;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .other-item {
+            padding: 15px;
+            background: #fff;
+            border-top: 1px solid #ccc;
+        }
+        .other-item > span {
+            color: #2bc6ed;
+        }
+        .other-item.last {
+            border-bottom: 1px solid #ccc;
+        }
+        .footer {
+            color: #999;
+            padding: 15px;
+            font-size: 12px;
+            border-bottom: 1px solid #ccc;
+        }
+        .copyright {
+            color: #999;
+            text-align: center;
+            padding: 10px;
+        }
+        .selects {
+            background: #fff;
+            padding: 15px;
+            border-top: 1px solid #ccc;
+            display: flex;
+            align-items: center;
+        }
+        .selects-right {
+            position: absolute;
+            right: 10px;
+        }
+        .prize-color {
+            color: #f60;
+        }
+        .prize-compare {
+            display: inline-block;
+            color: #fff;
+            background: #1ba9ba;
+            font-size: 14px;
+            padding: 3px;
+            border-radius: 5px;
+        }
+        .details {
+            border-top: 1px solid #ccc;
+            display: flex;
+            align-items: center;
+            padding: 10px 5px 10px 5px;
+        }
+        .details-left {
+            flex: 1;
+        }
+        .detail-prize {
+            padding-right: 5px;
+            text-align: right;
+        }
+        .order-btn {
+            text-align: center;
+            color: #fff;
+            background: #f60;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            width: 48px;
+            height: 50px;
+        }
+        .order-btn:before {
+            content: '订';
+            display: block;
+            line-height: 1.6;
+        }
+        .order-btn > span {
+            display: block;
+            color: #f60;
+            background: #fff;
+            border: 1px solid;
+            border-radius: 0 0 5px 5px;
+            font-size: 14px;
+            padding: 0 2px 0 2px;
+        }
+        .detail-more {
+            text-align: center;
+            border-top: 1px solid #ccc;
+            color: #25a4bb;
+            padding: 15px;
+        }
+        .most-tip {
+            font-size: 12px;
+            border: 1px solid #ff9036;
+            color: #ff9036;
+            background: #fff;
+        }
+        .most-tip .first {
+            color: #fff;
+            background: #ff9036;
+        }
+        .bg-green, .bg-red, .bg-orange {
+            color: #fff;
+            font-size: 12px;
+        }
+        .bg-green {
+            background: #25a4bb;
+        }
+        .bg-red {
+            background: #ff0000;
+        }
+        .bg-orange {
+            background: #ff9036;
+        }
+    </style>
+</head>
+<body>
+    <div class="title">
+        <div class="title-content">北京有怡公寓</div>
+        <div class="title-prev"><i class="iconfont icon-left"></i></div>
+        <div class="title-home"><i class="iconfont icon-qunaer"></i><br/>首页</div>
+    </div>
+    <div class="pic">
+        <div class="pic-amount">共9张</div>
+    </div>
+    <div class="descrption">
+        <div class="descrption-item">
+            <div class="descrption-left descrption-title"><span class="point">3.9</span>分 / 好评65 差评9</div>
+            <div class="descrption-right">看点评<i class="iconfont icon-right"></i></div>
+        </div>
+        <div class="descrption-item">
+            <div class="descrption-left">
+                <div class="descrption-title">北京市朝阳区西大望路甲12号北区</div>
+                <div class="gray">[商圈]大望路区域</div>
+            </div>
+            <div class="descrption-right">看地图<i class="iconfont icon-right"></i></div>
+        </div>
+        <div class="descrption-item last">
+            <div class="descrption-left">
+                <div class="descrption-title">2014年开业 4008909123</div>
+                <div class="descrption-icons">
+                    <i class="iconfont icon-wifi"></i>
+                    <i class="iconfont icon-ring"></i>
+                    <i class="iconfont icon-bao-copy"></i>
+                    <i class="iconfont icon-reshuilinyu"></i>
+                    <i class="iconfont icon-xiyi"></i>
+                </div>
+            </div>
+            <div class="descrption-right">酒店设施<i class="iconfont icon-right"></i></div>
+        </div>
+    </div>
+    <div class="duration">
+        <div>02月27日入住 02月28日离店</div>
+        <div class="duration-right">共1晚<i class="iconfont icon-right"></i></div>
+    </div>
+    <div class="selects">
+        <div class="selects-left">
+            <div class="">精致家庭房</div>
+            <div class="gray">有窗</div>
+            <div class="">
+                <span class="bg-green">团</span>
+                <span class="bg-green">夜销</span>
+                <span class="bg-red">可返星券</span>
+            </div>
+        </div>
+        <div class="selects-right">
+            <span class="prize-color">￥<big>122</big></span>起
+            <span class="prize-compare">比价<i class="iconfont icon-up"></i></span>
+        </div>
+    </div>
+    <div class="details">
+        <div class="details-left">
+            <div class="">酒店直销</div>
+            <div class="gray">(限时抢购，节省33元)-优惠价</div>
+            <span class="bg-red">可返星券</span>
+        </div>
+        <div class="detail-prize">
+            <span class="prize-color">￥<big>135</big></span>
+            <div class="gray">付款￥135</div>
+            <div class="gray">可返：￥133星券</div>
+        </div>
+        <div class="order-btn  order-icon">
+            <span>在线付</span>
+        </div>
+    </div>
+    <div class="details">
+        <div class="details-left">
+            <div class="">酒店直销 <span class="bg-orange">最便宜</span></div>
+            <div class="gray">(今日特价)-优惠价</div>
+        </div>
+        <div class="detail-prize">
+            <span class="prize-color">￥<big>122</big></span>
+            <div class="gray">付款￥135</div>
+            <div class="gray">可返：￥13</div>
+        </div>
+        <div class="order-btn  order-icon">
+            <span>在线付</span>
+        </div>
+    </div>
+    <div class="details">
+        <div class="details-left">
+            <div class="">酒店夜销</div>
+            <span class="most-tip"><span class="first">最</span>可靠</span>
+            <span class="most-tip"><span class="first">最</span>快确认</span>
+        </div>
+        <div class="detail-prize">
+            <span class="prize-color">￥<big>168</big></span>
+        </div>
+        <div class="order-btn  order-icon">
+            <span>在线付</span>
+        </div>
+    </div>
+    <div class="details">
+        <div class="details-left">
+            <div class="">五星旅游网</div>
+            <div class="gray">(今日特价)-优惠价</div>
+        </div>
+        <div class="detail-prize">
+            <span class="prize-color">￥<big>129</big></span>
+            <div class="gray">付款￥135</div>
+            <div class="gray">可返：￥6</div>
+        </div>
+        <div class="order-btn  order-icon">
+            <span>在线付</span>
+        </div>
+    </div>
+    <div class="details">
+        <div class="details-left">
+            <div class="">爱游网</div>
+            <div class="gray">(今日特价)-优惠价</div>
+        </div>
+        <div class="detail-prize">
+            <span class="prize-color">￥<big>124</big></span>
+            <div class="gray">付款￥135</div>
+            <div class="gray">可返：￥11</div>
+        </div>
+        <div class="order-btn  order-icon">
+            <span>在线付</span>
+        </div>
+    </div>
+    <div class="detail-more">更多报价...</div>
+    <div class="selects">
+        <div class="selects-left">
+            <div class="">温馨家庭房</div>
+            <div class="gray">25m<sup>2</sup></div>
+            <div class="">
+                <span class="bg-green">团</span>
+                <span class="bg-green">夜销</span>
+                <span class="bg-red">可返星券</span>
+            </div>
+        </div>
+        <div class="selects-right">
+            <span class="prize-color">￥<big>135</big></span>起
+            <span class="prize-compare">比价<i class="iconfont icon-down"></i></span>
+        </div>
+    </div>
+    <div class="selects">
+        <div class="selects-left">
+            <div class="">标准房</div>
+            <div class="gray">有窗 双床 25m<sup>2</sup></div>
+            <div class="">
+                <span class="bg-green">夜销</span>
+                <span class="bg-red">可返星券</span>
+            </div>
+        </div>
+        <div class="selects-right">
+            <span class="prize-color">￥<big>228</big></span>起
+            <span class="prize-compare">比价<i class="iconfont icon-down"></i></span>
+        </div>
+    </div>
+    <div class="selects">
+        <div class="selects-left">
+            <div class="">豪华大床房</div>
+            <div class="">
+                <span class="bg-green">夜销</span>
+            </div>
+        </div>
+        <div class="selects-right">
+            <span class="prize-color">￥<big>899</big></span>起
+            <span class="prize-compare">比价<i class="iconfont icon-down"></i></span>
+        </div>
+    </div>
+    <div class="other-item">附近热销店家<span>(85家)</span></div>
+    <div class="other-item last">同类低价酒店<span>(45家)</span></div>
+    <div class="footer">注：房型信息以代理商、酒店及订单填写页实际内容为准，去哪儿不保证所有信息的准确性，仅供参考。</div>
+    <div class="copyright">Qunar 京ICP备05021087 意见反馈</div>
+</body>
+</html>
