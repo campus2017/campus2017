@@ -1,0 +1,6 @@
+题目：
+inux下如何从本地目录dir1拷贝一个文件到目标机l-test.dev.cn1的/tmp目录下？请写出具体语句
+解析：
+scp就是security copy，用于将文件或者目录从一个Linux系统拷贝到另一个Linux系统下。scp传输数据用的是SSH协议，保证了数据传输的安全，其格式如下：scp 远程用户名@IP地址：文件的绝对路径本地Linux系统路径 scp 本地Linux系统文件路径 远程用户名@IP地址：远程系统文件绝对路径名scp使用第一种格式是将远程Linux系统上的某个文件或者目录拷贝到本地Linux系统上来，使用第二种是将本地的某个文件或者目录拷贝到远程Linux系统的某个路径下。
+命令：
+scp /home/ dir1 /etc.tar.gz l-test.dev.cn1@192.168.60.168:/tmp

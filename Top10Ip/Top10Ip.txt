@@ -1,0 +1,26 @@
+一、	如何统计所有日志文件（tomcat的access log）中，列出访问次数最多的10个IP，以及对应的次数。
+分析：
+Access Log Valve用来创建日志文件，格式与标准的web server日志文件相同。可以使用用日志分析工具对日志进行分析，跟踪页面点击次数、用户会话的活动等。Access Log Valve的很多配置和行为特性与File Logger相同，包括每晚午夜自动切换日志文件。Access Log  Valve可以和任何Catalina容器关联，记录该容器处理的所有请求。
+样式：
+<Valve className="org.apache.catalina.valves.AccessLogValve"  directory="logs" prefix="localhost_access_log." suffix=".txt"  pattern="%{X-Forwarded-For-Pound}i %l %u %t "%r" %s %b %T  "%{HTTP_X_UP_CALLING_LINE_ID}i" "%{x-up-calling-line-id}i" "%{User-Agent}i"" resolveHosts="false"/>
+	代表意义：
+className  实现的Java类名。必须被设置成 org.apache.catalina.valves.AccessLogValve。   directory  存放日志文件的目录，可以是相对路径或者绝对路径。如果使用相对路径， 是指相对于 $CATALINA_HOME的路径。如果不指定directory属性，缺省 值是“logs”（相对于 $CATALINA_HOME）   
+pattern  需要记录的请求/响应不同信息域的格式布局。如果是“common”或者 “combine”，说明选择标准格式。下面会有关于配置这个属性的更多信 息。  
+prefix  日志文件名的前缀。如果没有指定，缺省值是“access_log.”。如果不 想使用前缀，使用长度为0的字符串。  
+resolveHosts  将远端主机的IP地址通过DNS查询转换成主机名，设为true。如果为 false，忽略DNS查询，报告远端的IP地址。   
+suffix  日志文件名的后缀。如果没有指定，缺省值是“”。如果不想使用后缀， 使用长度为0的字符串。   
+rotatable 缺省值为true，用来决定日志是否翻转的标志。如果为false，日志文件
+命令：
+
+
+cat access_log |awk '{print $1}'|uniq -c |sort -rn |head -10
+
+
+
+解释：
+
+awk 首先将每条日志中的IP抓出来，如日志格式被自定义过，可以 -F 定义分隔符和 print指定列；
+sort进行初次排序，为的使相同的记录排列到一起；
+upiq -c 合并重复的行，并记录重复次数。
+head进行前十名筛选；
+sort -nr按照数字进行倒叙排序。
