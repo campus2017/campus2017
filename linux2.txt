@@ -1,0 +1,3 @@
+#从本地目录 dir1 拷贝一个文件到目标机 l-test.dev.cn1 的/tmp 目录
+
+scp /dir1/filename root@1-test.dev.cn1:/tmp

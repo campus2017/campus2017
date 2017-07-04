@@ -1,91 +1,49 @@
-import java.io.*;
-
 /**
- * Created by isc on 2016/11/20.
+ * Created by dxq on 2017/6/20.
  */
+ import java.io.BufferedReader;
+ import java.io.File;
+ import java.io.FileNotFoundException;
+ import java.io.FileReader;
+ import java.io.IOException;
+ import java.util.Scanner;
+
 public class EffectiveLines {
 
-    public static void main(String[]args){
-        String filePath = "G:\\IDEA_Workspace_2016_12_16\\EffectiveLines\\src\\Test2.java";
-        System.out.println(calculateLinesAccordingPath(filePath));
-    }
-
-    private static String calculateLinesAccordingPath(String path) {
-        File file = new File(path);
-        return countCodeLines(file);
-    }
-
     /**
-     *
-     * @param file
-     * @return 行数
+     * @param args
      */
-    private static String countCodeLines(File file){
-        int lines=0;
-        //判断是否为.java文件
-        if(isJavaFile(file)){
-            FileReader filereader = null;
-            BufferedReader bufferReader=null;
-            try{
-                filereader = new FileReader(file);
-                bufferReader = new BufferedReader(filereader);
-                String lineContent;
-                while(bufferReader.ready()){
-                    //去掉开头可能存在的空格
-                    lineContent = bufferReader.readLine().trim();
-                   if(isBlankLine(lineContent))
-                        continue;
-                    if(isAnnotation(lineContent))
-                        continue;
-                    lines++;
-                }
-            }catch (Exception e){
-                return e.getMessage();
-            }finally {
-                closeReader(filereader,bufferReader);
-            }
-        }
-        return String.valueOf(lines) ;
-    }
 
-    private static boolean isJavaFile(File file){
-        if(file.getName().matches(".*\\.java$")) {
-            return true;
-        }
-        return false;
-    }
-
-    private static boolean isBlankLine(String lineContent){
-        if(lineContent.matches("^[\\s && [^\\n]]*$"))
-            return true;
-        return false;
-    }
-
-    /*   注释的情况:
-    * 1. /* 2. // 3. * 4.  */
-    private static boolean isAnnotation(String lineContent){
-
-        if((lineContent.matches("^/\\*.*")))  //   表示/*  \\表示转义  \\* —> *
-            return true;
-        if (lineContent.matches("^//.*"))    //  表示//
-            return true;
-        if(lineContent.matches("^\\*.*"))    // 表示 *
-            return true;
-        if(lineContent.matches(".*\\*/"))  //表示  */
-            return true;
-        return  false;
-    }
-
-    private static void closeReader(FileReader fileReader,BufferedReader bufferedReader){
-        if (bufferedReader != null) {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String fileName = scanner.nextLine();
+        File file = new File(fileName);
+        if (file.exists()) {
+           //计算有效代码的行数
+            int linesNum = 0;
+            BufferedReader br = null;
+            String lineBegin = "\\s*/\\*.*";   //多个空格加/*开头的行
+            String lineEnd = ".*\\*/\\s*";     //多个空格加*/结尾的行
+            String annotationLines = "//.*";   //  //注释的行
+            String spaceLines = "\\s*";        //  空白行
             try {
-                bufferedReader.close();
-                if (fileReader != null) {
-                    fileReader.close();
-                }
+                br = new BufferedReader(new FileReader(file));
+                String line = null;
+                while ((line = br.readLine()) != null)
+                    //采用正则表达式判断是否为有效行
+                    if (!(line.matches(lineBegin) && line.matches(lineEnd)) && !(line.matches(lineBegin)) && !(line.matches(lineEnd)) && !(line.matches(spaceLines)) && !(line.matches(annotationLines)))
+                        ++linesNum;
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
             }
+            System.out.println("有效行数：" + linesNum);
+        } else {
+            System.out.println("文件不存在");
         }
+        scanner.close();
     }
+
+
 }
