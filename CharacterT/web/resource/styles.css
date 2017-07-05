@@ -1,0 +1,51 @@
+.main{
+	border-style: solid; 
+	border-width: 1px; 
+	width: 40%;
+	height: 65%;
+	margin: 50px 0 0 0;
+}
+.top{
+	height: 20%;
+}
+.buttom{
+	height: 60%;
+	padding-left: 2cm;
+}
+.head1{
+	padding-left: 1cm; 
+	font-weight: bold;
+}
+.head2{
+	padding-left: 2cm;
+}
+form{
+	padding-left: 2cm;
+}
+.submitButton{
+	width: 15%;
+	color: #FFFFFF; 
+	background-color: #0080FF;
+}
+.clearButton{
+	width: 15%;
+	color: #FFFFFF; 
+	background-color: #FF8000;
+}
+.fileInput, .textInput{
+	width: 50%;
+	height: 80%;
+}
+table
+{
+  border-collapse:collapse;
+}
+table, td, th
+{
+	width: 300px;
+  	border: 1px solid black;
+}
+td, th
+{
+  	text-align: center;  
+}
