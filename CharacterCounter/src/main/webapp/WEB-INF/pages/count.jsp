@@ -33,8 +33,8 @@
                 <form id="uploadform" method="post" action="/upLoadCount" enctype="multipart/form-data">
                     <div class="div0">
                         <a class="file">选择文件
-                            <input type="file" name="file">
-                        </a>
+                        <input type="file" name="file">
+                    </a>
                     </div>
                     <div id="showFileName" class="div1"></div>
                 </form>

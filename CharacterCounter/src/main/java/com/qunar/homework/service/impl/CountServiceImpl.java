@@ -20,6 +20,7 @@ public class CountServiceImpl implements CountService {
     private  CountInfo countInfo;
 
     private void getNum(String str) {
+        printCallStatck();
         String E1 = "[\u4e00-\u9fa5]";// 中文
         String E2 = "[a-zA-Z]";// 英文
         String E3 = "[0-9]";// 数字
@@ -132,4 +133,18 @@ public class CountServiceImpl implements CountService {
         getTop3(input);
         return countInfo;
     }
+    private void printCallStatck() {
+        Throwable ex = new Throwable();
+        StackTraceElement[] stackElements = ex.getStackTrace();
+        String stackTraceInfo="";
+        if (stackElements != null) {
+            logger.info("开始打印堆栈信息:");
+                for (int i = 3; i <9; i++) {
+                    stackTraceInfo +=
+                            stackElements[i].getClassName() + "  " + stackElements[i].getFileName()
+                                    + "  " + stackElements[i].getMethodName()+"  ,  ";
+                }
+            }
+            logger.info("堆栈信息打印完成{}",stackTraceInfo);
+        }
 }
