@@ -19,8 +19,8 @@ public class Main {
             try {
                 FileReader fr = new FileReader(pathName);
                 BufferedReader br = new BufferedReader(fr);
-                String line = br.readLine();
-                while (line != null ){
+                String line;
+                while (br.ready()){
                     line = br.readLine();
                     if (line != null){
                         if ( "".equals(line))
