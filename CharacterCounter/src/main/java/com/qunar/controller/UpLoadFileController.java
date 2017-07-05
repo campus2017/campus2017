@@ -6,6 +6,7 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.io.IOException;
+import java.io.InputStream;
 
 /**
  * Created by xiazihao on 7/3/17.
@@ -13,45 +14,28 @@ import java.io.IOException;
 @Controller
 public class UpLoadFileController {
 
-    //    @RequestMapping(value="/returnStart")
-//    @ResponseBody
-//    public ModelAndView returnStart(){
-//        return new ModelAndView("start");
-//    }
-//
-    @RequestMapping(value = "/uploadFile")
-    public String startUpload() {
-        return "UpLoad";
-    }
 
-    @RequestMapping(value = "/springUploadFile", method = RequestMethod.POST)
+    @RequestMapping(value = "/upLoadFile", method = RequestMethod.POST)
     @ResponseBody
     public ModelAndView addUser(@RequestBody MultipartFile file) throws IOException {
-        ModelAndView mad = new ModelAndView();
+        ModelAndView modelAndView = new ModelAndView();
         MultipartFile myfile = file;
         if (myfile.isEmpty()) {
-            mad.setViewName("error_fileupload");
-            String message = "上传信息为空！";
-            mad.addObject("message", message);
-            return mad;
+            modelAndView.setViewName("start");
+            return modelAndView;
         }
         try {
 
-            mad = new ModelAndView("redirect:/TongJi");
+            modelAndView = new ModelAndView("redirect:/upLoad");
+            modelAndView.addObject("name", myfile.getOriginalFilename());
 
-            mad.addObject("name", myfile.getOriginalFilename());
-
-
-            String nameText = myfile.getOriginalFilename();
-
-
-            return mad;
+            return modelAndView;
 
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-        return mad;
+        modelAndView.setViewName("start");
+        return modelAndView;
     }
 
 }

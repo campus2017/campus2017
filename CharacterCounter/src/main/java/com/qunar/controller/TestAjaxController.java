@@ -5,11 +5,13 @@ import com.qunar.model.Data;
 import com.qunar.model.Most;
 import com.qunar.model.Result;
 import com.qunar.utils.Analyser;
+import com.sun.org.apache.regexp.internal.RE;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.portlet.ModelAndView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,15 +22,18 @@ import java.util.List;
 @Controller
 public class TestAjaxController {
 
-    @RequestMapping(value = "/TongJi", method = RequestMethod.GET)
+    @RequestMapping(value = "/upLoad", method = RequestMethod.GET)
     @ResponseBody
     public List<Result> transRes() {
-        return null;
+        List<Result> resultList = new ArrayList<>();
+        ModelAndView modelAndView = new ModelAndView("start");
+//        modelAndView.addObject(resultList);
+        return resultList;
 
     }
 
 
-    @RequestMapping(value = "/TestAjax", method = RequestMethod.POST)
+    @RequestMapping(value = "/Ajax", method = RequestMethod.POST)
     @ResponseBody
     public List<Result> ajaxT(@RequestBody InputText angular) {
         System.out.print(angular.getText());

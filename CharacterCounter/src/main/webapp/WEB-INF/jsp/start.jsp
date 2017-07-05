@@ -27,13 +27,17 @@
 <label for="">文本输入</label>
 <br/>
 <div id="file1" class="change fixed">
-    <button class="button button-small button-calm "
-            style="height:30px;margin:15px 0 20px 20px ;padding:0 15px;float:left;" ng-click="jumpToUrl('uploadFile')">
-        上传文件
-    </button>
-    <button class="button button-small button-calm "
-            style="height:30px;margin:15px 0 20px 20px ;padding:0 15px;float:left;" ng-click="UpCompute()">统计
-    </button>
+    <%--<button class="button button-small button-calm "--%>
+            <%--style="height:30px;margin:15px 0 20px 20px ;padding:0 15px;float:left;" ng-click="jumpToUrl('uploadFile')">--%>
+        <%--上传文件--%>
+    <%--</button>--%>
+    <%--<button class="button button-small button-calm "--%>
+            <%--style="height:30px;margin:15px 0 20px 20px ;padding:0 15px;float:left;" ng-click="UpCompute()">统计--%>
+    <%--</button>--%>
+        <form name="Form2" action="/CharacterCounter/upLoadFile" method="post"  enctype="multipart/form-data">
+            <input type="file" name="file" value="选择文件">
+            <input type="submit" value="上传文件"/>
+        </form>
 </div>
 
 <div id="file2" class="change fixed" style="width:400px;display:none;">
@@ -70,7 +74,7 @@
     </tr>
     <tr>
         <td style="border:1px solid #000;text-align: center;padding:6px; ">中英文标点符号</td>
-        <td style="border:1px solid #000;text-align: center;padding:6px;">{{tongji.biaodian}}</td>
+        <td style="border:1px solid #000;text-align: center;padding:6px;">{{tongji.punctuation}}</td>
     </tr>
     </tbody>
 </table>
@@ -138,7 +142,7 @@
             } else {
                 $http({
                     method: "POST",
-                    url: "http://localhost:8080/CharacterCounter/TestAjax",
+                    url: "http://localhost:8080/CharacterCounter/Ajax",
                     data: $scope.saveText
                 }).success(function (data, status) {
                     $scope.tongji = data[0].data;
@@ -155,22 +159,22 @@
             $scope.saveText = null;
         }
 
-        $scope.UpCompute = function () {
-            $http({
-                method: "POST",
-                url: "http://localhost:8080/CharacterCounter/TongJi"
-            }).success(function (data, status) {
-                if (data[0] == null) {
-                    alert("并未上传文件！");
-                    $scope.tongji = null;
-                    $scope.lisMostNum = null;
-                } else {
-                    $scope.tongji = data[0].data;
-                    $scope.lisMostNum = data[0].lisMostNum;
-                }
-            })
-
-        }
+//        $scope.UpCompute = function () {
+//            $http({
+//                method: "POST",
+//                url: "http://localhost:8080/CharacterCounter/upLoad"
+//            }).success(function (data, status) {
+//                if (data[0] == null) {
+//                    alert("并未上传文件！");
+//                    $scope.tongji = null;
+//                    $scope.lisMostNum = null;
+//                } else {
+//                    $scope.tongji = data[0].data;
+//                    $scope.lisMostNum = data[0].lisMostNum;
+//                }
+//            })
+//
+//        }
     })
 </script>
 </html>

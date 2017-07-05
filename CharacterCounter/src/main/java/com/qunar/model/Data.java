@@ -6,7 +6,7 @@ package com.qunar.model;
 public class Data {
     private Integer english;
     private Integer chinese;
-    private Integer biaodian;
+    private Integer punctuation;
     private Integer number;
 
     public Integer getEnglish() {
@@ -25,12 +25,12 @@ public class Data {
         this.chinese = chinese;
     }
 
-    public Integer getBiaodian() {
-        return biaodian;
+    public Integer getPunctuation() {
+        return punctuation;
     }
 
-    public void setBiaodian(Integer biaodian) {
-        this.biaodian = biaodian;
+    public void setPunctuation(Integer punctuation) {
+        this.punctuation = punctuation;
     }
 
     public Integer getNumber() {

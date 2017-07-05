@@ -35,7 +35,7 @@ public class Analyser {
         data.setChinese(chinese);
         data.setEnglish(english);
         data.setNumber(number);
-        data.setBiaodian(punctuation);
+        data.setPunctuation(punctuation);
         return data;
     }
 
