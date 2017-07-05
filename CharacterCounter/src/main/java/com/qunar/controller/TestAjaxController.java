@@ -27,7 +27,6 @@ public class TestAjaxController {
     public List<Result> transRes() {
         List<Result> resultList = new ArrayList<>();
         ModelAndView modelAndView = new ModelAndView("start");
-//        modelAndView.addObject(resultList);
         return resultList;
 
     }
@@ -36,15 +35,7 @@ public class TestAjaxController {
     @RequestMapping(value = "/Ajax", method = RequestMethod.POST)
     @ResponseBody
     public List<Result> ajaxT(@RequestBody InputText angular) {
-        System.out.print(angular.getText());
-        String text = angular.getText();
-        text = text.replaceAll(" ", "");
-        text = text.replaceAll("\n", "");
-        Data data = Analyser.tongji(text);
-        List<Most> mostList = Analyser.getMost(text);
-        Result result = new Result(data, mostList);
-        List<Result> resultList = new ArrayList<Result>();
-        resultList.add(result);
-        return resultList;
+        return Analyser.analyse(angular.getText());
+
     }
 }

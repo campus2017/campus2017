@@ -159,22 +159,6 @@
             $scope.saveText = null;
         }
 
-//        $scope.UpCompute = function () {
-//            $http({
-//                method: "POST",
-//                url: "http://localhost:8080/CharacterCounter/upLoad"
-//            }).success(function (data, status) {
-//                if (data[0] == null) {
-//                    alert("并未上传文件！");
-//                    $scope.tongji = null;
-//                    $scope.lisMostNum = null;
-//                } else {
-//                    $scope.tongji = data[0].data;
-//                    $scope.lisMostNum = data[0].lisMostNum;
-//                }
-//            })
-//
-//        }
     })
 </script>
 </html>

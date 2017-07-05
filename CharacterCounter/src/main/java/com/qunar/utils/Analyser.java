@@ -2,6 +2,7 @@ package com.qunar.utils;
 
 import com.qunar.model.Data;
 import com.qunar.model.Most;
+import com.qunar.model.Result;
 
 import java.util.*;
 import java.util.regex.Matcher;
@@ -11,6 +12,17 @@ import java.util.regex.Pattern;
  * Created by xiazihao on 7/3/17.
  */
 public class Analyser {
+    public static List<Result> analyse(String string){
+        String text = string;
+        text = text.replaceAll(" ", "");
+        text = text.replaceAll("\n", "");
+        Data data = Analyser.tongji(text);
+        List<Most> mostList = Analyser.getMost(text);
+        Result result = new Result(data, mostList);
+        List<Result> resultList = new ArrayList<Result>();
+        resultList.add(result);
+        return resultList;
+    }
     public static Data tongji(String text) {
         Data data = new Data();
         Integer english = 0;
