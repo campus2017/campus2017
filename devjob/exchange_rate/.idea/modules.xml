@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/exchange_rate.iml" filepath="$PROJECT_DIR$/exchange_rate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/exchangerate.iml" filepath="$PROJECT_DIR$/exchangerate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/exchangerate.iml" filepath="$PROJECT_DIR$/exchangerate.iml" />
+    </modules>
+  </component>
+</project>
