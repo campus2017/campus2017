@@ -18,13 +18,13 @@ public class EffectiveLines {
             return;
         }
 
-        File file = new File(fileName);
         BufferedReader reader = null;
         String line = null;
         int count = 0;
 
         try {
             reader = new BufferedReader(new FileReader(fileName));
+            //统计有效行
             while((line = reader.readLine()) != null) {
                 if(line.trim().isEmpty() || line==null) {
                     continue;
@@ -44,14 +44,16 @@ public class EffectiveLines {
                 try {
                     reader.close();
                 } catch (IOException e1) {
-
+                    e1.printStackTrace();
                 }
             }
         }
 
+        //输出结果
         System.out.println("Valid line: " + (count-1));
     }
 
+    //判断是否是注释行
     public static boolean isAnnotation(String line) {
         String trimmed = line.trim();
         if(trimmed.startsWith("//") || trimmed.startsWith("/*") || trimmed.endsWith("*/")) {
@@ -61,6 +63,7 @@ public class EffectiveLines {
         return false;
     }
 
+    //判断文件名是否合法
     public static boolean isLegal(String fileName) {
         if(!fileName.endsWith(".java")) {
             return false;

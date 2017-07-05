@@ -9,7 +9,6 @@ import java.util.*;
  */
 public class CountMostImport {
     public static Map<String, CountClass> map = null;
-    public static ArrayList<CountClass> result = null;
 
     public static void main(String[] args) {
         System.out.println("Input directory path:");
@@ -30,13 +29,10 @@ public class CountMostImport {
         File[] fileList = dir.listFiles();
         map = new HashMap<String, CountClass>();
 
-
-
         for(File f : fileList) {
             if(f.isDirectory()) {
                 continue;
             }
-
             count(f);
         }
 
@@ -47,6 +43,7 @@ public class CountMostImport {
 
         Collections.sort(arr);
 
+        //输出结果，不足10个则全部输出
         if(arr.size()<10) {
             for(int i=0; i<arr.size(); ++i) {
                 System.out.println("Class name: " + arr.get(i).name + "  count: " + arr.get(i).count);
@@ -58,13 +55,13 @@ public class CountMostImport {
         }
     }
 
+    //统计文件中import
     public static void count(File file) {
         if(!file.getName().endsWith(".java")) {
             return;
         }
-        //System.out.println(file.getName());
-        BufferedReader reader = null;
 
+        BufferedReader reader = null;
         try {
             reader = new BufferedReader(new FileReader(file));
             String line = null;
@@ -72,14 +69,11 @@ public class CountMostImport {
                 if(!line.trim().startsWith("import")) {
                     continue;
                 }
-                //System.out.println(line);
+
                 String[] splits = line.trim().split("\\.");
-                //System.out.println(splits.length);
                 if(splits.length==0 || splits[splits.length-1].trim().endsWith("*")) {
                     continue;
                 }
-
-
 
                 String className = splits[splits.length-1];
                 if(className.charAt(0)>='A' && className.charAt(0)<='Z') {
@@ -91,7 +85,6 @@ public class CountMostImport {
                         map.put(className, new CountClass(className, 1));
                     }
                 }
-
             }
 
             reader.close();

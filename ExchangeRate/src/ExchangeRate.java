@@ -1,4 +1,3 @@
-import com.sun.org.apache.xerces.internal.dom.ElementNSImpl;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -14,7 +13,7 @@ import jxl.write.Label;
 import jxl.Workbook;
 
 /**
- * Created by fmz on 2017/7/4.
+ * Created by fmz on 2017/6/27.
  */
 public class ExchangeRate {
     public static void main(String[] args) {
@@ -22,6 +21,7 @@ public class ExchangeRate {
         WritableWorkbook workbook = null;
         WritableSheet sheet = null;
 
+        //创建表格
         try {
             workbook = Workbook.createWorkbook(file);
             sheet = workbook.createSheet("rate", 0);
@@ -34,7 +34,7 @@ public class ExchangeRate {
         addCellToSheet(sheet, 2, 0, "EUR/CNY");
         addCellToSheet(sheet, 3, 0, "HKD/CNY");
 
-
+        //数据来源
         String url = "http://www.chinamoney.com.cn/fe-c/historyParity.do";
         Document doc = null;
         try {
@@ -51,6 +51,7 @@ public class ExchangeRate {
         System.out.println(title.first().text());
         //选择行
         Elements trs = table.select("tr");
+        //按行统计数据
         for(int i=0; i<trs.size(); ++i) {
             Element tr = trs.get(i);
             Elements td = tr.select("td.dreport-row2");
