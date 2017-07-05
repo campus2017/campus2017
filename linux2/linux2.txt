@@ -1,0 +1,5 @@
+//拷贝整个文件夹
+scp -r /dir1/ root@l-test.dev.cn1:/tmp
+
+//拷贝单个文件
+scp /dir1/test.txt root@l-test.dev.cn1:/tmp
