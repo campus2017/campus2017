@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/EffectiveLines.iml" filepath="$PROJECT_DIR$/EffectiveLines.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/EffectiveLines.iml" filepath="$PROJECT_DIR$/.idea/modules/EffectiveLines.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/EffectiveLines_main.iml" filepath="$PROJECT_DIR$/.idea/modules/EffectiveLines_main.iml" group="EffectiveLines" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/EffectiveLines_test.iml" filepath="$PROJECT_DIR$/.idea/modules/EffectiveLines_test.iml" group="EffectiveLines" />
     </modules>
   </component>
 </project>

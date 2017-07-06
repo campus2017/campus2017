@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ExchangeRate.iml" filepath="$PROJECT_DIR$/ExchangeRate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ExchangeRate.iml" filepath="$PROJECT_DIR$/.idea/modules/ExchangeRate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ExchangeRate_main.iml" filepath="$PROJECT_DIR$/.idea/modules/ExchangeRate_main.iml" group="ExchangeRate" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ExchangeRate_test.iml" filepath="$PROJECT_DIR$/.idea/modules/ExchangeRate_test.iml" group="ExchangeRate" />
     </modules>
   </component>
 </project>

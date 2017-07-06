@@ -2,8 +2,8 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
-      <module name="ExchangeRate_main" target="1.8" />
-      <module name="ExchangeRate_test" target="1.8" />
+      <module name="CountMostImport_main" target="1.8" />
+      <module name="CountMostImport_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
