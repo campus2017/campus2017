@@ -62,19 +62,19 @@
     </tr>
     <tr>
         <td style="border:1px solid #000;text-align: center; padding:6px;">英文字母</td>
-        <td style="border:1px solid #000;text-align: center;">{{tongji.english}}</td>
+        <td style="border:1px solid #000;text-align: center;">{{result.english}}</td>
     </tr>
     <tr>
         <td style="border:1px solid #000;text-align: center;padding:6px; ">数字</td>
-        <td style="border:1px solid #000;text-align: center;">{{tongji.number}}</td>
+        <td style="border:1px solid #000;text-align: center;">{{result.number}}</td>
     </tr>
     <tr>
         <td style="border:1px solid #000;text-align: center; padding:6px;">中文汉字</td>
-        <td style="border:1px solid #000;text-align: center;">{{tongji.chinese}}</td>
+        <td style="border:1px solid #000;text-align: center;">{{result.chinese}}</td>
     </tr>
     <tr>
         <td style="border:1px solid #000;text-align: center;padding:6px; ">中英文标点符号</td>
-        <td style="border:1px solid #000;text-align: center;padding:6px;">{{tongji.punctuation}}</td>
+        <td style="border:1px solid #000;text-align: center;padding:6px;">{{result.punctuation}}</td>
     </tr>
     </tbody>
 </table>
@@ -87,16 +87,16 @@
         <th style="border:1px solid #000;text-align: center;"><b>个&nbsp;&nbsp;数</b></th>
     </tr>
     <tr>
-        <td style="border:1px solid #000;text-align: center; height:21px;padding:0 6px;">{{lisMostNum[0]['name']}}</td>
-        <td style="border:1px solid #000;text-align: center;">{{lisMostNum[0]['num']}}</td>
+        <td style="border:1px solid #000;text-align: center; height:21px;padding:0 6px;">{{mostList[0]['name']}}</td>
+        <td style="border:1px solid #000;text-align: center;">{{mostList[0]['num']}}</td>
     </tr>
     <tr>
-        <td style="border:1px solid #000;text-align: center; height:21px;padding:0 6px;">{{lisMostNum[1]['name']}}</td>
-        <td style="border:1px solid #000;text-align: center;">{{lisMostNum[1]['num']}}</td>
+        <td style="border:1px solid #000;text-align: center; height:21px;padding:0 6px;">{{mostList[1]['name']}}</td>
+        <td style="border:1px solid #000;text-align: center;">{{mostList[1]['num']}}</td>
     </tr>
     <tr>
-        <td style="border:1px solid #000;text-align: center; height:21px;padding:0 6px;">{{lisMostNum[2]['name']}}</td>
-        <td style="border:1px solid #000;text-align: center;">{{lisMostNum[2]['num']}}</td>
+        <td style="border:1px solid #000;text-align: center; height:21px;padding:0 6px;">{{mostList[2]['name']}}</td>
+        <td style="border:1px solid #000;text-align: center;">{{mostList[2]['num']}}</td>
     </tr>
 </table>
 
@@ -137,16 +137,16 @@
 
         $scope.count = function () {
             if ($scope.saveText == null) {
-                $scope.tongji = null;
-                $scope.lisMostNum = null;
+                $scope.result = null;
+                $scope.mostList = null;
             } else {
                 $http({
                     method: "POST",
-                    url: "http://localhost:8080/CharacterCounter/Ajax",
+                    url: "http://localhost:8080/CharacterCounter/statistics",
                     data: $scope.saveText
                 }).success(function (data, status) {
-                    $scope.tongji = data[0].data;
-                    $scope.lisMostNum = data[0].lisMostNum;
+                    $scope.result = data[0].data;
+                    $scope.mostList = data[0].mostList;
                 })
             }
         }
@@ -154,27 +154,11 @@
         $scope.clear = function () {
             var text1 = document.getElementById("text");
             text1.value = "";
-            $scope.tongji = null;
-            $scope.lisMostNum = null;
+            $scope.result = null;
+            $scope.mostList = null;
             $scope.saveText = null;
         }
 
-//        $scope.UpCompute = function () {
-//            $http({
-//                method: "POST",
-//                url: "http://localhost:8080/CharacterCounter/upLoad"
-//            }).success(function (data, status) {
-//                if (data[0] == null) {
-//                    alert("并未上传文件！");
-//                    $scope.tongji = null;
-//                    $scope.lisMostNum = null;
-//                } else {
-//                    $scope.tongji = data[0].data;
-//                    $scope.lisMostNum = data[0].lisMostNum;
-//                }
-//            })
-//
-//        }
     })
 </script>
 </html>

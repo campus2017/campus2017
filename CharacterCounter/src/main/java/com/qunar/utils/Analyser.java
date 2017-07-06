@@ -12,7 +12,7 @@ import java.util.regex.Pattern;
  * Created by xiazihao on 7/3/17.
  */
 public class Analyser {
-    public static List<Result> analyse(String string){
+    public static List<Result> analyse(String string) {
         String text = string;
         text = text.replaceAll(" ", "");
         text = text.replaceAll("\n", "");
@@ -23,6 +23,7 @@ public class Analyser {
         resultList.add(result);
         return resultList;
     }
+
     public static Data tongji(String text) {
         Data data = new Data();
         Integer english = 0;
@@ -81,11 +82,21 @@ public class Analyser {
             }
         });
         List<Most> result = new ArrayList<Most>();
-        for (int i = 0; i < 3; i++) {
-            Most most = new Most();
-            most.setName(list.get(i).getKey());
-            most.setNum(list.get(i).getValue());
-            result.add(most);
+        if (list.size() >= 3) {
+
+            for (int i = 0; i < 3; i++) {
+                Most most = new Most();
+                most.setName(list.get(i).getKey());
+                most.setNum(list.get(i).getValue());
+                result.add(most);
+            }
+        } else {
+            for (Map.Entry<String, Integer> m : list) {
+                Most most = new Most();
+                most.setNum(m.getValue());
+                most.setName(m.getKey());
+                result.add(most);
+            }
         }
         return result;
     }

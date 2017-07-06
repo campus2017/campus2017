@@ -7,11 +7,11 @@ import java.util.List;
  */
 public class Result {
     private Data data;
-    private List<Most> lisMostNum;
+    private List<Most> mostList;
 
     public Result(Data data, List<Most> mostList) {
         this.data = data;
-        this.lisMostNum = mostList;
+        this.mostList = mostList;
     }
 
     public Data getData() {
@@ -22,11 +22,11 @@ public class Result {
         this.data = data;
     }
 
-    public List<Most> getLisMostNum() {
-        return lisMostNum;
+    public List<Most> getMostList() {
+        return mostList;
     }
 
-    public void setLisMostNum(List<Most> lisMostNum) {
-        this.lisMostNum = lisMostNum;
+    public void setMostList(List<Most> mostList) {
+        this.mostList = mostList;
     }
 }
