@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/CountMostImport.iml" filepath="$PROJECT_DIR$/CountMostImport.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/CountMostImport.iml" filepath="$PROJECT_DIR$/.idea/modules/CountMostImport.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/CountMostImport_main.iml" filepath="$PROJECT_DIR$/.idea/modules/CountMostImport_main.iml" group="CountMostImport" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/CountMostImport_test.iml" filepath="$PROJECT_DIR$/.idea/modules/CountMostImport_test.iml" group="CountMostImport" />
     </modules>
   </component>
 </project>
