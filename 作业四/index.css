@@ -1,0 +1,292 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+#main {
+    width: 100%;
+    margin: 0 auto;
+    background: #F3F3F3;
+}
+
+.head {
+    width: 100%;
+    height: 50px;
+    background: #25a4bb;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.head .home {
+}
+
+.head .arrow {
+    padding-left: 10px;
+}
+
+.head .title {
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    flex-grow: 1;
+    vertical-align: middle;
+    line-height: 50px;
+}
+
+.photos {
+    width: 100%;
+    height: 200px;
+    background: green;
+    position: relative;
+    overflow: hidden;
+}
+
+.photos img {
+    width: 100%;
+}
+
+.photos .photo_foot {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 5px;
+    display: inline-block;
+    background: #000000;
+    opacity: 0.5;
+    color: #ffffff;
+}
+
+.container {
+    padding: 0 10px 0 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px #afafaf solid;
+    border-top: 2px #afafaf solid;
+}
+
+.bg_white {
+    background: #ffffff;
+}
+
+.container_full {
+    border-bottom: 1px #afafaf solid;
+    border-top: 1px #afafaf solid;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.row_full {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    padding: 15px 20px 15px 20px;
+}
+
+.zan {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.row_group_hide {
+    display: none;
+}
+
+.scope {
+    color: red;
+    font-size: 1.1rem;
+}
+
+.more {
+    text-align: center;
+    color: #25A4BB;
+}
+
+footer {
+    color: #c1c1c1;
+    text-align: center;
+}
+
+footer .row_full {
+    display: block;
+}
+
+footer ul {
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+}
+
+footer ul li {
+    float: left;
+    list-style: none;
+    width: 25%;
+    text-align: center;
+}
+
+footer ul li:nth-child(3) {
+    border-right: 1px #c1c1c1 solid;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+footer .return {
+    padding-left: 15px;
+}
+
+/*-------------------------common------------*/
+.dashed {
+    border-bottom: 1px #afafaf dashed;
+}
+
+.solid {
+    border-bottom: 1px #afafaf solid;
+}
+
+.left_content {
+    flex-grow: 1;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left_content .icon {
+    vertical-align: text-top;
+}
+
+.left_content p, .left_content > div {
+    overflow: hidden;
+    margin-top: 0;
+    margin-bottom: 5px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+}
+
+.right_button {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #25A4BB;
+}
+
+.right_button p {
+    overflow: hidden;
+    margin-top: 0;
+    margin-bottom: 5px;
+    white-space: nowrap;
+}
+
+.right_button p img {
+    vertical-align: middle;
+}
+
+.padding_left_30 {
+    padding-left: 30px;
+}
+
+.padding_left_10 {
+    padding-left: 10px;
+}
+
+.margin_bottom_20 {
+    margin-bottom: 20px;
+}
+
+.font_color_blue {
+    color: deepskyblue;
+}
+
+.subline {
+    color: #8a8a8a;
+    font-size: 0.8rem;
+}
+
+.money {
+    color: red;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.text_bg_blue {
+    background: #1BA9BA;
+    color: #ffffff;
+}
+
+.text_bg_red {
+    background: red;
+    color: #ffffff;
+}
+
+.text_bg_yellow {
+    background: #FF6600;
+    color: #ffffff;
+}
+
+.button {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    color: #ffffff;
+    font-size: 1rem;
+    overflow: hidden;
+}
+
+.button:focus {
+    outline: none;
+}
+
+.button_light {
+    background: #1BA9BA;
+}
+
+.button_ding {
+    border: 1px #FF9036 solid;
+    padding: 0;
+}
+
+.button_ding p {
+    text-align: center;
+}
+
+.button_ding p:first-child {
+    background: #FF9036;
+    font-size: 1.5rem;
+}
+
+.button_ding p:last-child {
+    color: #FF9036;
+}
+
+.button_zui {
+    padding: 0;
+    border: 1px #FF9036 solid;
+    line-height: 18px;
+    color: #FF9036;
+    background: #ffffff;
+    border-radius: 0;
+}
+
+.button_zui span {
+    display: inline-block;
+    height: 18px;
+    color: #ffffff;
+    background: #FF9036;
+    line-height: 18px;
+}

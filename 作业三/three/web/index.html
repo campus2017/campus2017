@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <link type="text/css" rel="stylesheet" href="index.css">
+</head>
+<body>
+<ul id="tab">
+    <li>兑换记录</li>
+    <li>E币明细</li>
+    <li class="on">E币兑换</li>
+</ul>
+<div id="content">
+    <div>
+        <div id="search_head">
+            <span class="button_group">
+                <button class="button button_light" id="all_filter">全部</button>
+                <button class="button button_no" id="success_filter">成功</button>
+                <button class="button button_no" id="fail_filter">失败</button>
+            </span>
+            <label>选择日期:</label>
+            <input name="start_time" type="date">
+            <label>至:</label>
+            <input name="end_time" type="date">
+            <button class="button button_light" id="search">搜索</button>
+            <button class="button button_danger" id="reset">重置</button>
+        </div>
+        <table cellpadding="0" cellspacing="0" class="table">
+            <thead>
+            <tr>
+                <th>时间</th>
+                <th>商品名称</th>
+                <th>数量</th>
+                <th>E币</th>
+                <th>状态</th>
+                <th>信息</th>
+                <th>兑换信息</th>
+                <th>确认</th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <div>2</div>
+    <div>3
+        <div></div>
+    </div>
+</div>
+</body>
+<script src="index.js"></script>
+<script src="myElement.js"></script>
+</html>

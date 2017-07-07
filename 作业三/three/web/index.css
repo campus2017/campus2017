@@ -1,0 +1,107 @@
+body, hrml {
+    font-size: 14px;
+}
+
+ul {
+    margin: 0;
+}
+
+#tab {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    bottom: -1px;
+    box-sizing: border-box;
+    padding-right: 10px;
+    padding-left: 10px;
+    overflow: hidden;
+    text-align: right;
+}
+
+#content {
+    border-top: 1px #c1c1c1 solid;
+    z-index: 0;
+    width: 100%;
+    height: 500px;
+    padding-top: 10px;
+}
+
+#content div {
+    display: none;
+}
+
+#content div:nth-child(1) {
+    display: block;
+}
+
+#tab li {
+    float: right;
+    list-style: none;
+    border: 1px #c1c1c1 solid;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    margin-left: 3px;
+    padding: 5px 15px 5px 15px;
+    position: relative;
+    background: #ededed;
+}
+
+#tab li.on {
+    border-bottom: 1px transparent solid;
+    background: #fff;
+}
+
+/*-------------------------------*/
+#search_head {
+    padding-bottom: 20px;
+}
+
+#search_head input {
+    height: 20px;
+    width: 150px;
+}
+
+/*---------------------------------*/
+
+.button {
+    border: none;
+    border-radius: 5px;
+    /*padding-top: 3px;*/
+    /*padding-bottom: 3px;*/
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #ffffff;
+}
+
+.button_light {
+    background: #4a74d4;
+}
+
+.button_danger {
+    background: red;
+}
+
+.button_no {
+    background: transparent;
+    color: #4a74d4;
+}
+
+.table {
+    width: 100%;
+    border: 1px #cecece solid;
+}
+
+.table th {
+    text-align: left;
+    background: #e6e6e6;
+}
+
+.table tr {
+    border-bottom: 1px #cfcfcf solid;
+}
+
+.table th, .table td {
+    padding: 5px;
+    line-height: 25px;
+}

@@ -1,0 +1,82 @@
+<html>
+<head>
+    <title>m_taobao</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        .main_div {
+            width: 100%;
+        }
+
+        .main_div img {
+            width: 100%;
+        }
+
+        .pop_div {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            display: none;
+        }
+
+        .pop_div .mask {
+            width:100%;
+            height:100%;
+            position: absolute;
+            top:0;
+            background: #000;
+            opacity: 0.5;
+            z-index:0;
+        }
+        .pop_div .popimg_contain{
+            width:800px;
+            height: 546px;
+            position: absolute;
+            top:50%;
+            left:50%;
+            margin-top:-273px;
+            margin-left:-400px;
+            z-index: 1;
+        }
+        .pop_div .close{
+            position: absolute;
+            width: 32px;
+            height:32px;
+            background-image: url("images/close.png");
+            right:-16px;
+            top:-16px;
+            z-index:2;
+        }
+        .pop_div .close:hover{
+            background-image: url("images/close_hover.png");
+        }
+    </style>
+</head>
+<body>
+<div class="pop_div">
+    <div class="popimg_contain">
+        <div class="close"></div>
+        <img src="images/layer.png">
+    </div>
+    <div class="mask">
+    </div>
+</div>
+<div class="main_div">
+    <img src="images/m_taobao.png">
+</div>
+</body>
+<script>
+    var popDiv = document.getElementsByClassName("pop_div")[0];
+    document.getElementsByClassName("main_div")[0].onclick = pop;
+    document.getElementsByClassName("close")[0].onclick = hide;
+    function pop() {
+        popDiv.style.display = "block";
+    }
+    function hide() {
+        popDiv.style.display = "none";
+    }
+</script>
+</html>

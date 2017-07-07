@@ -1,0 +1,229 @@
+body, hrml {
+    font-size: 14px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#main {
+    width: 1000px;
+}
+
+#tab {
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    bottom: -1.5px;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-align: right;
+    display: flex;
+}
+
+#content {
+    border-top: 1.5px #7DBDD9 solid;
+    z-index: 0;
+    width: 100%;
+    height: 500px;
+    padding-top: 20px;
+}
+
+#content > div {
+    display: none;
+    border-style: solid;
+    border-width: 5px 0 0 0;
+    border-image-width: 5px 0 0 0;
+    border-image-slice: 2;
+    border-image-repeat: repeat;
+    border-image-source: url("images/hr1.png");
+    padding-top: 1px;
+}
+
+#content div:nth-child(1) {
+    display: block;
+}
+
+#tab li {
+    float: left;
+    height: 100%;
+    box-sizing: border-box;
+    list-style: none;
+    border-width: 1.5px 1.5px 1.5px 0;
+    border-color: #7DBDD9;
+    border-style: solid;
+    padding: 5px 15px 5px 15px;
+    position: relative;
+    background: #F3FBFD;
+    flex-grow: 1;
+}
+
+#tab li:first-child {
+    border-width: 1.5px 1.5px 1.5px 1.5px;
+}
+
+.height_100 {
+    height: 100%;
+}
+
+#tab li.on {
+    border-bottom: 1.5px transparent solid;
+    background: #fff;
+    color: #0B87C3;
+}
+
+/*tab每一个部分样式*/
+#tab li .di {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: red;
+    color: #ffffff;
+}
+
+.money {
+    color: #0B87C3;
+    font-size: 16px;
+}
+
+/*---------------航班信息展示部分-------------*/
+.info_table {
+    width: 100%;
+    color: #7f7f7f;
+}
+
+.info_table thead td {
+    background: #27b4d2;
+    height: 50px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: normal;
+    vertical-align: middle;
+}
+
+.info_table tbody td {
+    padding-top: 10px;
+}
+
+.info_table tr td:first-child {
+    text-align: right;
+    vertical-align: text-top;
+    padding-right: 10px;
+    padding-top: 25px;
+}
+
+.info_table tr td:nth-child(3) {
+    text-align: right;
+}
+
+.info_table tr td:nth-child(4) {
+    text-align: center;
+    overflow: hidden;
+}
+
+.info_table tr td:nth-child(6), .info_table tr td:nth-child(7) {
+    padding-left: 30px;
+}
+.info_table tr td:nth-child(7){
+    text-align: right;
+    padding-right: 20px;
+}
+
+.plane_time {
+    height: 20px;
+    line-height: 20px;
+}
+
+.flag {
+    vertical-align: middle;
+}
+
+.flag img {
+    height: 10px;
+}
+.buy_button{
+    border:none;
+    color: #ffffff;
+    background-color: transparent;
+    background-image: url("images/button_bottom_arrow.png");
+    width:77px;
+    height:40px;
+    vertical-align: text-top;
+}
+
+/*------------common-----------*/
+.nopadding {
+    padding: 0 !important;
+}
+
+.flex_length {
+    flex-shrink: 1;
+    flex-grow: 0 !important;
+}
+
+.text_blue {
+    color: #27b4d2;
+}
+
+.bg_blue {
+    background: #27b4d2;
+    color: #ffffff;
+}
+
+.font_size_16 {
+    font-size: 16px;
+}
+
+.font_size_18 {
+    font-size: 18px;
+
+}
+
+.font_black {
+    color: black;
+}
+
+.font_strong {
+    font-weight: bold;
+}
+
+.sub_line {
+    border-bottom: 1px #646464 dashed;
+}
+
+.padding_right_time {
+    padding-right: 20px;
+}
+
+.padding_left_time {
+    padding-left: 20px;
+}
+
+.tr_padding_bottom td {
+    padding-bottom: 10px;
+}
+
+.font_weight_normal {
+    font-weight: normal !important;
+}
+
+.text_red {
+    color: red;
+}
+
+.padding_top_10 {
+    padding-top: 10px;
+}
+
+.font_size_30 {
+    font-size: 30px;
+}

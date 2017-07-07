@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>huadong</title>
+    <style>
+        body, html {
+            margin: 0;
+        }
+
+        #main {
+            width: 1000px;
+            height: 477px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #main img {
+            position: absolute;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div id="main">
+    <img id="img1" src="images/door1.png">
+    <img id="img2" src="images/door2.png">
+    <img id="img3" src="images/door3.png">
+    <img id="img4" src="images/door4.png">
+</div>
+</body>
+<script>
+    var elements = [];
+    var distance = (1000 - 475) * 1.00 / 3;
+    for (var i = 1; i <= 4; i++) {
+        elements.push(document.getElementById("img" + i));
+        var element = elements[i - 1];
+        element.style.zIndex = i;
+        element.style.left = distance * (i - 1) + 'px';
+        element.firstLeft = distance * (i - 1);
+        element.secondLeft = distance * (i - 1) + (475 - distance);
+        element.interval = null;
+        element.addEventListener("mouseover", function () {
+            var id = parseInt(this.id.substring(3));
+            if (this.offsetLeft > this.firstLeft) {
+                toFirstState(id);
+            } else if (this.offsetLeft < this.secondLeft) {
+                toSecondState(id);
+            }
+        })
+    }
+
+    function toFirstState(id) {
+        for (var i = 2; i <= id; i++) {
+            var element = elements[i - 1];
+            if (element.interval) {
+                clearInterval(element.interval);
+            }
+            animate(element);
+        }
+
+        function animate(element) {
+            element.interval = setInterval(function () {
+                element.style.left = element.offsetLeft - 5 + 'px';
+                if (element.offsetLeft <= element.firstLeft) {
+                    element.style.left = element.firstLeft + 'px';
+                    clearInterval(element.interval);
+                }
+            }, 10)
+        }
+
+    }
+    function toSecondState(id) {
+        if (id == 4) {
+            return;
+        }
+        for (var i = id + 1; i <= 4; i++) {
+            var element = elements[i - 1];
+            if (element.interval) {
+                clearInterval(element.interval);
+            }
+            animate(element);
+        }
+
+        function animate(element) {
+            element.interval = setInterval(function () {
+                element.style.left = element.offsetLeft + 5 + 'px';
+                if (element.offsetLeft >= element.secondLeft) {
+                    element.style.left = element.secondLeft + 'px';
+                    clearInterval(element.interval);
+                }
+            }, 10)
+        }
+    }
+</script>
+</html>
