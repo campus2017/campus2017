@@ -4,6 +4,8 @@ import com.qunar.model.Result;
 import com.qunar.utils.Analyser;
 import com.sun.org.apache.bcel.internal.generic.ANEWARRAY;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
@@ -23,14 +25,12 @@ public class UpLoadFileController {
 
 
     @RequestMapping(value = "/upLoadFile", method = RequestMethod.POST)
-    @ResponseBody
-    public List<Result> addUser(@RequestBody MultipartFile file) throws IOException {
+    public String upload(@RequestBody MultipartFile file, ModelMap model) throws IOException {
         MultipartFile myfile = file;
         if (myfile.isEmpty()) {
-            return new ArrayList<>();
+            return "start";
         }
         try {
-            ModelAndView modelAndView = new ModelAndView("start");
             InputStream inputStream = myfile.getInputStream();
             byte[] buffer = myfile.getBytes();
             int byteSum = 0;
@@ -38,18 +38,17 @@ public class UpLoadFileController {
             while ((byteRead = inputStream.read(buffer)) != -1) {
             }
             String text = new String(myfile.getBytes());
-//            while (myfile.) {
-//                text += myfile.getBytes();
-//            }
-            return Analyser.analyse(text);
-//            return modelAndView;
+            List<Result> resultList = Analyser.analyse(text);
+            model.addAttribute("result", resultList.get(0).getData());
+            model.addAttribute("mostList", resultList.get(0).getMostList());
+            return "start";
 
         } catch (Exception e) {
             e.printStackTrace();
         }
 //        modelAndView.setViewName("start");
 //        return modelAndView;
-        return new ArrayList<>();
+        return "start";
     }
 
 }

@@ -62,19 +62,19 @@
     </tr>
     <tr>
         <td style="border:1px solid #000;text-align: center; padding:6px;">英文字母</td>
-        <td style="border:1px solid #000;text-align: center;">{{result.english}}</td>
+        <td style="border:1px solid #000;text-align: center;">{${result.english}}</td>
     </tr>
     <tr>
         <td style="border:1px solid #000;text-align: center;padding:6px; ">数字</td>
-        <td style="border:1px solid #000;text-align: center;">{{result.number}}</td>
+        <td style="border:1px solid #000;text-align: center;">{${result.number}}</td>
     </tr>
     <tr>
         <td style="border:1px solid #000;text-align: center; padding:6px;">中文汉字</td>
-        <td style="border:1px solid #000;text-align: center;">{{result.chinese}}</td>
+        <td style="border:1px solid #000;text-align: center;">{${result.chinese}}</td>
     </tr>
     <tr>
         <td style="border:1px solid #000;text-align: center;padding:6px; ">中英文标点符号</td>
-        <td style="border:1px solid #000;text-align: center;padding:6px;">{{result.punctuation}}</td>
+        <td style="border:1px solid #000;text-align: center;padding:6px;">{${result.punctuation}}</td>
     </tr>
     </tbody>
 </table>
@@ -87,16 +87,16 @@
         <th style="border:1px solid #000;text-align: center;"><b>个&nbsp;&nbsp;数</b></th>
     </tr>
     <tr>
-        <td style="border:1px solid #000;text-align: center; height:21px;padding:0 6px;">{{mostList[0]['name']}}</td>
-        <td style="border:1px solid #000;text-align: center;">{{mostList[0]['num']}}</td>
+        <td style="border:1px solid #000;text-align: center; height:21px;padding:0 6px;">{${mostList[0].name}}</td>
+        <td style="border:1px solid #000;text-align: center;">{${mostList[0].num}}</td>
     </tr>
     <tr>
-        <td style="border:1px solid #000;text-align: center; height:21px;padding:0 6px;">{{mostList[1]['name']}}</td>
-        <td style="border:1px solid #000;text-align: center;">{{mostList[1]['num']}}</td>
+        <td style="border:1px solid #000;text-align: center; height:21px;padding:0 6px;">{${mostList[1].name}}</td>
+        <td style="border:1px solid #000;text-align: center;">{${mostList[1].num}}</td>
     </tr>
     <tr>
-        <td style="border:1px solid #000;text-align: center; height:21px;padding:0 6px;">{{mostList[2]['name']}}</td>
-        <td style="border:1px solid #000;text-align: center;">{{mostList[2]['num']}}</td>
+        <td style="border:1px solid #000;text-align: center; height:21px;padding:0 6px;">{${mostList[2].name}}</td>
+        <td style="border:1px solid #000;text-align: center;">{${mostList[2].num}}</td>
     </tr>
 </table>
 

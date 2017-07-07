@@ -16,7 +16,7 @@ public class Analyser {
         String text = string;
         text = text.replaceAll(" ", "");
         text = text.replaceAll("\n", "");
-        Data data = Analyser.tongji(text);
+        Data data = Analyser.statistics(text);
         List<Most> mostList = Analyser.getMost(text);
         Result result = new Result(data, mostList);
         List<Result> resultList = new ArrayList<Result>();
@@ -24,7 +24,7 @@ public class Analyser {
         return resultList;
     }
 
-    public static Data tongji(String text) {
+    public static Data statistics(String text) {
         Data data = new Data();
         Integer english = 0;
         Integer chinese = 0;

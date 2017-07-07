@@ -87,16 +87,16 @@
         <th style="border:1px solid #000;text-align: center;"><b>个&nbsp;&nbsp;数</b></th>
     </tr>
     <tr>
-        <td style="border:1px solid #000;text-align: center; height:21px;padding:0 6px;">{{mostList[0]['name']}}</td>
-        <td style="border:1px solid #000;text-align: center;">{{mostList[0]['num']}}</td>
+        <td style="border:1px solid #000;text-align: center; height:21px;padding:0 6px;">{{mostList[0].name}}</td>
+        <td style="border:1px solid #000;text-align: center;">{{mostList[0].num}}</td>
     </tr>
     <tr>
-        <td style="border:1px solid #000;text-align: center; height:21px;padding:0 6px;">{{mostList[1]['name']}}</td>
-        <td style="border:1px solid #000;text-align: center;">{{mostList[1]['num']}}</td>
+        <td style="border:1px solid #000;text-align: center; height:21px;padding:0 6px;">{{mostList[1].name}}</td>
+        <td style="border:1px solid #000;text-align: center;">{{mostList[1].num}}</td>
     </tr>
     <tr>
-        <td style="border:1px solid #000;text-align: center; height:21px;padding:0 6px;">{{mostList[2]['name']}}</td>
-        <td style="border:1px solid #000;text-align: center;">{{mostList[2]['num']}}</td>
+        <td style="border:1px solid #000;text-align: center; height:21px;padding:0 6px;">{{mostList[2].name}}</td>
+        <td style="border:1px solid #000;text-align: center;">{{mostList[2].num}}</td>
     </tr>
 </table>
 
