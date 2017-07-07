@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="ExcelUtil">
+    <CLASSES>
+      <root url="jar://F:/ExcelUtil.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

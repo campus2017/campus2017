@@ -1,0 +1,2 @@
+cd /usr/local/kencery/tomcat/logs
+[root@localhost logs]# awk '{print $1}' localhost_access_log.*|sort|uniq -c|sort -rn| head -n 10 |less

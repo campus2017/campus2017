@@ -1,0 +1,6 @@
+[root@localhost~]# cd /etc
+[root@localhost~]# mkdir dir1
+[root@localhost~]# vim one.txt
+[root@localhost~]# scp -r/etc/dir1/one.txt l-test.dev.cn1@192.168.0.113: /tmp
+
+
