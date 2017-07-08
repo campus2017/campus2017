@@ -1,0 +1,215 @@
+1.程序架构.
+	BS
+		优缺点:
+	CS
+		优缺点:
+2.TOMCAT服务器
+	1.如何修改端口号
+	2.如何配置虚拟目录(部署项目).
+	3.如何配置虚拟主机.(山寨百度)
+3.MyEclipse与Tomcat的整合
+	1.配置tomcat到MyEclipse中.
+	2.在MyEclipse中开启关闭tomcat.
+	3.创建JAVAWeb项目.
+	4.部署/移除 项目.
+4.HTTP协议.
+	规定浏览器和服务器之间的通信规则(格式).
+	请求协议:
+		请求首行 ==>  请求方式  请求路径  协议/版本号
+		请求头 ==>  键:值
+		请求空行 ==> 空白行,用于分隔头与正文
+		请求正文 ==> 只有POST请求有正文,表单提交的键值对
+	响应协议:
+		响应首行 ==>  协议/版本号  状态码  状态码描述
+		响应头 ==>  键:值
+		响应空行 ==> 空白行,用于分隔头与正文
+		响应正文 ==> HTML代码,CSS,JS,图片......
+		
+		状态码:
+			200 成功
+			404 资源未找到
+			500 服务器内部错误(代码有问题)
+			302 重定向(两次请求)
+			304 缓存机制
+			
+	有两个meta标签 .是模拟HTTP响应头的.
+		Meta:<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+		响应头:Content-Type:text/html;charset=utf-8
+		
+		Meta:<meta http-equiv="Refresh" content="3;url=http://www.itcast.cn" >
+		响应头:Refresh:text/html;3;url=http://www.itcast.cn
+//----------------------------------------------------------------------------------------------------------------------
+Servlet ==> server applet
+
+servlet是我们学习的第一个动态资源.
+
+1.servlet干什么用的?
+	处理请求,生成响应.
+2.我们如何创建一个Servlet呢?
+	1>实现servlet接口即可.
+	2>继承javax.servlet.GenericServlet
+	3>继承javax.servlet.http.HttpServlet
+3.Servlet的声明周期方法
+	生命周期指的是 必须要经历的过程.
+	对于servlet来讲,有3个生命周期方法.
+		1> 出生 ==> init方法.在构造方法调用之后 调用.
+		2> 使命 ==> service方法 ,当请求发来时,处理请求使用.
+		3> 销毁 ==> destory方法, 当服务器关闭时,会销毁servlet,在销毁之前调用该方法释放资源.
+		
+4.Servlet中的其他方法.
+	getServletInfo ==> 获得servlet的信息(版本,作者,版权..),没用.
+	getServletConfig ==> 返回servletConfig对象.
+	
+5.ServletConfig对象是什么?
+	封装了servlet在web.xml中的配置.
+	方法:
+		1>getServletName ==> 获得配置文件中 <servlet-name> 元素的内容
+		2>getInitParameter ==> 根据 <init-param>中的 <param-name> 获得 </param-value>
+			<init-param>
+				<param-name>name</param-name>
+				<param-value>tom</param-value>
+			</init-param>
+		3>getInitParameterNames 返回所有<param-name> .
+		4>getServletContext(下午讲)
+6.其他实现server的方式
+		GenericServlet:
+			1.帮我们妥善的保管ServletConfig对象
+			2.实现了ServletConfig接口 ==> 为调用方便
+			注意: 不要重写servlet接口中的 init方法.  不然 第一步优化就白做了. 
+				我们要做初始化的动作,需要去重写GenericServlet提供的空参init方法.
+		HTTPServlet:
+			1.因为我们web项目基于HTTP协议,所以Service方法中传过来的request,response对象都是 基于HTTP协议的. 
+				也就是HttpServletReueqst,也就是HttpServletResponse. 它帮我们进行了强转.
+			2.我们有可能在不同的请求方式时做不同的事情. 根据请求方式不同,调用不同的方法 
+			例如 GET --> doGet()
+				 POST ==> doPost();
+				 
+7.Servlet中的其他细节
+	1>关于Servlet线程安全问题!
+		因为在servlet运行期间只有一个servlet实例存在.可能会同时处理多个请求.
+		那么我们在servlet中声明成员变量来存储用户数据是有线程安全问题的.
+		我们应该如何解决呢?
+			1.实现SigleThreadModel  (不推荐了!)
+			2.使用局部变量保存用户数据.(推荐使用!)
+			
+	2>关于servlet随着项目的启动而创建
+		使用<load-on-startup>配置来实现.
+		例如:
+			<servlet>
+				<servlet-name>AServlet</servlet-name>
+				<servlet-class>cn.itcast.servlet.hello.AServlet</servlet-class>
+				<load-on-startup>3</load-on-startup>
+			</servlet>
+		
+	填写一个整数,整数越小优先级越高.如果优先级一样,启动顺序按照配置顺序.
+	3>关于Servlet路径配置问题详解
+		<url-pattern>  
+			路径匹配:
+				/AServlet            http://localhost:8080/Day07-servlet/AServlet
+				/ABC/AServlet        http://localhost:8080/Day07-servlet/ABC/AServlet
+				/ABC/ABC/AServlet    http://localhost:8080/Day07-servlet/ABC/ABC/AServlet
+				/ABC/ABC/*			 http://localhost:8080/Day07-servlet/ABC/ABC/oasdojasdjioasd
+				/*					 http://localhost:8080/Day07-servlet/asdiojoiajsidojoasd
+				/ 相当于 /*		 
+			
+			后缀名匹配:
+				*.do ==> struts
+				*.action ==> struts2
+				*.html ==> 
+	注意:1.关于路径,配置的路径匹配范围越大优先级越低.
+		 2.两种匹配模式不能混用. 例如错误的例子: /*.do
+		 
+	4>关于tomcat的目录下的web.xml配置(了解)
+		1. default servlet的配置
+		2. jsp   servlet的配置
+		3.  <session-config>
+				<session-timeout>30</session-timeout>
+			</session-config>
+		4.互联网中所有mime类型
+		5.欢迎页面配置
+//--------------------------------------------------------------------------------------------------------
+相关对象之 ---- ServletContext
+	1.获得: servletConfig ==> getServletContext
+	2.servletContext 的作用
+		1> servletContext 封装了web.xml 中的配置
+			<context-param>
+				<param-name>name</param-name>
+				<param-value>jerry</param-value>
+			</context-param>
+			<context-param>
+				<param-name>password</param-name>
+				<param-value>1234</param-value>
+			</context-param>
+		
+					getInitParameterNames();  ==> 获得所有键
+					getInitParameter(key);  ==> 根据键获得对应的值
+		2> servlet技术中3大域对象之一. 
+			ServletContext对应着Application(应用)域.利用了一个项目中只有一个ServletContext实例的特点.在servletContext中放置了一个map用作数据通信.
+			这个Map就是所谓域.
+				关于域的操作,有4个.
+					放入键值对 setAttribute(key,value)
+					通过键取值 getAttribute(key)
+					通过键删除 removeAttribute(key)
+					遍历所有键 getAttributeNames()
+				application ==> servletContext
+				session ==> 
+				request ==> 
+		3>获得项目中资源.  
+			所有servletContext中关于路径的获得,相对路径都是相对的 WebRoot(项目根)下
+				getRealPath  ==> 通过相对路径获得绝对路径
+				getResourceAsStream ==> 根据相对路径获得指定资源流
+		
+	3.servlet技术中对象的范围
+		servlet ==> 项目启动期间一个servlet只有一个servlet实例
+		request ==> 项目启动期间,request对象的数量,要看当前有多少个请求正在处理.
+		response ==> 同上.
+		servletConfig ==> 一个servlet实例对应一个servletConfig对象
+		servletContext ==> 整个项目中,永远只有一个servletContext实例存在.
+//---------------------------------------------------------------------------------------------------------------------
+	//---------------------------------------------------------------------------
+	//如果获得的是包下的,那么太麻烦了.
+			//一:使用getClass().getResourceAsStream方法,相对路径分为两种情况
+					//1: 加"/"  ==> 相对的是classes目录
+					//2: 不加"/" ==> 相对的是本类当前目录
+						InputStream is = this.getClass().getResourceAsStream("students.xml");
+						System.out.println(is);
+			//二:使用this.getClass().getClassLoader().getResourceAsStream("");获得
+					//只有一个相对路径 ==> 就是相对于 classes目录
+						InputStream is2 = 	this.getClass().getClassLoader().getResourceAsStream("students.xml");
+						System.out.println(is2);
+			
+		
+			
+//注意: 使用类和类加载器加载资源文件时
+				//1 jvm运行期间只加载一次. 但是使用下面的代码可以解决这个问题.
+					String path = this.getClass().getClassLoader().getResource("students.xml").getPath();
+					File file = new File(path.substring(1, path.length()));
+					System.out.println(path);
+				//2 getClassLoader()原本是用来加载.class文件的, 所以缓存设计的很小.不要用他加载一些别较大的资源.
+	
+	
+
+作业:
+	把今天例子敲一遍.
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,54 @@
+[6] K. Zhang, X. Han, Z. Hu, X. Zhang, Z. Tao, J. Chen, Chem. Soc. Rev.
+2015, 44, 699.
+[1]吴宇平，戴晓兵，马军旗，程预江，锂离子电池-应用与实践，北京：化学工业出版社，2004：3. 
+[5]Endo  M,  Kim  C.,  Nishimura  K.,  et  al.,  Recent  development  of  carbon  materials  for  Li  ion 
+batteries[J]. Carbon, 2000, 38(2): 183-197 
+[7]孙颢，蒲薇华，何向明等，锂离子电池硬碳负极材料研究进展，化工新型材料，2005, 33(11): 
+7~10. 
+[8]刘宇，先进嵌锂材料的研究与应用[博士学位论文],  上海，中科院上海微系统与信息技术
+研究所，2003 
+[142]	Poizot P,Laruelle S,Grugeon S, et al. 2000. Nano-sized transition-metal oxides as negative-electrode materials for lithium-ion batteries [J]. Nature, 407:496-499.
+[13]Suzuki S., Shodai T.. Electronic structure and electrochemical properties of electrode material 
+Li7-xMnN4[J]. Solid State Ionics.,1999, (116):1-9. 
+[14]Gregory D.H.,  O’Meara  P.M.,  Gordon A.G.,  et  al.,  Layered  ternary  transition metal  nitrides; 
+synthesis, structure and physical properties[J]. J. Alloys and Compounds, 2001, 317-318: 237-244 
+[15]Takeda  Y.,  Nishijima  M.,  Yamahata  M.,  et  al.  Lithium  secondary  batteries  using  a  lithium 
+cobalt nitride, Li2.6Co0.4N, as the anode[J]. Solid State Ionics, 2000, 130(1-2):61-69. 
+[117]	MJ.Mcallister, J.L.Li, D.H.Adamson, et al. J.Chemistry of Material, 2007,19: 4396-4404
+
+[19]McAllister  M.J.,Li  J.-L.,Adamson  D.  H.,  et  al．Single  sheet  functionalized  graphene  by 
+oxidation and thermal expansion of graphite [J]. Chem Mater,2007,19：4396．  
+[20]Paci J. T., Belytschko T., Schatz G. C., Computational studies of the structure, behavior upon 
+heating, and mechanical properties of graphite oxide[J]．J. Phys. Chem. C, 2007, 111(49): 18099. 
+[17]Chae H. K.，SiberioPerez D. Y.，Kim J., A route to high surface area, porosity and inclusion of 
+large molecules in crystals[J]. Nature,2004, 427(6974):523-527. 
+[18]Sclladler  L.  S.,Giammris  S.  C.,Ajayan  P.  M.Load  transfer  in  carbon  nanotube  poxy 
+composites[J]. Appl. Phys. Lett.,1998,73:3842 
+[115]杨全红,唐致远.电源技术,2009,33:241-244
+
+[116]	H.C.Schniepp,J.L.Li, M.J.Mcallister,et al. J.Physical Chemistry B,2006, 110:
+
+8535-8539
+
+[117]	MJ.Mcallister, J.L.Li, D.H.Adamson, et al. J.Chemistry of Material, 2007,19: 4396-4404
+
+[88]	RBarbouz, J.M.Tarascon. 09 Oct 1990,U.S.: US 4,962,082
+
+[119]	C.Berger,Z.M.Song, X.B.Li,et al. JJournal Physical Chemistry B,2004, 108: 1191-1196
+
+[60]Crosnier  O.,  Brousse  T.,  Devaux  X.,  Fragnaud  P.,  Schleich  D.M.,  New  anode  systems  for 
+lithium ion cells[J]. J.Power Sourc., 2001, 94: 169~174.  
+[61]Wang  Z.,  Huang  X.,  Xue  R.,  Chen  L.,  A  new  possible  mechanism  of  lithium  insertion  and 
+extraction in low-temperature pyrolitic carbon electrode[J]. Carbon,   1999, 37: 685~92. 
+[62]Ludmyla  M.,  Mykhailo  S.,  Mykol  B.,  Leonid  K.,  New  Carbon  Based  Materials  for 
+Electrochemical Energy Storage Systems. 2006, 345–356. Springer. Printed in the Netherlands.  
+[12]Poizot  P.,  Laruelle  S.,  Grugeon  S.,  Nano-sized  transition-metal  oxides  as  negative-electrode 
+materials for lithium-ion batteries[J]. NATURE, 2000, 407:496-499.  
+[8] Y. Lu, M. Wei, Z. Wang, D. G. Evans, X. Duan, Electrochim. Acta
+2004, 49, 2361.
+[11] Y. Wang, L. Mu, J. Liu, Z. Yang, X. Yu, L. Gu, Y.-S. Hu, H. Li,
+X.-Q. Yang, L. Chen, X. Huang, Adv. Energy Mater. 2015, 5,
+1501005.
+[13] J. Luo, S. L. Suib, J. Phys. Chem. B 1997, 101, 10403.
+18] P. Nie, L. Shen, H. Luo, B. Ding, G. Xu, J. Wang, X. Zhang, J. Mater.
+Chem. A 2014, 2, 5852.
