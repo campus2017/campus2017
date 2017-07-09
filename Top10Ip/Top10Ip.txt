@@ -1,0 +1,1 @@
+awk '{print $1}' access_log |sort |uniq -c|sort -nr|head -n 10
