@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.upload{
+    background-color: dodgerblue;
+    color: #FFF;
+    padding: 5px;
+}
+.btn{
+    background-color: dodgerblue;
+    color: #FFF;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 5px;
+}
+
+table,td,th{
+    border: 1px solid;
+    font-size: 14px;
+    border-collapse: collapse;
+}
+form{
+    margin: 20px 0;
+    overflow: hidden;
+    padding: 5px 0;
+}
+h3{
+    margin: 10px 0;
+}
+th,td{
+    padding: 5px;
+}
+p{
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+#reset-btn{
+    background-color: orange;
+}
+.inputData{
+    position: relative;
+}
+.inputData:nth-of-type(2){
+    display: none;
+}
+p{
+    clear: both;
+}
+.btns{
+    margin-left: 5px;
+    width: 80px;
+    position: absolute;
+    bottom: 10px;
+    left: 250px;
+}
+.btns .btn{
+    margin-top: 5px;
+    width: 78px;
+}
+textarea{
+    width: 250px;
+    max-width: 250px;
+    height: 200px;
+}
+@media screen and (max-width: 600px) { /*当屏幕尺寸小于600px时，应用下面的CSS样式*/
+    .upfile{
+        display: block;
+        margin-top: 10px;
+    }
+}
