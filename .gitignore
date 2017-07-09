@@ -6,7 +6,8 @@
 .idea
 *.iml
 out
-gen### Java template
+gen
+### Java template
 # Compiled class file
 *.class
 
