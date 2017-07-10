@@ -1,0 +1,15 @@
+#!/bin/bash
+
+#获得文件路径
+echo -n "Input your access_log path:"
+read path
+#验证是否输入文件路径
+if  [ -z $path ]
+then
+	read -p "Please input  path:" path
+fi
+#网址正则表达式
+patten='(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])\.(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])\.(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])\.(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])'
+
+#统计IP地址
+cat $path | grep -oP $patten | sort -t "." |uniq -c | sort -t " " -k 1r |head -10 
