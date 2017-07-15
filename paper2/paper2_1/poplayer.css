@@ -1,0 +1,33 @@
+#mask{
+	background: gray;
+	opacity:0.5;
+    filter: alpha(opacity=50); 
+    height: 1000px;
+    width:100%;
+    position:absolute; 
+    left:0;
+    top:0;
+    z-index:1000;
+}
+
+#pop{ 
+    position: fixed;
+	left: 30%;
+	top: 30%;
+	z-index:1001; 
+}
+#popCon{
+	width: 800px;
+	height: 546px;
+	background: url(images/layer.png) no-repeat;
+	position: relative;
+} 
+#close{ 
+    background:url(images/close.png) no-repeat; 
+    width:32px; 
+    height:32px; 
+    cursor:pointer; 
+    position:absolute; 
+    right:-14px; 
+    top:-14px; 
+}

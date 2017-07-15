@@ -1,0 +1,16 @@
+#sliding_box{
+	width: 1200px;
+	height:477px;
+	margin:0 auto;
+	border-right: 2px solid #ccc;
+	border-bottom: 2px solid #ccc;
+	overflow: hidden;
+	position: relative;
+}
+img{
+	height:477px;
+	position: absolute;
+	display: block;
+	left: 0;
+ 	border-left: 2px solid #ccc;
+}
